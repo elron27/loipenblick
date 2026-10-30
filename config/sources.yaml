@@ -1,0 +1,59 @@
+# Quellen als Daten: neue Orte kommen hier dazu, nicht im Code.
+# adapter "ats": Tourismus-System Tegernsee/Schliersee (/langlaufen -> /a-<slug>)
+# adapter "aschau": Schneebericht-Seite von aschau.de
+
+gebiete:
+  - {slug: bad-wiessee, name: Bad Wiessee, region: Tegernseer Tal}
+  - {slug: gmund, name: Gmund, region: Tegernseer Tal}
+  - {slug: kreuth, name: Kreuth, region: Tegernseer Tal}
+  - {slug: rottach-egern, name: Rottach-Egern, region: Tegernseer Tal}
+  - {slug: tegernsee, name: Tegernsee, region: Tegernseer Tal}
+  - {slug: bayrischzell, name: Bayrischzell, region: Leitzachtal}
+  - {slug: fischbachau, name: Fischbachau, region: Leitzachtal}
+  - {slug: sachrang, name: Sachrang, region: Chiemgau}
+
+quellen:
+  - key: tegernsee
+    adapter: ats
+    name: Tegernseer Tal Tourismus
+    base_url: https://www.tegernsee.com
+    config:
+      list_path: /langlaufen
+      # Ortsname auf der Seite -> Gebiet-Slug; unbekannte Orte landen in default_gebiet
+      gebiet_map:
+        Bad Wiessee: bad-wiessee
+        Gmund: gmund
+        Kreuth: kreuth
+        Rottach-Egern: rottach-egern
+        Tegernsee: tegernsee
+      default_gebiet: tegernsee
+
+  - key: bayrischzell
+    adapter: ats
+    name: Bayrischzell Tourismus
+    base_url: https://www.bayrischzell.de
+    config:
+      list_path: /langlaufen
+      default_gebiet: bayrischzell
+
+  - key: fischbachau
+    adapter: ats
+    name: Fischbachau Tourismus
+    base_url: https://www.fischbachau.de
+    config:
+      list_path: /langlaufen
+      default_gebiet: fischbachau
+
+  - key: sachrang
+    adapter: aschau
+    name: Aschau i. Chiemgau Schneebericht
+    base_url: https://www.aschau.de
+    config:
+      report_path: /schneebericht-sachrang
+      default_gebiet: sachrang
+      # Stammdaten, die die Seite nicht liefert (aus der alten App uebernommen)
+      stammdaten:
+        Bergerfeld: {laenge_km: 1.7, schwierigkeit: leicht, nachtloipe: false, lat: 47.7105, lon: 12.2425}
+        Langlaufrundkurs Lengauer Feld: {laenge_km: 3.1, schwierigkeit: mittel, nachtloipe: false, lat: 47.6930, lon: 12.2680}
+        Nachtloipe: {laenge_km: 3.0, schwierigkeit: leicht, nachtloipe: true, lat: 47.6930, lon: 12.2680}
+        Priental Loipe: {laenge_km: 8.0, schwierigkeit: mittel, nachtloipe: false, lat: 47.7334, lon: 12.3036}
