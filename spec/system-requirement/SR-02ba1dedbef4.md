@@ -14,9 +14,9 @@ acceptance-criteria:
 packages:
   - { id: a1e07cef-f067-4f3b-a290-7b0bc167bcfa, version: n2:22b0303ec030d854, title: Betrieb }
 derives-from:
-  - { id: 1ad58a1d-3eca-49df-8609-68c23dac832b, version: n2:5919be98155e8537, title: "Privat betreiben, später umziehen können" }
+  - { id: 74e4361d-47e5-4ab3-b04d-3e2e5f25ec16, version: n2:cdda38f1ace5147f, title: Günstiger Betrieb }
 based-on:
-  - { id: 91c72a2d-c935-429e-9260-39b344677af0, version: n2:22b0303ec030d854, title: Version 1 privat auf dem Synology-NAS }
+  - { id: 2ae0ad55-3d2e-461b-975b-237a0a1f0ac5, version: n2:22b0303ec030d854, title: "Parsen auf dem NAS, Website extern" }
 ---
 
 Das System muss per Docker Compose auf dem Synology-NAS laufen, Konfiguration und Secrets über Umgebungsvariablen.
