@@ -1,0 +1,12 @@
+reqseq-filter: 1
+name: spaeter
+description: Anforderungen für spätere Ausbaustufen
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: spaeter
+    - type: [system-requirement]
+sort:
+  - by: kennung
+    order: asc

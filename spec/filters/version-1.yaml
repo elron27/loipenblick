@@ -1,0 +1,12 @@
+reqseq-filter: 1
+name: version-1
+description: Anforderungen, die in Version 1 gebaut werden
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: v1
+    - type: [system-requirement]
+sort:
+  - by: kennung
+    order: asc
