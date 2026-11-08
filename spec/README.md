@@ -8,9 +8,9 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 
 | Ordner | Typ | Inhalt |
 |---|---|---|
-| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-14 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P11, D1–D11, U1–U16, N1–N4, B1–B11 |
-| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-11 (u. a. E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
+| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-15 (N-05 ersetzt durch N-09) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P11, D1–D12, U1–U17, N1–N4, B1–B11 |
+| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-12 (u. a. E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
 | `filters/` | gespeicherte Filter | `version-1` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
