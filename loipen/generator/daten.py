@@ -117,6 +117,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 "name": g.name,
                 "lat": pos[0] if pos else None,
                 "lon": pos[1] if pos else None,
+                "hoehe_m": g.hoehe_m,
                 "tourist_url": g.tourist_url,
                 "nachbarn": sorted(n.slug for n in g.nachbarn),
                 "loipengebuehr": {"eur": g.loipengebuehr_eur, "text": g.loipengebuehr_text, "url": g.loipengebuehr_url},

@@ -151,22 +151,38 @@ function schneeHtml(g) {
 function nahesterOrt() { return S.ort; }
 
 /* ---------- Talprofil ---------- */
-function ridge(x) { return 235 - 38 * Math.sin(x / 70) - 26 * Math.sin(x / 31 + 1) - 14 * Math.sin(x / 13 + 2) + (x > 600 ? -18 * Math.sin((x - 600) / 90) : 0); }
 function far(x) { return 190 - 45 * Math.sin(x / 95 + 2) - 24 * Math.sin(x / 37); }
 function talprofil(gebiete, schnee) {
   var sorted = gebiete.filter(function (g) { return g.lon != null; }).sort(function (a, b) { return a.lon - b.lon; });
   if (!sorted.length) return "";
-  var min = sorted[0].lon, max = sorted[sorted.length - 1].lon, span = Math.max(max - min, 0.05), s = "";
+  var s = "", n = sorted.length;
+  /* Die Nadeln stehen nach Laengengrad von West nach Ost; der Bergruecken verlaeuft durch die echten Hoehen der Orte. */
+  var hs = sorted.map(function (g) { return g.hoehe_m; }).filter(function (h) { return h != null; });
+  var hmin = hs.length ? Math.min.apply(null, hs) : 0, hmax = hs.length ? Math.max.apply(null, hs) : 1, hspan = Math.max(hmax - hmin, 150);
+  var mitte = hs.length ? (hmin + hmax) / 2 : 0;
+  function hy(g) { var h = g.hoehe_m == null ? mitte : g.hoehe_m; return 250 - 95 * (h - hmin) / hspan; }
+  var px = sorted.map(function (g, i) { return n === 1 ? 450 : 60 + i * (780 / (n - 1)); });
+  var py = sorted.map(hy);
+  function grund(x) {
+    if (n === 1) return py[0];
+    if (x <= px[0]) return py[0];
+    if (x >= px[n - 1]) return py[n - 1];
+    var i = 0; while (x > px[i + 1]) i++;
+    var t = (x - px[i]) / (px[i + 1] - px[i]), k = (1 - Math.cos(t * Math.PI)) / 2;
+    return py[i] + (py[i + 1] - py[i]) * k;
+  }
+  function ridgeH(x) { var w = Math.sin(x / 31 + 1) * 7 + Math.sin(x / 13 + 2) * 4, nahe = 1; for (var i = 0; i < n; i++) nahe = Math.min(nahe, Math.abs(x - px[i]) / 25); return grund(x) + w * Math.min(nahe, 1); }
   s += '<defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ridge1)"/><stop offset="1" stop-color="var(--ridge2)"/></linearGradient></defs>';
-  var f = "M0 340"; for (var x = 0; x <= 900; x += 10) f += "L" + x + " " + far(x); s += '<path class="s-far" d="' + f + 'L900 340Z" opacity=".85"/>';
-  var q = "M0 340", rim = "M0 " + ridge(0); for (x = 0; x <= 900; x += 6) { q += "L" + x + " " + ridge(x); rim += "L" + x + " " + ridge(x); }
+  var f = "M0 340"; for (var x = 0; x <= 900; x += 10) f += "L" + x + " " + (far(x) - 20 + (hy({hoehe_m: mitte}) - 250) * 0.3); s += '<path class="s-far" d="' + f + 'L900 340Z" opacity=".85"/>';
+  var q = "M0 340", rim = "M0 " + ridgeH(0); for (x = 0; x <= 900; x += 6) { q += "L" + x + " " + ridgeH(x); rim += "L" + x + " " + ridgeH(x); }
   s += '<path class="s-ridge" d="' + q + 'L900 340Z"/><path class="s-rim" d="' + rim + '"/>';
   sorted.forEach(function (g, i) {
-    var px = sorted.length === 1 ? 450 : 60 + i * (780 / (sorted.length - 1)), y = ridge(px);
+    var y = py[i], X = px[i];
     var best = g.loipen.reduce(function (a, l) { return RANG[l.status] < RANG[a] ? l.status : a; }, "geschlossen");
-    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + px + '" y1="' + y + '" x2="' + px + '" y2="' + (y - 40) + '" stroke-width="1.5"/><circle cx="' + px + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + px + '" y="' + (y - 64 - (i % 3) * 22) + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + ": " + WORT[best] + "</title></a>";
+    var hoehe = g.hoehe_m == null ? "" : " (" + g.hoehe_m + " m)";
+    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/><circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + X + '" y="' + (y - 64 - (i % 4) * 20) + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
   });
-  return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil mit den Loipengebieten von West nach Ost">' + s + "</svg></div>";
+  return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
 }
 
 /* ---------- Seiten ---------- */

@@ -124,6 +124,7 @@ class Gebiet(Base):
     tourist_url: Mapped[str] = mapped_column(String(500))
     lat: Mapped[float | None] = mapped_column(Float)
     lon: Mapped[float | None] = mapped_column(Float)
+    hoehe_m: Mapped[int | None] = mapped_column(Integer)
     # Loipengebuehr: None bei loipengebuehr_eur heisst unbekannt, nie kostenlos (D8)
     loipengebuehr_eur: Mapped[float | None] = mapped_column(Float)
     loipengebuehr_text: Mapped[str | None] = mapped_column(String(300))

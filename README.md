@@ -17,14 +17,22 @@ Die Anforderungen stehen als ReqSeq-Workspace in [`spec/`](spec/README.md).
 | `vorschau` | nginx, zeigt `site/` im Heimnetz unter `http://<NAS-IP>:8080` |
 
 Neue Orte kommen in `config/sources.yaml`, Handdaten (Parkplätze, Gebühren, Haltestellen,
-Wetterstation) in `config/gebiete.yaml`. Beide Dateien liest der Worker bei jedem Lauf neu.
+Wetterstation) in `config/gebiete.yaml`. Beide Dateien liest der Worker bei jedem Lauf neu (sie stecken im Image; Änderungen kommen mit dem nächsten Image).
 
 ## Starten auf dem NAS
 
+Das fertige Image baut GitHub (Workflow `Image`, Registry `ghcr.io/elron27/loipenblick`). Auf dem NAS
+brauchst du nur zwei Dateien in einem Ordner: `docker-compose.yml` und `.env` (Vorlage `.env.example`).
+
 ```bash
-cp .env.example .env      # Passwort und Kontaktadresse eintragen
-docker compose up -d --build
+docker compose pull       # holt die neueste Version
+docker compose up -d
 ```
+
+Ein Update ist genauso: `docker compose pull && docker compose up -d`. Die Datenbank bleibt in `./data`.
+Einmalig muss das Paket in GitHub unter *Packages, loipenblick, Package settings* auf "public" stehen,
+sonst braucht das NAS ein `docker login ghcr.io`. Selbst bauen geht weiter mit `docker compose up -d --build`.
+Die Konfiguration (`config/`) steckt im Image; eigene Änderungen siehe Kommentar in der `docker-compose.yml`.
 
 Danach zeigt `http://<NAS-IP>:8080` die Vorschau. Einen Lauf sofort anstoßen:
 

@@ -4,6 +4,7 @@
 # Jede Angabe nennt ihre Quelle (url). Stand der Recherche: 09.11.2026.
 # koordinate_geschaetzt: true = die Koordinate ist der Loipenstart laut tourinfra, kein bestaetigter Parkplatz.
 # parkplaetze_ohne_koordinate: bekannt, aber ohne Koordinate; wird nicht angezeigt, bis eine nachgetragen ist.
+# hoehe_m: Hoehe des Ortes ueber NN in Metern (gerundet, Naeherung), bestimmt das Talprofil der Startseite.
 # wetterstation: DWD-Station mit Schneehoehe (SH_TAG), siehe Recherche wetterstationen.md.
 regionen:
 - slug: tegernseer-tal
@@ -17,6 +18,7 @@ regionen:
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
+  hoehe_m: 730
   region: tegernseer-tal
   tourist_url: https://www.tegernsee.com/bad-wiessee
   nachbarn:
@@ -24,6 +26,7 @@ gebiete:
   - tegernsee
 - slug: gmund
   name: Gmund
+  hoehe_m: 740
   region: tegernseer-tal
   tourist_url: https://www.tegernsee.com/gmund
   nachbarn:
@@ -31,6 +34,7 @@ gebiete:
   - tegernsee
 - slug: kreuth
   name: Kreuth
+  hoehe_m: 780
   region: tegernseer-tal
   tourist_url: https://www.tegernsee.com/kreuth
   nachbarn:
@@ -102,6 +106,7 @@ gebiete:
     name: Kreuth-Glashütte
 - slug: rottach-egern
   name: Rottach-Egern
+  hoehe_m: 730
   region: tegernseer-tal
   tourist_url: https://www.tegernsee.com/rottach-egern
   nachbarn:
@@ -120,6 +125,7 @@ gebiete:
     name: Kreuth-Glashütte
 - slug: tegernsee
   name: Tegernsee
+  hoehe_m: 735
   region: tegernseer-tal
   tourist_url: https://www.tegernsee.com
   nachbarn:
@@ -128,6 +134,7 @@ gebiete:
   - bad-wiessee
 - slug: bayrischzell
   name: Bayrischzell
+  hoehe_m: 800
   region: leitzachtal
   tourist_url: https://www.bayrischzell.de
   nachbarn:
@@ -190,6 +197,7 @@ gebiete:
     name: Brünnsteinhaus
 - slug: fischbachau
   name: Fischbachau
+  hoehe_m: 780
   region: leitzachtal
   tourist_url: https://www.fischbachau.de
   nachbarn:
@@ -229,6 +237,7 @@ gebiete:
     name: Bad Feilnbach
 - slug: sachrang
   name: Sachrang
+  hoehe_m: 740
   region: priental
   tourist_url: https://www.aschau.de
   parkplaetze: []
@@ -264,6 +273,7 @@ gebiete:
     name: Aschau-Stein
 - slug: ruhpolding
   name: Ruhpolding
+  hoehe_m: 690
   region: chiemgau
   tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
   nachbarn:
@@ -296,6 +306,7 @@ gebiete:
     name: Ruhpolding-Seehaus
 - slug: reit-im-winkl
   name: Reit im Winkl
+  hoehe_m: 700
   region: chiemgau
   tourist_url: https://www.reitimwinkl.de/schneebericht
   nachbarn:
@@ -333,6 +344,7 @@ gebiete:
     name: Reit im Winkl (Kaiserweg)
 - slug: inzell
   name: Inzell
+  hoehe_m: 700
   region: chiemgau
   tourist_url: https://www.inzell.de/schneebericht
   nachbarn:
@@ -356,6 +368,7 @@ gebiete:
     name: Anger-Stoißberg
 - slug: schleching
   name: Schleching
+  hoehe_m: 560
   region: chiemgau
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
@@ -383,6 +396,7 @@ gebiete:
     name: Reit im Winkl (Kaiserweg)
 - slug: unterwoessen
   name: Unterwössen
+  hoehe_m: 550
   region: chiemgau
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
@@ -422,6 +436,7 @@ gebiete:
     name: Reit im Winkl (Kaiserweg)
 - slug: marquartstein-grassau
   name: Marquartstein / Grassau
+  hoehe_m: 540
   region: chiemgau
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
@@ -455,6 +470,7 @@ gebiete:
     name: Grassau
 - slug: bergen
   name: Bergen
+  hoehe_m: 600
   region: chiemgau
   tourist_url: https://www.bergen-chiemgau.de/skilanglauf
   nachbarn:
@@ -487,6 +503,7 @@ gebiete:
     name: Siegsdorf-Maria Eck
 - slug: siegsdorf
   name: Siegsdorf
+  hoehe_m: 610
   region: chiemgau
   tourist_url: https://www.siegsdorf.de/langlaufen
   nachbarn:
@@ -523,6 +540,7 @@ gebiete:
     name: Siegsdorf-Maria Eck
 - slug: chieming
   name: Chieming
+  hoehe_m: 530
   region: chiemgau
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
   nachbarn: []

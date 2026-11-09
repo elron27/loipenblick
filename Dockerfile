@@ -16,5 +16,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY alembic.ini .
 COPY migrations migrations
 COPY loipen loipen
+COPY config config
 
 CMD ["python", "-m", "loipen.worker"]

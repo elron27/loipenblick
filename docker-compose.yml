@@ -1,4 +1,9 @@
-# Loipenblick auf dem NAS (B4): docker compose up -d --build
+# Loipenblick auf dem NAS (B4): docker compose pull && docker compose up -d
+# Das fertige Image baut GitHub (ghcr.io); zum Selbstbauen: docker compose up -d --build
+x-app: &app
+  image: ghcr.io/elron27/loipenblick:${LOIPEN_TAG:-latest}
+  build: .
+
 services:
   db:
     image: postgres:16-alpine
@@ -17,7 +22,7 @@ services:
 
   # spielt die Datenbank-Migrationen ein und beendet sich
   migrate:
-    build: .
+    <<: *app
     env_file: .env
     command: alembic upgrade head
     depends_on:
@@ -26,7 +31,7 @@ services:
 
   # Adapter, Wetter, Generator, Dump und Zeitplan (B3)
   worker:
-    build: .
+    <<: *app
     restart: unless-stopped
     env_file: .env
     environment:
@@ -34,7 +39,9 @@ services:
       LOIPEN_BACKUP_DIR: /app/backup
       TZ: Europe/Berlin
     volumes:
-      - ./config:/app/config:ro
+      # Die Konfiguration steckt im Image. Eigene Aenderungen: die Zeile unten einkommentieren
+      # und den Ordner config/ neben die docker-compose.yml legen.
+      # - ./config:/app/config:ro
       - ./site:/app/site
       - ${BACKUP_DIR:-./backup}:/app/backup
     depends_on:

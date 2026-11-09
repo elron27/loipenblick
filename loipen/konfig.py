@@ -86,6 +86,7 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         gebiet.loipengebuehr_url = gebuehr.get("url")
         gebiet.haltestellen = g.get("haltestellen", [])
         station = g.get("wetterstation") or {}
+        gebiet.hoehe_m = g.get("hoehe_m")
         gebiet.wetterstation_id = station.get("id")
         gebiet.wetterstation_name = station.get("name")
         alle[g["slug"]] = gebiet

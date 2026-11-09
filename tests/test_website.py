@@ -233,3 +233,13 @@ def test_generator_raeumt_entfernte_regionen_auf(session, tmp_path):
     generator.erzeuge(session, tmp_path, JETZT)
     assert not (tmp_path / "daten" / "alt.json").exists()
     assert not list(tmp_path.rglob(".tmp-*"))
+
+
+def test_gebiete_haben_hoehe_in_den_daten(session):
+    from loipen.generator.daten import baue
+    from loipen.konfig import CONFIG_DIR
+    jetzt = datetime(2026, 11, 9, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
+    lade_alle_fixtures(session, jetzt)
+    regionen = baue(session, jetzt, CONFIG_DIR)["regionen"].values()
+    hoehen = {g["slug"]: g["hoehe_m"] for r in regionen for g in r["gebiete"]}
+    assert hoehen["bayrischzell"] > hoehen["marquartstein-grassau"] and None not in hoehen.values()
