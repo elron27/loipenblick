@@ -4,6 +4,7 @@ Nur Python-Standardbibliothek, laeuft unter Windows, macOS und Linux:
 
     python scripts/beispielseiten_holen.py
     python scripts/beispielseiten_holen.py --nur-schneebericht
+    python scripts/beispielseiten_holen.py --nur-uebersicht
 
 Legt alles unter tests/fixtures/<quelle>/ ab und haelt 5 Sekunden Abstand
 zwischen zwei Anfragen, wie es die robots.txt der Seiten verlangt.
@@ -103,6 +104,11 @@ def hole_ats(key: str, base_url: str) -> None:
 
 def hole_schneeberichte() -> None:
     for key, slugs in SCHNEEBERICHT_SEITEN.items():
+        print(f"{key}: Schneebericht-Uebersicht")
+        try:
+            save(OUT / key / "schneebericht_uebersicht.html", get(f"{ATS_QUELLEN[key]}/schneebericht"))
+        except Exception as e:
+            print(f"  /schneebericht: {e}")
         print(f"{key}: {len(slugs)} Schneebericht-Seiten")
         for slug in slugs:
             try:
@@ -113,6 +119,11 @@ def hole_schneeberichte() -> None:
 
 
 def main() -> None:
+    if "--nur-uebersicht" in sys.argv:
+        for key, base_url in ATS_QUELLEN.items():
+            save(OUT / key / "schneebericht_uebersicht.html", get(f"{base_url}/schneebericht"))
+        print(f"\nFertig. Ordner: {OUT}")
+        return
     if "--nur-schneebericht" in sys.argv:
         hole_schneeberichte()
         print(f"\nFertig. Ordner: {OUT}")
