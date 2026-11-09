@@ -50,3 +50,12 @@ jobs:
         with:
           name: junit-reqseq
           path: spec/evidence/junit-ci.xml
+
+  # B4: das Image baut, Compose-Datei ist gueltig
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: cp .env.example .env
+      - run: docker compose config -q
+      - run: docker compose build worker
