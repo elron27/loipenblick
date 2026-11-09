@@ -1,0 +1,9 @@
+# Kostenuebersicht (B9): Ziel hoechstens 60 EUR im Jahr. Die Betraege sind Planwerte,
+# bei jeder echten Rechnung hier nachtragen. Version 1 laeuft nur auf dem NAS und kostet nichts extra.
+posten:
+  - {name: "NAS-Betrieb (Strom bleibt ausserhalb)", eur_pro_jahr: 0, stand: "V1, vorhanden"}
+  - {name: "Webspace fuer die oeffentliche Seite", eur_pro_jahr: 24, stand: "Planwert, ab Veroeffentlichung (B8)"}
+  - {name: "Domain", eur_pro_jahr: 12, stand: "Planwert, ab Veroeffentlichung"}
+  - {name: "Push ueber ntfy.sh (kostenlos)", eur_pro_jahr: 0, stand: "oeffentlicher Dienst, Thema geheim halten"}
+  - {name: "Wetterdaten DWD und Bright Sky", eur_pro_jahr: 0, stand: "freie Daten"}
+  - {name: "Tailscale fuer Zugriff von unterwegs", eur_pro_jahr: 0, stand: "Free-Tarif"}

@@ -98,6 +98,7 @@ class Quelle(Base):
     last_run_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     last_status: Mapped[str | None] = mapped_column(String(16))
     last_count: Mapped[int | None] = mapped_column(Integer)
+    last_dauer_s: Mapped[float | None] = mapped_column(Float)
     last_error: Mapped[str | None] = mapped_column(Text)
 
     loipen: Mapped[list["Loipe"]] = relationship(back_populates="quelle")

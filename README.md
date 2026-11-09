@@ -32,6 +32,45 @@ Danach zeigt `http://<NAS-IP>:8080` die Vorschau. Einen Lauf sofort anstoßen:
 docker compose exec worker python -m loipen.worker lauf
 ```
 
+## Betrieb
+
+**Zeitplan (B3).** Den Zeitplan führt der Worker-Container selbst aus (APScheduler, zur vollen Stunde
+werden die fälligen Quellen abgerufen). Es braucht keinen Eintrag im DSM-Taskplaner, nur
+`restart: unless-stopped`, das Compose schon setzt.
+
+**Überwachung (B2).** Je Quelle stehen letzter Lauf, Dauer, Anzahl Loipen und Fehler in der Datenbank
+(`quellen`) und im Abschnitt `quellen` der `daten.json`. Liefert eine Quelle 0 Loipen oder fällt aus,
+steht das im Log und, wenn ntfy eingerichtet ist, als Push (einmal beim Wechsel, nicht bei jedem Lauf).
+
+**Push (N1, N4).** In `.env` `LOIPEN_NTFY_URL=https://ntfy.sh/<geheimes-thema>` setzen (Thema wie ein
+Passwort wählen, in der ntfy-App abonnieren). Wer wofür benachrichtigt wird, steht in `config/abos.yaml`:
+Abos auf Loipen, Gebiete oder Regionen mit den Ereignissen `oeffnet`, `frisch_gespurt`, `schliesst`.
+Ein Abo meldet sich nur bei seinen Zielen und seinen Ereignissen. Der erste Abruf einer Loipe löst nichts aus.
+
+**Sicherung (B14).** Täglich um 3:30 Uhr schreibt der Worker `loipen-JJJJMMTT-HHMM.dump` in `BACKUP_DIR`
+und löscht Dumps, die älter als 30 Tage sind. `BACKUP_DIR` muss in einem Ordner liegen, den das
+NAS-Backup erfasst (z. B. `/volume1/backup/loipenblick`). Sofort sichern:
+
+```bash
+docker compose exec worker python -m loipen.worker sicherung
+```
+
+Wiederherstellen (zuerst Worker stoppen, dann in die leere Datenbank zurückspielen):
+
+```bash
+docker compose stop worker
+docker compose exec -T db dropdb -U loipen --if-exists loipen
+docker compose exec -T db createdb -U loipen loipen
+docker compose exec -T db pg_restore -U loipen -d loipen < backup/loipen-20261109-0330.dump
+docker compose up -d worker
+```
+
+Der Ablauf Dump, Restore in eine frische Datenbank und Vergleich der Daten ist als Test
+(`test_b14_wiederherstellung_aus_dump`) automatisch geprüft; auf dem NAS bitte einmal von Hand wiederholen.
+
+**Kosten (B9).** `config/kosten.yaml` listet die Posten, die Summe darf 60 € im Jahr nicht übersteigen
+(ein Test prüft das). V1 auf dem NAS kostet nichts extra; Webspace und Domain kommen erst mit der Veröffentlichung.
+
 ## Entwickeln und testen
 
 Die Tests brauchen eine PostgreSQL mit einer Datenbank, deren Name auf `_test` endet

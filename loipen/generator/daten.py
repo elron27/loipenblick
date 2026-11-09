@@ -149,7 +149,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         "standardort": standard,
         "quellen": [
             {"key": q.key, "name": q.name, "status": q.last_status, "letzter_lauf": _iso(q.last_run_at),
-             "anzahl": q.last_count, "fehler": q.last_error}
+             "anzahl": q.last_count, "dauer_s": q.last_dauer_s, "fehler": q.last_error}
             for q in session.scalars(select(Quelle).order_by(Quelle.key))
         ],
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),

@@ -11,7 +11,8 @@ from sqlalchemy.orm import Session
 from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
 from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Technik, utcnow
-from loipen.zustand import speichere_zustand
+from loipen.ereignisse import Ereignis, ereignis_fuer
+from loipen.zustand import letzter_zustand, speichere_zustand
 
 log = logging.getLogger("loipen.ablauf")
 
@@ -24,6 +25,9 @@ class QuellenLauf:
     geaendert: int = 0
     fehler: str | None = None
     warnungen: list[str] = field(default_factory=list)
+    ereignisse: list[Ereignis] = field(default_factory=list)
+    status_vorher: str | None = None
+    status: str | None = None
 
 
 def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
@@ -48,7 +52,7 @@ def rufe_quelle_ab(
     session: Session, quelle: Quelle, fetcher: Fetcher, jetzt: datetime | None = None
 ) -> QuellenLauf:
     jetzt = jetzt or utcnow()
-    lauf = QuellenLauf(quelle=quelle.key)
+    lauf = QuellenLauf(quelle=quelle.key, status_vorher=quelle.last_status)
     adapter = ADAPTERS.get(quelle.adapter)
     if adapter is None:
         lauf.fehler = f"kein Adapter '{quelle.adapter}'"
@@ -87,7 +91,8 @@ def rufe_quelle_ab(
                 "Unbekannter Quelltext in Quelle %s, Loipe %s: Feld %s, Rohtext %r",
                 quelle.key, d.name, feld, roh,
             )
-        _, neu = speichere_zustand(
+        alt = letzter_zustand(session, loipe)
+        zustand, neu = speichere_zustand(
             session,
             loipe,
             {
@@ -104,6 +109,10 @@ def rufe_quelle_ab(
             jetzt,
         )
         lauf.neu += neu
+        if neu:
+            ereignis = ereignis_fuer(loipe, alt, zustand)
+            if ereignis:
+                lauf.ereignisse.append(ereignis)
     _monitoring(quelle, lauf, jetzt, time.monotonic() - start)
     return lauf
 
@@ -112,6 +121,7 @@ def _monitoring(quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: flo
     """Letzter Lauf, Anzahl und Fehler pro Quelle (B2)."""
     quelle.last_run_at = jetzt
     quelle.last_count = lauf.gefunden
+    quelle.last_dauer_s = round(dauer_s, 2)
     if lauf.fehler:
         quelle.last_status = "fehler"
         quelle.last_error = lauf.fehler
@@ -121,3 +131,4 @@ def _monitoring(quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: flo
     else:
         quelle.last_status = "warnung" if lauf.warnungen else "ok"
         quelle.last_error = "; ".join(lauf.warnungen) or None
+    lauf.status = quelle.last_status
