@@ -8,8 +8,8 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 
 | Ordner | Typ | Inhalt |
 |---|---|---|
-| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-20 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P13, D1–D13, U1–U21, N1–N4, B1–B11 |
+| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-21 (N-05 ersetzt durch N-09) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P13, D1–D13, U1–U21, N1–N4, B1–B13 |
 | `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-13 (u. a. E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
 | `filters/` | gespeicherte Filter | `version-1` und `spaeter` |
