@@ -1,0 +1,546 @@
+# Handdaten der Gebiete (D7, D8, U14, U26, D11, D13).
+# Werte der Quelle haben Vorrang; hier steht, was die Quellen nicht liefern.
+# Fehlt eine Gebuehr, bleibt das Feld leer: das heisst "unbekannt", nicht "kostenlos".
+# Jede Angabe nennt ihre Quelle (url). Stand der Recherche: 09.11.2026.
+# koordinate_geschaetzt: true = die Koordinate ist der Loipenstart laut tourinfra, kein bestaetigter Parkplatz.
+# parkplaetze_ohne_koordinate: bekannt, aber ohne Koordinate; wird nicht angezeigt, bis eine nachgetragen ist.
+# hoehe_m: Hoehe des Ortes ueber NN in Metern (gerundet, Naeherung), bestimmt das Talprofil der Startseite.
+# wetterstation: DWD-Station mit Schneehoehe (SH_TAG), siehe Recherche wetterstationen.md.
+regionen:
+- slug: tegernseer-tal
+  name: Tegernseer Tal
+- slug: leitzachtal
+  name: Leitzachtal
+- slug: priental
+  name: Priental
+- slug: chiemgau
+  name: Chiemgau
+gebiete:
+- slug: bad-wiessee
+  name: Bad Wiessee
+  hoehe_m: 730
+  region: tegernseer-tal
+  tourist_url: https://www.tegernsee.com/bad-wiessee
+  nachbarn:
+  - gmund
+  - tegernsee
+- slug: gmund
+  name: Gmund
+  hoehe_m: 740
+  region: tegernseer-tal
+  tourist_url: https://www.tegernsee.com/gmund
+  nachbarn:
+  - bad-wiessee
+  - tegernsee
+- slug: kreuth
+  name: Kreuth
+  hoehe_m: 780
+  region: tegernseer-tal
+  tourist_url: https://www.tegernsee.com/kreuth
+  nachbarn:
+  - rottach-egern
+  parkplaetze:
+  - name: Parkplatz Wildbad Kreuth
+    lat: 47.626
+    lon: 11.7469
+    gebuehr_text: '8-18 Uhr: bis 1 Std. 4,00 €, 1-2 Std. 5,00 €, 2-3 Std. 6,00 €, ab 3 Std./Tagesticket 8,00 €'
+    url: https://www.tegernsee.com/a-parkplatz-wildbad-kreuth
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 8.0
+  - name: Parkplatz Wildbad Kreuth 2
+    lat: 47.6257
+    lon: 11.7486
+    gebuehr_text: wie Wildbad Kreuth (Tagesticket 8,00 €)
+    url: https://www.tegernsee.com/a-parkplatz-wildbad-kreuth-1
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 8.0
+  - name: Parkplatz Klamm (Aufstieg Königsalm/Blauberge)
+    lat: 47.6218
+    lon: 11.7136
+    gebuehr_text: 8-18 Uhr, Tagesticket 8,00 €
+    url: https://www.tegernsee.com/a-parkplatz-klamm-aufstieg-koenigsalm-blauberge
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 8.0
+  - name: Parkplatz Bayerwald 1
+    lat: 47.6166
+    lon: 11.6846
+    gebuehr_text: 8-18 Uhr, Tagesticket 8,00 €
+    url: https://www.tegernsee.com/a-parkplatz-bayerwald
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 8.0
+  - name: Parkplatz an der Tourist-Information Kreuth
+    lat: 47.6446
+    lon: 11.745
+    gebuehr_text: unbekannt
+    url: https://www.tegernsee.com/a-parkplatz-an-der-tourist-information
+    koordinate_geschaetzt: false
+  - name: Parkplatz am Fußballplatz Kreuth
+    lat: 47.6743
+    lon: 11.7565
+    gebuehr_text: kostenlos mit Parkscheibe, höchstens 4 Std.
+    url: https://www.tegernsee.com/a-parkplatz-am-fussballplatz
+    koordinate_geschaetzt: false
+  haltestellen:
+  - name: Kreuth, Wildbad Kreuth
+    art: Bus
+    lat: 47.626465
+    lon: 11.746144
+    url: https://www.openstreetmap.org/node/8662845466
+  - name: Kreuth, Klamm
+    art: Bus
+    lat: 47.622411
+    lon: 11.713657
+    url: https://www.openstreetmap.org/node/2171882424
+  - name: Kreuth, Riedlerbrücke
+    art: Bus
+    lat: 47.644354
+    lon: 11.745096
+    url: https://www.openstreetmap.org/node/8662845438
+  - name: Kistenwinterstube
+    art: Bus
+    lat: 47.658116
+    lon: 11.828804
+    url: https://www.openstreetmap.org/node/410634529
+  wetterstation:
+    id: '02740'
+    name: Kreuth-Glashütte
+- slug: rottach-egern
+  name: Rottach-Egern
+  hoehe_m: 730
+  region: tegernseer-tal
+  tourist_url: https://www.tegernsee.com/rottach-egern
+  nachbarn:
+  - kreuth
+  - tegernsee
+  parkplaetze:
+  - name: Parkplatz Kisten Winterstube (Sutten, Rottach-Egern)
+    lat: 47.65805
+    lon: 11.82848
+    gebuehr_text: gebührenfrei
+    url: https://www.tegernsee.com/a-parkplatz-kisten-winterstube
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 0.0
+  wetterstation:
+    id: '02740'
+    name: Kreuth-Glashütte
+- slug: tegernsee
+  name: Tegernsee
+  hoehe_m: 735
+  region: tegernseer-tal
+  tourist_url: https://www.tegernsee.com
+  nachbarn:
+  - gmund
+  - rottach-egern
+  - bad-wiessee
+- slug: bayrischzell
+  name: Bayrischzell
+  hoehe_m: 800
+  region: leitzachtal
+  tourist_url: https://www.bayrischzell.de
+  nachbarn:
+  - fischbachau
+  loipengebuehr:
+    eur: 7.0
+    text: 7 € pro Tag inklusive Parken, mit Gästekarte frei
+    url: https://www.bayrischzell.de/langlaufen
+  parkplaetze:
+  - name: Parkplatz Stocker
+    lat: 47.638704239463
+    lon: 12.013506889343
+    gebuehr_text: kostenpflichtig; mit Loipen-Tagesticket abgegolten (7 € inkl. Parkgebühr)
+    url: https://www.bayrischzell.de/parken-in-bayrischzell
+    koordinate_geschaetzt: false
+  - name: Parkplatz gegenüber Sportalm
+    lat: 47.671102361261
+    lon: 12.015137672424
+    gebuehr_text: kostenpflichtig; mit Loipen-Tagesticket abgegolten
+    url: https://www.bayrischzell.de/parken-in-bayrischzell
+    koordinate_geschaetzt: false
+  - name: Parkplatz Geitau
+    lat: 47.687051933489
+    lon: 11.959326267242
+    gebuehr_text: kostenpflichtig; mit Loipen-Tagesticket abgegolten
+    url: https://www.bayrischzell.de/parken-in-bayrischzell
+    koordinate_geschaetzt: false
+  - name: Parkplatz am Bahnhof Bayrischzell
+    lat: 47.6755
+    lon: 12.0103
+    gebuehr_text: kostenfrei
+    url: https://www.bayrischzell.de/parken-in-bayrischzell
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 0.0
+  parkplaetze_ohne_koordinate:
+  - name: Bäckeralm Parkplatz (Start Ursprungrunde)
+    gebuehr_text: Loipenautomat vorhanden (Tagesticket 7 € inkl. Parkgebühr)
+    url: https://www.bayrischzell.de/langlaufen
+  - name: Parkplatz am ehemaligen Zipflwirt
+    gebuehr_text: gebührenpflichtig, Privatbesitz (nicht im Loipenticket enthalten)
+    url: https://www.bayrischzell.de/langlaufen
+  haltestellen:
+  - name: Bayrischzell
+    art: Bahn
+    lat: 47.675704
+    lon: 12.010998
+    url: https://www.openstreetmap.org/node/206156533
+  - name: Ursprungtal/ Stockerparkplatz
+    art: Bus
+    lat: 47.639854
+    lon: 12.012298
+    url: https://www.openstreetmap.org/node/3629624545
+  - name: Geitau, Hotel Rote Wand
+    art: Bus
+    lat: 47.68919
+    lon: 11.961625
+    url: https://www.openstreetmap.org/node/4741495823
+  wetterstation:
+    id: '00745'
+    name: Brünnsteinhaus
+- slug: fischbachau
+  name: Fischbachau
+  hoehe_m: 780
+  region: leitzachtal
+  tourist_url: https://www.fischbachau.de
+  nachbarn:
+  - bayrischzell
+  parkplaetze:
+  - name: Parkplatz Warmfreibad (Start Fischbachau - Elbach - Hundham)
+    lat: 47.724060991716
+    lon: 11.949294805527
+    gebuehr_text: kostenfrei
+    url: https://www.fischbachau.de/a-parkplatz-warmfreibad
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 0.0
+  - name: Parkplatz Zentrum Fischbachau
+    lat: 47.720589350951
+    lon: 11.950721740723
+    gebuehr_text: kostenfrei
+    url: https://www.fischbachau.de/a-parkplatz-zentrum-fischbachau
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 0.0
+  parkplaetze_ohne_koordinate:
+  - name: Hundham, Parkplatz bei Leonhardi-Kapelle (Start Hundham-Runden)
+    gebuehr_text: unbekannt
+    url: https://www.fischbachau.de/langlaufen
+  haltestellen:
+  - name: Fischbachau, Ort (Parkplatz)
+    art: Bus
+    lat: 47.720498
+    lon: 11.950447
+    url: https://www.openstreetmap.org/node/4392500607
+  - name: Marbach
+    art: Bus
+    lat: 47.725338
+    lon: 11.952361
+    url: https://www.openstreetmap.org/node/3717474401
+  wetterstation:
+    id: '01343'
+    name: Bad Feilnbach
+- slug: sachrang
+  name: Sachrang
+  hoehe_m: 740
+  region: priental
+  tourist_url: https://www.aschau.de
+  parkplaetze: []
+  nachbarn: []
+  parkplaetze_ohne_koordinate:
+  - name: Parkplatz Sachrang/Geigelsteinaufstieg
+    gebuehr_text: 'kostenpflichtig: Tageskarte 5,00 € (Automat oder EasyPark), Saisonkarte 01.12.-30.04. 30,00 €, Jahreskarte 50,00 €'
+    url: https://www.aschau.de/langlauf
+  - name: Parkplatz Innerwald
+    gebuehr_text: kostenpflichtig, Tageskarte 5,00 €
+    url: https://www.aschau.de/langlauf
+  - name: Parkplatz Hainbach (Start Prientalloipe)
+    gebuehr_text: kostenpflichtig, Tageskarte 5,00 €
+    url: https://www.aschau.de/langlauf
+  haltestellen:
+  - name: Sachrang, Ort
+    art: Bus
+    lat: 47.690927
+    lon: 12.263986
+    url: https://www.openstreetmap.org/node/4594316399
+  - name: Innerwald
+    art: Bus
+    lat: 47.713106
+    lon: 12.285137
+    url: https://www.openstreetmap.org/node/8482172869
+  - name: Hainbach
+    art: Bus
+    lat: 47.736593
+    lon: 12.305524
+    url: https://www.openstreetmap.org/node/8502937560
+  wetterstation:
+    id: '00205'
+    name: Aschau-Stein
+- slug: ruhpolding
+  name: Ruhpolding
+  hoehe_m: 690
+  region: chiemgau
+  tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
+  nachbarn:
+  - inzell
+  - reit-im-winkl
+  - siegsdorf
+  parkplaetze:
+  - name: Parkplatz Chiemgau Arena (Start Fritz-Fischer-Loipe)
+    lat: 47.715987
+    lon: 12.6433
+    gebuehr_text: gebührenpflichtig (Betrag unbekannt)
+    url: https://www.chiemsee-chiemgau.info/fritz-fischer-loipe
+    koordinate_geschaetzt: true
+  parkplaetze_ohne_koordinate:
+  - name: Parkplatz Seehaus (Drei-Seen-Loipe)
+    gebuehr_text: gebührenpflichtig (Betrag unbekannt)
+    url: https://www.chiemsee-chiemgau.info/drei-seen-loipe-1
+  haltestellen:
+  - name: Chiemgau Arena
+    art: Bus
+    lat: 47.715938
+    lon: 12.643659
+    url: https://www.openstreetmap.org/node/8906975303
+  loipengebuehr:
+    eur: 0.0
+    text: nein (tourinfra-Merkmal 'Kostenfrei' bei Drei-Seen-Loipe und Fritz-Fischer-Loipe)
+    url: https://module.tourinfra.com/chiemgau/details.php?id=59040
+  wetterstation:
+    id: 04319
+    name: Ruhpolding-Seehaus
+- slug: reit-im-winkl
+  name: Reit im Winkl
+  hoehe_m: 700
+  region: chiemgau
+  tourist_url: https://www.reitimwinkl.de/schneebericht
+  nachbarn:
+  - ruhpolding
+  - schleching
+  parkplaetze:
+  - name: Parkplatz Festsaal, Tirolerstraße 37 (Langlaufstadion, Nr. 6 Chiemgau-Loipe)
+    lat: 47.675226746567
+    lon: 12.467036247253
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/nr-6-chiemgau-loipe-klassisch-skating-24-km
+    koordinate_geschaetzt: true
+  parkplaetze_ohne_koordinate:
+  - name: Parkplatz Tourist-Info, Dorfstraße 38
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/nr-6-chiemgau-loipe-klassisch-skating-24-km
+  - name: Parkplatz Fellhornweg / Blindau (Shuttle zur Hemmersuppenalm, kostenpflichtig)
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/nr-12-panorama-loipe-hemmersuppenalm-skating-10-km
+  - name: Parkplatz Seegatterl (Gondel Winklmoos-Alm)
+    gebuehr_text: Parkgebühren laut tourinfra ('Bitte benutzen Sie den Shuttelbus ab Reit im Winkl, da sonst Parkgebühren entstehen'), Betrag unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=34621
+  haltestellen:
+  - name: Reit im Winkl, Festsaal
+    art: Bus
+    lat: 47.675778
+    lon: 12.466056
+    url: https://www.openstreetmap.org/node/5110896948
+  loipengebuehr:
+    eur: 0.0
+    text: nein (tourinfra-Merkmal 'Kostenfrei' bei Nr. 6, Nr. 12, Nr. 14); Hemmersuppenalm nur per kostenpflichtigem Shuttle, Winklmoos-Alm über Mautstraße bzw. Gondel
+    url: https://module.tourinfra.com/chiemgau/details.php?id=34621
+  wetterstation:
+    id: '20189'
+    name: Reit im Winkl (Kaiserweg)
+- slug: inzell
+  name: Inzell
+  hoehe_m: 700
+  region: chiemgau
+  tourist_url: https://www.inzell.de/schneebericht
+  nachbarn:
+  - ruhpolding
+  - siegsdorf
+  parkplaetze:
+  - name: Parkplatz Badepark (Start Inzell-Runde, Außerlandloipe, Seeloipe)
+    lat: 47.765443020119
+    lon: 12.749601602554
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/inzell-runde
+    koordinate_geschaetzt: true
+  haltestellen:
+  - name: Inzell Badepark
+    art: Bus
+    lat: 47.766106
+    lon: 12.750536
+    url: https://www.openstreetmap.org/node/655329842
+  wetterstation:
+    id: '00163'
+    name: Anger-Stoißberg
+- slug: schleching
+  name: Schleching
+  hoehe_m: 560
+  region: chiemgau
+  tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  nachbarn:
+  - reit-im-winkl
+  - unterwoessen
+  parkplaetze:
+  - name: Parkplatz Baumgarten, Mühlau (Start Andi-Birnbacher-Loipe, Mettenham-Runde)
+    lat: 47.7235733114
+    lon: 12.4050632283
+    gebuehr_text: überwiegend gebührenpflichtig (Sammelangabe für Schlechinger Parkplätze), Betrag unbekannt
+    url: https://www.chiemsee-chiemgau.info/spitzberg-loipe
+    koordinate_geschaetzt: true
+  parkplaetze_ohne_koordinate:
+  - name: 'weitere laut Quelle: Parkplatz Schule/Tourist-Information, Parkplatz Sportplatz, Geigelsteinparkplatz, Parkplatz an der Achenbrücke'
+    gebuehr_text: überwiegend gebührenpflichtig
+    url: https://www.chiemsee-chiemgau.info/spitzberg-loipe
+  haltestellen:
+  - name: Abzw. Mühlau
+    art: Bus
+    lat: 47.725871
+    lon: 12.407881
+    url: https://www.openstreetmap.org/node/8926554269
+  wetterstation:
+    id: '20189'
+    name: Reit im Winkl (Kaiserweg)
+- slug: unterwoessen
+  name: Unterwössen
+  hoehe_m: 550
+  region: chiemgau
+  tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  nachbarn:
+  - schleching
+  - marquartstein-grassau
+  parkplaetze:
+  - name: Balsberg-Parkplatz (Start Flugplatz-Runde, Kruchenhausen-Runde)
+    lat: 47.730469
+    lon: 12.453539
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/achental/details.php?id=154368
+    koordinate_geschaetzt: true
+  - name: Wanderparkplatz Taubensee Hinterwössen (Start Hinterwössen-Runde)
+    lat: 47.70724916959
+    lon: 12.461779117584
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=207430
+    koordinate_geschaetzt: true
+  - name: Parkplatz Kinderspielplatz Hinterwössen (Start Oberwössen-Runde, Moosbach-Runde)
+    lat: 47.709840954783
+    lon: 12.484921216965
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/achental/inc/ajax.php?ajaxtype=getLoipenmanager
+    koordinate_geschaetzt: true
+  haltestellen:
+  - name: Unterwössen, Altes Bad
+    art: Bus
+    lat: 47.734394
+    lon: 12.458382
+    url: https://www.openstreetmap.org/node/8927431818
+  loipengebuehr:
+    eur: 0.0
+    text: nein (tourinfra-Merkmal 'Kostenfrei' bei Flugplatz-Runde und Hinterwössen-Runde)
+    url: https://module.tourinfra.com/achental/details.php?id=154368
+  wetterstation:
+    id: '20189'
+    name: Reit im Winkl (Kaiserweg)
+- slug: marquartstein-grassau
+  name: Marquartstein / Grassau
+  hoehe_m: 540
+  region: chiemgau
+  tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  nachbarn:
+  - unterwoessen
+  parkplaetze:
+  - name: Parkplatz Lindenkapelle zwischen Grassau und Marquartstein (Achental-Loipe, Bergwiese)
+    lat: 47.772700961363
+    lon: 12.447885274887
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/achentalloipe
+    koordinate_geschaetzt: true
+  - name: Parken Lanzingerstraße, Vogllug (Achental-Loipe, Lanzinger Moos)
+    lat: 47.755324020982
+    lon: 12.447570031509
+    gebuehr_text: unbekannt
+    url: https://www.chiemsee-chiemgau.info/achentalloipe
+    koordinate_geschaetzt: true
+  haltestellen:
+  - name: Marquartstein, Achental-Realschule
+    art: Bus
+    lat: 47.757266
+    lon: 12.458272
+    url: https://www.openstreetmap.org/node/8926085686
+  - name: Kucheln
+    art: Bus
+    lat: 47.778069
+    lon: 12.443735
+    url: https://www.openstreetmap.org/node/9056388641
+  wetterstation:
+    id: 04827
+    name: Grassau
+- slug: bergen
+  name: Bergen
+  hoehe_m: 600
+  region: chiemgau
+  tourist_url: https://www.bergen-chiemgau.de/skilanglauf
+  nachbarn:
+  - siegsdorf
+  parkplaetze:
+  - name: Parkplatz Talstation Hochfelln-Seilbahn (Start Fürbergloipe)
+    lat: 47.797742470188474
+    lon: 12.592277467253894
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=41466
+    koordinate_geschaetzt: true
+  - name: Parkplatz Schwimmbad Bergen (Start Bergener Moos Langlauf-Runde)
+    lat: 47.8145971267
+    lon: 12.5877659917
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=41468
+    koordinate_geschaetzt: true
+  haltestellen:
+  - name: Bergen Hochfellnbahn
+    art: Bus
+    lat: 47.798411
+    lon: 12.589867
+    url: https://www.openstreetmap.org/node/4249088913
+  loipengebuehr:
+    eur: 0.0
+    text: nein für Fürbergloipe (tourinfra-Merkmal 'Kostenfrei'); Bergener Moos unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=41466
+  wetterstation:
+    id: 04697
+    name: Siegsdorf-Maria Eck
+- slug: siegsdorf
+  name: Siegsdorf
+  hoehe_m: 610
+  region: chiemgau
+  tourist_url: https://www.siegsdorf.de/langlaufen
+  nachbarn:
+  - bergen
+  - ruhpolding
+  - inzell
+  parkplaetze:
+  - name: Parkplatz am Sportplatz Eisenärzt (Rundkurs Eisenärzt, Start Haus der Vereine)
+    lat: 47.801365873133
+    lon: 12.64487743377697
+    gebuehr_text: kostenlos
+    url: https://www.chiemsee-chiemgau.info/rundkurs-eisenaerzt
+    koordinate_geschaetzt: true
+    gebuehr_eur_tag: 0.0
+  - name: Parkplatz neben der Straße in der Hachau (Rundkurs Hammer)
+    lat: 47.804882570312
+    lon: 12.69371509552002
+    gebuehr_text: unbekannt
+    url: https://module.tourinfra.com/chiemgau/details.php?id=71275
+    koordinate_geschaetzt: true
+  haltestellen:
+  - name: Eisenärzt Abzw Hörgering
+    art: Bus
+    lat: 47.801161
+    lon: 12.643635
+    url: https://www.openstreetmap.org/node/8655957894
+  - name: Hachau
+    art: Bus
+    lat: 47.807
+    lon: 12.693128
+    url: https://www.openstreetmap.org/node/2171200223
+  wetterstation:
+    id: 04697
+    name: Siegsdorf-Maria Eck
+- slug: chieming
+  name: Chieming
+  hoehe_m: 530
+  region: chiemgau
+  tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
+  nachbarn: []

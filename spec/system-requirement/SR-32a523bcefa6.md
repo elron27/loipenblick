@@ -6,7 +6,7 @@ title: Chiemgau als Gebiet aufnehmen
 kennung: P11
 prio: soll
 umfang: v1
-rationale: Aus dem Interview mit Stefan am 08.11.2026. Nach E-12 in Version 1.
+rationale: "Aus dem Interview mit Stefan am 08.11.2026. Nach E-12 in Version 1.\n\nQuellen-Recherche vom 09.11.2026 (Ergebnisse auf Stefans PC unter Loipe\\recherche\\chiemgau_quellen.md): Fast der ganze Chiemgau kommt aus einer JSON-Schnittstelle (module.tourinfra.com/chiemgau, Loipenmanager, robots.txt erlaubt): 72 Loipen in Ruhpolding, Reit im Winkl mit Winklmoos- und Hemmersuppenalm, Inzell, Schleching, Unterwössen, Marquartstein, Grassau, Bergen, Siegsdorf und Chieming, mit Status klassisch/Skating getrennt, präparierten km, Präparierungsdatum, Startort und Streckenverlauf. Aschau wie Sachrang (Adapter B), Traunstein Freitext, Oberaudorf/Kiefersfelden HTML-Tabelle. Samerberg nur über eine Wix-Datenbank (loipe.live, im Test), Frasdorf ohne Quelle. Wie das Präparierungsdatum in der Saison aussieht, lässt sich erst ab Dezember prüfen."
 requirement-type: functional
 acceptance-criteria:
   - Für jedes Gebiet im Chiemgau bis Ruhpolding ist erfasst, ob und wie es angebunden ist.

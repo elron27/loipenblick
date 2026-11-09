@@ -1,0 +1,180 @@
+"""Wetter und Schnee: D11, D13, U15. Die Fixtures sind nach dem dokumentierten DWD- und
+Bright-Sky-Format gebaut (das Netz ist in der Cloud gesperrt); echte Antworten ersetzen sie spaeter."""
+
+import io
+import json
+import zipfile
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
+
+import pytest
+from sqlalchemy import select
+
+from loipen.konfig import lade_und_abgleichen
+from loipen.models import Gebiet, Wetter
+from loipen.wetter import (
+    aktualisiere_wetter, gebiet_position, neuschnee_summen, parse_brightsky, parse_dwd_tageswerte,
+    schnee_uebersicht,
+)
+
+JETZT = datetime(2026, 12, 10, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
+KOPF = "STATIONS_ID;MESS_DATUM;QN_6;  RS;RSF;SH_TAG;NSH_TAG;eor"
+
+
+def dwd_zip(zeilen: list[tuple]) -> bytes:
+    """(datum, rs, sh, nsh) -> ZIP wie vom DWD; None wird zu -999."""
+    f = lambda v: "-999" if v is None else f"{v}"
+    text = KOPF + "\n" + "\n".join(
+        f"      205;{d:%Y%m%d};10;   {f(rs)}; 0;   {f(sh)};   {f(nsh)};eor" for d, rs, sh, nsh in zeilen
+    )
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.writestr("Metadaten_Geographie_00205.txt", "egal")
+        z.writestr("produkt_nieder_tag_20250101_20261209_00205.txt", text)
+    return buf.getvalue()
+
+
+def brightsky(tage: dict[date, list[tuple[float, float, str]]]) -> str:
+    """Je Tag Liste (Temperatur, Niederschlag, Zustand) stuendlich."""
+    eintraege = []
+    for tag, stunden in tage.items():
+        for h, (t, n, c) in enumerate(stunden):
+            ts = datetime(tag.year, tag.month, tag.day, h, tzinfo=ZoneInfo("Europe/Berlin")).isoformat()
+            eintraege.append({"timestamp": ts, "temperature": t, "precipitation": n, "condition": c, "icon": c})
+    return json.dumps({"weather": eintraege, "sources": []})
+
+
+class WetterFetcher:
+    def __init__(self, zip_bytes=None, vorhersage=None, fehler_station=None):
+        self.zip_bytes, self.vorhersage, self.fehler_station = zip_bytes, vorhersage, fehler_station
+        self.urls: list[str] = []
+
+    def get_bytes(self, url):
+        self.urls.append(url)
+        if self.fehler_station and self.fehler_station in url:
+            raise RuntimeError("HTTP 404")
+        return self.zip_bytes
+
+    def get(self, url):
+        self.urls.append(url)
+        return self.vorhersage
+
+
+def messzeilen(tage=10, sh=None):
+    start = date(2026, 12, 10) - timedelta(days=tage)
+    return [(start + timedelta(days=i), 1.0, (sh if sh is not None else 20 + i), 2.0) for i in range(tage)]
+
+
+@pytest.mark.req("D11", ak=1)
+def test_d11_neuschnee_24_48_72():
+    m = parse_dwd_tageswerte(dwd_zip([
+        (date(2026, 12, 7), 0, 10, 0.0), (date(2026, 12, 8), 4, 14, 4.0),
+        (date(2026, 12, 9), 6, 26, 12.0), (date(2026, 12, 10), 2, 30, 5.0),
+    ]))
+    assert neuschnee_summen(m) == {24: 5.0, 48: 17.0, 72: 21.0}
+    assert m[-1].schneehoehe_cm == 30 and m[-1].niederschlag_mm == 2
+
+
+@pytest.mark.req("D11", ak=2)
+def test_d11_fehlender_wert_ist_unbekannt_nicht_null():
+    m = parse_dwd_tageswerte(dwd_zip([
+        (date(2026, 12, 8), 1, 10, 3.0), (date(2026, 12, 9), 1, None, None), (date(2026, 12, 10), 1, 12, 2.0),
+    ]))
+    assert m[1].schneehoehe_cm is None and m[1].neuschnee_cm is None
+    assert neuschnee_summen(m) == {24: 2.0, 48: None, 72: None}  # Luecke -> nicht als 0 gerechnet
+    assert neuschnee_summen([]) == {24: None, 48: None, 72: None}
+
+
+@pytest.mark.req("D11", ak=1)
+def test_d11_schnee_uebersicht_mit_zeitpunkt_und_quelle(session):
+    lade_und_abgleichen(session)
+    fetcher = WetterFetcher(dwd_zip([
+        (date(2026, 12, 8), 4, 14, 4.0), (date(2026, 12, 9), 6, 26, 12.0), (date(2026, 12, 10), 2, 30, 5.0)]),
+        vorhersage=json.dumps({"weather": []}))
+    aktualisiere_wetter(session, fetcher, JETZT)
+    g = session.scalar(select(Gebiet).where(Gebiet.slug == "sachrang"))
+    u = schnee_uebersicht(session, g)
+    assert (u["schneehoehe_cm"], u["neuschnee_24h_cm"], u["neuschnee_48h_cm"], u["neuschnee_72h_cm"]) == (30, 5.0, 17.0, 21.0)
+    assert u["messtag"] == date(2026, 12, 10)
+    assert u["station_id"] == "00205" and u["station_name"] == "Aschau-Stein"
+    assert u["quelle"] == "DWD Klimadaten Tageswerte"
+
+
+@pytest.mark.req("D13", ak=2)
+def test_d13_jeder_wert_hat_quelle_und_station(session):
+    lade_und_abgleichen(session)
+    aktualisiere_wetter(session, WetterFetcher(dwd_zip(messzeilen()), json.dumps({"weather": []})), JETZT)
+    zeilen = session.scalars(select(Wetter).where(Wetter.art == "messung")).all()
+    assert zeilen and all(z.quelle and z.station_id for z in zeilen)
+
+
+@pytest.mark.req("D13", ak=1)
+def test_d13_ein_datensatz_pro_tag_ohne_doppelte(session):
+    lade_und_abgleichen(session)
+    f = WetterFetcher(dwd_zip(messzeilen()), json.dumps({"weather": []}))
+    aktualisiere_wetter(session, f, JETZT)
+    n = session.query(Wetter).count()
+    aktualisiere_wetter(session, f, JETZT)  # zweiter Lauf: aktualisiert, legt nichts doppelt an
+    assert session.query(Wetter).count() == n
+    g = session.scalar(select(Gebiet).where(Gebiet.slug == "sachrang"))
+    tage = [z.datum for z in session.scalars(select(Wetter).where(Wetter.gebiet_id == g.id, Wetter.art == "messung")).all()]
+    assert len(tage) == len(set(tage)) == 10
+
+
+@pytest.mark.req("D13", ak=3)
+def test_d13_fruehere_winter_per_parameter_nachladen(session):
+    lade_und_abgleichen(session)
+    zeilen = [(date(2025, 12, 1) + timedelta(days=i), 0.0, 5, 0.0) for i in range(400)]
+    aktualisiere_wetter(session, WetterFetcher(dwd_zip(zeilen), json.dumps({"weather": []})), JETZT, tage=400)
+    g = session.scalar(select(Gebiet).where(Gebiet.slug == "sachrang"))
+    assert session.query(Wetter).filter_by(gebiet_id=g.id, art="messung").count() >= 365
+
+
+@pytest.mark.req("U15", ak=1)
+def test_u15_vorhersage_mindestens_drei_tage():
+    tage = {date(2026, 12, 10) + timedelta(days=i): [(-4.0 + h * .3, 0.2 if h in (3, 4) else 0.0, "snow" if h in (3, 4) else "dry")
+                                                     for h in range(24)] for i in range(4)}
+    v = parse_brightsky(brightsky(tage))
+    assert len(v) == 4
+    assert v[0].datum == date(2026, 12, 10)
+    assert v[0].temp_min_c == -4.0 and v[0].temp_max_c == pytest.approx(2.9)
+    assert v[0].niederschlag_mm == 0.4 and v[0].schneefall is True
+
+
+@pytest.mark.req("U15", ak=2)
+def test_u15_quelle_genannt_und_kostenlos(session):
+    lade_und_abgleichen(session)
+    tage = {date(2026, 12, 10): [(-1.0, 0.0, "dry")] * 24}
+    aktualisiere_wetter(session, WetterFetcher(dwd_zip(messzeilen()), brightsky(tage)), JETZT)
+    z = session.scalars(select(Wetter).where(Wetter.art == "vorhersage")).first()
+    assert z.quelle == "Bright Sky (DWD MOSMIX)"
+
+
+@pytest.mark.req("D11")
+def test_ausfall_einer_station_stoppt_die_anderen_nicht(session):
+    lade_und_abgleichen(session)
+    f = WetterFetcher(dwd_zip(messzeilen()), json.dumps({"weather": []}), fehler_station="04319")
+    lauf = aktualisiere_wetter(session, f, JETZT)
+    assert any("04319" in w for w in lauf.warnungen)
+    assert lauf.messungen > 0
+    ruh = session.scalar(select(Gebiet).where(Gebiet.slug == "ruhpolding"))
+    assert session.query(Wetter).filter_by(gebiet_id=ruh.id, art="messung").count() == 0
+
+
+@pytest.mark.req("D11")
+def test_station_wird_nur_einmal_abgerufen(session):
+    lade_und_abgleichen(session)
+    f = WetterFetcher(dwd_zip(messzeilen()), json.dumps({"weather": []}))
+    aktualisiere_wetter(session, f, JETZT)
+    dwd = [u for u in f.urls if "opendata.dwd.de" in u]
+    assert len(dwd) == len(set(dwd))  # Reit im Winkl, Schleching, Unterwoessen teilen 20189
+
+
+@pytest.mark.req("U15")
+def test_gebiet_position_aus_parkplaetzen_oder_loipen(session):
+    lade_und_abgleichen(session)
+    g = session.scalar(select(Gebiet).where(Gebiet.slug == "bayrischzell"))
+    lat, lon = gebiet_position(g)
+    assert 47.6 < lat < 47.7 and 11.9 < lon < 12.1
+    leer = session.scalar(select(Gebiet).where(Gebiet.slug == "chieming"))
+    assert gebiet_position(leer) is None

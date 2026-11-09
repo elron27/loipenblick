@@ -1,0 +1,126 @@
+# Quellen als Daten (P2): neue Orte kommen hier dazu, nicht in den Code.
+# Der Worker liest diese Datei bei jedem Lauf neu, ein Neustart ist nicht noetig.
+#
+# Adapter:
+#   ats     Tourismus-System von tegernsee.com, bayrischzell.de, fischbachau.de (/a-<slug>-Seiten)
+#   aschau  Schneebericht-Seite von aschau.de (Sachrang)
+#   (Schritt 3: tourinfra fuer den Chiemgau)
+
+# Abrufzeiten (P8). Jede Quelle kann einen eigenen Block "zeitplan" haben.
+zeitplan:
+  saison: {von: "11-01", bis: "04-30"}
+  saison_uhrzeiten: [7, 12, 17]
+  nebensaison_uhrzeiten: [8]
+
+quellen:
+  - key: tegernsee
+    adapter: ats
+    name: Tegernseer Tal Tourismus
+    base_url: https://www.tegernsee.com
+    config:
+      # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
+      # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
+      statusseiten:
+        - a-golfplatzrunde-87-km
+        - a-skitty-world-langlauf-parcours
+        - a-sportplatzrunde-35-km-1
+        - a-sportplatzrunde-17-km-schneebericht
+        - a-verbindungsloipe
+        - a-gasslerrunde-1
+        - a-oedbergrunde-1
+        - a-panoramablick-1
+        - a-runde-hainzenhoehe-steinberg-1
+        - a-verbindungsloipe-hainzenhoehe-steinberg
+        - a-klamm-bayerwald-glashuette-109-km-klassisch
+        - a-klamm-bayerwald-09-km-skating
+        - a-klamm-bayerwald-skating
+        - a-kreuth-scharling-skating-u-klassisch
+        - a-kreuth-wildbad-kreuth-klassisch
+        - a-nachtloipe-brunnbichl-skating-u-klassisch
+        - a-ringseeloipe-42-km-skating-u-klassisch
+        - a-rundkurs-point-skating-u-klassisch
+        - a-sonnenloipe-scharling-oberhof-skating-u-klassisch
+        - a-wildbad-kreuth-klamm-klassisch
+        - a-suttenrunde-1
+        - a-ellmaurunde-1
+        - a-glocknerwiesn-1
+        - a-gsotthaberrunde-1
+        - a-gutfelderrunde-1
+        - a-sonnenmoosrunde-1
+      default_gebiet: tegernsee
+      # Ortsname in Titel oder Text der Loipe -> Gebiet
+      gebiet_map:
+        Bad Wiessee: bad-wiessee
+        Gmund: gmund
+        Kreuth: kreuth
+        Rottach-Egern: rottach-egern
+        Tegernsee: tegernsee
+
+  - key: bayrischzell
+    adapter: ats
+    name: Bayrischzell Tourismus
+    base_url: https://www.bayrischzell.de
+    config:
+      # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
+      # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
+      statusseiten:
+        - a-kloo-ascher-runde-1
+        - a-zipflwirt-hauswies-runde-1
+        - a-bayrischzell-geitau-bayrischzell-1
+        - a-bayrischzell-zipflwirt-bayrischzell-1
+        - a-melkstatt-runde-2
+        - a-mieseben-runde-2
+        - a-streinalm-runde-1
+        - a-ursprungrunde
+        - a-nessler-runde-1
+      default_gebiet: bayrischzell
+
+  - key: fischbachau
+    adapter: ats
+    name: Fischbachau Tourismus
+    base_url: https://www.fischbachau.de
+    config:
+      # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
+      # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
+      statusseiten:
+        - a-point-hundham-1
+        - a-schreyern-runde-1
+        - a-hundham-kleine-uebungsrunde-1
+        - a-kleine-schreiern-runde-1
+        - a-lippmuehlenrunde-1
+        - a-zipflwirt-hauswies-runde-1
+      default_gebiet: fischbachau
+
+  - key: sachrang
+    adapter: aschau
+    name: Aschau i. Chiemgau Schneebericht
+    base_url: https://www.aschau.de
+    config:
+      report_path: /schneebericht-sachrang
+      default_gebiet: sachrang
+      # Stammdaten, die die Seite nicht liefert (aus der alten App uebernommen)
+      stammdaten:
+        Bergerfeld: {laenge_km: 1.7, schwierigkeit: blau, nachtloipe: false, lat: 47.7105, lon: 12.2425}
+        Langlaufrundkurs Lengauer Feld: {laenge_km: 3.1, schwierigkeit: rot, nachtloipe: false, lat: 47.6930, lon: 12.2680}
+        Nachtloipe: {laenge_km: 3.0, schwierigkeit: blau, nachtloipe: true, lat: 47.6930, lon: 12.2680}
+        Priental Loipe: {laenge_km: 8.0, schwierigkeit: rot, nachtloipe: false, lat: 47.7334, lon: 12.3036}
+
+  # Chiemgau: eine JSON-Abfrage liefert Ruhpolding, Reit im Winkl, Inzell, Achental, Bergen, Siegsdorf, Chieming.
+  - key: chiemgau
+    adapter: tourinfra
+    name: Chiemgau Tourismus (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/chiemgau
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: chieming
+      gebiet_map:
+        Ruhpolding: ruhpolding
+        Reit im Winkl: reit-im-winkl
+        Inzell: inzell
+        Schleching: schleching
+        Unterwössen: unterwoessen
+        Marquartstein: marquartstein-grassau
+        Grassau: marquartstein-grassau
+        Bergen: bergen
+        Siegsdorf: siegsdorf
+        Chieming: chieming

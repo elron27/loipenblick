@@ -1,0 +1,12 @@
+# Push-Abos (N1). Jedes Abo gilt fuer Loipen (Name), Gebiete (slug) oder Regionen (slug)
+# und fuer die genannten Ereignisse: oeffnet, frisch_gespurt, schliesst. Ohne "ereignisse" gelten alle.
+# Versand ueber ntfy, sobald LOIPEN_NTFY_URL gesetzt ist. Ohne Eintraege passiert nichts.
+abos: []
+# Beispiel:
+# abos:
+#   - name: Meine Hausloipe
+#     loipen: ["Rottach-Egern Nord"]
+#     ereignisse: [oeffnet, frisch_gespurt]
+#   - name: Chiemgau
+#     regionen: [chiemgau]
+#     ereignisse: [oeffnet]

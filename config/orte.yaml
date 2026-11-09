@@ -1,0 +1,18 @@
+# Gebiet, das die Seite als Standard-Standort nimmt, bis jemand einen Ort waehlt
+standard: Rottach-Egern
+# Orte fuer die Suche und den Umkreis (U4, U21), auch solche ohne eigene Loipe.
+# Koordinaten: Ortsmitte, auf zwei Stellen nach dem Komma genau, aus OpenStreetMap uebernommen.
+orte:
+  - {name: Rosenheim, lat: 47.86, lon: 12.12}
+  - {name: München, lat: 48.14, lon: 11.58}
+  - {name: Miesbach, lat: 47.79, lon: 11.84}
+  - {name: Holzkirchen, lat: 47.88, lon: 11.70}
+  - {name: Bad Tölz, lat: 47.76, lon: 11.56}
+  - {name: Bad Wiessee, lat: 47.71, lon: 11.72}
+  - {name: Schliersee, lat: 47.74, lon: 11.86}
+  - {name: Kufstein, lat: 47.58, lon: 12.17}
+  - {name: Prien am Chiemsee, lat: 47.86, lon: 12.34}
+  - {name: Traunstein, lat: 47.87, lon: 12.64}
+  - {name: Bad Reichenhall, lat: 47.72, lon: 12.88}
+  - {name: Salzburg, lat: 47.81, lon: 13.06}
+  - {name: Innsbruck, lat: 47.26, lon: 11.39}

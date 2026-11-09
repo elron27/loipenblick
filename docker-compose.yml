@@ -1,0 +1,58 @@
+# Loipenblick auf dem NAS (B4): docker compose pull && docker compose up -d
+# Das fertige Image baut GitHub (ghcr.io); zum Selbstbauen: docker compose up -d --build
+x-app: &app
+  image: ghcr.io/elron27/loipenblick:${LOIPEN_TAG:-latest}
+  build: .
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: Europe/Berlin
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+
+  # spielt die Datenbank-Migrationen ein und beendet sich
+  migrate:
+    <<: *app
+    env_file: .env
+    command: alembic upgrade head
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Adapter, Wetter, Generator, Dump und Zeitplan (B3)
+  worker:
+    <<: *app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      LOIPEN_SITE_DIR: /app/site
+      LOIPEN_BACKUP_DIR: /app/backup
+      TZ: Europe/Berlin
+    volumes:
+      # Die Konfiguration steckt im Image. Eigene Aenderungen: die Zeile unten einkommentieren
+      # und den Ordner config/ neben die docker-compose.yml legen.
+      # - ./config:/app/config:ro
+      - ./site:/app/site
+      - ${BACKUP_DIR:-./backup}:/app/backup
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  # liefert die erzeugte Seite im Heimnetz aus, genau den Ordner, der spaeter hochgeladen wird (B12)
+  vorschau:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${VORSCHAU_PORT:-8080}:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro

@@ -7,3 +7,6 @@ repositories:
 metamodel:
   repository: spec
   path: metamodel
+evidence:
+  - repository: spec
+    path: evidence
