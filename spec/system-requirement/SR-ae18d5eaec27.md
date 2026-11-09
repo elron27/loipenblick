@@ -4,9 +4,9 @@ type: system-requirement
 status: draft
 title: Schneequalität einschätzen
 kennung: U17
-prio: soll
-umfang: v1
-rationale: Aus dem Interview mit Stefan am 08.11.2026. Temperaturgrenze offen, Vorschlag zunächst -8 °C.
+prio: kann
+umfang: spaeter
+rationale: "Aus dem Interview mit Stefan am 08.11.2026. Am 09.11.2026 auf später gestellt: Die Loipenqualität ist schwer herauszufinden und einzuschätzen. In Version 1 zeigt die Seite nur die Rohdaten (Neuschnee D11, Präparierung D3, Wetter U15)."
 requirement-type: functional
 acceptance-criteria:
   - „Gute Bedingungen“ erscheint nur, wenn es in den letzten 48 h Neuschnee gab (D11), die Präparierung nach dem Schneefall lag (D3) und die Temperatur nicht unter der eingestellten Grenze liegt (U15).
