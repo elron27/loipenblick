@@ -409,6 +409,9 @@ function start() {
     document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky";
     beschrifteOrt(); sucheBinden();
     document.getElementById("ort").addEventListener("click", ortDialog);
+    var dk = document.getElementById("demo-knopf");
+    dk.textContent = S.demo ? "Beispielansicht beenden" : "Beispielansicht mit Schnee (erfundene Werte)";
+    dk.addEventListener("click", function () { try { if (S.demo) sessionStorage.removeItem("demo"); else sessionStorage.setItem("demo", "1"); } catch (e) {} location.reload(); });
     window.addEventListener("hashchange", route);
     route();
     if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) navigator.serviceWorker.register("sw.js").catch(function () {});
