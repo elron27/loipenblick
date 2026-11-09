@@ -1,6 +1,5 @@
 """Schnittstelle, die jeder Adapter erfuellt. Adapter liefern nur Daten, speichern nichts."""
 
-from collections.abc import Iterable
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Protocol
@@ -18,9 +17,12 @@ class LoipenDaten:
     gebiet_slug: str
     status: Status = Status.UNBEKANNT
     status_rohtext: str | None = None
+    status_klassisch: Status | None = None
+    status_skating: Status | None = None
     technik: Technik = Technik.UNBEKANNT
     schwierigkeit: Schwierigkeit = Schwierigkeit.UNBEKANNT
     nachtloipe: bool | None = None
+    rundkurs: bool | None = None
     laenge_km: float | None = None
     gespurt_klassisch_km: float | None = None
     gespurt_skating_km: float | None = None
@@ -29,7 +31,17 @@ class LoipenDaten:
     quelle_aktualisiert_at: datetime | None = None
     lat: float | None = None
     lon: float | None = None
-    unbekannte_begriffe: list[str] = field(default_factory=list)
+    startpunkt: str | None = None
+    rohtext: str | None = None
+    # (Feld, Rohtext) fuer Woerter, die keine Zuordnungstabelle kennt (P5)
+    unbekannte_begriffe: list[tuple[str, str]] = field(default_factory=list)
+
+
+@dataclass
+class AdapterErgebnis:
+    loipen: list[LoipenDaten] = field(default_factory=list)
+    # Einzelne Seiten, die nicht gelesen werden konnten; der Lauf geht trotzdem weiter
+    warnungen: list[str] = field(default_factory=list)
 
 
 class Fetcher(Protocol):
@@ -37,4 +49,4 @@ class Fetcher(Protocol):
 
 
 class Adapter(Protocol):
-    def run(self, base_url: str, config: dict, fetcher: Fetcher) -> Iterable[LoipenDaten]: ...
+    def run(self, base_url: str, config: dict, fetcher: Fetcher) -> AdapterErgebnis: ...
