@@ -1,0 +1,59 @@
+# Handdaten der Gebiete (D7, D8, U14, U26, D11).
+# Werte der Quelle haben Vorrang; hier steht, was die Quellen nicht liefern.
+# Fehlt eine Gebuehr, bleibt das Feld leer: das heisst "unbekannt", nicht "kostenlos".
+# Jede Angabe nennt ihre Quelle (url).
+
+regionen:
+  - {slug: tegernseer-tal, name: Tegernseer Tal}
+  - {slug: leitzachtal, name: Leitzachtal}
+  - {slug: priental, name: Priental}
+
+gebiete:
+  - slug: bad-wiessee
+    name: Bad Wiessee
+    region: tegernseer-tal
+    tourist_url: https://www.tegernsee.com/bad-wiessee
+    nachbarn: [gmund, tegernsee]
+  - slug: gmund
+    name: Gmund
+    region: tegernseer-tal
+    tourist_url: https://www.tegernsee.com/gmund
+    nachbarn: [bad-wiessee, tegernsee]
+  - slug: kreuth
+    name: Kreuth
+    region: tegernseer-tal
+    tourist_url: https://www.tegernsee.com/kreuth
+    nachbarn: [rottach-egern]
+  - slug: rottach-egern
+    name: Rottach-Egern
+    region: tegernseer-tal
+    tourist_url: https://www.tegernsee.com/rottach-egern
+    nachbarn: [kreuth, tegernsee]
+  - slug: tegernsee
+    name: Tegernsee
+    region: tegernseer-tal
+    tourist_url: https://www.tegernsee.com
+    nachbarn: [gmund, rottach-egern, bad-wiessee]
+  - slug: bayrischzell
+    name: Bayrischzell
+    region: leitzachtal
+    tourist_url: https://www.bayrischzell.de
+    nachbarn: [fischbachau]
+    loipengebuehr:
+      eur: 7.0
+      text: "7 € pro Tag inklusive Parken, mit Gästekarte frei"
+      url: https://www.bayrischzell.de/langlaufen
+  - slug: fischbachau
+    name: Fischbachau
+    region: leitzachtal
+    tourist_url: https://www.fischbachau.de
+    nachbarn: [bayrischzell]
+  - slug: sachrang
+    name: Sachrang
+    region: priental
+    tourist_url: https://www.aschau.de
+    parkplaetze: []
+
+# Parkplaetze kommen aus der Recherche (gebiete.yaml auf Stefans PC) dazu, Schema:
+#   parkplaetze:
+#     - {name: ..., lat: ..., lon: ..., gebuehr_eur_tag: 5.0, gebuehr_text: ..., url: ..., koordinate_geschaetzt: false}

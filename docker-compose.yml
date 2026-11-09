@@ -1,3 +1,4 @@
+# Loipenblick auf dem NAS (B4): docker compose up -d --build
 services:
   db:
     image: postgres:16-alpine
@@ -14,6 +15,7 @@ services:
       interval: 10s
       retries: 5
 
+  # spielt die Datenbank-Migrationen ein und beendet sich
   migrate:
     build: .
     env_file: .env
@@ -22,23 +24,28 @@ services:
       db:
         condition: service_healthy
 
-  web:
-    build: .
-    restart: unless-stopped
-    env_file: .env
-    ports:
-      - "${WEB_PORT:-8000}:8000"
-    depends_on:
-      migrate:
-        condition: service_completed_successfully
-
+  # Adapter, Wetter, Generator, Dump und Zeitplan (B3)
   worker:
     build: .
     restart: unless-stopped
     env_file: .env
-    command: python -m loipen.worker.main
+    environment:
+      LOIPEN_SITE_DIR: /app/site
+      LOIPEN_BACKUP_DIR: /app/backup
+      TZ: Europe/Berlin
     volumes:
       - ./config:/app/config:ro
+      - ./site:/app/site
+      - ${BACKUP_DIR:-./backup}:/app/backup
     depends_on:
       migrate:
         condition: service_completed_successfully
+
+  # liefert die erzeugte Seite im Heimnetz aus, genau den Ordner, der spaeter hochgeladen wird (B12)
+  vorschau:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${VORSCHAU_PORT:-8080}:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
