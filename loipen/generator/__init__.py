@@ -1,65 +1,77 @@
-"""Statische Website (E-10). Schritt 1: Platzhalterseite und daten.json.
+"""Statische Website (E-10, B7).
 
-Der Generator schreibt nach settings.site_dir. Genau dieser Ordner wird im Heimnetz
-vom Container "vorschau" ausgeliefert und spaeter unveraendert hochgeladen (B12).
+Der Generator schreibt nach settings.site_dir: die App (HTML, JS, CSS, PWA-Dateien) aus
+loipen/generator/static und die Daten als JSON (Index, je Region eine Datei, je Region die
+Strecken). Genau dieser Ordner wird im Heimnetz vom Container "vorschau" ausgeliefert und
+spaeter unveraendert auf einen Webspace hochgeladen (B12).
 """
 
 import json
 import os
+import shutil
 import tempfile
 from datetime import datetime
-from html import escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from loipen.models import Gebiet, Loipe
+from loipen.generator.daten import baue
+from loipen.generator.icons import png_icon
+from loipen.konfig import CONFIG_DIR
 
+STATIC = Path(__file__).parent / "static"
 HINWEIS = "Alle Angaben ohne Gewähr. Quelle und Stand stehen bei jedem Wert."
 
 
-def _schreibe(ziel: Path, inhalt: str) -> None:
+def _schreibe(ziel: Path, inhalt: str | bytes) -> None:
     """Schreibt atomar, damit nginx nie eine halbe Datei ausliefert."""
     ziel.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=ziel.parent, prefix=".tmp-")
-    with os.fdopen(fd, "w", encoding="utf-8") as f:
-        f.write(inhalt)
+    with os.fdopen(fd, "wb") as f:
+        f.write(inhalt.encode("utf-8") if isinstance(inhalt, str) else inhalt)
     os.chmod(tmp, 0o644)
     os.replace(tmp, ziel)
 
 
-def erzeuge(session: Session, site_dir: str | Path, jetzt: datetime | None = None) -> list[Path]:
+def _json(obj) -> str:
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+
+
+def erzeuge(
+    session: Session,
+    site_dir: str | Path,
+    jetzt: datetime | None = None,
+    config_dir: str | Path | None = None,
+    stale_days: int = 7,
+) -> list[Path]:
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
-    anzahl_gebiete = session.scalar(select(func.count()).select_from(Gebiet)) or 0
-    anzahl_loipen = session.scalar(select(func.count()).select_from(Loipe)) or 0
-    stand = jetzt.strftime("%d.%m.%Y %H:%M")
+    daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days)
+    stand = jetzt.astimezone(ZoneInfo("Europe/Berlin")).strftime("%Y%m%d%H%M")
 
-    daten = {
-        "erzeugt": jetzt.isoformat(),
-        "gebiete": anzahl_gebiete,
-        "loipen": anzahl_loipen,
-    }
-    html = f"""<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Loipenblick</title>
-</head>
-<body>
-<main>
-<h1>Loipenblick</h1>
-<p>Vorschau im Heimnetz. Noch keine Loipendaten, die Adapter kommen im nächsten Schritt.</p>
-<p>{anzahl_gebiete} Gebiete, {anzahl_loipen} Loipen. Stand {escape(stand)}.</p>
-</main>
-<footer><p>{escape(HINWEIS)}</p></footer>
-</body>
-</html>
-"""
-    dateien = [site / "index.html", site / "daten.json"]
-    _schreibe(dateien[0], html)
-    _schreibe(dateien[1], json.dumps(daten, ensure_ascii=False, indent=1))
-    return dateien
+    geschrieben: list[Path] = []
+
+    def schreibe(rel: str, inhalt: str | bytes) -> None:
+        _schreibe(site / rel, inhalt)
+        geschrieben.append(site / rel)
+
+    for quelle in sorted(STATIC.iterdir()):
+        if quelle.is_file():
+            inhalt = quelle.read_bytes()
+            if quelle.name in ("index.html", "sw.js"):
+                inhalt = inhalt.replace(b"__STAND__", stand.encode())  # neue Version -> Cache erneuern
+            schreibe(quelle.name, inhalt)
+    schreibe("icon-192.png", png_icon(192))
+    schreibe("icon-512.png", png_icon(512))
+    schreibe("daten.json", _json(daten["index"]))
+    for slug, region in daten["regionen"].items():
+        schreibe(f"daten/{slug}.json", _json(region))
+        schreibe(f"strecken/{slug}.json", _json(daten["strecken"][slug]))
+
+    # Dateien frueherer Laeufe, die es nicht mehr gibt (z. B. eine entfernte Region), aufraeumen
+    for unterordner in ("daten", "strecken"):
+        for datei in (site / unterordner).glob("*.json"):
+            if datei not in geschrieben:
+                datei.unlink()
+    return geschrieben

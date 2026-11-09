@@ -47,3 +47,33 @@ class FixtureFetcher:
 
     def seite(self, relativ: str) -> str:
         return (self.verzeichnis / relativ).read_text(encoding="utf-8")
+
+
+SEITEN_QUELLEN = {
+    "sachrang": {"schneebericht-sachrang": "schneebericht.html"},
+    "chiemgau": {"inc/ajax.php?ajaxtype=getLoipenmanager": "loipenmanager.json"},
+}
+
+
+def lade_alle_fixtures(session, jetzt, mit_wetter: bool = True) -> None:
+    """Alle Quellen aus den Beispielseiten abrufen, dazu (erfundenes) Wetter im DWD- und Bright-Sky-Format."""
+    from sqlalchemy import select
+
+    from loipen.ablauf import rufe_quelle_ab
+    from loipen.konfig import lade_und_abgleichen
+    from loipen.models import Quelle
+
+    lade_und_abgleichen(session)
+    for q in session.scalars(select(Quelle).order_by(Quelle.key)).all():
+        rufe_quelle_ab(session, q, FixtureFetcher(q.key, q.base_url, seiten=SEITEN_QUELLEN.get(q.key)), jetzt)
+    if mit_wetter:
+        from datetime import date, timedelta
+
+        from loipen.wetter import aktualisiere_wetter
+        from tests.test_wetter import WetterFetcher, brightsky, dwd_zip
+
+        heute = jetzt.date()
+        zeilen = [(heute - timedelta(days=3 - i), 1.0, 20 + i, 2.0 * i) for i in range(4)]
+        tage = {heute + timedelta(days=i): [(-6.0 + h * .4, 0.1 if h in (2, 3) else 0.0, "snow" if h in (2, 3) else "dry")
+                                            for h in range(24)] for i in range(8)}
+        aktualisiere_wetter(session, WetterFetcher(dwd_zip(zeilen), brightsky(tage)), jetzt)

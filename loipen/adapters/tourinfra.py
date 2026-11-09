@@ -37,6 +37,17 @@ def _km(wert) -> float | None:
     return km if km >= 0 else None  # -1 = keine Angabe
 
 
+def _vereinfache(coords: list, max_punkte: int = 120) -> list[tuple[float, float]] | None:
+    """Streckenverlauf auf hoechstens max_punkte Punkte ausduennen (Anfang und Ende bleiben)."""
+    punkte = [(round(float(p[0]), 5), round(float(p[1]), 5)) for p in coords if len(p) >= 2]
+    if len(punkte) < 2:
+        return None
+    if len(punkte) > max_punkte:
+        schritt = (len(punkte) - 1) / (max_punkte - 1)
+        punkte = [punkte[round(i * schritt)] for i in range(max_punkte)]
+    return punkte
+
+
 class TourinfraAdapter:
     def run(self, base_url: str, config: dict, fetcher: Fetcher) -> AdapterErgebnis:
         ergebnis = AdapterErgebnis()
@@ -93,6 +104,7 @@ class TourinfraAdapter:
             coords = e.get("coords") or []
             if coords:
                 d.lat, d.lon = coords[0][0], coords[0][1]
+            d.verlauf = _vereinfache(coords)
             d.startpunkt = (e.get("startort_detail") or "").strip() or None
             d.rohtext = json.dumps(
                 {k: e.get(k) for k in ("status_text", "status_klassisch_text", "status_skating_text",

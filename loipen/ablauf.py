@@ -38,6 +38,9 @@ def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
         loipe.technik = d.technik.value
     if d.schwierigkeit != Schwierigkeit.UNBEKANNT:
         loipe.schwierigkeit = d.schwierigkeit.value
+    if d.verlauf:
+        # GeoJSON LineString, Koordinaten als [lon, lat]
+        loipe.verlauf = {"type": "LineString", "coordinates": [[lon, lat] for lat, lon in d.verlauf]}
     loipe.active = True
 
 

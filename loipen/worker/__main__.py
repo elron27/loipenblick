@@ -61,7 +61,7 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None) -> None:
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
-        generator.erzeuge(session, settings.site_dir)
+        generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days)
     log.info("Seite erzeugt in %s", settings.site_dir)
 
 

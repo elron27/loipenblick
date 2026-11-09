@@ -33,6 +33,8 @@ class LoipenDaten:
     lon: float | None = None
     startpunkt: str | None = None
     rohtext: str | None = None
+    # Streckenverlauf als Liste von (lat, lon), falls die Quelle ihn liefert
+    verlauf: list[tuple[float, float]] | None = None
     # (Feld, Rohtext) fuer Woerter, die keine Zuordnungstabelle kennt (P5)
     unbekannte_begriffe: list[tuple[str, str]] = field(default_factory=list)
 

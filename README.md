@@ -45,6 +45,7 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
+Die Oberflächen-Tests laufen in Chromium (`playwright install chromium`); ohne Browser werden sie übersprungen.
 Jeder Test nennt die Anforderung, die er prüft, z. B. `@pytest.mark.req("D4", ak=1)`.
 Die CI verknüpft die Ergebnisse mit ReqSeq (`reqseq evidence enrich-junit`); was noch keinen
 Nachweis hat, zeigt `reqseq evidence coverage --workspace spec --filter version-1`.

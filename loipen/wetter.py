@@ -29,7 +29,7 @@ DWD_URL = (
 BRIGHTSKY_URL = "https://api.brightsky.dev/weather?lat={lat}&lon={lon}&date={von}&last_date={bis}&tz=Europe/Berlin"
 QUELLE_DWD = "DWD Klimadaten Tageswerte"
 QUELLE_VORHERSAGE = "Bright Sky (DWD MOSMIX)"
-VORHERSAGE_TAGE = 4
+VORHERSAGE_TAGE = 8  # mindestens 7, damit am Montag das folgende Wochenende drin ist (U18)
 MESSUNG_TAGE = 14
 
 

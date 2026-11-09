@@ -80,10 +80,10 @@ def test_b12_vorschau_im_heimnetz_erreichbar():
 @pytest.mark.req("B12")
 def test_b12_generator_schreibt_startseite(session, tmp_path):
     dateien = generator.erzeuge(session, tmp_path, datetime(2026, 11, 9, 12, 0))
-    assert {d.name for d in dateien} == {"index.html", "daten.json"}
+    assert {"index.html", "daten.json", "app.js", "app.css"} <= {d.name for d in dateien}
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert "ohne Gewähr" in html
-    assert not list(tmp_path.glob(".tmp-*"))
+    assert not list(tmp_path.rglob(".tmp-*"))
 
 
 @pytest.mark.req("D6", ak=1)

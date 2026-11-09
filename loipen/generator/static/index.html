@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loipenblick</title>
+<meta name="description" content="Welche Loipen sind heute offen? Zustand, Schnee und Wetter für Langläufer in Südostbayern.">
+<meta name="theme-color" content="#06111a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eaf3f9" media="(prefers-color-scheme: light)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css?v=__STAND__">
+</head>
+<body>
+<a class="skip" href="#view">Zum Inhalt</a>
+<header class="top">
+  <div class="wrap in">
+    <a class="logo" href="#/" aria-label="Loipenblick, Startseite"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c4-9 6-9 9-3s6 3 9-8"/></svg></i><span>Loipenblick</span></a>
+    <nav class="tabs" aria-label="Seiten">
+      <a href="#/" data-tab="heute">Heute</a>
+      <a href="#/karte" data-tab="karte">Karte</a>
+      <a href="#/loipen" data-tab="loipen">Loipen</a>
+    </nav>
+    <div class="suche">
+      <label class="vh" for="q">Suche nach Ort, Gebiet oder Loipe</label>
+      <input id="q" type="search" placeholder="Ort, Gebiet oder Loipe suchen" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="vorschlaege" aria-autocomplete="list">
+      <ul id="vorschlaege" role="listbox" hidden></ul>
+    </div>
+    <button class="ort" id="ort" type="button" aria-haspopup="dialog"></button>
+  </div>
+</header>
+<div id="ortwahl" class="ortwahl" hidden role="dialog" aria-label="Standort wählen"></div>
+<noscript><p class="wrap">Diese Seite braucht JavaScript, um die Loipen anzuzeigen.</p></noscript>
+<main id="view" class="wrap" tabindex="-1" aria-live="polite"></main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Alle Angaben ohne Gewähr.</strong> Die Daten stammen von den Tourismusverbänden und vom Deutschen Wetterdienst; maßgeblich ist immer die Quelle vor Ort. Die Quelle und der Stand stehen bei jeder Loipe.</p>
+    <p id="stand" class="fine"></p>
+  </div>
+</footer>
+<script src="app.js?v=__STAND__"></script>
+</body>
+</html>
