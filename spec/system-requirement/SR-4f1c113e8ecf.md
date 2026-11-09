@@ -4,9 +4,9 @@ type: system-requirement
 status: draft
 title: Tägliche Sicherung außerhalb des NAS
 kennung: B14
-prio: muss
-umfang: v1
-rationale: Blindspot-Analyse vom 09.11.2026, Punkt 1, von Stefan übernommen.
+prio: soll
+umfang: spaeter
+rationale: "Blindspot-Analyse vom 09.11.2026, Punkt 1: Stefan hat „später“ gewählt. Risiko: Bis dahin geht bei einem Plattenausfall die gesammelte Historie verloren."
 requirement-type: quality
 acceptance-criteria:
   - Jeden Tag entsteht eine Sicherung, die älteste wird erst nach 30 Tagen gelöscht.
