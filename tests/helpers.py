@@ -12,10 +12,18 @@ class FixtureFetcher:
 
     /langlaufen[/n]  -> langlaufen_<n>.html
     /<slug>          -> schneebericht/<slug>.html
+    seiten: {Pfad: Datei} ordnet einzelne Pfade Dateien zu (z. B. schneebericht-sachrang).
     ersetze: {Pfad: Text} ueberschreibt einzelne Seiten (fuer abgeleitete Seiten).
     """
 
-    def __init__(self, quelle: str, base_url: str, ersetze: dict[str, str] | None = None):
+    def __init__(
+        self,
+        quelle: str,
+        base_url: str,
+        ersetze: dict[str, str] | None = None,
+        seiten: dict[str, str] | None = None,
+    ):
+        self.seiten = seiten or {}
         self.verzeichnis = FIXTURES / quelle
         self.base_url = base_url.rstrip("/")
         self.ersetze = ersetze or {}
@@ -26,7 +34,9 @@ class FixtureFetcher:
         pfad = url[len(self.base_url):].strip("/")
         if pfad in self.ersetze:
             return self.ersetze[pfad]
-        if pfad.startswith("langlaufen"):
+        if pfad in self.seiten:
+            datei = self.verzeichnis / self.seiten[pfad]
+        elif pfad.startswith("langlaufen"):
             n = pfad.split("/")[1] if "/" in pfad else "0"
             datei = self.verzeichnis / f"langlaufen_{n}.html"
         else:
