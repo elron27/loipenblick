@@ -3,5 +3,9 @@
 from loipen.adapters.aschau import AschauAdapter
 from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
+from loipen.adapters.tourinfra import TourinfraAdapter
 
-ADAPTERS: dict[str, Adapter] = {"ats": AtsAdapter(), "aschau": AschauAdapter()}
+ADAPTERS: dict[str, Adapter] = {
+    "ats": AtsAdapter(), "aschau": AschauAdapter(),
+    "tourinfra": TourinfraAdapter(),
+}

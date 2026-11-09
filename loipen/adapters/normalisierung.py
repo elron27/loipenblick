@@ -18,6 +18,8 @@ ZUSTAND: dict[str, Status] = {
     "geöffnet": Status.OFFEN,
     "offen": Status.OFFEN,
     "befahrbar": Status.OFFEN,
+    "fahrbar": Status.OFFEN,
+    "top": Status.OFFEN,
     "gespurt": Status.OFFEN,
     "präpariert": Status.OFFEN,
     "sehr gut": Status.OFFEN,
@@ -31,6 +33,7 @@ ZUSTAND: dict[str, Status] = {
     "gesperrt": Status.GESCHLOSSEN,
     # bekannt, aber ohne Aussage
     "k.a.": Status.UNBEKANNT,
+    "unbekannt": Status.UNBEKANNT,
     "": Status.UNBEKANNT,
 }
 
@@ -85,7 +88,7 @@ def parse_zahl(text: str | None) -> float | None:
 
 
 _DATUM = re.compile(
-    r"(\d{1,2})\.(\d{1,2})\.(\d{4}|\d{2})(?:\s*(?:um\s*)?(\d{1,2}):(\d{2})(?:\s*Uhr)?)?"
+    r"(\d{1,2})\.(\d{1,2})\.(\d{4}|\d{2})(?:\s*(?:um\s*|/\s*)?(\d{1,2}):(\d{2})(?:\s*Uhr)?)?"
 )
 
 
