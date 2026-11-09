@@ -1,0 +1,27 @@
+name: Anforderungen prüfen
+
+on:
+  pull_request:
+    paths: ["spec/**", ".github/workflows/spec.yml"]
+  push:
+    branches: [main]
+    paths: ["spec/**"]
+
+jobs:
+  reqseq:
+    runs-on: ubuntu-24.04
+    env:
+      REQSEQ_VERSION: 0.8.3
+      REQSEQ_SHA256: cc6f7e579cd0615fdac37d6b49b77ba65af66bb99fe1cc640049f45dac4f583d
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: ReqSeq installieren
+        run: |
+          curl -sSL -o reqseq-cli.tgz "https://github.com/ThomasBirkmaier/ReqSeq/releases/download/v${REQSEQ_VERSION}/reqseq-cli-${REQSEQ_VERSION}.tgz"
+          echo "${REQSEQ_SHA256}  reqseq-cli.tgz" | sha256sum -c -
+          npm install -g --offline --ignore-scripts ./reqseq-cli.tgz
+      - name: Workspace prüfen
+        run: reqseq workspace check --workspace spec --fail-on warning

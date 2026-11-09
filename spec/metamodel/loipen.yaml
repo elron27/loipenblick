@@ -1,0 +1,29 @@
+# Ergänzungen zum Standardmodell für Loipenblick.
+# - kennung: lesbare ID aus dem Anforderungsdokument (P1, U5, N-01, E-01), Bedeutung identifier
+# - prio: Priorität aus dem Anforderungsdokument (M = Muss, S = Soll, K = Kann)
+# - umfang: ob die Anforderung in Version 1 gebaut wird (Produktdefinition vom 30.10.2026)
+# - packages auch bei need, damit Bedürfnisse ein Themenpaket haben
+# Die Schlüssel sind zusätzlich in standard-model.yaml bei den Typen eingetragen,
+# weil eine eigene Datei Typen des Standardmodells keine Eigenschaften hinzufügen kann.
+reqseq-metamodel: 1
+properties:
+  - key: kennung
+    name: Kennung
+    description: "Lesbare ID, z. B. P1 oder U5, wie im Anforderungsdokument."
+    kind: text
+    meaning: identifier
+  - key: prio
+    name: Priorität
+    description: "M = Muss für Version 1, S = Soll, K = Kann später."
+    kind: choice
+    choices:
+      - { key: muss, name: Muss }
+      - { key: soll, name: Soll }
+      - { key: kann, name: Kann }
+  - key: umfang
+    name: Umfang
+    description: "In Version 1 oder später."
+    kind: choice
+    choices:
+      - { key: v1, name: Version 1 }
+      - { key: spaeter, name: Später }
