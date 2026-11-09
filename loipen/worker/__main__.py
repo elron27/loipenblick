@@ -20,6 +20,7 @@ from loipen.db import session_scope
 from loipen.fetcher import HoeflicherFetcher
 from loipen.konfig import lade_und_abgleichen
 from loipen.models import Quelle
+from loipen.wetter import aktualisiere_wetter
 from loipen.zeitplan import ist_faellig
 
 log = logging.getLogger("loipen.worker")
@@ -53,6 +54,13 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None) -> None:
                 quelle.key, ergebnis.gefunden, ergebnis.neu,
                 f", Fehler: {ergebnis.fehler}" if ergebnis.fehler else "",
             )
+        try:
+            wetter = aktualisiere_wetter(session, abrufer or fetcher())
+            log.info("Wetter: %d Messwerte, %d Vorhersagewerte", wetter.messungen, wetter.vorhersagen)
+            for w in wetter.warnungen:
+                log.warning("Wetter: %s", w)
+        except Exception:  # Wetter darf den Lauf nie verhindern
+            log.exception("Wetter-Aktualisierung fehlgeschlagen")
         generator.erzeuge(session, settings.site_dir)
     log.info("Seite erzeugt in %s", settings.site_dir)
 

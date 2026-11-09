@@ -90,13 +90,24 @@ class HoeflicherFetcher:
         crawl = parser.crawl_delay(self.user_agent) if parser else None
         return max(self.delay_s, float(crawl)) if crawl else self.delay_s
 
-    def get(self, url: str) -> str:
+    def _vorbereiten(self, url: str) -> None:
+        """robots.txt pruefen und den Abstand pro Domain einhalten."""
         host = self._host(url)
         robots = self._robots_fuer(host)
         if robots is not None and not robots.can_fetch(self.user_agent, url):
             raise RobotsVerbot(f"robots.txt verbietet {url}")
-
         self._warte(host, self.abstand_fuer(host))
+
+    def get_bytes(self, url: str) -> bytes:
+        """Wie get, aber fuer Binaerdateien (z. B. ZIP vom DWD). Ohne Cache."""
+        self._vorbereiten(url)
+        antwort = self._client.get(url)
+        if antwort.status_code >= 400:
+            raise HttpFehler(url, antwort.status_code)
+        return antwort.content
+
+    def get(self, url: str) -> str:
+        self._vorbereiten(url)
         kopf: dict[str, str] = {}
         zwischen = self._cache.get(url)
         if zwischen:
