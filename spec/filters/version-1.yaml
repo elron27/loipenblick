@@ -7,6 +7,7 @@ where:
       op: eq
       value: v1
     - type: [system-requirement]
+    - status: [draft, approved]
 sort:
   - by: kennung
     order: asc
