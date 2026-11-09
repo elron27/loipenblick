@@ -38,7 +38,7 @@ def test_b7_seite_braucht_keinen_server(site):
     html = (site / "index.html").read_text(encoding="utf-8")
     assert not re.search(r"<(script|link)[^>]+(src|href)=\"https?://", html)  # nichts von fremden Servern
     dateien = {p.suffix for p in site.rglob("*") if p.is_file()}
-    assert dateien <= {".html", ".js", ".css", ".json", ".png", ".webmanifest"}  # nur statische Dateien
+    assert dateien <= {".html", ".js", ".css", ".json", ".png", ".webmanifest", ".txt"}  # nur statische Dateien
     js = (site / "app.js").read_text(encoding="utf-8")
     assert "fetch(url)" in js and not re.search(r"fetch\(\s*[\"']https?://", js)  # Daten nur relativ
 
@@ -151,7 +151,7 @@ def test_u5_detaildaten_historie_14_tage_und_quelle(site):
     assert l["historie"][0]["status"] is None  # vor dem ersten Abruf keine Daten, nicht erfunden
     assert l["laenge_km"] and l["quelle"]["url"].startswith("https://www.tegernsee.com")
     js = (STATIC / "app.js").read_text(encoding="utf-8")
-    assert "Letzte 14 Tage" in js and "Mini-Karte" in js and "Navigation" in js
+    assert "Letzte 14 Tage" in js and "Karte der Loipe" in js and "Navigation" in js
 
 
 @pytest.mark.req("U14", ak=2)

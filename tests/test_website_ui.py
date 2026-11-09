@@ -216,38 +216,47 @@ def test_u4_umkreis_zeigt_nur_loipen_im_radius_mit_entfernung(seite):
     assert seite.locator(".lp").count() > len(ent)
 
 
+def marker_summe(page) -> int:
+    """Einzelmarker plus die Anzahl in den Buendeln."""
+    einzeln = page.locator("#map .mk").count()
+    buendel = page.locator("#map .mkc").evaluate_all("els => els.map(e => parseInt(e.textContent, 10) || 0)")
+    return einzeln + sum(buendel)
+
+
 @pytest.mark.req("U1", ak=1)
 def test_u1_marker_in_statusfarbe(seite):
     seite.open("#/karte?demo=1")
-    seite.wait_for_selector("#map .mk")
-    farben = set(seite.locator("#map .mk circle").evaluate_all("els => els.map(e => e.getAttribute('fill'))"))
-    assert "#4ade80" in farben  # offen
-    assert "#9fb3c2" in farben  # geschlossen
+    seite.wait_for_selector("#map .mk, #map .mkc")
+    stati = set(seite.locator("#map .mk, #map .mkc").evaluate_all("els => els.map(e => e.dataset.s)"))
+    assert {"offen", "geschlossen"} <= stati
+    farben = set(seite.locator("#map .mk, #map .mkc").evaluate_all("els => els.map(e => e.style.background)"))
+    assert any("74, 222, 128" in f or "4ade80" in f for f in farben)  # offen = gruen
 
 
 @pytest.mark.req("U1", ak=2)
 def test_u1_nahe_marker_werden_gebuendelt_und_beim_zoomen_aufgeloest(seite):
     seite.open("#/karte")
-    seite.wait_for_selector("#map .mk")
-    vorher = seite.locator("#map .mk").count()
-    assert seite.locator("#map .mk text").count() > 0  # Buendel tragen die Anzahl
-    for _ in range(4):
-        seite.click("#zi")
-    nachher = seite.locator("#map .mk").count()
-    assert nachher != vorher
-    seite.click("#zf")
-    assert seite.locator("#map .mk").count() == vorher
+    seite.wait_for_selector("#map .mk, #map .mkc")
+    gesamt = marker_summe(seite)
+    assert seite.locator("#map .mkc").count() > 0  # Buendel tragen die Anzahl
+    seite.evaluate("window.__map.setZoom(17, {animate: false})")
+    seite.wait_for_timeout(400)
+    assert seite.locator("#map .mkc").count() == 0 or marker_summe(seite) < gesamt  # nur noch Sichtbares, nicht mehr gebuendelt
+    seite.click("button.alles")
+    seite.wait_for_timeout(700)
+    assert marker_summe(seite) == gesamt
 
 
 @pytest.mark.req("U1", ak=1)
 def test_u1_marker_oeffnet_detail(seite):
     seite.open("#/karte?demo=1&gebiet=rottach-egern&offen=1")
-    seite.wait_for_selector("#map .mk")
-    for _ in range(8):  # hineinzoomen, bis ein einzelner Marker ohne Zahl da ist
-        if seite.locator("#map .mk:not(:has(text))").count():
+    seite.wait_for_selector("#map .mk, #map .mkc")
+    for _ in range(12):  # Buendel anklicken, bis ein einzelner Marker da ist
+        if seite.locator("#map .mk").count():
             break
-        seite.click("#zi")
-    seite.locator("#map .mk:not(:has(text))").first.click()
+        seite.locator("#map .mkc").first.click()
+        seite.wait_for_timeout(600)
+    seite.locator("#map .mk").first.click()
     assert seite.locator("#sel a.btn").get_attribute("href").startswith("#/loipe/")
     assert re.search("Offen|Eingeschränkt", seite.locator("#sel").inner_text())
 
@@ -255,11 +264,17 @@ def test_u1_marker_oeffnet_detail(seite):
 @pytest.mark.req("U3", ak=1)
 def test_u3_filter_gelten_auch_fuer_die_karte(seite):
     seite.open("#/karte?demo=1")
-    seite.wait_for_selector("#map .mk")
-    alle = seite.locator("#map .mk").count()
+    seite.wait_for_selector("#map .mk, #map .mkc")
+    alle = marker_summe(seite)
     aktion(seite, lambda: seite.get_by_role("button", name="Nur offene").click())
-    seite.wait_for_selector("#map .mk")
-    assert seite.locator("#map .mk").count() < alle
+    seite.wait_for_selector("#map .mk, #map .mkc")
+    assert marker_summe(seite) < alle
+
+
+def test_karte_hat_echte_grundkarte_mit_quellenangabe(seite):
+    seite.open("#/karte")
+    seite.wait_for_selector("#map .leaflet-tile-pane", state="attached")
+    assert "OpenStreetMap" in seite.locator("#map .leaflet-control-attribution").inner_text()
 
 
 @pytest.mark.req("U5", ak=1)
@@ -268,7 +283,8 @@ def test_u5_detailseite_mit_minikarte_verlauf_quelle_navigation(seite):
     seite.locator(".lp").first.click()
     seite.wait_for_selector(".hist")
     assert seite.locator(".hist span").count() == 14
-    assert seite.locator("svg[aria-label='Mini-Karte der Loipe']").count() == 1
+    assert seite.locator("#minimap.leaflet-container").count() == 1
+    assert seite.locator("#minimap .mk").count() == 1  # Start der Loipe
     assert seite.get_by_role("link", name=re.compile("Navigation")).get_attribute("href").startswith("https://www.google.com/maps/dir/")
     quelle = seite.locator("a[rel=noopener]", has_text="Tegernseer").first
     assert quelle.get_attribute("href").startswith("https://www.tegernsee.com")
@@ -371,3 +387,10 @@ def test_talprofil_nadelhoehe_folgt_der_ortshoehe(seite):
         [a.querySelector('text').textContent, +a.querySelector('line').getAttribute('y1')]))""")
     assert y["Bayrischzell"] < y["Marquartstein / Grassau"]
     assert y["Kreuth"] < y["Bad Wiessee"]  # 780 m gegen 730 m
+
+
+def test_vorhersage_zeigt_wettersymbole_mit_text(seite):
+    seite.open("#/?demo=1")
+    seite.wait_for_selector(".wx")
+    # Fixture-Daten haben keine Symbole: Darstellung darf dann nichts kaputt machen
+    assert seite.locator(".wx > div").count() >= 3

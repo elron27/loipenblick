@@ -48,6 +48,8 @@ class Vorhersage:
     temp_max_c: float | None = None
     niederschlag_mm: float | None = None
     schneefall: bool = False
+    sonne_h: float | None = None
+    symbol: str | None = None  # sonne, wolkig, bedeckt, regen, schneeregen, schnee, gewitter
 
 
 def _zahl(text: str) -> float | None:
@@ -85,8 +87,27 @@ def parse_dwd_tageswerte(inhalt: bytes) -> list[Messung]:
     return sorted(ergebnis, key=lambda m: m.datum)
 
 
+def _tagessymbol(eintraege: list[dict], niederschlag: float | None) -> str | None:
+    """Ein Symbol je Tag aus den stuendlichen Zustaenden, bei trockenem Tag nach der Bewoelkung am Tag."""
+    zustaende = [e.get("condition") or e.get("icon") for e in eintraege]
+    if "thunderstorm" in zustaende:
+        return "gewitter"
+    if "snow" in zustaende:
+        return "schnee"
+    if "sleet" in zustaende:
+        return "schneeregen"
+    if (niederschlag or 0) >= 1.0 or zustaende.count("rain") >= 3:
+        return "regen"
+    tag = [e for e in eintraege if 7 <= datetime.fromisoformat(e["timestamp"]).astimezone(BERLIN).hour <= 17]
+    wolken = [e["cloud_cover"] for e in (tag or eintraege) if e.get("cloud_cover") is not None]
+    if not wolken:
+        return None
+    mittel = sum(wolken) / len(wolken)
+    return "sonne" if mittel < 35 else "wolkig" if mittel < 75 else "bedeckt"
+
+
 def parse_brightsky(text: str) -> list[Vorhersage]:
-    """Stuendliche Werte -> je Tag (Europe/Berlin) Tiefst-/Hoechsttemperatur, Niederschlag, Schneefall."""
+    """Stuendliche Werte -> je Tag (Europe/Berlin) Temperatur, Niederschlag, Sonne und ein Wettersymbol."""
     tage: dict[date, list[dict]] = {}
     for eintrag in json.loads(text).get("weather", []):
         zeit = datetime.fromisoformat(eintrag["timestamp"]).astimezone(BERLIN)
@@ -95,13 +116,17 @@ def parse_brightsky(text: str) -> list[Vorhersage]:
     for tag, eintraege in sorted(tage.items()):
         temp = [e["temperature"] for e in eintraege if e.get("temperature") is not None]
         nied = [e["precipitation"] for e in eintraege if e.get("precipitation") is not None]
+        sonne = [e["sunshine"] for e in eintraege if e.get("sunshine") is not None]
+        summe = round(sum(nied), 1) if nied else None
         ergebnis.append(
             Vorhersage(
                 tag,
                 min(temp) if temp else None,
                 max(temp) if temp else None,
-                round(sum(nied), 1) if nied else None,
+                summe,
                 any(e.get("condition") == "snow" or e.get("icon") == "snow" for e in eintraege),
+                round(sum(sonne) / 60, 1) if sonne else None,
+                _tagessymbol(eintraege, summe),
             )
         )
     return ergebnis
@@ -199,7 +224,7 @@ def aktualisiere_wetter(session: Session, fetcher, jetzt: datetime | None = None
             _speichere(session, g, WetterArt.VORHERSAGE, v.datum, {
                 "temp_min_c": v.temp_min_c, "temp_max_c": v.temp_max_c, "niederschlag_mm": v.niederschlag_mm,
                 # Schneefall laut Vorhersage; Menge liefert Bright Sky nicht
-                "neuschnee_cm": None}, None, QUELLE_VORHERSAGE, jetzt)
+                "neuschnee_cm": None, "sonne_h": v.sonne_h, "symbol": v.symbol}, None, QUELLE_VORHERSAGE, jetzt)
             lauf.vorhersagen += 1
     session.flush()
     return lauf

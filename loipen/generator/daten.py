@@ -70,7 +70,8 @@ def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:
         ).order_by(Wetter.datum)
     ).all()
     return [
-        {"datum": z.datum.isoformat(), "tmin": z.temp_min_c, "tmax": z.temp_max_c, "niederschlag_mm": z.niederschlag_mm}
+        {"datum": z.datum.isoformat(), "tmin": z.temp_min_c, "tmax": z.temp_max_c, "niederschlag_mm": z.niederschlag_mm,
+         "sonne_h": z.sonne_h, "symbol": z.symbol}
         for z in zeilen
     ]
 

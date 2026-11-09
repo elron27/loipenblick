@@ -1,6 +1,6 @@
 // Service Worker: App-Dateien offline, Daten zuerst aus dem Netz (U8). Version __STAND__
 const CACHE = "loipenblick-__STAND__";
-const SCHALE = ["./", "app.css?v=__STAND__", "app.js?v=__STAND__", "manifest.webmanifest", "icon-192.png"];
+const SCHALE = ["./", "app.css?v=__STAND__", "app.js?v=__STAND__", "manifest.webmanifest", "icon-192.png", "vendor/leaflet.js", "vendor/leaflet.css", "vendor/leaflet.markercluster.js", "vendor/MarkerCluster.css"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SCHALE)).then(() => self.skipWaiting()));
 });
