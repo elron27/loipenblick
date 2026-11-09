@@ -56,12 +56,13 @@ def erzeuge(
         _schreibe(site / rel, inhalt)
         geschrieben.append(site / rel)
 
-    for quelle in sorted(STATIC.iterdir()):
+    for quelle in sorted(STATIC.rglob("*")):
         if quelle.is_file():
+            rel = quelle.relative_to(STATIC).as_posix()
             inhalt = quelle.read_bytes()
-            if quelle.name in ("index.html", "sw.js"):
+            if rel in ("index.html", "sw.js"):
                 inhalt = inhalt.replace(b"__STAND__", stand.encode())  # neue Version -> Cache erneuern
-            schreibe(quelle.name, inhalt)
+            schreibe(rel, inhalt)
     schreibe("icon-192.png", png_icon(192))
     schreibe("icon-512.png", png_icon(512))
     schreibe("daten.json", _json(daten["index"]))

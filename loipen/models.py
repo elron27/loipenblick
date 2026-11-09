@@ -246,6 +246,8 @@ class Wetter(Base):
     niederschlag_mm: Mapped[float | None] = mapped_column(Float)
     neuschnee_cm: Mapped[float | None] = mapped_column(Float)
     schneehoehe_cm: Mapped[float | None] = mapped_column(Float)
+    sonne_h: Mapped[float | None] = mapped_column(Float)
+    symbol: Mapped[str | None] = mapped_column(String(16))
     station_id: Mapped[str | None] = mapped_column(String(10))
     quelle: Mapped[str] = mapped_column(String(100))
     abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)

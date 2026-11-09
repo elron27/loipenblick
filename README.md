@@ -79,6 +79,11 @@ Der Ablauf Dump, Restore in eine frische Datenbank und Vergleich der Daten ist a
 **Kosten (B9).** `config/kosten.yaml` listet die Posten, die Summe darf 60 € im Jahr nicht übersteigen
 (ein Test prüft das). V1 auf dem NAS kostet nichts extra; Webspace und Domain kommen erst mit der Veröffentlichung.
 
+**Karten.** Die Karten nutzen Leaflet (liegt im Ordner `vendor/` der Seite, kein CDN) und die Kacheln von
+OpenStreetMap. Der Browser lädt die Kacheln direkt von `tile.openstreetmap.org`; die Quellenangabe steht in
+der Karte. Für eine öffentliche Seite mit vielen Besuchern sollte ein eigener Kachel-Anbieter gewählt werden
+(Nutzungsregeln von OpenStreetMap).
+
 ## Entwickeln und testen
 
 Die Tests brauchen eine PostgreSQL mit einer Datenbank, deren Name auf `_test` endet

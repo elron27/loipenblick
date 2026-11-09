@@ -84,13 +84,19 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .lp:hover{border-color:var(--cy)}.lp .n{font-weight:700}.lp .d{color:var(--mute);font-size:14px;grid-column:1/-1}
 .leer{padding:22px;color:var(--mute)}
 /* Karte */
-.mapw{position:relative;height:calc(100vh - 64px - 100px);min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(600px 400px at 30% 40%,var(--bg2),var(--bg));touch-action:none}
+.mapw{position:relative;height:calc(100vh - 64px - 100px);min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
 @media(min-width:980px){.mapw{height:calc(100vh - 64px - 90px)}}
-.mapw svg{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
-.mapw .zoom{position:absolute;right:12px;top:12px;display:grid;gap:8px}
-.mapw .zoom button{width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:var(--solid);color:var(--ink);font-size:22px;cursor:pointer}
-.mapw .sel{position:absolute;left:12px;right:12px;bottom:12px;max-width:440px;padding:14px 16px;background:var(--solid)}
-.mk{cursor:pointer}.mk text{font-size:12px;font-weight:800;fill:#04141f;pointer-events:none}
+.mapw #map{position:absolute;inset:0;z-index:0}
+.mapw .sel{position:absolute;left:12px;right:12px;bottom:12px;max-width:440px;padding:14px 16px;background:var(--solid);z-index:1000}
+.minimap{height:340px;max-width:760px;border-radius:18px;border:1px solid var(--line);overflow:hidden;margin:6px 0;z-index:0}
+.leaflet-container{font:inherit;background:var(--bg2)}
+.leaflet-container a{color:var(--link,#0a6ea8)}
+.mk,.mkc{display:grid;place-items:center;border-radius:50%;border:2px solid #0b2231;box-sizing:border-box;cursor:pointer;color:#04141f;font-weight:800;font-size:13px}
+.mk{width:22px;height:22px}.mkc{width:34px;height:34px}
+.mk:focus-visible,.mkc:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
+.pk{display:grid;place-items:center;width:24px;height:24px;border-radius:6px;background:#1d4ed8;color:#fff;font-weight:800;font-size:14px;border:2px solid #fff;box-sizing:border-box}
+.leaflet-control.alles{width:34px;height:34px;font-size:20px;background:#fff;color:#0b2231;cursor:pointer;border:0;border-radius:4px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.82) contrast(.9) saturate(.7)}}
 .tr{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .topo{fill:none;stroke:var(--line);stroke-width:1}
 /* Detail */
@@ -102,6 +108,7 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .wx{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
 .wx div{padding:10px 12px;text-align:center;border-radius:16px;background:var(--glass);border:1px solid var(--line)}
 .wx .we{border-color:var(--cy);box-shadow:inset 0 0 0 1px var(--cy)}
+.wx .wxi{display:block;margin:4px auto 0}.wx .wxn{display:block;font-style:normal;font-size:12px;color:var(--mute)}
 .wx b{display:block;font-size:13px;color:var(--mute)}.wx span{display:block;font-size:17px;font-weight:700}
 ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 ul.plain li{padding:12px 14px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}

@@ -178,3 +178,24 @@ def test_gebiet_position_aus_parkplaetzen_oder_loipen(session):
     assert 47.6 < lat < 47.7 and 11.9 < lon < 12.1
     leer = session.scalar(select(Gebiet).where(Gebiet.slug == "chieming"))
     assert gebiet_position(leer) is None
+
+
+def _tag(tag, bedingung="dry", wolken=10, nied=0.0, sonne=30, stunden=24):
+    return [{"timestamp": datetime(tag.year, tag.month, tag.day, h, tzinfo=ZoneInfo("Europe/Berlin")).isoformat(),
+             "temperature": 2.0, "precipitation": nied / stunden, "condition": bedingung, "icon": bedingung,
+             "cloud_cover": wolken, "sunshine": sonne if 8 <= h <= 15 else 0} for h in range(stunden)]
+
+
+@pytest.mark.req("U15", ak=1)
+def test_u15_tagessymbole_aus_stundenwerten():
+    t = date(2026, 12, 10)
+    faelle = {
+        "sonne": _tag(t, wolken=10), "wolkig": _tag(t, wolken=55, sonne=10), "bedeckt": _tag(t, wolken=95, sonne=0),
+        "regen": _tag(t, "rain", 90, 4.0, 0), "schnee": _tag(t, "snow", 95, 3.0, 0),
+        "schneeregen": _tag(t, "sleet", 95, 2.0, 0), "gewitter": _tag(t, "thunderstorm", 95, 5.0, 0),
+    }
+    for erwartet, stunden in faelle.items():
+        v = parse_brightsky(json.dumps({"weather": stunden}))[0]
+        assert v.symbol == erwartet, (erwartet, v.symbol)
+    assert parse_brightsky(json.dumps({"weather": faelle["sonne"]}))[0].sonne_h == 4.0  # 8 h mal 30 min
+    assert parse_brightsky(json.dumps({"weather": [{"timestamp": "2026-12-10T12:00:00+01:00"}]}))[0].symbol is None

@@ -133,12 +133,32 @@ function loipeKarte(l, mitGebiet) {
 }
 function neuschneeBadge(g) { return g.schnee && g.schnee.neuschnee_48h_cm >= 1 ? ' <span class="badge neu">Neuschnee ' + zahl(g.schnee.neuschnee_48h_cm, 0) + " cm in 48 h</span>" : ""; }
 function istWochenende(iso) { var d = new Date(iso + "T12:00:00").getDay(); return d === 0 || d === 6; }
+var WX_NAME = {sonne: "Sonnig", wolkig: "Wolkig", bedeckt: "Bedeckt", regen: "Regen", schneeregen: "Schneeregen", schnee: "Schnee", gewitter: "Gewitter"};
+var WX_SONNE = '<circle cx="24" cy="24" r="8" fill="#fbbf24" stroke="#f59e0b"/><path d="M24 7v5M24 36v5M7 24h5M36 24h5M12 12l3.5 3.5M32.5 32.5L36 36M12 36l3.5-3.5M32.5 15.5L36 12" stroke="#f59e0b"/>';
+var WX_WOLKE = function (f) { return '<path d="M15 36h19a7 7 0 0 0 .6-13.97A10 10 0 0 0 15.4 20.6 7.7 7.7 0 0 0 15 36z" fill="' + f + '" stroke="#7b93a8"/>'; };
+var WX_SVG = {
+  sonne: WX_SONNE,
+  wolkig: '<g transform="translate(-4 -6) scale(.8)">' + WX_SONNE + "</g>" + '<g transform="translate(5 3) scale(.85)">' + WX_WOLKE("#e8f1f8") + "</g>",
+  bedeckt: WX_WOLKE("#cfdce8"),
+  regen: WX_WOLKE("#cfdce8") + '<path d="M17 40l-2 5M25 40l-2 5M33 40l-2 5" stroke="#2f89d8"/>',
+  schneeregen: WX_WOLKE("#cfdce8") + '<path d="M16 41l-1.5 4M34 41l-1.5 4" stroke="#2f89d8"/><circle cx="24" cy="43" r="1.6" fill="#7dd3fc" stroke="none"/>',
+  schnee: WX_WOLKE("#e8f1f8") + '<g stroke="none" fill="#38bdf8"><circle cx="17" cy="42" r="2"/><circle cx="25" cy="44" r="2"/><circle cx="33" cy="42" r="2"/></g>',
+  gewitter: WX_WOLKE("#b6c6d6") + '<path d="M26 33l-5 8h5l-3 7 8-10h-5l3-5z" fill="#fbbf24" stroke="#f59e0b" stroke-width="1.4"/>'
+};
+function wxIcon(symbol) {
+  if (!symbol || !WX_SVG[symbol]) return "";
+  return '<svg class="wxi" viewBox="0 0 48 48" width="40" height="40" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="' + WX_NAME[symbol] + '">' + WX_SVG[symbol] + "</svg>";
+}
 function vorhersageHtml(g) {
   var v = g.vorhersage || [];
   if (!v.length) return '<p class="fine">Noch keine Vorhersage.</p>';
   return '<p class="fine">Vorhersage (keine Messung), Quelle Bright Sky mit Daten des Deutschen Wetterdienstes</p><div class="wx">' + v.map(function (t) {
     var d = new Date(t.datum + "T12:00:00");
-    return '<div class="' + (istWochenende(t.datum) ? "we" : "") + '"><b>' + TAGE[d.getDay()] + " " + d.getDate() + "." + (d.getMonth() + 1) + ".</b><span>" + (t.tmin == null ? "–" : Math.round(t.tmin)) + " / " + (t.tmax == null ? "–" : Math.round(t.tmax)) + " °C</span><small class=\"fine\">" + (t.niederschlag_mm == null ? "" : zahl(t.niederschlag_mm) + " mm") + "</small></div>";
+    var info = [];
+    if (t.niederschlag_mm != null) info.push(zahl(t.niederschlag_mm) + " mm");
+    if (t.sonne_h != null && t.sonne_h >= 0.5) info.push(zahl(t.sonne_h) + " h Sonne");
+    return '<div class="' + (istWochenende(t.datum) ? "we" : "") + '"><b>' + TAGE[d.getDay()] + " " + d.getDate() + "." + (d.getMonth() + 1) + ".</b>" + wxIcon(t.symbol) +
+      (t.symbol ? '<em class="wxn">' + WX_NAME[t.symbol] + "</em>" : "") + "<span>" + (t.tmin == null ? "–" : Math.round(t.tmin)) + " / " + (t.tmax == null ? "–" : Math.round(t.tmax)) + " °C</span><small class=\"fine\">" + info.join(" · ") + "</small></div>";
   }).join("") + "</div>";
 }
 function schneeHtml(g) {
@@ -176,11 +196,19 @@ function talprofil(gebiete, schnee) {
   var f = "M0 340"; for (var x = 0; x <= 900; x += 10) f += "L" + x + " " + (far(x) - 20 + (hy({hoehe_m: mitte}) - 250) * 0.3); s += '<path class="s-far" d="' + f + 'L900 340Z" opacity=".85"/>';
   var q = "M0 340", rim = "M0 " + ridgeH(0); for (x = 0; x <= 900; x += 6) { q += "L" + x + " " + ridgeH(x); rim += "L" + x + " " + ridgeH(x); }
   s += '<path class="s-ridge" d="' + q + 'L900 340Z"/><path class="s-rim" d="' + rim + '"/>';
+  /* Namen so tief wie moeglich direkt ueber der Nadel; nur bei Ueberlappung eine Stufe hoeher */
+  var belegt = [[], [], [], [], []], stufe = sorted.map(function (g, i) {
+    var halb = g.name.length * 4.6 + 6;
+    for (var lv = 0; lv < belegt.length; lv++) {
+      if (belegt[lv].every(function (b) { return Math.abs(b.x - px[i]) > b.h + halb; })) { belegt[lv].push({x: px[i], h: halb}); return lv; }
+    }
+    belegt[belegt.length - 1].push({x: px[i], h: halb}); return belegt.length - 1;
+  });
   sorted.forEach(function (g, i) {
     var y = py[i], X = px[i];
     var best = g.loipen.reduce(function (a, l) { return RANG[l.status] < RANG[a] ? l.status : a; }, "geschlossen");
     var hoehe = g.hoehe_m == null ? "" : " (" + g.hoehe_m + " m)";
-    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/><circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + X + '" y="' + (y - 64 - (i % 4) * 20) + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
+    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/><circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + X + '" y="' + (y - 62 - stufe[i] * 20) + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
   });
   return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
 }
@@ -257,16 +285,37 @@ function seiteGebiet(slug) {
   view.innerHTML = h;
 }
 
+/* ---------- Leaflet-Karten (Grundkarte OpenStreetMap) ---------- */
+var KARTEN = [];
+function kartenAbbauen() { KARTEN.forEach(function (m) { try { m.remove(); } catch (e) {} }); KARTEN = []; window.__map = null; }
+function grundkarte(el, opts) {
+  var m = L.map(el, Object.assign({zoomControl: true, attributionControl: true, scrollWheelZoom: true}, opts || {}));
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 18, attribution: '© <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a>'}).addTo(m);
+  KARTEN.push(m); window.__map = m;
+  return m;
+}
+function punktIcon(status, text, titel) {
+  var gross = text != null;
+  return L.divIcon({className: "", iconSize: gross ? [34, 34] : [22, 22], iconAnchor: gross ? [17, 17] : [11, 11],
+    html: '<span class="' + (gross ? "mkc" : "mk") + '" data-s="' + status + '" role="button" tabindex="0" aria-label="' + esc(titel) + '" style="background:' + FARBE[status] + '">' + (gross ? esc(text) : "") + "</span>"});
+}
 function miniKarte(l) {
   var reg = l.gebiet.region, pts = ((S.strecken[reg] || {})[String(l.id)] || []);
-  if (!pts.length && l.lat != null) pts = [[l.lat, l.lon]];
-  if (!pts.length) return "";
-  var la = pts.map(function (p) { return p[0]; }), lo = pts.map(function (p) { return p[1]; });
-  var k = Math.cos(la[0] * Math.PI / 180), w = 320, hgt = 200, mnx = Math.min.apply(0, lo), mxx = Math.max.apply(0, lo), mny = Math.min.apply(0, la), mxy = Math.max.apply(0, la);
-  var sc = Math.min((w - 40) / Math.max((mxx - mnx) * k, 1e-4), (hgt - 40) / Math.max(mxy - mny, 1e-4)); if (pts.length === 1) sc = 4000;
-  function P(p) { return [(w / 2 + ((p[1] - (mnx + mxx) / 2) * k) * sc).toFixed(1), (hgt / 2 - (p[0] - (mny + mxy) / 2) * sc).toFixed(1)]; }
-  var line = pts.map(function (p) { return P(p).join(","); }).join(" "), a = P(pts[0]);
-  return '<svg viewBox="0 0 ' + w + " " + hgt + '" role="img" aria-label="Mini-Karte der Loipe" style="width:100%;max-width:520px;border-radius:18px;border:1px solid var(--line);background:var(--unk-bg)">' + (pts.length > 1 ? '<polyline class="tr" points="' + line + '" stroke="' + FARBE[l.status] + '" stroke-width="4"/>' : "") + '<circle cx="' + a[0] + '" cy="' + a[1] + '" r="8" fill="' + FARBE[l.status] + '" stroke="var(--ink)" stroke-width="2"/></svg>';
+  if (!pts.length && l.lat == null) return '<p class="fine glass" style="padding:12px 14px">Für diese Loipe ist noch keine Position bekannt.</p>';
+  return '<div id="minimap" class="minimap" role="region" aria-label="Karte der Loipe"></div>';
+}
+function miniKarteZeichnen(l) {
+  var el = document.getElementById("minimap"); if (!el) return;
+  var reg = l.gebiet.region, pts = ((S.strecken[reg] || {})[String(l.id)] || []);
+  var m = grundkarte(el, {scrollWheelZoom: false}), gruppe = [];
+  if (pts.length > 1) gruppe.push(L.polyline(pts, {color: FARBE[l.status], weight: 6, opacity: .95}).addTo(m));
+  var start = pts.length ? pts[0] : [l.lat, l.lon];
+  gruppe.push(L.marker(start, {icon: punktIcon(l.status, null, l.name + ", Start")}).addTo(m));
+  l.gebiet.parkplaetze.forEach(function (p) {
+    gruppe.push(L.marker([p.lat, p.lon], {icon: L.divIcon({className: "", iconSize: [24, 24], iconAnchor: [12, 12], html: '<span class="pk" title="' + esc(p.name) + '">P</span>'})}).addTo(m).bindTooltip(p.name));
+  });
+  var gr = L.featureGroup(gruppe), b = gr.getBounds();
+  setTimeout(function () { m.invalidateSize(); m.fitBounds(b.pad(.25), {maxZoom: 15}); }, 0);
 }
 function seiteLoipe(id) {
   var l = S.loipen.filter(function (x) { return String(x.id) === id; })[0];
@@ -279,85 +328,51 @@ function seiteLoipe(id) {
       miniKarte(l) + '<h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
       '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.quelle_stand ? datum(l.quelle_stand) : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li></ul>" +
       (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "");
+    miniKarteZeichnen(l);
   });
 }
 
 /* ---------- Karte (U1) ---------- */
-var MV = {cx: 0, cy: 0, sc: 1};
 function seiteKarte(q) {
   ladeStrecken().then(function () {
     var liste = filtere(q).filter(function (l) { return l.lat != null; });
-    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><svg id="map" role="img" aria-label="Karte der Loipen"></svg><div class="zoom"><button type="button" id="zi" aria-label="Hineinzoomen">+</button><button type="button" id="zo" aria-label="Herauszoomen">−</button><button type="button" id="zf" aria-label="Alles zeigen">⌖</button></div><div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort.</span></div></div>";
+    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><div id="map" role="region" aria-label="Karte der Loipen"></div><div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort.</span></div></div>";
     filterBinden(q, "/karte");
-    var el = document.getElementById("mapw"), svg = document.getElementById("map");
-    var k = Math.cos(47.7 * Math.PI / 180);
-    var pts = liste.map(function (l) { return {l: l, x: l.lon * k, y: -l.lat}; });
-    function fit() {
-      if (!pts.length) { MV = {cx: 0, cy: 0, sc: 1000}; return; }
-      var xs = pts.map(function (p) { return p.x; }), ys = pts.map(function (p) { return p.y; });
-      var mnx = Math.min.apply(0, xs), mxx = Math.max.apply(0, xs), mny = Math.min.apply(0, ys), mxy = Math.max.apply(0, ys);
-      MV = {cx: (mnx + mxx) / 2, cy: (mny + mxy) / 2, sc: Math.min((el.clientWidth - 90) / Math.max(mxx - mnx, 0.01), (el.clientHeight - 110) / Math.max(mxy - mny, 0.01))};
+    var m = grundkarte(document.getElementById("map"));
+    var ids = {}; liste.forEach(function (l) { ids[l.id] = l; });
+    function waehle(l) {
+      document.getElementById("sel").innerHTML = '<b>' + esc(l.name) + '</b><div class="fine">' + esc(l.gebiet.name) + " · " + km(l.laenge_km) + " · Stand " + esc(alter(l.abgerufen)) + '</div><div style="margin:8px 0">' + chip(l.status) + '</div><a class="btn prim" href="#/loipe/' + l.id + '">Details</a>';
     }
-    function sx(x) { return el.clientWidth / 2 + (x - MV.cx) * MV.sc; }
-    function sy(y) { return el.clientHeight / 2 + (y - MV.cy) * MV.sc; }
-    function draw() {
-      var W = el.clientWidth, H = el.clientHeight, out = "";
-      svg.setAttribute("viewBox", "0 0 " + W + " " + H);
-      for (var i = 1; i <= 7; i++) out += '<ellipse class="topo" cx="' + (W * .35) + '" cy="' + (H * .45) + '" rx="' + (i * W * .08) + '" ry="' + (i * H * .07) + '"/>';
-      // Strecken
-      var ids = {}; liste.forEach(function (l) { ids[l.id] = l; });
-      S.idx.regionen.forEach(function (r) {
-        var st = S.strecken[r.slug] || {};
-        Object.keys(st).forEach(function (id) {
-          var l = ids[id]; if (!l) return;
-          var p = st[id].map(function (c) { return sx(c[1] * k).toFixed(1) + "," + sy(-c[0]).toFixed(1); }).join(" ");
-          out += '<polyline class="tr" points="' + p + '" stroke="' + FARBE[l.status] + '" stroke-width="' + (l.status === "geschlossen" ? 2 : 4) + '" opacity="' + (l.status === "geschlossen" ? .55 : 1) + '"/>';
-        });
+    // Strecken, soweit bekannt; geschlossene dezent, offene kraeftig
+    S.idx.regionen.forEach(function (r) {
+      var st = S.strecken[r.slug] || {};
+      Object.keys(st).forEach(function (id) {
+        var l = ids[id]; if (!l || st[id].length < 2) return;
+        L.polyline(st[id], {color: FARBE[l.status], weight: l.status === "geschlossen" ? 4 : 6, opacity: l.status === "geschlossen" ? .75 : 1}).addTo(m).on("click", function () { waehle(l); });
       });
-      // Marker, nahe beieinander liegende gebuendelt (Raster 46 px)
-      var zellen = {};
-      pts.forEach(function (p) { var gx = Math.floor(sx(p.x) / 46), gy = Math.floor(sy(p.y) / 46), key = gx + ":" + gy; (zellen[key] = zellen[key] || []).push(p); });
-      Object.keys(zellen).forEach(function (key, n) {
-        var gr = zellen[key], best = gr.reduce(function (a, p) { return RANG[p.l.status] < RANG[a] ? p.l.status : a; }, "geschlossen");
-        var cx = gr.reduce(function (a, p) { return a + sx(p.x); }, 0) / gr.length, cy = gr.reduce(function (a, p) { return a + sy(p.y); }, 0) / gr.length;
-        out += '<g class="mk" data-k="' + key + '" tabindex="0" role="button" aria-label="' + (gr.length > 1 ? gr.length + " Loipen, bester Status " + WORT[best] : esc(gr[0].l.name) + ", " + WORT[best]) + '"><circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (gr.length > 1 ? 16 : 9) + '" fill="' + FARBE[best] + '" stroke="#0b2231" stroke-width="2"/>' + (gr.length > 1 ? '<text x="' + cx.toFixed(1) + '" y="' + (cy + 4).toFixed(1) + '" text-anchor="middle">' + gr.length + "</text>" : "") + "</g>";
-      });
-      svg.innerHTML = out;
-      svg.querySelectorAll(".mk").forEach(function (m) {
-        function wahl() {
-          var gr = zellen[m.dataset.k];
-          if (gr.length > 1) { zoomAuf(gr); return; }
-          var l = gr[0].l;
-          document.getElementById("sel").innerHTML = '<b>' + esc(l.name) + '</b><div class="fine">' + esc(l.gebiet.name) + " · " + km(l.laenge_km) + " · Stand " + esc(alter(l.abgerufen)) + '</div><div style="margin:8px 0">' + chip(l.status) + '</div><a class="btn prim" href="#/loipe/' + l.id + '">Details</a>';
-        }
-        m.addEventListener("click", wahl); m.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); wahl(); } });
-      });
-    }
-    function zoomAuf(gr) {
-      var xs = gr.map(function (p) { return p.x; }), ys = gr.map(function (p) { return p.y; });
-      MV.cx = (Math.min.apply(0, xs) + Math.max.apply(0, xs)) / 2; MV.cy = (Math.min.apply(0, ys) + Math.max.apply(0, ys)) / 2; MV.sc *= 3; draw();
-    }
-    fit(); draw();
-    document.getElementById("zi").onclick = function () { MV.sc *= 1.6; draw(); };
-    document.getElementById("zo").onclick = function () { MV.sc /= 1.6; draw(); };
-    document.getElementById("zf").onclick = function () { fit(); draw(); };
-    el.addEventListener("wheel", function (e) { e.preventDefault(); MV.sc *= e.deltaY < 0 ? 1.2 : 1 / 1.2; draw(); }, {passive: false});
-    var ptr = {}, last = null;
-    svg.addEventListener("pointerdown", function (e) { ptr[e.pointerId] = {x: e.clientX, y: e.clientY}; last = null; });
-    svg.addEventListener("pointermove", function (e) {
-      if (!ptr[e.pointerId]) return;
-      var ids = Object.keys(ptr), prev = ptr[e.pointerId];
-      if (ids.length === 2) {
-        var a = ptr[ids[0]], b = ptr[ids[1]], d0 = Math.hypot(a.x - b.x, a.y - b.y);
-        ptr[e.pointerId] = {x: e.clientX, y: e.clientY};
-        var a2 = ptr[ids[0]], b2 = ptr[ids[1]], d1 = Math.hypot(a2.x - b2.x, a2.y - b2.y);
-        if (d0 > 0) { MV.sc *= d1 / d0; draw(); }
-      } else {
-        MV.cx -= (e.clientX - prev.x) / MV.sc; MV.cy -= (e.clientY - prev.y) / MV.sc; ptr[e.pointerId] = {x: e.clientX, y: e.clientY}; draw();
+    });
+    // Marker; nahe beieinander liegende werden gebuendelt, Farbe des Buendels = bester Status darin
+    var cluster = L.markerClusterGroup({
+      showCoverageOnHover: false, animate: false, maxClusterRadius: 44, spiderfyOnMaxZoom: true,
+      iconCreateFunction: function (c) {
+        var ch = c.getAllChildMarkers(), best = ch.reduce(function (a, mk) { return RANG[mk.options.status] < RANG[a] ? mk.options.status : a; }, "geschlossen");
+        return punktIcon(best, String(ch.length), ch.length + " Loipen, bester Status " + WORT[best]);
       }
     });
-    function ende(e) { delete ptr[e.pointerId]; }
-    svg.addEventListener("pointerup", ende); svg.addEventListener("pointercancel", ende);
+    liste.forEach(function (l) {
+      var mk = L.marker([l.lat, l.lon], {icon: punktIcon(l.status, null, l.name + ", " + WORT[l.status]), status: l.status, title: l.name});
+      mk.on("click", function () { waehle(l); });
+      cluster.addLayer(mk);
+    });
+    m.addLayer(cluster);
+    function passend() {
+      m.invalidateSize();
+      if (liste.length) m.fitBounds(L.latLngBounds(liste.map(function (l) { return [l.lat, l.lon]; })).pad(.12), {maxZoom: 13});
+      else m.setView([47.7, 11.9], 9);
+    }
+    setTimeout(passend, 0);
+    var Alles = L.Control.extend({onAdd: function () { var b = L.DomUtil.create("button", "alles leaflet-bar"); b.type = "button"; b.setAttribute("aria-label", "Alles zeigen"); b.textContent = "⌖"; L.DomEvent.disableClickPropagation(b); b.onclick = passend; return b; }});
+    new Alles({position: "topright"}).addTo(m);
   });
 }
 
@@ -411,6 +426,7 @@ function route() {
   var tab = p.indexOf("/karte") === 0 ? "karte" : p.indexOf("/loipen") === 0 || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
   document.querySelectorAll(".tabs a").forEach(function (a) { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   if (q.demo && (q.demo === "1") !== S.demo) { location.reload(); return; }
+  kartenAbbauen();
   view.dataset.r = (+view.dataset.r || 0) + 1; // Zaehler: Tests warten damit auf das Neuzeichnen
   if (p === "/karte") seiteKarte(q);
   else if (p === "/loipen") seiteListe(q);
