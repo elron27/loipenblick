@@ -104,3 +104,19 @@ def test_p11_lauf_speichert_loipen_je_gebiet(session):
     assert session.scalar(select(Gebiet).where(Gebiet.slug == "inzell")).loipen
     nochmal = rufe_quelle_ab(session, quelle, fetcher())
     assert nochmal.neu == 0  # D4: unveraendert, keine neue Zeile
+
+
+@pytest.mark.req("U24", ak=2)
+def test_u24_rundkurs_aus_dem_streckenverlauf():
+    """Start und Ende fallen zusammen: Rundkurs. Aufstiegsloipe Seegatterl, Winklmoos-Alm: von A nach B."""
+    loipen = {l.name.split(" klassisch")[0].split(" skating")[0]: l for l in lauf().loipen}
+    assert loipen["Nr. 13 Rundloipe Winklmoos-Alm"].rundkurs is True
+    assert loipen["Aufstiegsloipe Seegatterl - Winklmoos-Alm"].rundkurs is False
+    assert sum(1 for l in loipen.values() if l.rundkurs) >= 50
+
+
+@pytest.mark.req("U24", ak=2)
+def test_u24_rundkurs_unklar_ohne_genug_punkte():
+    from loipen.adapters.tourinfra import _rundkurs
+    assert _rundkurs([]) is None and _rundkurs([[47.6, 12.5], [47.6, 12.5]]) is None
+    assert _rundkurs([[47.6, 12.5], [47.61, 12.5], [47.6045, 12.5]]) is None  # 500 m: weder noch

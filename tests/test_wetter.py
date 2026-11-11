@@ -199,3 +199,17 @@ def test_u15_tagessymbole_aus_stundenwerten():
         assert v.symbol == erwartet, (erwartet, v.symbol)
     assert parse_brightsky(json.dumps({"weather": faelle["sonne"]}))[0].sonne_h == 4.0  # 8 h mal 30 min
     assert parse_brightsky(json.dumps({"weather": [{"timestamp": "2026-12-10T12:00:00+01:00"}]}))[0].symbol is None
+
+
+@pytest.mark.req("U18", ak=1)
+def test_u18_vorhersage_wird_fuer_mindestens_sieben_tage_angefragt(session):
+    """Am Montag reicht die Anfrage bis einschliesslich Sonntag der Woche."""
+    lade_und_abgleichen(session)
+    montag = datetime(2026, 12, 7, 6, 0, tzinfo=ZoneInfo("Europe/Berlin"))
+    f = WetterFetcher(dwd_zip(messzeilen()), json.dumps({"weather": []}))
+    aktualisiere_wetter(session, f, montag)
+    anfragen = [u for u in f.urls if "brightsky" in u]
+    assert anfragen
+    for u in anfragen:
+        bis = date.fromisoformat(u.split("last_date=")[1].split("&")[0])
+        assert bis >= date(2026, 12, 13), u  # Sonntag

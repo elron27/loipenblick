@@ -6,6 +6,7 @@ Der Ort steht im Feld startort und wird ueber config["gebiet_map"] einem Gebiet 
 
 import json
 import logging
+import math
 import re
 from urllib.parse import urljoin
 
@@ -46,6 +47,18 @@ def _vereinfache(coords: list, max_punkte: int = 120) -> list[tuple[float, float
         schritt = (len(punkte) - 1) / (max_punkte - 1)
         punkte = [punkte[round(i * schritt)] for i in range(max_punkte)]
     return punkte
+
+
+def _rundkurs(coords: list) -> bool | None:
+    """U24: Rundkurs, wenn Start und Ende der Strecke unter 300 m auseinander liegen, A nach B ab 1 km."""
+    punkte = [(float(p[0]), float(p[1])) for p in coords if len(p) >= 2]
+    if len(punkte) < 3:
+        return None
+    (lat1, lon1), (lat2, lon2) = punkte[0], punkte[-1]
+    abstand = math.hypot((lat1 - lat2) * 111.2, (lon1 - lon2) * 111.2 * math.cos(math.radians(lat1)))
+    if abstand < 0.3:
+        return True
+    return False if abstand > 1.0 else None
 
 
 class TourinfraAdapter:
@@ -105,6 +118,7 @@ class TourinfraAdapter:
             if coords:
                 d.lat, d.lon = coords[0][0], coords[0][1]
             d.verlauf = _vereinfache(coords)
+            d.rundkurs = _rundkurs(coords)
             d.startpunkt = (e.get("startort_detail") or "").strip() or None
             d.rohtext = json.dumps(
                 {k: e.get(k) for k in ("status_text", "status_klassisch_text", "status_skating_text",

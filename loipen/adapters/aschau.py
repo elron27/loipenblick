@@ -93,6 +93,7 @@ class AschauAdapter:
             d.laenge_km = l["gesamt_km"] if l["gesamt_km"] is not None else fest.get("laenge_km")
             d.nachtloipe = fest.get("nachtloipe", True if "flutlicht" in l["text"].lower() else None)
             d.lat, d.lon = fest.get("lat"), fest.get("lon")
+            d.rundkurs = fest.get("rundkurs")  # U24: steht in der Konfiguration
             if "schwierigkeit" in fest:
                 d.schwierigkeit, bekannt = normiere_schwierigkeit(fest["schwierigkeit"])
                 if not bekannt:

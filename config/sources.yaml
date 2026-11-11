@@ -101,7 +101,7 @@ quellen:
       # Stammdaten, die die Seite nicht liefert (aus der alten App uebernommen)
       stammdaten:
         Bergerfeld: {laenge_km: 1.7, schwierigkeit: blau, nachtloipe: false, lat: 47.7105, lon: 12.2425}
-        Langlaufrundkurs Lengauer Feld: {laenge_km: 3.1, schwierigkeit: rot, nachtloipe: false, lat: 47.6930, lon: 12.2680}
+        Langlaufrundkurs Lengauer Feld: {rundkurs: true, laenge_km: 3.1, schwierigkeit: rot, nachtloipe: false, lat: 47.6930, lon: 12.2680}
         Nachtloipe: {laenge_km: 3.0, schwierigkeit: blau, nachtloipe: true, lat: 47.6930, lon: 12.2680}
         Priental Loipe: {laenge_km: 8.0, schwierigkeit: rot, nachtloipe: false, lat: 47.7334, lon: 12.3036}
 

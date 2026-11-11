@@ -107,6 +107,7 @@ def test_p3_fehlende_schneebericht_seite_ist_eine_warnung_kein_abbruch():
 
 
 @pytest.mark.req("P9", ak=1)
+@pytest.mark.req("U24", ak=2)
 def test_p9_stammdaten_aus_der_liste(ergebnisse):
     ring = nach_key(ergebnisse["tegernsee"])["a-ringseeloipe"]
     assert (ring.name, ring.laenge_km, ring.schwierigkeit, ring.rundkurs) == ("Ringseeloipe", 4.2, Schwierigkeit.MITTEL, True)

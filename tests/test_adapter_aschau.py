@@ -104,3 +104,11 @@ def test_p9_ablauf_speichert_sachrang(session, caplog):
     loipen = session.scalars(select(Loipe).where(Loipe.quelle_id == quelle.id)).all()
     assert {l.name for l in loipen} == {"Nachtloipe", "Bergerfeld", "Langlaufrundkurs Lengauer Feld", "Priental Loipe"}
     assert all(l.gebiet.slug == "sachrang" and l.zustaende[0].status == "geschlossen" for l in loipen)
+
+
+@pytest.mark.req("U24", ak=2)
+def test_u24_rundkurs_steht_in_der_konfiguration():
+    assert Q["config"]["stammdaten"]["Langlaufrundkurs Lengauer Feld"]["rundkurs"] is True
+    loipen = {l.name: l for l in lauf().loipen}
+    assert loipen["Langlaufrundkurs Lengauer Feld"].rundkurs is True
+    assert loipen["Bergerfeld"].rundkurs is None  # nicht bekannt, Filter "Rundkurs" blendet sie aus

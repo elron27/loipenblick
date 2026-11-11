@@ -260,3 +260,12 @@ def test_b9_kostenuebersicht_bleibt_unter_60_euro_im_jahr():
     summe = sum(p["eur_pro_jahr"] for p in kosten["posten"])
     assert summe <= 60, f"{summe} EUR im Jahr"
     assert any(p["name"].lower().startswith("webspace") for p in kosten["posten"])
+
+
+@pytest.mark.req("B14", ak=2)
+def test_b14_backup_ordner_kommt_aus_der_env_und_ist_dokumentiert():
+    """Automatisch pruefbar ist nur die Verdrahtung. Ob der Ordner im Hyper-Backup steckt, prueft Stefan am NAS."""
+    compose = yaml.safe_load((ROOT / "docker-compose.yml").read_text(encoding="utf-8"))
+    assert any(str(v).startswith("${BACKUP_DIR") for v in compose["services"]["worker"]["volumes"])
+    assert "BACKUP_DIR=" in (ROOT / ".env.example").read_text(encoding="utf-8")
+    assert "NAS-Backup" in (ROOT / "README.md").read_text(encoding="utf-8")
