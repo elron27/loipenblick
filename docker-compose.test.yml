@@ -1,0 +1,63 @@
+# Teststack ohne NAS (siehe docs/testumgebung.md). Ergaenzt docker-compose.yml, aendert sie nicht:
+#   python scripts/teststack.py            baut, startet, testet, raeumt auf
+#   docker compose -f docker-compose.yml -f docker-compose.test.yml --env-file tests/stack/stack.env up -d --build
+# Unterschiede zum NAS: Quellen und Wetter kommen aus der Attrappe (Fixtures), Push geht an einen
+# lokalen ntfy-Server, Datenbank in einem Docker-Volume, Seite und Dumps unter .teststack/.
+name: loipenblick-test
+
+services:
+  db:
+    volumes: !override
+      - teststack-db:/var/lib/postgresql/data
+
+  migrate:
+    env_file: !override [tests/stack/stack.env]
+
+  worker:
+    env_file: !override [tests/stack/stack.env]
+    volumes: !override
+      - ./.teststack/site:/app/site
+      - ./.teststack/backup:/app/backup
+      # Abos nur fuer den Test, damit ein Push entsteht (die ausgelieferte abos.yaml ist leer)
+      - ./tests/stack/abos.yaml:/app/config/abos.yaml:ro
+    depends_on:
+      attrappe:
+        condition: service_healthy
+      ntfy:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+
+  vorschau:
+    volumes: !override
+      - ./.teststack/site:/usr/share/nginx/html:ro
+
+  # Quellen und Wetterdienste aus den Fixtures (tests/stack/attrappe.py)
+  attrappe:
+    image: ghcr.io/elron27/loipenblick:${LOIPEN_TAG:-teststack}
+    build: .
+    command: python -m tests.stack.attrappe --port 8080
+    volumes:
+      - ./tests:/app/tests:ro
+    ports:
+      - "${ATTRAPPE_PORT:-18099}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/_gesund')"]
+      interval: 2s
+      retries: 20
+
+  # Push-Empfaenger statt ntfy.sh; der Test liest die Nachrichten ueber die ntfy-API
+  ntfy:
+    image: binwiederhier/ntfy:v2.11.0
+    command: serve
+    environment:
+      NTFY_CACHE_DURATION: 1h
+    ports:
+      - "${NTFY_PORT:-18098}:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost/v1/health | grep -q true"]
+      interval: 2s
+      retries: 20
+
+volumes:
+  teststack-db:

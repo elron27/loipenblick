@@ -38,7 +38,7 @@ def fetcher() -> HoeflicherFetcher:
     global _fetcher
     if _fetcher is None:
         settings = get_settings()
-        _fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s)
+        _fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, umleitung=settings.umleitung)
     return _fetcher
 
 

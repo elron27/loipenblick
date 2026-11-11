@@ -70,7 +70,8 @@ def lade_alle_fixtures(session, jetzt, mit_wetter: bool = True) -> None:
         from datetime import date, timedelta
 
         from loipen.wetter import aktualisiere_wetter
-        from tests.test_wetter import WetterFetcher, brightsky, dwd_zip
+        from tests.test_wetter import WetterFetcher
+        from tests.wetterformat import brightsky, dwd_zip
 
         heute = jetzt.date()
         zeilen = [(heute - timedelta(days=3 - i), 1.0, 20 + i, 2.0 * i) for i in range(4)]

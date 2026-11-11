@@ -1,0 +1,5 @@
+# Abos fuer den Teststack: ein Abo auf das Gebiet Kreuth (Ringseeloipe, Rundkurs Point ...)
+abos:
+  - name: Teststack Kreuth
+    gebiete: [kreuth]
+    ereignisse: [oeffnet, schliesst]

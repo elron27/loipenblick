@@ -53,11 +53,30 @@ jobs:
           name: junit-reqseq
           path: spec/evidence/junit-ci.xml
 
-  # B4: das Image baut, Compose-Datei ist gueltig
-  docker:
+  # B4: Image bauen und den ganzen Stack wie auf dem NAS starten, aber mit Attrappe statt echter
+  # Quellen und lokalem ntfy (docs/testumgebung.md). Ersetzt den Handtest am NAS fuer
+  # Start, Lauf, Seite, Push, Sicherung/Wiederherstellung und Neustart.
+  stack:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - run: cp .env.example .env
-      - run: docker compose config -q
-      - run: docker compose build worker
+      - name: Compose-Datei fuer das NAS ist gueltig
+        run: cp .env.example .env && docker compose config -q && rm .env
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: Browser fuer die Bildschirmfotos
+        run: playwright install --with-deps chromium
+      - name: Teststack bauen, starten, pruefen
+        run: python scripts/teststack.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: teststack
+          path: |
+            .teststack/screenshots/
+            .teststack/logs/
+            .teststack/junit-stack.xml
+            .teststack/site/
+          if-no-files-found: ignore

@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 .pytest_cache/
 junit*.xml
+.teststack/
+.live/
