@@ -12,3 +12,30 @@
 404 https://dataset.api.hub.geosphere.at/robots.txt
 200    13765 tests/fixtures/geosphere/2026-11-12/datasets.json https://dataset.api.hub.geosphere.at/v1/datasets
 200   343752 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_metadata.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d/metadata
+# Lauf 2026-11-12 16:33 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tirol.at/robots.txt
+200   111019 tests/fixtures/tirol/2026-11-12/loipen_offen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN
+200   340259 tests/fixtures/tirol/2026-11-12/loipen_listpos2.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?listpos=2
+200 https://tirol.mapservices.eu/robots.txt
+ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM6/de/generate/51834
+200    73855 tests/fixtures/tirol/2026-11-12/ku2-weissach-ii.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku2-weissach-ii
+200    79198 tests/fixtures/tirol/2026-11-12/ku3-sparchen-i.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku3-sparchen-i
+200    80390 tests/fixtures/tirol/2026-11-12/ku5-endach.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku5-endach
+200   114826 tests/fixtures/tirol/2026-11-12/kaiserwinklloipe-schwendt.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/kaiserwinklloipe-schwendt
+200   119083 tests/fixtures/tirol/2026-11-12/kaiserwinklloipe-start-walchsee-nr-1.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/kaiserwinklloipe-start-walchsee-nr-1
+200     1606 tests/fixtures/tirol/2026-11-12/sitemap.xml https://www.tirol.at/sitemap.xml
+200 https://www.kitzbueheler-alpen.com/robots.txt
+404   151855 tests/fixtures/kitzbueheler-alpen/2026-11-12/hosa.html https://www.kitzbueheler-alpen.com/de/hosa/aktuelles/loipen-status.html
+404   149226 tests/fixtures/kitzbueheler-alpen/2026-11-12/pil.html https://www.kitzbueheler-alpen.com/de/pil/aktuelles/loipen-status.html
+404   149226 tests/fixtures/kitzbueheler-alpen/2026-11-12/sjo.html https://www.kitzbueheler-alpen.com/de/sjo/aktuelles/loipen-status.html
+200 https://www.langlaufdorf.at/robots.txt
+200   126914 tests/fixtures/langlaufdorf/2026-11-12/loipen.html https://www.langlaufdorf.at/loipen.html
+200   124726 tests/fixtures/langlaufdorf/2026-11-12/tickets-preise.html https://www.langlaufdorf.at/tickets-preise.html
+200 https://www.berchtesgaden.de/robots.txt
+200   161982 tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-schoenau-am-koenigssee.html https://www.berchtesgaden.de/touren/langlaufloipen-schoenau-am-koenigssee
+200   147972 tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-taubensee-ramsau.html https://www.berchtesgaden.de/touren/langlaufloipen-taubensee-ramsau
+200   149762 tests/fixtures/berchtesgaden/2026-11-12/langlaufzentrum-aschauerweiher-bischofswiesen.html https://www.berchtesgaden.de/pois/langlaufzentrum-aschauerweiher-bischofswiesen
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     9833 tests/fixtures/geosphere/2026-11-12/klima-v2-1d.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu,tlmin,tlmax,so_h&station_ids=9016,9019,9110,9105,12203,12351,9211,6300,8806&start=2026-10-29T00:00&end=2026-11-11T00:00
+200     3267 tests/fixtures/geosphere/2026-11-12/nwp-v1-1h-2500m_metadata.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v1-1h-2500m/metadata
+200     1101 tests/fixtures/geosphere/2026-11-12/nwp-v1-1h-2500m.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v1-1h-2500m?lat_lon=47.577,12.17&lat_lon=47.83,13.28&parameters=t2m,rr_acc,snow_acc,sundur_acc,tcc
