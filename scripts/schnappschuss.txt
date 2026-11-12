@@ -1,9 +1,21 @@
-# <zielpfad> <url> -- Schnappschuesse fuer den Ausbau Kufstein/Salzburg (Plan-Schritt 2)
-tests/fixtures/tirol/2026-11-12/loipen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen
-tests/fixtures/tirol/2026-11-12/loipen_listpos42.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?listpos=42
-tests/fixtures/tirol/2026-11-12/ku1-weissach-i.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku1-weissach-i
-tests/fixtures/kitzbueheler-alpen/2026-11-12/bri.html https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
-tests/fixtures/langlaufdorf/2026-11-12/index.html https://www.langlaufdorf.at/
-tests/fixtures/berchtesgaden/2026-11-12/langlaufen.html https://www.berchtesgaden.de/winter/langlaufen
-tests/fixtures/geosphere/2026-11-12/datasets.json https://dataset.api.hub.geosphere.at/v1/datasets
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_metadata.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d/metadata
+# <zielpfad> <url> -- Schnappschuesse fuer den Ausbau Kufstein/Salzburg (Plan-Schritt 2, Runde 2)
+tests/fixtures/tirol/2026-11-12/loipen_offen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN
+tests/fixtures/tirol/2026-11-12/loipen_listpos2.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?listpos=2
+tests/fixtures/tirol/2026-11-12/ku1-weissach-i.gpx https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM6/de/generate/51834
+tests/fixtures/tirol/2026-11-12/ku2-weissach-ii.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku2-weissach-ii
+tests/fixtures/tirol/2026-11-12/ku3-sparchen-i.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku3-sparchen-i
+tests/fixtures/tirol/2026-11-12/ku5-endach.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku5-endach
+tests/fixtures/tirol/2026-11-12/kaiserwinklloipe-schwendt.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/kaiserwinklloipe-schwendt
+tests/fixtures/tirol/2026-11-12/kaiserwinklloipe-start-walchsee-nr-1.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/kaiserwinklloipe-start-walchsee-nr-1
+tests/fixtures/tirol/2026-11-12/sitemap.xml https://www.tirol.at/sitemap.xml
+tests/fixtures/kitzbueheler-alpen/2026-11-12/hosa.html https://www.kitzbueheler-alpen.com/de/hosa/aktuelles/loipen-status.html
+tests/fixtures/kitzbueheler-alpen/2026-11-12/pil.html https://www.kitzbueheler-alpen.com/de/pil/aktuelles/loipen-status.html
+tests/fixtures/kitzbueheler-alpen/2026-11-12/sjo.html https://www.kitzbueheler-alpen.com/de/sjo/aktuelles/loipen-status.html
+tests/fixtures/langlaufdorf/2026-11-12/loipen.html https://www.langlaufdorf.at/loipen.html
+tests/fixtures/langlaufdorf/2026-11-12/tickets-preise.html https://www.langlaufdorf.at/tickets-preise.html
+tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-schoenau-am-koenigssee.html https://www.berchtesgaden.de/touren/langlaufloipen-schoenau-am-koenigssee
+tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-taubensee-ramsau.html https://www.berchtesgaden.de/touren/langlaufloipen-taubensee-ramsau
+tests/fixtures/berchtesgaden/2026-11-12/langlaufzentrum-aschauerweiher-bischofswiesen.html https://www.berchtesgaden.de/pois/langlaufzentrum-aschauerweiher-bischofswiesen
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu,tlmin,tlmax,so_h&station_ids=9016,9019,9110,9105,12203,12351,9211,6300,8806&start=2026-10-29T00:00&end=2026-11-11T00:00
+tests/fixtures/geosphere/2026-11-12/nwp-v1-1h-2500m_metadata.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v1-1h-2500m/metadata
+tests/fixtures/geosphere/2026-11-12/nwp-v1-1h-2500m.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v1-1h-2500m?lat_lon=47.577,12.17&lat_lon=47.83,13.28&parameters=t2m,rr_acc,snow_acc,sundur_acc,tcc
