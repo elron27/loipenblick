@@ -7,6 +7,11 @@ from loipen.fetcher import HttpFehler
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 
+# Quellen mit Schnappschuss-Ordner nach Datum (B19, CLAUDE.md Regel 10)
+STAND_QUELLEN = {"tirol": "2026-11-12", "kitzbueheler-alpen": "2026-11-12", "langlaufdorf": "2026-11-12",
+                 "berchtesgaden": "2026-11-12"}
+
+
 class FixtureFetcher:
     """Liefert Seiten aus tests/fixtures/<quelle>/ statt aus dem Netz.
 
@@ -22,7 +27,9 @@ class FixtureFetcher:
         base_url: str,
         ersetze: dict[str, str] | None = None,
         seiten: dict[str, str] | None = None,
+        stand: str | None = None,
     ):
+        self.stand = stand or STAND_QUELLEN.get(quelle)
         self.seiten = seiten or {}
         self.verzeichnis = FIXTURES / quelle
         self.base_url = base_url.rstrip("/")
@@ -36,6 +43,10 @@ class FixtureFetcher:
             return self.ersetze[pfad]
         if pfad in self.seiten:
             datei = self.verzeichnis / self.seiten[pfad]
+        elif self.stand:
+            # Schnappschuss mit Datum (tests/fixtures/<quelle>/<datum>/): letzter Pfadteil als Datei
+            name = pfad.rsplit("/", 1)[-1] or "index"
+            datei = self.verzeichnis / self.stand / (name if "." in name else f"{name}.html")
         elif pfad.startswith("langlaufen"):
             n = pfad.split("/")[1] if "/" in pfad else "0"
             datei = self.verzeichnis / f"langlaufen_{n}.html"
@@ -49,9 +60,14 @@ class FixtureFetcher:
         return (self.verzeichnis / relativ).read_text(encoding="utf-8")
 
 
+TIROL_LISTE = "aktivitaeten/sport/langlaufen/loipen"
 SEITEN_QUELLEN = {
     "sachrang": {"schneebericht-sachrang": "schneebericht.html"},
     "chiemgau": {"inc/ajax.php?ajaxtype=getLoipenmanager": "loipenmanager.json"},
+    "tirol": {TIROL_LISTE: "2026-11-12/loipen.html",
+              f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B%5D=OPEN": "2026-11-12/loipen_offen.html"},
+    "kitzbueheler-alpen": {"de/bri/aktuelles/loipen-status.html": "2026-11-12/bri.html"},
+    "langlaufdorf": {"": "2026-11-12/index.html"},
 }
 
 

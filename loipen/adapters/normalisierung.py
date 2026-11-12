@@ -6,6 +6,7 @@ sie zurueck und protokolliert sie mit Quelle und Rohtext.
 """
 
 import re
+import unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -142,3 +143,13 @@ def parse_ja_nein(text: str | None) -> bool | None:
     if schluessel in {"nein", "no", "false"}:
         return False
     return None
+
+
+def slugify(text: str) -> str:
+    """'KU1 Weissach I' -> 'ku1-weissach-i', Umlaute als ae/oe/ue, Satzzeichen fallen weg ('1,5 km' -> '15-km')."""
+    t = text.strip().lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        t = t.replace(a, b)
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
+    t = re.sub(r"[^a-z0-9\s-]", "", t)
+    return re.sub(r"[\s-]+", "-", t).strip("-")

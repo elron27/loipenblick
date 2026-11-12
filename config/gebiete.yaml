@@ -6,15 +6,53 @@
 # parkplaetze_ohne_koordinate: bekannt, aber ohne Koordinate; wird nicht angezeigt, bis eine nachgetragen ist.
 # hoehe_m: Hoehe des Ortes ueber NN in Metern (gerundet, Naeherung), bestimmt das Talprofil der Startseite.
 # wetterstation: DWD-Station mit Schneehoehe (SH_TAG), siehe Recherche wetterstationen.md.
+#   In Oesterreich mit dienst: geosphere eine Station aus GeoSphere klima-v2-1d (Parameter sh, D17).
+# Regionen: land (DE, AT, IT) und bundesland (D16); das Gebiet erbt beides von seiner Region.
+# grenzinfo: Hinweis fuer die Anfahrt aus Bayern (U31), von Hand gepflegt wie die Parkplaetze.
+# namen: weitere Namen je Sprache (P12), z. B. {it: Dobbiaco}.
+# Ausbaustufe 1 (E-15, Stand 12.11.2026): Gebietsmitten aus den Loipenstarts von tirol.at bzw.
+# berchtesgaden.de, Hoehen aus OpenStreetMap gerundet.
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal
+  land: DE
+  bundesland: Bayern
 - slug: leitzachtal
   name: Leitzachtal
+  land: DE
+  bundesland: Bayern
 - slug: priental
   name: Priental
+  land: DE
+  bundesland: Bayern
 - slug: chiemgau
   name: Chiemgau
+  land: DE
+  bundesland: Bayern
+- slug: berchtesgadener-land
+  name: Berchtesgadener Land
+  land: DE
+  bundesland: Bayern
+- slug: kufsteinerland
+  name: Kufsteinerland
+  land: AT
+  bundesland: Tirol
+- slug: kaiserwinkl
+  name: Kaiserwinkl
+  land: AT
+  bundesland: Tirol
+- slug: wilder-kaiser
+  name: Wilder Kaiser
+  land: AT
+  bundesland: Tirol
+- slug: kitzbueheler-alpen
+  name: Kitzbüheler Alpen
+  land: AT
+  bundesland: Tirol
+- slug: fuschlseeregion
+  name: Fuschlsee-Region
+  land: AT
+  bundesland: Salzburg
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -544,3 +582,343 @@ gebiete:
   region: chiemgau
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
   nachbarn: []
+- slug: kufstein
+  name: Kufstein
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.581
+  lon: 12.164
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - thiersee
+  - schwoich
+  - ebbs
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: thiersee
+  name: Thiersee
+  hoehe_m: 680
+  region: kufsteinerland
+  lat: 47.588
+  lon: 12.09
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - kufstein
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: langkampfen
+  name: Langkampfen
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.536
+  lon: 12.09
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - schwoich
+  - bad-haering
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: bad-haering
+  name: Bad Häring
+  hoehe_m: 620
+  region: kufsteinerland
+  lat: 47.509
+  lon: 12.114
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - schwoich
+  - langkampfen
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: schwoich
+  name: Schwoich
+  hoehe_m: 570
+  region: kufsteinerland
+  lat: 47.541
+  lon: 12.141
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - kufstein
+  - bad-haering
+  - langkampfen
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: ebbs
+  name: Ebbs
+  hoehe_m: 480
+  region: kufsteinerland
+  lat: 47.62
+  lon: 12.217
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - niederndorf
+  - kufstein
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: niederndorf
+  name: Niederndorf
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.646
+  lon: 12.217
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - ebbs
+  - walchsee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: walchsee
+  name: Walchsee
+  hoehe_m: 670
+  region: kaiserwinkl
+  lat: 47.656
+  lon: 12.314
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - koessen
+  - schwendt
+  - niederndorf
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: koessen
+  name: Kössen
+  hoehe_m: 590
+  region: kaiserwinkl
+  lat: 47.665
+  lon: 12.405
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - schwendt
+  - walchsee
+  - reit-im-winkl
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: schwendt
+  name: Schwendt
+  hoehe_m: 700
+  region: kaiserwinkl
+  lat: 47.636
+  lon: 12.393
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - koessen
+  - walchsee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: ellmau
+  name: Ellmau
+  hoehe_m: 800
+  region: wilder-kaiser
+  lat: 47.514
+  lon: 12.293
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - going
+  - soell
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: going
+  name: Going
+  hoehe_m: 770
+  region: wilder-kaiser
+  lat: 47.519
+  lon: 12.33
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - ellmau
+  - st-johann-in-tirol
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: soell
+  name: Söll
+  hoehe_m: 700
+  region: wilder-kaiser
+  lat: 47.503
+  lon: 12.194
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - ellmau
+  - bad-haering
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: brixental
+  name: Brixental
+  hoehe_m: 800
+  region: kitzbueheler-alpen
+  lat: 47.452
+  lon: 12.255
+  tourist_url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+  nachbarn:
+  - hohe-salve
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '12203'
+    name: Kitzbühel
+    dienst: geosphere
+- slug: hohe-salve
+  name: Hohe Salve
+  hoehe_m: 620
+  region: kitzbueheler-alpen
+  lat: 47.49
+  lon: 12.08
+  tourist_url: https://www.kitzbueheler-alpen.com/de/hosa/
+  nachbarn:
+  - brixental
+  - soell
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: pillerseetal
+  name: Pillerseetal
+  hoehe_m: 850
+  region: kitzbueheler-alpen
+  lat: 47.505
+  lon: 12.6
+  tourist_url: https://www.kitzbueheler-alpen.com/de/pital/
+  nachbarn:
+  - st-johann-in-tirol
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '12351'
+    name: Hochfilzen
+    dienst: geosphere
+- slug: st-johann-in-tirol
+  name: St. Johann in Tirol
+  hoehe_m: 660
+  region: kitzbueheler-alpen
+  lat: 47.525
+  lon: 12.425
+  tourist_url: https://www.kitzbueheler-alpen.com/de/stjo/
+  nachbarn:
+  - going
+  - pillerseetal
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9105'
+    name: Kirchdorf in Tirol
+    dienst: geosphere
+- slug: faistenau
+  name: Faistenau
+  hoehe_m: 790
+  region: fuschlseeregion
+  lat: 47.774
+  lon: 13.24
+  tourist_url: https://www.langlaufdorf.at/
+  nachbarn:
+  - hintersee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'
+  loipengebuehr:
+    eur: 11.0
+    text: 'Tageskarte 11 €, Saisonkarte 98 € (bis 30.11. 85 €), Jugendliche bis 15 frei'
+    url: https://www.langlaufdorf.at/tickets-preise.html
+  wetterstation:
+    id: '6300'
+    name: Salzburg Flughafen
+    dienst: geosphere
+- slug: hintersee
+  name: Hintersee
+  hoehe_m: 750
+  region: fuschlseeregion
+  lat: 47.718
+  lon: 13.278
+  tourist_url: https://www.langlaufdorf.at/
+  nachbarn:
+  - faistenau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'
+  loipengebuehr:
+    eur: 11.0
+    text: 'Tageskarte 11 € wie Faistenau, Tickets an den Parkautomaten'
+    url: https://www.langlaufdorf.at/tickets-preise.html
+  wetterstation:
+    id: '6300'
+    name: Salzburg Flughafen
+    dienst: geosphere
+- slug: schoenau-am-koenigssee
+  name: Schönau a. Königssee
+  hoehe_m: 620
+  region: berchtesgadener-land
+  lat: 47.61
+  lon: 12.978
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-schoenau-am-koenigssee
+  nachbarn:
+  - berchtesgaden
+  - ramsau
+- slug: ramsau
+  name: Ramsau
+  hoehe_m: 670
+  region: berchtesgadener-land
+  lat: 47.63
+  lon: 12.871
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-taubensee-ramsau
+  nachbarn:
+  - schoenau-am-koenigssee
+- slug: bischofswiesen
+  name: Bischofswiesen
+  hoehe_m: 620
+  region: berchtesgadener-land
+  lat: 47.644
+  lon: 12.985
+  tourist_url: https://www.berchtesgaden.de/pois/langlaufzentrum-aschauerweiher-bischofswiesen
+  nachbarn:
+  - berchtesgaden
+  - schoenau-am-koenigssee
+- slug: berchtesgaden
+  name: Berchtesgaden
+  hoehe_m: 1000
+  region: berchtesgadener-land
+  lat: 47.626
+  lon: 13.044
+  tourist_url: https://www.berchtesgaden.de/winter/langlaufen
+  nachbarn:
+  - bischofswiesen
+  - marktschellenberg
+- slug: marktschellenberg
+  name: Marktschellenberg
+  hoehe_m: 500
+  region: berchtesgadener-land
+  lat: 47.673
+  lon: 13.066
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-scheffau-schellenberg
+  nachbarn:
+  - berchtesgaden

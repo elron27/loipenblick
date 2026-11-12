@@ -23,10 +23,9 @@ import logging
 import math
 import re
 import time
-import unicodedata
 
 from loipen.adapters.base import AdapterErgebnis, Fetcher, LoipenDaten
-from loipen.adapters.normalisierung import normiere_schwierigkeit, normiere_zustand, parse_zahl
+from loipen.adapters.normalisierung import normiere_schwierigkeit, normiere_zustand, parse_zahl, slugify
 from loipen.models import Status, Technik
 
 log = logging.getLogger("loipen.adapters.tirolat")
@@ -49,13 +48,18 @@ def slug(titel: str) -> str:
 
     Bei gleichen Namen haengt tirol.at -2, -3 an; das laesst sich nicht ableiten. Dann prueft der
     Adapter die Kennung auf der Seite und meldet eine Warnung; config["slugs"] legt den Pfad fest.
+    Pfade aus den mitgelieferten Listeneintraegen (data-ident + Link) gehen vor.
     """
-    t = titel.strip().lower()
-    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
-        t = t.replace(a, b)
-    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
-    t = re.sub(r"[^a-z0-9\s-]", "", t)  # Satzzeichen fallen weg: '1,5 km' -> '15-km'
-    return re.sub(r"[\s-]+", "-", t).strip("-")
+    return slugify(titel)
+
+
+def listen_pfade(seite: str) -> dict[str, str]:
+    """Kennung -> Pfad der Detailseite aus den Listeneintraegen einer Listenseite."""
+    pfade = {}
+    for ident, pfad in re.findall(
+            r'<article class="list__article[^"]*" data-ident="([^"]+)"[\s\S]*?href="[^"]*/loipen/([^"/?#]+)"', seite):
+        pfade.setdefault(ident, pfad)
+    return pfade
 
 
 def marker(seite: str) -> list[dict]:
@@ -67,6 +71,14 @@ def marker(seite: str) -> list[dict]:
 
 def _abstand_km(a: tuple[float, float], b: tuple[float, float]) -> float:
     return math.hypot((a[0] - b[0]) * 111.2, (a[1] - b[1]) * 111.2 * math.cos(math.radians(a[0])))
+
+
+def laenge_km(text: str) -> float | None:
+    """'2,5 km' -> 2.5, '700 m' -> 0.7 (kurze Loipen gibt tirol.at in Metern an)."""
+    zahl = parse_zahl(text)
+    if zahl is None:
+        return None
+    return round(zahl / 1000, 2) if re.search(r"\d\s*m\b", text) and "km" not in text else zahl
 
 
 def _text(fragment: str) -> str:
@@ -81,7 +93,7 @@ def parse_detail(seite: str) -> dict:
     if m := re.search(r'Schwierigkeitsgrad:</span>([^<]*)<', seite):
         d["schwierigkeit"] = _text(m.group(1))
     if m := re.search(r'Streckenlänge:</span>([^<]*)<', seite):
-        d["laenge_km"] = parse_zahl(m.group(1))
+        d["laenge_km"] = laenge_km(m.group(1))
     for feld, kopf in (("startpunkt", "Ausgangspunkt"), ("endpunkt", "Endpunkt"), ("stile", "Stile")):
         if m := re.search(rf'<h3 class="headline">{kopf}</h3><div class="text">([\s\S]*?)</div>', seite):
             d[feld] = _text(m.group(1))
@@ -122,8 +134,11 @@ class TirolAtAdapter:
         ergebnis = AdapterErgebnis()
         basis = base_url.rstrip("/")
         liste_url = basis + config.get("liste_pfad", LISTE)
-        alle = marker(fetcher.get(liste_url))
-        offen = {m["ident"] for m in marker(fetcher.get(f"{liste_url}?{config.get('offen_filter', OFFEN_FILTER)}"))}
+        liste = fetcher.get(liste_url)
+        offen_seite = fetcher.get(f"{liste_url}?{config.get('offen_filter', OFFEN_FILTER)}")
+        alle = marker(liste)
+        offen = {m["ident"] for m in marker(offen_seite)}
+        bekannte_pfade = {**listen_pfade(liste), **listen_pfade(offen_seite), **(config.get("slugs") or {})}
 
         punkte = {s: tuple(p) for s, p in (config.get("gebiet_punkte") or {}).items()}
         erlaubt = [s for s in config.get("gebiete", []) if s in punkte]
@@ -147,7 +162,7 @@ class TirolAtAdapter:
 
         details = set(self._auswahl(len(gewaehlt), int(config.get("details_pro_lauf", 20))))
         for i, (m, gebiet) in enumerate(gewaehlt):
-            pfad = (config.get("slugs") or {}).get(m["ident"]) or slug(m["title"])
+            pfad = bekannte_pfade.get(m["ident"]) or slug(m["title"])
             url = f"{basis}{config.get('liste_pfad', LISTE)}/{pfad}"
             d = LoipenDaten(source_key=m["ident"], name=m["title"], source_url=url, gebiet_slug=gebiet)
             d.lat, d.lon = float(m["latlng"][0]), float(m["latlng"][1])
