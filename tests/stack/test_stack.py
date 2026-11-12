@@ -41,7 +41,8 @@ VORSCHAU = f"http://localhost:{ENV['VORSCHAU_PORT']}"
 ATTRAPPE = f"http://localhost:{ENV['ATTRAPPE_PORT']}"
 NTFY = f"http://localhost:{ENV['NTFY_PORT']}"
 THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
-QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69}
+QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
+           "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 
@@ -117,7 +118,9 @@ def test_start_lauf_holt_alle_quellen_und_erzeugt_die_seite():
     for key, anzahl in QUELLEN.items():
         assert quellen[key]["anzahl"] == anzahl, key
         assert quellen[key]["status"] in ("ok", "warnung"), quellen[key]
-    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values())
+    # D15: Hauswies-Runde (Bayrischzell/Fischbachau), Bayrischzell und Kitzbuehel auch bei tirol.at: einmal gezaehlt
+    assert index["dubletten"] >= 50
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
     for region in index["regionen"]:
         daten = http_json(f"{VORSCHAU}/{region['datei']}")
         assert daten["gebiete"], region["slug"]
@@ -204,7 +207,8 @@ def test_neustart_und_update_behalten_die_daten():
     nachher = anzahlen()
     assert nachher["loipen"] == vorher["loipen"]  # keine doppelten Loipen nach dem Neustart
     assert nachher["zustaende"] >= vorher["zustaende"]
-    assert http_json(f"{VORSCHAU}/daten.json")["kennzahlen"]["loipen"] == sum(QUELLEN.values())
+    index = http_json(f"{VORSCHAU}/daten.json")
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
 
 
 def test_bildschirmfotos_der_vorschau():

@@ -1,0 +1,22 @@
+# Freigegebene Hosts der Cloud-Umgebung "loipenblick" (B19 AK 2), Stand 12.11.2026.
+# Die Liste spiegelt die Einstellung in claude.ai (Umgebung loipenblick, Netzwerk "eingeschraenkt").
+# Kommt eine Quelle in sources.yaml dazu, muss ihr Host hier und in der Umgebung stehen;
+# tests/test_ausbau.py prueft das. Aendern kann die Umgebung nur Stefan.
+umgebung: loipenblick
+hosts:
+  - www.tegernsee.com
+  - www.bayrischzell.de
+  - www.fischbachau.de
+  - www.aschau.de
+  - module.tourinfra.com
+  - www.tirol.at
+  - tirol.mapservices.eu
+  - www.kitzbueheler-alpen.com
+  - www.langlaufdorf.at
+  - www.berchtesgaden.de
+  - www.salzburgerland.com
+  - www.kufstein.com
+  - www.saalfelden-leogang.com
+  - dataset.api.hub.geosphere.at
+  - api.brightsky.dev
+  - opendata.dwd.de

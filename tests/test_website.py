@@ -46,7 +46,11 @@ def test_b7_seite_braucht_keinen_server(site):
 @pytest.mark.req("B7", ak=2)
 def test_b7_daten_liegen_als_json_je_region(site):
     index = lies(site, "daten.json")
-    assert {r["slug"] for r in index["regionen"]} == {"tegernseer-tal", "leitzachtal", "priental", "chiemgau"}
+    assert {r["slug"] for r in index["regionen"]} == {
+        "tegernseer-tal", "leitzachtal", "priental", "chiemgau", "berchtesgadener-land",
+        "kufsteinerland", "kaiserwinkl", "wilder-kaiser", "kitzbueheler-alpen", "fuschlseeregion",
+        "alpbachtal-wildschoenau", "zillertal", "achensee-karwendel", "innsbruck-umgebung", "seefeld-mieming",
+        "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -110,11 +114,15 @@ def test_u22_jeder_status_hat_symbol_und_wort():
 
 @pytest.mark.req("U10", ak=1)
 def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
-    kz = lies(site, "daten.json")["kennzahlen"]
-    assert kz["loipen"] == session.scalar(select(func.count()).select_from(Loipe))
+    index = lies(site, "daten.json")
+    kz = index["kennzahlen"]
+    # Dubletten (D15) zaehlen einmal: die Hauswies-Runde steht bei Bayrischzell und Fischbachau
+    assert kz["loipen"] + index["dubletten"] == session.scalar(select(func.count()).select_from(Loipe))
     assert kz["offen"] + kz["eingeschraenkt"] + kz["geschlossen"] + kz["unbekannt"] == kz["loipen"]
     assert kz["gebiete"] == sum(r["gebiete"] for r in lies(site, "daten.json")["regionen"])
-    assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {"tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau"}
+    assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
+        "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
+        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden"}
 
 
 @pytest.mark.req("U6", ak=1)

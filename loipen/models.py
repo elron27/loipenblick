@@ -77,6 +77,8 @@ class Region(Base):
     slug: Mapped[str] = mapped_column(String(100), unique=True)
     name: Mapped[str] = mapped_column(String(200))
     land: Mapped[str] = mapped_column(String(2), default="DE")
+    # D16: Bundesland (Bayern, Tirol, Salzburg); das Gebiet erbt Land und Bundesland von der Region
+    bundesland: Mapped[str | None] = mapped_column(String(64))
 
     gebiete: Mapped[list["Gebiet"]] = relationship(back_populates="region")
 
@@ -134,6 +136,12 @@ class Gebiet(Base):
     # DWD-Station fuer Schnee und Wetter (D11, D13)
     wetterstation_id: Mapped[str | None] = mapped_column(String(10))
     wetterstation_name: Mapped[str | None] = mapped_column(String(200))
+    # D17: "dwd" (Standard) oder "geosphere" fuer Gebiete in Oesterreich
+    wetterdienst: Mapped[str | None] = mapped_column(String(16))
+    # P12: weitere Namen je Sprache, z. B. {"it": "Dobbiaco"}
+    namen: Mapped[dict | None] = mapped_column(JSON)
+    # U31: Hinweis fuer die Anfahrt ueber die Grenze (Vignette), von Hand gepflegt
+    grenzinfo: Mapped[str | None] = mapped_column(String(300))
 
     region: Mapped[Region] = relationship(back_populates="gebiete")
     loipen: Mapped[list["Loipe"]] = relationship(back_populates="gebiet")

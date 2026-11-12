@@ -226,7 +226,7 @@ def marker_summe(page) -> int:
 
 @pytest.mark.req("U1", ak=1)
 def test_u1_marker_in_statusfarbe(seite):
-    seite.open("#/karte?demo=1")
+    seite.open("#/karte?demo=1&region=tegernseer-tal")
     seite.wait_for_selector("#map .mk, #map .mkc")
     stati = set(seite.locator("#map .mk, #map .mkc").evaluate_all("els => els.map(e => e.dataset.s)"))
     assert {"offen", "geschlossen"} <= stati
@@ -381,12 +381,12 @@ def test_u15_jede_gebietsseite_zeigt_mindestens_3_tage_vorhersage(seite):
 
 
 def test_talprofil_nadelhoehe_folgt_der_ortshoehe(seite):
-    """Hoeherer Ort steht weiter oben (kleineres y): Bayrischzell 800 m ueber Marquartstein 540 m."""
+    """Hoeherer Ort steht weiter oben (kleineres y): Achensee 950 m ueber Bayrischzell 800 m."""
     seite.open("#/?demo=1")
     seite.wait_for_selector("svg .s-l", state="attached")
     y = seite.evaluate("""() => Object.fromEntries([...document.querySelectorAll('svg a')].map(a =>
         [a.querySelector('text').textContent, +a.querySelector('line').getAttribute('y1')]))""")
-    assert y["Bayrischzell"] < y["Marquartstein / Grassau"]
+    assert y["Achensee"] < y["Bayrischzell"]
     assert y["Kreuth"] < y["Bad Wiessee"]  # 780 m gegen 730 m
 
 

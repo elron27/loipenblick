@@ -4,7 +4,19 @@
 # Adapter:
 #   ats     Tourismus-System von tegernsee.com, bayrischzell.de, fischbachau.de (/a-<slug>-Seiten)
 #   aschau  Schneebericht-Seite von aschau.de (Sachrang)
-#   (Schritt 3: tourinfra fuer den Chiemgau)
+#   tourinfra    JSON-Loipenmanager von Chiemgau Tourismus
+#   tirolat      Landesportal tirol.at (Kartenliste + Detailseiten im Wechsel)
+#   kitzalps     Loipenstatus-Seite der Kitzbueheler Alpen
+#   langlaufdorf langlaufdorf.at (Faistenau, Hintersee)
+#   stammdaten   nur Lage und Laenge, kein Zustand (berchtesgaden.de)
+#
+# Pflichtangaben je Quelle (P17, P20, D15):
+#   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
+#            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
+#   art:     portal oder ortsseite; eine Ortsseite nennt unter schliesst die Gebiete, die sonst keine Quelle hat
+#   rang:    bei Dubletten gewinnt der kleinere Rang (1 = fuehrend), Standard 10. Ortsquellen mit
+#            Praeparierdatum (2) vor tirol.at (3, nur offen/gesperrt) vor Kitzbueheler Alpen (4, ohne Koordinate)
+# Nicht abrufen (P17, E-15): salzkammergut.at (robots-Sperre), Intermaps (Bezahldienst), bergfex (robots).
 
 # Abrufzeiten (P8). Jede Quelle kann einen eigenen Block "zeitplan" haben.
 zeitplan:
@@ -17,6 +29,9 @@ quellen:
     adapter: ats
     name: Tegernseer Tal Tourismus
     base_url: https://www.tegernsee.com
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -60,6 +75,10 @@ quellen:
     adapter: ats
     name: Bayrischzell Tourismus
     base_url: https://www.bayrischzell.de
+    art: ortsseite
+    schliesst: [bayrischzell]
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -79,6 +98,10 @@ quellen:
     adapter: ats
     name: Fischbachau Tourismus
     base_url: https://www.fischbachau.de
+    art: ortsseite
+    schliesst: [fischbachau]
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -95,6 +118,10 @@ quellen:
     adapter: aschau
     name: Aschau i. Chiemgau Schneebericht
     base_url: https://www.aschau.de
+    art: ortsseite
+    schliesst: [sachrang]
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       report_path: /schneebericht-sachrang
       default_gebiet: sachrang
@@ -110,6 +137,9 @@ quellen:
     adapter: tourinfra
     name: Chiemgau Tourismus (tourinfra Loipenmanager)
     base_url: https://module.tourinfra.com/chiemgau
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
       default_gebiet: chieming
@@ -124,3 +154,89 @@ quellen:
         Bergen: bergen
         Siegsdorf: siegsdorf
         Chieming: chieming
+
+  # Ausbaustufe 1 (E-15): Tirol ueber das Landesportal, Stufe 1 = Kufsteinerland, Kaiserwinkl, Wilder Kaiser.
+  # Weitere Tiroler Regionen (Richtung Innsbruck): Gebiete mit lat/lon in gebiete.yaml anlegen und hier
+  # unter gebiete eintragen, ohne Codeaenderung (P14 AK 2). Je Lauf 2 Abrufe fuer den Status von ganz Tirol
+  # plus hoechstens details_pro_lauf Detailseiten.
+  - key: tirol
+    adapter: tirolat
+    name: Tirol Werbung (tirol.at)
+    base_url: https://www.tirol.at
+    art: portal
+    rang: 3
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null,
+              hinweis: "GPX auf tirol.mapservices.eu per robots.txt gesperrt, daher kein Streckenverlauf"}
+    config:
+      default_gebiet: kufstein
+      # Jede Loipe gehoert zum naechsten Gebiet dieser Liste, wenn es naeher als radius_km liegt.
+      # Ganz Tirol (P14 AK 2): 701 Loipen der Karte; dazu Bayrischzell, das tirol.at mitfuehrt
+      # (dort fuehrt die Ortsquelle, D15). Die Kitzbueheler Gebiete melden auch kitzbueheler-alpen.
+      radius_km: 15
+      # 701 Loipen / 40 je Lauf: alle Detailseiten in gut 6 Tagen (3 Laeufe am Tag), dann im Wechsel neu
+      details_pro_lauf: 40
+      gebiete: [kufstein, thiersee, langkampfen, bad-haering, schwoich, ebbs, niederndorf,
+                walchsee, koessen, schwendt, ellmau, going, soell,
+                brixental, hohe-salve, pillerseetal, st-johann-in-tirol, bayrischzell,
+                alpbachtal, wildschoenau, zillertal-fuegen, zell-gerlos, mayrhofen, tux, achensee, steinberg-rofan,
+                hinterriss, silberregion-karwendel, innsbruck, hall-wattens, sellraintal, kuehtai,
+                stubai, stubaier-gletscher, wipptal, seefeld, leutasch, mieming, oetztal, soelden,
+                obergurgl, vent, pitztal, pitztaler-gletscher, imst, kaunertal, landeck,
+                serfaus-fiss-ladis, tiroler-oberland, paznaun, st-anton, reutte, weissenbach, berwang,
+                tannheimer-tal, jungholz, lechtal, stanzach, warth, namlos, zugspitz-arena,
+                kitzbuehel, jochberg, osttirol-lienz, hochpustertal, obertilliach, defereggental,
+                matrei, kals]
+
+  # Kitzbueheler Alpen: eine Seite mit Brixental, Hohe Salve, Pillerseetal und St. Johann (P15).
+  - key: kitzbueheler-alpen
+    adapter: kitzalps
+    name: Kitzbüheler Alpen Loipenstatus
+    base_url: https://www.kitzbueheler-alpen.com
+    art: portal
+    rang: 4
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/bri/aktuelles/loipen-status.html
+      default_gebiet: brixental
+      regionen:
+        Brixental: brixental
+        Hohen Salve: hohe-salve
+        Pillerseetal: pillerseetal
+        St. Johann: st-johann-in-tirol
+
+  # Salzburger Umland (P16): Ortsseite, weil Faistenau und Hintersee sonst keine Quelle haben (P20).
+  - key: langlaufdorf
+    adapter: langlaufdorf
+    name: Langlaufdorf Faistenau / Hintersee
+    base_url: https://www.langlaufdorf.at
+    art: ortsseite
+    schliesst: [faistenau, hintersee]
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /
+      default_gebiet: faistenau
+      gebiet_map:
+        Hintersee: hintersee
+
+  # Berchtesgadener Land: nur Stammdaten, die Seite meldet keinen Zustand (P16 AK 2).
+  - key: berchtesgaden
+    adapter: stammdaten
+    name: Bergerlebnis Berchtesgaden
+    base_url: https://www.berchtesgaden.de
+    art: portal
+    rang: 8
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
+    zeitplan:
+      # Stammdaten aendern sich selten: einmal am Tag reicht (P19)
+      saison_uhrzeiten: [7]
+      nebensaison_uhrzeiten: [7]
+    config:
+      default_gebiet: berchtesgaden
+      seiten:
+        - {pfad: /touren/langlaufloipen-schoenau-am-koenigssee, gebiet: schoenau-am-koenigssee}
+        - {pfad: /touren/langlaufloipen-taubensee-ramsau, gebiet: ramsau}
+        - {pfad: /pois/langlaufzentrum-aschauerweiher-bischofswiesen, gebiet: bischofswiesen, laenge_km: 16}
+        - {pfad: /pois/langlaufloipen-scharitzkehl, gebiet: berchtesgaden, laenge_km: 9}
+        - {pfad: /touren/langlaufloipen-oberau-bei-berchtesgaden, gebiet: berchtesgaden}
+        - {pfad: /touren/langlaufloipen-scheffau-schellenberg, gebiet: marktschellenberg}

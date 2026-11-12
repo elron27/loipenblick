@@ -1,0 +1,32 @@
+name: Schnappschuss
+
+# Holt die Seiten aus scripts/schnappschuss.txt (robots.txt wird beachtet) und legt sie als Fixtures
+# auf demselben Branch ab. Laeuft nur, wenn sich die Liste auf einem claude/-Branch aendert, oder von Hand.
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["scripts/schnappschuss.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  holen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      LOIPEN_USER_AGENT: ${{ vars.LOIPEN_USER_AGENT || 'LoipenBot/0.1 (+https://github.com/elron27/loipenblick)' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/schnappschuss.py
+      - name: Fixtures auf den Branch legen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A tests/fixtures
+          git diff --cached --quiet || git commit -m "Schnappschuss neuer Quellen ($(date -u +%F))"
+          git push

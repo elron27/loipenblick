@@ -43,6 +43,22 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
         fehler.append("sources.yaml: ein Quellen-Key kommt doppelt vor")
     for q in sources.get("quellen", []):
         cfg = q.get("config", {})
+        # P17: jede Quelle nennt, wann robots.txt und Nutzungsbedingungen geprueft wurden
+        nutzung = q.get("nutzung") or {}
+        for feld in ("robots_geprueft", "nutzungsbedingungen_geprueft"):
+            if feld not in nutzung:
+                fehler.append(f"Quelle {q['key']}: nutzung.{feld} fehlt")
+        if str(nutzung.get("robots", "erlaubt")) != "erlaubt":
+            fehler.append(f"Quelle {q['key']}: robots.txt erlaubt den Abruf nicht")
+        # P20: eine Ortsseite nur, wenn sie ein Gebiet ohne andere Quelle schliesst
+        if q.get("art") == "ortsseite" and not q.get("schliesst"):
+            fehler.append(f"Quelle {q['key']}: Ortsseite ohne Angabe, welches Gebiet sie schliesst")
+        for slug in q.get("schliesst") or []:
+            if slug not in slugs:
+                fehler.append(f"Quelle {q['key']}: schliesst unbekanntes Gebiet {slug}")
+        for slug in cfg.get("gebiete", []):
+            if slug not in slugs:
+                fehler.append(f"Quelle {q['key']}: gebiete nennt unbekanntes Gebiet {slug}")
         if cfg.get("default_gebiet") not in slugs:
             fehler.append(f"Quelle {q['key']}: unbekanntes default_gebiet {cfg.get('default_gebiet')}")
         for slug in cfg.get("gebiet_map", {}).values():
@@ -70,6 +86,7 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         region = _get_or_new(session, Region, slug=r["slug"])
         region.name = r["name"]
         region.land = r.get("land", "DE")
+        region.bundesland = r.get("bundesland")
         regionen[r["slug"]] = region
 
     alle: dict[str, Gebiet] = {}
@@ -89,6 +106,9 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         gebiet.hoehe_m = g.get("hoehe_m")
         gebiet.wetterstation_id = station.get("id")
         gebiet.wetterstation_name = station.get("name")
+        gebiet.wetterdienst = station.get("dienst")
+        gebiet.namen = g.get("namen") or None
+        gebiet.grenzinfo = g.get("grenzinfo")
         alle[g["slug"]] = gebiet
     session.flush()
 
@@ -113,6 +133,13 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         quelle.base_url = q["base_url"].rstrip("/")
         config = dict(q.get("config", {}))
         config["zeitplan"] = {**standard_zeitplan, **q.get("zeitplan", {})}
+        # D15: Rang der Quelle bei Dubletten (1 = fuehrend), Standard 10
+        config["rang"] = int(q.get("rang", 10))
+        if "gebiete" in config:
+            # Adapter, die nach Koordinaten zuordnen (tirol.at), bekommen die Gebietsmitten aus gebiete.yaml
+            config["gebiet_punkte"] = {
+                g["slug"]: [g["lat"], g["lon"]] for g in gebiete.get("gebiete", [])
+                if g["slug"] in config["gebiete"] and g.get("lat") is not None}
         quelle.config = config
         quelle.enabled = q.get("enabled", True)
     session.flush()

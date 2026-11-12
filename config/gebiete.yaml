@@ -6,15 +6,89 @@
 # parkplaetze_ohne_koordinate: bekannt, aber ohne Koordinate; wird nicht angezeigt, bis eine nachgetragen ist.
 # hoehe_m: Hoehe des Ortes ueber NN in Metern (gerundet, Naeherung), bestimmt das Talprofil der Startseite.
 # wetterstation: DWD-Station mit Schneehoehe (SH_TAG), siehe Recherche wetterstationen.md.
+#   In Oesterreich mit dienst: geosphere eine Station aus GeoSphere klima-v2-1d (Parameter sh, D17).
+# Regionen: land (DE, AT, IT) und bundesland (D16); das Gebiet erbt beides von seiner Region.
+# grenzinfo: Hinweis fuer die Anfahrt aus Bayern (U31), von Hand gepflegt wie die Parkplaetze.
+# namen: weitere Namen je Sprache (P12), z. B. {it: Dobbiaco}.
+# Ausbaustufe 1 (E-15, Stand 12.11.2026): Gebietsmitten aus den Loipenstarts von tirol.at bzw.
+# berchtesgaden.de, Hoehen aus OpenStreetMap gerundet.
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal
+  land: DE
+  bundesland: Bayern
 - slug: leitzachtal
   name: Leitzachtal
+  land: DE
+  bundesland: Bayern
 - slug: priental
   name: Priental
+  land: DE
+  bundesland: Bayern
 - slug: chiemgau
   name: Chiemgau
+  land: DE
+  bundesland: Bayern
+- slug: berchtesgadener-land
+  name: Berchtesgadener Land
+  land: DE
+  bundesland: Bayern
+- slug: kufsteinerland
+  name: Kufsteinerland
+  land: AT
+  bundesland: Tirol
+- slug: kaiserwinkl
+  name: Kaiserwinkl
+  land: AT
+  bundesland: Tirol
+- slug: wilder-kaiser
+  name: Wilder Kaiser
+  land: AT
+  bundesland: Tirol
+- slug: kitzbueheler-alpen
+  name: Kitzbüheler Alpen
+  land: AT
+  bundesland: Tirol
+- slug: fuschlseeregion
+  name: Fuschlsee-Region
+  land: AT
+  bundesland: Salzburg
+- slug: alpbachtal-wildschoenau
+  name: Alpbachtal und Wildschönau
+  land: AT
+  bundesland: Tirol
+- slug: zillertal
+  name: Zillertal
+  land: AT
+  bundesland: Tirol
+- slug: achensee-karwendel
+  name: Achensee und Karwendel
+  land: AT
+  bundesland: Tirol
+- slug: innsbruck-umgebung
+  name: Innsbruck und Umgebung
+  land: AT
+  bundesland: Tirol
+- slug: seefeld-mieming
+  name: Seefeld und Mieminger Plateau
+  land: AT
+  bundesland: Tirol
+- slug: oetztal-pitztal
+  name: Ötztal, Pitztal und Imst
+  land: AT
+  bundesland: Tirol
+- slug: oberland-arlberg
+  name: Tiroler Oberland, Paznaun und Arlberg
+  land: AT
+  bundesland: Tirol
+- slug: ausserfern
+  name: Außerfern
+  land: AT
+  bundesland: Tirol
+- slug: osttirol
+  name: Osttirol
+  land: AT
+  bundesland: Tirol
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -136,6 +210,9 @@ gebiete:
   name: Bayrischzell
   hoehe_m: 800
   region: leitzachtal
+  # Mitte der Loipenstarts; tirol.at fuehrt auch die Bayrischzeller Loipen (Dubletten, D15)
+  lat: 47.672
+  lon: 12.013
   tourist_url: https://www.bayrischzell.de
   nachbarn:
   - fischbachau
@@ -544,3 +621,958 @@ gebiete:
   region: chiemgau
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
   nachbarn: []
+- slug: kufstein
+  name: Kufstein
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.581
+  lon: 12.164
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - thiersee
+  - schwoich
+  - ebbs
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: thiersee
+  name: Thiersee
+  hoehe_m: 680
+  region: kufsteinerland
+  lat: 47.588
+  lon: 12.09
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - kufstein
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: langkampfen
+  name: Langkampfen
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.536
+  lon: 12.09
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - schwoich
+  - bad-haering
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: bad-haering
+  name: Bad Häring
+  hoehe_m: 620
+  region: kufsteinerland
+  lat: 47.509
+  lon: 12.114
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - schwoich
+  - langkampfen
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: schwoich
+  name: Schwoich
+  hoehe_m: 570
+  region: kufsteinerland
+  lat: 47.541
+  lon: 12.141
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - kufstein
+  - bad-haering
+  - langkampfen
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: ebbs
+  name: Ebbs
+  hoehe_m: 480
+  region: kufsteinerland
+  lat: 47.62
+  lon: 12.217
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - niederndorf
+  - kufstein
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: niederndorf
+  name: Niederndorf
+  hoehe_m: 500
+  region: kufsteinerland
+  lat: 47.646
+  lon: 12.217
+  tourist_url: https://www.kufstein.com
+  nachbarn:
+  - ebbs
+  - walchsee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9016'
+    name: Kufstein
+    dienst: geosphere
+- slug: walchsee
+  name: Walchsee
+  hoehe_m: 670
+  region: kaiserwinkl
+  lat: 47.656
+  lon: 12.314
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - koessen
+  - schwendt
+  - niederndorf
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: koessen
+  name: Kössen
+  hoehe_m: 590
+  region: kaiserwinkl
+  lat: 47.665
+  lon: 12.405
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - schwendt
+  - walchsee
+  - reit-im-winkl
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: schwendt
+  name: Schwendt
+  hoehe_m: 700
+  region: kaiserwinkl
+  lat: 47.636
+  lon: 12.393
+  tourist_url: https://www.kaiserwinkl.com
+  nachbarn:
+  - koessen
+  - walchsee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9110'
+    name: Kössen
+    dienst: geosphere
+- slug: ellmau
+  name: Ellmau
+  hoehe_m: 800
+  region: wilder-kaiser
+  lat: 47.514
+  lon: 12.293
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - going
+  - soell
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: going
+  name: Going
+  hoehe_m: 770
+  region: wilder-kaiser
+  lat: 47.519
+  lon: 12.33
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - ellmau
+  - st-johann-in-tirol
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: soell
+  name: Söll
+  hoehe_m: 700
+  region: wilder-kaiser
+  lat: 47.503
+  lon: 12.194
+  tourist_url: https://www.wilderkaiser.info
+  nachbarn:
+  - ellmau
+  - bad-haering
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: brixental
+  name: Brixental
+  hoehe_m: 800
+  region: kitzbueheler-alpen
+  lat: 47.452
+  lon: 12.255
+  tourist_url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+  nachbarn:
+  - hohe-salve
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '12203'
+    name: Kitzbühel
+    dienst: geosphere
+- slug: hohe-salve
+  name: Hohe Salve
+  hoehe_m: 620
+  region: kitzbueheler-alpen
+  lat: 47.49
+  lon: 12.08
+  tourist_url: https://www.kitzbueheler-alpen.com/de/hosa/
+  nachbarn:
+  - brixental
+  - soell
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9019'
+    name: Söll
+    dienst: geosphere
+- slug: pillerseetal
+  name: Pillerseetal
+  hoehe_m: 850
+  region: kitzbueheler-alpen
+  lat: 47.505
+  lon: 12.6
+  tourist_url: https://www.kitzbueheler-alpen.com/de/pital/
+  nachbarn:
+  - st-johann-in-tirol
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '12351'
+    name: Hochfilzen
+    dienst: geosphere
+- slug: st-johann-in-tirol
+  name: St. Johann in Tirol
+  hoehe_m: 660
+  region: kitzbueheler-alpen
+  lat: 47.525
+  lon: 12.425
+  tourist_url: https://www.kitzbueheler-alpen.com/de/stjo/
+  nachbarn:
+  - going
+  - pillerseetal
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
+  wetterstation:
+    id: '9105'
+    name: Kirchdorf in Tirol
+    dienst: geosphere
+- slug: faistenau
+  name: Faistenau
+  hoehe_m: 790
+  region: fuschlseeregion
+  lat: 47.774
+  lon: 13.24
+  tourist_url: https://www.langlaufdorf.at/
+  nachbarn:
+  - hintersee
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'
+  loipengebuehr:
+    eur: 11.0
+    text: 'Tageskarte 11 €, Saisonkarte 98 € (bis 30.11. 85 €), Jugendliche bis 15 frei'
+    url: https://www.langlaufdorf.at/tickets-preise.html
+  wetterstation:
+    id: '6300'
+    name: Salzburg Flughafen
+    dienst: geosphere
+- slug: hintersee
+  name: Hintersee
+  hoehe_m: 750
+  region: fuschlseeregion
+  lat: 47.718
+  lon: 13.278
+  tourist_url: https://www.langlaufdorf.at/
+  nachbarn:
+  - faistenau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'
+  loipengebuehr:
+    eur: 11.0
+    text: 'Tageskarte 11 € wie Faistenau, Tickets an den Parkautomaten'
+    url: https://www.langlaufdorf.at/tickets-preise.html
+  wetterstation:
+    id: '6300'
+    name: Salzburg Flughafen
+    dienst: geosphere
+- slug: schoenau-am-koenigssee
+  name: Schönau a. Königssee
+  hoehe_m: 620
+  region: berchtesgadener-land
+  lat: 47.61
+  lon: 12.978
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-schoenau-am-koenigssee
+  nachbarn:
+  - berchtesgaden
+  - ramsau
+- slug: ramsau
+  name: Ramsau
+  hoehe_m: 670
+  region: berchtesgadener-land
+  lat: 47.63
+  lon: 12.871
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-taubensee-ramsau
+  nachbarn:
+  - schoenau-am-koenigssee
+- slug: bischofswiesen
+  name: Bischofswiesen
+  hoehe_m: 620
+  region: berchtesgadener-land
+  lat: 47.644
+  lon: 12.985
+  tourist_url: https://www.berchtesgaden.de/pois/langlaufzentrum-aschauerweiher-bischofswiesen
+  nachbarn:
+  - berchtesgaden
+  - schoenau-am-koenigssee
+- slug: berchtesgaden
+  name: Berchtesgaden
+  hoehe_m: 1000
+  region: berchtesgadener-land
+  lat: 47.626
+  lon: 13.044
+  tourist_url: https://www.berchtesgaden.de/winter/langlaufen
+  nachbarn:
+  - bischofswiesen
+  - marktschellenberg
+- slug: marktschellenberg
+  name: Marktschellenberg
+  hoehe_m: 500
+  region: berchtesgadener-land
+  lat: 47.673
+  lon: 13.066
+  tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-scheffau-schellenberg
+  nachbarn:
+  - berchtesgaden
+# Ganz Tirol aus der tirol.at-Karte (Schnappschuss 12.11.2026, P14 AK 2): je Tal oder Hauptort ein Gebiet,
+# Mitte = Mittel der Loipenstarts, Hoehe des Hauptorts gerundet, Wetterstation = naechste GeoSphere-Station
+# mit Schneehoehe (klima-v2-1d_tirol.json). Touristeninfo vorerst tirol.at, bis die Ortsseiten recherchiert sind.
+- slug: alpbachtal
+  name: Alpbachtal
+  hoehe_m: 1000
+  region: alpbachtal-wildschoenau
+  lat: 47.442
+  lon: 11.886
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '12015'
+    name: Alpbach
+    dienst: geosphere
+- slug: wildschoenau
+  name: Wildschönau
+  hoehe_m: 900
+  region: alpbachtal-wildschoenau
+  lat: 47.42
+  lon: 12.091
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '12015'
+    name: Alpbach
+    dienst: geosphere
+- slug: zillertal-fuegen
+  name: Fügen und Hochfügen
+  hoehe_m: 550
+  region: zillertal
+  lat: 47.309
+  lon: 11.846
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '42'
+    name: Jenbach
+    dienst: geosphere
+- slug: zell-gerlos
+  name: Zell am Ziller und Gerlos
+  hoehe_m: 580
+  region: zillertal
+  lat: 47.231
+  lon: 11.946
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '61'
+    name: Mayrhofen
+    dienst: geosphere
+- slug: mayrhofen
+  name: Mayrhofen und Hippach
+  hoehe_m: 630
+  region: zillertal
+  lat: 47.169
+  lon: 11.857
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '61'
+    name: Mayrhofen
+    dienst: geosphere
+- slug: tux
+  name: Tux
+  hoehe_m: 1300
+  region: zillertal
+  lat: 47.136
+  lon: 11.698
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14912'
+    name: Hintertux
+    dienst: geosphere
+- slug: achensee
+  name: Achensee
+  hoehe_m: 950
+  region: achensee-karwendel
+  lat: 47.453
+  lon: 11.71
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '151'
+    name: Achenkirch
+    dienst: geosphere
+- slug: steinberg-rofan
+  name: Steinberg am Rofan
+  hoehe_m: 1010
+  region: achensee-karwendel
+  lat: 47.526
+  lon: 11.773
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '151'
+    name: Achenkirch
+    dienst: geosphere
+- slug: hinterriss
+  name: Hinterriß
+  hoehe_m: 930
+  region: achensee-karwendel
+  lat: 47.467
+  lon: 11.485
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '151'
+    name: Achenkirch
+    dienst: geosphere
+- slug: silberregion-karwendel
+  name: Silberregion Karwendel
+  hoehe_m: 1300
+  region: achensee-karwendel
+  lat: 47.318
+  lon: 11.694
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '42'
+    name: Jenbach
+    dienst: geosphere
+- slug: innsbruck
+  name: Innsbrucker Mittelgebirge
+  hoehe_m: 780
+  region: innsbruck-umgebung
+  lat: 47.236
+  lon: 11.366
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14701'
+    name: Neustift/Milders
+    dienst: geosphere
+- slug: hall-wattens
+  name: Hall-Wattens
+  hoehe_m: 880
+  region: innsbruck-umgebung
+  lat: 47.269
+  lon: 11.509
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14701'
+    name: Neustift/Milders
+    dienst: geosphere
+- slug: sellraintal
+  name: Sellraintal
+  hoehe_m: 1630
+  region: innsbruck-umgebung
+  lat: 47.181
+  lon: 11.169
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14701'
+    name: Neustift/Milders
+    dienst: geosphere
+- slug: kuehtai
+  name: Kühtai
+  hoehe_m: 2020
+  region: innsbruck-umgebung
+  lat: 47.215
+  lon: 10.993
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '136'
+    name: Umhausen
+    dienst: geosphere
+- slug: stubai
+  name: Stubaital
+  hoehe_m: 1000
+  region: innsbruck-umgebung
+  lat: 47.068
+  lon: 11.294
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14701'
+    name: Neustift/Milders
+    dienst: geosphere
+- slug: stubaier-gletscher
+  name: Stubaier Gletscher
+  hoehe_m: 2300
+  region: innsbruck-umgebung
+  lat: 46.996
+  lon: 11.13
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '66'
+    name: Obergurgl
+    dienst: geosphere
+- slug: wipptal
+  name: Wipptal
+  hoehe_m: 1050
+  region: innsbruck-umgebung
+  lat: 47.082
+  lon: 11.498
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '14825'
+    name: Schmirn
+    dienst: geosphere
+- slug: seefeld
+  name: Seefeld und Scharnitz
+  hoehe_m: 1180
+  region: seefeld-mieming
+  lat: 47.332
+  lon: 11.173
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '87'
+    name: Seefeld
+    dienst: geosphere
+- slug: leutasch
+  name: Leutasch
+  hoehe_m: 1130
+  region: seefeld-mieming
+  lat: 47.367
+  lon: 11.15
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '87'
+    name: Seefeld
+    dienst: geosphere
+- slug: mieming
+  name: Mieminger Plateau
+  hoehe_m: 870
+  region: seefeld-mieming
+  lat: 47.307
+  lon: 10.95
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '87'
+    name: Seefeld
+    dienst: geosphere
+- slug: oetztal
+  name: Ötztal (Längenfeld, Umhausen)
+  hoehe_m: 1180
+  region: oetztal-pitztal
+  lat: 47.095
+  lon: 10.969
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '136'
+    name: Umhausen
+    dienst: geosphere
+- slug: soelden
+  name: Sölden
+  hoehe_m: 1370
+  region: oetztal-pitztal
+  lat: 46.935
+  lon: 11.02
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '66'
+    name: Obergurgl
+    dienst: geosphere
+- slug: obergurgl
+  name: Obergurgl
+  hoehe_m: 1930
+  region: oetztal-pitztal
+  lat: 46.888
+  lon: 11.039
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '66'
+    name: Obergurgl
+    dienst: geosphere
+- slug: vent
+  name: Vent
+  hoehe_m: 1900
+  region: oetztal-pitztal
+  lat: 46.86
+  lon: 10.91
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '66'
+    name: Obergurgl
+    dienst: geosphere
+- slug: pitztal
+  name: Pitztal
+  hoehe_m: 1370
+  region: oetztal-pitztal
+  lat: 47.067
+  lon: 10.844
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '136'
+    name: Umhausen
+    dienst: geosphere
+- slug: pitztaler-gletscher
+  name: Pitztaler Gletscher und Mandarfen
+  hoehe_m: 1680
+  region: oetztal-pitztal
+  lat: 46.958
+  lon: 10.871
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '184'
+    name: Pitztaler Gletscher
+    dienst: geosphere
+- slug: imst
+  name: Imst
+  hoehe_m: 830
+  region: oetztal-pitztal
+  lat: 47.274
+  lon: 10.782
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '136'
+    name: Umhausen
+    dienst: geosphere
+- slug: kaunertal
+  name: Kaunertal
+  hoehe_m: 1290
+  region: oberland-arlberg
+  lat: 47.039
+  lon: 10.749
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '136'
+    name: Umhausen
+    dienst: geosphere
+- slug: landeck
+  name: Landeck
+  hoehe_m: 820
+  region: oberland-arlberg
+  lat: 47.144
+  lon: 10.668
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '50'
+    name: Landeck
+    dienst: geosphere
+- slug: serfaus-fiss-ladis
+  name: Serfaus-Fiss-Ladis
+  hoehe_m: 1430
+  region: oberland-arlberg
+  lat: 47.047
+  lon: 10.61
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '50'
+    name: Landeck
+    dienst: geosphere
+- slug: tiroler-oberland
+  name: Nauders und Tiroler Oberland
+  hoehe_m: 1390
+  region: oberland-arlberg
+  lat: 46.903
+  lon: 10.517
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '121'
+    name: Nauders
+    dienst: geosphere
+- slug: paznaun
+  name: Galtür und Silvretta
+  hoehe_m: 1580
+  region: oberland-arlberg
+  lat: 46.956
+  lon: 10.161
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '119'
+    name: St.Anton am Arlberg
+    dienst: geosphere
+- slug: st-anton
+  name: St. Anton am Arlberg
+  hoehe_m: 1300
+  region: oberland-arlberg
+  lat: 47.139
+  lon: 10.298
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '119'
+    name: St.Anton am Arlberg
+    dienst: geosphere
+- slug: reutte
+  name: Reutte
+  hoehe_m: 850
+  region: ausserfern
+  lat: 47.494
+  lon: 10.706
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '76'
+    name: Reutte
+    dienst: geosphere
+- slug: weissenbach
+  name: Weißenbach am Lech
+  hoehe_m: 890
+  region: ausserfern
+  lat: 47.447
+  lon: 10.646
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '76'
+    name: Reutte
+    dienst: geosphere
+- slug: berwang
+  name: Berwang
+  hoehe_m: 1340
+  region: ausserfern
+  lat: 47.428
+  lon: 10.768
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '76'
+    name: Reutte
+    dienst: geosphere
+- slug: tannheimer-tal
+  name: Tannheimer Tal
+  hoehe_m: 1100
+  region: ausserfern
+  lat: 47.496
+  lon: 10.55
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '11410'
+    name: Tannheim
+    dienst: geosphere
+- slug: jungholz
+  name: Jungholz und Schattwald
+  hoehe_m: 1050
+  region: ausserfern
+  lat: 47.565
+  lon: 10.438
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '11410'
+    name: Tannheim
+    dienst: geosphere
+- slug: lechtal
+  name: Oberes Lechtal
+  hoehe_m: 1100
+  region: ausserfern
+  lat: 47.276
+  lon: 10.397
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '146'
+    name: Holzgau
+    dienst: geosphere
+- slug: stanzach
+  name: Unteres Lechtal (Stanzach, Elmen)
+  hoehe_m: 940
+  region: ausserfern
+  lat: 47.368
+  lon: 10.531
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '11410'
+    name: Tannheim
+    dienst: geosphere
+- slug: warth
+  name: Warth am Lech
+  hoehe_m: 1500
+  region: ausserfern
+  lat: 47.268
+  lon: 10.137
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '146'
+    name: Holzgau
+    dienst: geosphere
+- slug: namlos
+  name: Namlos und Bschlabs
+  hoehe_m: 1260
+  region: ausserfern
+  lat: 47.34
+  lon: 10.659
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '76'
+    name: Reutte
+    dienst: geosphere
+- slug: zugspitz-arena
+  name: Tiroler Zugspitz Arena
+  hoehe_m: 1000
+  region: ausserfern
+  lat: 47.398
+  lon: 10.906
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '76'
+    name: Reutte
+    dienst: geosphere
+- slug: kitzbuehel
+  name: Kitzbühel
+  hoehe_m: 760
+  region: kitzbueheler-alpen
+  lat: 47.458
+  lon: 12.352
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '118'
+    name: Kitzbühel
+    dienst: geosphere
+- slug: jochberg
+  name: Jochberg und Pass Thurn
+  hoehe_m: 920
+  region: kitzbueheler-alpen
+  lat: 47.301
+  lon: 12.416
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '118'
+    name: Kitzbühel
+    dienst: geosphere
+- slug: osttirol-lienz
+  name: Lienz und Lienzer Dolomiten
+  hoehe_m: 670
+  region: osttirol
+  lat: 46.807
+  lon: 12.848
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '55'
+    name: Lienz
+    dienst: geosphere
+- slug: hochpustertal
+  name: Sillian und Hochpustertal
+  hoehe_m: 1100
+  region: osttirol
+  lat: 46.751
+  lon: 12.445
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '130'
+    name: Sillian
+    dienst: geosphere
+- slug: obertilliach
+  name: Obertilliach
+  hoehe_m: 1450
+  region: osttirol
+  lat: 46.711
+  lon: 12.581
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '130'
+    name: Sillian
+    dienst: geosphere
+- slug: defereggental
+  name: Defereggental
+  hoehe_m: 1390
+  region: osttirol
+  lat: 46.966
+  lon: 12.353
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '185'
+    name: St.Jakob im Defereggental
+    dienst: geosphere
+- slug: matrei
+  name: Matrei in Osttirol
+  hoehe_m: 980
+  region: osttirol
+  lat: 47.094
+  lon: 12.486
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '43'
+    name: Kals
+    dienst: geosphere
+- slug: kals
+  name: Kals am Großglockner
+  hoehe_m: 1320
+  region: osttirol
+  lat: 47.001
+  lon: 12.622
+  tourist_url: https://www.tirol.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
+  wetterstation:
+    id: '43'
+    name: Kals
+    dienst: geosphere

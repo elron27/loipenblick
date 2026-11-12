@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.tirol.at/_assets/984e6ee9829f85eb447bb6a36455204a/CSS/Sitemap.xsl"?>
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?sitemap=pages&amp;type=1533906435&amp;cHash=e2a9d54b23f9c5bd79c6eff9c0b0fc51</loc>
+            <lastmod>2026-11-11T11:11:39+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?page=1&amp;sitemap=pages&amp;type=1533906435&amp;cHash=1c992817c11797cf105c905607d5c47a</loc>
+            <lastmod>2026-11-11T11:11:39+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?sitemap=pois&amp;type=1533906435&amp;cHash=eb8a5ffd3e4cbfed8a6926969ef78203</loc>
+            <lastmod>2026-11-11T08:00:01+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?page=1&amp;sitemap=pois&amp;type=1533906435&amp;cHash=21cca9a8ea4f1e24831985bc8fc74693</loc>
+            <lastmod>2026-11-11T08:00:01+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?sitemap=events&amp;type=1533906435&amp;cHash=3deae3d77c854569f60be810a0f53467</loc>
+            <lastmod>2026-11-12T04:00:01+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.tirol.at/?page=1&amp;sitemap=events&amp;type=1533906435&amp;cHash=890e4d65a7bb174f34e5b8978909d740</loc>
+            <lastmod>2026-11-12T04:00:01+01:00</lastmod>
+        </sitemap>
+    
+</sitemapindex>

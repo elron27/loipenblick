@@ -6,6 +6,7 @@ sie zurueck und protokolliert sie mit Quelle und Rohtext.
 """
 
 import re
+import unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -28,6 +29,22 @@ ZUSTAND: dict[str, Status] = {
     "eingeschränkt": Status.EINGESCHRAENKT,
     "befriedigend": Status.EINGESCHRAENKT,
     "mittel": Status.EINGESCHRAENKT,
+    # Oesterreich (P18): tirol.at, Kitzbueheler Alpen, langlaufdorf.at
+    "teilweise geöffnet": Status.EINGESCHRAENKT,
+    "teilweise offen": Status.EINGESCHRAENKT,
+    "eingeschränkt befahrbar": Status.EINGESCHRAENKT,
+    "nur eingeschränkt befahrbar": Status.EINGESCHRAENKT,
+    "teilweise gespurt": Status.EINGESCHRAENKT,
+    "in betrieb": Status.OFFEN,
+    "außer betrieb": Status.GESCHLOSSEN,
+    # Italienisch fuer Suedtirol (P12)
+    "aperta": Status.OFFEN,
+    "aperto": Status.OFFEN,
+    "battuta": Status.OFFEN,
+    "parzialmente aperta": Status.EINGESCHRAENKT,
+    "parzialmente aperto": Status.EINGESCHRAENKT,
+    "chiusa": Status.GESCHLOSSEN,
+    "chiuso": Status.GESCHLOSSEN,
     "nicht befahrbar": Status.GESCHLOSSEN,
     "geschlossen": Status.GESCHLOSSEN,
     "gesperrt": Status.GESCHLOSSEN,
@@ -42,9 +59,15 @@ SCHWIERIGKEIT: dict[str, Schwierigkeit] = {
     "leicht": Schwierigkeit.LEICHT,
     "blau": Schwierigkeit.LEICHT,
     "mittel": Schwierigkeit.MITTEL,
+    "mittelschwierig": Schwierigkeit.MITTEL,
+    "mittelschwer": Schwierigkeit.MITTEL,
     "rot": Schwierigkeit.MITTEL,
     "schwer": Schwierigkeit.SCHWER,
     "schwarz": Schwierigkeit.SCHWER,
+    "schwierig": Schwierigkeit.SCHWER,
+    "facile": Schwierigkeit.LEICHT,
+    "medio": Schwierigkeit.MITTEL,
+    "difficile": Schwierigkeit.SCHWER,
     "k.a.": Schwierigkeit.UNBEKANNT,
     "": Schwierigkeit.UNBEKANNT,
 }
@@ -120,3 +143,13 @@ def parse_ja_nein(text: str | None) -> bool | None:
     if schluessel in {"nein", "no", "false"}:
         return False
     return None
+
+
+def slugify(text: str) -> str:
+    """'KU1 Weissach I' -> 'ku1-weissach-i', Umlaute als ae/oe/ue, Satzzeichen fallen weg ('1,5 km' -> '15-km')."""
+    t = text.strip().lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        t = t.replace(a, b)
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
+    t = re.sub(r"[^a-z0-9\s-]", "", t)
+    return re.sub(r"[\s-]+", "-", t).strip("-")

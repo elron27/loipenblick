@@ -30,6 +30,7 @@ def test_p2_neuer_eintrag_ohne_codeaenderung(session, tmp_path):
         "adapter": "ats",
         "name": "Schliersee (Test)",
         "base_url": "https://www.schliersee.example/",
+        "nutzung": {"robots": "erlaubt", "robots_geprueft": "2026-11-12", "nutzungsbedingungen_geprueft": None},
         "config": {"default_gebiet": "fischbachau"},
     })
     (tmp_path / "sources.yaml").write_text(yaml.safe_dump(sources, allow_unicode=True), encoding="utf-8")

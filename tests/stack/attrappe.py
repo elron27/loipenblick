@@ -78,6 +78,23 @@ def dwd_antwort(station: str, heute: date) -> bytes:
     return dwd_zip(zeilen)
 
 
+def geosphere_antwort(q: dict, heute: date) -> str:
+    """klima-v2-1d im Format der echten Antwort (tests/fixtures/geosphere/), Werte je Station erfunden."""
+    stationen = [s for v in q.get("station_ids", []) for s in v.split(",") if s]
+    tage = [heute - timedelta(days=i) for i in range(14, 0, -1)]
+    features = []
+    for station in stationen:
+        basis = _station_werte(station)
+        sh = [20 + basis + i for i in range(len(tage))]
+        features.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [47.5, 12.2]},
+                         "properties": {"station": int(station), "parameters": {
+                             "rr": {"data": [2.0 if i >= 12 else -1 for i in range(len(tage))]},
+                             "sh": {"data": sh}, "sh_manu": {"data": [None] * len(tage)},
+                             "shneu_manu": {"data": [None] * len(tage)}}}})
+    return json.dumps({"type": "FeatureCollection", "timestamps": [f"{t.isoformat()}T00:00+00:00" for t in tage],
+                       "features": features})
+
+
 def brightsky_antwort(von: date, bis: date) -> str:
     tage = {}
     tag = von
@@ -128,6 +145,8 @@ class Attrappe(http.server.BaseHTTPRequestHandler):
         if host == "opendata.dwd.de":
             station = rest.rsplit("tageswerte_RR_", 1)[-1].split("_akt.zip")[0]
             return self._sende(200, dwd_antwort(station, heute), "application/zip")
+        if host == "dataset.api.hub.geosphere.at":
+            return self._sende(200, geosphere_antwort(parse_qs(t.query), heute), "application/json")
         if host == "api.brightsky.dev":
             q = parse_qs(t.query)
             von = date.fromisoformat(q.get("date", [heute.isoformat()])[0][:10])
