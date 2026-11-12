@@ -14,7 +14,8 @@
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
 #            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
 #   art:     portal oder ortsseite; eine Ortsseite nennt unter schliesst die Gebiete, die sonst keine Quelle hat
-#   rang:    bei Dubletten gewinnt der kleinere Rang (1 = fuehrend), Standard 10
+#   rang:    bei Dubletten gewinnt der kleinere Rang (1 = fuehrend), Standard 10. Ortsquellen mit
+#            Praeparierdatum (2) vor tirol.at (3, nur offen/gesperrt) vor Kitzbueheler Alpen (4, ohne Koordinate)
 # Nicht abrufen (P17, E-15): salzkammergut.at (robots-Sperre), Intermaps (Bezahldienst), bergfex (robots).
 
 # Abrufzeiten (P8). Jede Quelle kann einen eigenen Block "zeitplan" haben.
@@ -29,7 +30,7 @@ quellen:
     name: Tegernseer Tal Tourismus
     base_url: https://www.tegernsee.com
     art: portal
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
@@ -76,7 +77,7 @@ quellen:
     base_url: https://www.bayrischzell.de
     art: ortsseite
     schliesst: [bayrischzell]
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
@@ -99,7 +100,7 @@ quellen:
     base_url: https://www.fischbachau.de
     art: ortsseite
     schliesst: [fischbachau]
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
@@ -119,7 +120,7 @@ quellen:
     base_url: https://www.aschau.de
     art: ortsseite
     schliesst: [sachrang]
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       report_path: /schneebericht-sachrang
@@ -137,7 +138,7 @@ quellen:
     name: Chiemgau Tourismus (tourinfra Loipenmanager)
     base_url: https://module.tourinfra.com/chiemgau
     art: portal
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
@@ -163,7 +164,7 @@ quellen:
     name: Tirol Werbung (tirol.at)
     base_url: https://www.tirol.at
     art: portal
-    rang: 1
+    rang: 3
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null,
               hinweis: "GPX auf tirol.mapservices.eu per robots.txt gesperrt, daher kein Streckenverlauf"}
     config:
@@ -179,7 +180,7 @@ quellen:
     name: Kitzbüheler Alpen Loipenstatus
     base_url: https://www.kitzbueheler-alpen.com
     art: portal
-    rang: 2
+    rang: 4
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
     config:
       pfad: /de/bri/aktuelles/loipen-status.html
@@ -197,7 +198,7 @@ quellen:
     base_url: https://www.langlaufdorf.at
     art: ortsseite
     schliesst: [faistenau, hintersee]
-    rang: 5
+    rang: 2
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
     config:
       pfad: /

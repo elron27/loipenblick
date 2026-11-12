@@ -82,5 +82,5 @@ def test_worker_ablauf_gegen_die_attrappe(session, server):
         assert lauf.fehler is None and lauf.gefunden > 0, q.key
     wetter = aktualisiere_wetter(session, f)
     assert wetter.messungen > 0 and wetter.vorhersagen > 0
-    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69
+    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 61 + 71 + 5 + 6  # + tirol, kitzbueheler-alpen, langlaufdorf, berchtesgaden
     assert session.scalar(select(func.count()).select_from(Wetter)) == wetter.messungen + wetter.vorhersagen

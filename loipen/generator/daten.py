@@ -8,6 +8,8 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from loipen.adapters.stammdaten import KEIN_ZUSTAND
+from loipen.dubletten import Eintrag, finde_dubletten
 from loipen.konfig import lade_yaml
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.wetter import gebiet_position, schnee_uebersicht
@@ -15,6 +17,7 @@ from loipen.wetter import gebiet_position, schnee_uebersicht
 BERLIN = ZoneInfo("Europe/Berlin")
 VERALTET_STUNDEN = 48  # U6
 HISTORIE_TAGE = 14  # U5
+LAND_REIHENFOLGE = {"DE": 0, "AT": 1, "IT": 2}
 
 
 def _iso(dt: datetime | None) -> str | None:
@@ -55,6 +58,10 @@ def _loipe(loipe: Loipe, zustaende: list[Zustand], quelle: Quelle, jetzt: dateti
         "gespurt_klassisch_km": z.gespurt_klassisch_km if z else None,
         "gespurt_skating_km": z.gespurt_skating_km if z else None,
         "quelle_stand": _iso(z.quelle_aktualisiert_at) if z else None,
+        # U30: die Quelle meldet keinen Praeparierzeitpunkt; die Seite zeigt dann den Abrufzeitpunkt
+        "ohne_datum": bool(z and z.quelle_aktualisiert_at is None),
+        # P16: die Quelle fuehrt nur Stammdaten (Berchtesgaden)
+        "ohne_zustand": bool(z and z.rohtext == KEIN_ZUSTAND),
         "abgerufen": _iso(z.zuletzt_bestaetigt_at) if z else None,
         "veraltet": bool(z is None or fehler or (alter_h is not None and alter_h > VERALTET_STUNDEN)),
         "quelle_fehler": fehler,
@@ -90,21 +97,37 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     for z in session.scalars(select(Zustand).order_by(Zustand.abgerufen_at, Zustand.id)):
         zustaende.setdefault(z.loipe_id, []).append(z)
 
+    # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
+    aktive = [l for l in session.scalars(select(Loipe).where(Loipe.active))]
+    verdeckt = finde_dubletten([
+        Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
+                l.lat, l.lon)
+        for l in aktive])
+    auch_bei: dict[int, list[dict]] = {}
+    nach_id = {l.id: l for l in aktive}
+    for versteckt, fuehrend in sorted(verdeckt.items()):
+        v = nach_id[versteckt]
+        auch_bei.setdefault(fuehrend, []).append({"quelle": v.quelle.name, "name": v.name, "url": v.source_url})
+
     regionen: dict[str, dict] = {}
     strecken: dict[str, dict] = {}
+    abdeckung: list[dict] = []
     kennzahl = {s.value: 0 for s in Status}
     veraltet = 0
     gesamt = 0
-    for region in session.scalars(select(Region).order_by(Region.name)):
+    # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
+    for region in sorted(session.scalars(select(Region)),
+                         key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
         gebiete = []
         verlaeufe: dict[str, list] = {}
         for g in sorted(region.gebiete, key=lambda x: x.name):
             pos = gebiet_position(g)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
-                if not l.active:
+                if not l.active or l.id in verdeckt:
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
+                d["auch_bei"] = auch_bei.get(l.id, [])
                 loipen.append(d)
                 kennzahl[d["status"]] += 1
                 veraltet += d["veraltet"]
@@ -116,6 +139,10 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             gebiete.append({
                 "slug": g.slug,
                 "name": g.name,
+                "namen": g.namen or {},
+                "land": region.land,
+                "bundesland": region.bundesland,
+                "grenzinfo": g.grenzinfo,
                 "lat": pos[0] if pos else None,
                 "lon": pos[1] if pos else None,
                 "hoehe_m": g.hoehe_m,
@@ -132,7 +159,14 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 "vorhersage": _vorhersage(session, g, heute),
                 "loipen": loipen,
             })
-        regionen[region.slug] = {"region": {"slug": region.slug, "name": region.name}, "gebiete": gebiete}
+        regionen[region.slug] = {"region": {"slug": region.slug, "name": region.name, "land": region.land,
+                                            "bundesland": region.bundesland}, "gebiete": gebiete}
+        # P13 AK 2: Anbindungsstand je Region
+        mit_zustand = sum(1 for g in gebiete if any(not l["ohne_zustand"] for l in g["loipen"]))
+        nur_stamm = sum(1 for g in gebiete if g["loipen"] and all(l["ohne_zustand"] for l in g["loipen"]))
+        abdeckung.append({"region": region.name, "land": region.land, "bundesland": region.bundesland,
+                          "gebiete": len(gebiete), "angebunden": mit_zustand, "nur_stammdaten": nur_stamm,
+                          "ohne_quelle": len(gebiete) - mit_zustand - nur_stamm})
         strecken[region.slug] = verlaeufe
 
     orte_yaml = lade_yaml(config_dir / "orte.yaml") if (config_dir / "orte.yaml").exists() else {}
@@ -142,7 +176,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         "version": 1,
         "erzeugt": jetzt.astimezone(BERLIN).isoformat(timespec="minutes"),
         "regionen": [
-            {"slug": s, "name": r["region"]["name"], "gebiete": len(r["gebiete"]),
+            {"slug": s, "name": r["region"]["name"], "land": r["region"]["land"],
+             "bundesland": r["region"]["bundesland"], "gebiete": len(r["gebiete"]),
              "mitte": _mitte(r["gebiete"]),
              "datei": f"daten/{s}.json", "strecken": f"strecken/{s}.json"}
             for s, r in regionen.items()
@@ -154,6 +189,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
              "anzahl": q.last_count, "dauer_s": q.last_dauer_s, "fehler": q.last_error}
             for q in session.scalars(select(Quelle).order_by(Quelle.key))
         ],
+        "abdeckung": abdeckung,
+        "dubletten": len(verdeckt),
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),
                        "veraltet": veraltet, **kennzahl},
     }
