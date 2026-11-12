@@ -1,16 +1,2 @@
-# <zielpfad> <url> -- Schnappschuesse fuer den Ausbau Kufstein/Salzburg (Plan-Schritt 2, Runde 3)
-tests/fixtures/tirol/2026-11-12/ku4-sparchen-ii.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku4-sparchen-ii
-tests/fixtures/tirol/2026-11-12/ku6-morsbach-i.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku6-morsbach-i
-tests/fixtures/tirol/2026-11-12/ku7-morsbach-ii.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku7-morsbach-ii
-tests/fixtures/tirol/2026-11-12/ht1-uebungs-loipe.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ht1-uebungs-loipe
-tests/fixtures/tirol/2026-11-12/sc1-stoeffl-runde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/sc1-stoeffl-runde
-tests/fixtures/tirol/2026-11-12/eb1-dorf-loipe.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/eb1-dorf-loipe
-tests/fixtures/tirol/2026-11-12/dorfloipe-ellmau.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/dorfloipe-ellmau
-tests/fixtures/tirol/2026-11-12/streinalm-runde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/streinalm-runde
-tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-scharitzkehl.html https://www.berchtesgaden.de/pois/langlaufloipen-scharitzkehl
-tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-oberau-bei-berchtesgaden.html https://www.berchtesgaden.de/touren/langlaufloipen-oberau-bei-berchtesgaden
-tests/fixtures/berchtesgaden/2026-11-12/langlaufloipen-scheffau-schellenberg.html https://www.berchtesgaden.de/touren/langlaufloipen-scheffau-schellenberg
-tests/fixtures/geosphere/2026-11-12/nwp-v2-1h-1km_metadata.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v2-1h-1km/metadata
-tests/fixtures/geosphere/2026-11-12/nwp-v2-1h-1km.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v2-1h-1km?lat_lon=47.577,12.17&lat_lon=47.83,13.28&parameters=t2m,rr_acc,snow_acc,sundur_acc,tcc
-tests/fixtures/brightsky/2026-11-12/kufstein.json https://api.brightsky.dev/weather?lat=47.577&lon=12.17&date=2026-11-12&last_date=2026-11-20&tz=Europe/Berlin
-tests/fixtures/brightsky/2026-11-12/faistenau.json https://api.brightsky.dev/weather?lat=47.77&lon=13.24&date=2026-11-12&last_date=2026-11-20&tz=Europe/Berlin
+# <zielpfad> <url> -- Runde 4: Vorhersage GeoSphere mit den Parametern aus nwp-v2-1h-1km_metadata.json
+tests/fixtures/geosphere/2026-11-12/nwp-v2-1h-1km.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v2-1h-1km?lat_lon=47.577,12.17&lat_lon=47.77,13.24&parameters=2t,tp,sf,sund,tcc
