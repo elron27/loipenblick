@@ -5,6 +5,7 @@ import io
 import json
 import zipfile
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import pytest
@@ -21,9 +22,13 @@ from tests.wetterformat import KOPF, brightsky, dwd_zip  # noqa: F401  (KOPF nut
 JETZT = datetime(2026, 12, 10, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
 
 
+GEOSPHERE_FIXTURE = Path(__file__).resolve().parent / "fixtures" / "geosphere" / "2026-11-12" / "klima-v2-1d.json"
+
+
 class WetterFetcher:
-    def __init__(self, zip_bytes=None, vorhersage=None, fehler_station=None):
+    def __init__(self, zip_bytes=None, vorhersage=None, fehler_station=None, geosphere=None):
         self.zip_bytes, self.vorhersage, self.fehler_station = zip_bytes, vorhersage, fehler_station
+        self.geosphere = geosphere
         self.urls: list[str] = []
 
     def get_bytes(self, url):
@@ -34,6 +39,8 @@ class WetterFetcher:
 
     def get(self, url):
         self.urls.append(url)
+        if "geosphere" in url:
+            return self.geosphere if self.geosphere is not None else GEOSPHERE_FIXTURE.read_text(encoding="utf-8")
         return self.vorhersage
 
 

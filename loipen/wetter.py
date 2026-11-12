@@ -27,6 +27,15 @@ DWD_URL = (
     "more_precip/recent/tageswerte_RR_{station}_akt.zip"
 )
 BRIGHTSKY_URL = "https://api.brightsky.dev/weather?lat={lat}&lon={lon}&date={von}&last_date={bis}&tz=Europe/Berlin"
+# D17: Messwerte fuer Oesterreich von GeoSphere Austria (offene Daten, CC BY 4.0, Namensnennung).
+# Ein Abruf fuer alle Stationen; die Vorhersage von GeoSphere reicht nur 2,5 Tage (nwp-v2-1h-1km,
+# Schnappschuss 12.11.2026), daher kommt die 8-Tage-Vorhersage auch dort von Bright Sky (MOSMIX hat
+# Stationen an der Grenze: Kiefersfelden 5 km von Kufstein, Marktschellenberg 17 km von Faistenau).
+GEOSPHERE_URL = (
+    "https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d"
+    "?parameters=rr,sh,sh_manu,shneu_manu&station_ids={ids}&start={von}T00:00&end={bis}T00:00"
+)
+QUELLE_GEOSPHERE = "GeoSphere Austria (CC BY 4.0)"
 QUELLE_DWD = "DWD Klimadaten Tageswerte"
 QUELLE_VORHERSAGE = "Bright Sky (DWD MOSMIX)"
 VORHERSAGE_TAGE = 8  # mindestens 7, damit am Montag das folgende Wochenende drin ist (U18)
@@ -85,6 +94,36 @@ def parse_dwd_tageswerte(inhalt: bytes) -> list[Messung]:
             Messung(d, _zahl(teile[i["RS"]]), _zahl(teile[i["SH_TAG"]]), _zahl(teile[i["NSH_TAG"]]))
         )
     return sorted(ergebnis, key=lambda m: m.datum)
+
+
+def _geo_wert(werte: list, i: int) -> float | None:
+    """GeoSphere: -1 heisst 'kein Niederschlag' bzw. 'kein Schnee' (= 0), None heisst 'fehlt'."""
+    if i >= len(werte) or werte[i] is None:
+        return None
+    return 0.0 if werte[i] == -1 else float(werte[i])
+
+
+def parse_geosphere_klima(text: str) -> dict[str, list[Messung]]:
+    """klima-v2-1d (GeoJSON) -> {station_id: [Messung]}. Schneehoehe aus dem Pegel (sh), sonst Handmessung;
+    Neuschnee aus der Handmessung, sonst als Zuwachs der Schneehoehe zum Vortag."""
+    daten = json.loads(text)
+    tage = [datetime.fromisoformat(t).date() for t in daten.get("timestamps", [])]
+    ergebnis: dict[str, list[Messung]] = {}
+    for f in daten.get("features", []):
+        props = f.get("properties", {})
+        station = str(props.get("station"))
+        p = {k: v.get("data", []) for k, v in props.get("parameters", {}).items()}
+        messungen = []
+        for i, tag in enumerate(tage):
+            sh = _geo_wert(p.get("sh", []), i)
+            if sh is None:
+                sh = _geo_wert(p.get("sh_manu", []), i)
+            neu = _geo_wert(p.get("shneu_manu", []), i)
+            if neu is None and sh is not None and messungen and messungen[-1].schneehoehe_cm is not None:
+                neu = max(0.0, sh - messungen[-1].schneehoehe_cm)
+            messungen.append(Messung(tag, _geo_wert(p.get("rr", []), i), sh, neu))
+        ergebnis[station] = messungen
+    return ergebnis
 
 
 def _tagessymbol(eintraege: list[dict], niederschlag: float | None) -> str | None:
@@ -191,9 +230,27 @@ def aktualisiere_wetter(session: Session, fetcher, jetzt: datetime | None = None
     gebiete = session.scalars(select(Gebiet)).all()
 
     cache: dict[str, list[Messung] | None] = {}
+    geo = sorted({g.wetterstation_id for g in gebiete if g.wetterstation_id and g.wetterdienst == "geosphere"})
+    geo_messungen: dict[str, list[Messung]] = {}
+    if geo:
+        url = GEOSPHERE_URL.format(ids=",".join(geo), von=(heute - timedelta(days=tage)).isoformat(), bis=heute.isoformat())
+        try:
+            geo_messungen = parse_geosphere_klima(fetcher.get(url))
+        except Exception as e:
+            lauf.warnungen.append(f"GeoSphere: {type(e).__name__}: {e}")
     for g in gebiete:
         station = g.wetterstation_id
         if not station:
+            continue
+        if g.wetterdienst == "geosphere":
+            if station not in geo_messungen and geo_messungen:
+                lauf.warnungen.append(f"GeoSphere-Station {station}: keine Daten")
+            for m in geo_messungen.get(station, []):
+                if m.datum >= heute - timedelta(days=tage):
+                    _speichere(session, g, WetterArt.MESSUNG, m.datum, {
+                        "niederschlag_mm": m.niederschlag_mm, "schneehoehe_cm": m.schneehoehe_cm,
+                        "neuschnee_cm": m.neuschnee_cm}, station, QUELLE_GEOSPHERE, jetzt)
+                    lauf.messungen += 1
             continue
         if station not in cache:
             try:
