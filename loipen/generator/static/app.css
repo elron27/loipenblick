@@ -71,7 +71,7 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .sky .scr{overflow-x:auto}.sky svg{display:block;width:100%;height:auto;min-width:760px}
 .herotxt{padding:26px 24px 0}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cy);font-weight:700}
 .herotxt h1{font-family:Georgia,"Iowan Old Style",Palatino,serif;font-weight:600;font-size:clamp(34px,6.5vw,72px);line-height:1.02;margin:10px 0 8px;max-width:16ch}
-.herotxt h1 em{color:var(--mi)}.herotxt p{margin:0;max-width:46ch;color:var(--mute)}
+.herotxt h1 .akz{color:var(--mi)}.herotxt p{margin:0;max-width:46ch;color:var(--mute)}
 .s-far{fill:var(--far)}.s-ridge{fill:url(#rg)}.s-rim{stroke:var(--rim);fill:none;stroke-width:1.6;opacity:.7}.s-t{fill:var(--ink);font-weight:700;font-size:13px}.s-l{stroke:var(--ink);opacity:.5}
 /* Liste und Filter */
 .filter{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;align-items:center}
@@ -115,3 +115,13 @@ ul.plain li{padding:12px 14px;display:flex;justify-content:space-between;gap:10p
 .demo{margin:0 0 12px;padding:10px 14px;border-radius:14px;background:var(--mid-bg);color:var(--mid);font-weight:600}
 .foot{border-top:1px solid var(--line);padding:18px 0 24px;color:var(--mute);font-size:14px}.foot p{margin:4px 0}
 @media (prefers-reduced-motion:no-preference){.glass{animation:rise .45s both}@keyframes rise{from{opacity:0;transform:translateY(8px)}}}
+
+/* Ausbau Oesterreich: Gruppen in der Liste, Abdeckungstabelle, Hinweise */
+h2.sec.land{margin-top:34px}
+.reg{font-size:16px;margin:18px 0 8px;color:var(--ink)}.reg .fine{font-weight:400}
+.hinweis{padding:12px 14px;margin:12px 0}
+.tabw{overflow-x:auto}.tab{width:100%;border-collapse:collapse;font-size:14px}
+.tab th,.tab td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line, rgba(127,147,168,.3))}
+.tab th:first-child,.tab td:first-child{text-align:left}
+.tab thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);font-weight:600}
+@media (max-width:640px){.tab{font-size:13px}.tab th,.tab td{padding:6px 5px}.tab thead th{font-size:10px;letter-spacing:0}}
