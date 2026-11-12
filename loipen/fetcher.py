@@ -1,5 +1,10 @@
 """Ruecksichtsvoll abrufen (P7): robots.txt beachten, Abstand pro Domain, eigener
-User-Agent mit Kontakt, Cache per ETag und Last-Modified."""
+User-Agent mit Kontakt, Cache per ETag und Last-Modified.
+
+Testbetrieb: Mit `umleitung` (LOIPEN_UMLEITUNG, z. B. http://attrappe:8080) gehen alle Abrufe an
+diesen Server statt ins Netz, aus https://host/pfad?q wird <umleitung>/host/pfad?q. So laeuft der
+ganze Stack in der CI gegen die gespeicherten Beispielseiten (tests/stack, docs/testumgebung.md).
+"""
 
 import logging
 import time
@@ -33,7 +38,11 @@ class HoeflicherFetcher:
         sleep: Callable[[float], None] = time.sleep,
         clock: Callable[[], float] = time.monotonic,
         timeout_s: float = 30.0,
+        umleitung: str | None = None,
     ):
+        self.umleitung = umleitung.rstrip("/") if umleitung else None
+        if self.umleitung:
+            log.warning("Testbetrieb: alle Abrufe gehen an %s statt an die echten Quellen", self.umleitung)
         self.user_agent = user_agent
         self.delay_s = delay_s
         self._sleep = sleep
@@ -51,6 +60,13 @@ class HoeflicherFetcher:
 
     def close(self) -> None:
         self._client.close()
+
+    def ziel(self, url: str) -> str:
+        """Die URL, die wirklich abgerufen wird (ohne Umleitung unveraendert)."""
+        if not self.umleitung:
+            return url
+        t = urlsplit(url)
+        return f"{self.umleitung}/{t.netloc}{t.path or '/'}" + (f"?{t.query}" if t.query else "")
 
     @staticmethod
     def _host(url: str) -> str:
@@ -100,6 +116,7 @@ class HoeflicherFetcher:
 
     def get_bytes(self, url: str) -> bytes:
         """Wie get, aber fuer Binaerdateien (z. B. ZIP vom DWD). Ohne Cache."""
+        url = self.ziel(url)
         self._vorbereiten(url)
         antwort = self._client.get(url)
         if antwort.status_code >= 400:
@@ -107,6 +124,7 @@ class HoeflicherFetcher:
         return antwort.content
 
     def get(self, url: str) -> str:
+        url = self.ziel(url)
         self._vorbereiten(url)
         kopf: dict[str, str] = {}
         zwischen = self._cache.get(url)

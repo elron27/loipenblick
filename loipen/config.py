@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     # Ein Zustand aelter als stale_days gilt als unbekannt
     stale_days: int = 7
     ntfy_url: str | None = None
+    # Nur Testbetrieb (tests/stack): alle Abrufe an diesen Server statt ins Netz, siehe fetcher.py
+    umleitung: str | None = None
 
 
 @lru_cache

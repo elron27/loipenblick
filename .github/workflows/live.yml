@@ -1,0 +1,63 @@
+name: Live-Pruefung
+
+# Ruft die echten Quellen und Wetterdienste ab (der GitHub-Runner darf ins Netz, die Cloud-Umgebung nicht),
+# prueft das Ergebnis und zeichnet alle Antworten auf. Nicht bei jedem Push, um die Quellen zu schonen (P7):
+# einmal taeglich in der Saison und von Hand ueber "Run workflow".
+# Ergebnis: Bericht in der Job-Zusammenfassung, Artefakte live-aufnahme (Fixture-Schnappschuss) und live-seite.
+on:
+  workflow_dispatch:
+    inputs:
+      quelle:
+        description: "Nur diese Quelle (leer = alle)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "30 5 * 11,12,1,2,3,4 *"  # 6:30 bzw. 7:30 Uhr deutscher Zeit, November bis April
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: loipen
+          POSTGRES_PASSWORD: loipen
+          POSTGRES_DB: loipen_live
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U loipen" --health-interval 5s --health-retries 10
+    env:
+      LOIPEN_DATABASE_URL: postgresql+psycopg://loipen:loipen@localhost:5432/loipen_live
+      # Kontaktangabe fuer die Quellen (P7): als Repository-Variable LOIPEN_USER_AGENT setzen, sonst der Repo-Link
+      LOIPEN_USER_AGENT: ${{ vars.LOIPEN_USER_AGENT || 'LoipenBot/0.1 (+https://github.com/elron27/loipenblick)' }}
+      LOIPEN_REQUEST_DELAY_S: "5"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: alembic upgrade head
+      - name: Echte Quellen und Wetter abrufen
+        env:
+          QUELLE: ${{ inputs.quelle }}
+        run: python scripts/live_pruefung.py --ausgabe .live ${QUELLE:+--quelle "$QUELLE"}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-aufnahme
+          path: .live/aufnahme/
+          retention-days: 30
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-seite
+          path: .live/site/
+          retention-days: 7
+          if-no-files-found: ignore

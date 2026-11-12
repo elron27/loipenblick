@@ -74,7 +74,8 @@ docker compose up -d worker
 ```
 
 Der Ablauf Dump, Restore in eine frische Datenbank und Vergleich der Daten ist als Test
-(`test_b14_wiederherstellung_aus_dump`) automatisch geprüft; auf dem NAS bitte einmal von Hand wiederholen.
+(`test_b14_wiederherstellung_aus_dump`) und im Teststack mit dem echten Container automatisch geprüft;
+ob der Backup-Ordner im NAS-Backup liegt, bleibt eine Handprüfung.
 
 **Kosten (B9).** `config/kosten.yaml` listet die Posten, die Summe darf 60 € im Jahr nicht übersteigen
 (ein Test prüft das). V1 auf dem NAS kostet nichts extra; Webspace und Domain kommen erst mit der Veröffentlichung.
@@ -102,6 +103,11 @@ Jeder Test nennt die Anforderung, die er prüft, z. B. `@pytest.mark.req("D4", a
 Die CI verknüpft die Ergebnisse mit ReqSeq (`reqseq evidence enrich-junit`); was noch keinen
 Nachweis hat, zeigt `reqseq evidence coverage --workspace spec --filter version-1`.
 Das ganze Vorgehen steht im [Testkonzept](https://claude.ai/artifact/T3imWKeVz2SvRSbKS8nPP8).
+
+**Ohne NAS testen.** `python scripts/teststack.py` startet den ganzen Compose-Stack mit einer Attrappe
+statt der echten Quellen und einem lokalen ntfy und prüft Lauf, Seite, Push, Sicherung/Wiederherstellung
+und Neustart (läuft auch in der CI). Der Workflow `Live-Pruefung` ruft die echten Quellen und Wetterdienste ab.
+Details und was weiterhin nur am NAS geht: [docs/testumgebung.md](docs/testumgebung.md).
 
 Schemaänderungen: Modell in `loipen/models.py` ändern, dann
 `alembic revision --autogenerate -m "..."` und die erzeugte Datei prüfen.
