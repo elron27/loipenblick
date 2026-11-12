@@ -1,0 +1,13 @@
+reqseq-filter: 1
+name: ausbau-1
+description: "Anforderungen der Ausbaustufe 1 (Kufstein/Tirol und Salzburg, Plan vom 12.11.2026)"
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: ausbau1
+    - type: [system-requirement]
+    - status: [draft, approved]
+sort:
+  - by: kennung
+    order: asc
