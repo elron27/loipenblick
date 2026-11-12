@@ -306,7 +306,7 @@ function seiteGebiet(slug) {
   var andere = Object.keys(g.namen || {}).map(function (k) { return g.namen[k]; }).filter(function (n) { return n && n !== g.name; });
   var ohneZustand = g.loipen.length && g.loipen.every(function (l) { return l.ohne_zustand; });
   var h = "<h1>" + esc(g.name) + neuschneeBadge(g) + "</h1>" + (andere.length ? '<p class="fine">auch: ' + esc(andere.join(", ")) + "</p>" : "") +
-    '<p class="fine">' + esc([g.region_name, gruppeName(g)].filter(Boolean).join(" · ")) + " · " + g.loipen.length + " Loipen, zusammen " + zahl(gesamt) + " km · <a href=\"" + esc(safeUrl(g.tourist_url)) + '" rel="noopener">Touristeninformation</a></p>' +
+    '<p class="fine">' + esc([g.region_name, gruppeName(g)].filter(Boolean).join(" · ")) + " · " + g.loipen.length + " Loipen" + (gesamt > 0 ? ", zusammen " + zahl(gesamt) + " km" : ", Länge noch unbekannt") + " · <a href=\"" + esc(safeUrl(g.tourist_url)) + '" rel="noopener">Touristeninformation</a></p>' +
     '<h2 class="sec">Schnee</h2>' + schneeHtml(g) + '<h2 class="sec">Vorhersage</h2>' + vorhersageHtml(g) +
     (ohneZustand ? '<p class="hinweis glass">Die Quelle für dieses Gebiet meldet keinen Loipenzustand, nur Lage und Länge. Den aktuellen Zustand kennt die Touristeninformation.</p>' : "") +
     '<h2 class="sec">Anreise</h2><ul class="plain">' +
@@ -429,9 +429,9 @@ function seiteAbdeckung() {
   S.gebiete.forEach(function (g) { if (g.loipen.some(function (l) { return l.status === "offen" || l.status === "eingeschraenkt"; })) je[g.region] = (je[g.region] || 0) + 1; });
   var zeilen = {};
   (S.idx.abdeckung || []).forEach(function (a) { zeilen[a.region] = a; });
-  var h = '<h1>Abdeckung</h1><p class="fine">Wie viele Gebiete jeder Region eine Online-Quelle mit Loipenzustand haben. Neue Regionen kommen in Stufen dazu.</p>';
+  var h = '<h1>Abdeckung</h1><p class="fine">Wie viele Gebiete jeder Region eine Online-Quelle mit Loipenzustand haben. Neue Regionen kommen in Stufen dazu.</p><p class="fine">Spalten: Gebiete gesamt · mit Loipenzustand · davon mit offener Loipe · nur Stammdaten ohne Zustand · ohne Online-Quelle.</p>';
   gruppen().forEach(function (gr) {
-    h += '<h2 class="sec">' + esc(gr.name) + '</h2><div class="tabw"><table class="tab"><thead><tr><th scope="col">Region</th><th scope="col">Gebiete</th><th scope="col">mit Zustand</th><th scope="col">mit offener Loipe</th><th scope="col">nur Stammdaten</th><th scope="col">ohne Online-Quelle</th></tr></thead><tbody>' +
+    h += '<h2 class="sec">' + esc(gr.name) + '</h2><div class="tabw"><table class="tab"><thead><tr><th scope="col">Region</th><th scope="col">Gebiete</th><th scope="col" title="mit Loipenzustand">Zustand</th><th scope="col" title="mit offener Loipe">offen</th><th scope="col" title="nur Stammdaten">Stamm</th><th scope="col" title="ohne Online-Quelle">ohne</th></tr></thead><tbody>' +
       gr.regionen.map(function (r) { var a = zeilen[r.name] || {}; return "<tr><th scope=\"row\"><a href=\"#/loipen?region=" + esc(r.slug) + "\">" + esc(r.name) + "</a></th><td>" + r.gebiete + "</td><td>" + (a.angebunden || 0) + "</td><td>" + (je[r.slug] || 0) + "</td><td>" + (a.nur_stammdaten || 0) + "</td><td>" + (a.ohne_quelle || 0) + "</td></tr>"; }).join("") + "</tbody></table></div>";
   });
   h += '<h2 class="sec">Quellen</h2><ul class="plain">' + S.idx.quellen.map(function (x) {

@@ -48,7 +48,9 @@ def test_b7_daten_liegen_als_json_je_region(site):
     index = lies(site, "daten.json")
     assert {r["slug"] for r in index["regionen"]} == {
         "tegernseer-tal", "leitzachtal", "priental", "chiemgau", "berchtesgadener-land",
-        "kufsteinerland", "kaiserwinkl", "wilder-kaiser", "kitzbueheler-alpen", "fuschlseeregion"}
+        "kufsteinerland", "kaiserwinkl", "wilder-kaiser", "kitzbueheler-alpen", "fuschlseeregion",
+        "alpbachtal-wildschoenau", "zillertal", "achensee-karwendel", "innsbruck-umgebung", "seefeld-mieming",
+        "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]

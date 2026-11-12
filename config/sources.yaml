@@ -169,10 +169,23 @@ quellen:
               hinweis: "GPX auf tirol.mapservices.eu per robots.txt gesperrt, daher kein Streckenverlauf"}
     config:
       default_gebiet: kufstein
-      radius_km: 3
-      details_pro_lauf: 20
+      # Jede Loipe gehoert zum naechsten Gebiet dieser Liste, wenn es naeher als radius_km liegt.
+      # Ganz Tirol (P14 AK 2): 701 Loipen der Karte; dazu Bayrischzell, das tirol.at mitfuehrt
+      # (dort fuehrt die Ortsquelle, D15). Die Kitzbueheler Gebiete melden auch kitzbueheler-alpen.
+      radius_km: 15
+      # 701 Loipen / 40 je Lauf: alle Detailseiten in gut 6 Tagen (3 Laeufe am Tag), dann im Wechsel neu
+      details_pro_lauf: 40
       gebiete: [kufstein, thiersee, langkampfen, bad-haering, schwoich, ebbs, niederndorf,
-                walchsee, koessen, schwendt, ellmau, going, soell]
+                walchsee, koessen, schwendt, ellmau, going, soell,
+                brixental, hohe-salve, pillerseetal, st-johann-in-tirol, bayrischzell,
+                alpbachtal, wildschoenau, zillertal-fuegen, zell-gerlos, mayrhofen, tux, achensee, steinberg-rofan,
+                hinterriss, silberregion-karwendel, innsbruck, hall-wattens, sellraintal, kuehtai,
+                stubai, stubaier-gletscher, wipptal, seefeld, leutasch, mieming, oetztal, soelden,
+                obergurgl, vent, pitztal, pitztaler-gletscher, imst, kaunertal, landeck,
+                serfaus-fiss-ladis, tiroler-oberland, paznaun, st-anton, reutte, weissenbach, berwang,
+                tannheimer-tal, jungholz, lechtal, stanzach, warth, namlos, zugspitz-arena,
+                kitzbuehel, jochberg, osttirol-lienz, hochpustertal, obertilliach, defereggental,
+                matrei, kals]
 
   # Kitzbueheler Alpen: eine Seite mit Brixental, Hohe Salve, Pillerseetal und St. Johann (P15).
   - key: kitzbueheler-alpen

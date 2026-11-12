@@ -12,7 +12,7 @@ from sqlalchemy import select
 from loipen.konfig import CONFIG_DIR, lade_und_abgleichen, lade_yaml
 from loipen.models import Gebiet, Wetter
 from loipen.wetter import QUELLE_GEOSPHERE, aktualisiere_wetter, parse_brightsky, parse_geosphere_klima, schnee_uebersicht
-from tests.test_wetter import GEOSPHERE_FIXTURE, WetterFetcher
+from tests.test_wetter import GEOSPHERE_FIXTURE, WetterFetcher, geosphere_antwort
 
 FIX = Path(__file__).resolve().parent / "fixtures"
 JETZT = datetime(2026, 11, 12, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
@@ -22,8 +22,8 @@ AT_REGIONEN = {r["slug"] for r in GEBIETE["regionen"] if r.get("land") == "AT"}
 
 @pytest.mark.req("D17", ak=1)
 def test_d17_jedes_oesterreichische_gebiet_hat_eine_geosphere_station():
-    stationen = {str(f["properties"]["station"]) for f in
-                 json.loads(GEOSPHERE_FIXTURE.read_text(encoding="utf-8"))["features"]}
+    stationen = {str(f["properties"]["station"]) for f in json.loads(geosphere_antwort())["features"]
+                 if any(x is not None for x in f["properties"]["parameters"]["sh"]["data"])}
     at = [g for g in GEBIETE["gebiete"] if g["region"] in AT_REGIONEN]
     assert len(at) >= 19
     for g in at:
@@ -65,7 +65,9 @@ def test_d17_messwerte_landen_beim_gebiet_mit_namensnennung(session):
     lauf = aktualisiere_wetter(session, f, JETZT)
     geo = [u for u in f.urls if "geosphere" in u]
     assert len(geo) == 1  # ein Abruf fuer alle Stationen
-    assert "station_ids=12203,12351,6300,9016,9019,9105,9110" in geo[0]
+    ids = set(geo[0].split("station_ids=")[1].split("&")[0].split(","))
+    at = {g["wetterstation"]["id"] for g in GEBIETE["gebiete"] if g["region"] in AT_REGIONEN}
+    assert ids == at and len(ids) >= 25
     kufstein = session.scalar(select(Gebiet).where(Gebiet.slug == "kufstein"))
     zeilen = session.scalars(select(Wetter).where(Wetter.gebiet_id == kufstein.id, Wetter.art == "messung")).all()
     assert len(zeilen) == 14 and {z.quelle for z in zeilen} == {QUELLE_GEOSPHERE}

@@ -15,6 +15,9 @@ Befund der Schnappschuesse vom 12.11.2026 (tests/fixtures/tirol/2026-11-12/):
 Welche Loipen uebernommen werden, steht in sources.yaml: Jede Loipe gehoert zum naechsten Gebiet
 aus config["gebiete"] (Koordinaten aus gebiete.yaml, hier als config["gebiet_punkte"]), wenn es
 naeher als config["radius_km"] liegt. Eine neue Region = neue Gebiete in beiden Dateien (P14 AK 2).
+Seit 12.11.2026 sind alle 701 Loipen der Karte zugeordnet (66 Tiroler Gebiete plus Bayrischzell, das
+tirol.at mitfuehrt). Gleiche Namen teilen sich zunaechst eine geratene Detailadresse; die Kennungspruefung
+meldet das, der richtige Pfad kommt dann aus den Listeneintraegen oder aus config["slugs"].
 """
 
 import html as htmllib

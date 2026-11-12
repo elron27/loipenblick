@@ -233,9 +233,11 @@ def test_d15_echte_dublette_steht_einmal_in_den_daten(session, site):
     hauswies = [l for l in alle_loipen(site) if l["name"].startswith("Hauswies-Runde")]
     assert len(hauswies) == 1
     l = hauswies[0]
-    assert [a["quelle"] for a in l["auch_bei"]] == ["Fischbachau Tourismus"]
+    assert sorted(a["quelle"] for a in l["auch_bei"]) == ["Fischbachau Tourismus", "Tirol Werbung (tirol.at)"]
     index = lies(site, "daten.json")
-    assert index["dubletten"] == 1 and index["kennzahlen"]["loipen"] == len(namen)
+    # tirol.at fuehrt Bayrischzell und die Kitzbueheler Gebiete mit: gut 50 Dubletten, jede einmal gezeigt
+    assert index["dubletten"] >= 50 and index["kennzahlen"]["loipen"] == len(namen)
+    assert sum(q["anzahl"] for q in index["quellen"]) - index["dubletten"] == len(namen)
 
 
 @pytest.mark.req("D15", ak=2)

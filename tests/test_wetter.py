@@ -23,6 +23,18 @@ JETZT = datetime(2026, 12, 10, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
 
 
 GEOSPHERE_FIXTURE = Path(__file__).resolve().parent / "fixtures" / "geosphere" / "2026-11-12" / "klima-v2-1d.json"
+# Zweiter Abruf am selben Tag: alle aktiven Tiroler Stationen (Stationswahl fuer ganz Tirol)
+GEOSPHERE_TIROL = GEOSPHERE_FIXTURE.with_name("klima-v2-1d_tirol.json")
+
+
+def geosphere_antwort() -> str:
+    """Beide echten Antworten zu einer zusammengefasst, wie sie ein Abruf mit allen Stationen liefert."""
+    erste = json.loads(GEOSPHERE_FIXTURE.read_text(encoding="utf-8"))
+    zweite = json.loads(GEOSPHERE_TIROL.read_text(encoding="utf-8"))
+    assert erste["timestamps"] == zweite["timestamps"]
+    bekannt = {f["properties"]["station"] for f in erste["features"]}
+    erste["features"] += [f for f in zweite["features"] if f["properties"]["station"] not in bekannt]
+    return json.dumps(erste)
 
 
 class WetterFetcher:
@@ -40,7 +52,7 @@ class WetterFetcher:
     def get(self, url):
         self.urls.append(url)
         if "geosphere" in url:
-            return self.geosphere if self.geosphere is not None else GEOSPHERE_FIXTURE.read_text(encoding="utf-8")
+            return self.geosphere if self.geosphere is not None else geosphere_antwort()
         return self.vorhersage
 
 

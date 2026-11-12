@@ -111,7 +111,7 @@ def test_p13_abdeckung_je_region(seite):
     seite.get_by_role("link", name="Abdeckung und Quellen").click()
     seite.wait_for_selector("table.tab")
     zeilen = seite.locator("table.tab tbody tr").all_inner_texts()
-    assert len(zeilen) == 10
+    assert len(zeilen) == 19  # 10 Regionen der Stufe 1 und 9 weitere fuer ganz Tirol
     berchtesgaden = next(z for z in zeilen if z.startswith("Berchtesgadener Land")).split("\t")
     assert berchtesgaden[1:] == ["5", "0", "0", "5", "0"]
     assert "Tirol Werbung (tirol.at)" in text(seite)

@@ -41,7 +41,7 @@ ATTRAPPE = f"http://localhost:{ENV['ATTRAPPE_PORT']}"
 NTFY = f"http://localhost:{ENV['NTFY_PORT']}"
 THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
 QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
-           "tirol": 61, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6}
+           "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 
@@ -115,8 +115,8 @@ def test_start_lauf_holt_alle_quellen_und_erzeugt_die_seite():
     for key, anzahl in QUELLEN.items():
         assert quellen[key]["anzahl"] == anzahl, key
         assert quellen[key]["status"] in ("ok", "warnung"), quellen[key]
-    # D15: die Hauswies-Runde steht bei Bayrischzell und Fischbachau und zaehlt einmal
-    assert index["dubletten"] == 1
+    # D15: Hauswies-Runde (Bayrischzell/Fischbachau), Bayrischzell und Kitzbuehel auch bei tirol.at: einmal gezaehlt
+    assert index["dubletten"] >= 50
     assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
     for region in index["regionen"]:
         daten = http_json(f"{VORSCHAU}/{region['datei']}")

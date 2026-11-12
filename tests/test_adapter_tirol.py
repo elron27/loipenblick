@@ -15,6 +15,9 @@ QUELLEN = lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"]
 GEBIETE = lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]
 Q = next(q for q in QUELLEN if q["key"] == "tirol")
 KUFSTEINERLAND = {"kufstein", "thiersee", "langkampfen", "bad-haering", "schwoich", "ebbs", "niederndorf"}
+# Stufe 1 (Plan vom 12.11.): Kufsteinerland, Kaiserwinkl, Wilder Kaiser
+STUFE1 = sorted(KUFSTEINERLAND | {"walchsee", "koessen", "schwendt", "ellmau", "going", "soell"})
+ALLE = 701  # Loipen in der Kartenliste vom 12.11.2026 (711 Eintraege ohne Skischulen, Verleih, Geschaefte)
 
 
 def konfig(**aenderung) -> dict:
@@ -37,7 +40,7 @@ def lauf(uhr=0.0, **aenderung):
 @pytest.mark.req("P14", ak=1)
 def test_p14_kufsteinerland_aus_echtem_schnappschuss():
     assert isinstance(ADAPTERS["tirolat"], TirolAtAdapter)
-    erg, _ = lauf(details_pro_lauf=100)
+    erg, _ = lauf(details_pro_lauf=1000)
     ku = {l.name: l for l in erg.loipen if l.gebiet_slug in KUFSTEINERLAND and l.laenge_km}
     # Detailseiten im Schnappschuss: KU1-KU7, HT1, SC1, EB1 -> mindestens 5 mit Name, Status und Laenge
     assert len(ku) >= 5
@@ -55,11 +58,28 @@ def test_p14_kufsteinerland_aus_echtem_schnappschuss():
 
 
 @pytest.mark.req("P14", ak=1)
-def test_p14_stufe1_nur_kufsteinerland_kaiserwinkl_wilder_kaiser():
+def test_p14_ganz_tirol_alle_loipen_der_karte():
+    """Alle 701 Loipen der Kartenliste landen in einem Gebiet aus sources.yaml."""
     erg, f = lauf(details_pro_lauf=0)
     assert len(f.abgerufen) == 2  # Liste und Filter "geoeffnet", keine Detailseite
+    assert len(erg.loipen) == ALLE and not erg.warnungen
+    assert len({l.source_key for l in erg.loipen}) == ALLE
     gebiete = {l.gebiet_slug for l in erg.loipen}
-    assert gebiete <= set(Q["config"]["gebiete"])
+    assert gebiete == set(Q["config"]["gebiete"])  # jedes konfigurierte Gebiet hat Loipen
+    nach = {l.name: l.gebiet_slug for l in erg.loipen}
+    # Stichproben quer durch Tirol (Name nennt den Ort)
+    assert nach["Claudialoipe Kühtai"] == "kuehtai" and nach["Romantikloipe Kals"] == "kals"
+    assert nach["Sonnenloipe Sillian"] == "hochpustertal" and nach["Rundloipe Schattwald"] == "jungholz"
+    assert nach["Loipe St. Christoph"] == "st-anton" and nach["Reschenloipe"] == "tiroler-oberland"
+    # tirol.at fuehrt auch Bayrischzeller Loipen; dort fuehrt die Ortsquelle (D15)
+    assert nach["Streinalm-Runde"] == "bayrischzell" and nach["Loipe Mariastein"] == "hohe-salve"
+
+
+@pytest.mark.req("P14", ak=1)
+def test_p14_stufe1_nur_kufsteinerland_kaiserwinkl_wilder_kaiser():
+    erg, f = lauf(details_pro_lauf=0, gebiete=STUFE1, radius_km=3)
+    gebiete = {l.gebiet_slug for l in erg.loipen}
+    assert gebiete <= set(STUFE1)
     assert len(erg.loipen) == 61
     namen = {l.name for l in erg.loipen}
     # Skischulen und Verleih aus der Kartenliste sind keine Loipen
@@ -73,7 +93,7 @@ def test_p14_stufe1_nur_kufsteinerland_kaiserwinkl_wilder_kaiser():
 @pytest.mark.req("P13", ak=1)
 def test_p14_neue_region_nur_ueber_konfiguration():
     """Ein weiteres Tiroler Gebiet: nur Eintrag in gebiete und Koordinate, kein Code."""
-    cfg = konfig(details_pro_lauf=0)
+    cfg = konfig(details_pro_lauf=0, gebiete=STUFE1, radius_km=3)
     cfg["gebiete"] = cfg["gebiete"] + ["seefeld"]
     cfg["gebiet_punkte"]["seefeld"] = [47.33, 11.19]
     erg = TirolAtAdapter(uhr=lambda: 0).run(Q["base_url"], cfg, fetcher())
@@ -117,18 +137,22 @@ def _marker_html(m: dict) -> str:
 
 def test_detailseiten_im_wechsel():
     """Je Lauf hoechstens details_pro_lauf Detailseiten, ueber die Laeufe alle (Blindspot 5)."""
-    gesehen = set()
-    for stunde in range(4):
-        _, f = lauf(uhr=stunde * 3600.0, details_pro_lauf=20)
+    gesehen, abrufe = set(), 0
+    je_lauf = Q["config"]["details_pro_lauf"]
+    for stunde in range(-(-ALLE // je_lauf)):
+        _, f = lauf(uhr=stunde * 3600.0)
         details = [u for u in f.abgerufen if u.rsplit("/", 1)[-1] != "loipen" and "?" not in u]
-        assert len(details) <= 20
+        assert len(details) <= je_lauf
         gesehen |= set(details)
-    assert len(gesehen) == 61
+        abrufe += len(details)
+    # nach 18 Laeufen (6 Tage) jede Loipe genau einmal; gleiche Namen teilen sich zunaechst eine Adresse
+    # (tirol.at haengt -2, -3 an, die Kennungspruefung meldet das, siehe test_falsche_detailseite_wird_erkannt)
+    assert abrufe == ALLE and len(gesehen) > 600
 
 
 def test_fehlende_detailseite_stoppt_den_lauf_nicht():
-    erg, _ = lauf(details_pro_lauf=100)
-    assert len(erg.loipen) == 61
+    erg, _ = lauf(details_pro_lauf=1000)
+    assert len(erg.loipen) == ALLE
     assert any("TS1 Mitterland Loipe: Detailseite nicht lesbar" in w for w in erg.warnungen)
 
 
