@@ -1,0 +1,14 @@
+User-Agent: *
+Allow: /
+Sitemap: https://www.kitzbueheler-alpen.com/sitemap.xml
+Sitemap: https://www.kitzbueheler-alpen.com/de/accommodations.xml
+Sitemap: https://www.kitzbueheler-alpen.com/de/events.xml
+Sitemap: https://www.kitzbueheler-alpen.com/de/infrastructure.xml
+Sitemap: https://www.kitzbueheler-alpen.com/de/v2/tours.xml
+Sitemap: https://www.kitzbueheler-alpen.com/en/accommodations.xml
+Sitemap: https://www.kitzbueheler-alpen.com/en/events.xml
+Sitemap: https://www.kitzbueheler-alpen.com/en/infrastructure.xml
+Sitemap: https://www.kitzbueheler-alpen.com/en/v2/tours.xml
+Sitemap: https://www.kitzbueheler-alpen.com/nl/accommodations.xml
+Sitemap: https://www.kitzbueheler-alpen.com/nl/events.xml
+Sitemap: https://www.kitzbueheler-alpen.com/nl/infrastructure.xml

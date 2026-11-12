@@ -1,0 +1,14 @@
+# Lauf 2026-11-12 16:28 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tirol.at/robots.txt
+200   338294 tests/fixtures/tirol/2026-11-12/loipen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen
+200   340560 tests/fixtures/tirol/2026-11-12/loipen_listpos42.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?listpos=42
+200    80024 tests/fixtures/tirol/2026-11-12/ku1-weissach-i.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/ku1-weissach-i
+200 https://www.kitzbueheler-alpen.com/robots.txt
+200   211870 tests/fixtures/kitzbueheler-alpen/2026-11-12/bri.html https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+200 https://www.langlaufdorf.at/robots.txt
+200   151164 tests/fixtures/langlaufdorf/2026-11-12/index.html https://www.langlaufdorf.at/
+200 https://www.berchtesgaden.de/robots.txt
+200   147964 tests/fixtures/berchtesgaden/2026-11-12/langlaufen.html https://www.berchtesgaden.de/winter/langlaufen
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200    13765 tests/fixtures/geosphere/2026-11-12/datasets.json https://dataset.api.hub.geosphere.at/v1/datasets
+200   343752 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_metadata.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d/metadata
