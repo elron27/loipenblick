@@ -47,10 +47,11 @@ function mache(gebiete) {
     g.loipen.forEach(function (l) { l.gebiet = g; S.loipen.push(l); });
   });
 }
+function namensZahl(t) { var h = 0; for (var k = 0; k < t.length; k++) h = (h * 31 + t.charCodeAt(k)) % 100003; return h; }
 function demoAnwenden() {
   S.loipen.forEach(function (l, i) {
     if (l.status === "geschlossen" || l.status === "unbekannt") {
-      var r = (l.id * 7 + i) % 9;
+      var r = (namensZahl(l.name) + i) % 9;  // nicht l.id: die haengt von der Datenbank ab
       if (r < 2) { l.status = "offen"; l.gespurt_km = l.laenge_km; l.veraltet = false; l.abgerufen = new Date().toISOString(); l.quelle_stand = l.abgerufen; }
       else if (r === 2) { l.status = "eingeschraenkt"; l.veraltet = false; l.abgerufen = new Date().toISOString(); }
     }
@@ -84,7 +85,7 @@ function ortAusName(n) {
   return t;
 }
 
-/* ---------- Filter, Sortierung, URL (U2, U3, U4, U24) ---------- */
+/* ---------- Filter, Sortierung, URL (U2, U3, U4, U16, U24) ---------- */
 function parseQuery(h) {
   var i = h.indexOf("?"), q = {};
   if (i < 0) return q;
@@ -116,6 +117,7 @@ function filtere(q) {
     if (sort === "entfernung") return (a.entf == null) - (b.entf == null) || a.entf - b.entf;
     if (sort === "gespurt") return (b.gespurt_km || 0) - (a.gespurt_km || 0);
     if (sort === "praeparierung") return (b.quelle_stand || "").localeCompare(a.quelle_stand || "");
+    if (sort === "neuschnee") return neu48(b) - neu48(a) || RANG[a.status] - RANG[b.status] || a.name.localeCompare(b.name);
     return RANG[a.status] - RANG[b.status] || (a.entf == null) - (b.entf == null) || a.entf - b.entf || a.name.localeCompare(b.name);
   });
   return liste;
@@ -131,6 +133,7 @@ function loipeKarte(l, mitGebiet) {
   return '<a class="lp glass" href="#/loipe/' + l.id + '"><span class="n">' + esc(l.name) + (mitGebiet ? ' <span class="fine">· ' + esc(l.gebiet.name) + "</span>" : "") + "</span>" + chip(l.status) +
     '<span class="d">' + esc(teile.filter(Boolean).join(" · ")) + " · " + frisch + esc(stand) + (l.quelle_fehler ? " · letzter Abruf fehlgeschlagen" : "") + "</span></a>";
 }
+function neu48(l) { var s = l.gebiet && l.gebiet.schnee; return s && s.neuschnee_48h_cm != null ? s.neuschnee_48h_cm : -1; }
 function neuschneeBadge(g) { return g.schnee && g.schnee.neuschnee_48h_cm >= 1 ? ' <span class="badge neu">Neuschnee ' + zahl(g.schnee.neuschnee_48h_cm, 0) + " cm in 48 h</span>" : ""; }
 function istWochenende(iso) { var d = new Date(iso + "T12:00:00").getDay(); return d === 0 || d === 6; }
 var WX_NAME = {sonne: "Sonnig", wolkig: "Wolkig", bedeckt: "Bedeckt", regen: "Regen", schneeregen: "Schneeregen", schnee: "Schnee", gewitter: "Gewitter"};
@@ -248,7 +251,7 @@ function filterLeiste(q, basis) {
     '<label class="vh" for="f-max">Höchstlänge in km</label><input id="f-max" type="number" inputmode="decimal" min="0" step="0.5" placeholder="max. km" value="' + esc(q.max || "") + '">' +
     '<label class="vh" for="f-r">Umkreis</label><select id="f-r"><option value="">Umkreis: alle</option>' + [10, 25, 50, 100].map(function (r) { return '<option value="' + r + '"' + (q.r == r ? " selected" : "") + ">bis " + r + " km</option>"; }).join("") + "</select>" +
     '<label class="vh" for="f-reg">Region</label><select id="f-reg"><option value="">Alle Regionen</option>' + regs + "</select>" +
-    '<label class="vh" for="f-sort">Sortierung</label><select id="f-sort">' + [["status", "Status"], ["entfernung", "Entfernung"], ["gespurt", "Gespurte km"], ["praeparierung", "Letzte Präparierung"]].map(function (s) { return '<option value="' + s[0] + '"' + ((q.sort || "status") === s[0] ? " selected" : "") + ">Sortiert nach " + s[1] + "</option>"; }).join("") + "</select>" +
+    '<label class="vh" for="f-sort">Sortierung</label><select id="f-sort">' + [["status", "Status"], ["entfernung", "Entfernung"], ["gespurt", "Gespurte km"], ["praeparierung", "Letzte Präparierung"], ["neuschnee", "Neuschnee 48 h"]].map(function (s) { return '<option value="' + s[0] + '"' + ((q.sort || "status") === s[0] ? " selected" : "") + ">Sortiert nach " + s[1] + "</option>"; }).join("") + "</select>" +
     '<button type="button" class="btn" id="teilen">Teilen</button></div>';
 }
 function filterBinden(q, basis) {

@@ -243,3 +243,14 @@ def test_gebiete_haben_hoehe_in_den_daten(session):
     regionen = baue(session, jetzt, CONFIG_DIR)["regionen"].values()
     hoehen = {g["slug"]: g["hoehe_m"] for r in regionen for g in r["gebiete"]}
     assert hoehen["bayrischzell"] > hoehen["marquartstein-grassau"] and None not in hoehen.values()
+
+
+@pytest.mark.req("U15", ak=3)
+def test_u15_wetter_kommt_mit_der_statischen_seite(site):
+    """Die Vorhersage steht in den erzeugten JSON-Dateien, der Browser fragt keinen Wetterdienst."""
+    gebiete = [g for r in lies(site, "daten.json")["regionen"] for g in lies(site, r["datei"])["gebiete"]]
+    assert sum(1 for g in gebiete if g["vorhersage"]) >= len(gebiete) // 2
+    for datei in site.rglob("*.js"):
+        js = datei.read_text(encoding="utf-8")
+        for host in ("brightsky", "dwd.de", "open-meteo", "openweathermap"):
+            assert host not in js, (datei.name, host)

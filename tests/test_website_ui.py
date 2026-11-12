@@ -6,6 +6,7 @@ weil im November nichts offen ist.
 """
 
 import functools
+import json
 import http.server
 import os
 import re
@@ -356,7 +357,7 @@ def test_u18_wochenende_in_der_vorhersage_hervorgehoben(seite):
     assert "Vorhersage (keine Messung)" in seite.locator("#view").inner_text()
 
 
-@pytest.mark.req("U23", ak=1)
+@pytest.mark.req("U23", ak=[1, 2])
 def test_u23_teilen_oeffnet_systemmenue_mit_filtern_in_der_url(seite):
     seite.add_init_script("window.__geteilt = null; navigator.share = (d) => { window.__geteilt = d; return Promise.resolve(); };")
     seite.open("#/loipen?offen=1&leicht=1")
@@ -394,3 +395,25 @@ def test_vorhersage_zeigt_wettersymbole_mit_text(seite):
     seite.wait_for_selector(".wx")
     # Fixture-Daten haben keine Symbole: Darstellung darf dann nichts kaputt machen
     assert seite.locator(".wx > div").count() >= 3
+
+
+@pytest.mark.req("U16", ak=1)
+def test_u16_liste_nach_neuschnee_48h_sortierbar(seite):
+    """Bayrischzell bekommt 20 cm, alle anderen 0: nach Neuschnee sortiert stehen dessen Loipen vorne."""
+    def mehr_schnee(route):
+        antwort = route.fetch()
+        daten = antwort.json()
+        for g in daten.get("gebiete", []):
+            if g.get("schnee") is not None:
+                g["schnee"]["neuschnee_48h_cm"] = 20 if g["slug"] == "bayrischzell" else 0
+        route.fulfill(response=antwort, body=json.dumps(daten), headers={**antwort.headers, "content-type": "application/json"})
+
+    seite.route(re.compile(r".*/(?!daten\.json)[^/]+\.json(\?.*)?$"), mehr_schnee)
+    seite.open("#/loipen")
+    optionen = seite.locator("#f-sort option").all_inner_texts()
+    assert "Sortiert nach Neuschnee 48 h" in optionen
+    aktion(seite, lambda: seite.select_option("#f-sort", "neuschnee"))
+    assert "sort=neuschnee" in seite.url
+    gebiete = seite.locator(".lp .n .fine").all_inner_texts()
+    n = sum(1 for t in gebiete if "Bayrischzell" in t)
+    assert n > 0 and all("Bayrischzell" in t for t in gebiete[:n])
