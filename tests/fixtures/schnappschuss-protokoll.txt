@@ -59,3 +59,6 @@ ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM
 404 https://api.brightsky.dev/robots.txt
 200    85652 tests/fixtures/brightsky/2026-11-12/kufstein.json https://api.brightsky.dev/weather?lat=47.577&lon=12.17&date=2026-11-12&last_date=2026-11-20&tz=Europe/Berlin
 200    84471 tests/fixtures/brightsky/2026-11-12/faistenau.json https://api.brightsky.dev/weather?lat=47.77&lon=13.24&date=2026-11-12&last_date=2026-11-20&tz=Europe/Berlin
+# Lauf 2026-11-12 16:44 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     5202 tests/fixtures/geosphere/2026-11-12/nwp-v2-1h-1km.json https://dataset.api.hub.geosphere.at/v1/timeseries/forecast/nwp-v2-1h-1km?lat_lon=47.577,12.17&lat_lon=47.77,13.24&parameters=2t,tp,sf,sund,tcc
