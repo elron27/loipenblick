@@ -10,6 +10,7 @@ Quellen und Wetter kommen aus der Attrappe (Fixtures, Wetter im dokumentierten F
 
 import json
 import os
+import re
 import subprocess
 import time
 import urllib.request
@@ -45,8 +46,10 @@ TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "
 
 
 def compose(*args: str, eingabe: bytes | None = None, timeout: int = 300) -> subprocess.CompletedProcess:
-    return subprocess.run([*COMPOSE, *args], cwd=ROOT, input=eingabe, capture_output=True, timeout=timeout,
-                          check=True)
+    erg = subprocess.run([*COMPOSE, *args], cwd=ROOT, input=eingabe, capture_output=True, timeout=timeout)
+    if erg.returncode:  # Fehlertext des Befehls in die Testausgabe, sonst sieht man in der CI nur den Exit-Code
+        raise AssertionError(f"{' '.join(args)} -> {erg.returncode}\n{erg.stderr.decode(errors='replace')[-3000:]}")
+    return erg
 
 
 def worker(*args: str) -> str:
@@ -173,6 +176,10 @@ def test_push_bei_oeffnung_und_bei_ausfall_einer_quelle():
 
 @pytest.mark.req("B14", ak=3)
 def test_sicherung_und_wiederherstellung_im_container():
+    # pg_dump im Worker muss zur Datenbank passen, sonst liest pg_restore im db-Container den Dump nicht
+    client = compose("exec", "-T", "worker", "pg_dump", "--version").stdout.decode()
+    server = psql("SHOW server_version")
+    assert re.search(r"\) (\d+)\.", client).group(1) == server.split(".")[0], (client, server)
     worker("sicherung")
     dumps = sorted((ROOT / ".teststack" / "backup").glob("loipen-*.dump"))
     assert dumps, "kein Dump im Backup-Ordner"
