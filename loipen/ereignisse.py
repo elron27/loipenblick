@@ -36,6 +36,7 @@ class Ereignis:
     region: str  # slug
     status: str
     gespurt_km: float | None = None
+    loipe_id: int | None = None  # fuer E-Mail-Abos ("l:<id>", E-18)
 
     @property
     def text(self) -> str:
@@ -70,7 +71,7 @@ def ereignis_fuer(loipe: Loipe, alt: Zustand | None, neu: Zustand) -> Ereignis |
     if art is None:
         return None
     g = loipe.gebiet
-    return Ereignis(art, loipe.name, g.slug, g.name, g.region.slug, neu.status, neu.gespurt_gesamt_km)
+    return Ereignis(art, loipe.name, g.slug, g.name, g.region.slug, neu.status, neu.gespurt_gesamt_km, loipe.id)
 
 
 # ---------- Abos ----------

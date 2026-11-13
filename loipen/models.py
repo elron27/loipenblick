@@ -259,3 +259,22 @@ class Wetter(Base):
     station_id: Mapped[str | None] = mapped_column(String(10))
     quelle: Mapped[str] = mapped_column(String(100))
     abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class Abonnent(Base):
+    """Bestaetigtes E-Mail-Abo (N2, N7). Unbestaetigte Anmeldungen gibt es hier nicht: Sie liegen nur
+    verschluesselt im Bestaetigungslink. Abmelden loescht die Zeile."""
+
+    __tablename__ = "abonnenten"
+
+    # ID und Abmelde-Token vergibt der Webspace (abo/bestaetigen.php)
+    id: Mapped[str] = mapped_column(String(32), primary_key=True)
+    email: Mapped[str] = mapped_column(String(254))
+    # "l:<loipen-id>" oder "g:<gebiet-slug>"
+    ziele: Mapped[list] = mapped_column(JSON)
+    ereignisse: Mapped[list] = mapped_column(JSON)
+    abmelde_token: Mapped[str] = mapped_column(String(64))
+    # Nachweis der Einwilligung (Art. 7 Abs. 1 DSGVO): wann angefragt und wann bestaetigt
+    angefragt_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    bestaetigt_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    letzte_mail_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
