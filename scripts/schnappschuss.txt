@@ -1,12 +1,8 @@
-# <zielpfad> <url> -- Runde 8 (13.11.2026): lokale Loipenberichte weiterer Tiroler Regionen
-tests/fixtures/recherche-tirol/2026-11-13/achensee/schneebericht.html https://www.achensee.com/de/live/schneebericht/
-tests/fixtures/recherche-tirol/2026-11-13/kufstein/schneebericht.html https://www.kufstein.com/de/schneebericht.html
-tests/fixtures/recherche-tirol/2026-11-13/kaiserwinkl/geoeffnete-loipen.html https://www.kaiserwinkl.com/de/langlaufen-tirol/geoeffnete-loipen.html
-tests/fixtures/recherche-tirol/2026-11-13/wilderkaiser/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
-tests/fixtures/recherche-tirol/2026-11-13/stanton/aktueller-loipenzustand.html https://www.stantonamarlberg.com/de/service/aktueller-loipenzustand
-tests/fixtures/recherche-tirol/2026-11-13/tiroler-oberland/geoeffnete-einrichtungen.html https://www.tiroler-oberland.com/de/Aktuelles/Geoeffnete-Einrichtungen
-tests/fixtures/recherche-tirol/2026-11-13/nauders/einrichtungen.html https://www.nauders.com/de/Aktuelles/Einrichtungen-Nauders
-tests/fixtures/recherche-tirol/2026-11-13/serfaus/langlaufen.html https://www.serfaus-fiss-ladis.at/en/winter-holiday/ski-area-and-winter-activities/cross-country-skiing
-tests/fixtures/recherche-tirol/2026-11-13/oetztal/loipenstatus.html https://www.oetztal.com/de/live-infos/loipenstatus
-tests/fixtures/recherche-tirol/2026-11-13/oetztal/status-crosscountry.html https://www.oetztal.com/de/live-infos/status?card=crosscountryski
-tests/fixtures/recherche-tirol/2026-11-13/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
+# <zielpfad> <url> -- Runde 9 (13.11.2026): Suedtirol-Anbindung (Dolomiti NordicSki, Open Data Hub)
+tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/loipen-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
+tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/region-4.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html?region=4
+tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/js_trails.js https://www.dolomitinordicski.com/cache-buster-1788248855/build/js_trails.cf68b7f9.js
+tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-robots.txt https://maps.dolomitinordicski.com/robots.txt
+tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-v2.html https://maps.dolomitinordicski.com/v2/de
+tests/fixtures/suedtirol/2026-11-13/opendatahub/loipen.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true
+tests/fixtures/suedtirol/2026-11-13/opendatahub/tourismusvereine.json https://tourism.api.opendatahub.com/v1/TourismAssociation?pagesize=200&language=de&removenullvalues=true

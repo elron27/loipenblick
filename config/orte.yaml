@@ -16,3 +16,11 @@ orte:
   - {name: Bad Reichenhall, lat: 47.72, lon: 12.88}
   - {name: Salzburg, lat: 47.81, lon: 13.06}
   - {name: Innsbruck, lat: 47.26, lon: 11.39}
+  # Suedtirol und Cortina (E-19)
+  - {name: Bozen, lat: 46.50, lon: 11.35}
+  - {name: Meran, lat: 46.67, lon: 11.16}
+  - {name: Brixen, lat: 46.72, lon: 11.66}
+  - {name: Bruneck, lat: 46.80, lon: 11.94}
+  - {name: Sterzing, lat: 46.90, lon: 11.43}
+  - {name: Toblach, lat: 46.73, lon: 12.22}
+  - {name: Cortina d'Ampezzo, lat: 46.54, lon: 12.14}

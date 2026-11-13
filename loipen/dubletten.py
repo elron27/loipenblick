@@ -57,6 +57,16 @@ def kennungen(name: str) -> set[str]:
     return {t for t in slugify(name).split("-") if KENNUNG.fullmatch(t) and not NUMMER.fullmatch(t)}
 
 
+def nummern(name: str) -> set[str]:
+    """Loipennummern im Namen: '01 Toblacher Stadionrunde' -> {'1'}, 'Loipe Biathlonzentrum 1B' -> {'1b'}.
+
+    Zahlen vor 'km'/'m' sind Laengen und zaehlen nicht ('Rennloipe Tavella 1- 5 km' -> {'1'})."""
+    ohne_laenge = re.sub(r"\d+(?:[.,]\d+)?\s*(?:km|m)\b", " ", name, flags=re.I)
+    # "11 B Val Fonda Runde" = "11B Toblach: Val Fonda Runde"
+    t = slugify(re.sub(r"\b(\d+)\s+([A-Za-z])\b", r"\1\2", ohne_laenge)).split("-")
+    return {re.sub(r"^(nr)?0*(?=\d)", "", x) for x in t if NUMMER.fullmatch(x)}
+
+
 def schluessel(name: str, gebiet_name: str = "") -> str:
     return "".join(woerter(name, gebiet_name))
 
@@ -86,8 +96,17 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
         if ca and cb:
             # P22: Verbandsnummern entscheiden ("P4 - Gerntal" = "P4 - Loipe Pletzach-Gern", BH1 ist nicht BH3)
             return ca == cb
+        na, nb = nummern(a.name), nummern(b.name)
+        if na and nb and na != nb:
+            # P24: verschiedene Loipennummern sind verschiedene Loipen ("11 Nordic Arena - Gemärk" ist nicht
+            # "11A Gemärk - Nordic Arena (Variante)", "1B" nicht "2B"); Laengen ("5 km") zaehlen nicht
+            return False
+        # P24: liegen die Eintraege in verschiedenen Gebieten derselben Region, fallen beide Ortsnamen weg
+        # ("25 Niederdorf - Marathonloipe" in Prags und in Niederdorf)
+        orte = f"{a.gebiet_name} {b.gebiet_name}"
+        ka, kb = schluessel(a.name, orte), schluessel(b.name, orte)
         # gleiche Woerter in anderer Reihenfolge: "C9 - Plaik" = "Plaik Loipe (C9)"
-        wa, wb = set(woerter(a.name, a.gebiet_name)), set(woerter(b.name, b.gebiet_name))
+        wa, wb = set(woerter(a.name, orte)), set(woerter(b.name, orte))
         klein, gross = sorted((wa, wb), key=len)
         # ein einzelnes gemeinsames Wort reicht nicht ("Waldloipe" ist nicht "Waldloipe Alpenbad")
         return ka == kb or (len(klein) >= 2 and klein <= gross)

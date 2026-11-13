@@ -13,6 +13,8 @@
 #   achensee     contwise-Schneebericht von achensee.com (gespurte km je Technik, Stand je Ort)
 #   skidata      Skidata-Schneebericht von kufstein.com (Status je Loipe, Stand je Ort)
 #   kaiserwinkl  Loipenbericht von kaiserwinkl.com (Status, Laenge, Stand der Liste)
+#   dolomiti     Loipentabelle von Dolomiti NordicSki (Status in 5 Stufen, Laenge, ohne Datum und Lage)
+#   opendatahub  Open Data Hub Suedtirol (JSON, CC0: Lage, Stile, offen/geschlossen mit Aenderungsdatum)
 #
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
@@ -370,3 +372,148 @@ quellen:
         - {pfad: /pois/langlaufloipen-scharitzkehl, gebiet: berchtesgaden, laenge_km: 9}
         - {pfad: /touren/langlaufloipen-oberau-bei-berchtesgaden, gebiet: berchtesgaden}
         - {pfad: /touren/langlaufloipen-scheffau-schellenberg, gebiet: marktschellenberg}
+
+  # Suedtirol (E-18, 13.11.2026). Dolomiti NordicSki meldet den Status je Loipe in fuenf Stufen (Rang 2),
+  # aber ohne Datum und ohne Lage; der Open Data Hub liefert ganz Suedtirol mit Startpunkt und
+  # offen/geschlossen (Rang 3). Bei derselben Loipe fuehrt Dolomiti NordicSki, die Lage kommt vom ODH.
+  - key: dolomiti-nordicski
+    adapter: dolomiti
+    name: Dolomiti NordicSki (Loipenstatus)
+    base_url: https://www.dolomitinordicski.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Dolomiti NordicSki zeigt die Strecken nur in einer Karte, deren Daten per robots.txt gesperrt sind; der Startpunkt kommt vom Open Data Hub."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "Impressum ohne Nutzungsregeln; vor dem Oeffentlichschalten beim Komitee fragen"}
+    config:
+      # eine Seite zeigt alle Regionen; der Regionsfilter wirkt nur im Browser
+      pfad: /de/regionen/alta-badia/geoeffnete-loipen/2.html
+      default_gebiet: toblach
+      # gleiche Loipe, anderer Name als im Open Data Hub (D15)
+      namen_ersatz:
+        "Loipe Südtirol Arena": "Loipe Biathlonzentrum"
+      # Osttirol: dort fuehrt tirol.at alle Loipen, Dolomiti NordicSki nur die der Mitgliedsorte
+      auslassen: [Sillian, Heinfels, Strassen, Villgraten, Tristach, Lavant, Nikolsdorf, Prägraten, Virgen,
+                  Matrei, Kals, Defereggen, St. Jakob i.D., St.Jakob i.D., Kartitsch, Obertilliach, Untertilliach,
+                  Grenzlandloipe, Biathlonzentrum Wettkampf]
+      # Ort, Regionskennung oder Name -> Gebiet; der erste Treffer zaehlt, Ort vor Name
+      gebiet_map:
+        SEISER ALM: seiser-alm
+        Kastelruth: seiser-alm
+        GRÖDEN: groeden
+        VAL GARDENA: groeden
+        St. Christina: groeden
+        Sexten: sexten
+        St.Veit: sexten
+        Pragser Tal: prags
+        Prags: prags
+        Innichen, Drei Zinnen: innichen
+        Niederdorf: niederdorf
+        Niededorf: niederdorf
+        Toblach: toblach
+        Toblacher: toblach
+        Nordic Arena: toblach
+        Gemärk: toblach
+        Plätzwiese: prags
+        Innichen: innichen
+        Gsies: gsies
+        Taisten: gsies
+        St. Magdalena: gsies
+        Antholz: antholz
+        Südtirol Arena: antholz
+        Oberrasen: antholz
+        Niederrasen: antholz
+        Wildgall: antholz
+        Ahrntal: ahrntal
+        Kasern: ahrntal
+        Weißenbach: ahrntal
+        Rein in Taufers: ahrntal
+        Mühlwald: ahrntal
+        Padola: comelico
+        Tavella: comelico
+        Campotrondo: comelico
+        Lunelli: comelico
+        Valgrande: comelico
+        Ferrovia: cortina
+        Tre Croci: cortina
+        Pian de Loa: cortina
+        La Varda: comelico
+        Track 3G: cortina
+        Ringloipe 3G: cortina
+        Ringloipe für Einsteiger: cortina
+        Touristenloipe - 12km: comelico
+        Übungsloipe 1 km: comelico
+        Übungsloipe 1,6 km: comelico
+
+  - key: opendatahub
+    adapter: opendatahub
+    name: Open Data Hub Südtirol (LTS)
+    base_url: https://tourism.api.opendatahub.com
+    art: portal
+    rang: 3
+    strecke_hinweis: "Der Open Data Hub führt nur Start- und Zielpunkt der Loipe, keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-13,
+              hinweis: "robots.txt fehlt (404) = keine Sperre; Lizenz CC0 je Datensatz (LicenseInfo)"}
+    config:
+      pfad: /v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true
+      default_gebiet: toblach
+      # IsOpen gilt nur, wenn der Verein den Eintrag in diesem Zeitraum geaendert hat (Befund 13.11.2026)
+      frisch_stunden: 48
+      auslassen_muster: "^TEST\\b"
+      radius_km: 12
+      # Loipen mit Suedtiroler Tourismusverein: weiterer Umkreis (Kasern liegt 17 km von der Gebietsmitte)
+      radius_verein_km: 20
+      # Liegt eine Loipe naeher an einem dieser Punkte als am naechsten Gebiet, faellt sie weg:
+      # Nauders fuehrt tirol.at, die Schweiz kommt spaeter ueber eigene Quellen
+      ausschluss:
+        - {name: Nauders, lat: 46.890, lon: 10.500}
+        - {name: Val Müstair, lat: 46.620, lon: 10.360}
+        - {name: Unterengadin, lat: 46.800, lon: 10.300}
+        - {name: Zernez, lat: 46.700, lon: 10.100}
+        - {name: Sillian, lat: 46.750, lon: 12.420}
+        - {name: Cadore, lat: 46.460, lon: 12.480}
+        # Cortina und Comelico: dort fuehrt Dolomiti NordicSki; der ODH nennt dieselben Loipen nur italienisch
+        - {name: Cortina, lat: 46.560, lon: 12.140}
+        - {name: Comelico, lat: 46.605, lon: 12.478}
+      # Tourismusverein (LocationInfo.TvInfo) -> Gebiet; ohne Eintrag zaehlt der naechste Gebietsmittelpunkt
+      verein_map:
+        Toblach: toblach
+        Innichen: innichen
+        Sexten: sexten
+        Niederdorf: niederdorf
+        Pragser Tal: prags
+        Antholzertal: antholz
+        Gsiesertal - Welsberg - Taisten: gsies
+        Ahrntal: ahrntal
+        Bruneck: kronplatz
+        San Vigilio - San Martin: st-vigil
+        Gitschberg - Jochtal: gitschberg-jochtal
+        Seiser Alm: seiser-alm
+        Kastelruth: seiser-alm
+        St. Christina: groeden
+        St. Ulrich: groeden
+        Wolkenstein: groeden
+        Wolkenstein Gröden: groeden
+        Corvara-Kolfuschg: alta-badia
+        Stern - St.Kassian - Abtei: alta-badia
+        Villnöss: villnoess
+        Ratschings: ratschings
+        Sterzing, Pfitsch und Freienfeld: pfitsch
+        Gossensass: gossensass
+        Sarntal: sarntal
+        Ritten: ritten-villanders
+        Klausen, Barbian, Feldthurns & Villanders: ritten-villanders
+        Eggental Tourismus: deutschnofen-welschnofen
+        Südtirols Süden: lavaze
+        Reschenpass: reschen
+        Obervinschgau: obervinschgau
+        Latsch - Martelltal: martell
+        Ortlergebiet: martell
+        Schnalstal: schnals
+        Ultental: ulten
+        Passeiertal: passeier
+        Hafling - Vöran - Meran 2000: passeier
+      gebiete: [toblach, innichen, sexten, niederdorf, prags, antholz, gsies, ahrntal, kronplatz, st-vigil,
+                gitschberg-jochtal, seiser-alm, groeden, alta-badia, villnoess, ratschings, pfitsch, gossensass,
+                sarntal, ritten-villanders, deutschnofen-welschnofen, lavaze, reschen, obervinschgau, martell,
+                schnals, ulten, passeier]

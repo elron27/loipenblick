@@ -9,10 +9,10 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 | Ordner | Typ | Inhalt |
 |---|---|---|
 | `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-38 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P22, D1–D18, U1–U41, N1–N9, B1–B26 |
-| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-18 (u. a. E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P24, D1–D18, U1–U41, N1–N9, B1–B26 |
+| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-19 (u. a. E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
-| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `livegang` und `spaeter` |
+| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `livegang` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
 
 Beziehungen: Jede Systemanforderung *leitet sich ab von* (`derives-from`) einem oder mehreren Bedürfnissen und *beruht auf* (`based-on`) den Entscheidungen, die sie betreffen.
@@ -21,7 +21,7 @@ Eigene Eigenschaften (`metamodel/loipen.yaml`):
 
 - `kennung`: lesbare ID wie `P1`, `U5`, `N-01`, `E-05`. Jeder Befehl nimmt sie als Verweis.
 - `prio`: `muss`, `soll`, `kann` wie im Anforderungsdokument.
-- `umfang`: `v1`, `ausbau1` (Kufstein/Tirol und Salzburg, Plan vom 12.11.2026), `livegang` (öffentlicher Betrieb im Winter 2026/27, [docs/livegang.md](../docs/livegang.md)) oder `spaeter`.
+- `umfang`: `v1`, `ausbau1` (Kufstein/Tirol und Salzburg, Plan vom 12.11.2026), `ausbau2` (Südtirol und Cortina/Comelico, 13.11.2026), `livegang` (öffentlicher Betrieb im Winter 2026/27, [docs/livegang.md](../docs/livegang.md)) oder `spaeter`.
 
 Alle Elemente stehen auf `draft`. Den Status setzt nur ein Mensch, ReqSeq berechnet ihn nie.
 

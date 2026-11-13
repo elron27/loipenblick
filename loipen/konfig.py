@@ -61,7 +61,7 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
                 fehler.append(f"Quelle {q['key']}: gebiete nennt unbekanntes Gebiet {slug}")
         if cfg.get("default_gebiet") not in slugs:
             fehler.append(f"Quelle {q['key']}: unbekanntes default_gebiet {cfg.get('default_gebiet')}")
-        for slug in cfg.get("gebiet_map", {}).values():
+        for slug in list(cfg.get("gebiet_map", {}).values()) + list(cfg.get("verein_map", {}).values()):
             if slug not in slugs:
                 fehler.append(f"Quelle {q['key']}: gebiet_map nennt unbekanntes Gebiet {slug}")
     return fehler

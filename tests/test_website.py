@@ -50,7 +50,10 @@ def test_b7_daten_liegen_als_json_je_region(site):
         "tegernseer-tal", "leitzachtal", "priental", "chiemgau", "berchtesgadener-land",
         "kufsteinerland", "kaiserwinkl", "wilder-kaiser", "kitzbueheler-alpen", "fuschlseeregion",
         "alpbachtal-wildschoenau", "zillertal", "achensee-karwendel", "innsbruck-umgebung", "seefeld-mieming",
-        "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol"}
+        "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol",
+        # Suedtirol und Cortina/Comelico (E-19)
+        "drei-zinnen", "pustertal", "groeden-seiser-alm", "eisacktal-wipptal", "eggental", "vinschgau-meran",
+        "cortina-comelico"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -122,7 +125,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     assert kz["gebiete"] == sum(r["gebiete"] for r in lies(site, "daten.json")["regionen"])
     assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
-        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl"}
+        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
+        "dolomiti-nordicski", "opendatahub"}
 
 
 @pytest.mark.req("U6", ak=1)
