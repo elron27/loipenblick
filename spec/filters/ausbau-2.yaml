@@ -1,0 +1,13 @@
+reqseq-filter: 1
+name: ausbau-2
+description: "Anforderungen der Ausbaustufe 2 (Südtirol und Cortina/Comelico, 13.11.2026)"
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: ausbau2
+    - type: [system-requirement]
+    - status: [draft, approved]
+sort:
+  - by: kennung
+    order: asc

@@ -73,6 +73,9 @@ SEITEN_QUELLEN = {
               f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B%5D=OPEN": "2026-11-12/loipen_offen.html"},
     "kitzbueheler-alpen": {"de/bri/aktuelles/loipen-status.html": "2026-11-12/bri.html"},
     "langlaufdorf": {"": "2026-11-12/index.html"},
+    "dolomiti-nordicski": {"de/regionen/alta-badia/geoeffnete-loipen/2.html": "2026-11-13/loipen-de.html"},
+    "opendatahub": {"v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true":
+                    "2026-11-13/loipen.json"},
 }
 
 

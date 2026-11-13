@@ -315,7 +315,8 @@ def test_u30_tirol_loipen_ohne_datum_sind_nicht_faelschlich_veraltet(site):
 @pytest.mark.req("U31", ak=1)
 def test_u31_jedes_oesterreichische_gebiet_zeigt_den_vignettenhinweis(site):
     for g in alle_gebiete(site):
-        if g["land"] == "AT":
+        if g["land"] in ("AT", "IT"):
+            # Italien (E-18): Anfahrt ueber Oesterreich, dazu Brenner- und Autobahnmaut
             assert g["grenzinfo"] and "Vignette" in g["grenzinfo"], g["slug"]
         else:
             assert not g["grenzinfo"], g["slug"]

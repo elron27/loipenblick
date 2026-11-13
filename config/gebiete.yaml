@@ -89,6 +89,34 @@ regionen:
   name: Osttirol
   land: AT
   bundesland: Tirol
+- slug: drei-zinnen
+  name: Drei Zinnen, Gsies und Antholz
+  land: IT
+  bundesland: Südtirol
+- slug: pustertal
+  name: Pustertal, Ahrntal und Kronplatz
+  land: IT
+  bundesland: Südtirol
+- slug: groeden-seiser-alm
+  name: Gröden, Seiser Alm und Alta Badia
+  land: IT
+  bundesland: Südtirol
+- slug: eisacktal-wipptal
+  name: Eisacktal, Wipptal und Sarntal
+  land: IT
+  bundesland: Südtirol
+- slug: eggental
+  name: Eggental und Südtirols Süden
+  land: IT
+  bundesland: Südtirol
+- slug: vinschgau-meran
+  name: Vinschgau und Meraner Land
+  land: IT
+  bundesland: Südtirol
+- slug: cortina-comelico
+  name: Cortina und Comelico
+  land: IT
+  bundesland: Venetien
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -1576,3 +1604,278 @@ gebiete:
     id: '43'
     name: Kals
     dienst: geosphere
+
+# Suedtirol und Cortina/Comelico (E-18, Stand 13.11.2026): Gebietsmitten aus den Loipenstarts des
+# Open Data Hub Suedtirol (Mittel je Tourismusverein), Hoehen der Orte aus OpenStreetMap gerundet.
+# Keine Wetterstation mit Schneehoehe hinterlegt (DWD/GeoSphere decken Italien nicht ab); die Vorhersage
+# kommt wie ueberall von Bright Sky.
+- slug: toblach
+  name: Toblach
+  namen: {it: "Dobbiaco"}
+  hoehe_m: 1240
+  region: drei-zinnen
+  lat: 46.725
+  lon: 12.222
+  tourist_url: https://www.drei-zinnen.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: innichen
+  name: Innichen
+  namen: {it: "San Candido"}
+  hoehe_m: 1175
+  region: drei-zinnen
+  lat: 46.733
+  lon: 12.281
+  tourist_url: https://www.drei-zinnen.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: sexten
+  name: Sexten
+  namen: {it: "Sesto"}
+  hoehe_m: 1310
+  region: drei-zinnen
+  lat: 46.7
+  lon: 12.352
+  tourist_url: https://www.drei-zinnen.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: niederdorf
+  name: Niederdorf
+  namen: {it: "Villabassa"}
+  hoehe_m: 1155
+  region: drei-zinnen
+  lat: 46.733
+  lon: 12.172
+  tourist_url: https://www.drei-zinnen.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: prags
+  name: Prags
+  namen: {it: "Braies"}
+  hoehe_m: 1350
+  region: drei-zinnen
+  lat: 46.697
+  lon: 12.15
+  tourist_url: https://www.drei-zinnen.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: antholz
+  name: Antholzertal
+  namen: {it: "Anterselva"}
+  hoehe_m: 1240
+  region: drei-zinnen
+  lat: 46.852
+  lon: 12.117
+  tourist_url: https://www.antholz.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: gsies
+  name: Gsieser Tal und Welsberg
+  namen: {it: "Val Casies"}
+  hoehe_m: 1250
+  region: drei-zinnen
+  lat: 46.802
+  lon: 12.185
+  tourist_url: https://www.gsieser-tal.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: ahrntal
+  name: Tauferer Ahrntal
+  namen: {it: "Valli di Tures e Aurina"}
+  hoehe_m: 1000
+  region: pustertal
+  lat: 46.95
+  lon: 11.96
+  tourist_url: https://www.ahrntal.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: kronplatz
+  name: Bruneck und Kronplatz
+  namen: {it: "Brunico"}
+  hoehe_m: 840
+  region: pustertal
+  lat: 46.8
+  lon: 11.92
+  tourist_url: https://www.kronplatz.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: st-vigil
+  name: St. Vigil in Enneberg
+  namen: {it: "San Vigilio di Marebbe"}
+  hoehe_m: 1200
+  region: pustertal
+  lat: 46.69
+  lon: 11.9
+  tourist_url: https://www.kronplatz.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: gitschberg-jochtal
+  name: Gitschberg Jochtal
+  namen: {it: "Gitschberg Jochtal"}
+  hoehe_m: 1400
+  region: pustertal
+  lat: 46.795
+  lon: 11.73
+  tourist_url: https://www.gitschberg-jochtal.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: seiser-alm
+  name: Seiser Alm und Kastelruth
+  namen: {it: "Alpe di Siusi"}
+  hoehe_m: 1850
+  region: groeden-seiser-alm
+  lat: 46.54
+  lon: 11.64
+  tourist_url: https://www.seiseralm.it
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: groeden
+  name: Gröden
+  namen: {it: "Val Gardena"}
+  hoehe_m: 1430
+  region: groeden-seiser-alm
+  lat: 46.555
+  lon: 11.73
+  tourist_url: https://www.valgardena.it
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: alta-badia
+  name: Alta Badia
+  namen: {it: "Alta Badia"}
+  hoehe_m: 1550
+  region: groeden-seiser-alm
+  lat: 46.554
+  lon: 11.94
+  tourist_url: https://www.altabadia.org
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: villnoess
+  name: Villnöss und Lüsen
+  namen: {it: "Val di Funes"}
+  hoehe_m: 1150
+  region: groeden-seiser-alm
+  lat: 46.666
+  lon: 11.765
+  tourist_url: https://www.villnoess.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: ratschings
+  name: Ratschings und Ridnaun
+  namen: {it: "Racines"}
+  hoehe_m: 1350
+  region: eisacktal-wipptal
+  lat: 46.865
+  lon: 11.3
+  tourist_url: https://www.ratschings.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: pfitsch
+  name: Sterzing und Pfitsch
+  namen: {it: "Val di Vizze"}
+  hoehe_m: 1400
+  region: eisacktal-wipptal
+  lat: 46.957
+  lon: 11.56
+  tourist_url: https://www.sterzing.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: gossensass
+  name: Gossensass und Brenner
+  namen: {it: "Colle Isarco"}
+  hoehe_m: 1100
+  region: eisacktal-wipptal
+  lat: 46.958
+  lon: 11.371
+  tourist_url: https://www.sterzing.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: sarntal
+  name: Sarntal
+  namen: {it: "Val Sarentino"}
+  hoehe_m: 1000
+  region: eisacktal-wipptal
+  lat: 46.78
+  lon: 11.406
+  tourist_url: https://www.sarntal.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: ritten-villanders
+  name: Ritten und Villanders
+  namen: {it: "Renon"}
+  hoehe_m: 1500
+  region: eisacktal-wipptal
+  lat: 46.62
+  lon: 11.47
+  tourist_url: https://www.ritten.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: deutschnofen-welschnofen
+  name: Eggental (Deutschnofen, Welschnofen)
+  namen: {it: "Val d'Ega"}
+  hoehe_m: 1350
+  region: eggental
+  lat: 46.416
+  lon: 11.462
+  tourist_url: https://www.eggental.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: lavaze
+  name: Aldein und Lavazè
+  namen: {it: "Passo di Lavazè"}
+  hoehe_m: 1800
+  region: eggental
+  lat: 46.358
+  lon: 11.46
+  tourist_url: https://www.suedtirolssueden.info
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: reschen
+  name: Reschenpass und Langtaufers
+  namen: {it: "Passo Resia"}
+  hoehe_m: 1500
+  region: vinschgau-meran
+  lat: 46.833
+  lon: 10.62
+  tourist_url: https://www.vinschgau.net
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: obervinschgau
+  name: Obervinschgau
+  namen: {it: "Alta Val Venosta"}
+  hoehe_m: 1250
+  region: vinschgau-meran
+  lat: 46.707
+  lon: 10.48
+  tourist_url: https://www.vinschgau.net
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: martell
+  name: Martelltal und Sulden
+  namen: {it: "Val Martello"}
+  hoehe_m: 1700
+  region: vinschgau-meran
+  lat: 46.523
+  lon: 10.7
+  tourist_url: https://www.vinschgau.net
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: schnals
+  name: Schnalstal
+  namen: {it: "Val Senales"}
+  hoehe_m: 1500
+  region: vinschgau-meran
+  lat: 46.764
+  lon: 10.784
+  tourist_url: https://www.schnalstal.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: ulten
+  name: Ultental
+  namen: {it: "Val d'Ultimo"}
+  hoehe_m: 1200
+  region: vinschgau-meran
+  lat: 46.521
+  lon: 10.946
+  tourist_url: https://www.ultental.it
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: passeier
+  name: Passeiertal und Meran 2000
+  namen: {it: "Val Passiria"}
+  hoehe_m: 1400
+  region: vinschgau-meran
+  lat: 46.78
+  lon: 11.15
+  tourist_url: https://www.passeiertal.it
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: cortina
+  name: Cortina d'Ampezzo
+  namen: {it: "Cortina d'Ampezzo"}
+  hoehe_m: 1220
+  region: cortina-comelico
+  lat: 46.56
+  lon: 12.14
+  tourist_url: https://www.dolomiti.org
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+- slug: comelico
+  name: Val Comelico (Padola)
+  namen: {it: "Val Comelico"}
+  hoehe_m: 1215
+  region: cortina-comelico
+  lat: 46.605
+  lon: 12.478
+  tourist_url: https://www.dolomitinordicski.com
+  grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'

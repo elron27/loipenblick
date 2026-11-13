@@ -46,6 +46,12 @@ ZUSTAND: dict[str, Status] = {
     "parzialmente aperto": Status.EINGESCHRAENKT,
     "chiusa": Status.GESCHLOSSEN,
     "chiuso": Status.GESCHLOSSEN,
+    # Statuscodes von Dolomiti NordicSki (P23): td[data-status]
+    "open": Status.OFFEN,
+    "partially_open": Status.EINGESCHRAENKT,
+    "open_not_prepared": Status.EINGESCHRAENKT,
+    "closed": Status.GESCHLOSSEN,
+    "unknown": Status.UNBEKANNT,
     "nicht befahrbar": Status.GESCHLOSSEN,
     "geschlossen": Status.GESCHLOSSEN,
     "gesperrt": Status.GESCHLOSSEN,
