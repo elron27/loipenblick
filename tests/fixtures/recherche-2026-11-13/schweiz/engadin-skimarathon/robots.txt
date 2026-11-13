@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://engadin-skimarathon.ch/sitemap.xml
