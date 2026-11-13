@@ -52,7 +52,7 @@ def test_d16_liste_und_regionswechsler_nach_land_und_region(seite):
 
 @pytest.mark.req("U30", ak=1)
 def test_u30_tirol_loipe_zeigt_abrufzeit_und_status_ohne_datum(seite):
-    seite.open("#/loipen?region=kufsteinerland")
+    seite.open("#/loipen?region=wilder-kaiser")  # nur tirol.at (Kufsteinerland meldet seit P22 mit Stand)
     for d in seite.locator(".lp .d").all_inner_texts():
         assert re.search(r"Status ohne Datum · Stand vor \d+ (Min\.|Std\.|Tagen)", d), d
         assert "veraltet" not in d

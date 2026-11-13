@@ -409,7 +409,11 @@ function seiteLoipe(id) {
         /* D18: weicht die verdeckte Quelle ab, steht ihr Status dabei; es zaehlt die oben gezeigte, genauere Quelle */
         var ab = a.status && a.status !== l.status && a.status !== "unbekannt";
         return '<a href="' + esc(safeUrl(a.url)) + '" rel="noopener">' + esc(a.quelle) + "</a>" + (ab ? ' <span class="badge abw">meldet ' + esc(WORT[a.status]) + ", abweichend</span>" : "");
-      }).join(", ") + "</span></li>" : "") + "</ul>" +
+      }).join(", ") + "</span></li>" : "") +
+      /* P22 AK 3: Gebiet mit eigenem Loipenbericht, der diese Loipe nicht nennt */
+      (l.nicht_im_bericht ? '<li class="glass" id="nicht-im-bericht"><span>Loipenbericht vor Ort</span><span>' + esc(l.nicht_im_bericht) +
+        " führt diese Loipe nicht" + (l.status_laut_quelle ? '. <span class="badge abw">' + esc(l.quelle.name) + " meldet " + esc(WORT[l.status_laut_quelle]) + ", unbestätigt</span>" : "") +
+        "</span></li>" : "") + "</ul>" +
       (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "");
     miniKarteZeichnen(l);
   });

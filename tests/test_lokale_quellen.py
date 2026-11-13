@@ -216,7 +216,7 @@ def test_u36_index_nennt_regionen_mit_strecken(site):
 
 @pytest.mark.req("U36", ak=2)
 def test_u36_tiroler_loipe_nennt_den_grund_ohne_strecke(site):
-    l = next(l for l in gebiet(site, "kufstein")["loipen"])
+    l = next(l for l in gebiet(site, "ellmau")["loipen"])
     assert "robots.txt" in l["strecke_hinweis"]
     vils = next(l for l in gebiet(site, "tannheimer-tal")["loipen"] if "Vilsalpsee" in l["name"])
     assert vils["strecke_hinweis"] is None

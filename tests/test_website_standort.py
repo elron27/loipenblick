@@ -197,7 +197,7 @@ def test_u36_karte_zeigt_strecken_auch_fern_vom_standort(seite):
 
 @pytest.mark.req("U36", ak=2)
 def test_u36_tiroler_loipe_ohne_strecke_nennt_den_grund(seite):
-    seite.open("#/gebiet/kufstein")
+    seite.open("#/gebiet/ellmau")
     aktion(seite, lambda: seite.locator(".lp").first.click())
     seite.wait_for_selector("#ohne-strecke")
     assert "robots.txt" in seite.locator("#ohne-strecke").inner_text()

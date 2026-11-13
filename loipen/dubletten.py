@@ -30,6 +30,8 @@ FUELLWOERTER = {"loipe", "loipen", "loipennetz", "langlaufloipe", "langlaufloipe
                 "km", "klassisch", "skating", "und", "u", "barrierefrei"}
 SELBE_QUELLE_KM = 0.1
 NUMMER = re.compile(r"(nr)?\d+[a-z]?")  # "nr1", "2", "8a"
+# Loipennummern der Verbaende ("P4", "SC3a", "KU1"): im selben Gebiet eindeutig (P22)
+KENNUNG = re.compile(r"[a-z]{1,2}\d{1,2}[a-z]?")
 
 
 @dataclass
@@ -47,7 +49,12 @@ class Eintrag:
 
 def woerter(name: str, gebiet_name: str = "") -> list[str]:
     ort = set(slugify(gebiet_name).split("-")) if gebiet_name else set()
-    return [t for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort and not NUMMER.fullmatch(t)]
+    return [t for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort and not NUMMER.fullmatch(t)
+            and not KENNUNG.fullmatch(t)]
+
+
+def kennungen(name: str) -> set[str]:
+    return {t for t in slugify(name).split("-") if KENNUNG.fullmatch(t) and not NUMMER.fullmatch(t)}
 
 
 def schluessel(name: str, gebiet_name: str = "") -> str:
@@ -75,9 +82,14 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
         selbe = a.gebiet == b.gebiet or (a.region and a.region == b.region)
         if not selbe:
             return False
+        ca, cb = kennungen(a.name), kennungen(b.name)
+        if ca and cb:
+            # P22: Verbandsnummern entscheiden ("P4 - Gerntal" = "P4 - Loipe Pletzach-Gern", BH1 ist nicht BH3)
+            return ca == cb
         # gleiche Woerter in anderer Reihenfolge: "C9 - Plaik" = "Plaik Loipe (C9)"
         wa, wb = set(woerter(a.name, a.gebiet_name)), set(woerter(b.name, b.gebiet_name))
         klein, gross = sorted((wa, wb), key=len)
+        # ein einzelnes gemeinsames Wort reicht nicht ("Waldloipe" ist nicht "Waldloipe Alpenbad")
         return ka == kb or (len(klein) >= 2 and klein <= gross)
     return (aehnlich >= AEHNLICH and abstand < NAH_KM) or (ka == kb and abstand < GLEICH_NAH_KM)
 

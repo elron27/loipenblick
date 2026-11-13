@@ -126,6 +126,19 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         elif eintrag["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
             gleich["status"] = eintrag["status"]
 
+    # P22 AK 3: Fuehrt in einem Gebiet ein oertlicher Loipenbericht (kleinerer Rang), gilt er dort als
+    # massgeblich. Loipen, die nur eine nachrangige Quelle (tirol.at) nennt, bekommen einen Hinweis; meldet
+    # diese sie als offen, zeigt die Seite "unbekannt", weil der Bericht des Verbands sie nicht fuehrt.
+    def rang(l: Loipe) -> int:
+        return int((l.quelle.config or {}).get("rang", 10))
+    bericht: dict[int, Quelle] = {}
+    for l in aktive:
+        if l.id in verdeckt:
+            continue
+        b = bericht.get(l.gebiet_id)
+        if b is None or rang(l) < int((b.config or {}).get("rang", 10)):
+            bericht[l.gebiet_id] = l.quelle
+
     regionen: dict[str, dict] = {}
     strecken: dict[str, dict] = {}
     abdeckung: list[dict] = []
@@ -145,6 +158,13 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
+                b = bericht.get(l.gebiet_id)
+                d["nicht_im_bericht"] = None
+                if b is not None and b.id != l.quelle_id and rang(l) > int((b.config or {}).get("rang", 10)):
+                    d["nicht_im_bericht"] = b.name
+                    if d["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
+                        d["status_laut_quelle"] = d["status"]
+                        d["status"] = Status.UNBEKANNT.value
                 if d["lat"] is None and l.id in lage:
                     d["lat"], d["lon"] = lage[l.id]
                     d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None

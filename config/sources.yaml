@@ -10,6 +10,9 @@
 #   langlaufdorf langlaufdorf.at (Faistenau, Hintersee)
 #   stammdaten   nur Lage und Laenge, kein Zustand (berchtesgaden.de)
 #   seefeld      Loipenbericht der Olympiaregion Seefeld (gespurte km je Loipe)
+#   achensee     contwise-Schneebericht von achensee.com (gespurte km je Technik, Stand je Ort)
+#   skidata      Skidata-Schneebericht von kufstein.com (Status je Loipe, Stand je Ort)
+#   kaiserwinkl  Loipenbericht von kaiserwinkl.com (Status, Laenge, Stand der Liste)
 #
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
@@ -205,6 +208,69 @@ quellen:
       auslassen: [Schlitten- und barrierefreie Loipen]
       gebiet_map:
         Leutasch: leutasch
+
+  # Weitere Tiroler Tourismusverbaende (P22, 13.11.2026): Status je Loipe mit Stand der Meldung, ohne
+  # Koordinaten (Lage von tirol.at). Rang 2 vor tirol.at.
+  - key: achensee
+    adapter: achensee
+    name: Achensee Tourismus (Schneebericht)
+    base_url: https://www.achensee.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Schneebericht Achensee nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/live/schneebericht/
+      default_gebiet: achensee
+      gebiet_map:
+        Achenkirch: steinberg-rofan
+        Steinberg am Rofan: steinberg-rofan
+        Maurach: achensee
+        Pertisau: achensee
+        Wiesing: achensee
+
+  - key: kufsteinerland
+    adapter: skidata
+    name: Kufsteinerland (Schneebericht)
+    base_url: https://www.kufstein.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Schneebericht Kufsteinerland nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/schneebericht.html
+      regionen: [kufsteinerland]
+      # Bayrischzell meldet die eigene Seite genauer (Quelle bayrischzell)
+      orte_auslassen: [Bayrischzell]
+      default_gebiet: kufstein
+      gebiet_map:
+        Kufstein: kufstein
+        Thiersee: thiersee
+        Langkampfen: langkampfen
+        Bad Häring: bad-haering
+        Schwoich: schwoich
+        Ebbs: ebbs
+        Niederndorf: niederndorf
+
+  - key: kaiserwinkl
+    adapter: kaiserwinkl
+    name: Tourismusverband Kaiserwinkl (Loipenbericht)
+    base_url: https://www.kaiserwinkl.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Loipenbericht Kaiserwinkl nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/langlaufen-tirol/geoeffnete-loipen.html
+      default_gebiet: koessen
+      gebiet_map:
+        Walchsee: walchsee
+        Schwendt: schwendt
+        Rettenschöss: walchsee
+        Kössen: koessen
+        Bichlach: schwendt
+        Griesenau: schwendt
+        Lucknerhof: schwendt
 
   # Ausbaustufe 1 (E-15): Tirol ueber das Landesportal, Stufe 1 = Kufsteinerland, Kaiserwinkl, Wilder Kaiser.
   # Weitere Tiroler Regionen (Richtung Innsbruck): Gebiete mit lat/lon in gebiete.yaml anlegen und hier

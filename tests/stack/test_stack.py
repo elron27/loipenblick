@@ -43,7 +43,7 @@ NTFY = f"http://localhost:{ENV['NTFY_PORT']}"
 THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
 QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
            "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6,
-           "tannheimer": 21, "seefeld": 49}
+           "tannheimer": 21, "seefeld": 49, "achensee": 24, "kufsteinerland": 22, "kaiserwinkl": 23}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 

@@ -9,10 +9,12 @@ from loipen.adapters.seefeld import SeefeldAdapter
 from loipen.adapters.stammdaten import StammdatenAdapter
 from loipen.adapters.tirolat import TirolAtAdapter
 from loipen.adapters.tourinfra import TourinfraAdapter
+from loipen.adapters.tvb_tirol import AchenseeAdapter, KaiserwinklAdapter, SkidataAdapter
 
 ADAPTERS: dict[str, Adapter] = {
     "ats": AtsAdapter(), "aschau": AschauAdapter(),
     "tourinfra": TourinfraAdapter(), "tirolat": TirolAtAdapter(),
     "langlaufdorf": LanglaufdorfAdapter(), "stammdaten": StammdatenAdapter(),
     "kitzalps": KitzAlpsAdapter(), "seefeld": SeefeldAdapter(),
+    "achensee": AchenseeAdapter(), "skidata": SkidataAdapter(), "kaiserwinkl": KaiserwinklAdapter(),
 }
