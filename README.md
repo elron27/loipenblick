@@ -116,6 +116,26 @@ die Seite „Hinweise und Betreiber“ mit. Die Karte lädt die Kacheln von Open
 einem Klick (B23). Eine Quelle schaltest du mit `enabled: false` in `config/sources.yaml` ab, ihre
 Loipen verschwinden mit dem nächsten Lauf (B16).
 
+### E-Mail-Abo und Fehlermeldungen (E-18)
+
+Besucher können sich bei jeder Loipe und jedem Gebiet per E-Mail benachrichtigen lassen und bei jeder
+Loipe falsche Angaben melden. Dafür liegen im Ordner `abo/` fünf kleine PHP-Skripte; der Rest der
+Seite bleibt statisch. Der Webspace verschickt die Bestätigungsmail (Double-Opt-In) sofort und hält
+bestätigte Abos, Abmeldungen und Meldungen in einer Warteschlange. Das NAS holt sie bei jedem Lauf
+über `abo/export.php` ab, speichert die Abonnenten in der Datenbank (im täglichen Dump enthalten) und
+verschickt die Alarme per SMTP, höchstens eine Mail je Abonnent und Lauf. Meldungen kommen sofort per
+Mail an `LOIPEN_ABO_MELDUNGEN_AN` und beim nächsten Lauf als Push; sie ändern nie einen Status.
+
+1. Beim Hoster ein Postfach für den Absender anlegen, z. B. `abo@<domain>`.
+2. In der `.env` die Werte unter „E-Mail-Abo“ aus `.env.example` eintragen, den Schlüssel einmal mit
+   `openssl rand -hex 32` erzeugen. Ohne `LOIPEN_OEFFENTLICHE_URL`, Schlüssel und Absender gibt es
+   weder Formulare noch den Ordner `abo/`.
+3. Nach dem nächsten Lauf auf der Testadresse ein Abo anlegen, die Mail bestätigen und mit
+   `docker compose exec worker python -m loipen.worker lauf` den Abgleich prüfen (Log: „Abo: 1 neu“).
+
+Voraussetzung ist ein Webspace mit PHP und `mail()`, bei netcup Webhosting gegeben. Mit Cloudflare
+Pages ginge das Abo nur mit einem eigenen Worker.
+
 ## Entwickeln und testen
 
 Die Tests brauchen eine PostgreSQL mit einer Datenbank, deren Name auf `_test` endet
