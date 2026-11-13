@@ -1,2 +1,20 @@
-# <zielpfad> <url> -- Runde 5: Tageswerte aller aktiven Tiroler GeoSphere-Stationen (Stationswahl fuer ganz Tirol)
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_tirol.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=16,28,38,39,42,43,50,55,61,66,76,87,118,119,121,126,127,130,136,138,139,142,146,151,175,176,178,184,185,196,210,214,8806,8807,9016,9019,9105,9110,11401,11402,11410,11505,11506,11602,11603,11706,11800,11803,11804,11901,12015,12203,12215,12216,12351,12352,14302,14305,14308,14403,14513,14521,14602,14603,14621,14622,14631,14701,14802,14812,14822,14825,14833,14834,14912,15001,15002,15210,15344,17002,17003,17005,17102,17301,17315,17320,17701,17901,19505&start=2026-10-29T00:00&end=2026-11-11T00:00
+# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 1: Einstiegsseiten und APIs
+tests/fixtures/recherche-2026-11-13/suedtirol/suedtirol-info/loipen.html https://www.suedtirol.info/de/erleben/winter/langlaufen/loipen
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/api-root.json https://tourism.api.opendatahub.com/v1
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-langlauf.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=5&odhtagfilter=loipen&language=de
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-type2.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=3&type=2
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/snowreport.json https://tourism.api.opendatahub.com/v1/Weather/SnowReport?lang=de
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/odhtags-poi.json https://tourism.api.opendatahub.com/v1/ODHTag?validforentity=odhactivitypoi&pagesize=500
+tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/opentrails.html https://www.seiseralm.it/opentrails
+tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/home-de.html https://www.dolomitinordicski.com/de/home.html
+tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/alta-badia-open-tracks.html https://www.dolomitinordicski.com/en/regions/alta-badia/open-tracks/2.html
+tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte.html https://www.kaernten.at/service/wetter/loipenberichte/
+tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/langlaufzentren.html https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufzentren/
+tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/home.html https://www.nassfeld.at/de
+tests/fixtures/recherche-2026-11-13/kaernten/weissensee/home.html https://www.weissensee.com/de
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-65.html https://snow.myswitzerland.com/snow_reports/engadin-65
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langis-glaubenberg-109.html https://snow.myswitzerland.com/snow_reports/langis-glaubenberg-109/
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/home.html https://snow.myswitzerland.com/
+tests/fixtures/recherche-2026-11-13/schweiz/engadin-skimarathon/xc-skiing.html https://engadin-skimarathon.ch/en/news-services/xc-skiing-in-the-engadin
+tests/fixtures/recherche-2026-11-13/schweiz/graubuenden/start-langlaufsaison.html https://www.graubuenden.ch/de/news/start-langlaufsaison
+tests/fixtures/recherche-2026-11-13/schweiz/schweizmobil/langlauf-be.html https://chmobilorg.mironet.ch/schweizmobil/downloads/routenfelder/Langlaufen/lokal/be.html
