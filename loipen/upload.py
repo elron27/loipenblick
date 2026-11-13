@@ -67,6 +67,9 @@ def freigegeben(rel: str) -> bool:
         return True
     if any(teil.startswith(".") for teil in rel.split("/")):
         return False
+    # E-18: PHP nur fuer das E-Mail-Abo im Ordner abo/, nie dessen Daten (die erzeugt der Webspace selbst)
+    if rel.startswith("abo/") and name.endswith(".php"):
+        return not rel.startswith("abo/daten/")
     return posixpath.splitext(name)[1].lower() in FREIGABE
 
 

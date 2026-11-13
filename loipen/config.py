@@ -36,6 +36,18 @@ class Settings(BaseSettings):
     hoster: str | None = None  # Name und Anschrift des Webhosters fuer die Datenschutzerklaerung
     log_tage: int = 7
     datenschutz_datei: str | None = None  # eigener Text (HTML-Ausschnitt) statt der Vorlage
+    # E-Mail-Abo und Fehlermeldungen (E-18). Aktiv, wenn oeffentliche_url, abo_schluessel und abo_absender
+    # gesetzt sind. Der Schluessel steht nur hier; auf dem Webspace liegt sein SHA-256.
+    abo_schluessel: str | None = None
+    abo_absender: str | None = None  # z. B. abo@loipenblick.de, Postfach beim Webhoster
+    abo_meldungen_an: str | None = None  # Meldungen falscher Angaben (N9); leer = impressum_email
+    abo_datenordner: str = ""  # leer = abo/daten auf dem Webspace; besser ausserhalb des Web-Ordners
+    seitenname: str = "Loipenblick"
+    smtp_host: str | None = None
+    smtp_port: int = 465
+    smtp_benutzer: str | None = None
+    smtp_passwort: str | None = None
+    smtp_starttls: bool = False
     # Nur Testbetrieb (tests/stack): alle Abrufe an diesen Server statt ins Netz, siehe fetcher.py
     umleitung: str | None = None
 

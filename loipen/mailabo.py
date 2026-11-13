@@ -71,7 +71,7 @@ class AboKonfig:
     @classmethod
     def aus_settings(cls, s) -> "AboKonfig":
         return cls(
-            seite_url=s.seite_url, schluessel=s.abo_schluessel, absender=s.abo_absender,
+            seite_url=s.oeffentliche_url, schluessel=s.abo_schluessel, absender=s.abo_absender,
             seitenname=s.seitenname, smtp_host=s.smtp_host, smtp_port=s.smtp_port,
             smtp_benutzer=s.smtp_benutzer, smtp_passwort=s.smtp_passwort, smtp_starttls=s.smtp_starttls,
         )

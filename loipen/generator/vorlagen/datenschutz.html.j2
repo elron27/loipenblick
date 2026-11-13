@@ -23,6 +23,17 @@
 <h2>Speicher im Browser</h2>
 <p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was du selbst wählst: den gewählten Ort und ob die Karte geladen werden darf. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
 
+{% if abo %}
+<h2>E-Mail-Benachrichtigung</h2>
+<p>Bei jeder Loipe und jedem Gebiet kannst du dich per E-Mail benachrichtigen lassen, wenn eine Loipe öffnet, frisch gespurt wird oder schließt. Dafür verarbeiten wir deine E-Mail-Adresse, die gewählten Loipen oder Gebiete, die gewählten Ereignisse sowie Datum und Uhrzeit von Anmeldung und Bestätigung. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+<p>Nach dem Absenden bekommst du eine Mail mit einem Bestätigungslink (Double-Opt-In). Bis zur Bestätigung speichern wir nichts: Die Angaben stecken nur verschlüsselt im Link, der nach 48 Stunden verfällt. Erst nach der Bestätigung wird das Abo gespeichert. Der Zeitpunkt der Bestätigung dient als Nachweis deiner Einwilligung.</p>
+<p>Gespeichert wird das Abo auf dem Rechner des Betreibers, der die Seite erzeugt; der Webhoster hält es nur, bis dieser es beim nächsten Abgleich abholt (höchstens einige Stunden). Die Mails gehen über den Mailserver des Webhosters. Wir geben deine Adresse an niemanden weiter und schicken nur die bestellten Benachrichtigungen, höchstens eine Mail pro Aktualisierung.</p>
+<p>Abmelden kannst du dich jederzeit über den Link in jeder Mail oder per Mail an die oben genannte Adresse. Damit widerrufst du die Einwilligung; die Adresse wird beim nächsten Abgleich gelöscht. Gegen Missbrauch zählt das Formular Anfragen je E-Mail-Adresse und Internetanschluss; dafür werden nur verschlüsselte Prüfwerte (keine Adressen) für höchstens 24 Stunden gespeichert (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+<h2>Falsche Angaben melden</h2>
+<p>Über „Angabe falsch? Melden“ bei einer Loipe kannst du uns einen Hinweis schicken. Wir erhalten die Loipe, die Art des Fehlers, deinen Text und, nur wenn du sie angibst, deine E-Mail-Adresse für Rückfragen. Die Meldung geht per Mail an den Betreiber und wird gelöscht, sobald sie bearbeitet ist; die Kopie auf dem Webhoster löscht der nächste Abgleich. Rechtsgrundlage ist unser berechtigtes Interesse an richtigen Angaben (Art. 6 Abs. 1 lit. f DSGVO), bei Angabe einer Adresse deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Eine Meldung ändert den angezeigten Status nicht.</p>
+{% endif %}
+
 <h2>Links zu anderen Seiten</h2>
 <p>Links zur Quelle einer Loipe, zu Google Maps (Navigation, Fahrplan) und zu anderen Seiten öffnen die Seite des jeweiligen Anbieters. Erst dann gilt dessen Datenschutzerklärung.</p>
 

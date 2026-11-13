@@ -17,7 +17,7 @@ if (time() - (int)$daten['t'] > ABO_GUELTIG_S) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    abo_antwort(200, 'Abo bestätigen', 'Bitte bestätige, dass du an ' . $daten['e'] . ' eine E-Mail bekommen möchtest, wenn eine dieser Loipen ' . abo_arten_text($daten['a']) . ':',
+    abo_antwort(200, 'Abo bestätigen', 'Bitte bestätige, dass du an ' . $daten['e'] . ' eine E-Mail bekommen möchtest, wenn sich bei diesen Loipen etwas tut (' . abo_arten_text($daten['a']) . '):',
         '<div class="feld">' . abo_ziel_liste($daten['z']) . '</div>'
         . '<form method="post"><input type="hidden" name="t" value="' . abo_h($token) . '"><button type="submit">Abo bestätigen</button></form>');
 }

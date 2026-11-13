@@ -357,7 +357,8 @@ function seiteGebiet(slug) {
     '<li class="glass"><span>Loipengebühr</span><b>' + (gebuehr.text ? esc(gebuehr.text) : gebuehr.eur != null ? zahl(gebuehr.eur, 2) + " €" : "unbekannt") + "</b></li>" +
     (g.parkplaetze.length ? g.parkplaetze.map(function (p) { return '<li class="glass"><span><b>' + esc(p.name) + "</b><br><span class=\"fine\">Gebühr: " + esc(p.gebuehr_text || (p.gebuehr_eur_tag != null ? zahl(p.gebuehr_eur_tag, 2) + " € pro Tag" : "unbekannt")) + (p.geschaetzt ? " · Lage ungefähr (Loipenstart)" : "") + '</span></span><a class="btn" href="' + esc(navLink(p.lat, p.lon)) + '" rel="noopener">Navigation</a></li>'; }).join("") : '<li class="glass"><span>Parkplätze</span><b>noch nicht erfasst</b></li>') +
     (g.haltestellen.length ? g.haltestellen.map(function (s) { return '<li class="glass"><span><b>' + esc(s.name) + '</b><br><span class="fine">Haltestelle (' + esc(s.art || "ÖPNV") + ')</span></span><a class="btn" href="' + esc(oevLink(s.lat, s.lon)) + '" rel="noopener">Fahrplan</a></li>'; }).join("") : '<li class="glass"><span>Haltestelle</span><b>keine bekannt</b></li>') +
-    '</ul><h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>";
+    '</ul><h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
+    (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("g:" + g.slug, "eine Loipe im Gebiet " + g.name) : "");
   view.innerHTML = h;
 }
 
@@ -439,7 +440,8 @@ function seiteLoipe(id) {
       (l.nicht_im_bericht ? '<li class="glass" id="nicht-im-bericht"><span>Loipenbericht vor Ort</span><span>' + esc(l.nicht_im_bericht) +
         " führt diese Loipe nicht" + (l.status_laut_quelle ? '. <span class="badge abw">' + esc(l.quelle.name) + " meldet " + esc(WORT[l.status_laut_quelle]) + ", unbestätigt</span>" : "") +
         "</span></li>" : "") + "</ul>" +
-      (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "");
+      (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "") +
+      (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("l:" + l.id, "diese Loipe") + meldeFormular(l) : "");
     miniKarteZeichnen(l);
   });
 }
@@ -630,6 +632,51 @@ function ortDialog() {
   };
 }
 
+/* ---------- E-Mail-Abo und Meldungen (E-18, N5, N9) ---------- */
+/* Die Formulare schicken an abo/*.php auf dem Webspace. Ohne Abo-Konfiguration (S.idx.abo) gibt es sie nicht. */
+var HONIG = '<label class="vh" aria-hidden="true">Webseite <input name="webseite" tabindex="-1" autocomplete="off"></label>';
+function aboFormular(ziel, was) {
+  if (!S.idx.abo) return "";
+  var art = function (wert, text, an) { return '<label class="wahl"><input type="checkbox" name="ereignis[]" value="' + wert + '"' + (an ? " checked" : "") + "> " + text + "</label>"; };
+  return '<details class="glass formular" id="abo"><summary>Per E-Mail benachrichtigen</summary>' +
+    '<form method="post" action="abo/anmelden.php" data-formular="abo"><input type="hidden" name="ziel[]" value="' + esc(ziel) + '">' +
+    '<p class="fine">Wir schicken dir eine Mail, wenn ' + esc(was) + ":</p>" +
+    '<div class="wahlen">' + art("oeffnet", "öffnet", true) + art("frisch_gespurt", "frisch gespurt wird", true) + art("schliesst", "schließt", false) + "</div>" +
+    '<label class="feld">E-Mail-Adresse<input type="email" name="email" required autocomplete="email" maxlength="254" placeholder="du@beispiel.de"></label>' + HONIG +
+    '<label class="wahl einw"><input type="checkbox" name="einwilligung" value="ja" required> <span>Ich möchte diese Benachrichtigungen per E-Mail. Ich bekomme zuerst eine Mail zum Bestätigen und kann mich mit dem Link in jeder Mail wieder abmelden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span></label>' +
+    '<button class="btn prim" type="submit">Abo anfragen</button><p class="antwort" role="status" aria-live="polite"></p></form></details>';
+}
+function meldeFormular(l) {
+  if (!S.idx.abo) return "";
+  var art = function (wert, text) { return '<label class="wahl"><input type="radio" name="art" value="' + wert + '" required> ' + text + "</label>"; };
+  return '<details class="glass formular" id="melden"><summary>Angabe falsch? Melden</summary>' +
+    '<form method="post" action="abo/melden.php" data-formular="melden"><input type="hidden" name="ziel" value="l:' + esc(l.id) + '">' +
+    '<p class="fine">Der Status kommt von ' + esc(l.quelle.name) + '. Deine Meldung geht an uns, wir prüfen sie und fragen bei Bedarf die Quelle. Der angezeigte Status ändert sich dadurch nicht sofort.</p>' +
+    '<div class="wahlen">' + art("geschlossen", "Loipe ist in Wirklichkeit geschlossen") + art("offen", "Loipe ist in Wirklichkeit offen") + art("nicht_gespurt", "Loipe ist nicht gespurt") + art("daten", "Länge, Lage oder andere Angaben stimmen nicht") + art("sonstiges", "Sonstiges") + "</div>" +
+    '<label class="feld">Was ist dir aufgefallen? (freiwillig)<textarea name="text" maxlength="500" rows="3" placeholder="z. B. seit gestern wegen Forstarbeiten gesperrt"></textarea></label>' +
+    '<label class="feld">E-Mail für Rückfragen (freiwillig)<input type="email" name="email" autocomplete="email" maxlength="254"></label>' + HONIG +
+    '<p class="fine">Mit dem Absenden gehen Loipe, Auswahl, Text und, falls angegeben, deine Adresse an den Betreiber. Siehe <a href="datenschutz.html">Datenschutzerklärung</a>.</p>' +
+    '<button class="btn prim" type="submit">Meldung senden</button><p class="antwort" role="status" aria-live="polite"></p></form></details>';
+}
+function formulareBinden() {
+  view.addEventListener("submit", function (ev) {
+    var f = ev.target;
+    if (!f.dataset || !f.dataset.formular || !window.fetch) return; // ohne fetch: normales Absenden, PHP zeigt eine Seite
+    ev.preventDefault();
+    var knopf = f.querySelector("button"), antwort = f.querySelector(".antwort");
+    knopf.disabled = true; antwort.textContent = "Wird gesendet …"; antwort.className = "antwort";
+    fetch(f.action, {method: "POST", body: new FormData(f), headers: {Accept: "application/json"}})
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        antwort.innerHTML = "<b>" + esc(d.titel) + "</b> " + esc(d.text);
+        antwort.className = "antwort " + (d.ok ? "gut" : "schlecht");
+        if (d.ok) f.querySelectorAll("input:not([type=hidden]),textarea,button").forEach(function (x) { x.disabled = true; });
+        else knopf.disabled = false;
+      })
+      .catch(function () { antwort.textContent = "Das hat nicht geklappt. Bitte später noch einmal versuchen."; antwort.className = "antwort schlecht"; knopf.disabled = false; });
+  });
+}
+
 /* ---------- Routing ---------- */
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
@@ -658,6 +705,7 @@ function start() {
     var kw = document.getElementById("karte-widerruf");
     if (kw) { widerrufZeigen(); kw.addEventListener("click", function () { try { localStorage.removeItem("karte_ok"); } catch (e) {} kw.hidden = true; route(); }); }
     window.addEventListener("hashchange", route);
+    formulareBinden();
     route();
     gpsBeimStart(parseQuery(location.hash));
     if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) navigator.serviceWorker.register("sw.js").catch(function () {});

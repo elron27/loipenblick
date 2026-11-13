@@ -143,3 +143,20 @@ h2.sec.land{margin-top:34px}
 .text code{font-size:.9em;overflow-wrap:anywhere}
 .rechtlich a{white-space:nowrap}
 @media(max-width:760px){.textseite .foot{padding-bottom:110px}}
+/* E-Mail-Abo und Meldungen (E-18) */
+.formular{margin:0 0 12px;padding:0}
+.formular summary{min-height:52px;display:flex;align-items:center;padding:0 20px;font-weight:700;cursor:pointer;list-style:none}
+.formular summary::-webkit-details-marker{display:none}
+.formular summary::after{content:"";margin-left:auto;width:9px;height:9px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.formular[open] summary::after{transform:rotate(225deg) translateY(-1px)}
+.formular form{padding:0 20px 20px;display:grid;gap:12px;max-width:640px}
+.formular .fine{margin:0}
+.wahlen{display:flex;flex-wrap:wrap;gap:8px}
+.wahl{display:inline-flex;align-items:flex-start;gap:8px;min-height:40px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;font-size:15px;cursor:pointer}
+.wahl input{margin:3px 0 0;accent-color:var(--cy)}
+.wahl.einw{border:0;padding:0;font-size:14px;color:var(--mute)}
+.feld{display:grid;gap:6px;font-size:14px;font-weight:600}
+.feld input,.feld textarea{width:100%;min-height:44px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--solid);color:var(--ink);font:inherit;font-weight:400}
+.formular button{justify-self:start}
+.antwort{margin:0;font-size:15px}.antwort:empty{display:none}
+.antwort.gut{color:var(--ok)}.antwort.schlecht{color:var(--bad)}
