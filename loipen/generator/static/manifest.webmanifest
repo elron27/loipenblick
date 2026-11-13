@@ -1,15 +1,25 @@
 {
+  "id": "./",
   "name": "Loipenblick",
   "short_name": "Loipenblick",
-  "description": "Welche Loipen sind heute offen?",
+  "description": "Welche Loipen sind heute offen? Zustand, Schnee und Wetter für Langläufer.",
   "start_url": "./#/",
   "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#06111a",
   "theme_color": "#06111a",
   "lang": "de",
+  "dir": "ltr",
+  "categories": ["sports", "weather", "travel"],
   "icons": [
     {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Heute in meiner Nähe", "short_name": "Heute", "url": "./#/", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]},
+    {"name": "Karte", "url": "./#/karte", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]},
+    {"name": "Alle Loipen", "short_name": "Loipen", "url": "./#/loipen", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]}
   ]
 }

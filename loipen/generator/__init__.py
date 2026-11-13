@@ -58,6 +58,18 @@ def _host(url: str | None) -> str:
     return urlparse(url).hostname or "" if url else ""
 
 
+def app_version() -> str:
+    """U38: Version der App aus dem Inhalt ihrer Dateien. Sie aendert sich nur, wenn sich App, Vorlagen
+    oder Symbole aendern, nicht bei jedem Datenstand. So laedt das Handy die App nicht stuendlich neu."""
+    h = hashlib.sha256()
+    for ordner in (STATIC, VORLAGEN, Path(__file__).with_name("icons.py")):
+        for datei in sorted(ordner.rglob("*")) if ordner.is_dir() else [ordner]:
+            if datei.is_file():
+                h.update(datei.relative_to(STATIC.parent).as_posix().encode())
+                h.update(datei.read_bytes())
+    return h.hexdigest()[:HASH_LAENGE]
+
+
 def rechtliches_fehlt(r: dict) -> list[str]:
     """B6 AK 3: Was im Impressum noch fehlt. Leer heisst: vollstaendig."""
     return [feld for feld, wert in (("Name", r.get("name")), ("Anschrift", r.get("anschrift")),
@@ -81,7 +93,7 @@ def erzeuge(
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days)
-    stand = jetzt.astimezone(ZoneInfo("Europe/Berlin")).strftime("%Y%m%d%H%M")
+    stand = app_version()
     r = dict(rechtliches or {})
     kacheln = kacheln or {"url": OSM_KACHELN, "attribution": OSM_ATTRIBUTION, "fremd": True}
 
@@ -107,12 +119,14 @@ def erzeuge(
             rel = quelle.relative_to(STATIC).as_posix()
             inhalt = quelle.read_bytes()
             if rel in ("index.html", "sw.js"):
-                inhalt = inhalt.replace(b"__STAND__", stand.encode())  # neue Version -> Cache erneuern
+                inhalt = inhalt.replace(b"__STAND__", stand.encode())  # neue App-Version -> Cache erneuern
                 if rel == "index.html" and not oeffentlich:
                     inhalt = inhalt.replace(b"<title>", b'<meta name="robots" content="noindex, nofollow">\n<title>', 1)
             schreibe(rel, inhalt)
     schreibe("icon-192.png", png_icon(192))
     schreibe("icon-512.png", png_icon(512))
+    schreibe("icon-maskable-512.png", png_icon(512, rand=0.14))  # U37: Android schneidet rund zu
+    schreibe("icon-180.png", png_icon(180))  # U37: iPhone (apple-touch-icon)
 
     # B6, B16, B25, B24: Textseiten, Server-Konfiguration, robots.txt
     env = Environment(loader=FileSystemLoader(VORLAGEN), autoescape=select_autoescape(["j2"]),

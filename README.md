@@ -52,8 +52,17 @@ werden die fälligen Quellen abgerufen). Es braucht keinen Eintrag im DSM-Taskpl
 `restart: unless-stopped`, das Compose schon setzt.
 
 **Überwachung (B2).** Je Quelle stehen letzter Lauf, Dauer, Anzahl Loipen und Fehler in der Datenbank
-(`quellen`) und im Abschnitt `quellen` der `daten.json`. Liefert eine Quelle 0 Loipen oder fällt aus,
-steht das im Log und, wenn ntfy eingerichtet ist, als Push (einmal beim Wechsel, nicht bei jedem Lauf).
+(`quellen`) und im Abschnitt `quellen` der `daten.json`. Jeder Abruf steht zusätzlich in der Tabelle
+`abrufprotokoll`.
+
+**Quellen-Wächter (B26).** Bricht eine Quelle ab, liefert sie 0 Loipen oder weniger als die Hälfte ihres
+üblichen Werts, meist weil sich die Webseite geändert hat, meldet der Worker das per Push (ntfy) und per
+Mail an `LOIPEN_WAECHTER_MAIL` (leer = Impressum-Adresse, Versand über den SMTP-Zugang des Mail-Abos).
+Ein einzelner Aussetzer bleibt still, gemeldet wird erst nach zwei auffälligen Abrufen hintereinander.
+Danach höchstens eine Erinnerung am Tag und eine Entwarnung, sobald die Quelle wieder normal liefert.
+Liefert eine Quelle eine Woche lang stabil weniger, gilt das als neuer Normalwert. Schwellen stehen im
+Block `waechter` in `config/sources.yaml`, je Quelle überschreibbar, z. B. `waechter: {aus: true}`.
+Die Mail sagt auch, was zu tun ist: Schnappschuss holen, Fixture-Test, dann Adapter reparieren.
 
 **Push (N1, N4).** In `.env` `LOIPEN_NTFY_URL=https://ntfy.sh/<geheimes-thema>` setzen (Thema wie ein
 Passwort wählen, in der ntfy-App abonnieren). Wer wofür benachrichtigt wird, steht in `config/abos.yaml`:
@@ -135,6 +144,15 @@ Mail an `LOIPEN_ABO_MELDUNGEN_AN` und beim nächsten Lauf als Push; sie ändern 
 
 Voraussetzung ist ein Webspace mit PHP und `mail()`, bei netcup Webhosting gegeben. Mit Cloudflare
 Pages ginge das Abo nur mit einem eigenen Worker.
+
+### Als App aufs Handy (U37, U38)
+
+Die Seite ist eine installierbare Web-App. Auf Android zeigt die Startseite einen Knopf „Installieren“,
+sobald Chrome die Installation anbietet. Auf dem iPhone steht dort die Anleitung: in Safari auf
+„Teilen“, dann „Zum Home-Bildschirm“. Die installierte App startet ohne Browserleiste, hat Kurzbefehle
+für Heute, Karte und Loipen und zeigt ohne Netz den zuletzt geladenen Stand mit Datum. Installieren
+geht nur über HTTPS, also erst nach dem Livegang; im Heimnetz über `http://` zeigt der Browser den Knopf
+nicht. Die App lädt sich nur neu, wenn sich die App selbst ändert, nicht bei jedem neuen Datenstand.
 
 ## Entwickeln und testen
 

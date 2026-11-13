@@ -36,7 +36,7 @@ header .in{display:flex;align-items:center;gap:12px;min-height:64px}
 .suche li small{color:var(--mute)}
 .ort{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;font-size:15px;cursor:pointer;white-space:nowrap;max-width:44vw;overflow:hidden;text-overflow:ellipsis}
 .ortwahl{position:fixed;inset:0;z-index:60;background:#000a;display:grid;place-items:center;padding:16px}
-.ortwahl[hidden]{display:none}
+[hidden],.ortwahl[hidden]{display:none!important}
 .ortwahl .box{width:min(480px,100%);max-height:80vh;overflow:auto;background:var(--solid);border:1px solid var(--line);border-radius:24px;padding:18px}
 .ortwahl button.o{display:flex;justify-content:space-between;width:100%;min-height:48px;align-items:center;padding:0 14px;border:0;border-radius:12px;background:transparent;color:var(--ink);font:inherit;cursor:pointer;text-align:left}
 .ortwahl button.o:hover{background:var(--unk-bg)}
@@ -160,3 +160,12 @@ h2.sec.land{margin-top:34px}
 .formular button{justify-self:start}
 .antwort{margin:0;font-size:15px}.antwort:empty{display:none}
 .antwort.gut{color:var(--ok)}.antwort.schlecht{color:var(--bad)}
+/* U38: Offline-Hinweis unter der Kopfzeile, U37: Als App installieren */
+.netz{background:var(--mid-bg);color:var(--mid);border-bottom:1px solid var(--line);font-size:.92rem}
+.netz .wrap{padding-top:8px;padding-bottom:8px}
+.netz .link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;min-height:24px}
+.app-hinweis{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:12px 16px;margin:12px 0;border-radius:14px;border:1px solid var(--line)}
+.app-hinweis p{margin:0;flex:1 1 240px}
+.app-hinweis .knoepfe{display:flex;gap:8px;flex-wrap:wrap}
+.app-hinweis .teilen{vertical-align:-3px;color:var(--cy)}
+@media (display-mode:standalone){#app-knopf{display:none}}
