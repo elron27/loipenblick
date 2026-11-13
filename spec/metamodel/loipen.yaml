@@ -22,9 +22,10 @@ properties:
       - { key: kann, name: Kann }
   - key: umfang
     name: Umfang
-    description: "In Version 1, in Ausbaustufe 1 (Kufstein/Tirol und Salzburg) oder später."
+    description: "In Version 1, in Ausbaustufe 1 (Kufstein/Tirol und Salzburg), für den Livegang (Winter 2026/27) oder später."
     kind: choice
     choices:
       - { key: v1, name: Version 1 }
       - { key: ausbau1, name: Ausbaustufe 1 }
+      - { key: livegang, name: Livegang }
       - { key: spaeter, name: Später }
