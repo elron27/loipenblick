@@ -1,8 +1,11 @@
-# <zielpfad> <url> -- Runde 9 (13.11.2026): Suedtirol-Anbindung (Dolomiti NordicSki, Open Data Hub)
-tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/loipen-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
-tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/region-4.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html?region=4
-tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/js_trails.js https://www.dolomitinordicski.com/cache-buster-1788248855/build/js_trails.cf68b7f9.js
-tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-robots.txt https://maps.dolomitinordicski.com/robots.txt
-tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-v2.html https://maps.dolomitinordicski.com/v2/de
-tests/fixtures/suedtirol/2026-11-13/opendatahub/loipen.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true
-tests/fixtures/suedtirol/2026-11-13/opendatahub/tourismusvereine.json https://tourism.api.opendatahub.com/v1/TourismAssociation?pagesize=200&language=de&removenullvalues=true
+# <zielpfad> <url> -- Runde 10 (13.11.2026): offene tirol.at-Loipen mit Listendaten (Laenge, Stil), Sonderloipen
+tests/fixtures/tirol/2026-11-13/loipen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen
+tests/fixtures/tirol/2026-11-13/loipen_offen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN
+tests/fixtures/tirol/2026-11-13/loipen_offen_listpos2.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=2
+tests/fixtures/tirol/2026-11-13/loipen_offen_listpos3.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=3
+tests/fixtures/tirol/2026-11-13/loipen_offen_listpos4.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=4
+tests/fixtures/tirol/2026-11-13/snowfactory-loipe-seefeld.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/snowfactory-loipe-seefeld
+tests/fixtures/tirol/2026-11-13/a2-snowfarmingloipe-leutasch.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/a2-snowfarmingloipe-leutasch
+tests/fixtures/tirol/2026-11-13/opening-loipe-sedlsee-small.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/opening-loipe-sedlsee-small
+tests/fixtures/tirol/2026-11-13/hoehenloipe-pitztaler-gletscher.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/hoehenloipe-am-pitztaler-gletscher-im-herbst-fuer-gruppen-mit-voranmeldung
+tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
