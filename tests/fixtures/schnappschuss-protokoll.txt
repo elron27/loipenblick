@@ -95,3 +95,42 @@ ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM
 200 https://www.graubuenden.ch/robots.txt
 200   247017 tests/fixtures/recherche-2026-11-13/schweiz/graubuenden/start-langlaufsaison.html https://www.graubuenden.ch/de/news/start-langlaufsaison
 NICHT ERREICHBAR https://chmobilorg.mironet.ch: FEHLER <urlopen error [Errno -2] Name or service not known>
+# Lauf 2026-11-13 07:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://tourism.api.opendatahub.com/robots.txt
+200  2074414 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipen-alle.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=300&odhtagfilter=loipen&language=de&removenullvalues=true
+200    11267 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/langlaufen-anzahl.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=1&odhtagfilter=langlaufen&language=de
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/langlaufloipen.html https://www.seiseralm.it/de/aktiv/winter/langlaufen/langlaufloipen.html
+200 https://www.dolomitinordicski.com/robots.txt
+200   967440 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/open-tracks-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
+200      686 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/sitemap.xml https://www.dolomitinordicski.com/sitemap.xml
+404 https://www.kaernten.at/robots.txt
+200    86080 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-202.html https://www.kaernten.at/service/wetter/loipenberichte/?region=202
+200    86080 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-210.html https://www.kaernten.at/service/wetter/loipenberichte/?region=210
+200 https://touren.kaernten.at/robots.txt
+200   170468 tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/langlauf.html https://touren.kaernten.at/de/touren/#cat=Langlauf
+404 https://tools.nlw.at/robots.txt
+200     7695 tests/fixtures/recherche-2026-11-13/kaernten/nlw/sportbericht.html https://tools.nlw.at/sportbericht/
+200  9272827 tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-nps.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-nps.pdf
+200  5192665 tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-ws.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ws.pdf
+200 https://www.nassfeld.at/robots.txt
+200   873346 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/winter-world.html https://www.nassfeld.at/de/Winter-World
+200 https://www.badkleinkirchheim.com/robots.txt
+200   116074 tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/home.html https://www.badkleinkirchheim.com/
+200 https://snow.myswitzerland.com/robots.txt
+200     1244 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemapindex.xml https://snow.myswitzerland.com/sitemapindex.xml
+200   301436 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/schneebericht.html https://snow.myswitzerland.com/schneebericht/
+200   265005 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/goms-272.html https://snow.myswitzerland.com/schneebericht/goms-272/
+200   344946 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/davos-69.html https://snow.myswitzerland.com/schneebericht/davos-69/
+200 https://www.davos.ch/robots.txt
+200   398172 tests/fixtures/recherche-2026-11-13/schweiz/davos/loipenbericht.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipenbericht-davos-klosters
+200 https://www.engadin.ch/robots.txt
+200   815045 tests/fixtures/recherche-2026-11-13/schweiz/engadin/schneesportberichte-trails.html https://www.engadin.ch/de/berichte/schneesportberichte?tab=trails
+200 https://arosalenzerheide.swiss/robots.txt
+200   733893 tests/fixtures/recherche-2026-11-13/schweiz/arosalenzerheide/langlaufen.html https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Langlaufen
+200 https://www.infosnow.ch/robots.txt
+200    13042 tests/fixtures/recherche-2026-11-13/schweiz/infosnow/home.html https://www.infosnow.ch/
+200 https://www.goms.ch/robots.txt
+200   270526 tests/fixtures/recherche-2026-11-13/schweiz/goms/home.html https://www.goms.ch/
+200 https://www.loipen.ch/robots.txt
+200    53129 tests/fixtures/recherche-2026-11-13/schweiz/loipen-schweiz/home.html https://www.loipen.ch/

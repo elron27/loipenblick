@@ -1,0 +1,10 @@
+User-agent: * 
+Disallow: /*?pimcore_preview
+Disallow: /*?randSeed
+Disallow: /*&randSeed
+Disallow: /*/auth/
+Disallow: /cart/*
+Disallow: /ajax/pdf-pageviewer*
+
+
+Sitemap: https://arosalenzerheide.swiss/sitemap.site_49.xml

@@ -1,0 +1,8 @@
+User-Agent: *
+
+# Achtung bei livegang NICHTS mehr ändern, "Disallow:" passt so und erlaubt den zugriff des crawlers! 
+Disallow:                                  
+
+Sitemap: https://www.badkleinkirchheim.com/googlesitemap/
+Sitemap: https://www.badkleinkirchheim.com/en/googlesitemap/
+Sitemap: https://www.badkleinkirchheim.com/it/googlesitemap/

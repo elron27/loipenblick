@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.engadin.ch
+Sitemap: https://www.engadin.ch/sitemap.xml
+Sitemap: https://api.engadin.ch/en/sitemap.xml
+Sitemap: https://api.engadin.ch/de/sitemap.xml
+Sitemap: https://api.engadin.ch/it/sitemap.xml

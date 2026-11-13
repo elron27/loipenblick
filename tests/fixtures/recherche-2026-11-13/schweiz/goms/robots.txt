@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /fileadmin
+Disallow: /uploads
+Disallow: /*tx_form_formframework
+Disallow: */All/*
+Disallow: /*?data-api=calendar
+Allow: /fileadmin/_processed_
+Allow: /uploads/images
+Allow: /fileadmin/Mediendatenbank/
+
+Sitemap: https://www.goms.ch/sitemap.xml
+Sitemap: https://www.goms.ch/en/sitemap.xml
+Sitemap: https://www.goms.ch/fr/sitemap.xml
