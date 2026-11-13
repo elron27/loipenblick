@@ -1,0 +1,6 @@
+# robots.txt [seiseralm.it - 2025]
+
+User-agent: *
+Disallow: /pdf/ 
+
+Sitemap: https://www.seiseralm.it/sitemap.xml

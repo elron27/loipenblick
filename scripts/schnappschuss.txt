@@ -1,3 +1,6 @@
-# <zielpfad> <url> -- Runde 7 (13.11.2026): Loipenbericht Olympiaregion Seefeld (Seefeld + Leutasch, 62 Loipen)
-tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
-tests/fixtures/seefeld/2026-11-13/arena365-loipen.html https://www.seefeld.com/arena365/de/loipen.html
+# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 4
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langlauf.html https://snow.myswitzerland.com/schneebericht/langlauf/
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-scuol-zernez-60.html https://snow.myswitzerland.com/schneebericht/engadin-scuol-zernez-60/
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/einsiedeln-loipe-schwedentritt-281.html https://snow.myswitzerland.com/schneebericht/einsiedeln-loipe-schwedentritt-281/
+tests/fixtures/recherche-2026-11-13/schweiz/goms/loipen-bericht.html https://www.goms.ch/wintersportbericht/loipen-bericht
+tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/robots-pruefung.html https://touren.kaernten.at/de/touren/langlauf/kaernten/r/1035435/

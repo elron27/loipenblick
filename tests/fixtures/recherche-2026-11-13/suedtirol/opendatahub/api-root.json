@@ -1,0 +1,925 @@
+{"TotalResults":185,"TotalPages":19,"CurrentPage":1,"PreviousPage":null,"NextPage":"https://tourism.api.opendatahub.com/v1/MetaData?pagenumber=2","Seed":null,"Items":[{
+  "Id": "00109544-2a58-4051-b619-b350e0035d20",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/00109544-2a58-4051-b619-b350e0035d20",
+  "Tags": [],
+  "Type": "odhactivitypoi",
+  "_Meta": {
+    "Id": "00109544-2a58-4051-b619-b350e0035d20",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:54.8262795+00:00",
+    "UpdateInfo": {
+      "Revision": 40,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:54.8262795+00:00",
+          "UpdateSource": "api"
+        },
+        {
+          "UpdatedBy": "bcf053c4-6f2c-484b-8731-b6c1a8909f04",
+          "LastUpdate": "2026-04-13T08:32:24.0398188+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        },
+        {
+          "UpdatedBy": "d72672b0-fd91-4635-8a1a-5a20906a8e82",
+          "LastUpdate": "2026-07-29T10:33:28.8308746+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi?tagfilter=museums",
+  "Output": null,
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "idm",
+    "lts",
+    "siag"
+  ],
+  "Category": [],
+  "ApiAccess": null,
+  "ApiFilter": [
+    "tagfilter=museums"
+  ],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "ODHActivityPoi"
+  ],
+  "Shortname": "Museums",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:54.8263677+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/ODHActivityPoi",
+  "FirstImport": "2023-09-18T07:48:09.6544784+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 513
+  },
+  "DataProvider": [
+    "SIAG",
+    "LTS"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://images.opendatahub.com/api/Image/GetImage?imageurl=a308d8ba-b7d0-4cb2-9dc9-143c2af150f8.jpg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "pexels.com",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "de": "",
+    "en": "This dataset contains a list of museums. It includes the museum name, description, address, contact details (such as email, phone number and website), image, location with GPS coordinates, category tags of the museum category and source of the dataset. "
+  },
+  "DatasetLicenses": [
+    "Closed",
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "044e4651-2e05-45fd-8bb8-1f795806ffde",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/044e4651-2e05-45fd-8bb8-1f795806ffde",
+  "Tags": [],
+  "Type": "odhactivitypoi",
+  "_Meta": {
+    "Id": "044e4651-2e05-45fd-8bb8-1f795806ffde",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:55.7587636+00:00",
+    "UpdateInfo": {
+      "Revision": 40,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "d72672b0-fd91-4635-8a1a-5a20906a8e82",
+          "LastUpdate": "2025-12-10T09:57:51.9255845+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        },
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:55.7587636+00:00",
+          "UpdateSource": "api"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi?tagfilter=traffic and transport",
+  "Output": null,
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "lts"
+  ],
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [
+    "tagfilter=traffic and transport"
+  ],
+  "Dataspace": "mobility",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "ODHActivityPoi"
+  ],
+  "Shortname": "Transport info and providers",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:55.7587872+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/ODHActivityPoi",
+  "FirstImport": "2023-09-18T07:53:23.9016077+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 2178
+  },
+  "DataProvider": [
+    "STA",
+    "LTS"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://cdn.opendatahub.com/api/Image/GetImage?imageurl=66c7f4ea-d58a-4830-b5aa-10f1b0589486.jpg",
+      "CopyRight": "Open Data Hub / Tania Marcadella",
+      "ImageDesc": {
+        "en": "Open Data Hub / Tania Marcadella"
+      },
+      "ImageName": "Transport info and providers",
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {
+        "en": "Transport info and providers"
+      },
+      "ImageSource": "pexels.com",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "This dataset contains info on different transport options. It includes info on transport locations such as train stations, bike stations, bus stops, ski bus stops, car rentals and parking areas. And a list of providers such as taxis, transfers and shuttles. It includes insights on service types, locations, GPS coordinates and contact information."
+  },
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "0452ad04-57e5-4cd5-8c77-dfaebf697696",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/0452ad04-57e5-4cd5-8c77-dfaebf697696",
+  "Tags": [],
+  "Type": "event",
+  "_Meta": {
+    "Id": "0452ad04-57e5-4cd5-8c77-dfaebf697696",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:56.2608171+00:00",
+    "UpdateInfo": {
+      "Revision": 5,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "fc31511b-641b-4dc6-8b33-41a3952727fb",
+          "LastUpdate": "2026-06-08T08:58:41.3266749+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        },
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:56.2608171+00:00",
+          "UpdateSource": "api"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/Event?source=unibz",
+  "Output": {
+    "default": "application/json"
+  },
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "unibz"
+  ],
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [
+    "source=unibz"
+  ],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "Event"
+  ],
+  "Shortname": "Events by Unibz",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:56.2608238+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/Event",
+  "FirstImport": "2026-06-08T08:58:01.9490478+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 23
+  },
+  "DataProvider": [
+    "Free University of Bozen-Bolzano"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": null,
+      "ValidTo": null,
+      "ImageUrl": "https://cdn.opendatahub.com/api/Image/GetImage?imageurl=f912afbf-321d-4edf-8da7-bb038077d3eb.jpeg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": null,
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "This dataset exposes all events inserted by UniBZ"
+  },
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "045dea0f-419d-4f5b-b270-27abb475e266",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/045dea0f-419d-4f5b-b270-27abb475e266",
+  "Tags": [],
+  "Type": "event",
+  "_Meta": {
+    "Id": "045dea0f-419d-4f5b-b270-27abb475e266",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:56.6882428+00:00",
+    "UpdateInfo": {
+      "Revision": 12,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "fc31511b-641b-4dc6-8b33-41a3952727fb",
+          "LastUpdate": "2026-08-11T14:14:16.1493984+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        },
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:56.6882428+00:00",
+          "UpdateSource": "api"
+        },
+        {
+          "UpdatedBy": "09dd277d-a912-4b8a-809b-283233421611",
+          "LastUpdate": "2026-08-20T17:17:19.2819094+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        },
+        {
+          "UpdatedBy": "d72672b0-fd91-4635-8a1a-5a20906a8e82",
+          "LastUpdate": "2026-09-14T07:17:28.5707857+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/Event?source=retealfemminile",
+  "Output": {
+    "default": "application/json"
+  },
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "retealfemminile"
+  ],
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [
+    "source=retealfemminile"
+  ],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "Event"
+  ],
+  "Shortname": "Events by Rete al Femminile",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:56.6882489+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/Event",
+  "FirstImport": "2026-08-11T14:14:16.149404+00:00",
+  "LicenseInfo": {
+    "Author": "https:\\\\noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https:\\\\noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 1
+  },
+  "DataProvider": [
+    "Retealfemminile"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": null,
+      "ValidTo": null,
+      "ImageUrl": "https://cdn.opendatahub.com/api/Image/GetImage?imageurl=2fe3d228-ecc8-46bc-92cd-d4632d676dc3.jpg",
+      "CopyRight": "© Anna Cerrato",
+      "ImageDesc": {},
+      "ImageName": "Event",
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "© Anna Cerrato",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": null,
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "054e3e27-61a4-41ea-867f-fc97b275cef1",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/054e3e27-61a4-41ea-867f-fc97b275cef1",
+  "Tags": [],
+  "Type": "odhactivitypoi",
+  "_Meta": {
+    "Id": "054e3e27-61a4-41ea-867f-fc97b275cef1",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:57.0571152+00:00",
+    "UpdateInfo": {
+      "Revision": 15,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:57.0571152+00:00",
+          "UpdateSource": "api"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi?tagfilter=horses",
+  "Output": null,
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "lts"
+  ],
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [
+    "tagfilter=horses"
+  ],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "ODHActivityPoi"
+  ],
+  "Shortname": "Horses",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:57.0571235+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/ODHActivityPoi",
+  "FirstImport": "2023-09-18T07:30:53.9904419+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 11
+  },
+  "DataProvider": [
+    "LTS"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://images.opendatahub.com/api/Image/GetImage?imageurl=64f7a645-8eca-46e0-b7d1-e28b3c87845c.jpeg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "pexels.com",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "The dataset includes information on horse-related activities, such as horseback riding locations and services. It contains details like types of services, locations, GPS information, and contact details, along with descriptions and updates."
+  },
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "05b041ae-f5d2-452a-ae98-88bfb42bba31",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/05b041ae-f5d2-452a-ae98-88bfb42bba31",
+  "Type": "geoshape",
+  "_Meta": {
+    "Id": "05b041ae-f5d2-452a-ae98-88bfb42bba31",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2024-11-07T16:21:08.2187214+00:00",
+    "UpdateInfo": {
+      "UpdatedBy": "r.thoeni@noi.bz.it",
+      "UpdateSource": "https://databrowser.opendatahub.com/"
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/GeoShapes",
+  "Output": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "ODHTags": [],
+  "OdhType": null,
+  "Sources": null,
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [],
+  "Dataspace": "tourism",
+  "OdhTagIds": null,
+  "PathParam": [
+    "v1",
+    "GeoShapes"
+  ],
+  "Shortname": "Geo Shapes",
+  "Deprecated": false,
+  "LastChange": "2024-11-07T16:21:08.2187214+00:00",
+  "SwaggerUrl": "https://tourism.opendatahub.com/swagger/index.html#/Geo/get_v1_GeoShapes",
+  "FirstImport": "2024-11-07T08:37:21.7017996+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": null,
+  "DataProvider": null,
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://tourism.images.opendatahub.com/api/Image/GetImage?imageurl=423b07fc-5c35-4fe6-a3c4-f5a1f839a4d6.jpg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "pexels.com",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "This dataset contains GeoShapes"
+  }
+},{
+  "Id": "06a618eb-0fc5-4d97-a95e-61a062d0d392",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/06a618eb-0fc5-4d97-a95e-61a062d0d392",
+  "Tags": [],
+  "Type": "municipality",
+  "_Meta": {
+    "Id": "06a618eb-0fc5-4d97-a95e-61a062d0d392",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:57.7274659+00:00",
+    "UpdateInfo": {
+      "Revision": 6,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:57.7274659+00:00",
+          "UpdateSource": "api"
+        },
+        {
+          "UpdatedBy": "d72672b0-fd91-4635-8a1a-5a20906a8e82",
+          "LastUpdate": "2026-09-14T08:21:46.1792476+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/Municipality",
+  "Output": {
+    "default": "application/json",
+    "ld+json": "application/ld+json"
+  },
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": "municipality",
+  "Sources": [
+    "idm"
+  ],
+  "Category": [],
+  "ApiAccess": {
+    "idm": "open"
+  },
+  "ApiFilter": [],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "Municipality"
+  ],
+  "Shortname": "Municipality",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:57.7274722+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/Common/get_v1_Municipality",
+  "FirstImport": "2022-11-23T13:47:58.9448734+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 116
+  },
+  "DataProvider": [
+    "IDM"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://cdn.opendatahub.com/api/Image/GetImage?imageurl=178d9eb5-1255-4187-a12b-d1cd95afe255.jpg",
+      "CopyRight": "© Open Data Hub / Tania Marcadella",
+      "ImageDesc": {},
+      "ImageName": "Municipality",
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "© Open Data Hub / Tania Marcadella",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "These datasets contain Municipalities which are provided by LTS. And, in addition Areas are a LTS Categorization (custom LTS cluster). Areas, for example, are used on LTS Activities."
+  },
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "07d5e76d-5efa-44a1-b6a5-ce91780d6eb7",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/07d5e76d-5efa-44a1-b6a5-ce91780d6eb7",
+  "Tags": [],
+  "Type": "publisher",
+  "_Meta": {
+    "Id": "07d5e76d-5efa-44a1-b6a5-ce91780d6eb7",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:57.8742292+00:00",
+    "UpdateInfo": {
+      "Revision": 5,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:57.8742292+00:00",
+          "UpdateSource": "api"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/Publisher",
+  "Output": null,
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "Unknown"
+  ],
+  "Category": [
+    "Tags",
+    "Internal"
+  ],
+  "ApiAccess": null,
+  "ApiFilter": [],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "Publisher"
+  ],
+  "Shortname": "Publisher",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:57.8742361+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/Publisher",
+  "FirstImport": "2023-11-06T15:47:22.6817287+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 16
+  },
+  "DataProvider": [
+    "NOI S.P.A."
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://tourism.images.opendatahub.com/api/Image/GetImage?imageurl=acffb095-9c70-4c05-897d-eec2bd2bd4d8.jpg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": null,
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "This dataset collects the list of applications that consumes data from the Open Data Hub. The data consumer, by assigning a publisher to one or more records, will have then the possibility to easily  filter out the records that are interesting or his use case."
+  },
+  "DatasetLicenses": [
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "08d32d0a-6dd9-46af-9375-86efe9586c9f",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/08d32d0a-6dd9-46af-9375-86efe9586c9f",
+  "Tags": [],
+  "Type": "article",
+  "_Meta": {
+    "Id": "08d32d0a-6dd9-46af-9375-86efe9586c9f",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2026-11-09T15:50:58.1342081+00:00",
+    "UpdateInfo": {
+      "Revision": 26,
+      "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+      "UpdateSource": "api",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "f257e9a7-1e9c-4049-9271-fcc681b99e61",
+          "LastUpdate": "2026-11-09T15:50:58.1342081+00:00",
+          "UpdateSource": "api"
+        },
+        {
+          "UpdatedBy": "fc31511b-641b-4dc6-8b33-41a3952727fb",
+          "LastUpdate": "2026-06-15T09:37:26.0749133+00:00",
+          "UpdateSource": "https://databrowser.opendatahub.com/"
+        }
+      ]
+    }
+  },
+  "ApiUrl": "https://tourism.api.opendatahub.com/v1/Article?eq(Type,'newsfeednoi')",
+  "Output": null,
+  "TagIds": null,
+  "ApiType": "content",
+  "BaseUrl": "https://tourism.api.opendatahub.com",
+  "OdhType": null,
+  "Sources": [
+    "idm",
+    "noi"
+  ],
+  "Category": null,
+  "ApiAccess": null,
+  "ApiFilter": [
+    "eq(Type,'newsfeednoi')"
+  ],
+  "Dataspace": "tourism",
+  "MetaTitle": null,
+  "PathParam": [
+    "v1",
+    "Article"
+  ],
+  "Shortname": "NOI news",
+  "Deprecated": false,
+  "LastChange": "2026-11-09T15:50:58.1342143+00:00",
+  "SwaggerUrl": "https://tourism.api.opendatahub.com/swagger/index.html#/Article",
+  "FirstImport": "2023-09-18T07:57:26.0019765+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": [],
+  "RecordCount": {
+    "Total": 3149
+  },
+  "DataProvider": [
+    "NOI S.P.A."
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": null,
+      "ValidTo": null,
+      "ImageUrl": "https://images.opendatahub.com/api/Image/GetImage?imageurl=54125469-ecea-400d-9306-2397fae80a8e.jpg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": null,
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "  This dataset is a collection of news articles in different languages, including German, English, and Italian. It features articles with text and images on various topics, each with a title, language details, and update information."
+  },
+  "DatasetLicenses": [
+    "Closed",
+    "CC0"
+  ],
+  "MetaDescription": null,
+  "CoordinateSource": null
+},{
+  "Id": "0e90b559-ef57-4aef-8c0a-a33fc4af4508",
+  "Self": "https://tourism.api.opendatahub.com/v1/MetaData/0e90b559-ef57-4aef-8c0a-a33fc4af4508",
+  "Type": null,
+  "_Meta": {
+    "Id": "0e90b559-ef57-4aef-8c0a-a33fc4af4508",
+    "Type": "odhmetadata",
+    "Source": "noi",
+    "Reduced": false,
+    "LastUpdate": "2023-12-15T16:18:03.3589352+00:00",
+    "UpdateInfo": {
+      "UpdatedBy": "mennittid@gmail.com",
+      "UpdateSource": "https://databrowser.opendatahub.testingmachine.eu/"
+    }
+  },
+  "ApiUrl": "https://mobility.api.opendatahub.com/v2/flat/ParkingSensor",
+  "Output": null,
+  "ApiType": "timeseries",
+  "BaseUrl": "https://mobility.api.opendatahub.com",
+  "ODHTags": [],
+  "OdhType": null,
+  "Sources": null,
+  "Category": [],
+  "ApiAccess": null,
+  "ApiFilter": [],
+  "Dataspace": "mobility",
+  "OdhTagIds": [],
+  "PathParam": [
+    "v2",
+    "flat",
+    "ParkingSensor"
+  ],
+  "Shortname": "Parking Sensor",
+  "Deprecated": false,
+  "LastChange": "2023-12-15T16:18:03.3589352+00:00",
+  "SwaggerUrl": "https://swagger.opendatahub.com/?url=https://mobility.api.opendatahub.com/v2/apispec#/",
+  "FirstImport": "2023-07-13T09:32:18.1514236+00:00",
+  "LicenseInfo": {
+    "Author": "https://noi.bz.it",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://noi.bz.it"
+  },
+  "PublishedOn": null,
+  "RecordCount": null,
+  "DataProvider": [
+    "Municipality of Bolzano",
+    "Municipality of Merano",
+    "Municipality of Bressanone"
+  ],
+  "ImageGallery": [
+    {
+      "Width": null,
+      "Height": null,
+      "License": "CC0",
+      "ValidTo": null,
+      "ImageUrl": "https://tourism.images.opendatahub.com/api/Image/GetImage?imageurl=6f721382-b6db-4427-9c7b-fc58d26fc086.jpg",
+      "CopyRight": null,
+      "ImageDesc": {},
+      "ImageName": null,
+      "ImageTags": null,
+      "ValidFrom": null,
+      "ImageTitle": {},
+      "ImageSource": "pexels.com",
+      "IsInGallery": null,
+      "ImageAltText": {},
+      "ListPosition": null,
+      "LicenseHolder": null
+    }
+  ],
+  "ApiDescription": {
+    "en": "On street parking data. Single parking slots on streets, can be within a virtual area"
+  }
+}]}

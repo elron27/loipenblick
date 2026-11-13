@@ -93,3 +93,104 @@ ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM
 200 https://www.seefeld.com/robots.txt
 200  5894945 tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
 200  2250967 tests/fixtures/seefeld/2026-11-13/arena365-loipen.html https://www.seefeld.com/arena365/de/loipen.html
+# Lauf 2026-11-13 07:22 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.suedtirol.info/robots.txt
+200   489374 tests/fixtures/recherche-2026-11-13/suedtirol/suedtirol-info/loipen.html https://www.suedtirol.info/de/erleben/winter/langlaufen/loipen
+404 https://tourism.api.opendatahub.com/robots.txt
+200    26788 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/api-root.json https://tourism.api.opendatahub.com/v1
+200    53588 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-langlauf.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=5&odhtagfilter=loipen&language=de
+200    36658 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-type2.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=3&type=2
+200    52526 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/snowreport.json https://tourism.api.opendatahub.com/v1/Weather/SnowReport?lang=de
+200   898053 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/odhtags-poi.json https://tourism.api.opendatahub.com/v1/ODHTag?validforentity=odhactivitypoi&pagesize=500
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/opentrails.html https://www.seiseralm.it/opentrails
+200 https://www.dolomitinordicski.com/robots.txt
+200   692318 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/home-de.html https://www.dolomitinordicski.com/de/home.html
+200   974877 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/alta-badia-open-tracks.html https://www.dolomitinordicski.com/en/regions/alta-badia/open-tracks/2.html
+404 https://www.kaernten.at/robots.txt
+200    88864 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte.html https://www.kaernten.at/service/wetter/loipenberichte/
+200   110507 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/langlaufzentren.html https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufzentren/
+200 https://www.nassfeld.at/robots.txt
+200   442675 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/home.html https://www.nassfeld.at/de
+200 https://www.weissensee.com/robots.txt
+200   474155 tests/fixtures/recherche-2026-11-13/kaernten/weissensee/home.html https://www.weissensee.com/de
+200 https://snow.myswitzerland.com/robots.txt
+200   614057 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-65.html https://snow.myswitzerland.com/snow_reports/engadin-65
+200   117051 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langis-glaubenberg-109.html https://snow.myswitzerland.com/snow_reports/langis-glaubenberg-109/
+200   301436 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/home.html https://snow.myswitzerland.com/
+200 https://engadin-skimarathon.ch/robots.txt
+404    18300 tests/fixtures/recherche-2026-11-13/schweiz/engadin-skimarathon/xc-skiing.html https://engadin-skimarathon.ch/en/news-services/xc-skiing-in-the-engadin
+200 https://www.graubuenden.ch/robots.txt
+200   247017 tests/fixtures/recherche-2026-11-13/schweiz/graubuenden/start-langlaufsaison.html https://www.graubuenden.ch/de/news/start-langlaufsaison
+NICHT ERREICHBAR https://chmobilorg.mironet.ch: FEHLER <urlopen error [Errno -2] Name or service not known>
+# Lauf 2026-11-13 07:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://tourism.api.opendatahub.com/robots.txt
+200  2074414 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipen-alle.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=300&odhtagfilter=loipen&language=de&removenullvalues=true
+200    11267 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/langlaufen-anzahl.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=1&odhtagfilter=langlaufen&language=de
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/langlaufloipen.html https://www.seiseralm.it/de/aktiv/winter/langlaufen/langlaufloipen.html
+200 https://www.dolomitinordicski.com/robots.txt
+200   967440 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/open-tracks-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
+200      686 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/sitemap.xml https://www.dolomitinordicski.com/sitemap.xml
+404 https://www.kaernten.at/robots.txt
+200    86080 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-202.html https://www.kaernten.at/service/wetter/loipenberichte/?region=202
+200    86080 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-210.html https://www.kaernten.at/service/wetter/loipenberichte/?region=210
+200 https://touren.kaernten.at/robots.txt
+200   170468 tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/langlauf.html https://touren.kaernten.at/de/touren/#cat=Langlauf
+404 https://tools.nlw.at/robots.txt
+200     7695 tests/fixtures/recherche-2026-11-13/kaernten/nlw/sportbericht.html https://tools.nlw.at/sportbericht/
+200  9272827 tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-nps.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-nps.pdf
+200  5192665 tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-ws.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ws.pdf
+200 https://www.nassfeld.at/robots.txt
+200   873346 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/winter-world.html https://www.nassfeld.at/de/Winter-World
+200 https://www.badkleinkirchheim.com/robots.txt
+200   116074 tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/home.html https://www.badkleinkirchheim.com/
+200 https://snow.myswitzerland.com/robots.txt
+200     1244 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemapindex.xml https://snow.myswitzerland.com/sitemapindex.xml
+200   301436 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/schneebericht.html https://snow.myswitzerland.com/schneebericht/
+200   265005 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/goms-272.html https://snow.myswitzerland.com/schneebericht/goms-272/
+200   344946 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/davos-69.html https://snow.myswitzerland.com/schneebericht/davos-69/
+200 https://www.davos.ch/robots.txt
+200   398172 tests/fixtures/recherche-2026-11-13/schweiz/davos/loipenbericht.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipenbericht-davos-klosters
+200 https://www.engadin.ch/robots.txt
+200   815045 tests/fixtures/recherche-2026-11-13/schweiz/engadin/schneesportberichte-trails.html https://www.engadin.ch/de/berichte/schneesportberichte?tab=trails
+200 https://arosalenzerheide.swiss/robots.txt
+200   733893 tests/fixtures/recherche-2026-11-13/schweiz/arosalenzerheide/langlaufen.html https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Langlaufen
+200 https://www.infosnow.ch/robots.txt
+200    13042 tests/fixtures/recherche-2026-11-13/schweiz/infosnow/home.html https://www.infosnow.ch/
+200 https://www.goms.ch/robots.txt
+200   270526 tests/fixtures/recherche-2026-11-13/schweiz/goms/home.html https://www.goms.ch/
+200 https://www.loipen.ch/robots.txt
+200    53129 tests/fixtures/recherche-2026-11-13/schweiz/loipen-schweiz/home.html https://www.loipen.ch/
+# Lauf 2026-11-13 07:30 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://snow.myswitzerland.com/robots.txt
+200    41784 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemap_de.xml https://snow.myswitzerland.com/sitemap_de.xml
+200 https://www.goms.ch/robots.txt
+200   202784 tests/fixtures/recherche-2026-11-13/schweiz/goms/wintersportbericht.html https://www.goms.ch/wintersportbericht
+200 https://www.davos.ch/robots.txt
+200   234201 tests/fixtures/recherche-2026-11-13/schweiz/davos/loipen-tracking.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipen-tracking
+200 https://www.bergfex.at/robots.txt
+200   160637 tests/fixtures/recherche-2026-11-13/kaernten/bergfex/loipenberichte.html https://www.bergfex.at/kaernten/langlaufen/loipenberichte/
+200 https://www.nassfeld.at/robots.txt
+200   460171 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/alle-loipen.html https://www.nassfeld.at/de/Winter-World/Outdoor-Relax-World/Langlaufen/Alle-Loipen
+200 https://www.badkleinkirchheim.com/robots.txt
+404    90770 tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/pisten-lifte.html https://www.badkleinkirchheim.com/de/skigebiet/pisten-lifte
+200 https://www.woerthersee.com/robots.txt
+200   359220 tests/fixtures/recherche-2026-11-13/kaernten/woerthersee/roemerloipe.html https://www.woerthersee.com/en/dc-new/detail/POI/langlaufloipe-roemerloipe-bad-kleinkirchheim
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/geoeffnete-loipen.html https://www.seiseralm.it/de/aktivurlaub/winterurlaub/langlaufen/geoeffnete-loipen.html
+403 https://www.val-gardena.com/robots.txt
+ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
+200 https://www.ratschings.info/robots.txt
+404   128823 tests/fixtures/recherche-2026-11-13/suedtirol/ratschings/langlauf.html https://www.ratschings.info/en/experiences/experience-winter/the-journey-is-the-destination.html
+404 https://tourism.api.opendatahub.com/robots.txt
+200    11044 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipe-detail.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887?language=de
+# Lauf 2026-11-13 07:31 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://snow.myswitzerland.com/robots.txt
+200   295444 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langlauf.html https://snow.myswitzerland.com/schneebericht/langlauf/
+200   149651 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-scuol-zernez-60.html https://snow.myswitzerland.com/schneebericht/engadin-scuol-zernez-60/
+200   120187 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/einsiedeln-loipe-schwedentritt-281.html https://snow.myswitzerland.com/schneebericht/einsiedeln-loipe-schwedentritt-281/
+200 https://www.goms.ch/robots.txt
+200   181344 tests/fixtures/recherche-2026-11-13/schweiz/goms/loipen-bericht.html https://www.goms.ch/wintersportbericht/loipen-bericht
+200 https://touren.kaernten.at/robots.txt
+410        0 tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/robots-pruefung.html https://touren.kaernten.at/de/touren/langlauf/kaernten/r/1035435/
