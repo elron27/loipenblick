@@ -89,3 +89,7 @@ ROBOTS-VERBOT https://imxplatform-cust-bb.fsn1.your-objectstorage.com/media/gpx_
 ROBOTS-VERBOT https://imxplatform-cust-bb.fsn1.your-objectstorage.com/media/gpx_addressbase_311.gpx
 200 https://tirol.mapservices.eu/robots.txt
 ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM6/de/generate/51834
+# Lauf 2026-11-13 07:03 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.seefeld.com/robots.txt
+200  5894945 tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
+200  2250967 tests/fixtures/seefeld/2026-11-13/arena365-loipen.html https://www.seefeld.com/arena365/de/loipen.html
