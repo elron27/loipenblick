@@ -47,6 +47,13 @@ geben ihn nur auf sicheren Seiten frei (https oder localhost); unter `http://<NA
 deshalb nur die Ortssuche (bekannte Orte sofort, andere Orte und Postleitzahlen online über
 photon.komoot.io). Über https, etwa mit `tailscale serve` oder später auf dem Webspace, klappt beides.
 
+**Statistik (U19, U37–U39).** Die Seite `#/statistik` zeigt pro Winter (1. November bis 30. April),
+an wie vielen Tagen die Loipen befahrbar waren, den Saisonverlauf, Ranglisten der Gebiete und Loipen und
+wie verlässlich die Quellen melden. Gerechnet wird bei jedem Lauf auf dem NAS (`loipen/statistik.py`) aus der
+Historie in `zustaende`; die Seite liest nur `statistik/statistik.<hash>.json`. Befahrbar heißt: die Quelle
+meldete an diesem Tag offen oder eingeschränkt. Tage ohne Abruf sind Lücken. Solange es noch keinen vollen
+Winter gibt, zeigt die Beispielansicht einen erfundenen Winter (`statistik/beispiel.<hash>.json`).
+
 **Zeitplan (B3).** Den Zeitplan führt der Worker-Container selbst aus (APScheduler, zur vollen Stunde
 werden die fälligen Quellen abgerufen). Es braucht keinen Eintrag im DSM-Taskplaner, nur
 `restart: unless-stopped`, das Compose schon setzt.

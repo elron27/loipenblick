@@ -6,7 +6,7 @@
 const VERSION = "__STAND__";
 const SCHALE_CACHE = "loipenblick-app-" + VERSION;
 const DATEN_CACHE = "loipenblick-daten";
-const SCHALE = ["./", "app.css?v=" + VERSION, "app.js?v=" + VERSION, "manifest.webmanifest",
+const SCHALE = ["./", "app.css?v=" + VERSION, "app.js?v=" + VERSION, "statistik.js?v=" + VERSION, "manifest.webmanifest",
   "icon-192.png", "icon-512.png", "icon-maskable-512.png", "icon-180.png",
   "vendor/leaflet.js", "vendor/leaflet.css", "vendor/leaflet.markercluster.js", "vendor/MarkerCluster.css",
   "impressum.html", "datenschutz.html", "hinweise.html"];
@@ -34,6 +34,7 @@ function ausCache(antwort) {
 function aufraeumen(index) {
   const behalten = new Set(["daten.json"]);
   (index.regionen || []).forEach((r) => { if (r.datei) behalten.add(r.datei); if (r.strecken) behalten.add(r.strecken); });
+  Object.values(index.statistik || {}).forEach((d) => behalten.add(d));
   const basis = self.registration.scope;
   return caches.open(DATEN_CACHE).then((c) => c.keys().then((ks) => Promise.all(ks.map((k) => {
     const rel = k.url.startsWith(basis) ? k.url.slice(basis.length).split("?")[0] : k.url;

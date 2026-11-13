@@ -356,7 +356,7 @@ function seiteGebiet(slug) {
   var ohneZustand = g.loipen.length && g.loipen.every(function (l) { return l.ohne_zustand; });
   var h = "<h1>" + esc(g.name) + neuschneeBadge(g) + "</h1>" + (andere.length ? '<p class="fine">auch: ' + esc(andere.join(", ")) + "</p>" : "") +
     '<p class="fine">' + esc([g.region_name, gruppeName(g)].filter(Boolean).join(" · ")) + " · " + g.loipen.length + " Loipen" + (gesamt > 0 ? ", zusammen " + zahl(gesamt) + " km" : ", Länge noch unbekannt") + " · <a href=\"" + esc(safeUrl(g.tourist_url)) + '" rel="noopener">Touristeninformation</a></p>' +
-    '<h2 class="sec">Schnee</h2>' + schneeHtml(g) + '<h2 class="sec">Vorhersage</h2>' + vorhersageHtml(g) +
+    '<h2 class="sec">Schnee</h2>' + schneeHtml(g) + '<p class="fine"><a href="#/statistik?gebiet=' + esc(g.slug) + '">Saisonstatistik für ' + esc(g.name) + "</a></p>" + '<h2 class="sec">Vorhersage</h2>' + vorhersageHtml(g) +
     (ohneZustand ? '<p class="hinweis glass">Die Quelle für dieses Gebiet meldet keinen Loipenzustand, nur Lage und Länge. Den aktuellen Zustand kennt die Touristeninformation.</p>' : "") +
     '<h2 class="sec">Anreise</h2><ul class="plain">' +
     (g.grenzinfo ? '<li class="glass vignette"><span>Vignette</span><b>' + esc(g.grenzinfo) + "</b></li>" : "") +
@@ -435,7 +435,7 @@ function seiteLoipe(id) {
     var hist = l.historie.map(function (t) { return '<span class="' + (t.status ? "" : "keine ") + '" style="' + (t.status ? "background:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + "-bg);color:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + ')"' : "") + ' title="' + esc(t.tag + ": " + (t.status ? WORT[t.status] : "noch keine Daten")) + '">' + (t.status ? {offen: "✓", eingeschraenkt: "!", geschlossen: "✕", unbekannt: "?"}[t.status] : "·") + "</span>"; }).join("");
     view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
       '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + '</b></div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
-      miniKarte(l) + '<h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
+      miniKarte(l) + '<h2 class="sec">Saisonstatistik</h2><div id="saison"><p class="fine">Lädt …</p></div><h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
       '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.ohne_zustand ? "Quelle meldet keinen Zustand" : l.quelle_stand ? datum(l.quelle_stand) : l.ohne_datum ? "Quelle nennt nur den Status, kein Präparierdatum" : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li>" +
       (l.auch_bei && l.auch_bei.length ? '<li class="glass"><span>Auch gemeldet von</span><span>' + l.auch_bei.map(function (a) {
         /* D18: weicht die verdeckte Quelle ab, steht ihr Status dabei; es zaehlt die oben gezeigte, genauere Quelle */
@@ -449,6 +449,7 @@ function seiteLoipe(id) {
       (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "") +
       (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("l:" + l.id, "diese Loipe") + meldeFormular(l) : "");
     miniKarteZeichnen(l);
+    if (LB.saisonLoipe) LB.saisonLoipe(l, document.getElementById("saison"));  /* U19 */
   });
 }
 
@@ -682,6 +683,8 @@ function formulareBinden() {
       .catch(function () { antwort.textContent = "Das hat nicht geklappt. Bitte später noch einmal versuchen."; antwort.className = "antwort schlecht"; knopf.disabled = false; });
   });
 }
+/* Schnittstelle fuer weitere Seiten-Skripte (statistik.js), damit app.js klein bleibt */
+var LB = window.LB = {S: S, view: view, esc: esc, zahl: zahl, holeJson: holeJson, gruppen: gruppen, queryStr: queryStr, seiten: {}};
 
 /* ---------- U41: Offline-Hinweis ---------- */
 function netzZeigen() {
@@ -752,7 +755,7 @@ function installBinden() {
 /* ---------- Routing ---------- */
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
-  var tab = p.indexOf("/karte") === 0 ? "karte" : p.indexOf("/loipen") === 0 || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
+  var tab = p.indexOf("/karte") === 0 ? "karte" : p === "/statistik" ? "statistik" : p.indexOf("/loipen") === 0 || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
   document.querySelectorAll(".tabs a").forEach(function (a) { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   if (q.demo && (q.demo === "1") !== S.demo) { location.reload(); return; }
   kartenAbbauen();
@@ -760,6 +763,7 @@ function route() {
   if (p === "/karte") seiteKarte(q);
   else if (p === "/loipen") seiteListe(q);
   else if (p === "/abdeckung") seiteAbdeckung();
+  else if (LB.seiten[p]) LB.seiten[p](q);  /* z. B. /statistik aus statistik.js */
   else if (p.indexOf("/gebiet/") === 0) seiteGebiet(p.slice(8));
   else if (p.indexOf("/loipe/") === 0) seiteLoipe(p.slice(7));
   else seiteHeute(q);

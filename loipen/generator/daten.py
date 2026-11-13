@@ -92,7 +92,8 @@ def _mitte(gebiete: list[dict]) -> list[float] | None:
 
 
 def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 7) -> dict:
-    """Gibt {"index": ..., "regionen": {slug: {...}}, "strecken": {slug: {...}}} zurueck."""
+    """Gibt {"index": ..., "regionen": {slug: {...}}, "strecken": {slug: {...}}, "verdeckt": {id: fuehrend}} zurueck.
+    "verdeckt" (Dubletten) braucht die Saisonstatistik fuer den Quellenvergleich (U39)."""
     heute = jetzt.astimezone(BERLIN).date()
     zustaende: dict[int, list[Zustand]] = {}
     for z in session.scalars(select(Zustand).order_by(Zustand.abgerufen_at, Zustand.id)):
@@ -237,4 +238,4 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),
                        "veraltet": veraltet, **kennzahl},
     }
-    return {"index": index, "regionen": regionen, "strecken": strecken}
+    return {"index": index, "regionen": regionen, "strecken": strecken, "verdeckt": verdeckt}
