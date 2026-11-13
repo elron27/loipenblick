@@ -1,4 +1,4 @@
-"""Handy-App (PWA): U37 Installieren wie eine App, U38 offline der letzte Stand.
+"""Handy-App (PWA): U40 Installieren wie eine App, U41 offline der letzte Stand.
 
 Statische Pruefungen an den erzeugten Dateien und echte Browser-Tests (Playwright, Chromium) mit
 Service Worker, Offline-Modus und nachgestellten iPhone- und Android-Browsern.
@@ -43,7 +43,7 @@ def lies(site, rel):
 
 # ---------- statisch ----------
 
-@pytest.mark.req("U37", ak=1)
+@pytest.mark.req("U40", ak=1)
 def test_u37_manifest_mit_maskierbarem_symbol_und_iphone_symbol(site):
     m = json.loads(lies(site, "manifest.webmanifest"))
     assert m["id"] and m["display"] == "standalone" and m["lang"] == "de"
@@ -59,7 +59,7 @@ def test_u37_manifest_mit_maskierbarem_symbol_und_iphone_symbol(site):
     assert 'name="apple-mobile-web-app-capable" content="yes"' in html
 
 
-@pytest.mark.req("U37", ak=1)
+@pytest.mark.req("U40", ak=1)
 def test_u37_maskierbares_symbol_hat_spuren_nur_in_der_sicheren_mitte():
     from loipen.generator.icons import png_icon
     import zlib
@@ -70,13 +70,13 @@ def test_u37_maskierbares_symbol_hat_spuren_nur_in_der_sicheren_mitte():
     assert weiss and all(10 <= x <= 90 and 10 <= y <= 90 for x, y in weiss)  # Android-Maske: Radius 40 %
 
 
-@pytest.mark.req("U37", ak=3)
+@pytest.mark.req("U40", ak=3)
 def test_u37_kurzbefehle_fuer_karte_und_liste(site):
     m = json.loads(lies(site, "manifest.webmanifest"))
     assert {s["url"] for s in m["shortcuts"]} == {"./#/", "./#/karte", "./#/loipen"}
 
 
-@pytest.mark.req("U38", ak=3)
+@pytest.mark.req("U41", ak=3)
 def test_u38_app_version_aendert_sich_nicht_mit_den_daten(engine, tmp_path):
     """Neue Daten jede Stunde, aber die App bleibt gleich: kein stuendliches Neuladen der App auf dem Handy."""
     sw = []
@@ -94,7 +94,7 @@ def test_u38_app_version_aendert_sich_nicht_mit_den_daten(engine, tmp_path):
     assert generator.app_version() in sw[0]
 
 
-@pytest.mark.req("U38", ak=3)
+@pytest.mark.req("U41", ak=3)
 def test_u38_daten_cache_ueberlebt_updates_und_wird_aufgeraeumt(site):
     sw = lies(site, "sw.js")
     assert 'DATEN_CACHE = "loipenblick-daten"' in sw  # ohne Version im Namen
@@ -103,7 +103,7 @@ def test_u38_daten_cache_ueberlebt_updates_und_wird_aufgeraeumt(site):
     assert '"/abo/"' in sw  # Formulare nie aus dem Cache
 
 
-@pytest.mark.req("U38", ak=4)
+@pytest.mark.req("U41", ak=4)
 def test_u38_textseiten_gehoeren_zur_app_schale(site):
     sw = lies(site, "sw.js")
     for datei in ("impressum.html", "datenschutz.html", "hinweise.html", "icon-maskable-512.png", "icon-180.png"):
@@ -160,8 +160,8 @@ def kontext(browser):
         ctx.close()
 
 
-@pytest.mark.req("U38", ak=1)
-@pytest.mark.req("U38", ak=2)
+@pytest.mark.req("U41", ak=1)
+@pytest.mark.req("U41", ak=2)
 def test_u38_offline_startet_mit_letztem_stand_und_hinweis(kontext, basis):
     ctx, page = kontext()
     page.goto(f"{basis}/#/")
@@ -192,7 +192,7 @@ def test_u38_offline_startet_mit_letztem_stand_und_hinweis(kontext, basis):
     assert page.fehler == []
 
 
-@pytest.mark.req("U37", ak=2)
+@pytest.mark.req("U40", ak=2)
 def test_u37_iphone_zeigt_anleitung_und_merkt_nicht_jetzt(kontext, basis):
     ctx, page = kontext(user_agent=IPHONE, is_mobile=True, has_touch=True)
     page.goto(f"{basis}/#/")
@@ -210,7 +210,7 @@ def test_u37_iphone_zeigt_anleitung_und_merkt_nicht_jetzt(kontext, basis):
     assert page.fehler == []
 
 
-@pytest.mark.req("U37", ak=2)
+@pytest.mark.req("U40", ak=2)
 def test_u37_android_knopf_ruft_den_installationsdialog(kontext, basis):
     ctx, page = kontext(is_mobile=True, has_touch=True)
     page.goto(f"{basis}/#/")
@@ -229,7 +229,7 @@ def test_u37_android_knopf_ruft_den_installationsdialog(kontext, basis):
     assert page.fehler == []
 
 
-@pytest.mark.req("U37", ak=2)
+@pytest.mark.req("U40", ak=2)
 def test_u37_kein_hinweis_in_der_installierten_app(kontext, basis):
     ctx, page = kontext(user_agent=IPHONE, is_mobile=True, has_touch=True)
     page.add_init_script("Object.defineProperty(navigator, 'standalone', {get: () => true})")

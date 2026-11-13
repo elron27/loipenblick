@@ -1,4 +1,4 @@
-"""App-Symbol als PNG ohne Zusatzpakete: Eisblau-Verlauf mit weisser Loipenspur (U8, U37).
+"""App-Symbol als PNG ohne Zusatzpakete: Eisblau-Verlauf mit weisser Loipenspur (U8, U40).
 
 rand > 0 ergibt das maskierbare Symbol fuer Android: Der Verlauf fuellt die ganze Flaeche, die Spuren
 bleiben in der sicheren Mitte, damit runde oder tropfenfoermige Masken nichts abschneiden.

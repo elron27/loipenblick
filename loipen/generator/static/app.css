@@ -160,7 +160,7 @@ h2.sec.land{margin-top:34px}
 .formular button{justify-self:start}
 .antwort{margin:0;font-size:15px}.antwort:empty{display:none}
 .antwort.gut{color:var(--ok)}.antwort.schlecht{color:var(--bad)}
-/* U38: Offline-Hinweis unter der Kopfzeile, U37: Als App installieren */
+/* U41: Offline-Hinweis unter der Kopfzeile, U40: Als App installieren */
 .netz{background:var(--mid-bg);color:var(--mid);border-bottom:1px solid var(--line);font-size:.92rem}
 .netz .wrap{padding-top:8px;padding-bottom:8px}
 .netz .link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;min-height:24px}

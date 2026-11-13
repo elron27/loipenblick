@@ -1,4 +1,4 @@
-// Service Worker (U8, U37, U38). App-Version __STAND__ = Hash der App-Dateien: Sie aendert sich nur,
+// Service Worker (U8, U40, U41). App-Version __STAND__ = Hash der App-Dateien: Sie aendert sich nur,
 // wenn sich die App aendert, nicht bei jedem neuen Datenstand.
 // - App-Schale (HTML, JS, CSS, Icons, Textseiten): aus dem Cache, damit die App offline startet.
 // - Daten (*.json): zuerst aus dem Netz. Kommt nach 4 Sekunden nichts (Funkloch am Parkplatz) oder gar

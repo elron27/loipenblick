@@ -59,7 +59,7 @@ def _host(url: str | None) -> str:
 
 
 def app_version() -> str:
-    """U38: Version der App aus dem Inhalt ihrer Dateien. Sie aendert sich nur, wenn sich App, Vorlagen
+    """U41: Version der App aus dem Inhalt ihrer Dateien. Sie aendert sich nur, wenn sich App, Vorlagen
     oder Symbole aendern, nicht bei jedem Datenstand. So laedt das Handy die App nicht stuendlich neu."""
     h = hashlib.sha256()
     for ordner in (STATIC, VORLAGEN, Path(__file__).with_name("icons.py")):
@@ -125,8 +125,8 @@ def erzeuge(
             schreibe(rel, inhalt)
     schreibe("icon-192.png", png_icon(192))
     schreibe("icon-512.png", png_icon(512))
-    schreibe("icon-maskable-512.png", png_icon(512, rand=0.14))  # U37: Android schneidet rund zu
-    schreibe("icon-180.png", png_icon(180))  # U37: iPhone (apple-touch-icon)
+    schreibe("icon-maskable-512.png", png_icon(512, rand=0.14))  # U40: Android schneidet rund zu
+    schreibe("icon-180.png", png_icon(180))  # U40: iPhone (apple-touch-icon)
 
     # B6, B16, B25, B24: Textseiten, Server-Konfiguration, robots.txt
     env = Environment(loader=FileSystemLoader(VORLAGEN), autoescape=select_autoescape(["j2"]),

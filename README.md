@@ -145,7 +145,7 @@ Mail an `LOIPEN_ABO_MELDUNGEN_AN` und beim nächsten Lauf als Push; sie ändern 
 Voraussetzung ist ein Webspace mit PHP und `mail()`, bei netcup Webhosting gegeben. Mit Cloudflare
 Pages ginge das Abo nur mit einem eigenen Worker.
 
-### Als App aufs Handy (U37, U38)
+### Als App aufs Handy (U40, U41)
 
 Die Seite ist eine installierbare Web-App. Auf Android zeigt die Startseite einen Knopf „Installieren“,
 sobald Chrome die Installation anbietet. Auf dem iPhone steht dort die Anleitung: in Safari auf

@@ -45,7 +45,7 @@ function oevLink(lat, lon) { return "https://www.google.com/maps/dir/?api=1&dest
 function holeJson(url) {
   return fetch(url).then(function (r) {
     if (!r.ok) throw new Error(url + ": " + r.status);
-    if (url === "daten.json") S.ausCache = r.headers.get("X-Loipenblick-Cache") === "1"; // U38: vom Service Worker gespeichert
+    if (url === "daten.json") S.ausCache = r.headers.get("X-Loipenblick-Cache") === "1"; // U41: vom Service Worker gespeichert
     return r.json();
   });
 }
@@ -683,7 +683,7 @@ function formulareBinden() {
   });
 }
 
-/* ---------- U38: Offline-Hinweis ---------- */
+/* ---------- U41: Offline-Hinweis ---------- */
 function netzZeigen() {
   var el = document.getElementById("netz");
   if (!el || !S.idx) return;
@@ -705,7 +705,7 @@ function netzBinden() {
   netzZeigen();
 }
 
-/* ---------- U37: Als App installieren ---------- */
+/* ---------- U40: Als App installieren ---------- */
 var installAngebot = null;
 function alsApp() { return (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true; }
 function istIos() { return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); }
