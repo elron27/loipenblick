@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noindex" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description"  content="Contwise Maps Phoenix"/>
+    <script type="text/javascript">
+        if(navigator.userAgent.indexOf("edge") !== -1 || navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > -1){
+          /* Microsoft Internet Explorer detected in. */
+          alert("Achtung! Ihr Browser wird nicht untertützt. / Attention your browser isn't supported.");
+        }
+    </script>
+
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://maps.dolomitinordicski.com/v2/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://maps.dolomitinordicski.com/v2/favicon.svg">
+    <title>Langlaufen in Italien & Österreich | Dolomiti NordicSki - Contwise Maps Phoenix</title>
+
+      </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+        var options = {
+          apikey: "dolomiti",
+          baseUrl: "https://tirol.mapservices.eu/nefos_app/",
+          center: [47.397285, 11.943793],
+          zoom: 10,
+          title: {
+            default: "Langlaufen in Italien & Österreich | Dolomiti NordicSki - Contwise Maps Phoenix",
+            de: "Langlaufen in Italien & Österreich | Dolomiti NordicSki - Contwise Maps Phoenix",
+            en: "Nordic Skiing in Italy & Austria | Dolomiti NordicSki - Contwise Maps Phoenix",
+            it: "Nordic Skiing in Italy & Austria | Dolomiti NordicSki - Contwise Maps Phoenix"
+          },
+          assignedLayerNames: {
+            "skiResort": { autoLoadLinkedResources: true, objectType: "ski_resort" },
+            "lift": { layerName: "lift", objectType: "gdi_lift", polyline: { updateColorByStatus: true, addStatusIcon: false }, marker: { showLargeSelectedMarker: true, updateColorByStatus: true } },
+            "piste": { layerName: "default", objectType: "gdi_piste", polyline: { addStatusIcon: false }, marker: { showLargeSelectedMarker: true, updateColorByStatus: true, autoResizeSvgNumberFont: false } }
+          },
+          threedfly: true,
+          liveStateInterval: null,
+          markerClickCallback: null,
+          filterLinkedResourcesCallback: null,
+          filterSearchResourceCallback: null,
+          boundsMaxZoom: null,
+          defaultThemeColor: '#B41D28',
+          loadVectorTiles: true,
+          routingOptions: {
+            disableVAO: true,
+            vaoKey: "test"
+          },
+          useMapLibre: true,
+          showMainMap: null,
+          disableRoutingTool: false,
+          theme: null,
+          appStateDefaults: null,
+          enableStagePlanner: null,
+          stagePlannerConfig: null
+        }
+        phoenix.initRender(options);          
+    </script>
+    <script type="text/javascript" src="https://phoenix.contwise.io/map.bundle.js"></script>
+  </body>
+</html>

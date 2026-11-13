@@ -216,3 +216,14 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   843610 tests/fixtures/recherche-tirol/2026-11-13/oetztal/status-crosscountry.html https://www.oetztal.com/de/live-infos/status?card=crosscountryski
 200 https://zugspitzarena.com/robots.txt
 200   525526 tests/fixtures/recherche-tirol/2026-11-13/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
+# Lauf 2026-11-13 15:35 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.dolomitinordicski.com/robots.txt
+200   967440 tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/loipen-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
+200   967440 tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/region-4.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html?region=4
+200     4095 tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/js_trails.js https://www.dolomitinordicski.com/cache-buster-1788248855/build/js_trails.cf68b7f9.js
+200 https://maps.dolomitinordicski.com/robots.txt
+200     3224 tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-robots.txt https://maps.dolomitinordicski.com/robots.txt
+200     3224 tests/fixtures/suedtirol/2026-11-13/dolomitinordicski/maps-v2.html https://maps.dolomitinordicski.com/v2/de
+404 https://tourism.api.opendatahub.com/robots.txt
+200  2074414 tests/fixtures/suedtirol/2026-11-13/opendatahub/loipen.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true
+200  1172186 tests/fixtures/suedtirol/2026-11-13/opendatahub/tourismusvereine.json https://tourism.api.opendatahub.com/v1/TourismAssociation?pagesize=200&language=de&removenullvalues=true
