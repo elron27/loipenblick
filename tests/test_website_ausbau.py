@@ -35,7 +35,8 @@ def text(page) -> str:
 def test_d16_liste_und_regionswechsler_nach_land_und_region(seite):
     seite.open("#/loipen")
     laender = seite.locator("h2.land").all_inner_texts()
-    assert laender == ["Deutschland · Bayern", "Österreich · Salzburg", "Österreich · Tirol"]
+    assert laender == ["Deutschland · Bayern", "Österreich · Salzburg", "Österreich · Tirol", "Italien · Südtirol",
+                       "Italien · Venetien"]
     regionen = seite.locator("section.rg").evaluate_all("els => els.map(e => e.dataset.region)")
     assert regionen.index("chiemgau") < regionen.index("kufsteinerland") < regionen.index("wilder-kaiser")
     # jede Loipe steht genau in ihrer Region
@@ -111,7 +112,7 @@ def test_p13_abdeckung_je_region(seite):
     seite.get_by_role("link", name="Abdeckung und Quellen").click()
     seite.wait_for_selector("table.tab")
     zeilen = seite.locator("table.tab tbody tr").all_inner_texts()
-    assert len(zeilen) == 19  # 10 Regionen der Stufe 1 und 9 weitere fuer ganz Tirol
+    assert len(zeilen) == 26  # 10 Regionen der Stufe 1, 9 weitere fuer ganz Tirol, 7 in Suedtirol/Venetien
     berchtesgaden = next(z for z in zeilen if z.startswith("Berchtesgadener Land")).split("\t")
     assert berchtesgaden[1:] == ["5", "0", "0", "5", "0"]
     assert "Tirol Werbung (tirol.at)" in text(seite)

@@ -188,13 +188,13 @@ def test_d16_jedes_gebiet_hat_land_bundesland_und_region(session, site):
     regionen = {r["slug"]: r for r in gebiete_yaml()["regionen"]}
     for g in gebiete_yaml()["gebiete"]:
         r = regionen[g["region"]]
-        assert r["land"] in ("DE", "AT") and r["bundesland"], g["slug"]
+        assert r["land"] in ("DE", "AT", "IT") and r["bundesland"], g["slug"]
     for r in session.scalars(select(Region)):
-        assert r.land in ("DE", "AT") and r.bundesland, r.slug
+        assert r.land in ("DE", "AT", "IT") and r.bundesland, r.slug
     for g in alle_gebiete(site):
-        assert g["land"] in ("DE", "AT") and g["bundesland"], g["slug"]
+        assert g["land"] in ("DE", "AT", "IT") and g["bundesland"], g["slug"]
     laender = [r["land"] for r in lies(site, "daten.json")["regionen"]]
-    assert laender == sorted(laender, key=lambda x: {"DE": 0, "AT": 1}[x])  # Deutschland zuerst
+    assert laender == sorted(laender, key=lambda x: {"DE": 0, "AT": 1, "IT": 2}[x])  # Deutschland zuerst, Italien zuletzt
     assert {g["slug"]: g["bundesland"] for g in alle_gebiete(site)}["faistenau"] == "Salzburg"
 
 
