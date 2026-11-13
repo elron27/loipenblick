@@ -31,6 +31,7 @@ ZUSTAND: dict[str, Status] = {
     "mittel": Status.EINGESCHRAENKT,
     # Oesterreich (P18): tirol.at, Kitzbueheler Alpen, langlaufdorf.at
     "teilweise geöffnet": Status.EINGESCHRAENKT,
+    "teilgeöffnet": Status.EINGESCHRAENKT,
     "teilweise offen": Status.EINGESCHRAENKT,
     "eingeschränkt befahrbar": Status.EINGESCHRAENKT,
     "nur eingeschränkt befahrbar": Status.EINGESCHRAENKT,
@@ -111,7 +112,7 @@ def parse_zahl(text: str | None) -> float | None:
 
 
 _DATUM = re.compile(
-    r"(\d{1,2})\.(\d{1,2})\.(\d{4}|\d{2})(?:\s*(?:um\s*|/\s*)?(\d{1,2}):(\d{2})(?:\s*Uhr)?)?"
+    r"(\d{1,2})\.(\d{1,2})\.(\d{4}|\d{2})(?:\s*(?:um\s*|/\s*|,\s*)?(\d{1,2}):(\d{2})(?:\s*Uhr)?)?"
 )
 
 

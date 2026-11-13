@@ -9,7 +9,11 @@ Regel: zwei Eintraege verschiedener Quellen sind dieselbe Loipe, wenn
   und die Startpunkte unter 300 m auseinander liegen, oder
 - der Name gleich ist und die Startpunkte unter 2 km auseinander liegen (Quellen setzen den Start
   verschieden: Parkplatz, Ortsmitte, Einstieg), oder
-- einer Quelle die Koordinate fehlt, beide im selben Gebiet liegen und der Name gleich ist.
+- einer Quelle die Koordinate fehlt, beide im selben Gebiet (oder derselben Region) liegen und der Name gleich ist.
+
+Innerhalb einer Quelle (D18): tirol.at fuehrt manche Loipen zwei- bis fuenfmal mit demselben Namen und
+demselben Startpunkt (alte Eintraege, die noch als geoeffnet gelten). Gleicher Name und Start unter 100 m
+= derselbe Eintrag. Laengen ("12,5 km"), Nummern ("Nr. 2") und Technik zaehlen beim Namensvergleich nicht.
 """
 
 import math
@@ -22,7 +26,12 @@ from loipen.adapters.normalisierung import slugify
 AEHNLICH = 0.75
 NAH_KM = 0.3
 GLEICH_NAH_KM = 2.0
-FUELLWOERTER = {"loipe", "loipen", "loipennetz", "langlaufloipe", "langlaufloipen", "langlauf", "nr", "die", "der"}
+FUELLWOERTER = {"loipe", "loipen", "loipennetz", "langlaufloipe", "langlaufloipen", "langlauf", "nr", "die", "der",
+                "km", "klassisch", "skating", "und", "u", "barrierefrei"}
+SELBE_QUELLE_KM = 0.1
+NUMMER = re.compile(r"(nr)?\d+[a-z]?")  # "nr1", "2", "8a"
+# Loipennummern der Verbaende ("P4", "SC3a", "KU1"): im selben Gebiet eindeutig (P22)
+KENNUNG = re.compile(r"[a-z]{1,2}\d{1,2}[a-z]?")
 
 
 @dataclass
@@ -35,12 +44,21 @@ class Eintrag:
     gebiet_name: str
     lat: float | None
     lon: float | None
+    region: str = ""
+
+
+def woerter(name: str, gebiet_name: str = "") -> list[str]:
+    ort = set(slugify(gebiet_name).split("-")) if gebiet_name else set()
+    return [t for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort and not NUMMER.fullmatch(t)
+            and not KENNUNG.fullmatch(t)]
+
+
+def kennungen(name: str) -> set[str]:
+    return {t for t in slugify(name).split("-") if KENNUNG.fullmatch(t) and not NUMMER.fullmatch(t)}
 
 
 def schluessel(name: str, gebiet_name: str = "") -> str:
-    ort = set(slugify(gebiet_name).split("-")) if gebiet_name else set()
-    teile = [t for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort]
-    return "".join(teile)
+    return "".join(woerter(name, gebiet_name))
 
 
 def _km(a: Eintrag, b: Eintrag) -> float | None:
@@ -51,14 +69,28 @@ def _km(a: Eintrag, b: Eintrag) -> float | None:
 
 def gleich(a: Eintrag, b: Eintrag) -> bool:
     if a.quelle == b.quelle:
-        return False
+        abstand = _km(a, b)
+        return (kurzname(a.name).lower() == kurzname(b.name).lower() and abstand is not None
+                and abstand < SELBE_QUELLE_KM)
     ka, kb = schluessel(a.name, a.gebiet_name), schluessel(b.name, b.gebiet_name)
     if not ka or not kb:
         return False
     aehnlich = SequenceMatcher(None, ka, kb).ratio()
     abstand = _km(a, b)
     if abstand is None:
-        return a.gebiet == b.gebiet and ka == kb
+        # D18: Gebietsgrenzen setzen die Quellen verschieden (Seefeld/Leutasch), die Region ist dieselbe
+        selbe = a.gebiet == b.gebiet or (a.region and a.region == b.region)
+        if not selbe:
+            return False
+        ca, cb = kennungen(a.name), kennungen(b.name)
+        if ca and cb:
+            # P22: Verbandsnummern entscheiden ("P4 - Gerntal" = "P4 - Loipe Pletzach-Gern", BH1 ist nicht BH3)
+            return ca == cb
+        # gleiche Woerter in anderer Reihenfolge: "C9 - Plaik" = "Plaik Loipe (C9)"
+        wa, wb = set(woerter(a.name, a.gebiet_name)), set(woerter(b.name, b.gebiet_name))
+        klein, gross = sorted((wa, wb), key=len)
+        # ein einzelnes gemeinsames Wort reicht nicht ("Waldloipe" ist nicht "Waldloipe Alpenbad")
+        return ka == kb or (len(klein) >= 2 and klein <= gross)
     return (aehnlich >= AEHNLICH and abstand < NAH_KM) or (ka == kb and abstand < GLEICH_NAH_KM)
 
 

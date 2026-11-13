@@ -1402,7 +1402,7 @@ gebiete:
   region: ausserfern
   lat: 47.496
   lon: 10.55
-  tourist_url: https://www.tirol.at
+  tourist_url: https://www.tannheimertal.com/de/erleben/winter/langlaufen/geoeffnete-loipen
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '11410'

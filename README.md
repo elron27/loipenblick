@@ -42,6 +42,11 @@ docker compose exec worker python -m loipen.worker lauf
 
 ## Betrieb
 
+**Standort (U35).** Die Seite fragt beim ersten Besuch einmal nach dem Standort des Geräts. Browser
+geben ihn nur auf sicheren Seiten frei (https oder localhost); unter `http://<NAS-IP>:8080` bleibt
+deshalb nur die Ortssuche (bekannte Orte sofort, andere Orte und Postleitzahlen online über
+photon.komoot.io). Über https, etwa mit `tailscale serve` oder später auf dem Webspace, klappt beides.
+
 **Zeitplan (B3).** Den Zeitplan führt der Worker-Container selbst aus (APScheduler, zur vollen Stunde
 werden die fälligen Quellen abgerufen). Es braucht keinen Eintrag im DSM-Taskplaner, nur
 `restart: unless-stopped`, das Compose schon setzt.

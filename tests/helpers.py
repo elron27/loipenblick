@@ -64,6 +64,11 @@ TIROL_LISTE = "aktivitaeten/sport/langlaufen/loipen"
 SEITEN_QUELLEN = {
     "sachrang": {"schneebericht-sachrang": "schneebericht.html"},
     "chiemgau": {"inc/ajax.php?ajaxtype=getLoipenmanager": "loipenmanager.json"},
+    "tannheimer": {"inc/ajax.php?ajaxtype=getLoipenmanager": "2026-11-13/loipenmanager.json"},
+    "seefeld": {"de/loipenbericht.html": "2026-11-13/loipenbericht.html"},
+    "achensee": {"de/live/schneebericht": "2026-11-13/schneebericht.html"},
+    "kufsteinerland": {"de/schneebericht.html": "2026-11-13/schneebericht.html"},
+    "kaiserwinkl": {"de/langlaufen-tirol/geoeffnete-loipen.html": "2026-11-13/geoeffnete-loipen.html"},
     "tirol": {TIROL_LISTE: "2026-11-12/loipen.html",
               f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B%5D=OPEN": "2026-11-12/loipen_offen.html"},
     "kitzbueheler-alpen": {"de/bri/aktuelles/loipen-status.html": "2026-11-12/bri.html"},

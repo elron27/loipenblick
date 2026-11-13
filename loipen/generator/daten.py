@@ -67,6 +67,7 @@ def _loipe(loipe: Loipe, zustaende: list[Zustand], quelle: Quelle, jetzt: dateti
         "quelle_fehler": fehler,
         "quelle": {"name": quelle.name, "url": loipe.source_url},
         "historie": _historie(zustaende, jetzt.astimezone(BERLIN).date()),
+        "strecke_hinweis": None if loipe.verlauf else (quelle.config or {}).get("strecke_hinweis"),
     }
 
 
@@ -101,13 +102,42 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     aktive = [l for l in session.scalars(select(Loipe).where(Loipe.active))]
     verdeckt = finde_dubletten([
         Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
-                l.lat, l.lon)
+                l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
         for l in aktive])
     auch_bei: dict[int, list[dict]] = {}
+    lage: dict[int, tuple[float, float]] = {}
     nach_id = {l.id: l for l in aktive}
     for versteckt, fuehrend in sorted(verdeckt.items()):
         v = nach_id[versteckt]
-        auch_bei.setdefault(fuehrend, []).append({"quelle": v.quelle.name, "name": v.name, "url": v.source_url})
+        if v.quelle_id == nach_id[fuehrend].quelle_id:
+            continue  # Doppeleintrag derselben Quelle: nur verdecken, nicht als "auch bei" nennen
+        # D18: der Status der verdeckten Quelle, damit die Seite eine Abweichung zeigen kann
+        zv = zustaende.get(versteckt) or []
+        eintrag = {"quelle": v.quelle.name, "name": v.name, "url": v.source_url,
+                   "status": zv[-1].status if zv else None}
+        # D18: fuehrt eine Quelle ohne Koordinaten (Seefeld), kommt die Lage von der verdeckten Loipe
+        if v.lat is not None and fuehrend not in lage:
+            lage[fuehrend] = (v.lat, v.lon)
+        liste = auch_bei.setdefault(fuehrend, [])
+        # tirol.at-Doppeleintraege einer Loipe nur einmal nennen; ein "offen" zaehlt fuer die Abweichung
+        gleich = next((a for a in liste if a["quelle"] == eintrag["quelle"] and a["name"] == eintrag["name"]), None)
+        if gleich is None:
+            liste.append(eintrag)
+        elif eintrag["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
+            gleich["status"] = eintrag["status"]
+
+    # P22 AK 3: Fuehrt in einem Gebiet ein oertlicher Loipenbericht (kleinerer Rang), gilt er dort als
+    # massgeblich. Loipen, die nur eine nachrangige Quelle (tirol.at) nennt, bekommen einen Hinweis; meldet
+    # diese sie als offen, zeigt die Seite "unbekannt", weil der Bericht des Verbands sie nicht fuehrt.
+    def rang(l: Loipe) -> int:
+        return int((l.quelle.config or {}).get("rang", 10))
+    bericht: dict[int, Quelle] = {}
+    for l in aktive:
+        if l.id in verdeckt:
+            continue
+        b = bericht.get(l.gebiet_id)
+        if b is None or rang(l) < int((b.config or {}).get("rang", 10)):
+            bericht[l.gebiet_id] = l.quelle
 
     regionen: dict[str, dict] = {}
     strecken: dict[str, dict] = {}
@@ -128,6 +158,16 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
+                b = bericht.get(l.gebiet_id)
+                d["nicht_im_bericht"] = None
+                if b is not None and b.id != l.quelle_id and rang(l) > int((b.config or {}).get("rang", 10)):
+                    d["nicht_im_bericht"] = b.name
+                    if d["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
+                        d["status_laut_quelle"] = d["status"]
+                        d["status"] = Status.UNBEKANNT.value
+                if d["lat"] is None and l.id in lage:
+                    d["lat"], d["lon"] = lage[l.id]
+                    d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None
                 loipen.append(d)
                 kennzahl[d["status"]] += 1
                 veraltet += d["veraltet"]
@@ -179,7 +219,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             {"slug": s, "name": r["region"]["name"], "land": r["region"]["land"],
              "bundesland": r["region"]["bundesland"], "gebiete": len(r["gebiete"]),
              "mitte": _mitte(r["gebiete"]),
-             "datei": f"daten/{s}.json", "strecken": f"strecken/{s}.json"}
+             "datei": f"daten/{s}.json", "strecken": f"strecken/{s}.json",
+             # U32/P21: die Karte laedt die Strecken aller Regionen, die welche haben
+             "strecken_anzahl": len(strecken[s])}
             for s, r in regionen.items()
         ],
         "orte": orte,

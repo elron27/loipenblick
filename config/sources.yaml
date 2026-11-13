@@ -9,13 +9,18 @@
 #   kitzalps     Loipenstatus-Seite der Kitzbueheler Alpen
 #   langlaufdorf langlaufdorf.at (Faistenau, Hintersee)
 #   stammdaten   nur Lage und Laenge, kein Zustand (berchtesgaden.de)
+#   seefeld      Loipenbericht der Olympiaregion Seefeld (gespurte km je Loipe)
+#   achensee     contwise-Schneebericht von achensee.com (gespurte km je Technik, Stand je Ort)
+#   skidata      Skidata-Schneebericht von kufstein.com (Status je Loipe, Stand je Ort)
+#   kaiserwinkl  Loipenbericht von kaiserwinkl.com (Status, Laenge, Stand der Liste)
 #
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
 #            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
 #   art:     portal oder ortsseite; eine Ortsseite nennt unter schliesst die Gebiete, die sonst keine Quelle hat
 #   rang:    bei Dubletten gewinnt der kleinere Rang (1 = fuehrend), Standard 10. Ortsquellen mit
-#            Praeparierdatum (2) vor tirol.at (3, nur offen/gesperrt) vor Kitzbueheler Alpen (4, ohne Koordinate)
+#            Praeparierdatum (2) vor tirol.at (3, nur offen/gesperrt) vor Kitzbueheler Alpen (4, ohne Koordinate).
+#            Regionale Loipenberichte mit Datum (Tannheimer Tal) haben ebenfalls 2 (D18).
 # Nicht abrufen (P17, E-15): salzkammergut.at (robots-Sperre), Intermaps (Bezahldienst), bergfex (robots).
 
 # Abrufzeiten (P8). Jede Quelle kann einen eigenen Block "zeitplan" haben.
@@ -155,6 +160,118 @@ quellen:
         Siegsdorf: siegsdorf
         Chieming: chieming
 
+  # Tannheimer Tal (D18): derselbe tourinfra-Loipenmanager wie Chiemgau. Genauer als tirol.at: Status je
+  # Technik, Praepariertdatum, gespurte km und Streckenverlauf; tirol.at fuehrt hier alte Doppeleintraege,
+  # die noch als geoeffnet gelten. Rang 2 vor tirol.at (3), damit bei Dubletten diese Quelle zaehlt.
+  - key: tannheimer
+    adapter: tourinfra
+    name: Tourismusverband Tannheimer Tal (Loipenbericht)
+    base_url: https://module.tourinfra.com/tannheimer
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "Loipenbericht von tannheimertal.com/de/erleben/winter/langlaufen/geoeffnete-loipen"}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: tannheimer-tal
+      gebiet_map:
+        Tannheim: tannheimer-tal
+        Grän: tannheimer-tal
+        Haldensee: tannheimer-tal
+        Nesselwängle: tannheimer-tal
+        Zöblen: tannheimer-tal
+        Schattwald: tannheimer-tal
+        Schmieden: tannheimer-tal
+        Kienzen: tannheimer-tal
+        Rehbach: tannheimer-tal
+
+  # Olympiaregion Seefeld (D18): Loipenbericht mit gespurten km fuer Seefeld, Leutasch, Moesern, Scharnitz.
+  # Ohne Koordinaten; die Lage kommt von der passenden tirol.at-Loipe. Rang 2 vor tirol.at.
+  - key: seefeld
+    adapter: seefeld
+    name: Olympiaregion Seefeld (Loipenbericht)
+    base_url: https://www.seefeld.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Loipenbericht Seefeld nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/loipenbericht.html
+      default_gebiet: seefeld
+      gruppen:
+        Seefeld: seefeld
+        Leutasch: leutasch
+        Mösern - Buchen - Scharnitz - Reith: seefeld
+        Übungsgelände: seefeld
+        Langlaufrunden: seefeld
+      # nennt dieselben Loipen noch einmal (Schlitten, barrierefrei)
+      auslassen: [Schlitten- und barrierefreie Loipen]
+      gebiet_map:
+        Leutasch: leutasch
+
+  # Weitere Tiroler Tourismusverbaende (P22, 13.11.2026): Status je Loipe mit Stand der Meldung, ohne
+  # Koordinaten (Lage von tirol.at). Rang 2 vor tirol.at.
+  - key: achensee
+    adapter: achensee
+    name: Achensee Tourismus (Schneebericht)
+    base_url: https://www.achensee.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Schneebericht Achensee nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/live/schneebericht/
+      default_gebiet: achensee
+      gebiet_map:
+        Achenkirch: steinberg-rofan
+        Steinberg am Rofan: steinberg-rofan
+        Maurach: achensee
+        Pertisau: achensee
+        Wiesing: achensee
+
+  - key: kufsteinerland
+    adapter: skidata
+    name: Kufsteinerland (Schneebericht)
+    base_url: https://www.kufstein.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Schneebericht Kufsteinerland nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/schneebericht.html
+      regionen: [kufsteinerland]
+      # Bayrischzell meldet die eigene Seite genauer (Quelle bayrischzell)
+      orte_auslassen: [Bayrischzell]
+      default_gebiet: kufstein
+      gebiet_map:
+        Kufstein: kufstein
+        Thiersee: thiersee
+        Langkampfen: langkampfen
+        Bad Häring: bad-haering
+        Schwoich: schwoich
+        Ebbs: ebbs
+        Niederndorf: niederndorf
+
+  - key: kaiserwinkl
+    adapter: kaiserwinkl
+    name: Tourismusverband Kaiserwinkl (Loipenbericht)
+    base_url: https://www.kaiserwinkl.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Loipenbericht Kaiserwinkl nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/langlaufen-tirol/geoeffnete-loipen.html
+      default_gebiet: koessen
+      gebiet_map:
+        Walchsee: walchsee
+        Schwendt: schwendt
+        Rettenschöss: walchsee
+        Kössen: koessen
+        Bichlach: schwendt
+        Griesenau: schwendt
+        Lucknerhof: schwendt
+
   # Ausbaustufe 1 (E-15): Tirol ueber das Landesportal, Stufe 1 = Kufsteinerland, Kaiserwinkl, Wilder Kaiser.
   # Weitere Tiroler Regionen (Richtung Innsbruck): Gebiete mit lat/lon in gebiete.yaml anlegen und hier
   # unter gebiete eintragen, ohne Codeaenderung (P14 AK 2). Je Lauf 2 Abrufe fuer den Status von ganz Tirol
@@ -165,6 +282,7 @@ quellen:
     base_url: https://www.tirol.at
     art: portal
     rang: 3
+    strecke_hinweis: "tirol.at sperrt die GPX-Dateien der Loipen per robots.txt, daher nur der Startpunkt."
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null,
               hinweis: "GPX auf tirol.mapservices.eu per robots.txt gesperrt, daher kein Streckenverlauf"}
     config:
@@ -194,6 +312,7 @@ quellen:
     base_url: https://www.kitzbueheler-alpen.com
     art: portal
     rang: 4
+    strecke_hinweis: "Die Kitzbüheler Alpen melden keinen Streckenverlauf."
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
     config:
       pfad: /de/bri/aktuelles/loipen-status.html
@@ -226,6 +345,7 @@ quellen:
     base_url: https://www.berchtesgaden.de
     art: portal
     rang: 8
+    strecke_hinweis: "Der Speicherdienst der GPX-Dateien von berchtesgaden.de erlaubt den Abruf laut robots.txt nicht, daher nur der Startpunkt."
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
     zeitplan:
       # Stammdaten aendern sich selten: einmal am Tag reicht (P19)
