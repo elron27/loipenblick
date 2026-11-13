@@ -160,3 +160,23 @@ h2.sec.land{margin-top:34px}
 .formular button{justify-self:start}
 .antwort{margin:0;font-size:15px}.antwort:empty{display:none}
 .antwort.gut{color:var(--ok)}.antwort.schlecht{color:var(--bad)}
+/* Statistik (U37-U39): ein Diagramm, eine Achse, Luecken bleiben Luecken */
+.filter a.tog{display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.s-titel{font-size:15px;margin:22px 0 6px;color:var(--mute);font-weight:600}
+.dgbox{position:relative;width:100%;padding:8px 0 0;border-top:1px solid var(--line)}
+.dg{display:block;max-width:100%;overflow:visible;touch-action:pan-y}
+.dg .gl{stroke:var(--line);stroke-width:1}.dg .bl{stroke:var(--mute);stroke-width:1}
+.dg .ax{fill:var(--mute);font-size:11px;font-variant-numeric:tabular-nums}
+.dg .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.dg.befahrbar .ln{stroke:var(--ok)}.dg.befahrbar .fl{fill:var(--ok-bg);opacity:.85}
+.dg.schnee .ln{stroke:var(--cy)}.dg.schnee .fl{fill:color-mix(in srgb,var(--cy) 22%,transparent)}
+.dg .hx{stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3;opacity:.6}
+.dg .hp{fill:var(--solid);stroke:var(--ink);stroke-width:2}
+.dgbox .tip{position:absolute;top:0;pointer-events:none;background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:13px;line-height:1.35;white-space:nowrap;box-shadow:0 8px 20px -12px #0008}
+details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:pointer;color:var(--cy);min-height:32px;display:flex;align-items:center}
+.s-kz b{font-variant-numeric:tabular-nums}
+.tab td,.tab th{font-variant-numeric:tabular-nums}
+@media (max-width:979px){.tabs a{padding:0 6px;font-size:14px}}
+.dg.befahrbar .pt{fill:var(--ok)}.dg.schnee .pt{fill:var(--cy)}
+.s-kz .glass{box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+#s-quellen td{white-space:nowrap}
