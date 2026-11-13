@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /*?*noidx=
+Sitemap: https://snow.myswitzerland.com/sitemapindex.xml
