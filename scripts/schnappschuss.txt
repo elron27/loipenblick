@@ -1,12 +1,6 @@
-# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 3: lokale Seiten und Gesamtlisten
-tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemap_de.xml https://snow.myswitzerland.com/sitemap_de.xml
-tests/fixtures/recherche-2026-11-13/schweiz/goms/wintersportbericht.html https://www.goms.ch/wintersportbericht
-tests/fixtures/recherche-2026-11-13/schweiz/davos/loipen-tracking.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipen-tracking
-tests/fixtures/recherche-2026-11-13/kaernten/bergfex/loipenberichte.html https://www.bergfex.at/kaernten/langlaufen/loipenberichte/
-tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/alle-loipen.html https://www.nassfeld.at/de/Winter-World/Outdoor-Relax-World/Langlaufen/Alle-Loipen
-tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/pisten-lifte.html https://www.badkleinkirchheim.com/de/skigebiet/pisten-lifte
-tests/fixtures/recherche-2026-11-13/kaernten/woerthersee/roemerloipe.html https://www.woerthersee.com/en/dc-new/detail/POI/langlaufloipe-roemerloipe-bad-kleinkirchheim
-tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/geoeffnete-loipen.html https://www.seiseralm.it/de/aktivurlaub/winterurlaub/langlaufen/geoeffnete-loipen.html
-tests/fixtures/recherche-2026-11-13/suedtirol/val-gardena/langlauf.html https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
-tests/fixtures/recherche-2026-11-13/suedtirol/ratschings/langlauf.html https://www.ratschings.info/en/experiences/experience-winter/the-journey-is-the-destination.html
-tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipe-detail.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887?language=de
+# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 4
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langlauf.html https://snow.myswitzerland.com/schneebericht/langlauf/
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-scuol-zernez-60.html https://snow.myswitzerland.com/schneebericht/engadin-scuol-zernez-60/
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/einsiedeln-loipe-schwedentritt-281.html https://snow.myswitzerland.com/schneebericht/einsiedeln-loipe-schwedentritt-281/
+tests/fixtures/recherche-2026-11-13/schweiz/goms/loipen-bericht.html https://www.goms.ch/wintersportbericht/loipen-bericht
+tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/robots-pruefung.html https://touren.kaernten.at/de/touren/langlauf/kaernten/r/1035435/
