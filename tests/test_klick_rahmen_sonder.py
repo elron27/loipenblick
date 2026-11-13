@@ -249,7 +249,7 @@ def test_u44_sonderloipen_zaehlen_nicht_als_befahrbar(seite):
     sonder = [i for i, (s, _) in enumerate(karten) if s]
     assert sonder and normal_offen and max(normal_offen) < min(sonder)
     seite.open("#/")
-    stat = seite.locator("#k-offen").inner_text()
+    stat = seite.locator("#k-offen").inner_text().replace("\xad", "")
     zahl = int(re.match(r"\s*(\d+)", stat).group(1))
     befahrbar = seite.evaluate("() => window.__LB_befahrbar()")
     assert zahl == befahrbar and "Sonderloipe" in stat
