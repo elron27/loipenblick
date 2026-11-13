@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /*?pimcore_preview
-Disallow: /*?ajaxRequestType
-Disallow: /*/map-poi-json/*
-Disallow: /*/datefrom/*
-
-
-Sitemap: https://www.ischgl.com/sitemap.site_7.xml
-Sitemap: https://www.galtuer.com/sitemap.site_4.xml

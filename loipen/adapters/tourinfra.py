@@ -1,4 +1,4 @@
-"""Adapter C: Loipenmanager von Chiemgau Tourismus (tourinfra), JSON (P11).
+"""Adapter C: Loipenmanager von tourinfra, JSON (P11): Chiemgau Tourismus und Tannheimer Tal (D18).
 
 Eine Abfrage liefert alle Loipen der Region mit Status, getrennt fuer klassisch und Skating.
 Der Ort steht im Feld startort und wird ueber config["gebiet_map"] einem Gebiet zugeordnet.
@@ -22,6 +22,13 @@ TECHNIK = {
     "klassisch/skating": Technik.BEIDES,
 }
 SCHWIERIGKEIT = {1: "leicht", 2: "mittel", 3: "schwer"}  # tourinfra: 1 blau, 2 rot, 3 schwarz
+
+
+def _name(tourname: str) -> str:
+    """'Nr. 2 Rundloipe Vilsalpsee - 12,5 km' -> 'Nr. 2 Rundloipe Vilsalpsee'; Chiemgau trennt die Laenge mit '|'."""
+    name = tourname.split("|")[0]
+    name = re.sub(r"\s+-\s*\d+(?:[.,]\d+)?\s*km\s*$", "", name)
+    return re.sub(r"\s+", " ", name).strip()
 
 
 def _status(text) -> tuple[Status | None, bool]:
@@ -70,7 +77,10 @@ class TourinfraAdapter:
         gebiet_map = config.get("gebiet_map", {})
 
         for e in eintraege:
-            name = (e.get("tourname") or "").split("|")[0].strip()
+            if not isinstance(e, dict):
+                ergebnis.warnungen.append("Eintrag ohne Felder uebersprungen")
+                continue
+            name = _name(e.get("tourname") or "")
             if not name or not e.get("tid"):
                 ergebnis.warnungen.append("Eintrag ohne Name oder ID uebersprungen")
                 continue

@@ -9,8 +9,8 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 | Ordner | Typ | Inhalt |
 |---|---|---|
 | `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-35 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P20, D1–D17, U1–U32, N1–N4, B1–B19 |
-| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-15 (u. a. E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P21, D1–D18, U1–U36, N1–N4, B1–B19 |
+| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-16 (u. a. E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
 | `filters/` | gespeicherte Filter | `version-1`, `ausbau-1` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
