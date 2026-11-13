@@ -773,7 +773,7 @@ function route() {
 
 function start() {
   laden().then(function () {
-    document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria";
+    document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria" + (S.idx.image ? " · Version " + S.idx.image : "");
     beschrifteOrt(); sucheBinden();
     document.getElementById("ort").addEventListener("click", ortDialog);
     var dk = document.getElementById("demo-knopf");

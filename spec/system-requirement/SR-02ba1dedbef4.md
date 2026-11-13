@@ -11,6 +11,7 @@ requirement-type: constraint
 acceptance-criteria:
   - docker compose up startet Web, Worker und Datenbank auf dem NAS.
   - Kein Secret steht im Repository.
+  - Worker-Log und Fusszeile der Seite zeigen den Commit-Stand des Images, damit ein Update am NAS prüfbar ist.
 packages:
   - { id: a1e07cef-f067-4f3b-a290-7b0bc167bcfa, version: n2:22b0303ec030d854, title: Betrieb }
 derives-from:

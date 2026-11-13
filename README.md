@@ -29,7 +29,7 @@ docker compose pull       # holt die neueste Version
 docker compose up -d
 ```
 
-Ein Update ist genauso: `docker compose pull && docker compose up -d`. Die Datenbank bleibt in `./data`.
+Ein Update ist genauso: `docker compose pull && docker compose up -d`. Die Datenbank bleibt in `./data`. Im Container Manager der Synology: [docs/nas-update.md](docs/nas-update.md).
 Einmalig muss das Paket in GitHub unter *Packages, loipenblick, Package settings* auf "public" stehen,
 sonst braucht das NAS ein `docker login ghcr.io`. Selbst bauen geht weiter mit `docker compose up -d --build`.
 Die Konfiguration (`config/`) steckt im Image; eigene Änderungen siehe Kommentar in der `docker-compose.yml`.

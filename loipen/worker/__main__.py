@@ -77,7 +77,7 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
-                          abo_dateien=abo_dateien(session, settings))
+                          abo_dateien=abo_dateien(session, settings), version=settings.version)
     log.info("Seite erzeugt in %s", settings.site_dir)
     meldung = hochladen(settings)
     if meldung:
@@ -187,6 +187,7 @@ def main(argv: list[str]) -> None:
     if argv[:1] == ["sicherung"]:
         sicherung()
         return
+    log.info("Loipenblick Version %s startet", get_settings().version)
     lauf()  # beim Start einmal, damit die Vorschau sofort etwas zeigt
     scheduler = BlockingScheduler(timezone=get_settings().timezone)
     scheduler.add_job(tick, "cron", minute=0)
