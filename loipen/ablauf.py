@@ -12,6 +12,7 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
 from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Technik, utcnow
 from loipen.ereignisse import Ereignis, ereignis_fuer
+from loipen.waechter import Meldung, pruefe
 from loipen.zustand import letzter_zustand, speichere_zustand
 
 log = logging.getLogger("loipen.ablauf")
@@ -28,6 +29,7 @@ class QuellenLauf:
     ereignisse: list[Ereignis] = field(default_factory=list)
     status_vorher: str | None = None
     status: str | None = None
+    waechter: Meldung | None = None  # B26
 
 
 def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
@@ -56,7 +58,7 @@ def rufe_quelle_ab(
     adapter = ADAPTERS.get(quelle.adapter)
     if adapter is None:
         lauf.fehler = f"kein Adapter '{quelle.adapter}'"
-        _monitoring(quelle, lauf, jetzt, 0.0)
+        _monitoring(session, quelle, lauf, jetzt, 0.0)
         return lauf
 
     start = time.monotonic()
@@ -65,7 +67,7 @@ def rufe_quelle_ab(
     except Exception as e:  # eine kaputte Quelle darf die anderen nicht stoppen
         log.exception("Quelle %s fehlgeschlagen", quelle.key)
         lauf.fehler = f"{type(e).__name__}: {e}"
-        _monitoring(quelle, lauf, jetzt, time.monotonic() - start)
+        _monitoring(session, quelle, lauf, jetzt, time.monotonic() - start)
         return lauf
 
     lauf.warnungen = list(ergebnis.warnungen)
@@ -113,11 +115,11 @@ def rufe_quelle_ab(
             ereignis = ereignis_fuer(loipe, alt, zustand)
             if ereignis:
                 lauf.ereignisse.append(ereignis)
-    _monitoring(quelle, lauf, jetzt, time.monotonic() - start)
+    _monitoring(session, quelle, lauf, jetzt, time.monotonic() - start)
     return lauf
 
 
-def _monitoring(quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: float) -> None:
+def _monitoring(session: Session, quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: float) -> None:
     """Letzter Lauf, Anzahl und Fehler pro Quelle (B2)."""
     quelle.last_run_at = jetzt
     quelle.last_count = lauf.gefunden
@@ -132,3 +134,5 @@ def _monitoring(quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: flo
         quelle.last_status = "warnung" if lauf.warnungen else "ok"
         quelle.last_error = "; ".join(lauf.warnungen) or None
     lauf.status = quelle.last_status
+    lauf.waechter = pruefe(session, quelle, lauf.gefunden, quelle.last_status, quelle.last_error,
+                           quelle.last_dauer_s, jetzt)

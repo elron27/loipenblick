@@ -31,6 +31,16 @@ zeitplan:
   saison_uhrzeiten: [7, 12, 17]
   nebensaison_uhrzeiten: [8]
 
+# Quellen-Waechter (B26): meldet per Mail und Push, wenn eine Quelle kaputt wirkt, meist weil sich
+# die Webseite geaendert hat. Jede Quelle kann einen eigenen Block "waechter" haben, z. B.
+# waechter: {aus: true} oder waechter: {einbruch_anteil: 0.3}.
+#   bestaetigen      so viele auffaellige Abrufe hintereinander, bevor gemeldet wird (kurze Stoerung = kein Alarm)
+#   einbruch_anteil  Einbruch, wenn weniger als dieser Anteil der ueblichen Anzahl kommt
+#   einbruch_ab      Einbruch erst pruefen, wenn eine Quelle ueblicherweise mindestens so viele Loipen liefert
+#   erinnern_h       laeuft ein Alarm weiter, hoechstens so oft erinnern (Stunden)
+#   neu_normal_tage  liefert eine Quelle so lange stabil weniger, gilt das als neuer Normalwert
+waechter: {bestaetigen: 2, einbruch_anteil: 0.5, einbruch_ab: 4, erinnern_h: 24, neu_normal_tage: 7}
+
 quellen:
   - key: tegernsee
     adapter: ats

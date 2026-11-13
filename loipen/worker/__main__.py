@@ -19,14 +19,15 @@ from loipen.ablauf import rufe_quelle_ab
 from loipen.config import get_settings
 from loipen.db import session_scope
 from loipen.ereignisse import (
-    benachrichtige, betriebsmeldung, lade_abos, ntfy_sender, pruefe_abos,
+    benachrichtige, lade_abos, ntfy_sender, pruefe_abos,
 )
 from loipen.fetcher import HoeflicherFetcher
 from loipen.generator import abo as abo_vorlage
-from loipen.mailabo import AboKonfig, lauf_abo
+from loipen.mailabo import AboKonfig, lauf_abo, smtp_versand
 from loipen.konfig import lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
 from loipen.sicherung import sichere
+from loipen.waechter import melde as waechter_melde
 from loipen.upload import UploadFehler, upload_meldung, veroeffentliche
 from loipen.wetter import aktualisiere_wetter
 from loipen.zeitplan import ist_faellig
@@ -49,7 +50,7 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
     """Ein Lauf. Mit nur_faellige werden nur Quellen abgerufen, deren Zeitplan passt."""
     settings = get_settings()
     sender = sender or ntfy_sender(settings.ntfy_url)
-    ereignisse, meldungen = [], []
+    ereignisse, meldungen, waechter = [], [], []
     with session_scope() as session:
         # Konfiguration bei jedem Lauf neu lesen: neue Quellen ohne Neustart (P2)
         lade_und_abgleichen(session, Path(settings.config_dir))
@@ -60,9 +61,8 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
             log.info("Quelle %s wird abgerufen", quelle.key)
             ergebnis = rufe_quelle_ab(session, quelle, abrufer or fetcher())
             ereignisse += ergebnis.ereignisse
-            meldung = betriebsmeldung(quelle.key, ergebnis.status_vorher, ergebnis.status, quelle.last_error)
-            if meldung:
-                meldungen.append(meldung)
+            if ergebnis.waechter:  # B26 statt der alten Meldung bei jedem Statuswechsel
+                waechter.append(ergebnis.waechter)
             log.info(
                 "Quelle %s: %d Loipen, %d neue Zustaende%s",
                 quelle.key, ergebnis.gefunden, ergebnis.neu,
@@ -83,6 +83,25 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
     if meldung:
         meldungen.append(meldung)
     _melde(settings, sender, ereignisse, meldungen)
+    melde_waechter(settings, sender, waechter)
+
+
+def melde_waechter(settings, sender, meldungen, mail=None) -> dict:
+    """B26: nach dem Commit, damit ein Versandfehler nie Daten gefaehrdet."""
+    an = settings.waechter_mail or settings.impressum_email
+    absender = settings.abo_absender or an
+    if mail is None and settings.smtp_host:
+        versand = smtp_versand(AboKonfig.aus_settings(settings))
+
+        def mail(m):
+            fehler = versand([m])[0]
+            if fehler:
+                raise fehler
+    try:
+        return waechter_melde(meldungen, sender, mail, an, absender)
+    except Exception:
+        log.exception("Quellen-Waechter: Meldung fehlgeschlagen")
+        return {"push": 0, "mail": 0}
 
 
 def abo_dateien(session, settings) -> dict[str, bytes]:

@@ -42,7 +42,13 @@ function navLink(lat, lon) { return "https://www.google.com/maps/dir/?api=1&dest
 function oevLink(lat, lon) { return "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lon + "&travelmode=transit"; }
 
 /* ---------- Daten laden ---------- */
-function holeJson(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url + ": " + r.status); return r.json(); }); }
+function holeJson(url) {
+  return fetch(url).then(function (r) {
+    if (!r.ok) throw new Error(url + ": " + r.status);
+    if (url === "daten.json") S.ausCache = r.headers.get("X-Loipenblick-Cache") === "1"; // U41: vom Service Worker gespeichert
+    return r.json();
+  });
+}
 function mache(gebiete) {
   S.gebiete = []; S.loipen = [];
   gebiete.forEach(function (g) {
@@ -680,6 +686,72 @@ function formulareBinden() {
 /* Schnittstelle fuer weitere Seiten-Skripte (statistik.js), damit app.js klein bleibt */
 var LB = window.LB = {S: S, view: view, esc: esc, zahl: zahl, holeJson: holeJson, gruppen: gruppen, queryStr: queryStr, seiten: {}};
 
+/* ---------- U41: Offline-Hinweis ---------- */
+function netzZeigen() {
+  var el = document.getElementById("netz");
+  if (!el || !S.idx) return;
+  var offline = navigator.onLine === false;
+  if (!offline && !S.ausCache) { el.hidden = true; return; }
+  el.innerHTML = '<div class="wrap"><b>' + (offline ? "Offline." : "Keine Verbindung zum Server.") + "</b> Du siehst den gespeicherten Stand vom " +
+    esc(datum(S.idx.erzeugt)) + (offline ? "." : '. <button type="button" class="link" id="netz-neu">Neu laden</button>') + "</div>";
+  el.hidden = false;
+  var neu = document.getElementById("netz-neu");
+  if (neu) neu.addEventListener("click", function () { location.reload(); });
+}
+function netzBinden() {
+  window.addEventListener("offline", netzZeigen);
+  window.addEventListener("online", function () {
+    // wieder Netz: frische Daten holen, wenn bisher der gespeicherte Stand zu sehen war
+    if (S.ausCache) holeJson("daten.json").then(function (idx) { if (idx.erzeugt !== S.idx.erzeugt) location.reload(); else { S.ausCache = false; netzZeigen(); } }).catch(netzZeigen);
+    else netzZeigen();
+  });
+  netzZeigen();
+}
+
+/* ---------- U40: Als App installieren ---------- */
+var installAngebot = null;
+function alsApp() { return (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true; }
+function istIos() { return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); }
+var TEILEN = '<svg class="teilen" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>';
+function installHinweis(ausKnopf) {
+  if (alsApp()) return "";
+  if (!ausKnopf && (speicher("app_hinweis_aus") || 0) > Date.now()) return "";
+  var text, knopf = "";
+  if (installAngebot) {
+    text = "Loipenblick als App auf den Startbildschirm legen: startet schneller und zeigt offline den letzten Stand.";
+    knopf = '<button type="button" class="btn prim" id="app-install">Installieren</button>';
+  } else if (istIos()) {
+    text = "Als App auf den Home-Bildschirm: unten in Safari auf <b>Teilen</b> " + TEILEN + " tippen, dann <b>„Zum Home-Bildschirm“</b>.";
+  } else if (ausKnopf) {
+    text = "Im Browser-Menü (drei Punkte) auf <b>„App installieren“</b> oder <b>„Zum Startbildschirm hinzufügen“</b> tippen.";
+  } else return "";
+  return '<aside class="app-hinweis glass" id="app-hinweis" aria-label="Als App installieren"><p>' + text + "</p><div class=\"knoepfe\">" + knopf +
+    '<button type="button" class="btn" id="app-spaeter">Nicht jetzt</button></div></aside>';
+}
+function installBinden() {
+  var fk = document.getElementById("app-knopf");
+  var zeigeKnopf = function () { if (fk) fk.hidden = alsApp() || !(installAngebot || istIos()); };
+  window.addEventListener("beforeinstallprompt", function (ev) {
+    ev.preventDefault(); installAngebot = ev; zeigeKnopf();
+    if (!document.getElementById("app-hinweis") && (pfad(location.hash) || "/") === "/") { var h = installHinweis(false); if (h) view.insertAdjacentHTML("afterbegin", h); }
+  });
+  window.addEventListener("appinstalled", function () { installAngebot = null; zeigeKnopf(); var h = document.getElementById("app-hinweis"); if (h) h.remove(); });
+  if (fk) fk.addEventListener("click", function () {
+    var alt = document.getElementById("app-hinweis"); if (alt) alt.remove();
+    view.insertAdjacentHTML("afterbegin", installHinweis(true)); window.scrollTo(0, 0);
+  });
+  view.addEventListener("click", function (ev) {
+    var t = ev.target.closest ? ev.target.closest("button") : null;
+    if (!t) return;
+    if (t.id === "app-spaeter") { speicher("app_hinweis_aus", Date.now() + 30 * 864e5); document.getElementById("app-hinweis").remove(); }
+    if (t.id === "app-install" && installAngebot) {
+      installAngebot.prompt();
+      installAngebot.userChoice.then(function () { installAngebot = null; zeigeKnopf(); var h = document.getElementById("app-hinweis"); if (h) h.remove(); });
+    }
+  });
+  zeigeKnopf();
+}
+
 /* ---------- Routing ---------- */
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
@@ -695,6 +767,7 @@ function route() {
   else if (p.indexOf("/gebiet/") === 0) seiteGebiet(p.slice(8));
   else if (p.indexOf("/loipe/") === 0) seiteLoipe(p.slice(7));
   else seiteHeute(q);
+  if (p === "/" && (installAngebot || istIos()) && !alsApp()) { var ih = installHinweis(false); if (ih) view.insertAdjacentHTML("afterbegin", ih); }
   if (p.indexOf("/loipe/") !== 0 && p !== "/karte") window.scrollTo(0, 0);
 }
 
@@ -710,6 +783,7 @@ function start() {
     if (kw) { widerrufZeigen(); kw.addEventListener("click", function () { try { localStorage.removeItem("karte_ok"); } catch (e) {} kw.hidden = true; route(); }); }
     window.addEventListener("hashchange", route);
     formulareBinden();
+    installBinden(); netzBinden();
     route();
     gpsBeimStart(parseQuery(location.hash));
     if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) navigator.serviceWorker.register("sw.js").catch(function () {});

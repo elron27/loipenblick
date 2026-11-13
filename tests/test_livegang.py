@@ -213,7 +213,9 @@ def test_b21_abbruch_in_phase_1_laesst_den_alten_stand_vollstaendig(session, tmp
     # der naechste Lauf holt den Upload nach
     erg = lade_hoch(site, OrdnerZiel(server))
     assert (server / "daten.json").read_bytes() == (site / "daten.json").read_bytes()
-    assert erg.hochgeladen[-1] == "index.html"  # Einstieg zuletzt
+    # Einstieg zuletzt; index.html und sw.js aendern sich nur mit der App (U41), nicht mit den Daten
+    einstieg = [d for d in erg.hochgeladen if d in ("daten.json", "sw.js", "index.html")]
+    assert erg.hochgeladen[-len(einstieg):] == einstieg and einstieg[0] == "daten.json"
 
 
 @pytest.mark.req("B21")

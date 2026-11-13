@@ -9,7 +9,11 @@
 <meta name="theme-color" content="#eaf3f9" media="(prefers-color-scheme: light)">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Loipenblick">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <link rel="stylesheet" href="vendor/MarkerCluster.css">
 <link rel="stylesheet" href="app.css?v=__STAND__">
@@ -33,6 +37,7 @@
     <button class="ort" id="ort" type="button" aria-haspopup="dialog"></button>
   </div>
 </header>
+<div id="netz" class="netz" role="status" aria-live="polite" hidden></div>
 <div id="ortwahl" class="ortwahl" hidden role="dialog" aria-label="Standort wählen"></div>
 <noscript><p class="wrap">Diese Seite braucht JavaScript, um die Loipen anzuzeigen.</p></noscript>
 <main id="view" class="wrap" tabindex="-1" aria-live="polite"></main>
@@ -41,6 +46,7 @@
     <p><strong>Alle Angaben ohne Gewähr.</strong> Die Daten stammen von den Tourismusverbänden, vom Deutschen Wetterdienst und von GeoSphere Austria (CC BY 4.0); maßgeblich ist immer die Quelle vor Ort. Die Quelle und der Stand stehen bei jeder Loipe.</p>
     <p id="stand" class="fine"></p>
     <p class="fine rechtlich"><a href="#/abdeckung">Abdeckung und Quellen</a> · <a href="hinweise.html">Hinweise und Betreiber</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p class="fine"><button type="button" id="app-knopf" class="btn" hidden>Als App installieren</button></p>
     <p class="fine"><button type="button" id="karte-widerruf" class="btn" hidden>Karte nicht mehr automatisch laden</button></p>
     <p class="fine"><button type="button" id="demo-knopf" class="btn">Beispielansicht mit Schnee</button></p>
   </div>
