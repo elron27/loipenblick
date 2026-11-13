@@ -1,0 +1,31 @@
+{% if eigener_text %}
+{{ eigener_text }}
+{% else %}
+<p class="fine">Entwurf aus der Vorlage von Loipenblick. Vor dem Livegang mit einem Datenschutz-Generator abgleichen und bei Bedarf über <code>LOIPEN_DATENSCHUTZ_DATEI</code> durch einen eigenen Text ersetzen.</p>
+
+<h2>Verantwortlicher</h2>
+{% if name %}<p>{{ name }}<br>{% for zeile in anschrift %}{{ zeile }}<br>{% endfor %}E-Mail: <a href="mailto:{{ email }}">{{ email }}</a></p>
+{% else %}<p>Siehe <a href="impressum.html">Impressum</a>.</p>{% endif %}
+
+<h2>Kurz gesagt</h2>
+<p>Loipenblick braucht kein Konto, setzt keine Cookies, zeigt keine Werbung und verfolgt dich nicht. Beim Aufruf der Seite lädt dein Browser nur Dateien von dieser Domain. Daten von anderen Servern kommen erst, wenn du es selbst auslöst, zum Beispiel mit „Karte laden“ oder einem Klick auf einen Link.</p>
+
+<h2>Hosting und Server-Protokolle</h2>
+<p>Die Seite liegt bei {{ hoster or "dem Webhoster (siehe Impressum)" }}. Bei jedem Aufruf speichert der Server, wie bei jeder Website, ein Protokoll: IP-Adresse, Datum und Uhrzeit, aufgerufene Datei, übertragene Datenmenge, Browser und Betriebssystem sowie die zuvor besuchte Seite. Das ist nötig, um die Seite sicher auszuliefern und Fehler oder Angriffe zu erkennen (Art. 6 Abs. 1 lit. f DSGVO). Die Protokolle werden nach {{ log_tage }} Tagen gelöscht{% if statistik_logs %} und vorher zu einer anonymen Zugriffsstatistik ohne Cookies zusammengefasst{% endif %}. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+
+<h2>Karte</h2>
+{% if kacheln_fremd %}<p>Die Hintergrundkarte kommt von der OpenStreetMap Foundation (OSMF). Sie wird erst geladen, wenn du auf „Karte laden“ klickst. Dann sendet dein Browser deine IP-Adresse und die Adresse dieser Seite an die Server der OSMF, die über ein weltweites Netz ausliefern. Die OSMF speichert dabei Protokolle, siehe ihre <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">Datenschutzerklärung</a>. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Die Entscheidung merkt sich dein Browser; mit „Karte nicht mehr automatisch laden“ in der Fußzeile nimmst du sie zurück.</p>
+{% else %}<p>Die Karte kommt von dieser Domain. Es werden keine Daten an Dritte übertragen. Kartendaten © OpenStreetMap-Mitwirkende.</p>{% endif %}
+
+<h2>Standort</h2>
+<p>Wenn du auf „Mein Standort“ tippst, fragt dein Browser, ob er den Standort freigeben darf. Der Standort wird nur in deinem Browser verwendet, um Entfernungen zu berechnen, und nie an den Server oder Dritte gesendet. Die Ortssuche läuft ebenfalls nur in deinem Browser.</p>
+
+<h2>Speicher im Browser</h2>
+<p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was du selbst wählst: den gewählten Ort und ob die Karte geladen werden darf. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
+
+<h2>Links zu anderen Seiten</h2>
+<p>Links zur Quelle einer Loipe, zu Google Maps (Navigation, Fahrplan) und zu anderen Seiten öffnen die Seite des jeweiligen Anbieters. Erst dann gilt dessen Datenschutzerklärung.</p>
+
+<h2>Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch (Art. 15 bis 21 DSGVO). Schreib dafür an die oben genannte Adresse. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.</p>
+{% endif %}

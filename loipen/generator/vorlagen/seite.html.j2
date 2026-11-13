@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+{% if base %}<base href="{{ base }}">
+{% endif %}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ titel }} · Loipenblick</title>
+{% if not oeffentlich %}<meta name="robots" content="noindex, nofollow">
+{% endif %}<meta name="theme-color" content="#06111a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eaf3f9" media="(prefers-color-scheme: light)">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="stylesheet" href="app.css?v={{ stand }}">
+</head>
+<body class="textseite">
+<header class="top">
+  <div class="wrap in">
+    <a class="logo" href="./#/" aria-label="Loipenblick, Startseite"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c4-9 6-9 9-3s6 3 9-8"/></svg></i><span>Loipenblick</span></a>
+    <nav class="tabs" aria-label="Seiten">
+      <a href="./#/">Heute</a>
+      <a href="./#/karte">Karte</a>
+      <a href="./#/loipen">Loipen</a>
+    </nav>
+  </div>
+</header>
+<main id="view" class="wrap text">
+<h1>{{ titel }}</h1>
+{{ inhalt }}
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Alle Angaben ohne Gewähr.</strong> Maßgeblich ist immer die Quelle vor Ort.</p>
+    <p class="fine rechtlich"><a href="hinweise.html">Hinweise und Betreiber</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </div>
+</footer>
+</body>
+</html>

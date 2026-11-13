@@ -25,6 +25,7 @@ from loipen.fetcher import HoeflicherFetcher
 from loipen.konfig import lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
 from loipen.sicherung import sichere
+from loipen.upload import UploadFehler, upload_meldung, veroeffentliche
 from loipen.wetter import aktualisiere_wetter
 from loipen.zeitplan import ist_faellig
 
@@ -72,9 +73,42 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
-        generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days)
+        generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
+                          rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich)
     log.info("Seite erzeugt in %s", settings.site_dir)
+    meldung = hochladen(settings)
+    if meldung:
+        meldungen.append(meldung)
     _melde(settings, sender, ereignisse, meldungen)
+
+
+def rechtliches(settings) -> dict:
+    """B6: Impressum und Datenschutz kommen aus der .env auf dem NAS, nie aus dem Repo."""
+    text = None
+    if settings.datenschutz_datei:
+        try:
+            text = Path(settings.datenschutz_datei).read_text(encoding="utf-8")
+        except OSError:
+            log.exception("Datenschutztext %s nicht lesbar, nehme die Vorlage", settings.datenschutz_datei)
+    return {"name": settings.impressum_name, "anschrift": settings.impressum_anschrift,
+            "email": settings.impressum_email, "hoster": settings.hoster, "log_tage": settings.log_tage,
+            "datenschutz_html": text}
+
+
+def hochladen(settings, **kw) -> tuple[str, str] | None:
+    """B8: nach jedem Lauf hochladen, wenn ein Ziel eingerichtet ist. Gibt eine Push-Meldung zurueck."""
+    if not settings.upload_url:
+        return None
+    fehlt = generator.rechtliches_fehlt(rechtliches(settings))
+    status = Path(settings.backup_dir) / "upload-status.json"
+    try:
+        if fehlt:  # B6 AK 3: ohne vollstaendiges Impressum geht nichts online
+            raise UploadFehler("Impressum unvollständig, es fehlen: " + ", ".join(fehlt))
+        veroeffentliche(settings, settings.site_dir, **kw)
+        return upload_meldung(status, True, None)
+    except Exception as e:
+        log.error("Upload: %s", e)
+        return upload_meldung(status, False, str(e))
 
 
 def _melde(settings, sender, ereignisse, meldungen) -> None:

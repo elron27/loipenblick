@@ -118,7 +118,7 @@ def test_p13_abdeckung_je_region(seite):
 
 
 def strecken_abrufe(page) -> list[str]:
-    return sorted({re.search(r"strecken/([^/?]+)\.json", u).group(1) for u in page.abrufe if "/strecken/" in u})
+    return sorted({re.search(r"strecken/([^/?.]+)(?:\.[0-9a-f]{12})?\.json", u).group(1) for u in page.abrufe if "/strecken/" in u})
 
 
 @pytest.mark.req("U32", ak=2)

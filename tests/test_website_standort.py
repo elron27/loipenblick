@@ -190,7 +190,7 @@ def test_u36_karte_zeigt_strecken_auch_fern_vom_standort(seite):
     seite.open("#/karte?ort=Rottach-Egern")  # Tannheimer Tal liegt rund 90 km entfernt
     seite.wait_for_selector("#map path.leaflet-interactive", state="attached")
     seite.wait_for_timeout(300)
-    geladen = {re.search(r"strecken/([^/?]+)\.json", u).group(1) for u in seite.abrufe if "/strecken/" in u}
+    geladen = {re.search(r"strecken/([^/?.]+)(?:\.[0-9a-f]{12})?\.json", u).group(1) for u in seite.abrufe if "/strecken/" in u}
     assert geladen == {"chiemgau", "ausserfern"}
     assert seite.locator("#map path.leaflet-interactive").count() >= 80
 

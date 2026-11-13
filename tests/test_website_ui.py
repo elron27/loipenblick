@@ -272,10 +272,25 @@ def test_u3_filter_gelten_auch_fuer_die_karte(seite):
     assert marker_summe(seite) < alle
 
 
-def test_karte_hat_echte_grundkarte_mit_quellenangabe(seite):
+@pytest.mark.req("B23", ak=[2, 3])
+def test_karte_hat_echte_grundkarte_mit_quellenangabe_erst_nach_klick(seite):
+    abrufe = []
+    seite.on("request", lambda r: abrufe.append(r.url))
+    seite.route(re.compile(r"https://tile\.openstreetmap\.org/.*"), lambda r: r.fulfill(status=204))
     seite.open("#/karte")
-    seite.wait_for_selector("#map .leaflet-tile-pane", state="attached")
+    seite.wait_for_selector("#map .kartefrage")
+    assert seite.locator("#map .leaflet-tile").count() == 0  # B23 AK 3: ohne Klick nichts von Dritten
+    assert not [u for u in abrufe if "tile.openstreetmap.org" in u]
+    seite.get_by_role("button", name="Karte laden").click()
+    seite.wait_for_selector("#map .leaflet-tile", state="attached")
+    assert seite.locator("#map .kartefrage").count() == 0
     assert "OpenStreetMap" in seite.locator("#map .leaflet-control-attribution").inner_text()
+    # gemerkt: beim naechsten Aufruf ohne Frage, Widerruf in der Fusszeile
+    seite.open("#/karte")
+    seite.wait_for_selector("#map .leaflet-tile", state="attached")
+    assert seite.locator("#map .kartefrage").count() == 0
+    seite.get_by_role("button", name="Karte nicht mehr automatisch laden").click()
+    seite.wait_for_selector("#map .kartefrage")
 
 
 @pytest.mark.req("U5", ak=1)
@@ -417,3 +432,30 @@ def test_u16_liste_nach_neuschnee_48h_sortierbar(seite):
     gebiete = seite.locator(".lp .n .fine").all_inner_texts()
     n = sum(1 for t in gebiete if "Bayrischzell" in t)
     assert n > 0 and all("Bayrischzell" in t for t in gebiete[:n])
+
+
+@pytest.mark.req("B23", ak=1)
+def test_b23_beim_aufruf_nur_anfragen_an_die_eigene_domain(seite, basis):
+    abrufe = []
+    seite.on("request", lambda r: abrufe.append(r.url))
+    for hash in ("#/", "#/karte", "#/loipen", "#/gebiet/kreuth", "#/abdeckung"):
+        seite.open(hash)
+        seite.wait_for_timeout(300)
+    for datei in ("impressum.html", "datenschutz.html", "hinweise.html", "404.html"):
+        seite.goto(f"{basis}/{datei}")
+    fremd = [u for u in abrufe if not u.startswith(basis) and not u.startswith("data:")]
+    assert fremd == []
+
+
+@pytest.mark.req("B25", ak=1)
+@pytest.mark.req("B6", ak=2)
+def test_b25_fusszeile_verlinkt_hinweise_impressum_datenschutz(seite, basis):
+    seite.open("#/")
+    for name, datei in (("Hinweise und Betreiber", "hinweise.html"), ("Impressum", "impressum.html"),
+                        ("Datenschutz", "datenschutz.html")):
+        link = seite.locator("footer").get_by_role("link", name=name)
+        assert link.get_attribute("href") == datei
+    seite.goto(f"{basis}/hinweise.html")
+    assert "Loipenblick" in seite.locator("header").inner_text()
+    for datei in ("impressum.html", "datenschutz.html"):
+        assert seite.locator("footer").get_by_role("link", name=re.compile(datei[:5], re.I)).count() >= 1

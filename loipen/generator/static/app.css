@@ -134,3 +134,12 @@ h2.sec.land{margin-top:34px}
 .ortwahl button.gps{background:var(--unk-bg);font-weight:600}
 #ortliste{max-height:46vh;overflow:auto}
 .badge.abw{background:var(--unk-bg);color:var(--unk);font-weight:600}
+/* B23: Frage vor dem Laden fremder Kartenkacheln */
+.kartefrage{position:absolute;top:12px;left:56px;right:56px;max-width:420px;padding:12px 14px;background:var(--solid);z-index:1001;font-size:14px;cursor:auto}
+.kartefrage p{margin:0 0 8px}.kartefrage p:last-child{margin:0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+/* B6, B16, B25: Textseiten */
+.text{max-width:760px;padding-bottom:32px}.text h2{margin:28px 0 8px;font-size:19px}.text p,.text li{line-height:1.6}
+.text-liste{padding-left:20px}.text-liste li{margin:6px 0}
+.text code{font-size:.9em;overflow-wrap:anywhere}
+.rechtlich a{white-space:nowrap}
+@media(max-width:760px){.textseite .foot{padding-bottom:110px}}

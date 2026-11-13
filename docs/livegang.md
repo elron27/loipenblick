@@ -1,6 +1,6 @@
 # Livegang im Winter 2026/27
 
-Stand 13.11.2026. Recherche und Abwägung, noch keine Umsetzung. Ziel: Die statische Seite, die das NAS erzeugt (E-10), geht noch diesen Winter öffentlich online, für höchstens 5 € im Monat (N-08, B9).
+Stand 13.11.2026. Recherche und Abwägung. Teil 1 der Umsetzung (Upload, Textseiten, Header, Karte nach Klick) ist im Code, siehe [README, Online stellen](../README.md#online-stellen-livegang). Ziel: Die statische Seite, die das NAS erzeugt (E-10), geht noch diesen Winter öffentlich online, für höchstens 5 € im Monat (N-08, B9).
 
 > **Keine Rechtsberatung.** Die rechtlichen Abschnitte fassen Gesetzestexte, Leitfäden von Aufsichtsbehörden und Ratgeberseiten zusammen und nennen die Quelle. Für eine verbindliche Auskunft ist eine Anwältin oder ein Anwalt zuständig. Wo eine Aussage nicht geprüft werden konnte, steht das dabei.
 
@@ -94,7 +94,7 @@ Im Worker-Image reicht Python mit `paramiko` (SFTP) oder `ftplib` mit TLS (FTPS)
 
 ### Testphase vor dem Livegang
 
-Erst auf eine Testadresse hochladen (Subdomain `test.<domain>` mit Passwortschutz per `.htaccess` und `noindex`). Sobald Impressum, Datenschutz und die Antworten der Quellen da sind, auf die Hauptadresse umstellen. Das Öffentlichschalten ist ein Schritt, den nur Stefan freigibt (CLAUDE.md Regel 6).
+Erst auf eine Testadresse hochladen (Subdomain `test.<domain>`). Solange `LOIPEN_OEFFENTLICH=false` ist, schickt die Seite `noindex` und eine sperrende `robots.txt`. Ein Passwortschutz per `.htaccess` geht nicht, weil der Upload die eigene `.htaccess` mitbringt. Sobald Impressum, Datenschutz und die Antworten der Quellen da sind, auf die Hauptadresse umstellen. Das Öffentlichschalten ist ein Schritt, den nur Stefan freigibt (CLAUDE.md Regel 6).
 
 ## 5. Impressum
 

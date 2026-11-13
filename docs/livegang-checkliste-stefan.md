@@ -13,14 +13,14 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 
 5. **Webspace und Domain bestellen.** AVV (Vertrag zur Auftragsverarbeitung) im Kundenmenü abschließen, bei netcup und Hetzner ist das ein Klick.
 6. **Let's Encrypt** für die Domain einschalten, „HTTP auf HTTPS umleiten“ aktivieren.
-7. **Eigenes SFTP/FTPS-Konto** nur für den Web-Ordner anlegen, dazu eine Subdomain `test.` mit Passwortschutz.
-8. **Zugangsdaten in die `.env` auf dem NAS** eintragen (Namen kommen mit dem Upload-PR). Nicht in Nachrichten oder ins Repo.
+7. **Eigenes SFTP/FTPS-Konto** nur für den Web-Ordner anlegen, dazu eine Subdomain `test.` (ohne Passwortschutz per `.htaccess`, weil der Upload die `.htaccess` mitbringt; die Testseite sperrt Suchmaschinen selbst).
+8. **Zugangsdaten in die `.env` auf dem NAS** eintragen: `LOIPEN_UPLOAD_URL`, `LOIPEN_UPLOAD_PASSWORT`, Impressum-Angaben und `LOIPEN_HOSTER` (Vorlage `.env.example`, Ablauf im README unter „Online stellen“). Nicht in Nachrichten oder ins Repo.
 9. **Log-Aufbewahrung** beim Hoster auf kurz stellen (z. B. 7 Tage), wenn einstellbar.
 10. **E-Mail-Weiterleitung** `kontakt@<domain>` auf dein Postfach einrichten.
 
 ## Bis Freitag, 4.12.
 
-11. **Datenschutzerklärung erzeugen** mit einem Generator (z. B. datenschutz-generator.de oder e-recht24). Bausteine: Hosting/Server-Logs, Karte, Standort im Browser, lokale Speicherung, externe Links, Statistik. Den Text ablegen, wo der Upload-PR es vorgibt.
+11. **Datenschutzerklärung erzeugen** mit einem Generator (z. B. datenschutz-generator.de oder e-recht24). Bausteine: Hosting/Server-Logs, Karte, Standort im Browser, lokale Speicherung, externe Links, Statistik. Den Text als `geheim/datenschutz.html` neben die `docker-compose.yml` legen und `LOIPEN_DATENSCHUTZ_DATEI=/app/geheim/datenschutz.html` setzen. Ohne eigenen Text nimmt die Seite die eingebaute Vorlage.
 12. **Testadresse prüfen** auf Handy und PC: Standort, Karte, Impressum, Datenschutz.
 13. **UptimeRobot** (Monitor auf `https://<domain>/`) und **Healthchecks.io** (Ping-URL in die `.env`) anlegen.
 14. **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen (die Seite sperrt automatische Abrufe), Ergebnis in den Thread schreiben.
