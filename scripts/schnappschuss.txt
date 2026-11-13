@@ -1,14 +1,3 @@
-# <zielpfad> <url> -- Runde 6 (13.11.2026): lokale Tourismusseiten mit genauerem Loipenstatus als tirol.at,
-# GPX von berchtesgaden.de und Gegenprobe robots.txt von tirol.mapservices.eu
-tests/fixtures/tannheimer/2026-11-13/loipenmanager.json https://module.tourinfra.com/tannheimer/inc/ajax.php?ajaxtype=getLoipenmanager
-tests/fixtures/tannheimer/2026-11-13/geoeffnete-loipen.html https://www.tannheimertal.com/de/erleben/winter/langlaufen/geoeffnete-loipen
-tests/fixtures/osttirol/2026-11-13/alle-loipen.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/alle-loipen
-tests/fixtures/wildschoenau/2026-11-13/langlaufen.html https://www.wildschoenau.com/de/aktivitaeten/winter/langlaufen
-tests/fixtures/stubai/2026-11-13/langlaufen.html https://www.stubai.at/aktivitaeten/winter-aktiv/langlaufen/
-tests/fixtures/zillertalarena/2026-11-13/langlaufen.html https://www.zillertalarena.com/winter/abseits-der-pisten/langlaufen/
-tests/fixtures/seefeld/2026-11-13/langlaufen.html https://www.seefeld.com/langlaufen
-tests/fixtures/galtuer/2026-11-13/langlaufen.html https://www.galtuer.com/winter/langlaufen
-tests/fixtures/lechtal/2026-11-13/langlaufstrecken.html https://www.lechtal.at/de/aktivitaeten/langlaufstrecken.html
-tests/fixtures/berchtesgaden/2026-11-13/gpx_addressbase_310.gpx https://imxplatform-cust-bb.fsn1.your-objectstorage.com/media/gpx_addressbase_310.gpx
-tests/fixtures/berchtesgaden/2026-11-13/gpx_addressbase_311.gpx https://imxplatform-cust-bb.fsn1.your-objectstorage.com/media/gpx_addressbase_311.gpx
-tests/fixtures/tirol/2026-11-13/gpx-gegenprobe.gpx https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM6/de/generate/51834
+# <zielpfad> <url> -- Runde 7 (13.11.2026): Loipenbericht Olympiaregion Seefeld (Seefeld + Leutasch, 62 Loipen)
+tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
+tests/fixtures/seefeld/2026-11-13/arena365-loipen.html https://www.seefeld.com/arena365/de/loipen.html
