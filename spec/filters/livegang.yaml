@@ -1,0 +1,13 @@
+reqseq-filter: 1
+name: livegang
+description: "Anforderungen für den öffentlichen Livegang im Winter 2026/27 (docs/livegang.md)"
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: livegang
+    - type: [system-requirement]
+    - status: [draft, approved]
+sort:
+  - by: kennung
+    order: asc
