@@ -1,4 +1,4 @@
-# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 1: Einstiegsseiten und APIs
+# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 1 (Wiederholung nach Skript-Fix): Einstiegsseiten und APIs
 tests/fixtures/recherche-2026-11-13/suedtirol/suedtirol-info/loipen.html https://www.suedtirol.info/de/erleben/winter/langlaufen/loipen
 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/api-root.json https://tourism.api.opendatahub.com/v1
 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-langlauf.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=5&odhtagfilter=loipen&language=de

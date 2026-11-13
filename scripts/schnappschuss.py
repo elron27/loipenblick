@@ -33,6 +33,9 @@ def holen(url: str) -> tuple[int, bytes]:
             return r.status, r.read()
     except urllib.error.HTTPError as e:
         return e.code, e.read() or b""
+    except (urllib.error.URLError, OSError) as e:
+        # Nicht erreichbarer Host oder Zeitueberschreitung: protokollieren statt den ganzen Lauf abbrechen.
+        return 0, f"FEHLER {e}".encode()
 
 
 def main() -> int:
@@ -56,6 +59,12 @@ def main() -> int:
             warte()
             status, inhalt = holen(host + "/robots.txt")
             p = urllib.robotparser.RobotFileParser()
+            if status == 0:
+                p.disallow_all = True
+                zeilen.append(f"NICHT ERREICHBAR {host}: {inhalt.decode()}")
+                print(zeilen[-1], flush=True)
+                robots[host] = p
+                continue
             if status in (401, 403):
                 p.disallow_all = True
             elif status >= 400:
@@ -68,10 +77,17 @@ def main() -> int:
             datei.write_bytes(inhalt)
             zeilen.append(f"{status} {host}/robots.txt")
         if not robots[host].can_fetch(UA, url):
-            zeilen.append(f"ROBOTS-VERBOT {url}")
+            if not robots[host].disallow_all or (ROOT / Path(ziel).parent / "robots.txt").exists():
+                zeilen.append(f"ROBOTS-VERBOT {url}")
+            else:
+                zeilen.append(f"UEBERSPRUNGEN {url}")
             continue
         warte()
         status, inhalt = holen(url)
+        if status == 0:
+            zeilen.append(f"{inhalt.decode()} {url}")
+            print(zeilen[-1], flush=True)
+            continue
         datei = ROOT / ziel
         datei.parent.mkdir(parents=True, exist_ok=True)
         datei.write_bytes(inhalt)
