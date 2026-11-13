@@ -22,7 +22,7 @@ function km(x) { return x == null ? "Länge unbekannt" : zahl(x) + " km"; }
 function chip(s) { return '<span class="st ' + s + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + SYM[s] + "</svg>" + WORT[s] + "</span>"; }
 function jetztMs() { return Date.now(); }
 /* D16: Gruppe "Land · Bundesland", z. B. "Österreich · Tirol" */
-function gruppeName(r) { return (LAND[r.land] || r.land || "") + (r.bundesland ? " · " + r.bundesland : ""); }
+function gruppeName(r) { var l = LAND[r.land] || r.land || ""; return l + (r.bundesland && r.bundesland !== l ? " · " + r.bundesland : ""); }
 function alter(iso) {
   if (!iso) return "unbekannt";
   var min = Math.max(0, Math.round((jetztMs() - new Date(iso).getTime()) / 60000));
@@ -575,11 +575,13 @@ function sucheBinden() {
   function zeige() {
     var t = q.value.trim().toLowerCase();
     if (t.length < 3) { zu(); return; }
-    items = [];
-    S.gebiete.forEach(function (g) { if (g.name.toLowerCase().indexOf(t) >= 0) items.push({art: "Gebiet", name: g.name, ziel: "#/gebiet/" + g.slug}); });
-    S.loipen.forEach(function (l) { if (l.name.toLowerCase().indexOf(t) >= 0 && items.length < 40) items.push({art: "Loipe", name: l.name, extra: l.gebiet.name, ziel: "#/loipe/" + l.id}); });
-    S.orte.forEach(function (o) { if (o.name.toLowerCase().indexOf(t) >= 0) items.push({art: "Ort", name: o.name, ziel: "#/loipen?ort=" + encodeURIComponent(o.name) + "&sort=entfernung", ort: o}); });
-    items = items.slice(0, 12);
+    /* Jede Art bekommt ihren Anteil, damit viele passende Loipen Gebiete und Orte nicht verdraengen */
+    var geb = [], lps = [], orte = [];
+    S.gebiete.forEach(function (g) { if (g.name.toLowerCase().indexOf(t) >= 0) geb.push({art: "Gebiet", name: g.name, ziel: "#/gebiet/" + g.slug}); });
+    S.loipen.forEach(function (l) { if (l.name.toLowerCase().indexOf(t) >= 0 && lps.length < 12) lps.push({art: "Loipe", name: l.name, extra: l.gebiet.name, ziel: "#/loipe/" + l.id}); });
+    S.orte.forEach(function (o) { if (o.name.toLowerCase().indexOf(t) >= 0) orte.push({art: "Ort", name: o.name, ziel: "#/loipen?ort=" + encodeURIComponent(o.name) + "&sort=entfernung", ort: o}); });
+    geb = geb.slice(0, 4); orte = orte.slice(0, 4);
+    items = geb.concat(lps.slice(0, 12 - geb.length - orte.length), orte);
     ul.innerHTML = items.length ? items.map(function (it, i) { return '<li role="option" id="v' + i + '" data-i="' + i + '"><span>' + esc(it.name) + (it.extra ? ' <small>' + esc(it.extra) + "</small>" : "") + "</span><small>" + it.art + "</small></li>"; }).join("") : '<li role="option" aria-disabled="true">Nichts gefunden</li>';
     ul.hidden = false; q.setAttribute("aria-expanded", "true"); aktiv = -1;
   }

@@ -2042,8 +2042,8 @@ gebiete:
   tourist_url: https://www.gastein.com
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) mit Vignette.'
   wetterstation:
-    id: '15501'
-    name: Bad Gastein
+    id: '15402'
+    name: Rauris
     dienst: geosphere
 - slug: ramsau-am-dachstein
   name: Ramsau am Dachstein
@@ -2067,6 +2067,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: aeschi-aeschiried
   name: Aeschi / Aeschiried
+  hoehe_m: 1000  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.6592
   lon: 7.6958
@@ -2122,6 +2123,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: brigels
   name: Brigels
+  hoehe_m: 1290  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: graubuenden
   lat: 46.7715
   lon: 9.0674
@@ -2137,6 +2139,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: berguen-filisur
   name: Bergün Filisur
+  hoehe_m: 1370  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: graubuenden
   lat: 46.631
   lon: 9.7469
@@ -2176,6 +2179,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: bumbach-schangnau
   name: Bumbach / Schangnau
+  hoehe_m: 1000  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.8139
   lon: 7.9007
@@ -2207,6 +2211,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: degersheim
   name: Degersheim
+  hoehe_m: 800  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: ostschweiz
   lat: 47.3791
   lon: 9.2068
@@ -2222,6 +2227,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: einsiedeln
   name: Einsiedeln
+  hoehe_m: 880  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 47.1249
   lon: 8.7376
@@ -2269,6 +2275,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: eriz
   name: Eriz
+  hoehe_m: 1050  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.7886
   lon: 7.7776
@@ -2300,6 +2307,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: gantrisch-riffenmatt
   name: Gantrisch - Riffenmatt
+  hoehe_m: 1100  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.7653
   lon: 7.3532
@@ -2307,6 +2315,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: gibswil
   name: Gibswil
+  hoehe_m: 760  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zuercher-oberland
   lat: 47.305
   lon: 8.8955
@@ -2362,6 +2371,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: heimenschwand
   name: Heimenschwand
+  hoehe_m: 980  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.816
   lon: 7.7044
@@ -2393,6 +2403,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: kiental-ramslauenen
   name: Kiental-Ramslauenen
+  hoehe_m: 960  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.586
   lon: 7.7238
@@ -2400,6 +2411,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: kuessnacht-seebodenalp
   name: Küssnacht - Seebodenalp
+  hoehe_m: 1030  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 47.0761
   lon: 8.4398
@@ -2439,6 +2451,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: lauchernalp-loetschental
   name: Lauchernalp-Lötschental
+  hoehe_m: 1420  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: wallis
   lat: 46.4017
   lon: 7.7776
@@ -2494,6 +2507,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: les-pleiades
   name: Les Pléiades
+  hoehe_m: 1360  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: waadtlaender-alpen
   lat: 46.4649
   lon: 6.8947
@@ -2541,6 +2555,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: moerlialp-giswil
   name: Mörlialp - Giswil
+  hoehe_m: 1100  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 46.8257
   lon: 8.1104
@@ -2596,6 +2611,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: rigi
   name: Rigi
+  hoehe_m: 1440  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 47.0094
   lon: 8.4825
@@ -2603,6 +2619,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: rothenthurm
   name: Rothenthurm
+  hoehe_m: 920  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 47.1035
   lon: 8.6763
@@ -2658,6 +2675,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: samnaun
   name: Samnaun
+  hoehe_m: 1840  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: graubuenden
   lat: 46.9512
   lon: 10.3752
@@ -2681,6 +2699,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: sigriswil
   name: Sigriswil
+  hoehe_m: 800  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: berner-oberland
   lat: 46.7372
   lon: 7.7289
@@ -2688,6 +2707,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: simplon
   name: Simplon
+  hoehe_m: 1470  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: wallis
   lat: 46.246
   lon: 8.0273
@@ -2695,6 +2715,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: soerenberg
   name: Sörenberg
+  hoehe_m: 1160  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 46.8209
   lon: 8.0341
@@ -2702,6 +2723,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: st-cergue
   name: St-Cergue
+  hoehe_m: 1050  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: waadtlaender-alpen
   lat: 46.4466
   lon: 6.1568
@@ -2717,6 +2739,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: studen-sz
   name: Studen SZ
+  hoehe_m: 890  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: zentralschweiz
   lat: 47.0747
   lon: 8.8352
@@ -2772,6 +2795,7 @@ gebiete:
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
 - slug: wasserfallen
   name: Wasserfallen
+  hoehe_m: 1010  # Ortshoehe gerundet, Schweiz Tourismus nennt keine
   region: basel-jura
   lat: 47.3903
   lon: 7.6963

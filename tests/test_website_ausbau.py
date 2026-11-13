@@ -35,8 +35,12 @@ def text(page) -> str:
 def test_d16_liste_und_regionswechsler_nach_land_und_region(seite):
     seite.open("#/loipen")
     laender = seite.locator("h2.land").all_inner_texts()
-    assert laender == ["Deutschland · Bayern", "Österreich · Salzburg", "Österreich · Tirol", "Italien · Südtirol",
-                       "Italien · Venetien"]
+    assert laender == ["Deutschland · Bayern", "Österreich · Salzburg", "Österreich · Steiermark", "Österreich · Tirol",
+                       "Italien · Südtirol", "Italien · Venetien",
+                       "Schweiz · Basel-Landschaft", "Schweiz · Bern", "Schweiz · Freiburg", "Schweiz · Graubünden",
+                       "Schweiz · Jura", "Schweiz · Ostschweiz", "Schweiz · Tessin", "Schweiz · Waadt", "Schweiz · Wallis",
+                       "Schweiz · Zentralschweiz", "Schweiz · Zürich",
+                       "Liechtenstein"]  # Land = Bundesland steht nur einmal da
     regionen = seite.locator("section.rg").evaluate_all("els => els.map(e => e.dataset.region)")
     assert regionen.index("chiemgau") < regionen.index("kufsteinerland") < regionen.index("wilder-kaiser")
     # jede Loipe steht genau in ihrer Region
@@ -112,7 +116,8 @@ def test_p13_abdeckung_je_region(seite):
     seite.get_by_role("link", name="Abdeckung und Quellen").click()
     seite.wait_for_selector("table.tab")
     zeilen = seite.locator("table.tab tbody tr").all_inner_texts()
-    assert len(zeilen) == 26  # 10 Regionen der Stufe 1, 9 weitere fuer ganz Tirol, 7 in Suedtirol/Venetien
+    # 10 Regionen der Stufe 1, 9 weitere fuer ganz Tirol, 7 in Suedtirol/Venetien, 17 aus E-20 (Schweiz, Gastein, Ramsau)
+    assert len(zeilen) == 43
     berchtesgaden = next(z for z in zeilen if z.startswith("Berchtesgadener Land")).split("\t")
     assert berchtesgaden[1:] == ["5", "0", "0", "5", "0"]
     assert "Tirol Werbung (tirol.at)" in text(seite)
