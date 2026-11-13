@@ -157,3 +157,12 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 404   128823 tests/fixtures/recherche-2026-11-13/suedtirol/ratschings/langlauf.html https://www.ratschings.info/en/experiences/experience-winter/the-journey-is-the-destination.html
 404 https://tourism.api.opendatahub.com/robots.txt
 200    11044 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipe-detail.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887?language=de
+# Lauf 2026-11-13 07:31 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://snow.myswitzerland.com/robots.txt
+200   295444 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langlauf.html https://snow.myswitzerland.com/schneebericht/langlauf/
+200   149651 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-scuol-zernez-60.html https://snow.myswitzerland.com/schneebericht/engadin-scuol-zernez-60/
+200   120187 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/einsiedeln-loipe-schwedentritt-281.html https://snow.myswitzerland.com/schneebericht/einsiedeln-loipe-schwedentritt-281/
+200 https://www.goms.ch/robots.txt
+200   181344 tests/fixtures/recherche-2026-11-13/schweiz/goms/loipen-bericht.html https://www.goms.ch/wintersportbericht/loipen-bericht
+200 https://touren.kaernten.at/robots.txt
+410        0 tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/robots-pruefung.html https://touren.kaernten.at/de/touren/langlauf/kaernten/r/1035435/
