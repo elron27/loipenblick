@@ -1,0 +1,15 @@
+User-Agent: *
+
+Disallow: /?tx_webxgsmap*
+
+Sitemap: https://www.achensee.com/de/sitemap.xml
+Sitemap: https://www.achensee.com/en/sitemap.xml
+
+#              ___.                                              .__
+#__  _  __ ____\_ |__             ___________  ____  ______ _____|__| ____    ____
+#\ \/ \/ // __ \| __ \   ______ _/ ___\_  __ \/  _ \/  ___//  ___/  |/    \  / ___\
+# \     /\  ___/| \_\ \ /_____/ \  \___|  | \(  <_> )___ \ \___ \|  |   |  \/ /_/  >
+#  \/\_/  \___  >___  /          \___  >__|   \____/____  >____  >__|___|  /\___  /
+#             \/    \/               \/                 \/     \/        \//_____/
+#
+# why you are looking at this? please see https://www.web-crossing.com

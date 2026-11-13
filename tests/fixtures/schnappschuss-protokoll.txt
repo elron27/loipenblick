@@ -216,3 +216,25 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   843610 tests/fixtures/recherche-tirol/2026-11-13/oetztal/status-crosscountry.html https://www.oetztal.com/de/live-infos/status?card=crosscountryski
 200 https://zugspitzarena.com/robots.txt
 200   525526 tests/fixtures/recherche-tirol/2026-11-13/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
+# Lauf 2026-11-13 11:56 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.achensee.com/robots.txt
+200   734482 tests/fixtures/recherche-tirol/2026-11-13/achensee/schneebericht.html https://www.achensee.com/de/live/schneebericht/
+200 https://www.kufstein.com/robots.txt
+200   762114 tests/fixtures/recherche-tirol/2026-11-13/kufstein/schneebericht.html https://www.kufstein.com/de/schneebericht.html
+200 https://www.kaiserwinkl.com/robots.txt
+200   214249 tests/fixtures/recherche-tirol/2026-11-13/kaiserwinkl/geoeffnete-loipen.html https://www.kaiserwinkl.com/de/langlaufen-tirol/geoeffnete-loipen.html
+200 https://www.wilderkaiser.info/robots.txt
+200   337401 tests/fixtures/recherche-tirol/2026-11-13/wilderkaiser/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
+200 https://www.stantonamarlberg.com/robots.txt
+200   265832 tests/fixtures/recherche-tirol/2026-11-13/stanton/aktueller-loipenzustand.html https://www.stantonamarlberg.com/de/service/aktueller-loipenzustand
+200 https://www.tiroler-oberland.com/robots.txt
+200   587952 tests/fixtures/recherche-tirol/2026-11-13/tiroler-oberland/geoeffnete-einrichtungen.html https://www.tiroler-oberland.com/de/Aktuelles/Geoeffnete-Einrichtungen
+200 https://www.nauders.com/robots.txt
+200   781200 tests/fixtures/recherche-tirol/2026-11-13/nauders/einrichtungen.html https://www.nauders.com/de/Aktuelles/Einrichtungen-Nauders
+200 https://www.serfaus-fiss-ladis.at/robots.txt
+200   565648 tests/fixtures/recherche-tirol/2026-11-13/serfaus/langlaufen.html https://www.serfaus-fiss-ladis.at/en/winter-holiday/ski-area-and-winter-activities/cross-country-skiing
+200 https://www.oetztal.com/robots.txt
+200   778418 tests/fixtures/recherche-tirol/2026-11-13/oetztal/loipenstatus.html https://www.oetztal.com/de/live-infos/loipenstatus
+200   843611 tests/fixtures/recherche-tirol/2026-11-13/oetztal/status-crosscountry.html https://www.oetztal.com/de/live-infos/status?card=crosscountryski
+200 https://zugspitzarena.com/robots.txt
+200   525526 tests/fixtures/recherche-tirol/2026-11-13/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
