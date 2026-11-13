@@ -1,0 +1,24 @@
+<h2>Haftung und Sicherheit</h2>
+<ul class="text-liste">
+  <li><strong>Der Status kann veraltet sein.</strong> Loipenblick ruft die Quellen einige Male am Tag ab. Was dazwischen passiert, sieht die Seite nicht. Das Datum „Stand“ bei jeder Loipe zeigt, wie alt eine Angabe ist.</li>
+  <li><strong>Vor Ort gilt die Beschilderung.</strong> Sperrungen, Umleitungen und Hinweise der Loipenbetreiber gehen allem vor, was hier steht.</li>
+  <li><strong>Benutzung auf eigene Gefahr.</strong> Ob eine Loipe für dich geeignet ist, entscheidest du selbst. Achte auf Wetter, Lawinenlage und Schneeverhältnisse.</li>
+  <li><strong>Loipengebühren beachten.</strong> In vielen Gebieten, besonders in Österreich, kostet die Loipe etwas. Die Gebühr steht auf der Seite des Gebiets, sonst beim Betreiber vor Ort.</li>
+</ul>
+<p>Alle Angaben ohne Gewähr. Loipenblick übernimmt nur Fakten (offen oder geschlossen, gespurte Kilometer, Datum) und keine Texte oder Bilder der Quellen.</p>
+
+<h2 id="betreiber">Für Gemeinden und Loipenbetreiber</h2>
+<p>Loipenblick zeigt den Zustand Ihrer Loipen mit Ihrem Namen als Quelle und einem Link auf Ihre Seite. Die Daten werden höchstens einige Male am Tag abgerufen, unter Beachtung der robots.txt.</p>
+<p>Etwas stimmt nicht, Sie wünschen einen anderen Quellenhinweis, eine Schnittstelle oder wollen nicht gelistet werden? {% if email %}Schreiben Sie an <a href="mailto:{{ email }}">{{ email }}</a>.{% else %}Die Kontaktadresse steht im <a href="impressum.html">Impressum</a>.{% endif %} Eine Quelle lässt sich jederzeit abschalten, ihre Daten verschwinden dann mit dem nächsten Lauf.</p>
+
+<h2>Genutzte Quellen</h2>
+<ul class="plain">
+{% for q in quellen %}  <li class="glass"><span><b>{{ q.name }}</b></span>{% if q.url %}<a class="btn" href="{{ q.url }}" rel="noopener">{{ q.host }}</a>{% endif %}</li>
+{% endfor %}</ul>
+
+<h2>Weitere Daten</h2>
+<ul class="text-liste">
+  <li>Wetter in Deutschland: Quelle: Deutscher Wetterdienst, abgerufen direkt und über Bright Sky (brightsky.dev).</li>
+  <li>Wetter in Österreich: Datenquelle: GeoSphere Austria - <a href="https://data.hub.geosphere.at" rel="noopener">https://data.hub.geosphere.at</a> (CC BY 4.0).</li>
+  <li>Karte: © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a> (ODbL).</li>
+</ul>

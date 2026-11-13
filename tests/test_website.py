@@ -37,7 +37,7 @@ def alle_loipen(site: Path) -> list[dict]:
 def test_b7_seite_braucht_keinen_server(site):
     html = (site / "index.html").read_text(encoding="utf-8")
     assert not re.search(r"<(script|link)[^>]+(src|href)=\"https?://", html)  # nichts von fremden Servern
-    dateien = {p.suffix for p in site.rglob("*") if p.is_file()}
+    dateien = {p.suffix for p in site.rglob("*") if p.is_file() and p.name != ".htaccess"}  # .htaccess: B24
     assert dateien <= {".html", ".js", ".css", ".json", ".png", ".webmanifest", ".txt"}  # nur statische Dateien
     js = (site / "app.js").read_text(encoding="utf-8")
     assert "fetch(url)" in js and not re.search(r"fetch\(\s*[\"']https?://", js)  # Daten nur relativ
@@ -56,7 +56,7 @@ def test_b7_daten_liegen_als_json_je_region(site):
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
         assert isinstance(lies(site, r["strecken"]), dict)
     # Chiemgau liefert Streckenverlaeufe als [lat, lon]
-    strecken = lies(site, "strecken/chiemgau.json")
+    strecken = lies(site, next(r["strecken"] for r in index["regionen"] if r["slug"] == "chiemgau"))
     assert len(strecken) > 30
     lat, lon = next(iter(strecken.values()))[0]
     assert 47 < lat < 48 and 12 < lon < 13

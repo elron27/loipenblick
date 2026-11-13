@@ -44,6 +44,8 @@ services:
       # - ./config:/app/config:ro
       - ./site:/app/site
       - ${BACKUP_DIR:-./backup}:/app/backup
+      # Livegang: known_hosts, SSH-Schluessel und eigener Datenschutztext (nie ins Repo)
+      - ./geheim:/app/geheim:ro
     depends_on:
       migrate:
         condition: service_completed_successfully

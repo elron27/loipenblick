@@ -99,7 +99,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         zustaende.setdefault(z.loipe_id, []).append(z)
 
     # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
-    aktive = [l for l in session.scalars(select(Loipe).where(Loipe.active))]
+    # B16 AK 2: eine abgeschaltete Quelle verschwindet von der Seite
+    aktive = [l for l in session.scalars(select(Loipe).join(Quelle).where(Loipe.active, Quelle.enabled))]
     verdeckt = finde_dubletten([
         Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
                 l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
@@ -154,7 +155,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             pos = gebiet_position(g)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
-                if not l.active or l.id in verdeckt:
+                if not l.active or not l.quelle.enabled or l.id in verdeckt:
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])

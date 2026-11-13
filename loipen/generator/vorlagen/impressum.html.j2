@@ -1,0 +1,13 @@
+{% if fehlt %}
+<p class="leer glass">Das Impressum ist noch nicht ausgefüllt. Es fehlen: {{ fehlt | join(", ") }}. Die Angaben kommen aus der Datei <code>.env</code> auf dem NAS (<code>LOIPEN_IMPRESSUM_NAME</code>, <code>LOIPEN_IMPRESSUM_ANSCHRIFT</code>, <code>LOIPEN_IMPRESSUM_EMAIL</code>). Ohne sie lädt das NAS die Seite nicht hoch.</p>
+{% else %}
+<h2>Angaben nach § 18 Abs. 1 MStV</h2>
+<p>{{ name }}<br>{% for zeile in anschrift %}{{ zeile }}<br>{% endfor %}</p>
+<h2>Kontakt</h2>
+<p>E-Mail: <a href="mailto:{{ email }}">{{ email }}</a></p>
+<h2>Verantwortlich für den Inhalt</h2>
+<p>{{ name }}, Anschrift wie oben.</p>
+{% endif %}
+<h2>Über diese Seite</h2>
+<p>Loipenblick ist ein privates, nicht kommerzielles Angebot ohne Werbung. Die Seite fasst den Loipenzustand zusammen, den Tourismusverbände und Gemeinden auf ihren eigenen Seiten veröffentlichen. Bei jeder Loipe stehen Quelle, Link und Stand.</p>
+<p>Alle Angaben ohne Gewähr. Mehr dazu unter <a href="hinweise.html">Hinweise</a>.</p>

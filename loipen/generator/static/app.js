@@ -365,10 +365,35 @@ function seiteGebiet(slug) {
 var KARTEN = [];
 function kartenAbbauen() { KARTEN.forEach(function (m) { try { m.remove(); } catch (e) {} }); KARTEN = []; window.__map = null; }
 function grundkarte(el, opts) {
-  var m = L.map(el, Object.assign({zoomControl: true, attributionControl: true, scrollWheelZoom: true}, opts || {}));
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 18, attribution: '© <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a>'}).addTo(m);
+  var m = L.map(el, Object.assign({zoomControl: true, attributionControl: true, scrollWheelZoom: true, maxZoom: 18}, opts || {}));
   KARTEN.push(m); window.__map = m;
+  /* B23: Kacheln von fremden Servern erst nach Klick (Einwilligung), eigene Kacheln sofort */
+  if (!kachelnFremd() || speicher("karte_ok") === true) kachelnLaden(m);
+  else kartenFrage(el);
   return m;
+}
+function kachelnFremd() { return !S.idx.kacheln || S.idx.kacheln.fremd !== false; }
+function kachelnLaden(m) {
+  if (m.__kacheln) return;
+  var k = S.idx.kacheln || {url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png", attribution: "© OpenStreetMap-Mitwirkende"};
+  m.__kacheln = L.tileLayer(k.url, {maxZoom: 18, attribution: k.attribution}).addTo(m);
+}
+function kartenFrage(el) {
+  var d = document.createElement("div");
+  d.className = "kartefrage glass";
+  d.innerHTML = '<p>Die Hintergrundkarte kommt von OpenStreetMap. Beim Laden sieht deren Server deine IP-Adresse (<a href="datenschutz.html">Datenschutz</a>).</p>' +
+    '<p><button type="button" class="btn">Karte laden</button> <label class="fine"><input type="checkbox" checked> künftig immer laden</label></p>';
+  L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+  el.appendChild(d);
+  d.querySelector("button").addEventListener("click", function () {
+    if (d.querySelector("input").checked) { speicher("karte_ok", true); widerrufZeigen(); }
+    KARTEN.forEach(kachelnLaden);
+    document.querySelectorAll(".kartefrage").forEach(function (x) { x.remove(); });
+  });
+}
+function widerrufZeigen() {
+  var b = document.getElementById("karte-widerruf");
+  if (b) b.hidden = !(kachelnFremd() && speicher("karte_ok") === true);
 }
 function punktIcon(status, text, titel) {
   var gross = text != null;
@@ -630,6 +655,8 @@ function start() {
     var dk = document.getElementById("demo-knopf");
     dk.textContent = S.demo ? "Beispielansicht beenden" : "Beispielansicht mit Schnee (erfundene Werte)";
     dk.addEventListener("click", function () { try { if (S.demo) sessionStorage.removeItem("demo"); else sessionStorage.setItem("demo", "1"); } catch (e) {} location.reload(); });
+    var kw = document.getElementById("karte-widerruf");
+    if (kw) { widerrufZeigen(); kw.addEventListener("click", function () { try { localStorage.removeItem("karte_ok"); } catch (e) {} kw.hidden = true; route(); }); }
     window.addEventListener("hashchange", route);
     route();
     gpsBeimStart(parseQuery(location.hash));

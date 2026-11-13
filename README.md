@@ -90,6 +90,32 @@ OpenStreetMap. Der Browser lädt die Kacheln direkt von `tile.openstreetmap.org`
 der Karte. Für eine öffentliche Seite mit vielen Besuchern sollte ein eigener Kachel-Anbieter gewählt werden
 (Nutzungsregeln von OpenStreetMap).
 
+## Online stellen (Livegang)
+
+Hintergrund und Abwägung: [docs/livegang.md](docs/livegang.md), was du selbst tun musst:
+[docs/livegang-checkliste-stefan.md](docs/livegang-checkliste-stefan.md).
+
+Sobald `LOIPEN_UPLOAD_URL` in der `.env` steht, lädt der Worker nach jedem Lauf die Seite hoch (B8):
+zuerst die Daten-Dateien mit Inhalts-Hash, zuletzt `daten.json` und `index.html` (B21). Bricht der
+Upload ab, bleibt online der alte Stand vollständig. Nach drei Fehlversuchen kommt ein Push über ntfy,
+einmal beim Wechsel. Ohne vollständiges Impressum (`LOIPEN_IMPRESSUM_NAME`, `_ANSCHRIFT`, `_EMAIL`)
+lädt das NAS nichts hoch (B6).
+
+1. Ordner `geheim/` neben die `docker-compose.yml` legen. Für SFTP den Fingerabdruck des Servers
+   holen und mit dem Kundenmenü des Hosters vergleichen:
+   `ssh-keyscan -p 22 <host> > geheim/known_hosts`
+2. In der `.env` die Werte unter „Livegang“ aus `.env.example` eintragen. Zuerst auf eine Testadresse
+   hochladen, `LOIPEN_OEFFENTLICH=false` lässt Suchmaschinen draußen.
+3. `docker compose up -d`, dann `docker compose exec worker python -m loipen.worker lauf` und die
+   Testadresse auf Handy und PC prüfen.
+4. Erst nach der Freigabe: Ziel auf die Hauptadresse umstellen und `LOIPEN_OEFFENTLICH=true`.
+
+Die Seite bringt `.htaccess` (HTTPS-Umleitung, Sicherheits- und Cache-Header), `404.html`,
+`robots.txt`, Impressum, Datenschutz (Vorlage, eigener Text über `LOIPEN_DATENSCHUTZ_DATEI`) und
+die Seite „Hinweise und Betreiber“ mit. Die Karte lädt die Kacheln von OpenStreetMap erst nach
+einem Klick (B23). Eine Quelle schaltest du mit `enabled: false` in `config/sources.yaml` ab, ihre
+Loipen verschwinden mit dem nächsten Lauf (B16).
+
 ## Entwickeln und testen
 
 Die Tests brauchen eine PostgreSQL mit einer Datenbank, deren Name auf `_test` endet
