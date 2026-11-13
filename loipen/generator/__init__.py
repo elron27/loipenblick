@@ -87,6 +87,7 @@ def erzeuge(
     oeffentlich: bool = False,
     kacheln: dict | None = None,
     abo_dateien: dict[str, bytes] | None = None,
+    version: str | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
     log_tage, datenschutz_html. kacheln: url, attribution, fremd (B23).
@@ -114,6 +115,8 @@ def erzeuge(
             schreibe(eintrag[feld], inhalt)
     index["kacheln"] = kacheln
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
+    if version:  # B4: Stand des Images in der Fusszeile, damit ein Update am NAS pruefbar ist
+        index["image"] = version[:7] if len(version) == 40 else version
 
     # U19, U37-U39: Saisonstatistik und erfundener Beispielwinter, ebenfalls mit Inhalts-Hash
     index["statistik"] = {}

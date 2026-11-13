@@ -61,6 +61,42 @@ def test_b4_kein_secret_im_repository():
     assert funde == []
 
 
+@pytest.mark.req("B4", ak=3)
+def test_b4_image_traegt_den_commit_stand():
+    docker = (ROOT / "Dockerfile").read_text(encoding="utf-8")
+    assert "ARG LOIPEN_VERSION" in docker and "ENV LOIPEN_VERSION=${LOIPEN_VERSION}" in docker
+    workflow = yaml.safe_load((ROOT / ".github/workflows/image.yml").read_text(encoding="utf-8"))
+    bauen = [s for s in workflow["jobs"]["image"]["steps"] if s.get("uses", "").startswith("docker/build-push-action")]
+    assert "LOIPEN_VERSION=${{ github.sha }}" in bauen[0]["with"]["build-args"]
+
+
+@pytest.mark.req("B4", ak=3)
+def test_b4_fusszeile_zeigt_die_version(session, tmp_path):
+    sha = "1da2271790cf70e146c642f674308a58b18b1cdb"
+    generator.erzeuge(session, tmp_path, datetime(2026, 11, 13, 12, 0), version=sha)
+    index = yaml.safe_load((tmp_path / "daten.json").read_text(encoding="utf-8"))
+    assert index["image"] == "1da2271"
+    app = (tmp_path / "app.js").read_text(encoding="utf-8")
+    assert '" · Version " + S.idx.image' in app
+    generator.erzeuge(session, tmp_path, datetime(2026, 11, 13, 12, 0))  # ohne Version: kein Eintrag
+    assert "image" not in yaml.safe_load((tmp_path / "daten.json").read_text(encoding="utf-8"))
+
+
+@pytest.mark.req("B4", ak=3)
+def test_b4_worker_meldet_die_version_beim_start(monkeypatch, caplog):
+    from loipen.config import get_settings
+    from loipen.worker import __main__ as worker
+
+    monkeypatch.setenv("LOIPEN_VERSION", "abc1234")
+    get_settings.cache_clear()
+    monkeypatch.setattr(worker, "lauf", lambda *a, **k: None)
+    monkeypatch.setattr(worker.BlockingScheduler, "start", lambda self: None)
+    with caplog.at_level("INFO", logger="loipen.worker"):
+        worker.main([])
+    get_settings.cache_clear()
+    assert "Loipenblick Version abc1234 startet" in caplog.text
+
+
 @pytest.mark.req("B12", ak=2)
 def test_b12_vorschau_zeigt_genau_den_generator_ordner():
     services = compose()["services"]

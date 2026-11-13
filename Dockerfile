@@ -28,4 +28,8 @@ COPY migrations migrations
 COPY loipen loipen
 COPY config config
 
+# Kurzer Commit-Stand, steht im Log und in der Fusszeile der Seite (zum Pruefen nach einem Update)
+ARG LOIPEN_VERSION=selbst-gebaut
+ENV LOIPEN_VERSION=${LOIPEN_VERSION}
+
 CMD ["python", "-m", "loipen.worker"]
