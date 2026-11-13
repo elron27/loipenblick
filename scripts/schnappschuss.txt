@@ -1,4 +1,2 @@
-# <zielpfad> <url> -- Runde 12 (13.11.2026): GeoSphere-Stationen Gastein, Ramsau, Kaernten (gleicher Zeitraum wie 2026-11-12), NLW-Wintersportbericht
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_ausbau3.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15501,12711,19911,19821,19720,19700,7,179,102,19&start=2026-10-29T00:00&end=2026-11-11T00:00
-tests/fixtures/nassfeld-nlw/2026-11-13/wintersportbericht-nps.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-nps.pdf
-tests/fixtures/nassfeld-nlw/2026-11-13/robots.txt https://tools.nlw.at/robots.txt
+# <zielpfad> <url> -- Runde 13 (13.11.2026): GeoSphere-Stationen mit Schneehoehe fuer Gastein (gleicher Zeitraum wie 2026-11-12)
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d_gastein.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15402,15509,18111,12513,78,149&start=2026-10-29T00:00&end=2026-11-11T00:00
