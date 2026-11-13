@@ -182,6 +182,50 @@ function schneeHtml(g) {
 function nahesterOrt() { return S.ort; }
 
 /* ---------- Talprofil ---------- */
+/* Talprofil-Beschriftung (U33): je Name eine Position, die keinen anderen Namen und keinen Nadelkopf
+   ueberdeckt. Eingabe [{name, x, kopf}] (kopf = Mitte des Nadelkopfs), Ausgabe [{x, y, hoch, box}]. */
+var ZEICHEN_PX = 7.4, ZEILE_PX = 17;
+/* Textbreite echt messen (Schrift des Geraets), sonst schaetzen: geschaetzte Breiten passten nicht zu
+   jeder Schrift, auf manchen Systemen ragte ein Name dann in eine Nachbarnadel (U33). */
+var messer = null;
+function textBreite(t) {
+  try {
+    if (!messer) {
+      messer = document.createElement("canvas").getContext("2d");
+      messer.font = "700 13px " + getComputedStyle(document.body).fontFamily;
+    }
+    var w = messer.measureText(t).width;
+    if (w > 0) return Math.max(w, t.length * ZEICHEN_PX) + 8;
+  } catch (e) { /* ohne Canvas schaetzen */ }
+  return t.length * ZEICHEN_PX + 8;
+}
+function beschriftung(punkte) {
+  var boxen = [], koepfe = punkte.map(function (p) { return {l: p.x - 11, r: p.x + 11, o: p.kopf - 11, u: p.kopf + 11}; });
+  function frei(b, eigen) {
+    return boxen.every(function (a) { return b.r <= a.l || b.l >= a.r || b.u <= a.o || b.o >= a.u; }) &&
+      koepfe.every(function (k, j) { return j === eigen || b.r <= k.l || b.l >= k.r || b.u <= k.o || b.o >= k.u; });
+  }
+  /* Nadeln mit tiefem Kopf zuerst: sie haben unten am wenigsten Platz */
+  var reihe = punkte.map(function (p, i) { return i; }).sort(function (a, b) { return punkte[b].kopf - punkte[a].kopf || punkte[a].x - punkte[b].x; });
+  var aus = [];
+  reihe.forEach(function (i) {
+    var p = punkte[i], w = textBreite(p.name), y0 = p.kopf - 18, wahl = null;
+    var x = Math.max(w / 2 + 2, Math.min(900 - w / 2 - 2, p.x));
+    for (var y = y0; y >= 14 && !wahl; y -= 6) {
+      [0, -1, 1].forEach(function (seite) {
+        if (wahl) return;
+        var xx = Math.max(w / 2 + 2, Math.min(900 - w / 2 - 2, x + seite * w * 0.3));
+        var b = {l: xx - w / 2, r: xx + w / 2, o: y - ZEILE_PX + 4, u: y + 4};
+        if (frei(b, i)) wahl = {x: xx, y: y, box: b};
+      });
+    }
+    if (!wahl) { var b = {l: x - w / 2, r: x + w / 2, o: 14 - ZEILE_PX + 4, u: 18}; wahl = {x: x, y: 14, box: b}; }
+    wahl.hoch = wahl.y < y0 - 1 || Math.abs(wahl.x - p.x) > 1;
+    boxen.push(wahl.box); aus[i] = wahl;
+  });
+  return aus;
+}
+window.__beschriftung = beschriftung;  // fuer den Kollisionstest
 function far(x) { return 190 - 45 * Math.sin(x / 95 + 2) - 24 * Math.sin(x / 37); }
 function talprofil(gebiete, schnee) {
   var sorted = gebiete.filter(function (g) { return g.lon != null; }).sort(function (a, b) { return a.lon - b.lon; });
@@ -207,19 +251,17 @@ function talprofil(gebiete, schnee) {
   var f = "M0 340"; for (var x = 0; x <= 900; x += 10) f += "L" + x + " " + (far(x) - 20 + (hy({hoehe_m: mitte}) - 250) * 0.3); s += '<path class="s-far" d="' + f + 'L900 340Z" opacity=".85"/>';
   var q = "M0 340", rim = "M0 " + ridgeH(0); for (x = 0; x <= 900; x += 6) { q += "L" + x + " " + ridgeH(x); rim += "L" + x + " " + ridgeH(x); }
   s += '<path class="s-ridge" d="' + q + 'L900 340Z"/><path class="s-rim" d="' + rim + '"/>';
-  /* Namen so tief wie moeglich direkt ueber der Nadel; nur bei Ueberlappung eine Stufe hoeher */
-  var belegt = [[], [], [], [], []], stufe = sorted.map(function (g, i) {
-    var halb = g.name.length * 4.6 + 6;
-    for (var lv = 0; lv < belegt.length; lv++) {
-      if (belegt[lv].every(function (b) { return Math.abs(b.x - px[i]) > b.h + halb; })) { belegt[lv].push({x: px[i], h: halb}); return lv; }
-    }
-    belegt[belegt.length - 1].push({x: px[i], h: halb}); return belegt.length - 1;
-  });
+  /* Namen so tief wie moeglich direkt ueber der Nadel. Kollision wird zweidimensional geprueft (Breite
+     und Hoehe des Textes, Nadelkoepfe), weil die Nadeln je nach Ortshoehe verschieden hoch stehen. Wer
+     ausweichen muss, rueckt nach oben und bekommt eine duenne Linie zur Nadel (U33). */
+  var lage = beschriftung(sorted.map(function (g, i) { return {name: g.name, x: px[i], kopf: py[i] - 44}; }));
   sorted.forEach(function (g, i) {
-    var y = py[i], X = px[i];
+    var y = py[i], X = px[i], b = lage[i];
     var best = g.loipen.reduce(function (a, l) { return RANG[l.status] < RANG[a] ? l.status : a; }, "geschlossen");
     var hoehe = g.hoehe_m == null ? "" : " (" + g.hoehe_m + " m)";
-    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/><circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + X + '" y="' + (y - 62 - stufe[i] * 20) + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
+    s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/>' +
+      (b.hoch ? '<line class="s-l s-f" x1="' + X + '" y1="' + (y - 55) + '" x2="' + b.x + '" y2="' + (b.y + 4) + '" stroke-width="1"/>' : "") +
+      '<circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + b.x + '" y="' + b.y + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
   });
   return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
 }
@@ -242,7 +284,8 @@ function seiteHeute(q) {
     (reco ? esc(reco.gebiet.name) + " · " + WORT[reco.status] : "Wir sagen es dir hier, sobald etwas gespurt ist.") + '</p><div class="facts">' +
     (nah[0] && nah[0].schnee && nah[0].schnee.schneehoehe_cm != null ? '<span class="chip">Schnee ' + esc(nah[0].name) + ": " + zahl(nah[0].schnee.schneehoehe_cm, 0) + " cm</span>" : '<span class="chip">Schneehöhe: noch keine Messung</span>') +
     (reco ? '<a class="btn prim" href="#/loipe/' + reco.id + '">Zur Loipe</a>' : "") + "</div></div>" +
-    '<div class="stats"><div class="stat glass"><b>' + (kz.offen + kz.eingeschraenkt) + "</b><span>befahrbar</span></div><div class=\"stat glass\"><b>" + kz.loipen + "</b><span>Loipen im Blick</span></div><div class=\"stat glass\"><b>" + (S.idx.quellen.length - fehler) + "/" + S.idx.quellen.length + "</b><span>Quellen ohne Fehler</span></div></div></div>";
+    /* U34: die Kennzahlen fuehren direkt zur passend gefilterten Liste */
+    '<div class="stats"><a class="stat glass" id="k-offen" href="#/loipen?offen=1&amp;sort=entfernung"><b>' + offene.length + '</b><span>befahrbar</span></a><a class="stat glass" href="#/loipen"><b>' + kz.loipen + '</b><span>Loipen im Blick</span></a><a class="stat glass" href="#/abdeckung"><b>' + (S.idx.quellen.length - fehler) + "/" + S.idx.quellen.length + "</b><span>Quellen ohne Fehler</span></a></div></div>";
   if (nah[0] && nah[0].vorhersage.length) h += '<h2 class="sec">Ausblick für ' + esc(nah[0].name) + "</h2>" + vorhersageHtml(nah[0]);
   h += '<h2 class="sec">Gebiete in deiner Nähe</h2><div class="cards">' + zeig.map(function (g) {
     var best = g.loipen.slice().sort(function (a, b) { return RANG[a.status] - RANG[b.status]; }).slice(0, 3);
@@ -335,7 +378,9 @@ function punktIcon(status, text, titel) {
 function miniKarte(l) {
   var reg = l.gebiet.region, pts = ((S.strecken[reg] || {})[String(l.id)] || []);
   if (!pts.length && l.lat == null) return '<p class="fine glass" style="padding:12px 14px">Für diese Loipe ist noch keine Position bekannt.</p>';
-  return '<div id="minimap" class="minimap" role="region" aria-label="Karte der Loipe"></div>';
+  /* U36 AK 2: ohne Streckenverlauf steht der Grund dabei */
+  var grund = pts.length ? "" : '<p class="fine" id="ohne-strecke">Nur Startpunkt, kein Streckenverlauf' + (l.strecke_hinweis ? ": " + esc(l.strecke_hinweis) : ".") + "</p>";
+  return '<div id="minimap" class="minimap" role="region" aria-label="Karte der Loipe"></div>' + grund;
 }
 function miniKarteZeichnen(l) {
   var el = document.getElementById("minimap"); if (!el) return;
@@ -359,8 +404,16 @@ function seiteLoipe(id) {
     view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
       '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + '</b></div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
       miniKarte(l) + '<h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
-      '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.ohne_zustand ? "Quelle meldet keinen Zustand" : l.quelle_stand ? datum(l.quelle_stand) : l.ohne_datum ? "Status ohne Datum" : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li>" +
-      (l.auch_bei && l.auch_bei.length ? '<li class="glass"><span>Auch gemeldet von</span><span>' + l.auch_bei.map(function (a) { return '<a href="' + esc(safeUrl(a.url)) + '" rel="noopener">' + esc(a.quelle) + "</a>"; }).join(", ") + "</span></li>" : "") + "</ul>" +
+      '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.ohne_zustand ? "Quelle meldet keinen Zustand" : l.quelle_stand ? datum(l.quelle_stand) : l.ohne_datum ? "Quelle nennt nur den Status, kein Präparierdatum" : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li>" +
+      (l.auch_bei && l.auch_bei.length ? '<li class="glass"><span>Auch gemeldet von</span><span>' + l.auch_bei.map(function (a) {
+        /* D18: weicht die verdeckte Quelle ab, steht ihr Status dabei; es zaehlt die oben gezeigte, genauere Quelle */
+        var ab = a.status && a.status !== l.status && a.status !== "unbekannt";
+        return '<a href="' + esc(safeUrl(a.url)) + '" rel="noopener">' + esc(a.quelle) + "</a>" + (ab ? ' <span class="badge abw">meldet ' + esc(WORT[a.status]) + ", abweichend</span>" : "");
+      }).join(", ") + "</span></li>" : "") +
+      /* P22 AK 3: Gebiet mit eigenem Loipenbericht, der diese Loipe nicht nennt */
+      (l.nicht_im_bericht ? '<li class="glass" id="nicht-im-bericht"><span>Loipenbericht vor Ort</span><span>' + esc(l.nicht_im_bericht) +
+        " führt diese Loipe nicht" + (l.status_laut_quelle ? '. <span class="badge abw">' + esc(l.quelle.name) + " meldet " + esc(WORT[l.status_laut_quelle]) + ", unbestätigt</span>" : "") +
+        "</span></li>" : "") + "</ul>" +
       (ziel ? '<p style="margin-top:18px"><a class="btn prim" href="' + esc(navLink(ziel.lat, ziel.lon)) + '" rel="noopener">Navigation zu ' + esc(ziel.name) + "</a></p>" : "");
     miniKarteZeichnen(l);
   });
@@ -391,7 +444,9 @@ function seiteKarte(q) {
     }
     function streckenFuer(slugs) { ladeStrecken(slugs).then(function () { slugs.forEach(zeichne); }).catch(function () {}); }
     var gebietWahl = q.gebiet && S.gebiete.filter(function (g) { return g.slug === q.gebiet; })[0];
-    var start = q.region ? [q.region] : gebietWahl ? [gebietWahl.region] : regionenNahe(ortFuer(q), 40);
+    // P21: ohne Wahl die Strecken aller Regionen, die welche haben (sonst blieben sie ausserhalb von 40 km unsichtbar)
+    var mitStrecken = S.idx.regionen.filter(function (r) { return r.strecken_anzahl > 0; }).map(function (r) { return r.slug; });
+    var start = q.region ? [q.region] : gebietWahl ? [gebietWahl.region] : (S.idx.regionen.some(function (r) { return "strecken_anzahl" in r; }) ? mitStrecken : regionenNahe(ortFuer(q), 40));
     streckenFuer(start);
     if (!q.region && !q.gebiet) m.on("moveend", function () {
       if (m.getZoom() < 10) return;
@@ -440,8 +495,45 @@ function seiteAbdeckung() {
   view.innerHTML = h;
 }
 
-/* ---------- Suche (U21) und Ort ---------- */
+/* ---------- Suche (U21) und Ort (U4, U35) ---------- */
+/* Ein Ort ist {name, lat, lon, art}; art "gps" = vom Geraet bestimmt, "ort" = gewaehlt oder gesucht. */
 function setzeOrt(o) { S.ort = o; speicher("ort", o); beschrifteOrt(); }
+function nahName(lat, lon) {
+  var p = {lat: lat, lon: lon}, best = null, bd = 1e9;
+  S.orte.concat(S.gebiete).forEach(function (o) { var d = dist(p, o); if (d != null && d < bd) { bd = d; best = o; } });
+  return best && bd < 25 ? best.name : null;
+}
+function gpsOrt(pos) {
+  var lat = Math.round(pos.coords.latitude * 1000) / 1000, lon = Math.round(pos.coords.longitude * 1000) / 1000, n = nahName(lat, lon);
+  return {name: n ? "Mein Standort · bei " + n : "Mein Standort", lat: lat, lon: lon, art: "gps"};
+}
+/* Standort per Geraet geht nur auf https oder localhost; auf http://<NAS-IP> sperrt der Browser ihn. */
+function gpsMoeglich() { return !!(navigator.geolocation && window.isSecureContext); }
+function gpsHolen(ok, fehler) {
+  if (!gpsMoeglich()) { fehler(window.isSecureContext === false ? "unsicher" : "fehlt"); return; }
+  navigator.geolocation.getCurrentPosition(function (p) { ok(gpsOrt(p)); }, function (e) { fehler(e && e.code === 1 ? "verweigert" : "fehler"); },
+    {enableHighAccuracy: false, timeout: 10000, maximumAge: 15 * 60000});
+}
+/* Beim Oeffnen: gespeicherter GPS-Standort wird still aufgefrischt; beim ersten Besuch wird einmal gefragt. */
+function gpsBeimStart(q) {
+  if (q.ort || !gpsMoeglich()) return;
+  var gespeichert = speicher("ort"), gefragt = speicher("gps_gefragt");
+  if (gespeichert && gespeichert.art !== "gps") return;
+  if (!gespeichert && gefragt) return;
+  speicher("gps_gefragt", true);
+  gpsHolen(function (o) { var alt = S.ort; setzeOrt(o); if (!alt || dist(alt, o) > 1) route(); }, function () {});
+}
+var GEO_URL = "https://photon.komoot.io/api/";
+function ortSucheOnline(text) {
+  var url = GEO_URL + "?q=" + encodeURIComponent(text) + "&lang=de&limit=8&bbox=5.8,45.8,17.2,55.1&osm_tag=place";
+  return holeJson(url).then(function (r) {
+    return (r.features || []).map(function (f) {
+      var pr = f.properties || {}, c = (f.geometry || {}).coordinates || [];
+      var zusatz = [pr.postcode, pr.county || pr.state, pr.countrycode].filter(Boolean).join(", ");
+      return c.length === 2 ? {name: pr.name, zusatz: zusatz, lat: Math.round(c[1] * 1000) / 1000, lon: Math.round(c[0] * 1000) / 1000, art: "ort"} : null;
+    }).filter(function (o) { return o && o.name; });
+  });
+}
 function beschrifteOrt() { var b = document.getElementById("ort"); b.textContent = (S.ort ? S.ort.name : "Ort wählen") + " ▾"; b.setAttribute("aria-label", "Standort: " + (S.ort ? S.ort.name : "keiner") + ", ändern"); }
 function sucheBinden() {
   var q = document.getElementById("q"), ul = document.getElementById("vorschlaege"), aktiv = -1, items = [];
@@ -469,18 +561,47 @@ function sucheBinden() {
 }
 function ortDialog() {
   var d = document.getElementById("ortwahl");
-  var optionen = S.orte.concat(S.gebiete.filter(function (g) { return g.lat != null; }).map(function (g) { return {name: g.name, lat: g.lat, lon: g.lon}; }));
-  var gesehen = {}; optionen = optionen.filter(function (o) { if (gesehen[o.name]) return false; gesehen[o.name] = 1; return true; }).sort(function (a, b) { return a.name.localeCompare(b.name); });
-  d.innerHTML = '<div class="box"><h2 style="margin-top:0">Standort wählen</h2><button type="button" class="o" id="geo"><span>Mein Standort verwenden</span><span>⌖</span></button>' + optionen.map(function (o, i) { return '<button type="button" class="o" data-i="' + i + '"><span>' + esc(o.name) + "</span></button>"; }).join("") + '<p><button type="button" class="btn" id="zu">Schließen</button></p></div>';
+  var optionen = S.orte.concat(S.gebiete.filter(function (g) { return g.lat != null; }).map(function (g) { return {name: g.name, lat: g.lat, lon: g.lon, zusatz: g.region_name}; }));
+  var gesehen = {}; optionen = optionen.filter(function (o) { if (gesehen[o.name]) return false; gesehen[o.name] = 1; return true; }).sort(function (a, b) { return a.name.localeCompare(b.name, "de"); });
+  var treffer = [];
+  var gpsText = gpsMoeglich() ? "Mein Standort verwenden" : "Mein Standort (nur über https)";
+  d.innerHTML = '<div class="box"><h2 style="margin-top:0">Standort wählen</h2>' +
+    '<button type="button" class="o gps" id="geo"' + (gpsMoeglich() ? "" : ' aria-describedby="geo-info"') + '><span>' + gpsText + '</span><span aria-hidden="true">⌖</span></button>' +
+    '<p class="fine" id="geo-info" role="status">' + (gpsMoeglich() ? "" : "Der Browser gibt den Standort nur auf sicheren Seiten (https) frei. Suche deinen Ort einfach unten.") + "</p>" +
+    '<form id="ortsuche" class="ortsuche" role="search"><label class="vh" for="ortq">Ort oder Postleitzahl</label><input id="ortq" type="search" autocomplete="off" placeholder="Ort oder PLZ, z. B. Holzkirchen"><button type="submit" class="btn">Suchen</button></form>' +
+    '<div id="ortliste" role="listbox" aria-label="Orte"></div><p><button type="button" class="btn" id="zu">Schließen</button></p></div>';
   d.hidden = false;
-  d.querySelector("#zu").focus();
+  var ein = d.querySelector("#ortq"), liste = d.querySelector("#ortliste"), info = d.querySelector("#geo-info");
+  function zeichne(online, hinweis) {
+    var t = ein.value.trim().toLowerCase();
+    var lokal = optionen.filter(function (o) { return !t || o.name.toLowerCase().indexOf(t) >= 0; });
+    treffer = lokal.concat(online || []);
+    liste.innerHTML = (hinweis ? '<p class="fine">' + esc(hinweis) + "</p>" : "") + (treffer.length ? treffer.map(function (o, i) {
+      return '<button type="button" class="o" role="option" data-i="' + i + '"><span>' + esc(o.name) + (o.zusatz ? ' <small class="fine">' + esc(o.zusatz) + "</small>" : "") + "</span>" + (i >= lokal.length ? '<small class="fine">Online</small>' : "") + "</button>";
+    }).join("") : '<p class="fine">Kein bekannter Ort. Mit „Suchen“ wird online gesucht.</p>');
+    liste.querySelectorAll("button.o[data-i]").forEach(function (b) { b.onclick = function () { var o = treffer[+b.dataset.i]; setzeOrt({name: o.name, lat: o.lat, lon: o.lon, art: "ort"}); d.hidden = true; route(); }; });
+  }
+  zeichne();
+  ein.addEventListener("input", function () { zeichne(); });
+  d.querySelector("#ortsuche").onsubmit = function (e) {
+    e.preventDefault();
+    var t = ein.value.trim();
+    if (t.length < 2) return;
+    zeichne([], "Suche läuft …");
+    ortSucheOnline(t).then(function (r) { zeichne(r, r.length ? "" : "Online nichts gefunden."); }, function () { zeichne([], "Online-Suche gerade nicht erreichbar, nur bekannte Orte."); });
+  };
+  ein.focus();
   d.querySelector("#zu").onclick = function () { d.hidden = true; };
   d.onclick = function (e) { if (e.target === d) d.hidden = true; };
   d.onkeydown = function (e) { if (e.key === "Escape") d.hidden = true; };
-  d.querySelectorAll("button.o[data-i]").forEach(function (b) { b.onclick = function () { setzeOrt(optionen[+b.dataset.i]); d.hidden = true; route(); }; });
   d.querySelector("#geo").onclick = function () {
-    if (!navigator.geolocation) { alert("Dein Gerät kann den Standort nicht bestimmen."); return; }
-    navigator.geolocation.getCurrentPosition(function (p) { setzeOrt({name: "Mein Standort", lat: p.coords.latitude, lon: p.coords.longitude}); d.hidden = true; route(); }, function () { alert("Der Standort wurde nicht freigegeben."); });
+    info.textContent = "Standort wird bestimmt …";
+    gpsHolen(function (o) { setzeOrt(o); d.hidden = true; route(); }, function (grund) {
+      info.textContent = {unsicher: "Der Browser gibt den Standort nur auf sicheren Seiten (https) frei. Suche deinen Ort einfach unten.",
+        verweigert: "Der Standort wurde nicht freigegeben. Du kannst ihn in den Browser-Einstellungen erlauben oder unten einen Ort suchen.",
+        fehlt: "Dein Gerät kann den Standort nicht bestimmen. Suche deinen Ort unten.",
+        fehler: "Der Standort ließ sich gerade nicht bestimmen. Suche deinen Ort unten."}[grund];
+    });
   };
 }
 
@@ -511,6 +632,7 @@ function start() {
     dk.addEventListener("click", function () { try { if (S.demo) sessionStorage.removeItem("demo"); else sessionStorage.setItem("demo", "1"); } catch (e) {} location.reload(); });
     window.addEventListener("hashchange", route);
     route();
+    gpsBeimStart(parseQuery(location.hash));
     if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) navigator.serviceWorker.register("sw.js").catch(function () {});
   }).catch(function (e) {
     view.innerHTML = '<p class="leer glass">Die Daten konnten nicht geladen werden (' + esc(e.message) + "). Bitte später noch einmal versuchen.</p>";

@@ -122,7 +122,7 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     assert kz["gebiete"] == sum(r["gebiete"] for r in lies(site, "daten.json")["regionen"])
     assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
-        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden"}
+        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl"}
 
 
 @pytest.mark.req("U6", ak=1)

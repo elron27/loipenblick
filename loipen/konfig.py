@@ -135,6 +135,9 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         config["zeitplan"] = {**standard_zeitplan, **q.get("zeitplan", {})}
         # D15: Rang der Quelle bei Dubletten (1 = fuehrend), Standard 10
         config["rang"] = int(q.get("rang", 10))
+        # U36: warum Loipen dieser Quelle keinen Streckenverlauf haben (steht auf der Loipenseite)
+        if q.get("strecke_hinweis"):
+            config["strecke_hinweis"] = q["strecke_hinweis"]
         if "gebiete" in config:
             # Adapter, die nach Koordinaten zuordnen (tirol.at), bekommen die Gebietsmitten aus gebiete.yaml
             config["gebiet_punkte"] = {

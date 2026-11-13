@@ -52,14 +52,14 @@ def test_d16_liste_und_regionswechsler_nach_land_und_region(seite):
 
 @pytest.mark.req("U30", ak=1)
 def test_u30_tirol_loipe_zeigt_abrufzeit_und_status_ohne_datum(seite):
-    seite.open("#/loipen?region=kufsteinerland")
+    seite.open("#/loipen?region=wilder-kaiser")  # nur tirol.at (Kufsteinerland meldet seit P22 mit Stand)
     for d in seite.locator(".lp .d").all_inner_texts():
         assert re.search(r"Status ohne Datum · Stand vor \d+ (Min\.|Std\.|Tagen)", d), d
         assert "veraltet" not in d
     seite.locator(".lp").first.click()
     seite.wait_for_selector(".hist")
     t = text(seite)
-    assert re.search(r"Stand laut Quelle\s+Status ohne Datum", t)
+    assert re.search(r"Stand laut Quelle\s+Quelle nennt nur den Status, kein Präparierdatum", t)
     assert re.search(r"Zuletzt von uns geprüft\s+\d{2}\.\d{2}\.\d{4}", t)
 
 
@@ -129,7 +129,7 @@ def test_u32_karte_laedt_strecken_nur_fuer_die_gewaehlte_region(seite):
     seite.wait_for_selector("#map path.leaflet-interactive", state="attached")
     assert strecken_abrufe(seite) == ["chiemgau"]
     seite.abrufe.clear()
-    seite.open("#/karte")  # ohne Wahl: nur Regionen um den Standort, nicht alle zehn
+    seite.open("#/karte")  # ohne Wahl: nur Regionen mit Streckenverlauf (U36), nicht alle
     seite.wait_for_selector("#map .mk, #map .mkc")
     seite.wait_for_timeout(500)
     assert 0 < len(strecken_abrufe(seite)) < 10
