@@ -46,6 +46,9 @@ header .in{display:flex;align-items:center;gap:12px;min-height:64px}
 .st.offen{background:var(--ok-bg);color:var(--ok)}.st.eingeschraenkt{background:var(--mid-bg);color:var(--mid)}.st.geschlossen{background:var(--bad-bg);color:var(--bad)}.st.unbekannt{background:var(--unk-bg);color:var(--unk)}
 .badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:12px;font-weight:700;background:var(--mid-bg);color:var(--mid)}
 .badge.neu{background:var(--ok-bg);color:var(--ok)}
+.badge.sonder{background:var(--unk-bg);color:var(--ink);font-weight:600;border:1px dashed var(--unk)}
+.kv .fine{display:block;margin-top:2px}
+.rahmen{margin:-4px 0 8px}
 .chip{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--unk-bg);font-size:14px;color:var(--ink)}
 /* Layout-Bausteine */
 main{flex:1;padding-top:16px;padding-bottom:40px;outline:0}
@@ -60,10 +63,14 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .stat{padding:16px;display:block;color:inherit;text-decoration:none;transition:border-color .15s}.stat:hover{border-color:var(--cy)}.stat b{display:block;font-size:clamp(26px,4vw,38px);font-weight:800;line-height:1;letter-spacing:-.04em;color:var(--cy)}.stat span{font-size:13px;color:var(--mute)}
 .cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
-.gc{display:block;padding:16px;color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
-.gc:hover{transform:translateY(-2px);border-color:var(--cy)}
+.gc{display:block;padding:16px;transition:border-color .15s}
+.gc:hover{border-color:var(--cy)}
+.gc a{color:inherit;text-decoration:none}
+.gc .gk{display:block}.gc .gk:hover h3{color:var(--cy)}
 .gc h3{margin:0;font-size:18px}.gc p{margin:4px 0 10px;color:var(--mute);font-size:14px}
-.gc .r{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:15px;padding:4px 0}
+.gc .r{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:15px;min-height:40px;padding:4px 0;border-top:1px solid var(--line)}
+.gc .r:hover span:first-child{color:var(--cy)}
+.gc .mehr{display:block;padding-top:6px;color:var(--cy)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
 .btn.prim{background:var(--cy);color:var(--cy-ink);border-color:var(--cy)}
 /* Talprofil */
@@ -90,6 +97,7 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 @media(min-width:980px){.mapw{height:calc(100vh - 64px - 90px)}}
 .mapw #map{position:absolute;inset:0;z-index:0}
 .mapw .sel{position:absolute;left:12px;right:12px;bottom:12px;max-width:440px;padding:14px 16px;background:var(--solid);z-index:1000}
+.mapw .sel{scroll-margin-bottom:96px}
 .minimap{height:340px;max-width:760px;border-radius:18px;border:1px solid var(--line);overflow:hidden;margin:6px 0;z-index:0}
 .leaflet-container{font:inherit;background:var(--bg2)}
 .leaflet-container a{color:var(--link,#0a6ea8)}
