@@ -185,7 +185,20 @@ function nahesterOrt() { return S.ort; }
 /* Talprofil-Beschriftung (U33): je Name eine Position, die keinen anderen Namen und keinen Nadelkopf
    ueberdeckt. Eingabe [{name, x, kopf}] (kopf = Mitte des Nadelkopfs), Ausgabe [{x, y, hoch, box}]. */
 var ZEICHEN_PX = 7.4, ZEILE_PX = 17;
-function textBreite(t) { return t.length * ZEICHEN_PX + 8; }
+/* Textbreite echt messen (Schrift des Geraets), sonst schaetzen: geschaetzte Breiten passten nicht zu
+   jeder Schrift, auf manchen Systemen ragte ein Name dann in eine Nachbarnadel (U33). */
+var messer = null;
+function textBreite(t) {
+  try {
+    if (!messer) {
+      messer = document.createElement("canvas").getContext("2d");
+      messer.font = "700 13px " + getComputedStyle(document.body).fontFamily;
+    }
+    var w = messer.measureText(t).width;
+    if (w > 0) return Math.max(w, t.length * ZEICHEN_PX) + 8;
+  } catch (e) { /* ohne Canvas schaetzen */ }
+  return t.length * ZEICHEN_PX + 8;
+}
 function beschriftung(punkte) {
   var boxen = [], koepfe = punkte.map(function (p) { return {l: p.x - 11, r: p.x + 11, o: p.kopf - 11, u: p.kopf + 11}; });
   function frei(b, eigen) {

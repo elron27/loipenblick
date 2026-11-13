@@ -106,7 +106,8 @@ def test_u35_erster_besuch_fragt_einmal_nach_dem_standort(browser, basis):  # no
     # beim naechsten Besuch frischt die Seite den Standort still auf
     ctx.set_geolocation({"latitude": 47.708, "longitude": 11.757})
     page.reload()
-    page.wait_for_function("document.getElementById('ort').textContent.indexOf('bei Kufstein') < 0")
+    page.wait_for_function("(t => t.indexOf('Mein Standort · bei ') >= 0 && t.indexOf('bei Kufstein') < 0)"
+                           "(document.getElementById('ort').textContent)")
     assert ortname(page).startswith("Mein Standort · bei ")
     assert page.fehler == []
     ctx.close()
