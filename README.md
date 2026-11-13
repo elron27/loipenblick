@@ -47,6 +47,13 @@ geben ihn nur auf sicheren Seiten frei (https oder localhost); unter `http://<NA
 deshalb nur die Ortssuche (bekannte Orte sofort, andere Orte und Postleitzahlen online über
 photon.komoot.io). Über https, etwa mit `tailscale serve` oder später auf dem Webspace, klappt beides.
 
+**Statistik (U19, U37–U39).** Die Seite `#/statistik` zeigt pro Winter (1. November bis 30. April),
+an wie vielen Tagen die Loipen befahrbar waren, den Saisonverlauf, Ranglisten der Gebiete und Loipen und
+wie verlässlich die Quellen melden. Gerechnet wird bei jedem Lauf auf dem NAS (`loipen/statistik.py`) aus der
+Historie in `zustaende`; die Seite liest nur `statistik/statistik.<hash>.json`. Befahrbar heißt: die Quelle
+meldete an diesem Tag offen oder eingeschränkt. Tage ohne Abruf sind Lücken. Solange es noch keinen vollen
+Winter gibt, zeigt die Beispielansicht einen erfundenen Winter (`statistik/beispiel.<hash>.json`).
+
 **Zeitplan (B3).** Den Zeitplan führt der Worker-Container selbst aus (APScheduler, zur vollen Stunde
 werden die fälligen Quellen abgerufen). Es braucht keinen Eintrag im DSM-Taskplaner, nur
 `restart: unless-stopped`, das Compose schon setzt.
@@ -115,6 +122,26 @@ Die Seite bringt `.htaccess` (HTTPS-Umleitung, Sicherheits- und Cache-Header), `
 die Seite „Hinweise und Betreiber“ mit. Die Karte lädt die Kacheln von OpenStreetMap erst nach
 einem Klick (B23). Eine Quelle schaltest du mit `enabled: false` in `config/sources.yaml` ab, ihre
 Loipen verschwinden mit dem nächsten Lauf (B16).
+
+### E-Mail-Abo und Fehlermeldungen (E-18)
+
+Besucher können sich bei jeder Loipe und jedem Gebiet per E-Mail benachrichtigen lassen und bei jeder
+Loipe falsche Angaben melden. Dafür liegen im Ordner `abo/` fünf kleine PHP-Skripte; der Rest der
+Seite bleibt statisch. Der Webspace verschickt die Bestätigungsmail (Double-Opt-In) sofort und hält
+bestätigte Abos, Abmeldungen und Meldungen in einer Warteschlange. Das NAS holt sie bei jedem Lauf
+über `abo/export.php` ab, speichert die Abonnenten in der Datenbank (im täglichen Dump enthalten) und
+verschickt die Alarme per SMTP, höchstens eine Mail je Abonnent und Lauf. Meldungen kommen sofort per
+Mail an `LOIPEN_ABO_MELDUNGEN_AN` und beim nächsten Lauf als Push; sie ändern nie einen Status.
+
+1. Beim Hoster ein Postfach für den Absender anlegen, z. B. `abo@<domain>`.
+2. In der `.env` die Werte unter „E-Mail-Abo“ aus `.env.example` eintragen, den Schlüssel einmal mit
+   `openssl rand -hex 32` erzeugen. Ohne `LOIPEN_OEFFENTLICHE_URL`, Schlüssel und Absender gibt es
+   weder Formulare noch den Ordner `abo/`.
+3. Nach dem nächsten Lauf auf der Testadresse ein Abo anlegen, die Mail bestätigen und mit
+   `docker compose exec worker python -m loipen.worker lauf` den Abgleich prüfen (Log: „Abo: 1 neu“).
+
+Voraussetzung ist ein Webspace mit PHP und `mail()`, bei netcup Webhosting gegeben. Mit Cloudflare
+Pages ginge das Abo nur mit einem eigenen Worker.
 
 ## Entwickeln und testen
 

@@ -22,6 +22,8 @@ from loipen.ereignisse import (
     benachrichtige, betriebsmeldung, lade_abos, ntfy_sender, pruefe_abos,
 )
 from loipen.fetcher import HoeflicherFetcher
+from loipen.generator import abo as abo_vorlage
+from loipen.mailabo import AboKonfig, lauf_abo
 from loipen.konfig import lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
 from loipen.sicherung import sichere
@@ -74,12 +76,20 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
-                          rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich)
+                          rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
+                          abo_dateien=abo_dateien(session, settings))
     log.info("Seite erzeugt in %s", settings.site_dir)
     meldung = hochladen(settings)
     if meldung:
         meldungen.append(meldung)
     _melde(settings, sender, ereignisse, meldungen)
+
+
+def abo_dateien(session, settings) -> dict[str, bytes]:
+    """E-18: Ordner abo/ nur, wenn Adresse, Schluessel und Absender in der .env stehen."""
+    return abo_vorlage.dateien(session, AboKonfig.aus_settings(settings),
+                               meldungen_an=settings.abo_meldungen_an or settings.impressum_email,
+                               datenordner=settings.abo_datenordner)
 
 
 def rechtliches(settings) -> dict:
@@ -125,6 +135,10 @@ def _melde(settings, sender, ereignisse, meldungen) -> None:
         log.info("%d Ereignisse, %d Alarme gesendet", len(ereignisse), n)
     except Exception:
         log.exception("Benachrichtigung fehlgeschlagen")
+    try:  # E-18: Abgleich mit dem Webspace, Meldungen als Push, Abo-Mails per SMTP
+        lauf_abo(session_scope, AboKonfig.aus_settings(settings), ereignisse, sender)
+    except Exception:
+        log.exception("E-Mail-Abo fehlgeschlagen")
 
 
 def sicherung() -> None:
