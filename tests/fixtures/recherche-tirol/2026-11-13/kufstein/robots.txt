@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.kufstein.com/sitemap.xml
+Sitemap: https://www.kufstein.com/de/accommodations.xml
+Sitemap: https://www.kufstein.com/en/accommodations.xml
+Sitemap: https://www.kufstein.com/de/tours.xml
+Sitemap: https://www.kufstein.com/en/tours.xml

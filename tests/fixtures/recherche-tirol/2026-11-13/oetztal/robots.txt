@@ -1,0 +1,19 @@
+Sitemap: https://www.oetztal.com/sitemap.xml
+Sitemap: https://www.oetztal.com/oetztal/de/addservices/sitemap.xml?baseurl=https%3A%2F%2Fwww.oetztal.com%2Fde%2Fsuchen-buchen%2Ferlebnisse%2Fbuchen%2Fshop&changefreq=daily&priority=0.9
+Sitemap: https://www.oetztal.com/oetztal/en/addservices/sitemap.xml?baseurl=https%3A%2F%2Fwww.oetztal.com%2Fen%2Fsearch-book%2Fadventures%2Fbook%2Fshop&changefreq=daily&priority=0.9
+
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 2
+
+User-agent: meta-webindexer
+Allow: /
+Crawl-delay: 2
+
+User-agent: meta-externalads
+Allow: /
+Crawl-delay: 2
+
+User-agent: meta-externalagent
+Allow: /
+Crawl-delay: 2
