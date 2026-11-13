@@ -10,6 +10,7 @@ Ergebnis: Dateien unter den Zielpfaden und ein Protokoll in tests/fixtures/schna
 """
 
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -24,6 +25,18 @@ LISTE = ROOT / "scripts" / "schnappschuss.txt"
 PROTOKOLL = ROOT / "tests" / "fixtures" / "schnappschuss-protokoll.txt"
 UA = os.environ.get("LOIPEN_USER_AGENT") or "LoipenBot/0.1 (+https://github.com/elron27/loipenblick)"
 DELAY_S = 5
+# Oeffentliche Seiten enthalten oft eingebettete Browser-Schluessel (Google Maps, Outdooractive).
+# Sie werden vor dem Speichern ersetzt, damit test_b4_kein_secret_im_repository gruen bleibt.
+SCHLUESSEL = [
+    (re.compile(rb"AIza[0-9A-Za-z_-]{35}"), b"AIza-ENTFERNT"),
+    (re.compile(rb"key=[A-Z0-9]{8}-[A-Z0-9]{8}-[A-Z0-9]{8}"), b"key=ENTFERNT"),
+]
+
+
+def schluessel_ersetzen(inhalt: bytes) -> bytes:
+    for muster, ersatz in SCHLUESSEL:
+        inhalt = muster.sub(ersatz, inhalt)
+    return inhalt
 
 
 def holen(url: str) -> tuple[int, bytes]:
@@ -33,6 +46,9 @@ def holen(url: str) -> tuple[int, bytes]:
             return r.status, r.read()
     except urllib.error.HTTPError as e:
         return e.code, e.read() or b""
+    except (urllib.error.URLError, OSError) as e:
+        # Nicht erreichbarer Host oder Zeitueberschreitung: protokollieren statt den ganzen Lauf abbrechen.
+        return 0, f"FEHLER {e}".encode()
 
 
 def main() -> int:
@@ -56,6 +72,12 @@ def main() -> int:
             warte()
             status, inhalt = holen(host + "/robots.txt")
             p = urllib.robotparser.RobotFileParser()
+            if status == 0:
+                p.disallow_all = True
+                zeilen.append(f"NICHT ERREICHBAR {host}: {inhalt.decode()}")
+                print(zeilen[-1], flush=True)
+                robots[host] = p
+                continue
             if status in (401, 403):
                 p.disallow_all = True
             elif status >= 400:
@@ -68,13 +90,20 @@ def main() -> int:
             datei.write_bytes(inhalt)
             zeilen.append(f"{status} {host}/robots.txt")
         if not robots[host].can_fetch(UA, url):
-            zeilen.append(f"ROBOTS-VERBOT {url}")
+            if not robots[host].disallow_all or (ROOT / Path(ziel).parent / "robots.txt").exists():
+                zeilen.append(f"ROBOTS-VERBOT {url}")
+            else:
+                zeilen.append(f"UEBERSPRUNGEN {url}")
             continue
         warte()
         status, inhalt = holen(url)
+        if status == 0:
+            zeilen.append(f"{inhalt.decode()} {url}")
+            print(zeilen[-1], flush=True)
+            continue
         datei = ROOT / ziel
         datei.parent.mkdir(parents=True, exist_ok=True)
-        datei.write_bytes(inhalt)
+        datei.write_bytes(schluessel_ersetzen(inhalt))
         zeilen.append(f"{status} {len(inhalt):>8} {ziel} {url}")
         print(zeilen[-1], flush=True)
     PROTOKOLL.parent.mkdir(parents=True, exist_ok=True)

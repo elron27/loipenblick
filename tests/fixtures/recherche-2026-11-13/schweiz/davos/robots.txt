@@ -1,0 +1,8 @@
+# *
+User-agent: *
+Allow: /
+# Host
+Host: https://www.davos.ch
+# Sitemaps
+Sitemap: https://api.davos.ch/sitemap.xml
+Sitemap: https://api.davos.ch/en/sitemap.xml
