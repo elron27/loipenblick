@@ -28,5 +28,6 @@ properties:
       - { key: v1, name: Version 1 }
       - { key: ausbau1, name: Ausbaustufe 1 }
       - { key: ausbau2, name: Ausbaustufe 2 }
+      - { key: ausbau3, name: Ausbaustufe 3 }
       - { key: livegang, name: Livegang }
       - { key: spaeter, name: Später }

@@ -44,7 +44,9 @@ THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
 QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
            "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6,
            "tannheimer": 21, "seefeld": 49, "achensee": 24, "kufsteinerland": 22, "kaiserwinkl": 23,
-           "dolomiti-nordicski": 118, "opendatahub": 190}
+           "dolomiti-nordicski": 118, "opendatahub": 190,
+           "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
+           "myswitzerland": 340}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 

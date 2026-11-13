@@ -188,13 +188,14 @@ def test_d16_jedes_gebiet_hat_land_bundesland_und_region(session, site):
     regionen = {r["slug"]: r for r in gebiete_yaml()["regionen"]}
     for g in gebiete_yaml()["gebiete"]:
         r = regionen[g["region"]]
-        assert r["land"] in ("DE", "AT", "IT") and r["bundesland"], g["slug"]
+        assert r["land"] in ("DE", "AT", "IT", "CH", "LI") and r["bundesland"], g["slug"]
     for r in session.scalars(select(Region)):
-        assert r.land in ("DE", "AT", "IT") and r.bundesland, r.slug
+        assert r.land in ("DE", "AT", "IT", "CH", "LI") and r.bundesland, r.slug
     for g in alle_gebiete(site):
-        assert g["land"] in ("DE", "AT", "IT") and g["bundesland"], g["slug"]
+        assert g["land"] in ("DE", "AT", "IT", "CH", "LI") and g["bundesland"], g["slug"]
     laender = [r["land"] for r in lies(site, "daten.json")["regionen"]]
-    assert laender == sorted(laender, key=lambda x: {"DE": 0, "AT": 1, "IT": 2}[x])  # Deutschland zuerst, Italien zuletzt
+    # Deutschland zuerst, dann Oesterreich, Italien, Schweiz, Liechtenstein (E-20)
+    assert laender == sorted(laender, key=lambda x: {"DE": 0, "AT": 1, "IT": 2, "CH": 3, "LI": 4}[x])
     assert {g["slug"]: g["bundesland"] for g in alle_gebiete(site)}["faistenau"] == "Salzburg"
 
 
@@ -315,7 +316,7 @@ def test_u30_tirol_loipen_ohne_datum_sind_nicht_faelschlich_veraltet(site):
 @pytest.mark.req("U31", ak=1)
 def test_u31_jedes_oesterreichische_gebiet_zeigt_den_vignettenhinweis(site):
     for g in alle_gebiete(site):
-        if g["land"] in ("AT", "IT"):
+        if g["land"] in ("AT", "IT", "CH", "LI"):
             # Italien (E-18): Anfahrt ueber Oesterreich, dazu Brenner- und Autobahnmaut
             assert g["grenzinfo"] and "Vignette" in g["grenzinfo"], g["slug"]
         else:

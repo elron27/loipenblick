@@ -17,7 +17,7 @@ from loipen.wetter import gebiet_position, schnee_uebersicht
 BERLIN = ZoneInfo("Europe/Berlin")
 VERALTET_STUNDEN = 48  # U6
 HISTORIE_TAGE = 14  # U5
-LAND_REIHENFOLGE = {"DE": 0, "AT": 1, "IT": 2}
+LAND_REIHENFOLGE = {"DE": 0, "AT": 1, "IT": 2, "CH": 3, "LI": 4}
 
 
 def _iso(dt: datetime | None) -> str | None:

@@ -12,7 +12,7 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 | `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P24, D1–D18, U1–U41, N1–N9, B1–B26 |
 | `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-19 (u. a. E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
-| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `livegang` und `spaeter` |
+| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `ausbau-3`, `livegang` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
 
 Beziehungen: Jede Systemanforderung *leitet sich ab von* (`derives-from`) einem oder mehreren Bedürfnissen und *beruht auf* (`based-on`) den Entscheidungen, die sie betreffen.

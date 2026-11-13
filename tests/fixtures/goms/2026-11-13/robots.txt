@@ -1,0 +1,2 @@
+Disallow: /natur-navi
+Disallow: /nationalpark_ferienregion

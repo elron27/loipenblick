@@ -5,6 +5,7 @@ from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
 from loipen.adapters.kitzalps import KitzAlpsAdapter
 from loipen.adapters.langlaufdorf import LanglaufdorfAdapter
+from loipen.adapters.schweiz import MySwitzerlandAdapter
 from loipen.adapters.seefeld import SeefeldAdapter
 from loipen.adapters.stammdaten import StammdatenAdapter
 from loipen.adapters.suedtirol import DolomitiNordicSkiAdapter, OpenDataHubAdapter
@@ -19,4 +20,5 @@ ADAPTERS: dict[str, Adapter] = {
     "kitzalps": KitzAlpsAdapter(), "seefeld": SeefeldAdapter(),
     "achensee": AchenseeAdapter(), "skidata": SkidataAdapter(), "kaiserwinkl": KaiserwinklAdapter(),
     "dolomiti": DolomitiNordicSkiAdapter(), "opendatahub": OpenDataHubAdapter(),
+    "myswitzerland": MySwitzerlandAdapter(),
 }

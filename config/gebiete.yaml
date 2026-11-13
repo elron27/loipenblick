@@ -117,6 +117,77 @@ regionen:
   name: Cortina und Comelico
   land: IT
   bundesland: Venetien
+# Schweiz und Liechtenstein (E-20, 13.11.2026): Engadin, Davos Klosters, Goms ueber tourinfra;
+# die uebrigen Langlauforte von Schweiz Tourismus (Lage und Ortshoehe von der Ortsseite, Hoehe fehlt dort teils).
+# Gastein und Ramsau am Dachstein (Oesterreich) ueber tourinfra.
+- slug: engadin
+  name: Engadin
+  land: CH
+  bundesland: Graubünden
+- slug: davos-klosters
+  name: Davos Klosters
+  land: CH
+  bundesland: Graubünden
+- slug: goms
+  name: Goms
+  land: CH
+  bundesland: Wallis
+- slug: gasteinertal
+  name: Gasteinertal
+  land: AT
+  bundesland: Salzburg
+- slug: schladming-dachstein
+  name: Schladming-Dachstein
+  land: AT
+  bundesland: Steiermark
+- slug: berner-oberland
+  name: Bern und Berner Oberland
+  land: CH
+  bundesland: Bern
+- slug: wallis
+  name: Wallis
+  land: CH
+  bundesland: Wallis
+- slug: ostschweiz
+  name: Ostschweiz
+  land: CH
+  bundesland: Ostschweiz
+- slug: zentralschweiz
+  name: Zentralschweiz
+  land: CH
+  bundesland: Zentralschweiz
+- slug: graubuenden
+  name: Graubünden
+  land: CH
+  bundesland: Graubünden
+- slug: tessin
+  name: Tessin
+  land: CH
+  bundesland: Tessin
+- slug: freiburg
+  name: Region Freiburg
+  land: CH
+  bundesland: Freiburg
+- slug: zuercher-oberland
+  name: Zürcher Oberland
+  land: CH
+  bundesland: Zürich
+- slug: waadtlaender-alpen
+  name: Waadt
+  land: CH
+  bundesland: Waadt
+- slug: jura-drei-seen-land
+  name: Jura und Drei-Seen-Land
+  land: CH
+  bundesland: Jura
+- slug: liechtenstein
+  name: Liechtenstein
+  land: LI
+  bundesland: Liechtenstein
+- slug: basel-jura
+  name: Basel und Jura
+  land: CH
+  bundesland: Basel-Landschaft
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -1879,3 +1950,838 @@ gebiete:
   lon: 12.478
   tourist_url: https://www.dolomitinordicski.com
   grenzinfo: 'Italien: Anfahrt über Österreich mit Vignette (A12/A13) und Brenner-Maut, in Italien Autobahnmaut (A22); Winterausrüstung vom 15.11. bis 15.4. Pflicht.'
+
+# Schweiz, Liechtenstein, Gastein, Ramsau (E-20, 13.11.2026). Hoehen der tourinfra-Gebiete gerundet
+# (Ortshoehe), Mitte = Mittel der Loipenstarts; Schweizer Orte: Lage und Hoehe von snow.myswitzerland.com.
+- slug: oberengadin-seen
+  name: Maloja, Sils und Silvaplana
+  hoehe_m: 1800
+  region: engadin
+  lat: 46.435
+  lon: 9.768
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: st-moritz
+  name: St. Moritz und Celerina
+  hoehe_m: 1820
+  region: engadin
+  lat: 46.501
+  lon: 9.855
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: pontresina
+  name: Pontresina
+  hoehe_m: 1805
+  region: engadin
+  lat: 46.49
+  lon: 9.899
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: samedan-bever
+  name: Samedan und Bever
+  hoehe_m: 1720
+  region: engadin
+  lat: 46.54
+  lon: 9.886
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: zuoz-s-chanf
+  name: Zuoz, S-chanf und La Punt
+  hoehe_m: 1715
+  region: engadin
+  lat: 46.599
+  lon: 9.967
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: zernez
+  name: Zernez
+  hoehe_m: 1475
+  region: engadin
+  lat: 46.708
+  lon: 10.095
+  tourist_url: https://www.engadin.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: davos
+  name: Davos
+  hoehe_m: 1560
+  region: davos-klosters
+  lat: 46.787
+  lon: 9.827
+  tourist_url: https://www.davos.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: klosters
+  name: Klosters
+  hoehe_m: 1190
+  region: davos-klosters
+  lat: 46.86
+  lon: 9.924
+  tourist_url: https://www.davos.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: obergoms
+  name: Obergoms (Oberwald bis Geschinen)
+  hoehe_m: 1350
+  region: goms
+  lat: 46.514
+  lon: 8.322
+  tourist_url: https://www.goms.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: goms-muenster
+  name: Münster und Reckingen
+  hoehe_m: 1390
+  region: goms
+  lat: 46.464
+  lon: 8.238
+  tourist_url: https://www.goms.ch
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gastein
+  name: Gastein
+  hoehe_m: 950
+  region: gasteinertal
+  lat: 47.128
+  lon: 13.101
+  tourist_url: https://www.gastein.com
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) mit Vignette.'
+  wetterstation:
+    id: '15501'
+    name: Bad Gastein
+    dienst: geosphere
+- slug: ramsau-am-dachstein
+  name: Ramsau am Dachstein
+  hoehe_m: 1135
+  region: schladming-dachstein
+  lat: 47.419
+  lon: 13.657
+  tourist_url: https://www.ramsau.com
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) mit Vignette.'
+  wetterstation:
+    id: '12711'
+    name: Ramsau am Dachstein
+    dienst: geosphere
+- slug: adelboden
+  name: Adelboden
+  hoehe_m: 1353
+  region: berner-oberland
+  lat: 46.4925
+  lon: 7.559
+  tourist_url: https://snow.myswitzerland.com/schneebericht/adelboden-102/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: aeschi-aeschiried
+  name: Aeschi / Aeschiried
+  region: berner-oberland
+  lat: 46.6592
+  lon: 7.6958
+  tourist_url: https://snow.myswitzerland.com/schneebericht/aeschi-aeschiried-101/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: aletsch-arena
+  name: Aletsch Arena
+  hoehe_m: 1950
+  region: wallis
+  lat: 46.3922
+  lon: 8.0644
+  tourist_url: https://snow.myswitzerland.com/schneebericht/aletsch-arena-183/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: toggenburg
+  name: Toggenburg
+  hoehe_m: 900
+  region: ostschweiz
+  lat: 47.1947
+  lon: 9.3093
+  tourist_url: https://snow.myswitzerland.com/schneebericht/alt-st-johann-toggenburg-204/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: amden-arvenbueel
+  name: Amden Arvenbüel
+  hoehe_m: 1000
+  region: ostschweiz
+  lat: 47.1498
+  lon: 9.1433
+  tourist_url: https://snow.myswitzerland.com/schneebericht/amden-arvenbueel-53/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: andermatt-sedrun
+  name: Andermatt und Sedrun
+  hoehe_m: 1444
+  region: zentralschweiz
+  lat: 46.6325
+  lon: 8.5918
+  tourist_url: https://snow.myswitzerland.com/schneebericht/andermatt-oberalp-sedrun-111/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: anzere
+  name: Anzère
+  hoehe_m: 1500
+  region: wallis
+  lat: 46.295
+  lon: 7.3945
+  tourist_url: https://snow.myswitzerland.com/schneebericht/anzere-145/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: arosa-lenzerheide
+  name: Arosa Lenzerheide
+  hoehe_m: 1800
+  region: graubuenden
+  lat: 46.7837
+  lon: 9.6789
+  tourist_url: https://snow.myswitzerland.com/schneebericht/arosa-lenzerheide-123/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: brigels
+  name: Brigels
+  region: graubuenden
+  lat: 46.7715
+  lon: 9.0674
+  tourist_url: https://snow.myswitzerland.com/schneebericht/bergbahnen-brigels-ag-126/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: spluegen
+  name: Splügen
+  hoehe_m: 1457
+  region: graubuenden
+  lat: 46.55
+  lon: 9.317
+  tourist_url: https://snow.myswitzerland.com/schneebericht/bergbahnen-spluegen-84/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: berguen-filisur
+  name: Bergün Filisur
+  region: graubuenden
+  lat: 46.631
+  lon: 9.7469
+  tourist_url: https://snow.myswitzerland.com/schneebericht/berguen-filisur-299/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: blatten-belalp
+  name: Blatten-Belalp
+  hoehe_m: 1322
+  region: wallis
+  lat: 46.3588
+  lon: 7.9843
+  tourist_url: https://snow.myswitzerland.com/schneebericht/blatten-belalp-81/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: bosco-gurin
+  name: Bosco Gurin
+  hoehe_m: 1500
+  region: tessin
+  lat: 46.317
+  lon: 8.4911
+  tourist_url: https://snow.myswitzerland.com/schneebericht/bosco-gurin-252/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: braunwald
+  name: Braunwald
+  hoehe_m: 1256
+  region: ostschweiz
+  lat: 46.9388
+  lon: 8.9983
+  tourist_url: https://snow.myswitzerland.com/schneebericht/braunwald-115/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: brienz-axalp
+  name: Brienz - Axalp
+  hoehe_m: 1400
+  region: berner-oberland
+  lat: 46.7189
+  lon: 8.0375
+  tourist_url: https://snow.myswitzerland.com/schneebericht/brienz-axalp-100/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: bumbach-schangnau
+  name: Bumbach / Schangnau
+  region: berner-oberland
+  lat: 46.8139
+  lon: 7.9007
+  tourist_url: https://snow.myswitzerland.com/schneebericht/bumbach-schangnau-234/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: champex-lac
+  name: Champex-Lac
+  hoehe_m: 1466
+  region: wallis
+  lat: 46.0314
+  lon: 7.1066
+  tourist_url: https://snow.myswitzerland.com/schneebericht/champex-lac-168/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: charmey
+  name: Charmey
+  hoehe_m: 900
+  region: freiburg
+  lat: 46.6184
+  lon: 7.1682
+  tourist_url: https://snow.myswitzerland.com/schneebericht/charmeych-4/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: crans-montana
+  name: Crans - Montana
+  hoehe_m: 1500
+  region: wallis
+  lat: 46.3128
+  lon: 7.4861
+  tourist_url: https://snow.myswitzerland.com/schneebericht/crans-montana-142/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: degersheim
+  name: Degersheim
+  region: ostschweiz
+  lat: 47.3791
+  lon: 9.2068
+  tourist_url: https://snow.myswitzerland.com/schneebericht/degersheim-51/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: disentis
+  name: Disentis
+  hoehe_m: 1150
+  region: graubuenden
+  lat: 46.7008
+  lon: 8.8411
+  tourist_url: https://snow.myswitzerland.com/schneebericht/disentis-130/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: einsiedeln
+  name: Einsiedeln
+  region: zentralschweiz
+  lat: 47.1249
+  lon: 8.7376
+  tourist_url: https://snow.myswitzerland.com/schneebericht/einsiedeln-bolzberg-trachslau-249/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: elm
+  name: Elm
+  hoehe_m: 1000
+  region: ostschweiz
+  lat: 46.9137
+  lon: 9.1624
+  tourist_url: https://snow.myswitzerland.com/schneebericht/elm-49/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: elsigen-metsch
+  name: Elsigen - Metsch
+  hoehe_m: 800
+  region: berner-oberland
+  lat: 46.5291
+  lon: 7.6065
+  tourist_url: https://snow.myswitzerland.com/schneebericht/elsigen-metsch-98/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: scuol
+  name: Scuol (Unterengadin)
+  hoehe_m: 1290
+  region: graubuenden
+  lat: 46.7953
+  lon: 10.2892
+  tourist_url: https://snow.myswitzerland.com/schneebericht/engadin-scuol-zernez-60/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: engelberg
+  name: Engelberg
+  hoehe_m: 1050
+  region: zentralschweiz
+  lat: 46.8208
+  lon: 8.4056
+  tourist_url: https://snow.myswitzerland.com/schneebericht/engelberg-titlis-73/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: engstligenalp
+  name: Engstligenalp
+  hoehe_m: 1353
+  region: berner-oberland
+  lat: 46.4591
+  lon: 7.5665
+  tourist_url: https://snow.myswitzerland.com/schneebericht/engstligenalp-336/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: eriz
+  name: Eriz
+  region: berner-oberland
+  lat: 46.7886
+  lon: 7.7776
+  tourist_url: https://snow.myswitzerland.com/schneebericht/eriz-80/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gstaad
+  name: Gstaad
+  hoehe_m: 1050
+  region: berner-oberland
+  lat: 46.4675
+  lon: 7.2821
+  tourist_url: https://snow.myswitzerland.com/schneebericht/ferienregion-gstaad-227/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: flumserberg
+  name: Flumserberg
+  hoehe_m: 1220
+  region: ostschweiz
+  lat: 47.0924
+  lon: 9.2806
+  tourist_url: https://snow.myswitzerland.com/schneebericht/flumserberg-113/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gadmen
+  name: Gadmen
+  hoehe_m: 1205
+  region: berner-oberland
+  lat: 46.7274
+  lon: 8.1843
+  tourist_url: https://snow.myswitzerland.com/schneebericht/gadmen-275/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gantrisch-riffenmatt
+  name: Gantrisch - Riffenmatt
+  region: berner-oberland
+  lat: 46.7653
+  lon: 7.3532
+  tourist_url: https://snow.myswitzerland.com/schneebericht/gantrisch-riffenmatt-237/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gibswil
+  name: Gibswil
+  region: zuercher-oberland
+  lat: 47.305
+  lon: 8.8955
+  tourist_url: https://snow.myswitzerland.com/schneebericht/gibswil-30/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: glacier-3000
+  name: Glacier 3000
+  hoehe_m: 1200
+  region: waadtlaender-alpen
+  lat: 46.3537
+  lon: 7.2056
+  tourist_url: https://snow.myswitzerland.com/schneebericht/glacier-3000-188/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: graechen
+  name: Grächen
+  hoehe_m: 1619
+  region: wallis
+  lat: 46.1966
+  lon: 7.8416
+  tourist_url: https://snow.myswitzerland.com/schneebericht/graechen-179/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: grimentz-zinal-anniviers
+  name: Grimentz-Zinal /Anniviers
+  hoehe_m: 1572
+  region: wallis
+  lat: 46.1762
+  lon: 7.5734
+  tourist_url: https://snow.myswitzerland.com/schneebericht/grimentz-zinal-anniviers-140/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: grindelwald
+  name: Grindelwald
+  hoehe_m: 1050
+  region: berner-oberland
+  lat: 46.623
+  lon: 8.0355
+  tourist_url: https://snow.myswitzerland.com/schneebericht/grindelwald-jungfrau-region-228/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: gruesch-danusa
+  name: Grüsch-Danusa
+  hoehe_m: 630
+  region: graubuenden
+  lat: 46.9723
+  lon: 9.6403
+  tourist_url: https://snow.myswitzerland.com/schneebericht/gruesch-danusa-122/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: habkern
+  name: Habkern
+  hoehe_m: 1100
+  region: berner-oberland
+  lat: 46.7041
+  lon: 7.8995
+  tourist_url: https://snow.myswitzerland.com/schneebericht/habkern-97/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: heimenschwand
+  name: Heimenschwand
+  region: berner-oberland
+  lat: 46.816
+  lon: 7.7044
+  tourist_url: https://snow.myswitzerland.com/schneebericht/heimenschwand-223/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: jaun-dorf
+  name: Jaun - Dorf
+  hoehe_m: 1050
+  region: freiburg
+  lat: 46.6108
+  lon: 7.2749
+  tourist_url: https://snow.myswitzerland.com/schneebericht/jaun-dorf-89/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: jaunpass-boltigen
+  name: Jaunpass - Boltigen
+  hoehe_m: 850
+  region: berner-oberland
+  lat: 46.5913
+  lon: 7.3376
+  tourist_url: https://snow.myswitzerland.com/schneebericht/jaunpass-boltigen-226/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: kandersteg
+  name: Kandersteg
+  hoehe_m: 1176
+  region: berner-oberland
+  lat: 46.4938
+  lon: 7.6733
+  tourist_url: https://snow.myswitzerland.com/schneebericht/kandersteg-96/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: kiental-ramslauenen
+  name: Kiental-Ramslauenen
+  region: berner-oberland
+  lat: 46.586
+  lon: 7.7238
+  tourist_url: https://snow.myswitzerland.com/schneebericht/kiental-ramslauenen-79/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: kuessnacht-seebodenalp
+  name: Küssnacht - Seebodenalp
+  region: zentralschweiz
+  lat: 47.0761
+  lon: 8.4398
+  tourist_url: https://snow.myswitzerland.com/schneebericht/kuessnacht-seebodenalp-301/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: la-chaux-de-fonds
+  name: La Chaux-de-Fonds
+  hoehe_m: 1150
+  region: jura-drei-seen-land
+  lat: 47.1023
+  lon: 6.8288
+  tourist_url: https://snow.myswitzerland.com/schneebericht/la-chaux-de-fonds-75/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: la-fouly
+  name: La Fouly
+  hoehe_m: 1600
+  region: wallis
+  lat: 45.9318
+  lon: 7.099
+  tourist_url: https://snow.myswitzerland.com/schneebericht/la-fouly-141/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: laax
+  name: Laax
+  hoehe_m: 1050
+  region: graubuenden
+  lat: 46.8199
+  lon: 9.2641
+  tourist_url: https://snow.myswitzerland.com/schneebericht/laax-67/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: langis-glaubenberg
+  name: Langis - Glaubenberg
+  hoehe_m: 1444
+  region: zentralschweiz
+  lat: 46.8926
+  lon: 8.1246
+  tourist_url: https://snow.myswitzerland.com/schneebericht/langis-glaubenberg-109/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: lauchernalp-loetschental
+  name: Lauchernalp-Lötschental
+  region: wallis
+  lat: 46.4017
+  lon: 7.7776
+  tourist_url: https://snow.myswitzerland.com/schneebericht/lauchernalp-loetschental-178/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: lauterbrunnen
+  name: Lauterbrunnen
+  hoehe_m: 795
+  region: berner-oberland
+  lat: 46.5971
+  lon: 7.9074
+  tourist_url: https://snow.myswitzerland.com/schneebericht/lauterbrunnen-95/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: lenk-im-simmental
+  name: Lenk im Simmental
+  hoehe_m: 1068
+  region: berner-oberland
+  lat: 46.4532
+  lon: 7.4373
+  tourist_url: https://snow.myswitzerland.com/schneebericht/lenk-im-simmental-94/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: les-breuleux
+  name: Les Breuleux
+  hoehe_m: 1020
+  region: jura-drei-seen-land
+  lat: 47.2111
+  lon: 7.0076
+  tourist_url: https://snow.myswitzerland.com/schneebericht/les-breuleux-211/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: les-genevez
+  name: Les Genevez
+  hoehe_m: 998
+  region: jura-drei-seen-land
+  lat: 47.2553
+  lon: 6.998
+  tourist_url: https://snow.myswitzerland.com/schneebericht/les-genevez-208/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: les-mosses-la-lecherette
+  name: Les Mosses - La Lécherette
+  hoehe_m: 1450
+  region: waadtlaender-alpen
+  lat: 46.3967
+  lon: 7.1021
+  tourist_url: https://snow.myswitzerland.com/schneebericht/les-mosses-la-lecherette-329/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: les-paccots-la-veveyse
+  name: Les Paccots - La Veveyse
+  hoehe_m: 1061
+  region: freiburg
+  lat: 46.5299
+  lon: 6.9069
+  tourist_url: https://snow.myswitzerland.com/schneebericht/les-paccots-la-veveyse-151/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: les-pleiades
+  name: Les Pléiades
+  region: waadtlaender-alpen
+  lat: 46.4649
+  lon: 6.8947
+  tourist_url: https://snow.myswitzerland.com/schneebericht/les-pleiades-187/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: leukerbad
+  name: Leukerbad
+  hoehe_m: 1411
+  region: wallis
+  lat: 46.3796
+  lon: 7.6265
+  tourist_url: https://snow.myswitzerland.com/schneebericht/leukerbad-83/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: leysin
+  name: Leysin
+  hoehe_m: 1263
+  region: waadtlaender-alpen
+  lat: 46.3458
+  lon: 7.016
+  tourist_url: https://snow.myswitzerland.com/schneebericht/leysin-330/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: malbun-steg
+  name: Malbun und Steg
+  hoehe_m: 1600
+  region: liechtenstein
+  lat: 47.1052
+  lon: 9.6064
+  tourist_url: https://snow.myswitzerland.com/schneebericht/malbun-steg-fl-112/
+  grenzinfo: 'Liechtenstein: Anfahrt über Österreich (Vignette) oder die Schweiz (Autobahnvignette 40 CHF); Ausweis mitnehmen, Zollgrenze zur Schweiz.'
+- slug: meiringen-hasliberg
+  name: Meiringen - Hasliberg
+  hoehe_m: 1175
+  region: berner-oberland
+  lat: 46.7451
+  lon: 8.1966
+  tourist_url: https://snow.myswitzerland.com/schneebericht/meiringen-hasliberg-225/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: melchsee-frutt
+  name: Melchsee-Frutt
+  hoehe_m: 1920
+  region: zentralschweiz
+  lat: 46.8028
+  lon: 8.2789
+  tourist_url: https://snow.myswitzerland.com/schneebericht/melchsee-frutt-24/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: moerlialp-giswil
+  name: Mörlialp - Giswil
+  region: zentralschweiz
+  lat: 46.8257
+  lon: 8.1104
+  tourist_url: https://snow.myswitzerland.com/schneebericht/moerlialp-giswil-23/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: moosalpregion-buerchen-toerbel
+  name: Moosalpregion Bürchen - Törbel
+  hoehe_m: 1480
+  region: wallis
+  lat: 46.2807
+  lon: 7.8183
+  tourist_url: https://snow.myswitzerland.com/schneebericht/moosalpregion-buerchen-toerbel-88/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: mythenregion
+  name: Mythenregion
+  hoehe_m: 519
+  region: zentralschweiz
+  lat: 47.0147
+  lon: 8.6692
+  tourist_url: https://snow.myswitzerland.com/schneebericht/mythenregion-22/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: nax-mont-noble
+  name: Nax / Mont-Noble
+  hoehe_m: 1300
+  region: wallis
+  lat: 46.2314
+  lon: 7.4298
+  tourist_url: https://snow.myswitzerland.com/schneebericht/nax-mont-noble-8/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: nendaz-4-vallees
+  name: Nendaz - 4 Vallées
+  hoehe_m: 1350
+  region: wallis
+  lat: 46.1805
+  lon: 7.292
+  tourist_url: https://snow.myswitzerland.com/schneebericht/nendaz-4-vallees-139/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: nordic-region-gibloux
+  name: Nordic Région Gibloux
+  hoehe_m: 975
+  region: freiburg
+  lat: 46.6416
+  lon: 7.0624
+  tourist_url: https://snow.myswitzerland.com/schneebericht/nordic-region-gibloux-216/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: ovronnaz
+  name: Ovronnaz
+  hoehe_m: 1350
+  region: wallis
+  lat: 46.2046
+  lon: 7.1612
+  tourist_url: https://snow.myswitzerland.com/schneebericht/ovronnaz-138/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: rigi
+  name: Rigi
+  region: zentralschweiz
+  lat: 47.0094
+  lon: 8.4825
+  tourist_url: https://snow.myswitzerland.com/schneebericht/rigi-21/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: rothenthurm
+  name: Rothenthurm
+  region: zentralschweiz
+  lat: 47.1035
+  lon: 8.6763
+  tourist_url: https://snow.myswitzerland.com/schneebericht/rothenthurm-20/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: rougemont-videmanette
+  name: Rougemont - Videmanette
+  hoehe_m: 1000
+  region: waadtlaender-alpen
+  lat: 46.4857
+  lon: 7.2085
+  tourist_url: https://snow.myswitzerland.com/schneebericht/rougemont-videmanette-395/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: saas-almagell
+  name: Saas-Almagell
+  hoehe_m: 1670
+  region: wallis
+  lat: 46.0922
+  lon: 7.958
+  tourist_url: https://snow.myswitzerland.com/schneebericht/saas-almagell-270/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: saas-fee
+  name: Saas-Fee
+  hoehe_m: 1800
+  region: wallis
+  lat: 46.1057
+  lon: 7.9277
+  tourist_url: https://snow.myswitzerland.com/schneebericht/saas-fee-176/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: saas-grund
+  name: Saas-Grund
+  hoehe_m: 1560
+  region: wallis
+  lat: 46.128
+  lon: 7.9384
+  tourist_url: https://snow.myswitzerland.com/schneebericht/saas-grund-175/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: saignelegier
+  name: Saignelégier
+  hoehe_m: 998
+  region: jura-drei-seen-land
+  lat: 47.2553
+  lon: 6.998
+  tourist_url: https://snow.myswitzerland.com/schneebericht/saignelegier-150/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: sainte-croix-les-rasses
+  name: Sainte-Croix / Les Rasses
+  hoehe_m: 1200
+  region: waadtlaender-alpen
+  lat: 46.8224
+  lon: 6.5013
+  tourist_url: https://snow.myswitzerland.com/schneebericht/sainte-croix-les-rasses-146/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: samnaun
+  name: Samnaun
+  region: graubuenden
+  lat: 46.9512
+  lon: 10.3752
+  tourist_url: https://snow.myswitzerland.com/schneebericht/samnaunischgl-157/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: san-bernardino
+  name: San Bernardino
+  hoehe_m: 1608
+  region: graubuenden
+  lat: 46.4626
+  lon: 9.1922
+  tourist_url: https://snow.myswitzerland.com/schneebericht/san-bernardino-2/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: savognin
+  name: Savognin
+  hoehe_m: 1200
+  region: graubuenden
+  lat: 46.5959
+  lon: 9.599
+  tourist_url: https://snow.myswitzerland.com/schneebericht/savognin-129/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: sigriswil
+  name: Sigriswil
+  region: berner-oberland
+  lat: 46.7372
+  lon: 7.7289
+  tourist_url: https://snow.myswitzerland.com/schneebericht/schwanden-sigriswil-92/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: simplon
+  name: Simplon
+  region: wallis
+  lat: 46.246
+  lon: 8.0273
+  tourist_url: https://snow.myswitzerland.com/schneebericht/simplon-367/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: soerenberg
+  name: Sörenberg
+  region: zentralschweiz
+  lat: 46.8209
+  lon: 8.0341
+  tourist_url: https://snow.myswitzerland.com/schneebericht/soerenberg-107/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: st-cergue
+  name: St-Cergue
+  region: waadtlaender-alpen
+  lat: 46.4466
+  lon: 6.1568
+  tourist_url: https://snow.myswitzerland.com/schneebericht/st-cergue-14/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: stoos
+  name: Stoos
+  hoehe_m: 1300
+  region: zentralschweiz
+  lat: 46.9839
+  lon: 8.6648
+  tourist_url: https://snow.myswitzerland.com/schneebericht/stoos-19/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: studen-sz
+  name: Studen SZ
+  region: zentralschweiz
+  lat: 47.0747
+  lon: 8.8352
+  tourist_url: https://snow.myswitzerland.com/schneebericht/studen-sz-106/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: thyon-4-vallees
+  name: Thyon - 4 Vallées
+  hoehe_m: 1800
+  region: wallis
+  lat: 46.1975
+  lon: 7.343
+  tourist_url: https://snow.myswitzerland.com/schneebericht/thyon-4-vallees-143/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: tschiertschen
+  name: Tschiertschen
+  hoehe_m: 1350
+  region: graubuenden
+  lat: 46.8154
+  lon: 9.6074
+  tourist_url: https://snow.myswitzerland.com/schneebericht/tschiertschen-57/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: val-muestair
+  name: Val Müstair
+  hoehe_m: 1660
+  region: graubuenden
+  lat: 46.6264
+  lon: 10.3363
+  tourist_url: https://snow.myswitzerland.com/schneebericht/val-muestair-124/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: vals
+  name: Vals
+  hoehe_m: 1250
+  region: graubuenden
+  lat: 46.6178
+  lon: 9.1805
+  tourist_url: https://snow.myswitzerland.com/schneebericht/vals-116/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: verbier
+  name: Verbier
+  hoehe_m: 1500
+  region: wallis
+  lat: 46.0936
+  lon: 7.2337
+  tourist_url: https://snow.myswitzerland.com/schneebericht/verbier-132/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: vicheres-bavon
+  name: Vichères - Bavon
+  hoehe_m: 1350
+  region: wallis
+  lat: 45.9928
+  lon: 7.1838
+  tourist_url: https://snow.myswitzerland.com/schneebericht/vicheres-bavon-257/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: wasserfallen
+  name: Wasserfallen
+  region: basel-jura
+  lat: 47.3903
+  lon: 7.6963
+  tourist_url: https://snow.myswitzerland.com/schneebericht/wasserfallen-241/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+- slug: zweisimmen-sparenmoos
+  name: Zweisimmen - Sparenmoos
+  hoehe_m: 948
+  region: berner-oberland
+  lat: 46.5528
+  lon: 7.3712
+  tourist_url: https://snow.myswitzerland.com/schneebericht/zweisimmen-sparenmoos-384/
+  grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'

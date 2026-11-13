@@ -42,7 +42,7 @@ def test_p11_chiemgau_orte_aus_einer_abfrage():
         "ruhpolding", "reit-im-winkl", "inzell", "schleching", "unterwoessen",
         "marquartstein-grassau", "bergen", "siegsdorf", "chieming",
     }
-    assert erg.warnungen == ["Eintrag ohne Name oder ID uebersprungen"]
+    assert erg.warnungen == []  # die Summenzeile ohne tid ist keine Loipe und keine Warnung (P26 AK 1)
 
 
 @pytest.mark.req("P11", ak=1)
@@ -100,7 +100,7 @@ def test_p11_lauf_speichert_loipen_je_gebiet(session):
     quelle = session.scalar(select(Quelle).where(Quelle.key == "chiemgau"))
     ergebnis = rufe_quelle_ab(session, quelle, fetcher())
     assert (ergebnis.gefunden, ergebnis.neu) == (69, 69)
-    assert quelle.last_status == "warnung" and quelle.last_count == 69
+    assert quelle.last_status == "ok" and quelle.last_count == 69
     assert session.scalar(select(Gebiet).where(Gebiet.slug == "inzell")).loipen
     nochmal = rufe_quelle_ab(session, quelle, fetcher())
     assert nochmal.neu == 0  # D4: unveraendert, keine neue Zeile

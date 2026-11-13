@@ -83,6 +83,7 @@ def test_worker_ablauf_gegen_die_attrappe(session, server):
     wetter = aktualisiere_wetter(session, f)
     assert wetter.messungen > 0 and wetter.vorhersagen > 0
     # + tirol, kitzbueheler-alpen, langlaufdorf, berchtesgaden, tannheimer, seefeld, achensee, kufsteinerland, kaiserwinkl,
-    #   dolomiti-nordicski, opendatahub
-    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 701 + 71 + 5 + 6 + 21 + 49 + 24 + 22 + 23 + 118 + 190
+    #   dolomiti-nordicski, opendatahub, engadin, davos-klosters, goms, gastein, ramsau, seefeld-tourinfra, myswitzerland
+    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 701 + 71 + 5 + 6 + 21 + 49 + 24 + 22 + 23 + 118 + 190 \
+        + 108 + 36 + 39 + 15 + 42 + 42 + 340
     assert session.scalar(select(func.count()).select_from(Wetter)) == wetter.messungen + wetter.vorhersagen

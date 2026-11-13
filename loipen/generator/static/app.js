@@ -10,7 +10,7 @@ var SYM = {
 };
 var FARBE = {offen: "#4ade80", eingeschraenkt: "#fbbf24", geschlossen: "#9fb3c2", unbekannt: "#c7d2da"};
 var RANG = {offen: 0, eingeschraenkt: 1, unbekannt: 2, geschlossen: 3};
-var LAND = {DE: "Deutschland", AT: "Österreich", IT: "Italien"};
+var LAND = {DE: "Deutschland", AT: "Österreich", IT: "Italien", CH: "Schweiz", LI: "Liechtenstein"};
 var TAGE = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 var S = {idx: null, regionen: {}, strecken: {}, gebiete: [], loipen: [], demo: false, ort: null, orte: []};
 var view = document.getElementById("view");
