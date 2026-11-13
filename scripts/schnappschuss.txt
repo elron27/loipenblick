@@ -1,24 +1,12 @@
-# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 2: Gesamtlisten und lokale Seiten
-tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipen-alle.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=300&odhtagfilter=loipen&language=de&removenullvalues=true
-tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/langlaufen-anzahl.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=1&odhtagfilter=langlaufen&language=de
-tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/langlaufloipen.html https://www.seiseralm.it/de/aktiv/winter/langlaufen/langlaufloipen.html
-tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/open-tracks-de.html https://www.dolomitinordicski.com/de/regionen/alta-badia/geoeffnete-loipen/2.html
-tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/sitemap.xml https://www.dolomitinordicski.com/sitemap.xml
-tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-202.html https://www.kaernten.at/service/wetter/loipenberichte/?region=202
-tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte-region-210.html https://www.kaernten.at/service/wetter/loipenberichte/?region=210
-tests/fixtures/recherche-2026-11-13/kaernten/touren-kaernten/langlauf.html https://touren.kaernten.at/de/touren/#cat=Langlauf
-tests/fixtures/recherche-2026-11-13/kaernten/nlw/sportbericht.html https://tools.nlw.at/sportbericht/
-tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-nps.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-nps.pdf
-tests/fixtures/recherche-2026-11-13/kaernten/nlw/wintersportbericht-ws.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ws.pdf
-tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/winter-world.html https://www.nassfeld.at/de/Winter-World
-tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/home.html https://www.badkleinkirchheim.com/
-tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemapindex.xml https://snow.myswitzerland.com/sitemapindex.xml
-tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/schneebericht.html https://snow.myswitzerland.com/schneebericht/
-tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/goms-272.html https://snow.myswitzerland.com/schneebericht/goms-272/
-tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/davos-69.html https://snow.myswitzerland.com/schneebericht/davos-69/
-tests/fixtures/recherche-2026-11-13/schweiz/davos/loipenbericht.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipenbericht-davos-klosters
-tests/fixtures/recherche-2026-11-13/schweiz/engadin/schneesportberichte-trails.html https://www.engadin.ch/de/berichte/schneesportberichte?tab=trails
-tests/fixtures/recherche-2026-11-13/schweiz/arosalenzerheide/langlaufen.html https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Langlaufen
-tests/fixtures/recherche-2026-11-13/schweiz/infosnow/home.html https://www.infosnow.ch/
-tests/fixtures/recherche-2026-11-13/schweiz/goms/home.html https://www.goms.ch/
-tests/fixtures/recherche-2026-11-13/schweiz/loipen-schweiz/home.html https://www.loipen.ch/
+# <zielpfad> <url> -- Recherche Suedtirol/Kaernten/Schweiz, Runde 3: lokale Seiten und Gesamtlisten
+tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemap_de.xml https://snow.myswitzerland.com/sitemap_de.xml
+tests/fixtures/recherche-2026-11-13/schweiz/goms/wintersportbericht.html https://www.goms.ch/wintersportbericht
+tests/fixtures/recherche-2026-11-13/schweiz/davos/loipen-tracking.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipen-tracking
+tests/fixtures/recherche-2026-11-13/kaernten/bergfex/loipenberichte.html https://www.bergfex.at/kaernten/langlaufen/loipenberichte/
+tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/alle-loipen.html https://www.nassfeld.at/de/Winter-World/Outdoor-Relax-World/Langlaufen/Alle-Loipen
+tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/pisten-lifte.html https://www.badkleinkirchheim.com/de/skigebiet/pisten-lifte
+tests/fixtures/recherche-2026-11-13/kaernten/woerthersee/roemerloipe.html https://www.woerthersee.com/en/dc-new/detail/POI/langlaufloipe-roemerloipe-bad-kleinkirchheim
+tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/geoeffnete-loipen.html https://www.seiseralm.it/de/aktivurlaub/winterurlaub/langlaufen/geoeffnete-loipen.html
+tests/fixtures/recherche-2026-11-13/suedtirol/val-gardena/langlauf.html https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
+tests/fixtures/recherche-2026-11-13/suedtirol/ratschings/langlauf.html https://www.ratschings.info/en/experiences/experience-winter/the-journey-is-the-destination.html
+tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipe-detail.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887?language=de
