@@ -61,7 +61,7 @@ def test_p14_kufsteinerland_aus_echtem_schnappschuss():
 def test_p14_ganz_tirol_alle_loipen_der_karte():
     """Alle 701 Loipen der Kartenliste landen in einem Gebiet aus sources.yaml."""
     erg, f = lauf(details_pro_lauf=0)
-    assert len(f.abgerufen) == 2  # Liste und Filter "geoeffnet", keine Detailseite
+    assert len(f.abgerufen) == 3  # Liste und Filter "geoeffnet" (2 Seiten mit je 6), keine Detailseite
     assert len(erg.loipen) == ALLE and not erg.warnungen
     assert len({l.source_key for l in erg.loipen}) == ALLE
     gebiete = {l.gebiet_slug for l in erg.loipen}

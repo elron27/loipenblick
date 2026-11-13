@@ -12,6 +12,7 @@ from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.dubletten import Eintrag, finde_dubletten
 from loipen.konfig import lade_yaml
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
+from loipen.sonderloipen import sonderloipe
 from loipen.wetter import gebiet_position, schnee_uebersicht
 
 BERLIN = ZoneInfo("Europe/Berlin")
@@ -68,6 +69,7 @@ def _loipe(loipe: Loipe, zustaende: list[Zustand], quelle: Quelle, jetzt: dateti
         "quelle": {"name": quelle.name, "url": loipe.source_url},
         "historie": _historie(zustaende, jetzt.astimezone(BERLIN).date()),
         "strecke_hinweis": None if loipe.verlauf else (quelle.config or {}).get("strecke_hinweis"),
+        "sonder": sonderloipe(loipe.name),  # Snowfarming, Opening, Gletscher, nur fuer Gruppen
     }
 
 
@@ -108,6 +110,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         for l in aktive])
     auch_bei: dict[int, list[dict]] = {}
     lage: dict[int, tuple[float, float]] = {}
+    laenge: dict[int, tuple[float, str]] = {}
     nach_id = {l.id: l for l in aktive}
     for versteckt, fuehrend in sorted(verdeckt.items()):
         v = nach_id[versteckt]
@@ -120,6 +123,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # D18: fuehrt eine Quelle ohne Koordinaten (Seefeld), kommt die Lage von der verdeckten Loipe
         if v.lat is not None and fuehrend not in lage:
             lage[fuehrend] = (v.lat, v.lon)
+        # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
+        if v.laenge_km is not None and fuehrend not in laenge:
+            laenge[fuehrend] = (v.laenge_km, v.quelle.name)
         liste = auch_bei.setdefault(fuehrend, [])
         # tirol.at-Doppeleintraege einer Loipe nur einmal nennen; ein "offen" zaehlt fuer die Abweichung
         gleich = next((a for a in liste if a["quelle"] == eintrag["quelle"] and a["name"] == eintrag["name"]), None)
@@ -170,6 +176,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 if d["lat"] is None and l.id in lage:
                     d["lat"], d["lon"] = lage[l.id]
                     d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None
+                if d["laenge_km"] is None and l.id in laenge:
+                    d["laenge_km"], d["laenge_von"] = laenge[l.id]
                 loipen.append(d)
                 kennzahl[d["status"]] += 1
                 veraltet += d["veraltet"]

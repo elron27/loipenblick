@@ -65,6 +65,46 @@ def listen_pfade(seite: str) -> dict[str, str]:
     return pfade
 
 
+_LISTEN_ARTIKEL = re.compile(r'<article class="list__article[^"]*" data-ident="([^"]+)"([\s\S]*?)</article>')
+_LISTEN_FELD = re.compile(r'<span class="hide">([^<]*)</span>\s*<span class="text">([^<]*)</span>')
+
+
+def listen_daten(seite: str) -> dict[str, dict]:
+    """Kennung -> Laenge, Schwierigkeit, Stile aus den Listeneintraegen (13.11.2026).
+
+    Jeder Eintrag der Liste nennt dieselben Kerndaten wie die Detailseite. Ueber die Liste der
+    geoeffneten Loipen kommen so alle offenen Loipen in wenigen Abrufen zu ihrer Laenge, statt erst
+    nach Tagen ueber die Detailseiten im Wechsel."""
+    daten: dict[str, dict] = {}
+    for ident, rumpf in _LISTEN_ARTIKEL.findall(seite):
+        felder = {_text(k).rstrip(":").strip(): _text(v) for k, v in _LISTEN_FELD.findall(rumpf)}
+        d: dict = {}
+        if felder.get("Länge"):
+            d["laenge_km"] = laenge_km(felder["Länge"])
+        if felder.get("Schwierigkeit"):
+            d["schwierigkeit"] = felder["Schwierigkeit"]
+        stil = next((v for v in felder.values() if v.lower().startswith("stil:")), None)
+        if stil:
+            d["stile"] = stil.split(":", 1)[1].strip()
+        daten.setdefault(ident, d)
+    return daten
+
+
+def naechste_seite(seite: str) -> str | None:
+    """Adresse der naechsten Listenseite (data-pagination-next), sonst None."""
+    m = re.search(r'data-pagination-next="([^"]+)"', seite)
+    return htmllib.unescape(m.group(1)) if m else None
+
+
+def technik_aus_stilen(stile: str) -> Technik:
+    """'skating, klassisch' (Liste) oder 'Skating / Klassisch' (Detailseite) -> Technik."""
+    t = stile.lower()
+    if t in TECHNIK:
+        return TECHNIK[t]
+    k, s = "klassisch" in t, "skating" in t
+    return Technik.BEIDES if k and s else Technik.KLASSISCH if k else Technik.SKATING if s else Technik.UNBEKANNT
+
+
 def marker(seite: str) -> list[dict]:
     treffer = re.search(r'data-markers="([^"]*)"', seite)
     if not treffer:
@@ -122,8 +162,26 @@ def parse_detail(seite: str) -> dict:
 
 
 class TirolAtAdapter:
+    braucht_bestand = True  # der Ablauf gibt config["_mit_laenge"] mit (siehe _details)
+
     def __init__(self, uhr=time.time):
         self._uhr = uhr
+
+    def _details(self, gewaehlt: list[tuple[dict, str]], je_lauf: int, mit_laenge: set | None,
+                 aus_liste: dict[str, dict]) -> set[int]:
+        """Detailseiten dieses Laufs. Kennt der Ablauf den Bestand (config["_mit_laenge"]), kommen zuerst
+        Loipen ohne Laenge dran, die auch die Liste nicht nennt; der Rest des Kontingents im Wechsel."""
+        block = list(self._auswahl(len(gewaehlt), je_lauf))
+        if mit_laenge is None:
+            return set(block)
+        fehlend = [i for i, (m, _) in enumerate(gewaehlt)
+                   if m["ident"] not in mit_laenge and (aus_liste.get(m["ident"]) or {}).get("laenge_km") is None]
+        auswahl = set(fehlend[:je_lauf])
+        for i in block:
+            if len(auswahl) >= je_lauf:
+                break
+            auswahl.add(i)
+        return auswahl
 
     def _auswahl(self, n: int, je_lauf: int) -> range:
         """Welche Detailseiten in diesem Lauf drankommen: Bloecke im Wechsel nach Stunde."""
@@ -141,6 +199,18 @@ class TirolAtAdapter:
         offen_seite = fetcher.get(f"{liste_url}?{config.get('offen_filter', OFFEN_FILTER)}")
         alle = marker(liste)
         offen = {m["ident"] for m in marker(offen_seite)}
+        # Listeneintraege: erste Seite der Gesamtliste und alle Seiten der geoeffneten Loipen
+        aus_liste = {**listen_daten(liste), **listen_daten(offen_seite)}
+        seite, weitere = offen_seite, int(config.get("offen_seiten_max", 20)) - 1
+        while weitere > 0 and (naechste := naechste_seite(seite)):
+            weitere -= 1
+            try:
+                seite = fetcher.get(naechste)
+            except Exception as e:  # fehlt eine Folgeseite, bleiben die Daten der ersten
+                ergebnis.warnungen.append(f"Liste der geöffneten Loipen: {naechste} nicht lesbar ({type(e).__name__})")
+                break
+            for k, v in listen_daten(seite).items():
+                aus_liste.setdefault(k, v)
         bekannte_pfade = {**listen_pfade(liste), **listen_pfade(offen_seite), **(config.get("slugs") or {})}
 
         punkte = {s: tuple(p) for s, p in (config.get("gebiet_punkte") or {}).items()}
@@ -163,7 +233,9 @@ class TirolAtAdapter:
                 gewaehlt.append(({**m, "title": titel}, naechstes))
         gewaehlt.sort(key=lambda x: x[0]["ident"])
 
-        details = set(self._auswahl(len(gewaehlt), int(config.get("details_pro_lauf", 20))))
+        mit_laenge = config.get("_mit_laenge")
+        details = self._details(gewaehlt, int(config.get("details_pro_lauf", 20)),
+                                set(mit_laenge) if mit_laenge is not None else None, aus_liste)
         for i, (m, gebiet) in enumerate(gewaehlt):
             pfad = bekannte_pfade.get(m["ident"]) or slug(m["title"])
             url = f"{basis}{config.get('liste_pfad', LISTE)}/{pfad}"
@@ -172,6 +244,7 @@ class TirolAtAdapter:
             ist_offen = m["ident"] in offen
             d.status = Status.OFFEN if ist_offen else Status.GESCHLOSSEN
             d.status_rohtext = "tirol.at: geöffnet" if ist_offen else "tirol.at: nicht als geöffnet gemeldet"
+            self._liste(d, aus_liste.get(m["ident"]))
             if i in details:
                 try:
                     self._detail(d, fetcher.get(url), ergebnis)
@@ -179,6 +252,17 @@ class TirolAtAdapter:
                     ergebnis.warnungen.append(f"{m['title']}: Detailseite nicht lesbar ({type(e).__name__}: {e})")
             ergebnis.loipen.append(d)
         return ergebnis
+
+    @staticmethod
+    def _liste(d: LoipenDaten, f: dict | None) -> None:
+        """Kerndaten aus dem Listeneintrag; eine abgerufene Detailseite ueberschreibt sie danach."""
+        if not f:
+            return
+        d.laenge_km = f.get("laenge_km")
+        if f.get("schwierigkeit"):
+            d.schwierigkeit, _ = normiere_schwierigkeit(f["schwierigkeit"])
+        if f.get("stile"):
+            d.technik = technik_aus_stilen(f["stile"])
 
     @staticmethod
     def _detail(d: LoipenDaten, seite: str, ergebnis: AdapterErgebnis) -> None:
@@ -196,9 +280,10 @@ class TirolAtAdapter:
             d.schwierigkeit, bekannt = normiere_schwierigkeit(f["schwierigkeit"])
             if not bekannt:
                 d.unbekannte_begriffe.append(("schwierigkeit", f["schwierigkeit"]))
-        d.laenge_km = f.get("laenge_km")
+        if f.get("laenge_km") is not None:
+            d.laenge_km = f["laenge_km"]
         if f.get("stile"):
-            d.technik = TECHNIK.get(f["stile"].lower(), Technik.UNBEKANNT)
+            d.technik = technik_aus_stilen(f["stile"])
             if d.technik == Technik.UNBEKANNT:
                 d.unbekannte_begriffe.append(("technik", f["stile"]))
         d.nachtloipe = "Beleuchtet" in f["merkmale"]
