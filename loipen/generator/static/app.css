@@ -179,3 +179,4 @@ details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:point
 @media (max-width:979px){.tabs a{padding:0 6px;font-size:14px}}
 .dg.befahrbar .pt{fill:var(--ok)}.dg.schnee .pt{fill:var(--cy)}
 .s-kz .glass{box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+#s-quellen td{white-space:nowrap}
