@@ -17,11 +17,12 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 8. **Zugangsdaten in die `.env` auf dem NAS** eintragen: `LOIPEN_UPLOAD_URL`, `LOIPEN_UPLOAD_PASSWORT`, Impressum-Angaben und `LOIPEN_HOSTER` (Vorlage `.env.example`, Ablauf im README unter „Online stellen“). Nicht in Nachrichten oder ins Repo.
 9. **Log-Aufbewahrung** beim Hoster auf kurz stellen (z. B. 7 Tage), wenn einstellbar.
 10. **E-Mail-Weiterleitung** `kontakt@<domain>` auf dein Postfach einrichten.
+10a. **Postfach `abo@<domain>`** für das E-Mail-Abo anlegen und Zugangsdaten (SMTP) sowie einen Schlüssel (`openssl rand -hex 32`) in die `.env` eintragen (`LOIPEN_ABO_*`, `LOIPEN_SMTP_*`, README „E-Mail-Abo“). Prüfen, dass der Tarif PHP und `mail()` erlaubt.
 
 ## Bis Freitag, 4.12.
 
-11. **Datenschutzerklärung erzeugen** mit einem Generator (z. B. datenschutz-generator.de oder e-recht24). Bausteine: Hosting/Server-Logs, Karte, Standort im Browser, lokale Speicherung, externe Links, Statistik. Den Text als `geheim/datenschutz.html` neben die `docker-compose.yml` legen und `LOIPEN_DATENSCHUTZ_DATEI=/app/geheim/datenschutz.html` setzen. Ohne eigenen Text nimmt die Seite die eingebaute Vorlage.
-12. **Testadresse prüfen** auf Handy und PC: Standort, Karte, Impressum, Datenschutz.
+11. **Datenschutzerklärung erzeugen** mit einem Generator (z. B. datenschutz-generator.de oder e-recht24). Bausteine: Hosting/Server-Logs, Karte, Standort im Browser, lokale Speicherung, externe Links, Statistik, Newsletter/E-Mail-Benachrichtigung mit Double-Opt-In, Kontaktformular (für „Angabe falsch? Melden“). Die eingebaute Vorlage hat dafür schon die Abschnitte „E-Mail-Benachrichtigung“ und „Falsche Angaben melden“; bei eigenem Text diese übernehmen. Den Text als `geheim/datenschutz.html` neben die `docker-compose.yml` legen und `LOIPEN_DATENSCHUTZ_DATEI=/app/geheim/datenschutz.html` setzen. Ohne eigenen Text nimmt die Seite die eingebaute Vorlage.
+12. **Testadresse prüfen** auf Handy und PC: Standort, Karte, Impressum, Datenschutz, ein Abo anlegen und bestätigen, eine Testmeldung schicken.
 13. **UptimeRobot** (Monitor auf `https://<domain>/`) und **Healthchecks.io** (Ping-URL in die `.env`) anlegen.
 14. **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen (die Seite sperrt automatische Abrufe), Ergebnis in den Thread schreiben.
 
