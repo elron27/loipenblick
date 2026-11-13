@@ -1,0 +1,5 @@
+# robots.txt [ratschings.info]
+
+User-agent: *
+
+Sitemap: https://ratschings.info/sitemap_ratschings-info.xml

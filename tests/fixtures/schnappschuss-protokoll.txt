@@ -134,3 +134,26 @@ NICHT ERREICHBAR https://chmobilorg.mironet.ch: FEHLER <urlopen error [Errno -2]
 200   270526 tests/fixtures/recherche-2026-11-13/schweiz/goms/home.html https://www.goms.ch/
 200 https://www.loipen.ch/robots.txt
 200    53129 tests/fixtures/recherche-2026-11-13/schweiz/loipen-schweiz/home.html https://www.loipen.ch/
+# Lauf 2026-11-13 07:30 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://snow.myswitzerland.com/robots.txt
+200    41784 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/sitemap_de.xml https://snow.myswitzerland.com/sitemap_de.xml
+200 https://www.goms.ch/robots.txt
+200   202784 tests/fixtures/recherche-2026-11-13/schweiz/goms/wintersportbericht.html https://www.goms.ch/wintersportbericht
+200 https://www.davos.ch/robots.txt
+200   234201 tests/fixtures/recherche-2026-11-13/schweiz/davos/loipen-tracking.html https://www.davos.ch/aktivitaeten/schneesport/langlauf/loipen-tracking
+200 https://www.bergfex.at/robots.txt
+200   160637 tests/fixtures/recherche-2026-11-13/kaernten/bergfex/loipenberichte.html https://www.bergfex.at/kaernten/langlaufen/loipenberichte/
+200 https://www.nassfeld.at/robots.txt
+200   460171 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/alle-loipen.html https://www.nassfeld.at/de/Winter-World/Outdoor-Relax-World/Langlaufen/Alle-Loipen
+200 https://www.badkleinkirchheim.com/robots.txt
+404    90770 tests/fixtures/recherche-2026-11-13/kaernten/badkleinkirchheim/pisten-lifte.html https://www.badkleinkirchheim.com/de/skigebiet/pisten-lifte
+200 https://www.woerthersee.com/robots.txt
+200   359220 tests/fixtures/recherche-2026-11-13/kaernten/woerthersee/roemerloipe.html https://www.woerthersee.com/en/dc-new/detail/POI/langlaufloipe-roemerloipe-bad-kleinkirchheim
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/geoeffnete-loipen.html https://www.seiseralm.it/de/aktivurlaub/winterurlaub/langlaufen/geoeffnete-loipen.html
+403 https://www.val-gardena.com/robots.txt
+ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
+200 https://www.ratschings.info/robots.txt
+404   128823 tests/fixtures/recherche-2026-11-13/suedtirol/ratschings/langlauf.html https://www.ratschings.info/en/experiences/experience-winter/the-journey-is-the-destination.html
+404 https://tourism.api.opendatahub.com/robots.txt
+200    11044 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/loipe-detail.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887?language=de
