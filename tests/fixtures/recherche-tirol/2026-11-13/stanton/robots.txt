@@ -1,6 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /newsletter.php
-Disallow: /newsletter_return.php
-Disallow: /Creator
-Crawl-delay: 10
