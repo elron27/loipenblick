@@ -10,6 +10,7 @@ Ergebnis: Dateien unter den Zielpfaden und ein Protokoll in tests/fixtures/schna
 """
 
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -24,6 +25,18 @@ LISTE = ROOT / "scripts" / "schnappschuss.txt"
 PROTOKOLL = ROOT / "tests" / "fixtures" / "schnappschuss-protokoll.txt"
 UA = os.environ.get("LOIPEN_USER_AGENT") or "LoipenBot/0.1 (+https://github.com/elron27/loipenblick)"
 DELAY_S = 5
+# Oeffentliche Seiten enthalten oft eingebettete Browser-Schluessel (Google Maps, Outdooractive).
+# Sie werden vor dem Speichern ersetzt, damit test_b4_kein_secret_im_repository gruen bleibt.
+SCHLUESSEL = [
+    (re.compile(rb"AIza[0-9A-Za-z_-]{35}"), b"AIza-ENTFERNT"),
+    (re.compile(rb"key=[A-Z0-9]{8}-[A-Z0-9]{8}-[A-Z0-9]{8}"), b"key=ENTFERNT"),
+]
+
+
+def schluessel_ersetzen(inhalt: bytes) -> bytes:
+    for muster, ersatz in SCHLUESSEL:
+        inhalt = muster.sub(ersatz, inhalt)
+    return inhalt
 
 
 def holen(url: str) -> tuple[int, bytes]:
@@ -90,7 +103,7 @@ def main() -> int:
             continue
         datei = ROOT / ziel
         datei.parent.mkdir(parents=True, exist_ok=True)
-        datei.write_bytes(inhalt)
+        datei.write_bytes(schluessel_ersetzen(inhalt))
         zeilen.append(f"{status} {len(inhalt):>8} {ziel} {url}")
         print(zeilen[-1], flush=True)
     PROTOKOLL.parent.mkdir(parents=True, exist_ok=True)
