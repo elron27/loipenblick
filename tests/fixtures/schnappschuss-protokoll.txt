@@ -450,3 +450,9 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   337492 tests/fixtures/recherche-tirol/2026-11-13/wilderkaiser/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
 200 https://www.nassfeld.at/robots.txt
 200   471792 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/alle-loipen-p2.html https://www.nassfeld.at/de/Winter-World/Outdoor-Relax-World/Langlaufen/Alle-Loipen?page=2
+# Lauf 2026-11-13 23:05 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     7170 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_ausbau3.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15501,12711,19911,19821,19720,19700,7,179,102,19&start=2026-10-29T00:00&end=2026-11-11T00:00
+404 https://tools.nlw.at/robots.txt
+200  9260726 tests/fixtures/nassfeld-nlw/2026-11-13/wintersportbericht-nps.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-nps.pdf
+404      236 tests/fixtures/nassfeld-nlw/2026-11-13/robots.txt https://tools.nlw.at/robots.txt
