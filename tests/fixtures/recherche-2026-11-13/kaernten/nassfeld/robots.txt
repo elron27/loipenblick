@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.nassfeld.at/sitemap.site_26.xml
+Sitemap: https://www.nassfeld.at/sitemap.tosc_accommodation_de.xml
+Sitemap: https://www.nassfeld.at/sitemap.tosc_accommodation_en.xml
+Sitemap: https://www.nassfeld.at/sitemap.tosc_experience_de.xml
+Sitemap: https://www.nassfeld.at/sitemap.tosc_experience_en.xml
+Sitemap: https://www.nassfeld.at/sitemap.infrastructure.xml

@@ -65,3 +65,33 @@ ROBOTS-VERBOT https://tirol.mapservices.eu/nefos_app/api/gpx/imx_xR7kIE5LaSrqNTM
 # Lauf 2026-11-12 17:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 404 https://dataset.api.hub.geosphere.at/robots.txt
 200    60429 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_tirol.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=16,28,38,39,42,43,50,55,61,66,76,87,118,119,121,126,127,130,136,138,139,142,146,151,175,176,178,184,185,196,210,214,8806,8807,9016,9019,9105,9110,11401,11402,11410,11505,11506,11602,11603,11706,11800,11803,11804,11901,12015,12203,12215,12216,12351,12352,14302,14305,14308,14403,14513,14521,14602,14603,14621,14622,14631,14701,14802,14812,14822,14825,14833,14834,14912,15001,15002,15210,15344,17002,17003,17005,17102,17301,17315,17320,17701,17901,19505&start=2026-10-29T00:00&end=2026-11-11T00:00
+# Lauf 2026-11-13 07:22 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.suedtirol.info/robots.txt
+200   489374 tests/fixtures/recherche-2026-11-13/suedtirol/suedtirol-info/loipen.html https://www.suedtirol.info/de/erleben/winter/langlaufen/loipen
+404 https://tourism.api.opendatahub.com/robots.txt
+200    26788 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/api-root.json https://tourism.api.opendatahub.com/v1
+200    53588 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-langlauf.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=5&odhtagfilter=loipen&language=de
+200    36658 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/poi-type2.json https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=3&type=2
+200    52526 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/snowreport.json https://tourism.api.opendatahub.com/v1/Weather/SnowReport?lang=de
+200   898053 tests/fixtures/recherche-2026-11-13/suedtirol/opendatahub/odhtags-poi.json https://tourism.api.opendatahub.com/v1/ODHTag?validforentity=odhactivitypoi&pagesize=500
+200 https://www.seiseralm.it/robots.txt
+200   482222 tests/fixtures/recherche-2026-11-13/suedtirol/seiseralm/opentrails.html https://www.seiseralm.it/opentrails
+200 https://www.dolomitinordicski.com/robots.txt
+200   692318 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/home-de.html https://www.dolomitinordicski.com/de/home.html
+200   974877 tests/fixtures/recherche-2026-11-13/suedtirol/dolomitinordicski/alta-badia-open-tracks.html https://www.dolomitinordicski.com/en/regions/alta-badia/open-tracks/2.html
+404 https://www.kaernten.at/robots.txt
+200    88864 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/loipenberichte.html https://www.kaernten.at/service/wetter/loipenberichte/
+200   110507 tests/fixtures/recherche-2026-11-13/kaernten/kaernten-at/langlaufzentren.html https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufzentren/
+200 https://www.nassfeld.at/robots.txt
+200   442675 tests/fixtures/recherche-2026-11-13/kaernten/nassfeld/home.html https://www.nassfeld.at/de
+200 https://www.weissensee.com/robots.txt
+200   474155 tests/fixtures/recherche-2026-11-13/kaernten/weissensee/home.html https://www.weissensee.com/de
+200 https://snow.myswitzerland.com/robots.txt
+200   614057 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-65.html https://snow.myswitzerland.com/snow_reports/engadin-65
+200   117051 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/langis-glaubenberg-109.html https://snow.myswitzerland.com/snow_reports/langis-glaubenberg-109/
+200   301436 tests/fixtures/recherche-2026-11-13/schweiz/myswitzerland-snow/home.html https://snow.myswitzerland.com/
+200 https://engadin-skimarathon.ch/robots.txt
+404    18300 tests/fixtures/recherche-2026-11-13/schweiz/engadin-skimarathon/xc-skiing.html https://engadin-skimarathon.ch/en/news-services/xc-skiing-in-the-engadin
+200 https://www.graubuenden.ch/robots.txt
+200   247017 tests/fixtures/recherche-2026-11-13/schweiz/graubuenden/start-langlaufsaison.html https://www.graubuenden.ch/de/news/start-langlaufsaison
+NICHT ERREICHBAR https://chmobilorg.mironet.ch: FEHLER <urlopen error [Errno -2] Name or service not known>

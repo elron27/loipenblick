@@ -1,0 +1,2032 @@
+{"TotalResults":272,"TotalPages":55,"CurrentPage":1,"PreviousPage":null,"NextPage":"https://tourism.api.opendatahub.com/v1/ODHActivityPoi?pagesize=5&odhtagfilter=loipen&language=de&pagenumber=2","Seed":null,"Items":[{
+  "Id": "smgpoie4daf51734db74f8468b92d2114c6887",
+  "Self": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoie4daf51734db74f8468b92d2114c6887",
+  "Tags": [
+    {
+      "Id": "835EF4A6853F414DA9782607F01EEE48",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "activity",
+      "Name": "Activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/activity",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "classic and skating",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/classic and skating",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skiing",
+      "Name": "Cross-country skiing",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skiing",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skitrack",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skitrack",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "winter",
+      "Name": "Winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/winter",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    }
+  ],
+  "Type": null,
+  "AgeTo": null,
+  "Areas": [],
+  "SmgId": null,
+  "_Meta": {
+    "Id": "smgpoie4daf51734db74f8468b92d2114c6887",
+    "Type": "odhactivitypoi",
+    "Source": "lts",
+    "Reduced": true,
+    "LastUpdate": "2026-08-14T12:31:18.2609032+00:00",
+    "UpdateInfo": {
+      "Revision": 6,
+      "UpdatedBy": "lts.activities.import",
+      "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-03-22T16:32:02.3710532+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.bz.it/LTS/activity"
+        },
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-08-14T12:31:18.2609032+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity"
+        }
+      ]
+    }
+  },
+  "Active": true,
+  "AreaId": null,
+  "Detail": {
+    "de": {
+      "Title": "01 Gsiesertal Loipe ",
+      "Header": null,
+      "BaseText": null,
+      "Keywords": null,
+      "Language": "de",
+      "MetaDesc": null,
+      "AuthorTip": null,
+      "IntroText": null,
+      "MetaTitle": null,
+      "SubHeader": null,
+      "SafetyInfo": null,
+      "ParkingInfo": null,
+      "GetThereText": null,
+      "EquipmentInfo": null,
+      "AdditionalText": null,
+      "PublicTransportationInfo": null
+    }
+  },
+  "IsOpen": false,
+  "Number": "001",
+  "Source": "lts",
+  "TagIds": [
+    "835EF4A6853F414DA9782607F01EEE48",
+    "activity",
+    "classic and skating",
+    "crosscountry skiing",
+    "crosscountry skitrack",
+    "D544A6312F8A47CF80CC4DFF8833FE50",
+    "winter"
+  ],
+  "AgeFrom": null,
+  "AreaIds": null,
+  "GpsInfo": [
+    {
+      "Default": null,
+      "Gpstype": "startingpoint",
+      "Altitude": 1094.0,
+      "Geometry": null,
+      "Latitude": 46.75790023803711,
+      "Longitude": 12.107199668884277,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1094.0,
+      "Geometry": null,
+      "Latitude": 46.75790023803711,
+      "Longitude": 12.107199668884277,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "arrivalpoint",
+      "Altitude": 1187.0,
+      "Geometry": null,
+      "Latitude": 46.765899658203125,
+      "Longitude": 12.133500099182129,
+      "AltitudeUnitofMeasure": "m"
+    }
+  ],
+  "LTSTags": [
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Level": 1,
+      "LTSRID": "835EF4A6853F414DA9782607F01EEE48",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Klassisch und Skating"
+      }
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Level": 0,
+      "LTSRID": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Loipen"
+      }
+    }
+  ],
+  "Mapping": {
+    "lts": {
+      "rid": "E4DAF51734DB74F8468B92D2114C6887",
+      "isReadOnly": "False",
+      "hasCopyright": "False",
+      "specificNumberCode": "001"
+    }
+  },
+  "ODHTags": [
+    {
+      "Id": "activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/activity"
+    },
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating"
+    },
+    {
+      "Id": "langlaufen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/langlaufen"
+    },
+    {
+      "Id": "winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/winter"
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen"
+    },
+    {
+      "Id": "dolomiti nordic ski",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/dolomiti nordic ski"
+    },
+    {
+      "Id": "cross country skiing kronplatz",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/cross country skiing kronplatz"
+    },
+    {
+      "Id": "blau",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/blau"
+    }
+  ],
+  "PoiType": null,
+  "Ratings": null,
+  "SmgTags": [
+    "activity",
+    "klassisch und skating",
+    "langlaufen",
+    "winter",
+    "loipen",
+    "dolomiti nordic ski",
+    "cross country skiing kronplatz",
+    "blau"
+  ],
+  "SubType": null,
+  "CustomId": null,
+  "GpsTrack": null,
+  "OwnerRid": null,
+  "DishRates": null,
+  "FeetClimb": false,
+  "GpsPoints": {
+    "position": {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1094.0,
+      "Geometry": null,
+      "Latitude": 46.75790023803711,
+      "Longitude": 12.107199668884277,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "arrivalpoint": {
+      "Default": null,
+      "Gpstype": "arrivalpoint",
+      "Altitude": 1187.0,
+      "Geometry": null,
+      "Latitude": 46.765899658203125,
+      "Longitude": 12.133500099182129,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "startingpoint": {
+      "Default": null,
+      "Gpstype": "startingpoint",
+      "Altitude": 1094.0,
+      "Geometry": null,
+      "Latitude": 46.75790023803711,
+      "Longitude": 12.107199668884277,
+      "AltitudeUnitofMeasure": "m"
+    }
+  },
+  "Highlight": false,
+  "OdhActive": true,
+  "Shortname": "01 Gsiesertal Loipe ",
+  "SmgActive": true,
+  "WayNumber": null,
+  "Difficulty": null,
+  "DistrictId": "79CBD7F851C911D18F1400A02427D15E",
+  "Exposition": null,
+  "Facilities": null,
+  "HasRentals": true,
+  "IsPrepared": false,
+  "LastChange": "2026-08-14T12:31:18.2631224+00:00",
+  "VideoItems": {},
+  "ChildPoiIds": null,
+  "FirstImport": "2026-03-22T16:32:02.3710574+00:00",
+  "HasLanguage": [
+    "de",
+    "en",
+    "it"
+  ],
+  "IsWithLigth": false,
+  "LicenseInfo": {
+    "Author": "",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://www.lts.it"
+  },
+  "PoiProperty": {},
+  "PoiServices": null,
+  "PublishedOn": [],
+  "RunToValley": false,
+  "ContactInfos": {
+    "de": {
+      "Tax": null,
+      "Url": "https://www.gsieser-tal.com",
+      "Vat": null,
+      "Area": "Gsiesertal",
+      "City": null,
+      "Email": null,
+      "Region": null,
+      "Address": null,
+      "LogoUrl": null,
+      "Surname": null,
+      "ZipCode": null,
+      "Language": "de",
+      "Faxnumber": null,
+      "Givenname": null,
+      "NamePrefix": null,
+      "RegionCode": null,
+      "CompanyName": null,
+      "CountryCode": null,
+      "CountryName": "Italien",
+      "Phonenumber": null
+    }
+  },
+  "DistanceInfo": {
+    "DistanceToDistrict": 178.0,
+    "DistanceToMunicipality": 207.0
+  },
+  "ImageGallery": [],
+  "LocationInfo": {
+    "TvInfo": {
+      "Id": "522822F951CA11D18F1400A02427D15E",
+      "Name": {
+        "de": "Gsiesertal - Welsberg - Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/TourismAssociation/522822F951CA11D18F1400A02427D15E"
+    },
+    "AreaInfo": null,
+    "RegionInfo": {
+      "Id": null,
+      "Name": {},
+      "Self": null
+    },
+    "DistrictInfo": {
+      "Id": "79CBD7F851C911D18F1400A02427D15E",
+      "Name": {
+        "de": "Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/District/79CBD7F851C911D18F1400A02427D15E"
+    },
+    "MunicipalityInfo": {
+      "Id": "CCD5827195AD4CA98B17D837EAAA4723",
+      "Name": {
+        "de": "Welsberg-Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Municipality/CCD5827195AD4CA98B17D837EAAA4723"
+    }
+  },
+  "MasterPoiIds": null,
+  "AltitudeSumUp": null,
+  "BikeTransport": false,
+  "CategoryCodes": null,
+  "LiftAvailable": false,
+  "DistanceLength": null,
+  "RelatedContent": null,
+  "SyncUpdateMode": "full",
+  "AltitudeSumDown": null,
+  "HasFreeEntrance": null,
+  "OutdooractiveID": null,
+  "CapacityCeremony": null,
+  "CopyrightChecked": false,
+  "DistanceDuration": null,
+  "AdditionalContact": null,
+  "OperationSchedule": null,
+  "AdditionalPoiInfos": {
+    "de": {
+      "Novelty": null,
+      "PoiType": null,
+      "SubType": null,
+      "Language": "de",
+      "MainType": null,
+      "Categories": [
+        "Langlaufen",
+        "Loipen"
+      ]
+    }
+  },
+  "AltitudeDifference": null,
+  "MaxSeatingCapacity": null,
+  "AltitudeLowestPoint": null,
+  "ODHActivityPoiTypes": [],
+  "SyncSourceInterface": "activitydata",
+  "AdditionalProperties": {
+    "PoiAgeDataProperties": {
+      "AgeTo": null,
+      "AgeFrom": null
+    },
+    "ActivityLtsDataProperties": {
+      "IsOpen": false,
+      "Number": "001",
+      "Ratings": null,
+      "LiftType": null,
+      "FeetClimb": false,
+      "WayNumber": null,
+      "Exposition": null,
+      "HasRentals": true,
+      "IsPrepared": false,
+      "IsWithLigth": false,
+      "RunToValley": false,
+      "AltitudeSumUp": null,
+      "BikeTransport": false,
+      "LiftAvailable": false,
+      "DistanceLength": null,
+      "AltitudeSumDown": null,
+      "DistanceDuration": null,
+      "LiftCapacityType": null,
+      "AltitudeDifference": null,
+      "AltitudeLowestPoint": null,
+      "AltitudeHighestPoint": null,
+      "MountainBikePermitted": null
+    }
+  },
+  "AltitudeHighestPoint": null,
+  "TourismorganizationId": null,
+  "OutdooractiveElevationID": null
+},{
+  "Id": "smgpoicfc57664415ab9f1a99e017d7930da99",
+  "Self": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoicfc57664415ab9f1a99e017d7930da99",
+  "Tags": [
+    {
+      "Id": "835EF4A6853F414DA9782607F01EEE48",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "activity",
+      "Name": "Activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/activity",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "classic and skating",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/classic and skating",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skiing",
+      "Name": "Cross-country skiing",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skiing",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skitrack",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skitrack",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "winter",
+      "Name": "Winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/winter",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    }
+  ],
+  "Type": null,
+  "AgeTo": null,
+  "Areas": [],
+  "SmgId": null,
+  "_Meta": {
+    "Id": "smgpoicfc57664415ab9f1a99e017d7930da99",
+    "Type": "odhactivitypoi",
+    "Source": "lts",
+    "Reduced": true,
+    "LastUpdate": "2026-01-13T12:14:14.5765763+00:00",
+    "UpdateInfo": {
+      "UpdatedBy": "lts.activities.import",
+      "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-01-13T12:14:14.5765763+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity"
+        }
+      ]
+    }
+  },
+  "Active": true,
+  "AreaId": null,
+  "Detail": {
+    "de": {
+      "Title": "01  Nordic Arena  Fisloipe - Albert Sprint",
+      "Header": null,
+      "BaseText": null,
+      "Keywords": null,
+      "Language": "de",
+      "MetaDesc": null,
+      "AuthorTip": null,
+      "IntroText": null,
+      "MetaTitle": null,
+      "SubHeader": null,
+      "SafetyInfo": null,
+      "ParkingInfo": null,
+      "GetThereText": null,
+      "EquipmentInfo": null,
+      "AdditionalText": null,
+      "PublicTransportationInfo": null
+    }
+  },
+  "IsOpen": false,
+  "Number": "0",
+  "Source": "lts",
+  "TagIds": [
+    "835EF4A6853F414DA9782607F01EEE48",
+    "activity",
+    "classic and skating",
+    "crosscountry skiing",
+    "crosscountry skitrack",
+    "D544A6312F8A47CF80CC4DFF8833FE50",
+    "winter"
+  ],
+  "AgeFrom": null,
+  "AreaIds": null,
+  "GpsInfo": [
+    {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  ],
+  "LTSTags": [
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating",
+      "Level": 1,
+      "LTSRID": "835EF4A6853F414DA9782607F01EEE48",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Klassisch und Skating"
+      }
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen",
+      "Level": 0,
+      "LTSRID": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Loipen"
+      }
+    }
+  ],
+  "Mapping": {
+    "lts": {
+      "rid": "CFC57664415AB9F1A99E017D7930DA99",
+      "isReadOnly": "False",
+      "hasCopyright": "False",
+      "specificNumberCode": "0"
+    }
+  },
+  "ODHTags": [
+    {
+      "Id": "activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/activity"
+    },
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating"
+    },
+    {
+      "Id": "langlaufen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/langlaufen"
+    },
+    {
+      "Id": "winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/winter"
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen"
+    },
+    {
+      "Id": "schwarz",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/schwarz"
+    }
+  ],
+  "PoiType": null,
+  "Ratings": null,
+  "SmgTags": [
+    "activity",
+    "klassisch und skating",
+    "langlaufen",
+    "winter",
+    "loipen",
+    "schwarz"
+  ],
+  "SubType": null,
+  "CustomId": null,
+  "GpsTrack": null,
+  "OwnerRid": null,
+  "DishRates": null,
+  "FeetClimb": false,
+  "GpsPoints": {
+    "position": {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "startingandarrivalpoint": {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  },
+  "Highlight": false,
+  "OdhActive": true,
+  "Shortname": "01  Nordic Arena  Fisloipe - Albert Sprint",
+  "SmgActive": true,
+  "WayNumber": null,
+  "Difficulty": null,
+  "DistrictId": "79CBD73351C911D18F1400A02427D15E",
+  "Exposition": null,
+  "Facilities": null,
+  "HasRentals": false,
+  "IsPrepared": false,
+  "LastChange": "2026-01-13T12:14:14.5765778+00:00",
+  "VideoItems": {},
+  "ChildPoiIds": null,
+  "FirstImport": "2026-01-13T12:14:14.5765777+00:00",
+  "HasLanguage": [
+    "de",
+    "en",
+    "it"
+  ],
+  "IsWithLigth": false,
+  "LicenseInfo": {
+    "Author": "",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://www.lts.it"
+  },
+  "PoiProperty": {},
+  "PoiServices": null,
+  "PublishedOn": [],
+  "RunToValley": false,
+  "ContactInfos": {
+    "de": {
+      "Tax": null,
+      "Url": "http://www.toblach.info",
+      "Vat": null,
+      "Area": "Toblach",
+      "City": null,
+      "Email": null,
+      "Region": null,
+      "Address": null,
+      "LogoUrl": null,
+      "Surname": null,
+      "ZipCode": null,
+      "Language": "de",
+      "Faxnumber": null,
+      "Givenname": null,
+      "NamePrefix": null,
+      "RegionCode": null,
+      "CompanyName": null,
+      "CountryCode": null,
+      "CountryName": "Italien",
+      "Phonenumber": null
+    }
+  },
+  "DistanceInfo": {
+    "DistanceToDistrict": 1813.0,
+    "DistanceToMunicipality": 1813.0
+  },
+  "ImageGallery": [],
+  "LocationInfo": {
+    "TvInfo": {
+      "Id": "522822A751CA11D18F1400A02427D15E",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/TourismAssociation/522822A751CA11D18F1400A02427D15E"
+    },
+    "AreaInfo": null,
+    "RegionInfo": {
+      "Id": "D2633A1FC24E11D18F1B006097B8970B",
+      "Name": {
+        "de": "Dolomitenregion 3 Zinnen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Region/D2633A1FC24E11D18F1B006097B8970B"
+    },
+    "DistrictInfo": {
+      "Id": "79CBD73351C911D18F1400A02427D15E",
+      "Name": {
+        "de": "Wahlen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/District/79CBD73351C911D18F1400A02427D15E"
+    },
+    "MunicipalityInfo": {
+      "Id": "4F97133F32724CA599FEDAFED08C7773",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Municipality/4F97133F32724CA599FEDAFED08C7773"
+    }
+  },
+  "MasterPoiIds": null,
+  "AltitudeSumUp": null,
+  "BikeTransport": false,
+  "CategoryCodes": null,
+  "LiftAvailable": false,
+  "DistanceLength": null,
+  "RelatedContent": null,
+  "SyncUpdateMode": "full",
+  "AltitudeSumDown": null,
+  "HasFreeEntrance": null,
+  "OutdooractiveID": null,
+  "CapacityCeremony": null,
+  "CopyrightChecked": false,
+  "DistanceDuration": null,
+  "AdditionalContact": null,
+  "OperationSchedule": null,
+  "AdditionalPoiInfos": {
+    "de": {
+      "Novelty": null,
+      "PoiType": null,
+      "SubType": null,
+      "Language": "de",
+      "MainType": null,
+      "Categories": [
+        "Langlaufen",
+        "Loipen"
+      ]
+    }
+  },
+  "AltitudeDifference": null,
+  "MaxSeatingCapacity": null,
+  "AltitudeLowestPoint": null,
+  "ODHActivityPoiTypes": [],
+  "SyncSourceInterface": "activitydata",
+  "AdditionalProperties": {
+    "PoiAgeDataProperties": {
+      "AgeTo": null,
+      "AgeFrom": null
+    },
+    "ActivityLtsDataProperties": {
+      "IsOpen": false,
+      "Number": "0",
+      "Ratings": null,
+      "LiftType": null,
+      "FeetClimb": false,
+      "WayNumber": null,
+      "Exposition": null,
+      "HasRentals": false,
+      "IsPrepared": false,
+      "IsWithLigth": false,
+      "RunToValley": false,
+      "AltitudeSumUp": null,
+      "BikeTransport": false,
+      "LiftAvailable": false,
+      "DistanceLength": null,
+      "AltitudeSumDown": null,
+      "DistanceDuration": null,
+      "LiftCapacityType": null,
+      "AltitudeDifference": null,
+      "AltitudeLowestPoint": null,
+      "AltitudeHighestPoint": null,
+      "MountainBikePermitted": null
+    }
+  },
+  "AltitudeHighestPoint": null,
+  "TourismorganizationId": null,
+  "OutdooractiveElevationID": null
+},{
+  "Id": "smgpoifad01289740e1d2f58dc1aa29288bb33",
+  "Self": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoifad01289740e1d2f58dc1aa29288bb33",
+  "Tags": [
+    {
+      "Id": "835EF4A6853F414DA9782607F01EEE48",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "activity",
+      "Name": "Activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/activity",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "classic and skating",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/classic and skating",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skiing",
+      "Name": "Cross-country skiing",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skiing",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skitrack",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skitrack",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "winter",
+      "Name": "Winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/winter",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    }
+  ],
+  "Type": null,
+  "AgeTo": null,
+  "Areas": [],
+  "SmgId": null,
+  "_Meta": {
+    "Id": "smgpoifad01289740e1d2f58dc1aa29288bb33",
+    "Type": "odhactivitypoi",
+    "Source": "lts",
+    "Reduced": true,
+    "LastUpdate": "2026-03-27T23:16:21.5145909+00:00",
+    "UpdateInfo": {
+      "Revision": 5,
+      "UpdatedBy": "lts.activities.import",
+      "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-03-27T07:18:51.4027804+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.bz.it/LTS/activity"
+        },
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-03-27T23:16:21.5145909+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity"
+        }
+      ]
+    }
+  },
+  "Active": true,
+  "AreaId": null,
+  "Detail": {
+    "de": {
+      "Title": "01 Toblacher Nachtloipe ",
+      "Header": null,
+      "BaseText": null,
+      "Keywords": null,
+      "Language": "de",
+      "MetaDesc": null,
+      "AuthorTip": null,
+      "IntroText": null,
+      "MetaTitle": null,
+      "SubHeader": null,
+      "SafetyInfo": null,
+      "ParkingInfo": null,
+      "GetThereText": null,
+      "EquipmentInfo": null,
+      "AdditionalText": null,
+      "PublicTransportationInfo": null
+    }
+  },
+  "IsOpen": false,
+  "Number": "0",
+  "Source": "lts",
+  "TagIds": [
+    "835EF4A6853F414DA9782607F01EEE48",
+    "activity",
+    "classic and skating",
+    "crosscountry skiing",
+    "crosscountry skitrack",
+    "D544A6312F8A47CF80CC4DFF8833FE50",
+    "winter"
+  ],
+  "AgeFrom": null,
+  "AreaIds": null,
+  "GpsInfo": [
+    {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  ],
+  "LTSTags": [
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Level": 1,
+      "LTSRID": "835EF4A6853F414DA9782607F01EEE48",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Klassisch und Skating"
+      }
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Level": 0,
+      "LTSRID": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Loipen"
+      }
+    }
+  ],
+  "Mapping": {
+    "lts": {
+      "rid": "FAD01289740E1D2F58DC1AA29288BB33",
+      "isReadOnly": "False",
+      "hasCopyright": "False",
+      "specificNumberCode": "0"
+    }
+  },
+  "ODHTags": [
+    {
+      "Id": "activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/activity"
+    },
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating"
+    },
+    {
+      "Id": "langlaufen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/langlaufen"
+    },
+    {
+      "Id": "winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/winter"
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen"
+    },
+    {
+      "Id": "blau",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/blau"
+    }
+  ],
+  "PoiType": null,
+  "Ratings": null,
+  "SmgTags": [
+    "activity",
+    "klassisch und skating",
+    "langlaufen",
+    "winter",
+    "loipen",
+    "blau"
+  ],
+  "SubType": null,
+  "CustomId": null,
+  "GpsTrack": null,
+  "OwnerRid": null,
+  "DishRates": null,
+  "FeetClimb": false,
+  "GpsPoints": {
+    "position": {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "startingandarrivalpoint": {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  },
+  "Highlight": false,
+  "OdhActive": true,
+  "Shortname": "01 Toblacher Nachtloipe ",
+  "SmgActive": true,
+  "WayNumber": null,
+  "Difficulty": null,
+  "DistrictId": "79CBD73351C911D18F1400A02427D15E",
+  "Exposition": null,
+  "Facilities": null,
+  "HasRentals": false,
+  "IsPrepared": false,
+  "LastChange": "2026-03-27T07:18:51.4038384+00:00",
+  "VideoItems": {},
+  "ChildPoiIds": null,
+  "FirstImport": "2026-03-20T11:56:42.625244+00:00",
+  "HasLanguage": [
+    "de",
+    "en",
+    "it"
+  ],
+  "IsWithLigth": true,
+  "LicenseInfo": {
+    "Author": "",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://www.lts.it"
+  },
+  "PoiProperty": {},
+  "PoiServices": null,
+  "PublishedOn": [],
+  "RunToValley": false,
+  "ContactInfos": {
+    "de": {
+      "Tax": null,
+      "Url": "http://www.toblach.info",
+      "Vat": null,
+      "Area": "Toblach",
+      "City": null,
+      "Email": null,
+      "Region": null,
+      "Address": null,
+      "LogoUrl": null,
+      "Surname": null,
+      "ZipCode": null,
+      "Language": "de",
+      "Faxnumber": null,
+      "Givenname": null,
+      "NamePrefix": null,
+      "RegionCode": null,
+      "CompanyName": null,
+      "CountryCode": null,
+      "CountryName": "Italien",
+      "Phonenumber": null
+    }
+  },
+  "DistanceInfo": {
+    "DistanceToDistrict": 1813.0,
+    "DistanceToMunicipality": 1813.0
+  },
+  "ImageGallery": [],
+  "LocationInfo": {
+    "TvInfo": {
+      "Id": "522822A751CA11D18F1400A02427D15E",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/TourismAssociation/522822A751CA11D18F1400A02427D15E"
+    },
+    "AreaInfo": null,
+    "RegionInfo": {
+      "Id": "D2633A1FC24E11D18F1B006097B8970B",
+      "Name": {
+        "de": "Dolomitenregion 3 Zinnen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Region/D2633A1FC24E11D18F1B006097B8970B"
+    },
+    "DistrictInfo": {
+      "Id": "79CBD73351C911D18F1400A02427D15E",
+      "Name": {
+        "de": "Wahlen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/District/79CBD73351C911D18F1400A02427D15E"
+    },
+    "MunicipalityInfo": {
+      "Id": "4F97133F32724CA599FEDAFED08C7773",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Municipality/4F97133F32724CA599FEDAFED08C7773"
+    }
+  },
+  "MasterPoiIds": null,
+  "AltitudeSumUp": null,
+  "BikeTransport": false,
+  "CategoryCodes": null,
+  "LiftAvailable": false,
+  "DistanceLength": null,
+  "RelatedContent": null,
+  "SyncUpdateMode": "full",
+  "AltitudeSumDown": null,
+  "HasFreeEntrance": null,
+  "OutdooractiveID": null,
+  "CapacityCeremony": null,
+  "CopyrightChecked": false,
+  "DistanceDuration": null,
+  "AdditionalContact": null,
+  "OperationSchedule": null,
+  "AdditionalPoiInfos": {
+    "de": {
+      "Novelty": null,
+      "PoiType": null,
+      "SubType": null,
+      "Language": "de",
+      "MainType": null,
+      "Categories": [
+        "Langlaufen",
+        "Loipen"
+      ]
+    }
+  },
+  "AltitudeDifference": null,
+  "MaxSeatingCapacity": null,
+  "AltitudeLowestPoint": null,
+  "ODHActivityPoiTypes": [],
+  "SyncSourceInterface": "activitydata",
+  "AdditionalProperties": {
+    "PoiAgeDataProperties": {
+      "AgeTo": null,
+      "AgeFrom": null
+    },
+    "ActivityLtsDataProperties": {
+      "IsOpen": false,
+      "Number": "0",
+      "Ratings": null,
+      "LiftType": null,
+      "FeetClimb": false,
+      "WayNumber": null,
+      "Exposition": null,
+      "HasRentals": false,
+      "IsPrepared": false,
+      "IsWithLigth": true,
+      "RunToValley": false,
+      "AltitudeSumUp": null,
+      "BikeTransport": false,
+      "LiftAvailable": false,
+      "DistanceLength": null,
+      "AltitudeSumDown": null,
+      "DistanceDuration": null,
+      "LiftCapacityType": null,
+      "AltitudeDifference": null,
+      "AltitudeLowestPoint": null,
+      "AltitudeHighestPoint": null,
+      "MountainBikePermitted": null
+    }
+  },
+  "AltitudeHighestPoint": null,
+  "TourismorganizationId": null,
+  "OutdooractiveElevationID": null
+},{
+  "Id": "smgpoi01cfeff8da586e548327e539276c42f3",
+  "Self": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoi01cfeff8da586e548327e539276c42f3",
+  "Tags": [
+    {
+      "Id": "835EF4A6853F414DA9782607F01EEE48",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "activity",
+      "Name": "Activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/activity",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "classic and skating",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/classic and skating",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skiing",
+      "Name": "Cross-country skiing",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skiing",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skitrack",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skitrack",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "winter",
+      "Name": "Winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/winter",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    }
+  ],
+  "Type": null,
+  "AgeTo": null,
+  "Areas": [],
+  "SmgId": null,
+  "_Meta": {
+    "Id": "smgpoi01cfeff8da586e548327e539276c42f3",
+    "Type": "odhactivitypoi",
+    "Source": "lts",
+    "Reduced": true,
+    "LastUpdate": "2026-04-07T23:25:46.8086611+00:00",
+    "UpdateInfo": {
+      "Revision": 2,
+      "UpdatedBy": "lts.activities.import",
+      "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "lts.push.import",
+          "LastUpdate": "2025-08-29T02:02:48.9127992+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.bz.it/Raven/odhactivitypoi"
+        },
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-04-07T09:13:21.5899033+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.bz.it/LTS/activity"
+        },
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-04-07T23:25:46.8086611+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity"
+        }
+      ]
+    }
+  },
+  "Active": true,
+  "AreaId": null,
+  "Detail": {
+    "de": {
+      "Title": "01 Toblacher Stadionrunde",
+      "Header": null,
+      "BaseText": null,
+      "Keywords": null,
+      "Language": "de",
+      "MetaDesc": null,
+      "AuthorTip": null,
+      "IntroText": null,
+      "MetaTitle": null,
+      "SubHeader": null,
+      "SafetyInfo": null,
+      "ParkingInfo": null,
+      "GetThereText": null,
+      "EquipmentInfo": null,
+      "AdditionalText": null,
+      "PublicTransportationInfo": null
+    }
+  },
+  "IsOpen": false,
+  "Number": "0",
+  "Source": "lts",
+  "TagIds": [
+    "835EF4A6853F414DA9782607F01EEE48",
+    "activity",
+    "classic and skating",
+    "crosscountry skiing",
+    "crosscountry skitrack",
+    "D544A6312F8A47CF80CC4DFF8833FE50",
+    "winter"
+  ],
+  "AgeFrom": null,
+  "AreaIds": null,
+  "GpsInfo": [
+    {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  ],
+  "LTSTags": [
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Level": 1,
+      "LTSRID": "835EF4A6853F414DA9782607F01EEE48",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Klassisch und Skating"
+      }
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Level": 0,
+      "LTSRID": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Loipen"
+      }
+    }
+  ],
+  "Mapping": {
+    "lts": {
+      "rid": "01CFEFF8DA586E548327E539276C42F3",
+      "isReadOnly": "False",
+      "hasCopyright": "False",
+      "specificNumberCode": "0"
+    }
+  },
+  "ODHTags": [
+    {
+      "Id": "activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/activity"
+    },
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating"
+    },
+    {
+      "Id": "langlaufen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/langlaufen"
+    },
+    {
+      "Id": "winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/winter"
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen"
+    },
+    {
+      "Id": "dolomiti nordic ski",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/dolomiti nordic ski"
+    },
+    {
+      "Id": "blau",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/blau"
+    }
+  ],
+  "PoiType": null,
+  "Ratings": null,
+  "SmgTags": [
+    "activity",
+    "klassisch und skating",
+    "langlaufen",
+    "winter",
+    "loipen",
+    "dolomiti nordic ski",
+    "blau"
+  ],
+  "SubType": null,
+  "CustomId": null,
+  "GpsTrack": null,
+  "OwnerRid": null,
+  "DishRates": null,
+  "FeetClimb": false,
+  "GpsPoints": {
+    "position": {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "startingandarrivalpoint": {
+      "Default": null,
+      "Gpstype": "startingandarrivalpoint",
+      "Altitude": 1215.0,
+      "Geometry": null,
+      "Latitude": 46.71879959106445,
+      "Longitude": 12.223699569702148,
+      "AltitudeUnitofMeasure": "m"
+    }
+  },
+  "Highlight": false,
+  "OdhActive": true,
+  "Shortname": "01 Toblacher Stadionrunde",
+  "SmgActive": true,
+  "WayNumber": null,
+  "Difficulty": null,
+  "DistrictId": "79CBD73351C911D18F1400A02427D15E",
+  "Exposition": null,
+  "Facilities": null,
+  "HasRentals": false,
+  "IsPrepared": false,
+  "LastChange": "2026-04-07T09:13:21.5909365+00:00",
+  "VideoItems": {},
+  "ChildPoiIds": null,
+  "FirstImport": "2019-07-19T16:29:31.9855018",
+  "HasLanguage": [
+    "de",
+    "en",
+    "it"
+  ],
+  "IsWithLigth": false,
+  "LicenseInfo": {
+    "Author": "",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://www.lts.it"
+  },
+  "PoiProperty": {},
+  "PoiServices": null,
+  "PublishedOn": [],
+  "RunToValley": false,
+  "ContactInfos": {
+    "de": {
+      "Tax": null,
+      "Url": "http://www.toblach.info",
+      "Vat": null,
+      "Area": "Toblach",
+      "City": null,
+      "Email": null,
+      "Region": null,
+      "Address": null,
+      "LogoUrl": null,
+      "Surname": null,
+      "ZipCode": null,
+      "Language": "de",
+      "Faxnumber": null,
+      "Givenname": null,
+      "NamePrefix": null,
+      "RegionCode": null,
+      "CompanyName": null,
+      "CountryCode": null,
+      "CountryName": "Italien",
+      "Phonenumber": null
+    }
+  },
+  "DistanceInfo": {
+    "DistanceToDistrict": 1813.0,
+    "DistanceToMunicipality": 1813.0
+  },
+  "ImageGallery": [],
+  "LocationInfo": {
+    "TvInfo": {
+      "Id": "522822A751CA11D18F1400A02427D15E",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/TourismAssociation/522822A751CA11D18F1400A02427D15E"
+    },
+    "AreaInfo": null,
+    "RegionInfo": {
+      "Id": "D2633A1FC24E11D18F1B006097B8970B",
+      "Name": {
+        "de": "Dolomitenregion 3 Zinnen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Region/D2633A1FC24E11D18F1B006097B8970B"
+    },
+    "DistrictInfo": {
+      "Id": "79CBD73351C911D18F1400A02427D15E",
+      "Name": {
+        "de": "Wahlen"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/District/79CBD73351C911D18F1400A02427D15E"
+    },
+    "MunicipalityInfo": {
+      "Id": "4F97133F32724CA599FEDAFED08C7773",
+      "Name": {
+        "de": "Toblach"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Municipality/4F97133F32724CA599FEDAFED08C7773"
+    }
+  },
+  "MasterPoiIds": null,
+  "AltitudeSumUp": null,
+  "BikeTransport": false,
+  "CategoryCodes": null,
+  "LiftAvailable": false,
+  "DistanceLength": null,
+  "RelatedContent": null,
+  "SyncUpdateMode": "full",
+  "AltitudeSumDown": null,
+  "HasFreeEntrance": null,
+  "OutdooractiveID": null,
+  "CapacityCeremony": null,
+  "CopyrightChecked": false,
+  "DistanceDuration": null,
+  "AdditionalContact": null,
+  "OperationSchedule": null,
+  "AdditionalPoiInfos": {
+    "de": {
+      "Novelty": null,
+      "PoiType": null,
+      "SubType": null,
+      "Language": "de",
+      "MainType": null,
+      "Categories": [
+        "Langlaufen",
+        "Loipen"
+      ]
+    }
+  },
+  "AltitudeDifference": null,
+  "MaxSeatingCapacity": null,
+  "AltitudeLowestPoint": null,
+  "ODHActivityPoiTypes": [],
+  "SyncSourceInterface": "activitydata",
+  "AdditionalProperties": {
+    "PoiAgeDataProperties": {
+      "AgeTo": null,
+      "AgeFrom": null
+    },
+    "ActivityLtsDataProperties": {
+      "IsOpen": false,
+      "Number": "0",
+      "Ratings": null,
+      "LiftType": null,
+      "FeetClimb": false,
+      "WayNumber": null,
+      "Exposition": null,
+      "HasRentals": false,
+      "IsPrepared": false,
+      "IsWithLigth": false,
+      "RunToValley": false,
+      "AltitudeSumUp": null,
+      "BikeTransport": false,
+      "LiftAvailable": false,
+      "DistanceLength": null,
+      "AltitudeSumDown": null,
+      "DistanceDuration": null,
+      "LiftCapacityType": null,
+      "AltitudeDifference": null,
+      "AltitudeLowestPoint": null,
+      "AltitudeHighestPoint": null,
+      "MountainBikePermitted": null
+    }
+  },
+  "AltitudeHighestPoint": null,
+  "TourismorganizationId": null,
+  "OutdooractiveElevationID": null
+},{
+  "Id": "smgpoi1c5031ebc6375bdbb721ae4c21d12c17",
+  "Self": "https://tourism.api.opendatahub.com/v1/ODHActivityPoi/smgpoi1c5031ebc6375bdbb721ae4c21d12c17",
+  "Tags": [
+    {
+      "Id": "835EF4A6853F414DA9782607F01EEE48",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "activity",
+      "Name": "Activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/activity",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "classic and skating",
+      "Name": "Classic and skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/classic and skating",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skiing",
+      "Name": "Cross-country skiing",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skiing",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "crosscountry skitrack",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/crosscountry skitrack",
+      "Type": "ltscategory",
+      "Source": "idm",
+      "TagEntry": null
+    },
+    {
+      "Id": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "Name": "Cross-country ski-track",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Type": "tagsactivity",
+      "Source": "lts",
+      "TagEntry": null
+    },
+    {
+      "Id": "winter",
+      "Name": "Winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/winter",
+      "Type": "odhcategory",
+      "Source": "idm",
+      "TagEntry": null
+    }
+  ],
+  "Type": null,
+  "AgeTo": null,
+  "Areas": [],
+  "SmgId": null,
+  "_Meta": {
+    "Id": "smgpoi1c5031ebc6375bdbb721ae4c21d12c17",
+    "Type": "odhactivitypoi",
+    "Source": "lts",
+    "Reduced": true,
+    "LastUpdate": "2026-03-23T23:16:44.8765103+00:00",
+    "UpdateInfo": {
+      "Revision": 5,
+      "UpdatedBy": "lts.activities.import",
+      "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity",
+      "UpdateHistory": [
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-03-22T16:31:28.3548288+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.bz.it/LTS/activity"
+        },
+        {
+          "UpdatedBy": "lts.activities.import",
+          "LastUpdate": "2026-03-23T23:16:44.8765103+00:00",
+          "UpdateSource": "http://tourism.importer.opendatahub.com/LTS/Activity"
+        }
+      ]
+    }
+  },
+  "Active": true,
+  "AreaId": null,
+  "Detail": {
+    "de": {
+      "Title": "02 Anbindung Taisten – Gsiesertal Loipe",
+      "Header": null,
+      "BaseText": null,
+      "Keywords": null,
+      "Language": "de",
+      "MetaDesc": null,
+      "AuthorTip": null,
+      "IntroText": null,
+      "MetaTitle": null,
+      "SubHeader": null,
+      "SafetyInfo": null,
+      "ParkingInfo": null,
+      "GetThereText": null,
+      "EquipmentInfo": null,
+      "AdditionalText": null,
+      "PublicTransportationInfo": null
+    }
+  },
+  "IsOpen": false,
+  "Number": "4",
+  "Source": "lts",
+  "TagIds": [
+    "835EF4A6853F414DA9782607F01EEE48",
+    "activity",
+    "classic and skating",
+    "crosscountry skiing",
+    "crosscountry skitrack",
+    "D544A6312F8A47CF80CC4DFF8833FE50",
+    "winter"
+  ],
+  "AgeFrom": null,
+  "AreaIds": null,
+  "GpsInfo": [
+    {
+      "Default": null,
+      "Gpstype": "arrivalpoint",
+      "Altitude": 1187.0,
+      "Geometry": null,
+      "Latitude": 46.76620101928711,
+      "Longitude": 12.133999824523926,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "startingpoint",
+      "Altitude": 1205.0,
+      "Geometry": null,
+      "Latitude": 46.76919937133789,
+      "Longitude": 12.11620044708252,
+      "AltitudeUnitofMeasure": "m"
+    },
+    {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1205.0,
+      "Geometry": null,
+      "Latitude": 46.76919937133789,
+      "Longitude": 12.11620044708252,
+      "AltitudeUnitofMeasure": "m"
+    }
+  ],
+  "LTSTags": [
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/835EF4A6853F414DA9782607F01EEE48",
+      "Level": 1,
+      "LTSRID": "835EF4A6853F414DA9782607F01EEE48",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Klassisch und Skating"
+      }
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/Tag/D544A6312F8A47CF80CC4DFF8833FE50",
+      "Level": 0,
+      "LTSRID": "D544A6312F8A47CF80CC4DFF8833FE50",
+      "LTSTins": [],
+      "TagName": {
+        "de": "Loipen"
+      }
+    }
+  ],
+  "Mapping": {
+    "lts": {
+      "rid": "1C5031EBC6375BDBB721AE4C21D12C17",
+      "isReadOnly": "False",
+      "hasCopyright": "False",
+      "specificNumberCode": "4"
+    }
+  },
+  "ODHTags": [
+    {
+      "Id": "activity",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/activity"
+    },
+    {
+      "Id": "klassisch und skating",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/klassisch und skating"
+    },
+    {
+      "Id": "langlaufen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/langlaufen"
+    },
+    {
+      "Id": "winter",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/winter"
+    },
+    {
+      "Id": "loipen",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/loipen"
+    },
+    {
+      "Id": "dolomiti nordic ski",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/dolomiti nordic ski"
+    },
+    {
+      "Id": "cross country skiing kronplatz",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/cross country skiing kronplatz"
+    },
+    {
+      "Id": "blau",
+      "Self": "https://tourism.api.opendatahub.com/v1/ODHTag/blau"
+    }
+  ],
+  "PoiType": null,
+  "Ratings": null,
+  "SmgTags": [
+    "activity",
+    "klassisch und skating",
+    "langlaufen",
+    "winter",
+    "loipen",
+    "dolomiti nordic ski",
+    "cross country skiing kronplatz",
+    "blau"
+  ],
+  "SubType": null,
+  "CustomId": null,
+  "GpsTrack": null,
+  "OwnerRid": null,
+  "DishRates": null,
+  "FeetClimb": false,
+  "GpsPoints": {
+    "position": {
+      "Default": null,
+      "Gpstype": "position",
+      "Altitude": 1205.0,
+      "Geometry": null,
+      "Latitude": 46.76919937133789,
+      "Longitude": 12.11620044708252,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "arrivalpoint": {
+      "Default": null,
+      "Gpstype": "arrivalpoint",
+      "Altitude": 1187.0,
+      "Geometry": null,
+      "Latitude": 46.76620101928711,
+      "Longitude": 12.133999824523926,
+      "AltitudeUnitofMeasure": "m"
+    },
+    "startingpoint": {
+      "Default": null,
+      "Gpstype": "startingpoint",
+      "Altitude": 1205.0,
+      "Geometry": null,
+      "Latitude": 46.76919937133789,
+      "Longitude": 12.11620044708252,
+      "AltitudeUnitofMeasure": "m"
+    }
+  },
+  "Highlight": false,
+  "OdhActive": true,
+  "Shortname": "02 Anbindung Taisten – Gsiesertal Loipe",
+  "SmgActive": true,
+  "WayNumber": null,
+  "Difficulty": null,
+  "DistrictId": "79CBD7F851C911D18F1400A02427D15E",
+  "Exposition": null,
+  "Facilities": null,
+  "HasRentals": true,
+  "IsPrepared": false,
+  "LastChange": "2026-03-09T17:21:41.9836769+00:00",
+  "VideoItems": {},
+  "ChildPoiIds": null,
+  "FirstImport": "2025-10-27T14:58:42.5697704+00:00",
+  "HasLanguage": [
+    "de",
+    "en",
+    "it"
+  ],
+  "IsWithLigth": false,
+  "LicenseInfo": {
+    "Author": "",
+    "License": "CC0",
+    "ClosedData": false,
+    "LicenseHolder": "https://www.lts.it"
+  },
+  "PoiProperty": {},
+  "PoiServices": null,
+  "PublishedOn": [],
+  "RunToValley": false,
+  "ContactInfos": {
+    "de": {
+      "Tax": null,
+      "Url": "https://www.gsieser-tal.com",
+      "Vat": null,
+      "Area": "Taisten",
+      "City": null,
+      "Email": null,
+      "Region": null,
+      "Address": null,
+      "LogoUrl": null,
+      "Surname": null,
+      "ZipCode": null,
+      "Language": "de",
+      "Faxnumber": null,
+      "Givenname": null,
+      "NamePrefix": null,
+      "RegionCode": null,
+      "CompanyName": null,
+      "CountryCode": null,
+      "CountryName": "Italien",
+      "Phonenumber": null
+    }
+  },
+  "DistanceInfo": {
+    "DistanceToDistrict": 1278.0,
+    "DistanceToMunicipality": 1631.0
+  },
+  "ImageGallery": [],
+  "LocationInfo": {
+    "TvInfo": {
+      "Id": "522822F951CA11D18F1400A02427D15E",
+      "Name": {
+        "de": "Gsiesertal - Welsberg - Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/TourismAssociation/522822F951CA11D18F1400A02427D15E"
+    },
+    "AreaInfo": null,
+    "RegionInfo": {
+      "Id": null,
+      "Name": {},
+      "Self": null
+    },
+    "DistrictInfo": {
+      "Id": "79CBD7F851C911D18F1400A02427D15E",
+      "Name": {
+        "de": "Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/District/79CBD7F851C911D18F1400A02427D15E"
+    },
+    "MunicipalityInfo": {
+      "Id": "CCD5827195AD4CA98B17D837EAAA4723",
+      "Name": {
+        "de": "Welsberg-Taisten"
+      },
+      "Self": "https://tourism.api.opendatahub.com/v1/Municipality/CCD5827195AD4CA98B17D837EAAA4723"
+    }
+  },
+  "MasterPoiIds": null,
+  "AltitudeSumUp": null,
+  "BikeTransport": false,
+  "CategoryCodes": null,
+  "LiftAvailable": false,
+  "DistanceLength": null,
+  "RelatedContent": null,
+  "SyncUpdateMode": "full",
+  "AltitudeSumDown": null,
+  "HasFreeEntrance": null,
+  "OutdooractiveID": null,
+  "CapacityCeremony": null,
+  "CopyrightChecked": false,
+  "DistanceDuration": null,
+  "AdditionalContact": null,
+  "OperationSchedule": null,
+  "AdditionalPoiInfos": {
+    "de": {
+      "Novelty": null,
+      "PoiType": null,
+      "SubType": null,
+      "Language": "de",
+      "MainType": null,
+      "Categories": [
+        "Langlaufen",
+        "Loipen"
+      ]
+    }
+  },
+  "AltitudeDifference": null,
+  "MaxSeatingCapacity": null,
+  "AltitudeLowestPoint": null,
+  "ODHActivityPoiTypes": [],
+  "SyncSourceInterface": "activitydata",
+  "AdditionalProperties": {
+    "PoiAgeDataProperties": {
+      "AgeTo": null,
+      "AgeFrom": null
+    },
+    "ActivityLtsDataProperties": {
+      "IsOpen": false,
+      "Number": "4",
+      "Ratings": null,
+      "LiftType": null,
+      "FeetClimb": false,
+      "WayNumber": null,
+      "Exposition": null,
+      "HasRentals": true,
+      "IsPrepared": false,
+      "IsWithLigth": false,
+      "RunToValley": false,
+      "AltitudeSumUp": null,
+      "BikeTransport": false,
+      "LiftAvailable": false,
+      "DistanceLength": null,
+      "AltitudeSumDown": null,
+      "DistanceDuration": null,
+      "LiftCapacityType": null,
+      "AltitudeDifference": null,
+      "AltitudeLowestPoint": null,
+      "AltitudeHighestPoint": null,
+      "MountainBikePermitted": null
+    }
+  },
+  "AltitudeHighestPoint": null,
+  "TourismorganizationId": null,
+  "OutdooractiveElevationID": null
+}]}
