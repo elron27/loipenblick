@@ -156,6 +156,7 @@ def test_alle_abrufe_mit_user_agent_und_robots():
 @pytest.mark.req("N1")
 @pytest.mark.req("N4", ak=1)
 @pytest.mark.req("B2", ak=1)
+@pytest.mark.req("B26", ak=[2, 3])
 def test_push_bei_oeffnung_und_bei_ausfall_einer_quelle():
     vorher = len(ntfy_nachrichten())
     steuere(offen="1", ausfall="bayrischzell")
@@ -163,7 +164,12 @@ def test_push_bei_oeffnung_und_bei_ausfall_einer_quelle():
     neu = ntfy_nachrichten()[vorher:]
     texte = [f"{m.get('title')}: {m.get('message')}" for m in neu]
     assert any("Ringseeloipe" in t and "befahrbar" in t for t in texte), texte
-    assert any("Quelle bayrischzell meldet fehler" in t for t in texte), texte
+    # B26: ein einzelner Ausfall bleibt still, erst der zweite in Folge loest den Quellen-Waechter aus
+    assert not any("Quellen-Wächter" in t for t in texte), texte
+    vorher = len(ntfy_nachrichten())
+    worker("lauf")
+    texte += [f"{m.get('title')}: {m.get('message')}" for m in ntfy_nachrichten()[vorher:]]
+    assert any("Quellen-Wächter" in t and "Abruf schlägt fehl" in t for t in texte), texte
     # nur das Abo auf Kreuth meldet sich: keine Loipe aus einem anderen Gebiet in der Nachricht
     assert not any("Golfplatzrunde" in t for t in texte), texte
     index = http_json(f"{VORSCHAU}/daten.json")
@@ -174,7 +180,7 @@ def test_push_bei_oeffnung_und_bei_ausfall_einer_quelle():
     steuere()  # Quelle wieder da, Loipen wieder zu
     worker("lauf")
     texte = [f"{m.get('title')}: {m.get('message')}" for m in ntfy_nachrichten()[vorher:]]
-    assert any("Quelle bayrischzell läuft wieder" in t for t in texte), texte
+    assert any("Quellen-Wächter" in t and "läuft wieder" in t for t in texte), texte
     assert any("geschlossen" in t for t in texte), texte
 
 

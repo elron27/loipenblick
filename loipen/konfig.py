@@ -126,6 +126,7 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
             park.koordinate_geschaetzt = bool(p.get("koordinate_geschaetzt", False))
 
     standard_zeitplan = sources.get("zeitplan", {})
+    standard_waechter = sources.get("waechter", {})
     for q in sources.get("quellen", []):
         quelle = _get_or_new(session, Quelle, key=q["key"])
         quelle.adapter = q["adapter"]
@@ -133,6 +134,8 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         quelle.base_url = q["base_url"].rstrip("/")
         config = dict(q.get("config", {}))
         config["zeitplan"] = {**standard_zeitplan, **q.get("zeitplan", {})}
+        # B26: Schwellen des Quellen-Waechters, je Quelle ueberschreibbar
+        config["waechter"] = {**standard_waechter, **(q.get("waechter") or {})}
         # D15: Rang der Quelle bei Dubletten (1 = fuehrend), Standard 10
         config["rang"] = int(q.get("rang", 10))
         # U36: warum Loipen dieser Quelle keinen Streckenverlauf haben (steht auf der Loipenseite)

@@ -103,7 +103,28 @@ class Quelle(Base):
     last_dauer_s: Mapped[float | None] = mapped_column(Float)
     last_error: Mapped[str | None] = mapped_column(Text)
 
+    # Quellen-Waechter (B26): laufender Alarm, seit wann, wann zuletzt gemeldet
+    waechter_alarm: Mapped[str | None] = mapped_column(String(16))
+    waechter_seit: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    waechter_gemeldet_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
     loipen: Mapped[list["Loipe"]] = relationship(back_populates="quelle")
+
+
+class Abrufprotokoll(Base):
+    """Ein Eintrag je Abruf einer Quelle (B26): Grundlage fuer den Waechter und spaeter fuer die
+    Zuverlaessigkeit der Quellen in der Statistik. befund ist leer, wenn der Abruf unauffaellig war."""
+
+    __tablename__ = "abrufprotokoll"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    quelle_id: Mapped[int] = mapped_column(ForeignKey("quellen.id"), index=True)
+    zeit: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    anzahl: Mapped[int] = mapped_column(Integer)
+    status: Mapped[str] = mapped_column(String(16))
+    befund: Mapped[str | None] = mapped_column(String(16))  # fehler, leer, einbruch
+    fehler: Mapped[str | None] = mapped_column(Text)
+    dauer_s: Mapped[float | None] = mapped_column(Float)
 
 
 gebiet_nachbarn = Table(

@@ -155,7 +155,8 @@ def ntfy_sender(thema_url: str | None, client: httpx.Client | None = None) -> Se
 # ---------- Betriebsmeldungen (B2) ----------
 
 def betriebsmeldung(quelle: str, vorher: str | None, jetzt: str | None, fehler: str | None) -> tuple[str, str] | None:
-    """Meldung nur beim Wechsel des Zustands einer Quelle, nicht bei jedem Lauf."""
+    """Meldung nur beim Wechsel des Zustands einer Quelle. Der Worker nutzt seit B26 den Quellen-Waechter
+    (loipen/waechter.py), der kurze Stoerungen abwartet und auch Einbrueche erkennt."""
     if vorher == jetzt:
         return None
     if jetzt in ("fehler", "warnung"):
