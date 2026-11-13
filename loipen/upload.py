@@ -35,7 +35,7 @@ STAND_DATEI = ".loipen-upload.json"
 # B24 AK 1: nur diese Dateiarten gehen auf den Server
 FREIGABE = {".html", ".css", ".js", ".json", ".png", ".svg", ".webmanifest", ".pmtiles", ".txt", ".ico"}
 FREIGABE_NAMEN = {".htaccess"}
-HASH_DATEI = re.compile(r"^(daten|strecken)/[^/]+\.[0-9a-f]{12}\.json$")
+HASH_DATEI = re.compile(r"^(daten|strecken|statistik)/[^/]+\.[0-9a-f]{12}\.json$")
 ZULETZT = ("daten.json", "sw.js", "index.html")  # Einstieg, in dieser Reihenfolge
 
 
@@ -78,7 +78,8 @@ def _sha(inhalt: bytes) -> str:
 
 
 def _verweise(index: dict) -> set[str]:
-    return {r[f] for r in index.get("regionen", []) for f in ("datei", "strecken") if r.get(f)}
+    return ({r[f] for r in index.get("regionen", []) for f in ("datei", "strecken") if r.get(f)}
+            | {v for v in (index.get("statistik") or {}).values() if v})
 
 
 def lade_hoch(site_dir: str | Path, ziel: Ziel) -> Ergebnis:

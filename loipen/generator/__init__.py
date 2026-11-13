@@ -24,6 +24,7 @@ from loipen.generator.daten import baue
 from loipen.generator.icons import png_icon
 from loipen.konfig import CONFIG_DIR
 from loipen.models import Quelle
+from loipen.statistik import baue_statistik, beispiel_statistik
 
 STATIC = Path(__file__).parent / "static"
 VORLAGEN = Path(__file__).parent / "vorlagen"
@@ -102,6 +103,13 @@ def erzeuge(
     index["kacheln"] = kacheln
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
 
+    # U19, U37-U39: Saisonstatistik und erfundener Beispielwinter, ebenfalls mit Inhalts-Hash
+    index["statistik"] = {}
+    for feld, inhalt in (("datei", _json(baue_statistik(session, daten, jetzt))),
+                         ("beispiel", _json(beispiel_statistik(session, daten, jetzt)))):
+        index["statistik"][feld] = hash_name("statistik", "statistik" if feld == "datei" else "beispiel", inhalt)
+        schreibe(index["statistik"][feld], inhalt)
+
     for quelle in sorted(STATIC.rglob("*")):
         if quelle.is_file():
             rel = quelle.relative_to(STATIC).as_posix()
@@ -142,7 +150,7 @@ def erzeuge(
     schreibe("daten.json", _json(index))  # zuletzt: erst jetzt sieht die Vorschau den neuen Stand
 
     # Dateien frueherer Laeufe, die es nicht mehr gibt (alte Hash-Namen, entfernte Regionen), aufraeumen
-    for unterordner in ("daten", "strecken"):
+    for unterordner in ("daten", "strecken", "statistik"):
         for datei in (site / unterordner).glob("*.json"):
             if datei not in geschrieben:
                 datei.unlink()

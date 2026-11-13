@@ -8,8 +8,8 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 
 | Ordner | Typ | Inhalt |
 |---|---|---|
-| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-37 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P22, D1–D18, U1–U36, N1–N9, B1–B25 |
+| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-38 (N-05 ersetzt durch N-09) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P22, D1–D18, U1–U39, N1–N9, B1–B25 |
 | `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-18 (u. a. E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
 | `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `livegang` und `spaeter` |
