@@ -576,3 +576,6 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   434222 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p5.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=5
 200   405338 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p6.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=6
 200   374786 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p7.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=7
+# Lauf 2026-11-14 15:30 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     9928 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark2.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=13515,10401,10415,9911,9801,10111,10005,15901,16015,15715,15610,13120,7110,10200&start=2026-10-29T00:00&end=2026-11-11T00:00
