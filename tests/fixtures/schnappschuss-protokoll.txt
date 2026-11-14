@@ -529,3 +529,22 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 404      153 tests/fixtures/recherche-2026-11-14/tourinfra/hohetauern.json https://module.tourinfra.com/hohetauern/inc/ajax.php?ajaxtype=getLoipenmanager
 404      153 tests/fixtures/recherche-2026-11-14/tourinfra/nationalpark-hohe-tauern.json https://module.tourinfra.com/nationalpark-hohe-tauern/inc/ajax.php?ajaxtype=getLoipenmanager
 404      153 tests/fixtures/recherche-2026-11-14/tourinfra/lieser-maltatal.json https://module.tourinfra.com/lieser-maltatal/inc/ajax.php?ajaxtype=getLoipenmanager
+# Lauf 2026-11-14 15:23 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.steiermark.com/robots.txt
+200   428510 tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland
+200   398023 tests/fixtures/recherche-2026-11-14/steiermark/tour-kulm-loipe.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland/Kulm-Loipe-M1_tour_1430746
+200   579311 tests/fixtures/recherche-2026-11-14/steiermark/ausseerland-langlaufen.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen
+200   314380 tests/fixtures/recherche-2026-11-14/steiermark/tour-schwarzsee.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren/Schwarzsee-Hochmoor-Loipe_tour_60493647
+200   535656 tests/fixtures/recherche-2026-11-14/steiermark/langlaufregionen.html https://www.steiermark.com/de/Steiermark/Aktiv-in-der-Natur/Langlaufen/Langlaufregionen
+200 https://www.lesachtal.com/robots.txt
+200   885889 tests/fixtures/recherche-2026-11-14/lesachtal/langlaufen.html https://www.lesachtal.com/de/Winter-World/Langlaufen
+404 https://tools.nlw.at/robots.txt
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-lt.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-lt.pdf
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-la.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-la.pdf
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-ls.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ls.pdf
+429 https://content.bergfex.at/robots.txt
+429      162 tests/fixtures/recherche-2026-11-14/bergfex-widget/loipen-115.js https://content.bergfex.at/loipen/115/
+200 https://www.salzburgerland.com/robots.txt
+200   142122 tests/fixtures/recherche-2026-11-14/salzburgerland/lungau.html https://www.salzburgerland.com/de/?p=671483
+200 https://www.turracherhoehe.at/robots.txt
+200    54428 tests/fixtures/recherche-2026-11-14/turracherhoehe/home.html https://www.turracherhoehe.at/de/winter
