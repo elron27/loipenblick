@@ -1,12 +1,5 @@
-# <zielpfad> <url> -- Runde 16 (14.11.2026): steiermark.com Loipenberichte, GeoSphere-Stationen Steiermark/Lungau
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=12811,9811,9700,9643,7221,13116,15920,15912,18402,18805,15712,15702,15721,9925&start=2026-10-29T00:00&end=2026-11-11T00:00
-tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland-p2.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland?page=2
-tests/fixtures/recherche-2026-11-14/steiermark/murau-langlaufen.html https://www.steiermark.com/de/Murau/Aktivitaeten/Langlaufen
-tests/fixtures/recherche-2026-11-14/steiermark/schladming-langlaufen.html https://www.steiermark.com/de/Schladming-Dachstein/Region/Winter/Langlaufen
-tests/fixtures/recherche-2026-11-14/steiermark/isd-seckau.html https://www.steiermark.com/de/Murtal/Aktivitaeten/Ausflugsziele/Langlaufloipe-Seckau_isd_2195741
-tests/fixtures/recherche-2026-11-14/steiermark/isd-hebalm.html https://www.steiermark.com/de/Region-Graz/Region/Kultur-und-Ausflugsziele/Ausflugsziele/Langlaufzentrum-Hebalm_isd_26690579
-tests/fixtures/recherche-2026-11-14/steiermark/isd-almenland.html https://www.steiermark.com/de/Oststeiermark/Urlaub-planen/Ausflugsziele/Almenland-Loipen_isd_5921363
-tests/fixtures/recherche-2026-11-14/steiermark/isd-tauplitz.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Urlaub-planen/Ausflugsziele/Langlauf-Loipen-Tauplitz-Tauplitzalm_isd_4161672
-tests/fixtures/recherche-2026-11-14/steiermark/isd-weirerteich.html https://www.steiermark.com/de/Murau/Urlaub-planen/Ausflugsziele/Loipenzentrum-Weirerteich_isd_21236485
-tests/fixtures/recherche-2026-11-14/steiermark/gesaeuse-hall.html https://www.steiermark.com/de/Gesaeuse/Urlaub-planen/Ausflugsziele/Langlaufzentrum-Hall-bei-Admont_isd_5918025
-tests/fixtures/recherche-2026-11-14/outdooractive/spittal.html https://www.outdooractive.com/de/langlauf-loipen/spittal-an-der-drau/langlauf-loipen-im-bezirk-spittal-an-der-drau/
+# <zielpfad> <url> -- Runde 17 (14.11.2026): steiermark.com Tourenportal Kategorie Langlauf (Loipenstatus)
+tests/fixtures/recherche-2026-11-14/steiermark/murau-touren-langlauf.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren?tourCategory=46459526
+tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526
+tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf-p2.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=2
+tests/fixtures/recherche-2026-11-14/steiermark/tourenportal.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal
