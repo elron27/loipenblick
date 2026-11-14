@@ -37,6 +37,15 @@ class FixtureFetcher:
         self.abgerufen: list[str] = []
 
     def get(self, url: str) -> str:
+        inhalt = self._lies(url)
+        return inhalt if isinstance(inhalt, str) else inhalt.decode("utf-8")
+
+    def get_bytes(self, url: str) -> bytes:
+        """Wie HoeflicherFetcher.get_bytes, z. B. fuer PDF-Berichte (P28)."""
+        inhalt = self._lies(url)
+        return inhalt.encode("utf-8") if isinstance(inhalt, str) else inhalt
+
+    def _lies(self, url: str) -> str | bytes:
         self.abgerufen.append(url)
         pfad = url[len(self.base_url):].strip("/")
         if pfad in self.ersetze:
@@ -54,7 +63,7 @@ class FixtureFetcher:
             datei = self.verzeichnis / "schneebericht" / f"{pfad}.html"
         if not datei.exists():
             raise HttpFehler(url, 404)
-        return datei.read_text(encoding="utf-8")
+        return datei.read_bytes()
 
     def seite(self, relativ: str) -> str:
         return (self.verzeichnis / relativ).read_text(encoding="utf-8")
@@ -68,6 +77,8 @@ SEITEN_QUELLEN = {
     "seefeld": {"de/loipenbericht.html": "2026-11-13/loipenbericht.html"},
     "achensee": {"de/live/schneebericht": "2026-11-13/schneebericht.html"},
     "kufsteinerland": {"de/schneebericht.html": "2026-11-13/schneebericht.html"},
+    "st-anton": {"de/service/aktueller-loipenzustand": "2026-11-13/aktueller-loipenzustand.html"},
+    "nassfeld-nlw": {"sportbericht/print/wintersportbericht-nps.pdf": "2026-11-13/wintersportbericht-nps.pdf"},
     "kaiserwinkl": {"de/langlaufen-tirol/geoeffnete-loipen.html": "2026-11-13/geoeffnete-loipen.html"},
     # Listen vom 13.11. (mit Laenge, Stil je Eintrag; 12 offene Loipen), Detailseiten vom 12.11.
     "tirol": {TIROL_LISTE: "2026-11-13/loipen.html",

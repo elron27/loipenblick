@@ -46,7 +46,7 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            "tannheimer": 21, "seefeld": 49, "achensee": 24, "kufsteinerland": 22, "kaiserwinkl": 23,
            "dolomiti-nordicski": 118, "opendatahub": 190,
            "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
-           "myswitzerland": 340}
+           "myswitzerland": 340, "st-anton": 15, "nassfeld-nlw": 6}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 

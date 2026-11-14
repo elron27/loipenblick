@@ -2,7 +2,7 @@
 
 Stand 2026-11-13.
 
-**Umsetzung:** Südtirol angebunden (E-19, PR #18). Schweiz und Liechtenstein angebunden (E-20, P29, P26): Engadin, Davos Klosters und Goms über den tourinfra-Loipenmanager (die Schnappschüsse zeigten, dass diese Regionen denselben Dienst wie der Chiemgau nutzen), alle übrigen 94 Langlauforte über Schweiz Tourismus. Dabei gefunden und mit angebunden: Gastein, Ramsau am Dachstein und Seefeld im selben tourinfra-Dienst. Kärnten folgt (siehe unten).
+**Umsetzung:** Südtirol angebunden (E-19, PR #18). Schweiz und Liechtenstein angebunden (E-20, P29, P26): Engadin, Davos Klosters und Goms über den tourinfra-Loipenmanager (die Schnappschüsse zeigten, dass diese Regionen denselben Dienst wie der Chiemgau nutzen), alle übrigen 94 Langlauforte über Schweiz Tourismus. Dabei gefunden und mit angebunden: Gastein, Ramsau am Dachstein und Seefeld im selben tourinfra-Dienst. Danach (E-21, P27, P28): St. Anton am Arlberg über die eigene Seite zum Loipenzustand (Status je Loipe mit Zeitstempel) und Kärnten über den täglichen Wintersportbericht Nassfeld-Pressegger See (PDF auf tools.nlw.at). Der Bericht zählt nur offene und alle Loipen je Ort (Hermagor, Gitschtal, Kirchbach, Dellach, Kötschach-Mauthen, Weissensee); daraus wird je Ort ein „Loipennetz“. Nicht angebunden: Serfaus (Status ohne Datum), Wilder Kaiser (Status nur per JavaScript), Nauders und Tiroler Oberland (nichts Verwertbares).
 
 Ursprünglicher Stand: nur Recherche, noch keine Adapter. Alle Seiten wurden über den Workflow „Schnappschuss“ auf einem GitHub-Runner geholt (robots.txt beachtet, 5 s Abstand). Die Schnappschüsse liegen unter `tests/fixtures/recherche-2026-11-13/<region>/<quelle>/`, das Abrufprotokoll in `tests/fixtures/schnappschuss-protokoll.txt`.
 

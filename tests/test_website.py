@@ -57,7 +57,9 @@ def test_b7_daten_liegen_als_json_je_region(site):
         # Schweiz, Liechtenstein, Gastein, Ramsau (E-20)
         "engadin", "davos-klosters", "goms", "gasteinertal", "schladming-dachstein", "graubuenden", "wallis",
         "berner-oberland", "zentralschweiz", "jura-drei-seen-land", "ostschweiz", "waadtlaender-alpen", "freiburg",
-        "tessin", "zuercher-oberland", "basel-jura", "liechtenstein"}
+        "tessin", "zuercher-oberland", "basel-jura", "liechtenstein",
+        # Kaernten (E-21)
+        "nassfeld-gailtal", "weissensee"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -131,7 +133,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
         "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
         "dolomiti-nordicski", "opendatahub",
-        "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland"}
+        "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
+        "st-anton", "nassfeld-nlw"}
 
 
 @pytest.mark.req("U6", ak=1)

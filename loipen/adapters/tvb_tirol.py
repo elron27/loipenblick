@@ -183,4 +183,53 @@ class KaiserwinklAdapter:
         return ergebnis
 
 
-__all__ = ["AchenseeAdapter", "SkidataAdapter", "KaiserwinklAdapter", "Status"]
+STANTON_STUFE = {"easy slope": "leicht", "intermediate slope": "mittel", "difficult slope": "schwer"}
+
+
+class StAntonAdapter:
+    """Loipenzustand von St. Anton am Arlberg (P27, E-20).
+
+    Befund (tests/fixtures/st-anton/2026-11-13/aktueller-loipenzustand.html): je Loipe ein
+    div.skiing-entry mit Klasse skiing-status-open|close, Symbol fuer die Schwierigkeit (alt "Easy slope")
+    und dem Namen in <p>, darueber "Zeitpunkt der letzten Aktualisierung: 13.11.2026 16:16".
+    Reine Winterwanderwege werden uebersprungen. Ohne Koordinaten; die Lage kommt von tirol.at.
+    """
+
+    def run(self, base_url: str, config: dict, fetcher: Fetcher) -> AdapterErgebnis:
+        ergebnis = AdapterErgebnis()
+        url = base_url.rstrip("/") + config.get("pfad", "/de/service/aktueller-loipenzustand")
+        sel = Selector(fetcher.get(url))
+        stand = parse_datum(" ".join(sel.xpath("//p[contains(., 'letzten Aktualisierung')]//text()").getall()))
+        gesehen: set[str] = set()
+        for e in sel.xpath("//div[contains(@class, 'skiing-entry')]"):
+            name = re.sub(r"\s+", " ", " ".join(e.xpath("./p//text()").getall())).strip().rstrip('"')
+            if not name or name.lower().startswith("winterwanderweg") or not re.search(
+                    r"loipe|langlauf|cross-country", name, re.I):
+                continue  # Winterwanderwege
+            key = _schluessel(name)
+            if key in gesehen:
+                continue
+            gesehen.add(key)
+            d = LoipenDaten(source_key=key, name=name, source_url=url, gebiet_slug=_gebiet(name, None, config))
+            klasse = e.attrib.get("class", "")
+            roh = "geöffnet" if "skiing-status-open" in klasse else "geschlossen" if "skiing-status-close" in klasse else ""
+            if not roh:
+                roh = " ".join(e.xpath("./img/@alt").getall()[:1])
+            _status(d, roh)
+            for alt in e.xpath("./img/@alt").getall():
+                stufe = STANTON_STUFE.get(alt.strip().lower())
+                if stufe:
+                    d.schwierigkeit, _ = normiere_schwierigkeit(stufe)
+            # Teilstuecke: "Stanzertal 22 km (St. Anton bis St. Jakob 3 km)" -> 3 km, die letzte Angabe zaehlt
+            km = re.findall(r"(\d+(?:,\d+)?)\s*km", name)
+            d.laenge_km = _km(km[-1] + " km") if km else None
+            d.nachtloipe = True if re.search(r"night|nacht|floodlight", name, re.I) else None
+            d.quelle_aktualisiert_at = stand
+            d.rohtext = f"{roh}; {name}"
+            ergebnis.loipen.append(d)
+        if not ergebnis.loipen:
+            ergebnis.warnungen.append("Keine Loipenzeilen gefunden, Seitenaufbau geaendert?")
+        return ergebnis
+
+
+__all__ = ["AchenseeAdapter", "SkidataAdapter", "KaiserwinklAdapter", "StAntonAdapter", "Status"]

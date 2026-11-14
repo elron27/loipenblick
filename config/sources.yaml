@@ -15,6 +15,8 @@
 #   kaiserwinkl  Loipenbericht von kaiserwinkl.com (Status, Laenge, Stand der Liste)
 #   dolomiti     Loipentabelle von Dolomiti NordicSki (Status in 5 Stufen, Laenge, ohne Datum und Lage)
 #   opendatahub  Open Data Hub Suedtirol (JSON, CC0: Lage, Stile, offen/geschlossen mit Aenderungsdatum)
+#   nlw         Wintersportbericht Nassfeld-Pressegger See (PDF, offene Loipen je Ort, Kaernten)
+#   stanton     Loipenzustand von St. Anton am Arlberg (Status, Schwierigkeit, Stand der Meldung)
 #   myswitzerland Schneebericht von Schweiz Tourismus, eine Seite je Ort (Daten infosnow.ch, Stand je Ort)
 #   tourinfra wird auch fuer Engadin, Davos Klosters, Goms, Gastein, Ramsau und Seefeld genutzt (E-20)
 #
@@ -285,6 +287,20 @@ quellen:
         Bichlach: schwendt
         Griesenau: schwendt
         Lucknerhof: schwendt
+
+  # St. Anton am Arlberg (P27, 13.11.2026): Loipenzustand mit Stand der Meldung, ohne Koordinaten (Lage von
+  # tirol.at). Rang 2 vor tirol.at. robots.txt verlangt 10 s Abstand (Crawl-delay), der Fetcher haelt ihn ein.
+  - key: st-anton
+    adapter: stanton
+    name: Tourismusverband St. Anton am Arlberg (Loipenzustand)
+    base_url: https://www.stantonamarlberg.com
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Loipenzustand St. Anton nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/service/aktueller-loipenzustand
+      default_gebiet: st-anton
 
   # Ausbaustufe 1 (E-15): Tirol ueber das Landesportal, Stufe 1 = Kufsteinerland, Kaiserwinkl, Wilder Kaiser.
   # Weitere Tiroler Regionen (Richtung Innsbruck): Gebiete mit lat/lon in gebiete.yaml anlegen und hier
@@ -773,3 +789,29 @@ quellen:
         - {pfad: /schneebericht/vicheres-bavon-257/, gebiet: vicheres-bavon, name: "Vichères - Bavon"}
         - {pfad: /schneebericht/wasserfallen-241/, gebiet: wasserfallen, name: "Wasserfallen"}
         - {pfad: /schneebericht/zweisimmen-sparenmoos-384/, gebiet: zweisimmen-sparenmoos, name: "Zweisimmen - Sparenmoos"}
+
+  # Kaernten (P28, 13.11.2026): kein Landesportal mit Status je Loipe (kaernten.at zeigt bergfex-Daten).
+  # Die Nassfeld-Pressegger See GmbH meldet im taeglichen Wintersportbericht (PDF) je Ort "offen / alle Loipen";
+  # daraus wird je Ort eine Zeile "Loipennetz <Ort>". Stand = Erzeugungszeit des PDFs, keine Namen einzelner Loipen.
+  - key: nassfeld-nlw
+    adapter: nlw
+    name: Nassfeld-Pressegger See (Wintersportbericht)
+    base_url: https://tools.nlw.at
+    art: portal
+    rang: 2
+    strecke_hinweis: "Der Wintersportbericht zählt nur die offenen Loipen je Ort; einzelne Loipen und Strecken nennt er nicht."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "PDF etwa 5 MB je Abruf; Nutzung vor dem Oeffentlichschalten bei der NLW anfragen"}
+    zeitplan:
+      saison_uhrzeiten: [7, 13]
+      nebensaison_uhrzeiten: [8]
+    config:
+      pfad: /sportbericht/print/wintersportbericht-nps.pdf
+      default_gebiet: hermagor
+      orte:
+        - {name: Hermagor, gebiet: hermagor}
+        - {name: Gitschtal, gebiet: gitschtal}
+        - {name: Kirchbach, gebiet: kirchbach}
+        - {name: Dellach, gebiet: dellach-gailtal}
+        - {name: Kötschach-Mauthen, gebiet: koetschach-mauthen}
+        - {name: Weissensee, gebiet: weissensee-techendorf}

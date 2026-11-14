@@ -159,8 +159,11 @@ class Attrappe(http.server.BaseHTTPRequestHandler):
                 if key in ZUSTAND.ausfall:
                     return self._sende(503, "Attrappe: Ausfall simuliert", "text/plain")
                 url = "https://" + voll + (f"?{t.query}" if t.query else "")
+                fetcher = FixtureFetcher(key, base, seiten=SEITEN_QUELLEN.get(key))
                 try:
-                    text = FixtureFetcher(key, base, seiten=SEITEN_QUELLEN.get(key)).get(url)
+                    if t.path.lower().endswith(".pdf"):  # PDF-Berichte (P28) unveraendert ausliefern
+                        return self._sende(200, fetcher.get_bytes(url), "application/pdf")
+                    text = fetcher.get(url)
                 except HttpFehler:
                     return self._sende(404, "nicht in den Fixtures", "text/plain")
                 if ZUSTAND.offen:
