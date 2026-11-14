@@ -1,6 +1,2 @@
-# <zielpfad> <url> -- Runde 18 (14.11.2026): steiermark.com Tourenportal Langlauf, alle Seiten
-tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p3.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=3
-tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p4.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=4
-tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p5.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=5
-tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p6.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=6
-tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p7.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=7
+# <zielpfad> <url> -- Runde 19 (14.11.2026): weitere GeoSphere-Stationen Steiermark/Lungau
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark2.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=13515,10401,10415,9911,9801,10111,10005,15901,16015,15715,15610,13120,7110,10200&start=2026-10-29T00:00&end=2026-11-11T00:00
