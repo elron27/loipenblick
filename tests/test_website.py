@@ -59,7 +59,9 @@ def test_b7_daten_liegen_als_json_je_region(site):
         "berner-oberland", "zentralschweiz", "jura-drei-seen-land", "ostschweiz", "waadtlaender-alpen", "freiburg",
         "tessin", "zuercher-oberland", "basel-jura", "liechtenstein",
         # Kaernten (E-21)
-        "nassfeld-gailtal", "weissensee"}
+        "nassfeld-gailtal", "weissensee",
+        # Steiermark und Lungau (E-22)
+        "ausseerland", "gesaeuse", "murau", "murtal", "hochsteiermark", "oststeiermark", "lipizzanerheimat", "lungau"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -134,7 +136,7 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
-        "st-anton", "nassfeld-nlw"}
+        "st-anton", "nassfeld-nlw", "steiermark"}
 
 
 @pytest.mark.req("U6", ak=1)
