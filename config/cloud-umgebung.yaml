@@ -1,7 +1,8 @@
 # Freigegebene Hosts der Cloud-Umgebung "loipenblick" (B19 AK 2), Stand 13.11.2026.
 # www.seefeld.com, www.achensee.com und www.kaiserwinkl.com (Loipenberichte, P21/P22) sowie
 # www.dolomitinordicski.com und tourism.api.opendatahub.com (Suedtirol, E-18) muss Stefan in der
-# Umgebung noch ergaenzen, ebenso snow.myswitzerland.com (Schweiz, E-20).
+# Umgebung noch ergaenzen, ebenso snow.myswitzerland.com (Schweiz, E-20), www.stantonamarlberg.com (P27)
+# und tools.nlw.at (Kaernten, P28).
 # Die Liste spiegelt die Einstellung in claude.ai (Umgebung loipenblick, Netzwerk "eingeschraenkt").
 # Kommt eine Quelle in sources.yaml dazu, muss ihr Host hier und in der Umgebung stehen;
 # tests/test_ausbau.py prueft das. Aendern kann die Umgebung nur Stefan.
@@ -29,3 +30,5 @@ hosts:
   - www.dolomitinordicski.com
   - tourism.api.opendatahub.com
   - snow.myswitzerland.com
+  - www.stantonamarlberg.com
+  - tools.nlw.at

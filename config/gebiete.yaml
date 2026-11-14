@@ -188,6 +188,15 @@ regionen:
   name: Basel und Jura
   land: CH
   bundesland: Basel-Landschaft
+# Kaernten (P28, 13.11.2026): Orte des NLW-Wintersportberichts
+- slug: nassfeld-gailtal
+  name: Nassfeld und Gailtal
+  land: AT
+  bundesland: Kärnten
+- slug: weissensee
+  name: Weissensee
+  land: AT
+  bundesland: Kärnten
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -2809,3 +2818,78 @@ gebiete:
   lon: 7.3712
   tourist_url: https://snow.myswitzerland.com/schneebericht/zweisimmen-sparenmoos-384/
   grenzinfo: 'Schweiz: Autobahnvignette Pflicht (40 CHF, auch als E-Vignette), Anfahrt meist über Österreich mit Vignette; Ausweis mitnehmen, an der Grenze gelten Zollregeln.'
+
+# Kaernten (P28, 13.11.2026): Orte des Wintersportberichts Nassfeld-Pressegger See; Mitte = Ortsmitte
+# (gerundet), Wetter = naechste GeoSphere-Station mit Schneehoehe (Weissensee-Gatschach misst keine).
+- slug: hermagor
+  name: Hermagor (Nassfeld-Pressegger See)
+  hoehe_m: 600
+  region: nassfeld-gailtal
+  lat: 46.627
+  lon: 13.367
+  tourist_url: https://www.nassfeld.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19911'
+    name: Hermagor
+    dienst: geosphere
+- slug: gitschtal
+  name: Gitschtal
+  hoehe_m: 810
+  region: nassfeld-gailtal
+  lat: 46.68
+  lon: 13.27
+  tourist_url: https://www.nassfeld.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19911'
+    name: Hermagor
+    dienst: geosphere
+- slug: kirchbach
+  name: Kirchbach im Gailtal
+  hoehe_m: 640
+  region: nassfeld-gailtal
+  lat: 46.64
+  lon: 13.19
+  tourist_url: https://www.nassfeld.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19720'
+    name: Kötschach-Mauthen
+    dienst: geosphere
+- slug: dellach-gailtal
+  name: Dellach im Gailtal
+  hoehe_m: 670
+  region: nassfeld-gailtal
+  lat: 46.66
+  lon: 13.07
+  tourist_url: https://www.nassfeld.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19720'
+    name: Kötschach-Mauthen
+    dienst: geosphere
+- slug: koetschach-mauthen
+  name: Kötschach-Mauthen
+  hoehe_m: 710
+  region: nassfeld-gailtal
+  lat: 46.67
+  lon: 12.996
+  tourist_url: https://www.nassfeld.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19720'
+    name: Kötschach-Mauthen
+    dienst: geosphere
+- slug: weissensee-techendorf
+  name: Weissensee
+  hoehe_m: 930
+  region: weissensee
+  lat: 46.715
+  lon: 13.3
+  tourist_url: https://www.weissensee.com
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die Tauernautobahn (A10, Tauern-Maut) oder die Felbertauernstraße (Maut).'
+  wetterstation:
+    id: '19700'
+    name: Dellach im Drautal
+    dienst: geosphere
