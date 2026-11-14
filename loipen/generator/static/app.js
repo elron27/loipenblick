@@ -21,6 +21,27 @@ function zahl(x, n) { return x == null ? "unbekannt" : String(Number(x).toFixed(
 function km(x) { return x == null ? "Länge unbekannt" : zahl(x) + " km"; }
 function chip(s) { return '<span class="st ' + s + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + SYM[s] + "</svg>" + WORT[s] + "</span>"; }
 function jetztMs() { return Date.now(); }
+/* Sonderloipen (Snowfarming, Opening, Gletscher, nur fuer Gruppen) sind offen, aber nicht "befahrbar fuer alle" */
+function offenGemeldet(l) { return l.status === "offen" || l.status === "eingeschraenkt"; }
+function befahrbar(l) { return offenGemeldet(l) && !l.sonder; }
+function rang(l) { return RANG[l.status] + (l.sonder && offenGemeldet(l) ? 1.5 : 0); }
+function sonderBadge(l) { return l.sonder ? ' <span class="badge sonder" title="' + esc(l.sonder.text) + '">' + esc(l.sonder.kurz) + "</span>" : ""; }
+/* Rahmendaten einer Menge Loipen: wie viele km es gibt und wie viele davon offen sind; Unbekanntes wird mitgezaehlt */
+function kmZahlen(loipen) {
+  var z = {n: 0, offen: 0, sonder: 0, km: 0, mitLaenge: 0, kmOffen: 0, offenOhneLaenge: 0, gespurt: 0, mitGespurt: 0};
+  loipen.forEach(function (l) {
+    if (l.sonder) { if (offenGemeldet(l)) z.sonder++; return; }  // Sonderloipen zaehlen nicht zum Netz
+    z.n++;
+    if (l.laenge_km != null) { z.km += l.laenge_km; z.mitLaenge++; }
+    if (befahrbar(l)) { z.offen++; if (l.laenge_km != null) z.kmOffen += l.laenge_km; else z.offenOhneLaenge++; }
+    if (befahrbar(l) && l.gespurt_km != null) { z.gespurt += l.gespurt_km; z.mitGespurt++; }
+  });
+  return z;
+}
+function kmKurz(z) {
+  return z.offen + " von " + z.n + " Loipen offen" + (z.mitLaenge ? ", " + zahl(z.kmOffen) + " von " + zahl(z.km) + " km" + (z.mitLaenge < z.n ? " (" + (z.n - z.mitLaenge) + " ohne Länge)" : "") : ", Längen unbekannt") +
+    (z.sonder ? " · " + z.sonder + " Sonderloipe" + (z.sonder > 1 ? "n" : "") + " offen" : "");
+}
 /* D16: Gruppe "Land · Bundesland", z. B. "Österreich · Tirol" */
 function gruppeName(r) { var l = LAND[r.land] || r.land || ""; return l + (r.bundesland && r.bundesland !== l ? " · " + r.bundesland : ""); }
 function alter(iso) {
@@ -130,8 +151,8 @@ function filtere(q) {
     if (sort === "entfernung") return (a.entf == null) - (b.entf == null) || a.entf - b.entf;
     if (sort === "gespurt") return (b.gespurt_km || 0) - (a.gespurt_km || 0);
     if (sort === "praeparierung") return (a.ohne_datum - b.ohne_datum) || (b.quelle_stand || "").localeCompare(a.quelle_stand || "");  // U30: ohne Datum hinten
-    if (sort === "neuschnee") return neu48(b) - neu48(a) || RANG[a.status] - RANG[b.status] || a.name.localeCompare(b.name);
-    return RANG[a.status] - RANG[b.status] || (a.entf == null) - (b.entf == null) || a.entf - b.entf || a.name.localeCompare(b.name);
+    if (sort === "neuschnee") return neu48(b) - neu48(a) || rang(a) - rang(b) || a.name.localeCompare(b.name);
+    return rang(a) - rang(b) || (a.entf == null) - (b.entf == null) || a.entf - b.entf || a.name.localeCompare(b.name);
   });
   return liste;
 }
@@ -144,7 +165,7 @@ function loipeKarte(l, mitGebiet) {
   var frisch = l.veraltet ? '<span class="badge">veraltet</span> ' : "";
   // U30, P16: Quelle ohne Praeparierdatum oder ganz ohne Zustand
   var stand = !l.abgerufen ? "noch kein Abruf" : (l.ohne_zustand ? "Quelle meldet keinen Zustand · " : l.ohne_datum ? "Status ohne Datum · " : "") + "Stand " + alter(l.abgerufen);
-  return '<a class="lp glass" href="#/loipe/' + l.id + '"><span class="n">' + esc(l.name) + (mitGebiet ? ' <span class="fine">· ' + esc(l.gebiet.name) + "</span>" : "") + "</span>" + chip(l.status) +
+  return '<a class="lp glass' + (l.sonder ? " sonderlp" : "") + '" href="#/loipe/' + l.id + '"><span class="n">' + esc(l.name) + sonderBadge(l) + (mitGebiet ? ' <span class="fine">· ' + esc(l.gebiet.name) + "</span>" : "") + "</span>" + chip(l.status) +
     '<span class="d">' + esc(teile.filter(Boolean).join(" · ")) + " · " + frisch + esc(stand) + (l.quelle_fehler ? " · letzter Abruf fehlgeschlagen" : "") + "</span></a>";
 }
 function neu48(l) { var s = l.gebiet && l.gebiet.schnee; return s && s.neuschnee_48h_cm != null ? s.neuschnee_48h_cm : -1; }
@@ -232,6 +253,7 @@ function beschriftung(punkte) {
   return aus;
 }
 window.__beschriftung = beschriftung;  // fuer den Kollisionstest
+window.__LB_befahrbar = function () { return S.loipen.filter(befahrbar).length; };  // fuer den Test U44
 function far(x) { return 190 - 45 * Math.sin(x / 95 + 2) - 24 * Math.sin(x / 37); }
 function talprofil(gebiete, schnee) {
   var sorted = gebiete.filter(function (g) { return g.lon != null; }).sort(function (a, b) { return a.lon - b.lon; });
@@ -276,7 +298,7 @@ function talprofil(gebiete, schnee) {
 function seiteHeute(q) {
   var o = S.ort, nah = S.gebiete.slice().sort(function (a, b) { return (dist(o, a) == null) - (dist(o, b) == null) || dist(o, a) - dist(o, b); });
   var zeig = nah.slice(0, 10);
-  var offene = S.loipen.filter(function (l) { return l.status === "offen" || l.status === "eingeschraenkt"; });
+  var offene = S.loipen.filter(befahrbar), sonderOffen = S.loipen.filter(function (l) { return l.sonder && offenGemeldet(l); }).length;
   offene.forEach(function (l) { l.entf = dist(o, l.lat != null ? l : l.gebiet); });
   offene.sort(function (a, b) { return RANG[a.status] - RANG[b.status] || (a.entf || 1e9) - (b.entf || 1e9); });
   var reco = offene[0], kz = S.idx.kennzahlen;
@@ -291,12 +313,15 @@ function seiteHeute(q) {
     (nah[0] && nah[0].schnee && nah[0].schnee.schneehoehe_cm != null ? '<span class="chip">Schnee ' + esc(nah[0].name) + ": " + zahl(nah[0].schnee.schneehoehe_cm, 0) + " cm</span>" : '<span class="chip">Schneehöhe: noch keine Messung</span>') +
     (reco ? '<a class="btn prim" href="#/loipe/' + reco.id + '">Zur Loipe</a>' : "") + "</div></div>" +
     /* U34: die Kennzahlen fuehren direkt zur passend gefilterten Liste */
-    '<div class="stats"><a class="stat glass" id="k-offen" href="#/loipen?offen=1&amp;sort=entfernung"><b>' + offene.length + '</b><span>befahrbar</span></a><a class="stat glass" href="#/loipen"><b>' + kz.loipen + '</b><span>Loipen im Blick</span></a><a class="stat glass" href="#/abdeckung"><b>' + (S.idx.quellen.length - fehler) + "/" + S.idx.quellen.length + "</b><span>Quellen ohne Fehler</span></a></div></div>";
+    '<div class="stats"><a class="stat glass" id="k-offen" href="#/loipen?offen=1&amp;sort=entfernung"><b>' + offene.length + '</b><span>befahrbar</span>' + (sonderOffen ? '<small class="sz">+' + sonderOffen + " Sonder&shy;loipe" + (sonderOffen > 1 ? "n" : "") + "</small>" : "") + '</a><a class="stat glass" href="#/loipen"><b>' + kz.loipen + '</b><span>Loipen im Blick</span></a><a class="stat glass" href="#/abdeckung"><b>' + (S.idx.quellen.length - fehler) + "/" + S.idx.quellen.length + "</b><span>Quellen ohne Fehler</span></a></div></div>";
   if (nah[0] && nah[0].vorhersage.length) h += '<h2 class="sec">Ausblick für ' + esc(nah[0].name) + "</h2>" + vorhersageHtml(nah[0]);
   h += '<h2 class="sec">Gebiete in deiner Nähe</h2><div class="cards">' + zeig.map(function (g) {
-    var best = g.loipen.slice().sort(function (a, b) { return RANG[a.status] - RANG[b.status]; }).slice(0, 3);
-    var d = dist(o, g);
-    return '<a class="gc glass" href="#/gebiet/' + esc(g.slug) + '"><h3>' + esc(g.name) + neuschneeBadge(g) + "</h3><p>" + (d != null ? zahl(d, 0) + " km entfernt · " : "") + g.loipen.length + " Loipen</p>" + best.map(function (l) { return '<div class="r"><span>' + esc(l.name) + "</span>" + chip(l.status) + "</div>"; }).join("") + "</a>";
+    var best = g.loipen.slice().sort(function (a, b) { return rang(a) - rang(b); }).slice(0, 3);
+    var d = dist(o, g), z = kmZahlen(g.loipen);
+    /* Kopf fuehrt zum Gebiet, jede Zeile direkt zur Loipe */
+    return '<div class="gc glass"><a class="gk" href="#/gebiet/' + esc(g.slug) + '"><h3>' + esc(g.name) + neuschneeBadge(g) + "</h3><p>" + (d != null ? zahl(d, 0) + " km entfernt · " : "") + g.loipen.length + " Loipen · " + esc(kmKurz(z)) + "</p></a>" +
+      best.map(function (l) { return '<a class="r" href="#/loipe/' + l.id + '"><span>' + esc(l.name) + sonderBadge(l) + "</span>" + chip(l.status) + "</a>"; }).join("") +
+      (g.loipen.length > best.length ? '<a class="mehr fine" href="#/gebiet/' + esc(g.slug) + '">alle ' + g.loipen.length + " Loipen</a>" : "") + "</div>";
   }).join("") + '</div><p><a class="btn" href="#/loipen">Alle ' + kz.loipen + " Loipen ansehen</a></p>";
   view.innerHTML = h;
 }
@@ -341,22 +366,32 @@ function listeGruppiert(liste) {
   liste.forEach(function (l) { (je[l.gebiet.region] = je[l.gebiet.region] || []).push(l); });
   return gruppen().map(function (gr) {
     var teile = gr.regionen.filter(function (r) { return je[r.slug]; }).map(function (r) {
-      return '<section class="rg" data-region="' + esc(r.slug) + '"><h3 class="reg">' + esc(r.name) + ' <span class="fine">' + je[r.slug].length + " Loipen</span></h3><div class=\"lg\">" + je[r.slug].map(function (l) { return loipeKarte(l, true); }).join("") + "</div></section>";
+      var z = kmZahlen(S.loipen.filter(function (l) { return l.gebiet.region === r.slug; }));
+      return '<section class="rg" data-region="' + esc(r.slug) + '"><h3 class="reg">' + esc(r.name) + ' <span class="fine">' + je[r.slug].length + " Loipen</span></h3>" +
+        '<p class="fine rahmen">Region gesamt: ' + esc(kmKurz(z)) + "</p><div class=\"lg\">" + je[r.slug].map(function (l) { return loipeKarte(l, true); }).join("") + "</div></section>";
     });
     return teile.length ? '<h2 class="sec land">' + esc(gr.name) + "</h2>" + teile.join("") : "";
   }).join("");
 }
 
+/* Rahmendaten des Gebiets: Loipen und km gesamt, davon offen; was die Quellen nicht nennen, steht als unbekannt da */
+function rahmenHtml(z) {
+  return '<div class="kv" id="rahmen"><div class="glass"><small>Loipen offen</small><b>' + z.offen + " von " + z.n + "</b></div>" +
+    '<div class="glass"><small>km offen</small><b>' + (z.mitLaenge ? zahl(z.kmOffen) + " von " + zahl(z.km) + " km" : "unbekannt") + "</b>" + (z.offenOhneLaenge ? '<span class="fine">+ ' + z.offenOhneLaenge + " offene ohne Längenangabe</span>" : "") + "</div>" +
+    '<div class="glass"><small>Gespurt laut Quelle</small><b>' + (z.mitGespurt ? zahl(z.gespurt) + " km" : z.offen ? "keine Angabe" : "0 km") + "</b></div>" +
+    '<div class="glass"><small>Länge bekannt</small><b>' + z.mitLaenge + " von " + z.n + " Loipen</b></div></div>" +
+    (z.sonder ? '<p class="fine">Dazu ' + z.sonder + " offene Sonderloipe" + (z.sonder > 1 ? "n" : "") + " (Snowfarming, Opening, Gletscher oder nur für Gruppen), nicht mitgezählt.</p>" : "");
+}
 function seiteGebiet(slug) {
   var g = S.gebiete.filter(function (x) { return x.slug === slug; })[0];
   if (!g) { view.innerHTML = '<p class="leer glass">Dieses Gebiet gibt es nicht. <a href="#/loipen">Zur Liste</a></p>'; return; }
-  var gesamt = g.loipen.reduce(function (a, l) { return a + (l.laenge_km || 0); }, 0);
+  var z = kmZahlen(g.loipen), gesamt = z.km, ohneLaenge = z.n - z.mitLaenge;
   var gebuehr = g.loipengebuehr || {};
   var andere = Object.keys(g.namen || {}).map(function (k) { return g.namen[k]; }).filter(function (n) { return n && n !== g.name; });
   var ohneZustand = g.loipen.length && g.loipen.every(function (l) { return l.ohne_zustand; });
   var h = "<h1>" + esc(g.name) + neuschneeBadge(g) + "</h1>" + (andere.length ? '<p class="fine">auch: ' + esc(andere.join(", ")) + "</p>" : "") +
-    '<p class="fine">' + esc([g.region_name, gruppeName(g)].filter(Boolean).join(" · ")) + " · " + g.loipen.length + " Loipen" + (gesamt > 0 ? ", zusammen " + zahl(gesamt) + " km" : ", Länge noch unbekannt") + " · <a href=\"" + esc(safeUrl(g.tourist_url)) + '" rel="noopener">Touristeninformation</a></p>' +
-    '<h2 class="sec">Schnee</h2>' + schneeHtml(g) + '<p class="fine"><a href="#/statistik?gebiet=' + esc(g.slug) + '">Saisonstatistik für ' + esc(g.name) + "</a></p>" + '<h2 class="sec">Vorhersage</h2>' + vorhersageHtml(g) +
+    '<p class="fine">' + esc([g.region_name, gruppeName(g)].filter(Boolean).join(" · ")) + " · " + g.loipen.length + " Loipen" + (gesamt > 0 ? ", zusammen " + zahl(gesamt) + " km" + (ohneLaenge ? " (Länge von " + ohneLaenge + " Loipe" + (ohneLaenge > 1 ? "n" : "") + " unbekannt)" : "") : ", Länge noch unbekannt") + " · <a href=\"" + esc(safeUrl(g.tourist_url)) + '" rel="noopener">Touristeninformation</a></p>' +
+    rahmenHtml(z) + '<h2 class="sec">Schnee</h2>' + schneeHtml(g) + '<p class="fine"><a href="#/statistik?gebiet=' + esc(g.slug) + '">Saisonstatistik für ' + esc(g.name) + "</a></p>" + '<h2 class="sec">Vorhersage</h2>' + vorhersageHtml(g) +
     (ohneZustand ? '<p class="hinweis glass">Die Quelle für dieses Gebiet meldet keinen Loipenzustand, nur Lage und Länge. Den aktuellen Zustand kennt die Touristeninformation.</p>' : "") +
     '<h2 class="sec">Anreise</h2><ul class="plain">' +
     (g.grenzinfo ? '<li class="glass vignette"><span>Vignette</span><b>' + esc(g.grenzinfo) + "</b></li>" : "") +
@@ -430,11 +465,23 @@ function miniKarteZeichnen(l) {
 function seiteLoipe(id) {
   var l = S.loipen.filter(function (x) { return String(x.id) === id; })[0];
   if (!l) { view.innerHTML = '<p class="leer glass">Diese Loipe gibt es nicht. <a href="#/loipen">Zur Liste</a></p>'; return; }
-  ladeStrecken([l.gebiet.region]).then(function () {
+  /* Die Seite steht sofort; der Streckenverlauf kommt nach. Frueher wartete die ganze Seite auf die
+     Streckendatei: fehlte sie (veralteter Datenstand) oder ging etwas schief, blieb die Liste stehen und
+     der Klick auf die Loipe schien wirkungslos (13.11.2026). */
+  var reg = l.gebiet.region, hash = location.hash;
+  zeichneLoipe(l);
+  if (!S.strecken[reg]) ladeStrecken([reg]).then(function () {
+    if (location.hash !== hash) return;
+    if ((S.strecken[reg] || {})[String(l.id)]) { kartenAbbauen(); zeichneLoipe(l); }
+  }).catch(datenFehler);
+}
+function zeichneLoipe(l) {
+  (function () {
     var g = l.gebiet, ziel = g.parkplaetze[0] || (l.lat != null ? {lat: l.lat, lon: l.lon, name: "Start der Loipe"} : null);
     var hist = l.historie.map(function (t) { return '<span class="' + (t.status ? "" : "keine ") + '" style="' + (t.status ? "background:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + "-bg);color:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + ')"' : "") + ' title="' + esc(t.tag + ": " + (t.status ? WORT[t.status] : "noch keine Daten")) + '">' + (t.status ? {offen: "✓", eingeschraenkt: "!", geschlossen: "✕", unbekannt: "?"}[t.status] : "·") + "</span>"; }).join("");
-    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
-      '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + '</b></div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
+    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + sonderBadge(l) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
+      (l.sonder ? '<p class="hinweis glass" id="sonder"><b>Sonderloipe: ' + esc(l.sonder.kurz) + ".</b> " + esc(l.sonder.text) + (offenGemeldet(l) ? " Sie zählt deshalb nicht zu den befahrbaren Loipen des Gebiets." : "") + "</p>" : "") +
+      '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + "</b>" + (l.laenge_von ? '<span class="fine">laut ' + esc(l.laenge_von) + "</span>" : "") + '</div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
       miniKarte(l) + '<h2 class="sec">Saisonstatistik</h2><div id="saison"><p class="fine">Lädt …</p></div><h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
       '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.ohne_zustand ? "Quelle meldet keinen Zustand" : l.quelle_stand ? datum(l.quelle_stand) : l.ohne_datum ? "Quelle nennt nur den Status, kein Präparierdatum" : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li>" +
       (l.auch_bei && l.auch_bei.length ? '<li class="glass"><span>Auch gemeldet von</span><span>' + l.auch_bei.map(function (a) {
@@ -450,19 +497,28 @@ function seiteLoipe(id) {
       (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("l:" + l.id, "diese Loipe") + meldeFormular(l) : "");
     miniKarteZeichnen(l);
     if (LB.saisonLoipe) LB.saisonLoipe(l, document.getElementById("saison"));  /* U19 */
-  });
+  })();
 }
 
 /* ---------- Karte (U1) ---------- */
+/* Wie weit ein Element unten von der festen Tab-Leiste (Handy) verdeckt ist, in Pixeln */
+function unterTabs(el) {
+  var t = document.querySelector(".tabs");
+  if (!el || !t || getComputedStyle(t).position !== "fixed") return 0;
+  return el.getBoundingClientRect().bottom - t.getBoundingClientRect().top;
+}
 function seiteKarte(q) {
   (function () {
-    var liste = filtere(q).filter(function (l) { return l.lat != null; });
-    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><div id="map" role="region" aria-label="Karte der Loipen"></div><div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort.</span></div></div>";
+    var alle = filtere(q), liste = alle.filter(function (l) { return l.lat != null; }), ohne = alle.length - liste.length;
+    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><div id="map" role="region" aria-label="Karte der Loipen"></div><div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort" + (ohne ? ', <a href="#/loipen' + esc(queryStr(q)) + '">' + ohne + " ohne Standort nur in der Liste</a>" : "") + ".</span></div></div>";
     filterBinden(q, "/karte");
     var m = grundkarte(document.getElementById("map"));
     var ids = {}; liste.forEach(function (l) { ids[l.id] = l; });
     function waehle(l) {
-      document.getElementById("sel").innerHTML = '<b>' + esc(l.name) + '</b><div class="fine">' + esc(l.gebiet.name) + " · " + km(l.laenge_km) + " · Stand " + esc(alter(l.abgerufen)) + '</div><div style="margin:8px 0">' + chip(l.status) + '</div><a class="btn prim" href="#/loipe/' + l.id + '">Details</a>';
+      var sel = document.getElementById("sel");
+      sel.innerHTML = '<b>' + esc(l.name) + '</b><div class="fine">' + esc(l.gebiet.name) + " · " + km(l.laenge_km) + " · Stand " + esc(alter(l.abgerufen)) + '</div><div style="margin:8px 0">' + chip(l.status) + '</div><a class="btn prim" href="#/loipe/' + l.id + '">Details</a>';
+      /* Am Handy liegt das Auswahlfeld sonst unter der Tab-Leiste: der Tipp auf den Marker schien nichts zu tun */
+      if (unterTabs(sel) > 0 && sel.scrollIntoView) sel.scrollIntoView({block: "nearest"});
     }
     // Strecken; geschlossene dezent, offene kraeftig. U32 AK 2: nur fuer die gewaehlte Region laden,
     // ohne Wahl fuer die Regionen um den Ort und spaeter fuer die, in die hineingezoomt wird
@@ -503,7 +559,10 @@ function seiteKarte(q) {
     m.addLayer(cluster);
     function passend() {
       m.invalidateSize();
-      if (liste.length) m.fitBounds(L.latLngBounds(liste.map(function (l) { return [l.lat, l.lon]; })).pad(.12), {maxZoom: 13});
+      /* Marker nicht unter dem Auswahlfeld unten verstecken: dort waeren sie nicht anklickbar */
+      var sel = document.getElementById("sel"), mapEl = document.getElementById("map");
+      var unten = Math.min(mapEl.offsetHeight * .6, (sel ? sel.offsetHeight : 0) + 28 + Math.max(0, unterTabs(mapEl)));
+      if (liste.length) m.fitBounds(L.latLngBounds(liste.map(function (l) { return [l.lat, l.lon]; })), {paddingTopLeft: [28, 28], paddingBottomRight: [28, unten], maxZoom: 13});
       else m.setView([47.7, 11.9], 9);
     }
     setTimeout(passend, 0);
@@ -755,6 +814,32 @@ function installBinden() {
 }
 
 /* ---------- Routing ---------- */
+/* Ein Fehler in einer Ansicht darf nicht still bleiben: sonst sieht ein Klick so aus, als passiere nichts */
+function ansichtFehler(e) {
+  if (window.console) console.error(e);
+  view.innerHTML = '<p class="leer glass" id="ansicht-fehler">Diese Ansicht ließ sich nicht anzeigen (' + esc(e && e.message || e) + '). <button type="button" class="btn" id="neu-laden">Daten neu laden</button></p>';
+  document.getElementById("neu-laden").addEventListener("click", function () { neuLaden(); });
+}
+/* Datenstand frisch halten: Die Seite bleibt am Handy oft stundenlang offen. Der Worker loescht bei jedem
+   Lauf die Dateien des vorigen Stands; eine alte Seite fand dann ihre Streckendatei nicht mehr. */
+var letztePruefung = Date.now();
+function neuLaden() {
+  S.strecken = {}; S.regionen = {};
+  return laden().then(function () { standZeigen(); route(); }).catch(ansichtFehler);
+}
+function auffrischen() {
+  letztePruefung = Date.now();
+  return fetch("daten.json", {cache: "no-store"}).then(function (r) { return r.ok ? r.json() : null; }).then(function (idx) {
+    if (idx && S.idx && idx.erzeugt !== S.idx.erzeugt) return neuLaden();
+  }).catch(function () { /* offline: beim alten Stand bleiben */ });
+}
+function datenFehler(e) {
+  if (window.console) console.warn("Daten nicht ladbar, prüfe neuen Stand", e);
+  auffrischen();
+}
+function standZeigen() {
+  document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria" + (S.idx.image ? " · Version " + S.idx.image : "");
+}
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
   var tab = p.indexOf("/karte") === 0 ? "karte" : p === "/statistik" ? "statistik" : p.indexOf("/loipen") === 0 || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
@@ -762,20 +847,22 @@ function route() {
   if (q.demo && (q.demo === "1") !== S.demo) { location.reload(); return; }
   kartenAbbauen();
   view.dataset.r = (+view.dataset.r || 0) + 1; // Zaehler: Tests warten damit auf das Neuzeichnen
-  if (p === "/karte") seiteKarte(q);
-  else if (p === "/loipen") seiteListe(q);
-  else if (p === "/abdeckung") seiteAbdeckung();
-  else if (LB.seiten[p]) LB.seiten[p](q);  /* z. B. /statistik aus statistik.js */
-  else if (p.indexOf("/gebiet/") === 0) seiteGebiet(p.slice(8));
-  else if (p.indexOf("/loipe/") === 0) seiteLoipe(p.slice(7));
-  else seiteHeute(q);
+  try {
+    if (p === "/karte") seiteKarte(q);
+    else if (p === "/loipen") seiteListe(q);
+    else if (p === "/abdeckung") seiteAbdeckung();
+    else if (LB.seiten[p]) LB.seiten[p](q);  /* z. B. /statistik aus statistik.js */
+    else if (p.indexOf("/gebiet/") === 0) seiteGebiet(decodeURIComponent(p.slice(8)));
+    else if (p.indexOf("/loipe/") === 0) seiteLoipe(decodeURIComponent(p.slice(7)));
+    else seiteHeute(q);
+  } catch (e) { ansichtFehler(e); }
   if (p === "/" && (installAngebot || istIos()) && !alsApp()) { var ih = installHinweis(false); if (ih) view.insertAdjacentHTML("afterbegin", ih); }
   if (p.indexOf("/loipe/") !== 0 && p !== "/karte") window.scrollTo(0, 0);
 }
 
 function start() {
   laden().then(function () {
-    document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria" + (S.idx.image ? " · Version " + S.idx.image : "");
+    standZeigen();
     beschrifteOrt(); sucheBinden();
     document.getElementById("ort").addEventListener("click", ortDialog);
     var dk = document.getElementById("demo-knopf");
@@ -784,6 +871,7 @@ function start() {
     var kw = document.getElementById("karte-widerruf");
     if (kw) { widerrufZeigen(); kw.addEventListener("click", function () { try { localStorage.removeItem("karte_ok"); } catch (e) {} kw.hidden = true; route(); }); }
     window.addEventListener("hashchange", route);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - letztePruefung > 10 * 60000) auffrischen(); });
     formulareBinden();
     installBinden(); netzBinden();
     route();

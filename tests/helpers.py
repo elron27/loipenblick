@@ -69,8 +69,10 @@ SEITEN_QUELLEN = {
     "achensee": {"de/live/schneebericht": "2026-11-13/schneebericht.html"},
     "kufsteinerland": {"de/schneebericht.html": "2026-11-13/schneebericht.html"},
     "kaiserwinkl": {"de/langlaufen-tirol/geoeffnete-loipen.html": "2026-11-13/geoeffnete-loipen.html"},
-    "tirol": {TIROL_LISTE: "2026-11-12/loipen.html",
-              f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B%5D=OPEN": "2026-11-12/loipen_offen.html"},
+    # Listen vom 13.11. (mit Laenge, Stil je Eintrag; 12 offene Loipen), Detailseiten vom 12.11.
+    "tirol": {TIROL_LISTE: "2026-11-13/loipen.html",
+              f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B%5D=OPEN": "2026-11-13/loipen_offen.html",
+              f"{TIROL_LISTE}?addressbaseOpened%5B209%5D%5B0%5D=OPEN&listpos=2": "2026-11-13/loipen_offen_listpos2.html"},
     "kitzbueheler-alpen": {"de/bri/aktuelles/loipen-status.html": "2026-11-12/bri.html"},
     "langlaufdorf": {"": "2026-11-12/index.html"},
     **{k: {"inc/ajax.php?ajaxtype=getLoipenmanager": "2026-11-13/loipenmanager.json"}

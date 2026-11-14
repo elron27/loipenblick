@@ -63,7 +63,12 @@ def rufe_quelle_ab(
 
     start = time.monotonic()
     try:
-        ergebnis = adapter.run(quelle.base_url, quelle.config, fetcher)
+        config = dict(quelle.config or {})
+        if getattr(adapter, "braucht_bestand", False):
+            # tirol.at: Detailseiten zuerst fuer Loipen, deren Laenge noch unbekannt ist
+            config["_mit_laenge"] = set(session.scalars(select(Loipe.source_key).where(
+                Loipe.quelle_id == quelle.id, Loipe.laenge_km.is_not(None))))
+        ergebnis = adapter.run(quelle.base_url, config, fetcher)
     except Exception as e:  # eine kaputte Quelle darf die anderen nicht stoppen
         log.exception("Quelle %s fehlgeschlagen", quelle.key)
         lauf.fehler = f"{type(e).__name__}: {e}"

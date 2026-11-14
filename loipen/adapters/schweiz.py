@@ -1,4 +1,4 @@
-"""Adapter N: Schneebericht von Schweiz Tourismus (snow.myswitzerland.com), HTML, eine Seite je Ort (E-20, P25).
+"""Adapter N: Schneebericht von Schweiz Tourismus (snow.myswitzerland.com), HTML, eine Seite je Ort (E-20, P29).
 
 Befund der Schnappschuesse vom 13.11.2026 (tests/fixtures/schweiz/2026-11-13/myswitzerland/):
 - Die Liste /schneebericht/langlauf/?p=1..5 fuehrt 126 Langlauforte, 30 je Seite. Die Seitenlinks der

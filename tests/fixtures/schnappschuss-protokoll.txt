@@ -459,3 +459,16 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 # Lauf 2026-11-13 23:09 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 404 https://dataset.api.hub.geosphere.at/robots.txt
 200     4513 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_gastein.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15402,15509,18111,12513,78,149&start=2026-10-29T00:00&end=2026-11-11T00:00
+# Lauf 2026-11-13 21:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tirol.at/robots.txt
+200   338266 tests/fixtures/tirol/2026-11-13/loipen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen
+200   111159 tests/fixtures/tirol/2026-11-13/loipen_offen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN
+200   112283 tests/fixtures/tirol/2026-11-13/loipen_offen_listpos2.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=2
+200    85927 tests/fixtures/tirol/2026-11-13/loipen_offen_listpos3.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=3
+200    90227 tests/fixtures/tirol/2026-11-13/loipen_offen_listpos4.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=4
+200   102869 tests/fixtures/tirol/2026-11-13/snowfactory-loipe-seefeld.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/snowfactory-loipe-seefeld
+200   170615 tests/fixtures/tirol/2026-11-13/a2-snowfarmingloipe-leutasch.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/a2-snowfarmingloipe-leutasch
+200   102823 tests/fixtures/tirol/2026-11-13/opening-loipe-sedlsee-small.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/opening-loipe-sedlsee-small
+200    94166 tests/fixtures/tirol/2026-11-13/hoehenloipe-pitztaler-gletscher.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/hoehenloipe-am-pitztaler-gletscher-im-herbst-fuer-gruppen-mit-voranmeldung
+200 https://www.seefeld.com/robots.txt
+200  5845516 tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html

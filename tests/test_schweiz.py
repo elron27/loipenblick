@@ -1,4 +1,4 @@
-"""Schweiz, Liechtenstein, Gastein, Ramsau (E-20): Schweiz Tourismus (P25), tourinfra-Regionen (P26).
+"""Schweiz, Liechtenstein, Gastein, Ramsau (E-20): Schweiz Tourismus (P29), tourinfra-Regionen (P26).
 
 Schnappschuesse vom 13.11.2026 (Workflow Schnappschuss, Runden 10 und 11):
 - tests/fixtures/myswitzerland/2026-11-13/<ort>-<id>.html: 110 Ortsseiten von snow.myswitzerland.com
@@ -55,10 +55,10 @@ def seite(name: str) -> str:
     return next(MYS.glob(f"{name}-[0-9]*.html")).read_text(encoding="utf-8")
 
 
-# ---------- P25: Schweiz Tourismus ----------
+# ---------- P29: Schweiz Tourismus ----------
 
-@pytest.mark.req("P25", ak=1)
-def test_p25_alle_orte_mit_langlauf_werden_gelesen():
+@pytest.mark.req("P29", ak=1)
+def test_p29_alle_orte_mit_langlauf_werden_gelesen():
     erg, fetcher = lauf("myswitzerland")
     orte = quelle("myswitzerland")["config"]["orte"]
     assert len(fetcher.abgerufen) == len(orte) == 100  # eine Seite je Ort
@@ -75,8 +75,8 @@ def test_p25_alle_orte_mit_langlauf_werden_gelesen():
     assert all(d.quelle_aktualisiert_at is not None for d in erg.loipen)
 
 
-@pytest.mark.req("P25", ak=2)
-def test_p25_klassisch_und_skating_werden_zusammengefuehrt():
+@pytest.mark.req("P29", ak=2)
+def test_p29_klassisch_und_skating_werden_zusammengefuehrt():
     s = seite("leukerbad")
     zeilen = lese_loipen(s)
     assert zeilen and {z["typ"] for z in zeilen} <= {"Klassisch", "Skating", "Klassisch und Skating"}
@@ -92,8 +92,8 @@ def test_p25_klassisch_und_skating_werden_zusammengefuehrt():
     assert not [b for d in erg.loipen for b in d.unbekannte_begriffe]
 
 
-@pytest.mark.req("P25", ak=3)
-def test_p25_ort_ohne_einzelne_loipen_bekommt_das_loipennetz():
+@pytest.mark.req("P29", ak=3)
+def test_p29_ort_ohne_einzelne_loipen_bekommt_das_loipennetz():
     s = seite("val-muestair")
     assert lese_loipen(s) == []
     netz = lese_netz(s)
@@ -108,13 +108,13 @@ def test_p25_ort_ohne_einzelne_loipen_bekommt_das_loipennetz():
     assert d.quelle_aktualisiert_at.tzinfo == ZoneInfo("Europe/Zurich")
 
 
-def test_p25_ortsdaten_und_stand():
+def test_p29_ortsdaten_und_stand():
     s = (FIXTURES / "recherche-2026-11-13/schweiz/myswitzerland-snow/davos-69.html").read_text(encoding="utf-8")
     assert ort_daten(s) == {"name": "Davos", "region": "Graubünden", "lat": 46.7976, "lon": 9.8273, "hoehe_m": 1560}
     assert stand(s) == datetime(2026, 11, 13, 8, 0, tzinfo=ZoneInfo("Europe/Zurich"))
 
 
-def test_p25_zwei_ortsseiten_mit_denselben_loipen_zaehlen_einmal():
+def test_p29_zwei_ortsseiten_mit_denselben_loipen_zaehlen_einmal():
     erg, _ = lauf("myswitzerland")
     namen = [(d.gebiet_slug, d.name) for d in erg.loipen]
     assert len(namen) == len(set(namen))
@@ -122,7 +122,7 @@ def test_p25_zwei_ortsseiten_mit_denselben_loipen_zaehlen_einmal():
     assert len([n for g, n in namen if g == "andermatt-sedrun"]) == 19
 
 
-def test_p25_ort_ohne_langlauf_abschnitt_gibt_warnung_statt_abbruch():
+def test_p29_ort_ohne_langlauf_abschnitt_gibt_warnung_statt_abbruch():
     q = quelle("myswitzerland")
     erste = q["config"]["orte"][0]["pfad"].strip("/")
     erg, _ = lauf("myswitzerland", ersetze={erste: "<html><body>Wartung</body></html>"})
@@ -130,7 +130,7 @@ def test_p25_ort_ohne_langlauf_abschnitt_gibt_warnung_statt_abbruch():
     assert len(erg.loipen) < 340
 
 
-def test_p25_englische_seite_wird_ebenso_gelesen():
+def test_p29_englische_seite_wird_ebenso_gelesen():
     englisch = (FIXTURES / "recherche-2026-11-13/schweiz/myswitzerland-snow/engadin-65.html").read_text(encoding="utf-8")
     zeilen = lese_loipen(englisch)
     assert len(zeilen) > 100 and zeilen[0]["typ"] == "Classic" and zeilen[0]["zustand"] == "closed"
@@ -179,8 +179,8 @@ def test_p26_schweizer_orte_nur_einmal_abgefragt():
 
 # ---------- Gebiete ----------
 
-@pytest.mark.req("P25", ak=4)
-def test_p25_gebiete_der_schweiz_mit_lage_land_und_grenzhinweis():
+@pytest.mark.req("P29", ak=4)
+def test_p29_gebiete_der_schweiz_mit_lage_land_und_grenzhinweis():
     assert pruefe(sources(), gebiete_yaml()) == []
     g, r = gebiete(), regionen()
     ch = [x for x in g.values() if r[x["region"]]["land"] in ("CH", "LI")]

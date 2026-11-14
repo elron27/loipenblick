@@ -42,7 +42,8 @@ def test_u34_befahrbar_fuehrt_zur_liste_der_offenen(seite):
     assert seite.locator('.tog[data-k="offen"][aria-pressed="true"]').count() == 1
     stati = set(seite.locator(".lp .st").all_inner_texts())
     assert stati and stati <= {"Offen", "Eingeschränkt"}
-    assert seite.locator(".lp").count() == zahl
+    # U44: offene Sonderloipen stehen mit Kennzeichen hinten in der Liste, zaehlen aber nicht als befahrbar
+    assert seite.locator(".lp:not(.sonderlp)").count() == zahl
 
 
 UEBERLAPPUNG = """() => {

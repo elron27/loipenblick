@@ -307,6 +307,9 @@ quellen:
       radius_km: 15
       # 701 Loipen / 40 je Lauf: alle Detailseiten in gut 6 Tagen (3 Laeufe am Tag), dann im Wechsel neu
       details_pro_lauf: 40
+      # P25: Laenge, Stil, Schwierigkeit aller offenen Loipen kommen aus der Liste der geoeffneten (6 je Seite);
+      # hoechstens so viele Seiten je Lauf. Detailseiten gehen zuerst an Loipen ohne bekannte Laenge.
+      offen_seiten_max: 20
       gebiete: [kufstein, thiersee, langkampfen, bad-haering, schwoich, ebbs, niederndorf,
                 walchsee, koessen, schwendt, ellmau, going, soell,
                 brixental, hohe-salve, pillerseetal, st-johann-in-tirol, bayrischzell,
@@ -651,7 +654,7 @@ quellen:
         Scharnitz: seefeld
         Mösern: seefeld
 
-  # Schweiz Tourismus (E-20, P25): alle uebrigen Langlauforte der Schweiz und Liechtenstein, eine Seite je Ort,
+  # Schweiz Tourismus (E-20, P29): alle uebrigen Langlauforte der Schweiz und Liechtenstein, eine Seite je Ort,
   # Daten von infosnow.ch. Ohne Koordinate je Loipe (Lage = Ort). Engadin St. Moritz, Davos, Klosters und
   # Goms fehlen hier, weil tourinfra sie genauer liefert. Rang 3.
   - key: myswitzerland

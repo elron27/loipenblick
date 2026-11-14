@@ -47,6 +47,17 @@ geben ihn nur auf sicheren Seiten frei (https oder localhost); unter `http://<NA
 deshalb nur die Ortssuche (bekannte Orte sofort, andere Orte und Postleitzahlen online über
 photon.komoot.io). Über https, etwa mit `tailscale serve` oder später auf dem Webspace, klappt beides.
 
+**Rahmendaten und Sonderloipen (U43, U44).** Gebietsseite, Liste (je Region) und Startseite zeigen, wie viele
+Loipen und Kilometer es gibt und wie viele davon offen sind; Loipen ohne Längenangabe werden mitgezählt und genannt.
+Snowfarming-, SnowFactory-, Opening-, Gletscher- und Gruppenloipen (erkannt am Namen, `loipen/sonderloipen.py`)
+tragen ein Kennzeichen und zählen nicht als befahrbar. Länge und Stil der offenen tirol.at-Loipen kommen bei jedem
+Lauf aus der Liste der geöffneten Loipen, Detailseiten zuerst für Loipen ohne Länge (P25).
+
+**Seite lange offen (U42).** Der Worker löscht bei jedem Lauf die Datendateien des vorigen Stands. Eine Seite, die am
+Handy stundenlang offen war, lädt deshalb beim Zurückkehren (nach 10 Minuten) und bei einer fehlenden Datei den neuen
+Stand nach. Die Detailseite einer Loipe erscheint sofort, der Streckenverlauf kommt nach; scheitert eine Ansicht,
+steht eine Fehlermeldung mit Knopf zum Neuladen da.
+
 **Statistik (U19, U37–U39).** Die Seite `#/statistik` zeigt pro Winter (1. November bis 30. April),
 an wie vielen Tagen die Loipen befahrbar waren, den Saisonverlauf, Ranglisten der Gebiete und Loipen und
 wie verlässlich die Quellen melden. Gerechnet wird bei jedem Lauf auf dem NAS (`loipen/statistik.py`) aus der
