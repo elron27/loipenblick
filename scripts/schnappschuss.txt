@@ -1,13 +1,12 @@
-# <zielpfad> <url> -- Runde 15 (14.11.2026): Loipenberichte Steiermark (steiermark.com), Lesachtal, Lungau-Widget
-tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland
-tests/fixtures/recherche-2026-11-14/steiermark/tour-kulm-loipe.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland/Kulm-Loipe-M1_tour_1430746
-tests/fixtures/recherche-2026-11-14/steiermark/ausseerland-langlaufen.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen
-tests/fixtures/recherche-2026-11-14/steiermark/tour-schwarzsee.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren/Schwarzsee-Hochmoor-Loipe_tour_60493647
-tests/fixtures/recherche-2026-11-14/steiermark/langlaufregionen.html https://www.steiermark.com/de/Steiermark/Aktiv-in-der-Natur/Langlaufen/Langlaufregionen
-tests/fixtures/recherche-2026-11-14/lesachtal/langlaufen.html https://www.lesachtal.com/de/Winter-World/Langlaufen
-tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-lt.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-lt.pdf
-tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-la.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-la.pdf
-tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-ls.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ls.pdf
-tests/fixtures/recherche-2026-11-14/bergfex-widget/loipen-115.js https://content.bergfex.at/loipen/115/
-tests/fixtures/recherche-2026-11-14/salzburgerland/lungau.html https://www.salzburgerland.com/de/?p=671483
-tests/fixtures/recherche-2026-11-14/turracherhoehe/home.html https://www.turracherhoehe.at/de/winter
+# <zielpfad> <url> -- Runde 16 (14.11.2026): steiermark.com Loipenberichte, GeoSphere-Stationen Steiermark/Lungau
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=12811,9811,9700,9643,7221,13116,15920,15912,18402,18805,15712,15702,15721,9925&start=2026-10-29T00:00&end=2026-11-11T00:00
+tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland-p2.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland?page=2
+tests/fixtures/recherche-2026-11-14/steiermark/murau-langlaufen.html https://www.steiermark.com/de/Murau/Aktivitaeten/Langlaufen
+tests/fixtures/recherche-2026-11-14/steiermark/schladming-langlaufen.html https://www.steiermark.com/de/Schladming-Dachstein/Region/Winter/Langlaufen
+tests/fixtures/recherche-2026-11-14/steiermark/isd-seckau.html https://www.steiermark.com/de/Murtal/Aktivitaeten/Ausflugsziele/Langlaufloipe-Seckau_isd_2195741
+tests/fixtures/recherche-2026-11-14/steiermark/isd-hebalm.html https://www.steiermark.com/de/Region-Graz/Region/Kultur-und-Ausflugsziele/Ausflugsziele/Langlaufzentrum-Hebalm_isd_26690579
+tests/fixtures/recherche-2026-11-14/steiermark/isd-almenland.html https://www.steiermark.com/de/Oststeiermark/Urlaub-planen/Ausflugsziele/Almenland-Loipen_isd_5921363
+tests/fixtures/recherche-2026-11-14/steiermark/isd-tauplitz.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Urlaub-planen/Ausflugsziele/Langlauf-Loipen-Tauplitz-Tauplitzalm_isd_4161672
+tests/fixtures/recherche-2026-11-14/steiermark/isd-weirerteich.html https://www.steiermark.com/de/Murau/Urlaub-planen/Ausflugsziele/Loipenzentrum-Weirerteich_isd_21236485
+tests/fixtures/recherche-2026-11-14/steiermark/gesaeuse-hall.html https://www.steiermark.com/de/Gesaeuse/Urlaub-planen/Ausflugsziele/Langlaufzentrum-Hall-bei-Admont_isd_5918025
+tests/fixtures/recherche-2026-11-14/outdooractive/spittal.html https://www.outdooractive.com/de/langlauf-loipen/spittal-an-der-drau/langlauf-loipen-im-bezirk-spittal-an-der-drau/
