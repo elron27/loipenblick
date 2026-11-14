@@ -1,2 +1,3 @@
-# <zielpfad> <url> -- Runde 13 (13.11.2026): GeoSphere-Stationen mit Schneehoehe fuer Gastein (gleicher Zeitraum wie 2026-11-12)
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_gastein.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15402,15509,18111,12513,78,149&start=2026-10-29T00:00&end=2026-11-11T00:00
+# <zielpfad> <url> -- Runde 20 (14.11.2026): Loipenuebersicht Lungau = contwise-Karte maps.lungau.at
+tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
+tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/

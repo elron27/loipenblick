@@ -117,8 +117,8 @@ def test_p13_abdeckung_je_region(seite):
     seite.wait_for_selector("table.tab")
     zeilen = seite.locator("table.tab tbody tr").all_inner_texts()
     # 10 Regionen der Stufe 1, 9 weitere fuer ganz Tirol, 7 in Suedtirol/Venetien, 17 aus E-20 (Schweiz, Gastein, Ramsau),
-    # 2 in Kaernten (E-21)
-    assert len(zeilen) == 45
+    # 2 in Kaernten (E-21), 8 in der Steiermark und im Lungau (E-22)
+    assert len(zeilen) == 53
     berchtesgaden = next(z for z in zeilen if z.startswith("Berchtesgadener Land")).split("\t")
     assert berchtesgaden[1:] == ["5", "0", "0", "5", "0"]
     assert "Tirol Werbung (tirol.at)" in text(seite)

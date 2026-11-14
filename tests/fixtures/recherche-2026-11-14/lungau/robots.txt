@@ -1,0 +1,8 @@
+user-agent:*
+disallow:
+disallow:/contao/
+disallow:/_contao/
+
+sitemap:https://www.lungau.at/sitemap.xml
+sitemap:https://www.lungau.at/feratel-de.xml
+sitemap:https://www.lungau.at/feratel-en.xml

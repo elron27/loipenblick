@@ -472,3 +472,114 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200    94166 tests/fixtures/tirol/2026-11-13/hoehenloipe-pitztaler-gletscher.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/hoehenloipe-am-pitztaler-gletscher-im-herbst-fuer-gruppen-mit-voranmeldung
 200 https://www.seefeld.com/robots.txt
 200  5845516 tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
+# Lauf 2026-11-14 15:20 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.lungau.at/robots.txt
+200   110669 tests/fixtures/recherche-2026-11-14/lungau/loipenbericht.html https://www.lungau.at/de/winter/abseits-der-piste/langlaufen/loipenbericht
+200   111014 tests/fixtures/recherche-2026-11-14/lungau/loipenuebersicht.html https://www.lungau.at/de/winter/abseits-der-piste/langlaufen/loipenuebersicht
+200 https://www.schladming-dachstein.at/robots.txt
+200   460247 tests/fixtures/recherche-2026-11-14/schladming/geoeffnete-loipen.html https://www.schladming-dachstein.at/de/aktivitaeten/langlaufen/geoeffnete-loipen
+200 https://www.seeundberg.at/robots.txt
+200   177159 tests/fixtures/recherche-2026-11-14/seeundberg/langlaufen.html https://www.seeundberg.at/abseits-der-pisten/langlaufen/
+200 https://www.steiermark.com/robots.txt
+200   356154 tests/fixtures/recherche-2026-11-14/steiermark/hochsteiermark-loipen.html https://www.steiermark.com/de/Hochsteiermark/Region/Naturlandschaften-entdecken/Langlaufen/Loipen
+200   333161 tests/fixtures/recherche-2026-11-14/steiermark/murtal-langlaufen.html https://www.steiermark.com/de/Murtal/Aktivitaeten/Winter/Langlaufen
+200   383226 tests/fixtures/recherche-2026-11-14/steiermark/tour-mariazellerland.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal/Mariazellerland-Loipe-Klassisch-und-Skating_tour_854442
+404   169900 tests/fixtures/recherche-2026-11-14/steiermark/ausseerland-langlaufen.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen-Pillar-Page
+404 https://www.kaernten.at/robots.txt
+200   105859 tests/fixtures/recherche-2026-11-14/kaernten-at/schneeberichte.html https://www.kaernten.at/service/wetter/schneeberichte/
+404 https://tools.nlw.at/robots.txt
+200  5120724 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-ws.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ws.pdf
+200 https://module.tourinfra.com/robots.txt
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/lungau.json https://module.tourinfra.com/lungau/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/salzburgerlungau.json https://module.tourinfra.com/salzburgerlungau/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/lungau-salzburg.json https://module.tourinfra.com/lungau-salzburg/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/tamsweg.json https://module.tourinfra.com/tamsweg/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/mariapfarr.json https://module.tourinfra.com/mariapfarr/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/stmichael.json https://module.tourinfra.com/stmichael/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/katschberg.json https://module.tourinfra.com/katschberg/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/steiermark.json https://module.tourinfra.com/steiermark/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/schladming-dachstein.json https://module.tourinfra.com/schladming-dachstein/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/schladmingdachstein.json https://module.tourinfra.com/schladmingdachstein/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/ausseerland.json https://module.tourinfra.com/ausseerland/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/murtal.json https://module.tourinfra.com/murtal/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/murau.json https://module.tourinfra.com/murau/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/murau-murtal.json https://module.tourinfra.com/murau-murtal/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/hochsteiermark.json https://module.tourinfra.com/hochsteiermark/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/mariazell.json https://module.tourinfra.com/mariazell/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/mariazellerland.json https://module.tourinfra.com/mariazellerland/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/erzberg-leoben.json https://module.tourinfra.com/erzberg-leoben/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/thermenland.json https://module.tourinfra.com/thermenland/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/oststeiermark.json https://module.tourinfra.com/oststeiermark/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/almenland.json https://module.tourinfra.com/almenland/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/region-graz.json https://module.tourinfra.com/region-graz/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/seeundberg.json https://module.tourinfra.com/seeundberg/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/bad-kleinkirchheim.json https://module.tourinfra.com/bad-kleinkirchheim/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/nockberge.json https://module.tourinfra.com/nockberge/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/millstaettersee.json https://module.tourinfra.com/millstaettersee/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/mallnitz.json https://module.tourinfra.com/mallnitz/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/heiligenblut.json https://module.tourinfra.com/heiligenblut/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/grossglockner.json https://module.tourinfra.com/grossglockner/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/villach.json https://module.tourinfra.com/villach/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/region-villach.json https://module.tourinfra.com/region-villach/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/woerthersee.json https://module.tourinfra.com/woerthersee/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/kaernten-mitte.json https://module.tourinfra.com/kaernten-mitte/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/lavanttal.json https://module.tourinfra.com/lavanttal/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/klopeinersee.json https://module.tourinfra.com/klopeinersee/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/carnica-rosental.json https://module.tourinfra.com/carnica-rosental/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/hohetauern.json https://module.tourinfra.com/hohetauern/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/nationalpark-hohe-tauern.json https://module.tourinfra.com/nationalpark-hohe-tauern/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-14/tourinfra/lieser-maltatal.json https://module.tourinfra.com/lieser-maltatal/inc/ajax.php?ajaxtype=getLoipenmanager
+# Lauf 2026-11-14 15:23 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.steiermark.com/robots.txt
+200   428510 tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland
+200   398023 tests/fixtures/recherche-2026-11-14/steiermark/tour-kulm-loipe.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland/Kulm-Loipe-M1_tour_1430746
+200   579311 tests/fixtures/recherche-2026-11-14/steiermark/ausseerland-langlaufen.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen
+200   314380 tests/fixtures/recherche-2026-11-14/steiermark/tour-schwarzsee.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren/Schwarzsee-Hochmoor-Loipe_tour_60493647
+200   535656 tests/fixtures/recherche-2026-11-14/steiermark/langlaufregionen.html https://www.steiermark.com/de/Steiermark/Aktiv-in-der-Natur/Langlaufen/Langlaufregionen
+200 https://www.lesachtal.com/robots.txt
+200   885889 tests/fixtures/recherche-2026-11-14/lesachtal/langlaufen.html https://www.lesachtal.com/de/Winter-World/Langlaufen
+404 https://tools.nlw.at/robots.txt
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-lt.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-lt.pdf
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-la.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-la.pdf
+404     5562 tests/fixtures/recherche-2026-11-14/nlw/wintersportbericht-ls.pdf https://tools.nlw.at/sportbericht/print/wintersportbericht-ls.pdf
+429 https://content.bergfex.at/robots.txt
+429      162 tests/fixtures/recherche-2026-11-14/bergfex-widget/loipen-115.js https://content.bergfex.at/loipen/115/
+200 https://www.salzburgerland.com/robots.txt
+200   142122 tests/fixtures/recherche-2026-11-14/salzburgerland/lungau.html https://www.salzburgerland.com/de/?p=671483
+200 https://www.turracherhoehe.at/robots.txt
+200    54428 tests/fixtures/recherche-2026-11-14/turracherhoehe/home.html https://www.turracherhoehe.at/de/winter
+# Lauf 2026-11-14 15:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     9898 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=12811,9811,9700,9643,7221,13116,15920,15912,18402,18805,15712,15702,15721,9925&start=2026-10-29T00:00&end=2026-11-11T00:00
+200 https://www.steiermark.com/robots.txt
+200   421587 tests/fixtures/recherche-2026-11-14/steiermark/loipenbericht-ausseerland-p2.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Region/Winterfrische/Langlaufen/Loipenbericht-Ausseerland?page=2
+200   361374 tests/fixtures/recherche-2026-11-14/steiermark/murau-langlaufen.html https://www.steiermark.com/de/Murau/Aktivitaeten/Langlaufen
+200   281821 tests/fixtures/recherche-2026-11-14/steiermark/schladming-langlaufen.html https://www.steiermark.com/de/Schladming-Dachstein/Region/Winter/Langlaufen
+200   386943 tests/fixtures/recherche-2026-11-14/steiermark/isd-seckau.html https://www.steiermark.com/de/Murtal/Aktivitaeten/Ausflugsziele/Langlaufloipe-Seckau_isd_2195741
+200   319267 tests/fixtures/recherche-2026-11-14/steiermark/isd-hebalm.html https://www.steiermark.com/de/Region-Graz/Region/Kultur-und-Ausflugsziele/Ausflugsziele/Langlaufzentrum-Hebalm_isd_26690579
+200   388911 tests/fixtures/recherche-2026-11-14/steiermark/isd-almenland.html https://www.steiermark.com/de/Oststeiermark/Urlaub-planen/Ausflugsziele/Almenland-Loipen_isd_5921363
+200   402272 tests/fixtures/recherche-2026-11-14/steiermark/isd-tauplitz.html https://www.steiermark.com/de/Ausseerland-Salzkammergut/Urlaub-planen/Ausflugsziele/Langlauf-Loipen-Tauplitz-Tauplitzalm_isd_4161672
+200   318138 tests/fixtures/recherche-2026-11-14/steiermark/isd-weirerteich.html https://www.steiermark.com/de/Murau/Urlaub-planen/Ausflugsziele/Loipenzentrum-Weirerteich_isd_21236485
+200   313209 tests/fixtures/recherche-2026-11-14/steiermark/gesaeuse-hall.html https://www.steiermark.com/de/Gesaeuse/Urlaub-planen/Ausflugsziele/Langlaufzentrum-Hall-bei-Admont_isd_5918025
+200 https://www.outdooractive.com/robots.txt
+404    44933 tests/fixtures/recherche-2026-11-14/outdooractive/spittal.html https://www.outdooractive.com/de/langlauf-loipen/spittal-an-der-drau/langlauf-loipen-im-bezirk-spittal-an-der-drau/
+# Lauf 2026-11-14 15:27 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.steiermark.com/robots.txt
+200   354632 tests/fixtures/recherche-2026-11-14/steiermark/murau-touren-langlauf.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren?tourCategory=46459526
+200   434266 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526
+200   434504 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf-p2.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=2
+200   434943 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal
+# Lauf 2026-11-14 15:28 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.steiermark.com/robots.txt
+200   436654 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p3.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=3
+200   435850 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p4.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=4
+200   434222 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p5.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=5
+200   405338 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p6.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=6
+200   374786 tests/fixtures/steiermark/2026-11-14/tourenportal-langlauf-p7.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=7
+# Lauf 2026-11-14 15:30 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     9928 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark2.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=13515,10401,10415,9911,9801,10111,10005,15901,16015,15715,15610,13120,7110,10200&start=2026-10-29T00:00&end=2026-11-11T00:00
+# Lauf 2026-11-14 15:56 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://maps.lungau.at/robots.txt
+200  2009403 tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
+200     3188 tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/

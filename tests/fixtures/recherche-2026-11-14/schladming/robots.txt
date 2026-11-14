@@ -1,0 +1,28 @@
+User-agent: *
+Disallow: ?search
+Disallow: ?_dc=
+
+Sitemap: https://www.schladming-dachstein.at/sitemap.site_1.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tour.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.blog_schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.press_schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_events_en-tosc-config-schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_events_de-tosc-config-schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_accommodations_de-tosc-config-schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_accommodations_en-tosc-config-schladming.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_infrastructures_de-tosc-config-tvb.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_infrastructures_en-tosc-config-tvb.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_addservices_de-tosc-config-tvb.xml
+Sitemap: https://www.schladming-dachstein.at/sitemap.tosc_addservices_en-tosc-config-tvb.xml
+
+User-agent: facebookexternalhit
+Disallow: /oauth-server
+
+User-agent: Facebot
+Disallow: /oauth-server
+
+User-agent: meta-externalagent
+Disallow: /oauth-server
+
+User-agent: meta-externalfetcher
+Disallow: /oauth-server
