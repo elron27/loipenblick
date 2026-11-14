@@ -12,6 +12,7 @@ acceptance-criteria:
   - Die Gebietsseite zeigt Loipen offen (x von y), km offen (x von y km), gespurte km laut Quelle und für wie viele Loipen die Länge bekannt ist; offene Loipen ohne Länge werden eigens genannt.
   - Die Liste zeigt je Region die gleichen Zahlen für alle Loipen der Region, die Karten der Startseite je Gebiet.
   - Fehlt einer Loipe die Länge, eine Dublette derselben Loipe aus einer anderen Quelle nennt sie aber, gilt diese Länge mit Angabe der Quelle.
+  - Meldet eine Quelle für ein Loipennetz nur „x von y Loipen offen“ (Wintersportbericht), zählt das Netz mit y Loipen und x offenen statt als eine Loipe; die Gebietsseite sagt, dass diese Loipen nur gezählt sind.
 packages:
   - { id: 7b29aa02-4a82-499c-9654-8d13c0c2d64c, version: n2:22b0303ec030d854, title: Oberfläche }
 derives-from:

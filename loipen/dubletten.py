@@ -47,10 +47,18 @@ class Eintrag:
     region: str = ""
 
 
+def _ohne_loipe(t: str) -> str:
+    """P30: "Weltcuploipe" = "Weltcup Loipe"; das angehaengte "loipe" zaehlt wie das Fuellwort."""
+    for endung in ("loipen", "loipe"):
+        if t.endswith(endung) and len(t) - len(endung) >= 3:
+            return t[: -len(endung)]
+    return t
+
+
 def woerter(name: str, gebiet_name: str = "") -> list[str]:
     ort = set(slugify(gebiet_name).split("-")) if gebiet_name else set()
-    return [t for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort and not NUMMER.fullmatch(t)
-            and not KENNUNG.fullmatch(t)]
+    return [_ohne_loipe(t) for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort
+            and not NUMMER.fullmatch(t) and not KENNUNG.fullmatch(t)]
 
 
 def kennungen(name: str) -> set[str]:

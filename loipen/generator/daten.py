@@ -1,6 +1,7 @@
 """Daten fuer die statische Seite: ein Index und je Region eine Datei mit Gebieten, Loipen,
 Wetter und Strecken. Die Seite liest nur diese JSON-Dateien (B7), keine Datenbank."""
 
+import json
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -71,7 +72,24 @@ def _loipe(loipe: Loipe, zustaende: list[Zustand], quelle: Quelle, jetzt: dateti
         "historie": _historie(zustaende, jetzt.astimezone(BERLIN).date()),
         "strecke_hinweis": None if loipe.verlauf else (quelle.config or {}).get("strecke_hinweis"),
         "sonder": sonderloipe(loipe.name),  # Snowfarming, Opening, Gletscher, nur fuer Gruppen
+        # U43 AK 4: ein Loipennetz, fuer das die Quelle nur "x von y Loipen offen" meldet (P28)
+        "netz": _netz(z.rohtext) if z else None,
     }
+
+
+def _netz(rohtext: str | None) -> dict | None:
+    """{"offen": x, "alle": y} aus dem Rohtext eines Loipennetzes (NLW-Wintersportbericht), sonst None."""
+    if not rohtext or not rohtext.startswith("{"):
+        return None
+    try:
+        roh = json.loads(rohtext)
+    except ValueError:
+        return None
+    if not isinstance(roh, dict) or not isinstance(roh.get("offen"), int) or not isinstance(roh.get("alle"), int):
+        return None
+    if roh["alle"] <= 0 or not 0 <= roh["offen"] <= roh["alle"]:
+        return None
+    return {"offen": roh["offen"], "alle": roh["alle"]}
 
 
 def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:

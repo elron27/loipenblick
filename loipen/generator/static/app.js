@@ -31,6 +31,12 @@ function kmZahlen(loipen) {
   var z = {n: 0, offen: 0, sonder: 0, km: 0, mitLaenge: 0, kmOffen: 0, offenOhneLaenge: 0, gespurt: 0, mitGespurt: 0};
   loipen.forEach(function (l) {
     if (l.sonder) { if (offenGemeldet(l)) z.sonder++; return; }  // Sonderloipen zaehlen nicht zum Netz
+    if (l.netz) {
+      // U43 AK 4: Loipennetz mit "x von y Loipen offen" (Wintersportbericht) zaehlt mit y Loipen ohne Laenge
+      z.n += l.netz.alle; z.netz = (z.netz || 0) + l.netz.alle;
+      if (l.status !== "unbekannt") { z.offen += l.netz.offen; z.offenOhneLaenge += l.netz.offen; }
+      return;
+    }
     z.n++;
     if (l.laenge_km != null) { z.km += l.laenge_km; z.mitLaenge++; }
     if (befahrbar(l)) { z.offen++; if (l.laenge_km != null) z.kmOffen += l.laenge_km; else z.offenOhneLaenge++; }
@@ -380,6 +386,7 @@ function rahmenHtml(z) {
     '<div class="glass"><small>km offen</small><b>' + (z.mitLaenge ? zahl(z.kmOffen) + " von " + zahl(z.km) + " km" : "unbekannt") + "</b>" + (z.offenOhneLaenge ? '<span class="fine">+ ' + z.offenOhneLaenge + " offene ohne Längenangabe</span>" : "") + "</div>" +
     '<div class="glass"><small>Gespurt laut Quelle</small><b>' + (z.mitGespurt ? zahl(z.gespurt) + " km" : z.offen ? "keine Angabe" : "0 km") + "</b></div>" +
     '<div class="glass"><small>Länge bekannt</small><b>' + z.mitLaenge + " von " + z.n + " Loipen</b></div></div>" +
+    (z.netz ? '<p class="fine" id="nurgezaehlt">' + z.netz + " Loipe" + (z.netz > 1 ? "n" : "") + " kennt die Quelle nur als Zahl im Bericht („x von y Loipen offen“), ohne Namen und Länge.</p>" : "") +
     (z.sonder ? '<p class="fine">Dazu ' + z.sonder + " offene Sonderloipe" + (z.sonder > 1 ? "n" : "") + " (Snowfarming, Opening, Gletscher oder nur für Gruppen), nicht mitgezählt.</p>" : "");
 }
 function seiteGebiet(slug) {

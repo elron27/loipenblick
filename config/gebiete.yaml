@@ -197,6 +197,39 @@ regionen:
   name: Weissensee
   land: AT
   bundesland: Kärnten
+# Steiermark und Lungau (P30, 14.11.2026): Startorte des Tourenportals von Steiermark Tourismus
+- slug: ausseerland
+  name: Ausseerland-Salzkammergut
+  land: AT
+  bundesland: Steiermark
+- slug: gesaeuse
+  name: Gesäuse und Liezen
+  land: AT
+  bundesland: Steiermark
+- slug: murau
+  name: Region Murau
+  land: AT
+  bundesland: Steiermark
+- slug: murtal
+  name: Murtal
+  land: AT
+  bundesland: Steiermark
+- slug: hochsteiermark
+  name: Hochsteiermark
+  land: AT
+  bundesland: Steiermark
+- slug: oststeiermark
+  name: Oststeiermark
+  land: AT
+  bundesland: Steiermark
+- slug: lipizzanerheimat
+  name: Lipizzanerheimat
+  land: AT
+  bundesland: Steiermark
+- slug: lungau
+  name: Salzburger Lungau
+  land: AT
+  bundesland: Salzburg
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -2892,4 +2925,306 @@ gebiete:
   wetterstation:
     id: '19700'
     name: Dellach im Drautal
+    dienst: geosphere
+# Steiermark und Lungau (P30, 14.11.2026): Lage und Hoehe der Startorte gerundet (OpenStreetMap),
+# Wetter = naechste GeoSphere-Station mit Schneehoehe.
+- slug: schladming
+  name: Schladming
+  hoehe_m: 745
+  region: schladming-dachstein
+  lat: 47.394
+  lon: 13.687
+  tourist_url: https://www.schladming-dachstein.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '12711'
+    name: Ramsau am Dachstein
+    dienst: geosphere
+- slug: haus-im-ennstal
+  name: Haus im Ennstal
+  hoehe_m: 740
+  region: schladming-dachstein
+  lat: 47.41
+  lon: 13.767
+  tourist_url: https://www.schladming-dachstein.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '12711'
+    name: Ramsau am Dachstein
+    dienst: geosphere
+- slug: groebminger-land
+  name: Gröbminger Land
+  hoehe_m: 770
+  region: schladming-dachstein
+  lat: 47.445
+  lon: 13.902
+  tourist_url: https://www.schladming-dachstein.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9811'
+    name: Irdning-Gumpenstein
+    dienst: geosphere
+- slug: grimming-donnersbachtal
+  name: Grimming-Donnersbachtal
+  hoehe_m: 980
+  region: schladming-dachstein
+  lat: 47.403
+  lon: 14.135
+  tourist_url: https://www.schladming-dachstein.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9811'
+    name: Irdning-Gumpenstein
+    dienst: geosphere
+- slug: bad-mitterndorf
+  name: Bad Mitterndorf und Tauplitz
+  hoehe_m: 810
+  region: ausseerland
+  lat: 47.556
+  lon: 13.934
+  tourist_url: https://www.ausseerland.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9700'
+    name: Bad Mitterndorf
+    dienst: geosphere
+- slug: bad-aussee
+  name: Bad Aussee
+  hoehe_m: 660
+  region: ausseerland
+  lat: 47.609
+  lon: 13.782
+  tourist_url: https://www.ausseerland.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9643'
+    name: Bad Aussee
+    dienst: geosphere
+- slug: altaussee
+  name: Altaussee
+  hoehe_m: 720
+  region: ausseerland
+  lat: 47.638
+  lon: 13.762
+  tourist_url: https://www.ausseerland.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9643'
+    name: Bad Aussee
+    dienst: geosphere
+- slug: grundlsee
+  name: Grundlsee
+  hoehe_m: 710
+  region: ausseerland
+  lat: 47.629
+  lon: 13.84
+  tourist_url: https://www.ausseerland.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9643'
+    name: Bad Aussee
+    dienst: geosphere
+- slug: admont
+  name: Admont
+  hoehe_m: 640
+  region: gesaeuse
+  lat: 47.575
+  lon: 14.461
+  tourist_url: https://www.gesaeuse.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9911'
+    name: Hall bei Admont
+    dienst: geosphere
+- slug: ardning
+  name: Ardning
+  hoehe_m: 690
+  region: gesaeuse
+  lat: 47.592
+  lon: 14.364
+  tourist_url: https://www.gesaeuse.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9911'
+    name: Hall bei Admont
+    dienst: geosphere
+- slug: liezen
+  name: Liezen
+  hoehe_m: 660
+  region: gesaeuse
+  lat: 47.567
+  lon: 14.24
+  tourist_url: https://www.steiermark.com/de/Schladming-Dachstein
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '9801'
+    name: Aigen im Ennstal
+    dienst: geosphere
+- slug: murau-stadt
+  name: Murau
+  hoehe_m: 830
+  region: murau
+  lat: 47.109
+  lon: 14.17
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '15912'
+    name: Stolzalpe
+    dienst: geosphere
+- slug: kreischberg
+  name: St. Georgen am Kreischberg
+  hoehe_m: 860
+  region: murau
+  lat: 47.106
+  lon: 14.102
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '15912'
+    name: Stolzalpe
+    dienst: geosphere
+- slug: krakau
+  name: Krakau
+  hoehe_m: 1180
+  region: murau
+  lat: 47.177
+  lon: 14.033
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '15912'
+    name: Stolzalpe
+    dienst: geosphere
+- slug: lachtal
+  name: Lachtal (Oberwölz)
+  hoehe_m: 1600
+  region: murau
+  lat: 47.258
+  lon: 14.378
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '15912'
+    name: Stolzalpe
+    dienst: geosphere
+- slug: st-peter-am-kammersberg
+  name: St. Peter am Kammersberg
+  hoehe_m: 810
+  region: murau
+  lat: 47.186
+  lon: 14.215
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '15912'
+    name: Stolzalpe
+    dienst: geosphere
+- slug: muehlen
+  name: Mühlen
+  hoehe_m: 960
+  region: murau
+  lat: 47.034
+  lon: 14.508
+  tourist_url: https://www.steiermark.com/de/Murau
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '16015'
+    name: Neumarkt
+    dienst: geosphere
+- slug: turracher-hoehe
+  name: Turracher Höhe
+  hoehe_m: 1760
+  region: murau
+  lat: 46.915
+  lon: 13.876
+  tourist_url: https://www.turracherhoehe.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '18402'
+    name: Flattnitz
+    dienst: geosphere
+- slug: hohentauern
+  name: Hohentauern
+  hoehe_m: 1270
+  region: murtal
+  lat: 47.433
+  lon: 14.48
+  tourist_url: https://www.steiermark.com/de/Murtal
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '13116'
+    name: Seckau
+    dienst: geosphere
+- slug: wildalpen
+  name: Wildalpen
+  hoehe_m: 610
+  region: hochsteiermark
+  lat: 47.655
+  lon: 14.98
+  tourist_url: https://www.steiermark.com/de/Hochsteiermark
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '10005'
+    name: Mooslandl
+    dienst: geosphere
+- slug: rettenegg
+  name: Rettenegg (Hochwechsel)
+  hoehe_m: 850
+  region: hochsteiermark
+  lat: 47.528
+  lon: 15.779
+  tourist_url: https://www.steiermark.com/de/Hochsteiermark
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '13515'
+    name: Fischbach
+    dienst: geosphere
+- slug: st-jakob-im-walde
+  name: St. Jakob im Walde
+  hoehe_m: 1000
+  region: oststeiermark
+  lat: 47.467
+  lon: 15.795
+  tourist_url: https://www.steiermark.com/de/Oststeiermark
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '13515'
+    name: Fischbach
+    dienst: geosphere
+- slug: teichalm
+  name: Teichalm und Sommeralm
+  hoehe_m: 1200
+  region: oststeiermark
+  lat: 47.354
+  lon: 15.468
+  tourist_url: https://www.steiermark.com/de/Oststeiermark
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '13515'
+    name: Fischbach
+    dienst: geosphere
+- slug: hebalm
+  name: Hebalm
+  hoehe_m: 1350
+  region: lipizzanerheimat
+  lat: 46.94
+  lon: 15.02
+  tourist_url: https://www.steiermark.com/de/Region-Graz
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
+  wetterstation:
+    id: '18805'
+    name: Preitenegg
+    dienst: geosphere
+- slug: prebersee
+  name: Prebersee (Tamsweg)
+  hoehe_m: 1510
+  region: lungau
+  lat: 47.183
+  lon: 13.857
+  tourist_url: https://www.lungau.at
+  grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn, Tauern-Maut) mit Vignette.'
+  wetterstation:
+    id: '15712'
+    name: Tamsweg
     dienst: geosphere

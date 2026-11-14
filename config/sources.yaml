@@ -16,6 +16,7 @@
 #   dolomiti     Loipentabelle von Dolomiti NordicSki (Status in 5 Stufen, Laenge, ohne Datum und Lage)
 #   opendatahub  Open Data Hub Suedtirol (JSON, CC0: Lage, Stile, offen/geschlossen mit Aenderungsdatum)
 #   nlw         Wintersportbericht Nassfeld-Pressegger See (PDF, offene Loipen je Ort, Kaernten)
+#   steiermark  Tourenportal von Steiermark Tourismus, Kategorie Langlauf (Status-Badge je Loipe, ohne Datum)
 #   stanton     Loipenzustand von St. Anton am Arlberg (Status, Schwierigkeit, Stand der Meldung)
 #   myswitzerland Schneebericht von Schweiz Tourismus, eine Seite je Ort (Daten infosnow.ch, Stand je Ort)
 #   tourinfra wird auch fuer Engadin, Davos Klosters, Goms, Gastein, Ramsau und Seefeld genutzt (E-20)
@@ -815,3 +816,53 @@ quellen:
         - {name: Dellach, gebiet: dellach-gailtal}
         - {name: Kötschach-Mauthen, gebiet: koetschach-mauthen}
         - {name: Weissensee, gebiet: weissensee-techendorf}
+
+  # Steiermark (P30, 14.11.2026): Tourenportal von Steiermark Tourismus, Kategorie Langlauf. Die Regionen pflegen
+  # dort den Loipenstatus (Ausseerland und Murau verlinken genau diese Liste als Loipenbericht). 89 Loipen auf
+  # 6 Seiten, ohne Datum und Koordinaten; das Gebiet ergibt sich aus dem Startort. Ramsau am Dachstein fuehrt
+  # der tourinfra-Loipenmanager (Rang 2, mit Stand), dieselbe Loipe zaehlt nur einmal (D15).
+  # Die Prebersee-Loipe (Tamsweg) ist die einzige Lungauer Loipe der Liste.
+  - key: steiermark
+    adapter: steiermark
+    name: Steiermark Tourismus (Tourenportal Langlauf)
+    base_url: https://www.steiermark.com
+    art: portal
+    rang: 3
+    strecke_hinweis: "Das Tourenportal der Steiermark nennt Start und Länge, aber keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-14, nutzungsbedingungen_geprueft: null}
+    config:
+      pfad: /de/Urlaub-planen/Tourenportal?tourCategory=46459526
+      default_gebiet: bad-mitterndorf  # nur fuer die Pruefung; unbekannte Startorte werden gemeldet, nicht zugeordnet
+      seiten: 10  # hoechstens; der Abruf endet, sobald alle genannten Ergebnisse gelesen sind
+      # Startort laut Tourenportal -> Gebiet; Loipen ohne Startort ueber ein Wort im Namen
+      gebiet_map:
+        Ramsau am Dachstein: ramsau-am-dachstein
+        Schladming: schladming
+        Haus im Ennstal: haus-im-ennstal
+        Gröbming: groebminger-land
+        Mitterberg - St. Martin: groebminger-land
+        Irdning-Donnersbachtal: grimming-donnersbachtal
+        Stainach - Pürgg: grimming-donnersbachtal
+        Bad Mitterndorf: bad-mitterndorf
+        Bad Aussee: bad-aussee
+        Altaussee: altaussee
+        Grundlsee: grundlsee
+        Admont: admont
+        Ardning: ardning
+        Liezen: liezen
+        Murau: murau-stadt
+        Ranten: murau-stadt
+        St. Georgen am Kreischberg: kreischberg
+        Krakau: krakau
+        Oberwölz-Lachtal: lachtal
+        St. Peter am Kammersberg: st-peter-am-kammersberg
+        Mühlen: muehlen
+        Stadl-Predlitz - Turracher Höhe: turracher-hoehe
+        Grenzloipe: turracher-hoehe
+        Hohentauern: hohentauern
+        Wildalpen: wildalpen
+        Rettenegg: rettenegg
+        St. Jakob im Walde: st-jakob-im-walde
+        Fladnitz an der Teichalm: teichalm
+        Hirschegg - Pack: hebalm
+        Tamsweg: prebersee

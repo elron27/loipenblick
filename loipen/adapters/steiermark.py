@@ -46,7 +46,8 @@ def _gebiet(name: str, ort: str | None, config: dict) -> str:
     karte = config.get("gebiet_map", {})
     if ort and ort in karte:
         return karte[ort]
-    return next((g for wort, g in karte.items() if wort in name), config.get("default_gebiet"))
+    # Kein Rueckfall auf default_gebiet: eine Loipe in einem falschen Gebiet waere schlimmer als eine fehlende
+    return next((g for wort, g in karte.items() if wort in name), None)
 
 
 def steiermark_teaser(seite: str) -> list[dict]:
@@ -107,7 +108,9 @@ class SteiermarkLoipenberichtAdapter:
                 d.nachtloipe = True if re.search(r"nacht|flutlicht", t["name"], re.IGNORECASE) else None
                 d.rohtext = "; ".join(x for x in (t["badge_text"] or "keine Meldung", t.get("Start"), t["name"]) if x)
                 ergebnis.loipen.append(d)
-        if erwartet and len(ergebnis.loipen) < erwartet:
+            if erwartet and len(gesehen) >= erwartet:
+                break  # alle genannten Ergebnisse gelesen, keine leere Folgeseite abrufen
+        if erwartet and len(gesehen) < erwartet:
             ergebnis.warnungen.append(
                 f"steiermark.com: {erwartet} Ergebnisse genannt, {len(ergebnis.loipen)} gelesen (Seitenzahl erhoehen?)")
         return ergebnis

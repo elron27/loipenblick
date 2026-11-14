@@ -70,7 +70,10 @@ class FixtureFetcher:
 
 
 TIROL_LISTE = "aktivitaeten/sport/langlaufen/loipen"
+STEIERMARK_LISTE = "de/Urlaub-planen/Tourenportal?tourCategory=46459526"
 SEITEN_QUELLEN = {
+    "steiermark": {STEIERMARK_LISTE: "2026-11-14/tourenportal-langlauf-p1.html",
+                   **{f"{STEIERMARK_LISTE}&page={n}": f"2026-11-14/tourenportal-langlauf-p{n}.html" for n in range(2, 8)}},
     "sachrang": {"schneebericht-sachrang": "schneebericht.html"},
     "chiemgau": {"inc/ajax.php?ajaxtype=getLoipenmanager": "loipenmanager.json"},
     "tannheimer": {"inc/ajax.php?ajaxtype=getLoipenmanager": "2026-11-13/loipenmanager.json"},
