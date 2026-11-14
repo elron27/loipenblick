@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Disallow: /multimediaarchiv/
+Disallow: /*ajaxRequestType*
+Disallow: /sk/*
+Disallow: /it/*
+Disallow: /fr/*
+Disallow: /pl/*
+Disallow: /sl/*
+Disallow: /cs/*
+Disallow: /nl/*
+Disallow: /hu/*
+
+Sitemap: https://www.steiermark.com/sitemap.site_6.xml
+Sitemap: https://www.steiermark.com/sitemap.pressarticle.xml
+Sitemap: https://www.steiermark.com/sitemap.package.xml
+Sitemap: https://www.steiermark.com/sitemap.busTravel.xml
+Sitemap: https://www.steiermark.com/sitemap.convention-incentive.xml
+Sitemap: https://www.steiermark.com/sitemap.convention-partner.xml
+Sitemap: https://www.steiermark.com/sitemap.ysinfra.xml
+Sitemap: https://www.steiermark.com/sitemap.ysAcco.xml
+Sitemap: https://www.steiermark.com/sitemap.landingpage.xml
