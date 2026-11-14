@@ -1,2 +1,3 @@
-# <zielpfad> <url> -- Runde 19 (14.11.2026): weitere GeoSphere-Stationen Steiermark/Lungau
-tests/fixtures/geosphere/2026-11-12/klima-v2-1d_steiermark2.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=13515,10401,10415,9911,9801,10111,10005,15901,16015,15715,15610,13120,7110,10200&start=2026-10-29T00:00&end=2026-11-11T00:00
+# <zielpfad> <url> -- Runde 20 (14.11.2026): Loipenuebersicht Lungau = contwise-Karte maps.lungau.at
+tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
+tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
