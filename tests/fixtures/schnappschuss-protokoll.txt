@@ -563,3 +563,9 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   313209 tests/fixtures/recherche-2026-11-14/steiermark/gesaeuse-hall.html https://www.steiermark.com/de/Gesaeuse/Urlaub-planen/Ausflugsziele/Langlaufzentrum-Hall-bei-Admont_isd_5918025
 200 https://www.outdooractive.com/robots.txt
 404    44933 tests/fixtures/recherche-2026-11-14/outdooractive/spittal.html https://www.outdooractive.com/de/langlauf-loipen/spittal-an-der-drau/langlauf-loipen-im-bezirk-spittal-an-der-drau/
+# Lauf 2026-11-14 15:27 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.steiermark.com/robots.txt
+200   354632 tests/fixtures/recherche-2026-11-14/steiermark/murau-touren-langlauf.html https://www.steiermark.com/de/Murau/Urlaub-planen/Touren?tourCategory=46459526
+200   434266 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526
+200   434504 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal-langlauf-p2.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal?tourCategory=46459526&page=2
+200   434943 tests/fixtures/recherche-2026-11-14/steiermark/tourenportal.html https://www.steiermark.com/de/Urlaub-planen/Tourenportal
