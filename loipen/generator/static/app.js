@@ -10,7 +10,7 @@ var SYM = {
 };
 var FARBE = {offen: "#4ade80", eingeschraenkt: "#fbbf24", geschlossen: "#9fb3c2", unbekannt: "#c7d2da"};
 var RANG = {offen: 0, eingeschraenkt: 1, unbekannt: 2, geschlossen: 3};
-var LAND = {DE: "Deutschland", AT: "Österreich", IT: "Italien"};
+var LAND = {DE: "Deutschland", AT: "Österreich", IT: "Italien", CH: "Schweiz", LI: "Liechtenstein"};
 var TAGE = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 var S = {idx: null, regionen: {}, strecken: {}, gebiete: [], loipen: [], demo: false, ort: null, orte: []};
 var view = document.getElementById("view");
@@ -43,7 +43,7 @@ function kmKurz(z) {
     (z.sonder ? " · " + z.sonder + " Sonderloipe" + (z.sonder > 1 ? "n" : "") + " offen" : "");
 }
 /* D16: Gruppe "Land · Bundesland", z. B. "Österreich · Tirol" */
-function gruppeName(r) { return (LAND[r.land] || r.land || "") + (r.bundesland ? " · " + r.bundesland : ""); }
+function gruppeName(r) { var l = LAND[r.land] || r.land || ""; return l + (r.bundesland && r.bundesland !== l ? " · " + r.bundesland : ""); }
 function alter(iso) {
   if (!iso) return "unbekannt";
   var min = Math.max(0, Math.round((jetztMs() - new Date(iso).getTime()) / 60000));
@@ -634,11 +634,13 @@ function sucheBinden() {
   function zeige() {
     var t = q.value.trim().toLowerCase();
     if (t.length < 3) { zu(); return; }
-    items = [];
-    S.gebiete.forEach(function (g) { if (g.name.toLowerCase().indexOf(t) >= 0) items.push({art: "Gebiet", name: g.name, ziel: "#/gebiet/" + g.slug}); });
-    S.loipen.forEach(function (l) { if (l.name.toLowerCase().indexOf(t) >= 0 && items.length < 40) items.push({art: "Loipe", name: l.name, extra: l.gebiet.name, ziel: "#/loipe/" + l.id}); });
-    S.orte.forEach(function (o) { if (o.name.toLowerCase().indexOf(t) >= 0) items.push({art: "Ort", name: o.name, ziel: "#/loipen?ort=" + encodeURIComponent(o.name) + "&sort=entfernung", ort: o}); });
-    items = items.slice(0, 12);
+    /* Jede Art bekommt ihren Anteil, damit viele passende Loipen Gebiete und Orte nicht verdraengen */
+    var geb = [], lps = [], orte = [];
+    S.gebiete.forEach(function (g) { if (g.name.toLowerCase().indexOf(t) >= 0) geb.push({art: "Gebiet", name: g.name, ziel: "#/gebiet/" + g.slug}); });
+    S.loipen.forEach(function (l) { if (l.name.toLowerCase().indexOf(t) >= 0 && lps.length < 12) lps.push({art: "Loipe", name: l.name, extra: l.gebiet.name, ziel: "#/loipe/" + l.id}); });
+    S.orte.forEach(function (o) { if (o.name.toLowerCase().indexOf(t) >= 0) orte.push({art: "Ort", name: o.name, ziel: "#/loipen?ort=" + encodeURIComponent(o.name) + "&sort=entfernung", ort: o}); });
+    geb = geb.slice(0, 4); orte = orte.slice(0, 4);
+    items = geb.concat(lps.slice(0, 12 - geb.length - orte.length), orte);
     ul.innerHTML = items.length ? items.map(function (it, i) { return '<li role="option" id="v' + i + '" data-i="' + i + '"><span>' + esc(it.name) + (it.extra ? ' <small>' + esc(it.extra) + "</small>" : "") + "</span><small>" + it.art + "</small></li>"; }).join("") : '<li role="option" aria-disabled="true">Nichts gefunden</li>';
     ul.hidden = false; q.setAttribute("aria-expanded", "true"); aktiv = -1;
   }

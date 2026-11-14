@@ -53,7 +53,11 @@ def test_b7_daten_liegen_als_json_je_region(site):
         "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol",
         # Suedtirol und Cortina/Comelico (E-19)
         "drei-zinnen", "pustertal", "groeden-seiser-alm", "eisacktal-wipptal", "eggental", "vinschgau-meran",
-        "cortina-comelico"}
+        "cortina-comelico",
+        # Schweiz, Liechtenstein, Gastein, Ramsau (E-20)
+        "engadin", "davos-klosters", "goms", "gasteinertal", "schladming-dachstein", "graubuenden", "wallis",
+        "berner-oberland", "zentralschweiz", "jura-drei-seen-land", "ostschweiz", "waadtlaender-alpen", "freiburg",
+        "tessin", "zuercher-oberland", "basel-jura", "liechtenstein"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -126,7 +130,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
         "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
-        "dolomiti-nordicski", "opendatahub"}
+        "dolomiti-nordicski", "opendatahub",
+        "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland"}
 
 
 @pytest.mark.req("U6", ak=1)

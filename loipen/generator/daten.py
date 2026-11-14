@@ -18,7 +18,8 @@ from loipen.wetter import gebiet_position, schnee_uebersicht
 BERLIN = ZoneInfo("Europe/Berlin")
 VERALTET_STUNDEN = 48  # U6
 HISTORIE_TAGE = 14  # U5
-LAND_REIHENFOLGE = {"DE": 0, "AT": 1, "IT": 2}
+UEBERREGIONAL_AB_RANG = 3  # P22 AK 3: ab diesem Rang ist eine Quelle ein ueberregionales Portal
+LAND_REIHENFOLGE = {"DE": 0, "AT": 1, "IT": 2, "CH": 3, "LI": 4}
 
 
 def _iso(dt: datetime | None) -> str | None:
@@ -168,7 +169,10 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 d["auch_bei"] = auch_bei.get(l.id, [])
                 b = bericht.get(l.gebiet_id)
                 d["nicht_im_bericht"] = None
-                if b is not None and b.id != l.quelle_id and rang(l) > int((b.config or {}).get("rang", 10)):
+                # Nur ueberregionale Quellen (Rang ab 3, z. B. tirol.at) werden so zurueckgestuft; zwei oertliche
+                # Berichte desselben Verbands (Seefeld: tourinfra Rang 1, Loipenbericht Rang 2) gelten beide.
+                if (b is not None and b.id != l.quelle_id and rang(l) >= UEBERREGIONAL_AB_RANG
+                        and rang(l) > int((b.config or {}).get("rang", 10))):
                     d["nicht_im_bericht"] = b.name
                     if d["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
                         d["status_laut_quelle"] = d["status"]

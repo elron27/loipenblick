@@ -1,11 +1,2 @@
-# <zielpfad> <url> -- Runde 10 (13.11.2026): offene tirol.at-Loipen mit Listendaten (Laenge, Stil), Sonderloipen
-tests/fixtures/tirol/2026-11-13/loipen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen
-tests/fixtures/tirol/2026-11-13/loipen_offen.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN
-tests/fixtures/tirol/2026-11-13/loipen_offen_listpos2.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=2
-tests/fixtures/tirol/2026-11-13/loipen_offen_listpos3.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=3
-tests/fixtures/tirol/2026-11-13/loipen_offen_listpos4.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen?addressbaseOpened%5B209%5D%5B%5D=OPEN&listpos=4
-tests/fixtures/tirol/2026-11-13/snowfactory-loipe-seefeld.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/snowfactory-loipe-seefeld
-tests/fixtures/tirol/2026-11-13/a2-snowfarmingloipe-leutasch.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/a2-snowfarmingloipe-leutasch
-tests/fixtures/tirol/2026-11-13/opening-loipe-sedlsee-small.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/opening-loipe-sedlsee-small
-tests/fixtures/tirol/2026-11-13/hoehenloipe-pitztaler-gletscher.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/hoehenloipe-am-pitztaler-gletscher-im-herbst-fuer-gruppen-mit-voranmeldung
-tests/fixtures/seefeld/2026-11-13/loipenbericht.html https://www.seefeld.com/de/loipenbericht.html
+# <zielpfad> <url> -- Runde 13 (13.11.2026): GeoSphere-Stationen mit Schneehoehe fuer Gastein (gleicher Zeitraum wie 2026-11-12)
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d_gastein.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=15402,15509,18111,12513,78,149&start=2026-10-29T00:00&end=2026-11-11T00:00

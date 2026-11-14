@@ -15,6 +15,8 @@
 #   kaiserwinkl  Loipenbericht von kaiserwinkl.com (Status, Laenge, Stand der Liste)
 #   dolomiti     Loipentabelle von Dolomiti NordicSki (Status in 5 Stufen, Laenge, ohne Datum und Lage)
 #   opendatahub  Open Data Hub Suedtirol (JSON, CC0: Lage, Stile, offen/geschlossen mit Aenderungsdatum)
+#   myswitzerland Schneebericht von Schweiz Tourismus, eine Seite je Ort (Daten infosnow.ch, Stand je Ort)
+#   tourinfra wird auch fuer Engadin, Davos Klosters, Goms, Gastein, Ramsau und Seefeld genutzt (E-20)
 #
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
@@ -520,3 +522,254 @@ quellen:
                 gitschberg-jochtal, seiser-alm, groeden, alta-badia, villnoess, ratschings, pfitsch, gossensass,
                 sarntal, ritten-villanders, deutschnofen-welschnofen, lavaze, reschen, obervinschgau, martell,
                 schnals, ulten, passeier]
+
+  # Schweiz (E-20, 13.11.2026). Engadin, Davos Klosters und Goms melden ueber denselben tourinfra-
+  # Loipenmanager wie der Chiemgau: Status je Technik, Laenge, Streckenverlauf. Rang 2.
+
+  - key: engadin
+    adapter: tourinfra
+    name: Engadin Tourismus (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/engadin
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "Loipenbericht von engadin.ch/de/berichte/schneesportberichte"}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: st-moritz
+      gebiet_map:
+        Maloja: oberengadin-seen
+        "Sils / Segl Baselgia": oberengadin-seen
+        "Sils / Segl Maria": oberengadin-seen
+        Silvaplana: oberengadin-seen
+        Silvaplana-Surlej: oberengadin-seen
+        Plaun da Lej: oberengadin-seen
+        Champfèr: oberengadin-seen
+        St. Moritz: st-moritz
+        Celerina: st-moritz
+        Pontresina: pontresina
+        Samedan: samedan-bever
+        Bever: samedan-bever
+        La Punt-Chamues-ch: zuoz-s-chanf
+        Zuoz: zuoz-s-chanf
+        Madulain: zuoz-s-chanf
+        S-chanf: zuoz-s-chanf
+        Cinuos-chel: zuoz-s-chanf
+        Zernez: zernez
+        Susch: zernez
+        Lavin: zernez
+
+  - key: davos-klosters
+    adapter: tourinfra
+    name: Destination Davos Klosters (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/destination-davos-klosters
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "Loipenbericht von davos.ch/aktivitaeten/schneesport/langlauf/loipenbericht-davos-klosters"}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: davos
+      gebiet_map:
+        Davos: davos
+        Davos Wolfgang: davos
+        Davos Dorf: davos
+        Davos Frauenkirch: davos
+        Wiesen GR: davos
+        Klosters: klosters
+
+  - key: goms
+    adapter: tourinfra
+    name: Goms Tourismus (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/goms
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: obergoms
+      gebiet_map:
+        Oberwald: obergoms
+        Obergesteln: obergoms
+        Ulrichen: obergoms
+        Geschinen: obergoms
+        Münster VS: goms-muenster
+        Reckingen VS: goms-muenster
+        Gluringen: goms-muenster
+        Biel VS: goms-muenster
+        Blitzingen: goms-muenster
+        Ritzingen: goms-muenster
+
+  # Oesterreich ausserhalb Tirols (E-20): Gastein und Ramsau am Dachstein, ebenfalls tourinfra.
+
+  - key: gastein
+    adapter: tourinfra
+    name: Gastein Tourismus (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/gastein
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: gastein
+      gebiet_map:
+        Bad Gastein: gastein
+        Dorfgastein: gastein
+        Bad Hofgastein: gastein
+
+  - key: ramsau
+    adapter: tourinfra
+    name: Ramsau am Dachstein (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/ramsau
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: ramsau-am-dachstein
+      gebiet_map:
+        Ramsau am Dachstein: ramsau-am-dachstein
+        Birnberg: ramsau-am-dachstein
+        Weißenbach: ramsau-am-dachstein
+        Ramsauleiten: ramsau-am-dachstein
+
+  # Olympiaregion Seefeld auch im tourinfra-Loipenmanager (E-20): mit Streckenverlauf und Startpunkt je
+  # Loipe, deshalb Rang 1 vor dem Loipenbericht (2) und tirol.at (3); dieselbe Loipe zaehlt nur einmal (D15).
+
+  - key: seefeld-tourinfra
+    adapter: tourinfra
+    name: Olympiaregion Seefeld (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/seefeld
+    art: portal
+    rang: 1
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: seefeld
+      gebiet_map:
+        Seefeld in Tirol: seefeld
+        Leutasch: leutasch
+        Bairbach: seefeld
+        Buchen: seefeld
+        Scharnitz: seefeld
+        Mösern: seefeld
+
+  # Schweiz Tourismus (E-20, P29): alle uebrigen Langlauforte der Schweiz und Liechtenstein, eine Seite je Ort,
+  # Daten von infosnow.ch. Ohne Koordinate je Loipe (Lage = Ort). Engadin St. Moritz, Davos, Klosters und
+  # Goms fehlen hier, weil tourinfra sie genauer liefert. Rang 3.
+  - key: myswitzerland
+    adapter: myswitzerland
+    name: Schweiz Tourismus (Schneebericht, Daten infosnow.ch)
+    base_url: https://snow.myswitzerland.com
+    art: portal
+    rang: 3
+    strecke_hinweis: "Schweiz Tourismus nennt keinen Streckenverlauf und keinen Startpunkt; die Loipe liegt im Ort."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "robots.txt sperrt nur ?noidx=; Nutzungsbedingungen vor dem Oeffentlichschalten pruefen"}
+    # rund 100 Seiten je Lauf (5 s Abstand, etwa 9 Minuten); die Orte melden morgens
+    zeitplan:
+      saison_uhrzeiten: [7, 13]
+      nebensaison_uhrzeiten: [8]
+    config:
+      default_gebiet: arosa-lenzerheide
+      orte:
+        - {pfad: /schneebericht/adelboden-102/, gebiet: adelboden, name: "Adelboden"}
+        - {pfad: /schneebericht/aeschi-aeschiried-101/, gebiet: aeschi-aeschiried, name: "Aeschi / Aeschiried"}
+        - {pfad: /schneebericht/aletsch-arena-183/, gebiet: aletsch-arena, name: "Aletsch Arena"}
+        - {pfad: /schneebericht/alt-st-johann-toggenburg-204/, gebiet: toggenburg, name: "Toggenburg"}
+        - {pfad: /schneebericht/amden-arvenbueel-53/, gebiet: amden-arvenbueel, name: "Amden Arvenbüel"}
+        - {pfad: /schneebericht/andermatt-oberalp-sedrun-111/, gebiet: andermatt-sedrun, name: "Andermatt und Sedrun"}
+        - {pfad: /schneebericht/anzere-145/, gebiet: anzere, name: "Anzère"}
+        - {pfad: /schneebericht/arosa-lenzerheide-123/, gebiet: arosa-lenzerheide, name: "Arosa Lenzerheide"}
+        - {pfad: /schneebericht/arosa-lenzerheide-66/, gebiet: arosa-lenzerheide, name: "Arosa Lenzerheide"}
+        - {pfad: /schneebericht/bergbahnen-brigels-ag-126/, gebiet: brigels, name: "Brigels"}
+        - {pfad: /schneebericht/bergbahnen-spluegen-84/, gebiet: spluegen, name: "Splügen"}
+        - {pfad: /schneebericht/berguen-filisur-299/, gebiet: berguen-filisur, name: "Bergün Filisur"}
+        - {pfad: /schneebericht/blatten-belalp-81/, gebiet: blatten-belalp, name: "Blatten-Belalp"}
+        - {pfad: /schneebericht/bosco-gurin-252/, gebiet: bosco-gurin, name: "Bosco Gurin"}
+        - {pfad: /schneebericht/braunwald-115/, gebiet: braunwald, name: "Braunwald"}
+        - {pfad: /schneebericht/brienz-axalp-100/, gebiet: brienz-axalp, name: "Brienz - Axalp"}
+        - {pfad: /schneebericht/bumbach-schangnau-234/, gebiet: bumbach-schangnau, name: "Bumbach / Schangnau"}
+        - {pfad: /schneebericht/champex-lac-168/, gebiet: champex-lac, name: "Champex-Lac"}
+        - {pfad: /schneebericht/charmeych-4/, gebiet: charmey, name: "Charmey"}
+        - {pfad: /schneebericht/crans-montana-142/, gebiet: crans-montana, name: "Crans - Montana"}
+        - {pfad: /schneebericht/degersheim-51/, gebiet: degersheim, name: "Degersheim"}
+        - {pfad: /schneebericht/disentis-130/, gebiet: disentis, name: "Disentis"}
+        - {pfad: /schneebericht/einsiedeln-bolzberg-trachslau-249/, gebiet: einsiedeln, name: "Einsiedeln"}
+        - {pfad: /schneebericht/einsiedeln-loipe-schwedentritt-281/, gebiet: einsiedeln, name: "Einsiedeln"}
+        - {pfad: /schneebericht/elm-49/, gebiet: elm, name: "Elm"}
+        - {pfad: /schneebericht/elsigen-metsch-98/, gebiet: elsigen-metsch, name: "Elsigen - Metsch"}
+        - {pfad: /schneebericht/engadin-scuol-zernez-60/, gebiet: scuol, name: "Scuol (Unterengadin)"}
+        - {pfad: /schneebericht/engelberg-titlis-73/, gebiet: engelberg, name: "Engelberg"}
+        - {pfad: /schneebericht/engstligenalp-336/, gebiet: engstligenalp, name: "Engstligenalp"}
+        - {pfad: /schneebericht/eriz-80/, gebiet: eriz, name: "Eriz"}
+        - {pfad: /schneebericht/ferienregion-gstaad-227/, gebiet: gstaad, name: "Gstaad"}
+        - {pfad: /schneebericht/flumserberg-113/, gebiet: flumserberg, name: "Flumserberg"}
+        - {pfad: /schneebericht/gadmen-275/, gebiet: gadmen, name: "Gadmen"}
+        - {pfad: /schneebericht/gantrisch-riffenmatt-237/, gebiet: gantrisch-riffenmatt, name: "Gantrisch - Riffenmatt"}
+        - {pfad: /schneebericht/gibswil-30/, gebiet: gibswil, name: "Gibswil"}
+        - {pfad: /schneebericht/glacier-3000-188/, gebiet: glacier-3000, name: "Glacier 3000"}
+        - {pfad: /schneebericht/graechen-179/, gebiet: graechen, name: "Grächen"}
+        - {pfad: /schneebericht/grimentz-zinal-anniviers-140/, gebiet: grimentz-zinal-anniviers, name: "Grimentz-Zinal /Anniviers"}
+        - {pfad: /schneebericht/grindelwald-jungfrau-region-228/, gebiet: grindelwald, name: "Grindelwald"}
+        - {pfad: /schneebericht/gruesch-danusa-122/, gebiet: gruesch-danusa, name: "Grüsch-Danusa"}
+        - {pfad: /schneebericht/habkern-97/, gebiet: habkern, name: "Habkern"}
+        - {pfad: /schneebericht/heimenschwand-223/, gebiet: heimenschwand, name: "Heimenschwand"}
+        - {pfad: /schneebericht/jaun-dorf-89/, gebiet: jaun-dorf, name: "Jaun - Dorf"}
+        - {pfad: /schneebericht/jaunpass-boltigen-226/, gebiet: jaunpass-boltigen, name: "Jaunpass - Boltigen"}
+        - {pfad: /schneebericht/kandersteg-96/, gebiet: kandersteg, name: "Kandersteg"}
+        - {pfad: /schneebericht/kiental-ramslauenen-79/, gebiet: kiental-ramslauenen, name: "Kiental-Ramslauenen"}
+        - {pfad: /schneebericht/kuessnacht-seebodenalp-301/, gebiet: kuessnacht-seebodenalp, name: "Küssnacht - Seebodenalp"}
+        - {pfad: /schneebericht/la-chaux-de-fonds-75/, gebiet: la-chaux-de-fonds, name: "La Chaux-de-Fonds"}
+        - {pfad: /schneebericht/la-fouly-141/, gebiet: la-fouly, name: "La Fouly"}
+        - {pfad: /schneebericht/laax-67/, gebiet: laax, name: "Laax"}
+        - {pfad: /schneebericht/langis-glaubenberg-109/, gebiet: langis-glaubenberg, name: "Langis - Glaubenberg"}
+        - {pfad: /schneebericht/lauchernalp-loetschental-178/, gebiet: lauchernalp-loetschental, name: "Lauchernalp-Lötschental"}
+        - {pfad: /schneebericht/lauterbrunnen-95/, gebiet: lauterbrunnen, name: "Lauterbrunnen"}
+        - {pfad: /schneebericht/lenk-im-simmental-94/, gebiet: lenk-im-simmental, name: "Lenk im Simmental"}
+        - {pfad: /schneebericht/les-breuleux-211/, gebiet: les-breuleux, name: "Les Breuleux"}
+        - {pfad: /schneebericht/les-genevez-208/, gebiet: les-genevez, name: "Les Genevez"}
+        - {pfad: /schneebericht/les-mosses-la-lecherette-329/, gebiet: les-mosses-la-lecherette, name: "Les Mosses - La Lécherette"}
+        - {pfad: /schneebericht/les-paccots-la-veveyse-151/, gebiet: les-paccots-la-veveyse, name: "Les Paccots - La Veveyse"}
+        - {pfad: /schneebericht/les-pleiades-187/, gebiet: les-pleiades, name: "Les Pléiades"}
+        - {pfad: /schneebericht/leukerbad-83/, gebiet: leukerbad, name: "Leukerbad"}
+        - {pfad: /schneebericht/leysin-330/, gebiet: leysin, name: "Leysin"}
+        - {pfad: /schneebericht/malbun-steg-fl-112/, gebiet: malbun-steg, name: "Malbun und Steg"}
+        - {pfad: /schneebericht/meiringen-hasliberg-225/, gebiet: meiringen-hasliberg, name: "Meiringen - Hasliberg"}
+        - {pfad: /schneebericht/melchsee-frutt-24/, gebiet: melchsee-frutt, name: "Melchsee-Frutt"}
+        - {pfad: /schneebericht/moerlialp-giswil-23/, gebiet: moerlialp-giswil, name: "Mörlialp - Giswil"}
+        - {pfad: /schneebericht/moosalpregion-buerchen-toerbel-88/, gebiet: moosalpregion-buerchen-toerbel, name: "Moosalpregion Bürchen - Törbel"}
+        - {pfad: /schneebericht/mythenregion-22/, gebiet: mythenregion, name: "Mythenregion"}
+        - {pfad: /schneebericht/nax-mont-noble-8/, gebiet: nax-mont-noble, name: "Nax / Mont-Noble"}
+        - {pfad: /schneebericht/nendaz-4-vallees-139/, gebiet: nendaz-4-vallees, name: "Nendaz - 4 Vallées"}
+        - {pfad: /schneebericht/nordic-region-gibloux-216/, gebiet: nordic-region-gibloux, name: "Nordic Région Gibloux"}
+        - {pfad: /schneebericht/ovronnaz-138/, gebiet: ovronnaz, name: "Ovronnaz"}
+        - {pfad: /schneebericht/rigi-21/, gebiet: rigi, name: "Rigi"}
+        - {pfad: /schneebericht/rothenthurm-20/, gebiet: rothenthurm, name: "Rothenthurm"}
+        - {pfad: /schneebericht/rougemont-videmanette-395/, gebiet: rougemont-videmanette, name: "Rougemont - Videmanette"}
+        - {pfad: /schneebericht/saas-almagell-270/, gebiet: saas-almagell, name: "Saas-Almagell"}
+        - {pfad: /schneebericht/saas-fee-176/, gebiet: saas-fee, name: "Saas-Fee"}
+        - {pfad: /schneebericht/saas-grund-175/, gebiet: saas-grund, name: "Saas-Grund"}
+        - {pfad: /schneebericht/saignelegier-150/, gebiet: saignelegier, name: "Saignelégier"}
+        - {pfad: /schneebericht/sainte-croix-les-rasses-146/, gebiet: sainte-croix-les-rasses, name: "Sainte-Croix / Les Rasses"}
+        - {pfad: /schneebericht/samnaunischgl-157/, gebiet: samnaun, name: "Samnaun"}
+        - {pfad: /schneebericht/san-bernardino-2/, gebiet: san-bernardino, name: "San Bernardino"}
+        - {pfad: /schneebericht/savognin-129/, gebiet: savognin, name: "Savognin"}
+        - {pfad: /schneebericht/schwanden-sigriswil-92/, gebiet: sigriswil, name: "Sigriswil"}
+        - {pfad: /schneebericht/sedrun-oberalp-andermatt-125/, gebiet: andermatt-sedrun, name: "Andermatt und Sedrun"}
+        - {pfad: /schneebericht/sigriswil-justistal-244/, gebiet: sigriswil, name: "Sigriswil"}
+        - {pfad: /schneebericht/simplon-367/, gebiet: simplon, name: "Simplon"}
+        - {pfad: /schneebericht/soerenberg-107/, gebiet: soerenberg, name: "Sörenberg"}
+        - {pfad: /schneebericht/st-cergue-14/, gebiet: st-cergue, name: "St-Cergue"}
+        - {pfad: /schneebericht/stoos-19/, gebiet: stoos, name: "Stoos"}
+        - {pfad: /schneebericht/studen-sz-106/, gebiet: studen-sz, name: "Studen SZ"}
+        - {pfad: /schneebericht/sunnbueel-kandersteg-405/, gebiet: kandersteg, name: "Kandersteg"}
+        - {pfad: /schneebericht/thyon-4-vallees-143/, gebiet: thyon-4-vallees, name: "Thyon - 4 Vallées"}
+        - {pfad: /schneebericht/toggenburg-158/, gebiet: toggenburg, name: "Toggenburg"}
+        - {pfad: /schneebericht/tschiertschen-57/, gebiet: tschiertschen, name: "Tschiertschen"}
+        - {pfad: /schneebericht/val-muestair-124/, gebiet: val-muestair, name: "Val Müstair"}
+        - {pfad: /schneebericht/vals-116/, gebiet: vals, name: "Vals"}
+        - {pfad: /schneebericht/verbier-132/, gebiet: verbier, name: "Verbier"}
+        - {pfad: /schneebericht/vicheres-bavon-257/, gebiet: vicheres-bavon, name: "Vichères - Bavon"}
+        - {pfad: /schneebericht/wasserfallen-241/, gebiet: wasserfallen, name: "Wasserfallen"}
+        - {pfad: /schneebericht/zweisimmen-sparenmoos-384/, gebiet: zweisimmen-sparenmoos, name: "Zweisimmen - Sparenmoos"}

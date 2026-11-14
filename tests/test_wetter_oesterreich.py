@@ -23,13 +23,13 @@ AT_REGIONEN = {r["slug"] for r in GEBIETE["regionen"] if r.get("land") == "AT"}
 @pytest.mark.req("D17", ak=1)
 def test_d17_jedes_oesterreichische_gebiet_hat_eine_geosphere_station():
     stationen = {str(f["properties"]["station"]) for f in json.loads(geosphere_antwort())["features"]
-                 if any(x is not None for x in f["properties"]["parameters"]["sh"]["data"])}
+                 if any(x is not None for k in ("sh", "sh_manu") for x in f["properties"]["parameters"][k]["data"])}
     at = [g for g in GEBIETE["gebiete"] if g["region"] in AT_REGIONEN]
     assert len(at) >= 19
     for g in at:
         st = g.get("wetterstation") or {}
         assert st.get("dienst") == "geosphere", g["slug"]
-        # Station liefert im Schnappschuss eine Schneehoehe (Pegel sh)
+        # Station liefert im Schnappschuss eine Schneehoehe (Pegel sh oder Handmessung sh_manu, z. B. Rauris fuer Gastein)
         assert st["id"] in stationen, g["slug"]
 
 

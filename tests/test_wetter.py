@@ -28,12 +28,21 @@ GEOSPHERE_TIROL = GEOSPHERE_FIXTURE.with_name("klima-v2-1d_tirol.json")
 
 
 def geosphere_antwort() -> str:
-    """Beide echten Antworten zu einer zusammengefasst, wie sie ein Abruf mit allen Stationen liefert."""
+    """Alle echten Antworten zu einer zusammengefasst, wie sie ein Abruf mit allen Stationen liefert.
+
+    Weitere Abrufe fuer denselben Zeitraum: klima-v2-1d_tirol.json (ganz Tirol), klima-v2-1d_ausbau3.json und
+    klima-v2-1d_gastein.json (Gastein, Ramsau, Kaernten; Schnappschuss-Runden 12 und 13 vom 13.11.2026).
+    """
     erste = json.loads(GEOSPHERE_FIXTURE.read_text(encoding="utf-8"))
-    zweite = json.loads(GEOSPHERE_TIROL.read_text(encoding="utf-8"))
-    assert erste["timestamps"] == zweite["timestamps"]
     bekannt = {f["properties"]["station"] for f in erste["features"]}
-    erste["features"] += [f for f in zweite["features"] if f["properties"]["station"] not in bekannt]
+    for datei in sorted(GEOSPHERE_FIXTURE.parent.glob("klima-v2-1d_*.json")):
+        if datei.name == "klima-v2-1d_metadata.json":
+            continue
+        weitere = json.loads(datei.read_text(encoding="utf-8"))
+        assert erste["timestamps"] == weitere["timestamps"], datei.name
+        neu = [f for f in weitere["features"] if f["properties"]["station"] not in bekannt]
+        erste["features"] += neu
+        bekannt |= {f["properties"]["station"] for f in neu}
     return json.dumps(erste)
 
 

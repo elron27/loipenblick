@@ -56,6 +56,9 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
         for slug in q.get("schliesst") or []:
             if slug not in slugs:
                 fehler.append(f"Quelle {q['key']}: schliesst unbekanntes Gebiet {slug}")
+        for ort in cfg.get("orte") or []:
+            if ort.get("gebiet") not in slugs:
+                fehler.append(f"Quelle {q['key']}: orte nennt unbekanntes Gebiet {ort.get('gebiet')}")
         for slug in cfg.get("gebiete", []):
             if slug not in slugs:
                 fehler.append(f"Quelle {q['key']}: gebiete nennt unbekanntes Gebiet {slug}")

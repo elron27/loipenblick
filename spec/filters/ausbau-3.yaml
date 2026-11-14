@@ -1,0 +1,13 @@
+reqseq-filter: 1
+name: ausbau-3
+description: "Anforderungen der Ausbaustufe 3 (Schweiz, Liechtenstein, Gastein, Ramsau, Kärnten, Tiroler Ortsberichte, 13.11.2026)"
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: ausbau3
+    - type: [system-requirement]
+    - status: [draft, approved]
+sort:
+  - by: kennung
+    order: asc

@@ -40,8 +40,7 @@ def test_p21_tannheimer_tal_aus_dem_loipenbericht_des_verbands():
     r = lauf("tannheimer", TourinfraAdapter())
     roh = json.loads((FIXTURES / "tannheimer/2026-11-13/loipenmanager.json").read_text(encoding="utf-8"))
     assert len(roh) == 22
-    assert len(r.loipen) == 21  # ein Eintrag ohne Felder wird gemeldet und uebersprungen
-    assert any("uebersprungen" in w for w in r.warnungen)
+    assert len(r.loipen) == 21  # die Summenzeile des Loipenmanagers ist keine Loipe (P26 AK 1)
     assert not [w for w in r.warnungen if "gebiet_map" in w]  # jeder Ort ist zugeordnet
     assert {d.gebiet_slug for d in r.loipen} == {"tannheimer-tal"}
     # am 13.11. alles geschlossen, je Technik getrennt gemeldet
@@ -200,17 +199,22 @@ def test_d18_keine_doppelten_namen_in_tannheimer_tal(site):
 
 @pytest.mark.req("D18", ak=2)
 def test_d18_seefeld_loipe_bekommt_lage_von_tirol(site):
-    l = next(l for l in gebiet(site, "leutasch")["loipen"] if l["name"] == "A2 - Snowfarmingloipe Leutasch")
-    assert l["quelle"]["name"].startswith("Olympiaregion Seefeld")
+    # seit E-20 fuehrt in Seefeld der tourinfra-Loipenmanager (Rang 1, mit Strecke); Loipenbericht und tirol.at
+    # stehen bei derselben Loipe als "auch bei" (P26 AK 3)
+    l = next(l for l in gebiet(site, "leutasch")["loipen"] if l["name"] == "A2 Snowfarmingloipe")
+    assert l["quelle"]["name"] == "Olympiaregion Seefeld (tourinfra Loipenmanager)"
     assert l["lat"] == pytest.approx(47.373, abs=0.001)
-    assert l["gespurt_km"] == 0.0 and l["laenge_km"] == 2.8
+    assert {a["quelle"] for a in l["auch_bei"]} == {"Olympiaregion Seefeld (Loipenbericht)", "Tirol Werbung (tirol.at)"}
+    assert not [x for x in gebiet(site, "leutasch")["loipen"] if x["name"] == "A2 - Snowfarmingloipe Leutasch"]
 
 
 @pytest.mark.req("U36", ak=1)
 def test_u36_index_nennt_regionen_mit_strecken(site):
     index = json.loads((site / "daten.json").read_text(encoding="utf-8"))
     mit = {r["slug"]: r["strecken_anzahl"] for r in index["regionen"] if r["strecken_anzahl"]}
-    assert set(mit) == {"chiemgau", "ausserfern"}  # Chiemgau und Tannheimer Tal (tourinfra)
+    # Chiemgau, Tannheimer Tal und die tourinfra-Regionen von E-20
+    assert set(mit) == {"chiemgau", "ausserfern", "seefeld-mieming", "engadin", "davos-klosters", "goms",
+                        "gasteinertal", "schladming-dachstein"}
     assert mit["ausserfern"] >= 20
 
 
