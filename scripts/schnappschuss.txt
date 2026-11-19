@@ -1,21 +1,9 @@
-# <zielpfad> <url> -- Runde P33-1 (19.11.2026): Ortsseiten Ausserfern und Osttirol
-tests/fixtures/osttirol/2026-11-19/alle-loipen.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/alle-loipen
-tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-sonnenloipe-sillian.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/sonnenloipe-sillian
-tests/fixtures/recherche-2026-11-19/p33/osttirol/impressum.html https://www.osttirol.com/weitere-links/impressum
-tests/fixtures/recherche-2026-11-19/p33/osttirol/agb.html https://www.osttirol.com/weitere-links/aufenthaltsabgabe-und-agbs
-tests/fixtures/recherche-2026-11-19/p33/osttirol/schneebericht.html https://www.osttirol.com/service/schneebericht-und-schneekommunikation
-tests/fixtures/recherche-2026-11-19/p33/intermaps/osttirol-overview.html https://sdds4.intermaps.com/osttirol/osttirol_overview_report.aspx?lang=de
-tests/fixtures/recherche-2026-11-19/p33/intermaps/zugspitzarena-snowreport.html https://sdds4.intermaps.com/zugspitzarena/snowreport_zugspitzarena.aspx?lang=de
-tests/fixtures/recherche-2026-11-19/p33/intermaps/tza.html https://sdds4.intermaps.com/TZA/tza.aspx?lang=de
-tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
-tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/langlaufen.html https://zugspitzarena.com/de/winter-erlebnis/langlaufen
-tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/impressum.html https://zugspitzarena.com/de/Impressum
-tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/agb.html https://zugspitzarena.com/de/AGB
-tests/fixtures/recherche-2026-11-19/p33/lechtal/langlaufstrecken.html https://www.lechtal.at/de/aktivitaeten/langlaufstrecken.html
-tests/fixtures/recherche-2026-11-19/p33/lechtal/tours.xml https://www.lechtal.at/de/tours.xml
-tests/fixtures/recherche-2026-11-19/p33/lechtal/infrastructure.xml https://www.lechtal.at/de/infrastructure.xml
-tests/fixtures/recherche-2026-11-19/p33/lechtal/impressum.html https://www.lechtal.at/de/impressum.html
-tests/fixtures/recherche-2026-11-19/p33/lechtal/orte.html https://www.lechtal.at/de/region/orte/alle-orte-im-lechtal.html
-tests/fixtures/recherche-2026-11-19/p33/reutte/start.html https://www.reutte.com/
-tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
-tests/fixtures/recherche-2026-11-19/p33/holzgau/start.html https://www.holzgau.at/
+# <zielpfad> <url> -- Runde P33-2 (19.11.2026): Reutte, Lechtal-Karte, Holzgau
+tests/fixtures/recherche-2026-11-19/p33/reutte/langlaufen.html https://www.reutte.com/de/erleben/sport-und-freizeitaktivitaeten/langlaufen
+tests/fixtures/recherche-2026-11-19/p33/reutte/impressum.html https://www.reutte.com/de/service/impressum
+tests/fixtures/recherche-2026-11-19/p33/reutte/agb.html https://www.reutte.com/de/agb
+tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.default.xml https://www.reutte.com/sitemap.default.xml
+tests/fixtures/recherche-2026-11-19/p33/lechtal/ort-holzgau.html https://www.lechtal.at/de/region/orte/holzgau.html
+tests/fixtures/recherche-2026-11-19/p33/lechtal/karte-v2.html https://maps.lechtal.at/v2/
+tests/fixtures/recherche-2026-11-19/p33/holzgau/impressum.html https://www.holzgau.at/impressum-datenschutz/
+tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/sitemap.xml https://zugspitzarena.com/sitemap.xml
