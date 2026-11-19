@@ -612,3 +612,24 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   510893 tests/fixtures/recherche-2026-11-19/karwendel/start.html https://www.silberregion-karwendel.com/
 200   161862 tests/fixtures/recherche-2026-11-19/karwendel/sitemap.xml https://www.silberregion-karwendel.com/sitemap.xml
 200   144385 tests/fixtures/recherche-2026-11-19/karwendel/impressum.html https://www.silberregion-karwendel.com/de/impressum
+# Lauf 2026-11-19 14:44 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.innsbruck.info/robots.txt
+200    78510 tests/fixtures/recherche-2026-11-19/innsbruck/skifahren-schneebericht.html https://www.innsbruck.info/skifahren/service/schneebericht.html
+200   142020 tests/fixtures/recherche-2026-11-19/innsbruck/loipe-rinn-panoramaloipe.html https://www.innsbruck.info/sport/m/langlaufzentrum-rinn-panoramaloipe.html
+200   144019 tests/fixtures/recherche-2026-11-19/innsbruck/loipe-luesens.html https://www.innsbruck.info/sport/m/tiroler-loipe-luesens.html
+200   138089 tests/fixtures/recherche-2026-11-19/innsbruck/loipe-gries-sellrain.html https://www.innsbruck.info/sport/m/rundloipe-gries-im-sellrain.html
+403 https://www.stubai.at/robots.txt
+ROBOTS-VERBOT https://www.stubai.at/info-service/geoeffnete-anlagen/
+ROBOTS-VERBOT https://www.stubai.at/interaktive-karte/tour/loipe-falbeson-leicht-5/
+ROBOTS-VERBOT https://www.stubai.at/interaktive-karte/tour/loipe-gamsgarten-am-stubaier-gletscher-10/
+ROBOTS-VERBOT https://www.stubai.at/info-service/wetter/
+200 https://www.wipptal.at/robots.txt
+200   293448 tests/fixtures/recherche-2026-11-19/wipptal/langlaufen.html https://www.wipptal.at/langlaufen
+200    21761 tests/fixtures/recherche-2026-11-19/wipptal/sitemap.default.xml https://www.wipptal.at/sitemap.default.xml
+200 https://www.hall-wattens.at/robots.txt
+404   125768 tests/fixtures/recherche-2026-11-19/hall-wattens/langlaufen-region.html https://www.hall-wattens.at/de/langlaufen-in-der-region-hall-wattens.html
+200   298850 tests/fixtures/recherche-2026-11-19/hall-wattens/langlaufen.html https://www.hall-wattens.at/de/langlaufen.html
+200   358586 tests/fixtures/recherche-2026-11-19/hall-wattens/ski-und-schneebericht.html https://www.hall-wattens.at/de/ski-und-schneebericht-der-region-hall-wattens.html
+200 https://www.silberregion-karwendel.com/robots.txt
+200   201892 tests/fixtures/recherche-2026-11-19/karwendel/langlaufen.html https://www.silberregion-karwendel.com/de/langlaufen.html
+200   182833 tests/fixtures/recherche-2026-11-19/karwendel/wetter.html https://www.silberregion-karwendel.com/de/wetter.html
