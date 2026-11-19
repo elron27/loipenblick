@@ -25,6 +25,8 @@ function jetztMs() { return Date.now(); }
 function offenGemeldet(l) { return l.status === "offen" || l.status === "eingeschraenkt"; }
 function befahrbar(l) { return offenGemeldet(l) && !l.sonder; }
 function rang(l) { return RANG[l.status] + (l.sonder && offenGemeldet(l) ? 1.5 : 0); }
+/* D19, E-23: offensichtliche Fehlmeldung, die Seite zeigt sie geschlossen */
+function plausiBadge(l) { return l.unplausibel ? ' <span class="badge abw" title="' + esc(l.unplausibel.join(". ")) + '">gemeldet ' + esc(WORT[l.status_laut_quelle].toLowerCase()) + ", unplausibel</span>" : ""; }
 function sonderBadge(l) { return l.sonder ? ' <span class="badge sonder" title="' + esc(l.sonder.text) + '">' + esc(l.sonder.kurz) + "</span>" : ""; }
 /* Rahmendaten einer Menge Loipen: wie viele km es gibt und wie viele davon offen sind; Unbekanntes wird mitgezaehlt */
 function kmZahlen(loipen) {
@@ -171,7 +173,7 @@ function loipeKarte(l, mitGebiet) {
   var frisch = l.veraltet ? '<span class="badge">veraltet</span> ' : "";
   // U30, P16: Quelle ohne Praeparierdatum oder ganz ohne Zustand
   var stand = !l.abgerufen ? "noch kein Abruf" : (l.ohne_zustand ? "Quelle meldet keinen Zustand · " : l.ohne_datum ? "Status ohne Datum · " : "") + "Stand " + alter(l.abgerufen);
-  return '<a class="lp glass' + (l.sonder ? " sonderlp" : "") + '" href="#/loipe/' + l.id + '"><span class="n">' + esc(l.name) + sonderBadge(l) + (mitGebiet ? ' <span class="fine">· ' + esc(l.gebiet.name) + "</span>" : "") + "</span>" + chip(l.status) +
+  return '<a class="lp glass' + (l.sonder ? " sonderlp" : "") + '" href="#/loipe/' + l.id + '"><span class="n">' + esc(l.name) + sonderBadge(l) + plausiBadge(l) + (mitGebiet ? ' <span class="fine">· ' + esc(l.gebiet.name) + "</span>" : "") + "</span>" + chip(l.status) +
     '<span class="d">' + esc(teile.filter(Boolean).join(" · ")) + " · " + frisch + esc(stand) + (l.quelle_fehler ? " · letzter Abruf fehlgeschlagen" : "") + "</span></a>";
 }
 function neu48(l) { var s = l.gebiet && l.gebiet.schnee; return s && s.neuschnee_48h_cm != null ? s.neuschnee_48h_cm : -1; }
@@ -486,7 +488,8 @@ function zeichneLoipe(l) {
   (function () {
     var g = l.gebiet, ziel = g.parkplaetze[0] || (l.lat != null ? {lat: l.lat, lon: l.lon, name: "Start der Loipe"} : null);
     var hist = l.historie.map(function (t) { return '<span class="' + (t.status ? "" : "keine ") + '" style="' + (t.status ? "background:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + "-bg);color:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + ')"' : "") + ' title="' + esc(t.tag + ": " + (t.status ? WORT[t.status] : "noch keine Daten")) + '">' + (t.status ? {offen: "✓", eingeschraenkt: "!", geschlossen: "✕", unbekannt: "?"}[t.status] : "·") + "</span>"; }).join("");
-    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + sonderBadge(l) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
+    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + sonderBadge(l) + plausiBadge(l) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
+      (l.unplausibel ? '<p class="hinweis glass" id="unplausibel"><b>' + esc(l.quelle.name) + " meldet diese Loipe " + esc(WORT[l.status_laut_quelle].toLowerCase()) + ", das ist aber unplausibel.</b> " + esc(l.unplausibel.join(". ")) + ". Wir zeigen sie deshalb geschlossen, bis die Quelle es belegt.</p>" : "") +
       (l.sonder ? '<p class="hinweis glass" id="sonder"><b>Sonderloipe: ' + esc(l.sonder.kurz) + ".</b> " + esc(l.sonder.text) + (offenGemeldet(l) ? " Sie zählt deshalb nicht zu den befahrbaren Loipen des Gebiets." : "") + "</p>" : "") +
       '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + "</b>" + (l.laenge_von ? '<span class="fine">laut ' + esc(l.laenge_von) + "</span>" : "") + '</div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
       miniKarte(l) + '<h2 class="sec">Saisonstatistik</h2><div id="saison"><p class="fine">Lädt …</p></div><h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
