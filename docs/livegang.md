@@ -10,8 +10,8 @@ Die Anforderungen dazu stehen in `spec/` (Filter `livegang`, Entscheidung E-17).
 
 | Thema | Empfehlung |
 |---|---|
-| Hosting | Deutscher Webspace mit SFTP oder FTPS, z. B. netcup Webhosting 1000 (2,69 €/Monat mit .de-Domain). Zweite Wahl: Cloudflare Pages (kostenlos, aber US-Anbieter, max. 25 MiB je Datei). |
-| Domain | .de, im Webspace-Tarif enthalten oder bei INWX (4,71 € Registrierung, 3,60 € Verlängerung pro Jahr). |
+| Hosting | **Entschieden am 19.11.2026: netcup Webhosting 1000** (2,69 €/Monat mit .de-Domain, 12 Monate Laufzeit). Upload per SFTP, falls der Tarif SSH hat, sonst FTPS. Zweite Wahl bleibt Cloudflare Pages. |
+| Domain | **`loipenradar.de`** (Stefan, 19.11.), im netcup-Tarif enthalten. `loipenblick.de` ist vergeben, `.com` kostet Aufpreis. Die Seite heißt weiter Loipenblick. |
 | Update vom NAS | Upload in zwei Phasen: zuerst Daten-Dateien mit Inhalts-Hash im Namen, zuletzt `index.json` und HTML. Ein abgebrochener Upload lässt die alte Seite heil. |
 | Impressum | Nötig (§ 18 Abs. 1 MStV): Vor- und Nachname plus ladungsfähige Anschrift. Postfach reicht nicht. Lösung für die Privatadresse: Adresse mit Zustellungsvollmacht (Familie, Büroservice, Anwalt). |
 | Datenschutz | Datenschutzerklärung nötig. Ziel: Die Seite lädt beim Aufruf nichts von fremden Servern, dann braucht es keinen Cookie-Banner. Dafür die Kartenkacheln selbst hosten oder erst nach Klick laden. |
@@ -44,7 +44,7 @@ Preise laut Anbieterseite am 13.11.2026, inklusive 19 % MwSt.
 
 | Anbieter | Preis | Domain | Upload | Standort | Bewertung |
 |---|---|---|---|---|---|
-| **netcup Webhosting 1000** | 2,69 €/Monat, 12 Monate Laufzeit | 1 .de inklusive | „SSH access available“ laut Tarifliste, die Vergleichstabelle derselben Seite sagt „nicht enthalten“. Vor Bestellung prüfen. | Deutschland (laut Tabelle auch AT/USA, beim Bestellen wählen) | **Empfehlung.** Günstig, Domain dabei, deutscher Vertrag. [Quelle](https://www.netcup.com/en/hosting/hosting-comparison) |
+| **netcup Webhosting 1000** | 2,69 €/Monat, 12 Monate Laufzeit, keine Einrichtungsgebühr | 1 .de inklusive | „SSH access available“ laut Tarifliste und Produkttext, die Vergleichstabelle derselben Seite sagt „nicht enthalten“ (Stand 19.11. unverändert). Nach der Bestellung im Panel nachsehen; ohne SSH geht FTPS. | Deutschland (laut Tabelle auch AT/USA, beim Bestellen wählen) | **Gewählt am 19.11.2026.** Günstig, Domain dabei, deutscher Vertrag. [Quelle](https://www.netcup.com/en/hosting/hosting-comparison) |
 | Hetzner Webhosting S | 1,90 €/Monat, keine Mindestlaufzeit | nicht enthalten, ab 5,83 €/Jahr | SSH erst ab Tarif L (9,90 €) | Nürnberg | Gut, wenn netcup nicht passt. [Quelle](https://www.hetzner.com/de/webhosting/) |
 | all-inkl Privat | 4,95 €/Monat, monatlich kündbar | 3 inklusive | SSH erst ab Premium (9,95 €); SSL in der Liste erst ab Privat+ (7,95 €) genannt | Deutschland | Am Budgetrand, SSL unklar. [Quelle](https://all-inkl.com/webhosting/) |
 | Uberspace | Zahl, was du für fair hältst | eigene Domain möglich | volle Linux-Shell, also SSH und rsync | nicht angegeben | Technisch am bequemsten (rsync, atomarer Wechsel per Symlink), Preis selbst gewählt. [Quelle](https://uberspace.de/de/) |
@@ -58,7 +58,7 @@ Preise laut Anbieterseite am 13.11.2026, inklusive 19 % MwSt.
 
 - **Endung .de.** Bei DENIC sind die Inhaberdaten von Privatpersonen im öffentlichen Whois nicht sichtbar, nur der Provider ([DENIC](https://www.denic.de/services/whois-service/)). Die Privatadresse erscheint also nicht über die Domain, sondern nur über das Impressum.
 - **Registrar.** Im netcup-Tarif ist eine .de-Domain enthalten. Sonst INWX: 4,71 € Registrierung, 3,60 € Verlängerung pro Jahr ([INWX](https://www.inwx.de/de/domain/pricelist)). Ob die Preise brutto sind, war auf der Seite nicht eindeutig.
-- **Name.** Kurz, ohne Umlaut, z. B. `loipenblick.de`. Ob er frei ist, prüft Stefan bei DENIC. Keine Ortsnamen oder Marken Dritter im Namen (z. B. nicht „tirol-loipen.de“), um Streit um Namensrechte zu vermeiden.
+- **Name.** Gewählt: `loipenradar.de`. Eine Websuche am 19.11.2026 fand keine Seite, App oder Firma mit dem Namen „Loipenradar“; eine Markenrecherche im DPMA- und EUIPO-Register ist das nicht (siehe Checkliste). Keine Ortsnamen oder Marken Dritter im Namen (z. B. nicht „tirol-loipen.de“), um Streit um Namensrechte zu vermeiden.
 - **E-Mail.** Eine Adresse auf der Domain (z. B. `kontakt@…`) als Weiterleitung auf Stefans Postfach. Sie steht im Impressum und auf der Seite für Quellbetreiber (B16). Die meisten Webspace-Tarife haben Weiterleitungen dabei.
 
 ## 4. Update-Workflow vom NAS
@@ -190,7 +190,7 @@ P17 verlangt schon, dass jede Quelle in `sources.yaml` „Nutzungsbedingungen ge
 
 ### Vorlage für die Anfrage an Quellbetreiber
 
-> Betreff: Loipenstatus auf loipenblick.de verlinken
+> Betreff: Loipenstatus auf loipenradar.de verlinken
 >
 > Guten Tag,
 >
@@ -231,7 +231,7 @@ Die Ping-URL ist ein Geheimnis und gehört in die `.env` (`LOIPEN_HEARTBEAT_URL`
 
 ## 11. Kosten
 
-| Posten | netcup (Empfehlung) | Hetzner | Cloudflare Pages |
+| Posten | netcup (gewählt) | Hetzner | Cloudflare Pages |
 |---|---|---|---|
 | Webspace | 32,28 € | 22,80 € | 0 € |
 | Domain .de | inklusive | 5,83 € | 4,71 € (INWX) |
