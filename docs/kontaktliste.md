@@ -61,3 +61,10 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 ## 3. Ortsseiten für die Querprüfung von tirol.at (in Arbeit)
 
 Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.txt, Nutzungsbedingungen, was dort steht).
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Tourismusverband Osttirol (osttirol.com) | Osttirol (P33) | Status, Länge, Schwierigkeit von 59 Loipen (Seite „Alle Loipen“), Querprüfung tirol.at | info@osttirol.com | nicht angefragt | robots.txt ohne Sperre (geprüft 19.11.2026). Impressum: „Alle Inhalte und Bilder sind urheberrechtlich geschützt“, keine Freigabe zur Übernahme. Quelle mit erlaubnis nur_test. Der eigentliche Loipenzustandsbericht liegt bei Intermaps und wird nach P17 nicht abgerufen; in der Anfrage miterwähnen. |
+| Tiroler Zugspitz Arena (zugspitzarena.com) | Außerfern (P33) | Loipenstatus von 21 Loipen (Ehrwald, Lermoos, Biberwier, Berwang, Bichlbach, Heiterwang) | info@zugspitzarena.com | nicht angefragt, nicht angebunden | Eigene Seiten zeigen keinen Loipenstatus, nur ein eingebettetes Intermaps-Fenster (P17: nicht abrufen). Impressum: Vervielfältigung und Verwertung nur mit schriftlicher Zustimmung, Kopien nur privat. In der Anfrage auch nach der Nutzung des Intermaps-Berichts fragen. Entscheidung Stefan offen (19.11.2026). |
+| Lechtal Tourismus (lechtal.at), Holzgau (holzgau.at) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@lechtal.at | nicht nötig | Loipenliste lädt per JavaScript, Karte maps.lechtal.at nutzt tirol.mapservices.eu (robots-Sperre, dieselben Daten wie tirol.at). holzgau.at nennt keine Loipen. Kein Mehrwert gegenüber tirol.at, nicht angebunden. |
+| Naturparkregion Reutte (reutte.com) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@reutte.com | nicht nötig | Langlaufseite zeigt nur die contwise-Karte (reutte.mapservices.eu) und eine Liste über phoenix.contwise.io, beide aus der Tiroler Datenbank wie tirol.at. Kein Mehrwert, nicht angebunden. |

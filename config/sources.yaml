@@ -871,3 +871,57 @@ quellen:
         Fladnitz an der Teichalm: teichalm
         Hirschegg - Pack: hebalm
         Tamsweg: prebersee
+
+  # Osttirol (P33, E-24, 19.11.2026): Loipenliste von Osttirol Tourismus, nur zur Querpruefung von tirol.at.
+  # Status je Loipe, Laenge, Schwierigkeit; ohne Datum, Ort und Koordinate (Lage von tirol.at). Der eigentliche
+  # Loipenzustandsbericht liegt bei Intermaps und wird nach P17 nicht abgerufen. Ohne Zustimmung des
+  # Tourismusverbands nur in der Testversion (docs/kontaktliste.md Abschnitt 3).
+  - key: osttirol
+    adapter: osttirol
+    name: Osttirol Tourismus (Loipenliste)
+    base_url: https://www.osttirol.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Die Loipenliste von Osttirol nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: alle Inhalte urheberrechtlich geschützt, keine Freigabe zur Übernahme"}
+    config:
+      pfad: /aktiv-outdoor/langlaufen-und-biathlon/alle-loipen
+      default_gebiet: osttirol-lienz
+      # Wort im Namen -> Gebiet (erster Treffer zaehlt, daher Grenzlandloipe vor Grenzloipe)
+      gebiet_map:
+        Grenzlandloipe: obertilliach
+        Obertilliach: obertilliach
+        Untertilliach: obertilliach
+        Biathlonzentrum: obertilliach
+        Sillian: hochpustertal
+        Klaneggele: hochpustertal
+        Grenzloipe: hochpustertal
+        Strassen: hochpustertal
+        Rabland: hochpustertal
+        Villgraten: hochpustertal
+        Kartitsch: hochpustertal
+        Dorfberg: hochpustertal
+        Prägraten: matrei
+        Ströden: matrei
+        Virgen: matrei
+        Matrei: matrei
+        Wohlgemuth: matrei
+        Kals: kals
+        Lavant: osttirol-lienz
+        Dolomitenrunde: osttirol-lienz
+        Golfrunde: osttirol-lienz
+        Lengberg: osttirol-lienz
+        Hopfgarten: defereggental
+        St. Jakob: defereggental
+        St.Jakob: defereggental
+        Erlsbach: defereggental
+        Maria Hilf: defereggental
+        Obersee: defereggental
+        Leonhard: defereggental
+        Schwefelbrunn: defereggental
+      # Loipen ohne Ort im Namen (Ort laut Detailseite vom 19.11.2026)
+      gebiet_je_loipe:
+        "122288593": matrei  # Uebungsrunde Peterer Feld, Praegraten
+        "122288598": matrei  # Verbindungsloipe Dorf - Gries, Praegraten
