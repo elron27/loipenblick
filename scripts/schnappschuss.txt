@@ -1,3 +1,18 @@
-# <zielpfad> <url> -- Runde 20 (14.11.2026): Loipenuebersicht Lungau = contwise-Karte maps.lungau.at
-tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
+# <zielpfad> <url> -- Runde 21 (19.11.2026, P31): Ortsseiten Oetztal, Tiroler Oberland/Nauders, Serfaus-Fiss-Ladis, Paznaun
+tests/fixtures/tiroler-oberland/2026-11-19/geoeffnete-einrichtungen.html https://www.tiroler-oberland.com/de/Aktuelles/Geoeffnete-Einrichtungen
+tests/fixtures/tiroler-oberland/2026-11-19/schneebericht.html https://www.tiroler-oberland.com/de/Aktuelles/Schneebericht
+tests/fixtures/tiroler-oberland/2026-11-19/nauders-einrichtungen.html https://www.nauders.com/de/Aktuelles/Einrichtungen-Nauders
+tests/fixtures/serfaus/2026-11-19/status.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebietsstatus-und-pistenplan
+tests/fixtures/serfaus/2026-11-19/langlaufen.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/langlaufen
+tests/fixtures/serfaus/2026-11-19/schneehoehen.html https://www.serfaus-fiss-ladis.at/de/live-info/schneehoehen-und-lawinenlagebericht
+tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.json https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
+tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.html https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country
+tests/fixtures/paznaun/2026-11-19/galtuer-anlagen.json https://www.galtuer.com/de/winter/silvapark-galtuer/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
+tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.json https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country&sorting=status-desc&ajax=1
+tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.html https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country
+tests/fixtures/paznaun/2026-11-19/ischgl-schneebericht.html https://www.ischgl.com/de/winter/schneebericht
+tests/fixtures/paznaun/2026-11-19/loipen-katalog.html https://www.ischgl.com/de/winter/abseits-der-piste/langlaufen/loipen
+tests/fixtures/oetztal/2026-11-19/loipenstatus.html https://www.oetztal.com/de/live-infos/loipenstatus
+tests/fixtures/oetztal/2026-11-19/loipenangebot.html https://www.oetztal.com/de/aktivitaeten/winter/langlaufen/loipenangebot
+tests/fixtures/oetztal/2026-11-19/lehenloipe.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/lehenloipe-umhausen-niederthai.r-23683688
+tests/fixtures/oetztal/2026-11-19/sitemap.xml https://www.oetztal.com/sitemap.xml
