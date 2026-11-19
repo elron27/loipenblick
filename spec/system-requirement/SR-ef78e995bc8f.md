@@ -17,7 +17,7 @@ packages:
 derives-from:
   - { id: e4545660-d4de-42b3-ab57-8775bd2236fc, version: n2:59358067b6210a34, title: Diesen Winter öffentlich live gehen }
 based-on:
-  - { id: f32c0018-f80b-48eb-b0c6-3cb8e012e03e, version: n2:87927ec1a6b0bf2c, title: "Livegang: deutscher Webspace, Upload in zwei Phasen, keine Drittanbieter beim Aufruf" }
+  - { id: f32c0018-f80b-48eb-b0c6-3cb8e012e03e, version: n2:e8947b46a7ccae9d, title: "Livegang: Hetzner Webspace, Upload in zwei Phasen, keine Drittanbieter beim Aufruf" }
 ---
 
 Das System muss Sicherheits- und Cache-Header mitliefern (HSTS, Content-Security-Policy mit default-src self, X-Content-Type-Options, Referrer-Policy strict-origin-when-cross-origin; HTML und index.json kurz cachen, Hash-Dateien lange) und nur freigegebene Dateiarten hochladen.

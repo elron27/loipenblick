@@ -20,7 +20,7 @@ derives-from:
 based-on:
   - { id: 2ae0ad55-3d2e-461b-975b-237a0a1f0ac5, version: n2:22b0303ec030d854, title: "Parsen auf dem NAS, Website extern" }
   - { id: 4e6c0430-b562-4fd0-9279-e19cc6172d7f, version: n2:22b0303ec030d854, title: Version 1 zuerst lokal auf dem NAS testen }
-  - { id: f32c0018-f80b-48eb-b0c6-3cb8e012e03e, version: n2:87927ec1a6b0bf2c, title: "Livegang: deutscher Webspace, Upload in zwei Phasen, keine Drittanbieter beim Aufruf" }
+  - { id: f32c0018-f80b-48eb-b0c6-3cb8e012e03e, version: n2:e8947b46a7ccae9d, title: "Livegang: Hetzner Webspace, Upload in zwei Phasen, keine Drittanbieter beim Aufruf" }
 ---
 
 Das System muss erreichbar bleiben, wenn das NAS aus ist. Die Seite zeigt dann den letzten Stand mit seinem Alter.
