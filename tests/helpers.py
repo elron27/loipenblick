@@ -9,7 +9,8 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 # Quellen mit Schnappschuss-Ordner nach Datum (B19, CLAUDE.md Regel 10)
 STAND_QUELLEN = {"tirol": "2026-11-12", "kitzbueheler-alpen": "2026-11-12", "langlaufdorf": "2026-11-12",
-                 "berchtesgaden": "2026-11-12", "myswitzerland": "2026-11-13"}
+                 "berchtesgaden": "2026-11-12", "myswitzerland": "2026-11-13",
+                 "hall-wattens": "2026-11-19", "silberregion-karwendel": "2026-11-19"}  # P32
 
 
 class FixtureFetcher:
