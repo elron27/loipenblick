@@ -871,3 +871,102 @@ quellen:
         Fladnitz an der Teichalm: teichalm
         Hirschegg - Pack: hebalm
         Tamsweg: prebersee
+
+  # ---------- Ortsseiten Oetztal bis Paznaun zur Querpruefung von tirol.at (P31, E-24, 19.11.2026) ----------
+  # Rang 4 und querpruefung: tirol.at bleibt fuehrend; meldet die Ortsseite geschlossen, gilt ein tirol.at-"offen"
+  # ohne Beleg als unplausibel (D19). Keine Zustimmung der Betreiber: nur in der Testversion (nur_test), Kontakte
+  # und Nutzungsbedingungen in docs/kontaktliste.md Abschnitt 3.
+  - key: oetztal
+    adapter: oetztal
+    name: Ötztal Tourismus (Loipen-Detailseiten)
+    base_url: https://www.oetztal.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "oetztal.com nennt keinen Streckenverlauf ohne Outdooractive-Schlüssel; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "robots.txt regelt nur Meta-Bots (Crawl-delay 2); Impressum ohne Regel zur Weiterverwendung"}
+    config:
+      default_gebiet: oetztal
+      max_touren: 30
+      gebiet_map:
+        Gemeinde Sölden: soelden
+        Sölden: soelden
+        Zwieselstein: soelden
+        Gurgl: obergurgl
+        Hochgurgl: obergurgl
+        Vent: vent
+
+  - key: pitztal
+    adapter: pitztal
+    name: Tourismusverband Pitztal (Tourenportal Langlaufen)
+    base_url: https://www.pitztal.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Texte und Grafiken in anderen Publikationen nur mit Zustimmung"}
+    config:
+      pfad: /de/tourenportal-langlaufen.html
+      default_gebiet: pitztal
+      gebiet_map:
+        Mandarfen: pitztaler-gletscher
+        Gletscher: pitztaler-gletscher
+        Rifflsee: pitztaler-gletscher
+
+  - key: tiroler-oberland
+    adapter: tiroler_oberland
+    name: TVB Tiroler Oberland (Geöffnete Einrichtungen)
+    base_url: https://www.tiroler-oberland.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum und AGB ohne Regel zur Weiterverwendung; Nauders liest die eigene Quelle nauders"}
+    config:
+      pfad: /de/Aktuelles/Geoeffnete-Einrichtungen
+      default_gebiet: tiroler-oberland
+      gruppen_auslassen: [Nauders]
+      gebiet_map:
+        Kaunertal: kaunertal
+        Kaunergrat: pitztal
+
+  - key: nauders
+    adapter: tiroler_oberland
+    name: TVB Tiroler Oberland, Erlebnisraum Nauders (Einrichtungen)
+    base_url: https://www.nauders.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum und AGB ohne Regel zur Weiterverwendung"}
+    config:
+      pfad: /de/Aktuelles/Einrichtungen-Nauders
+      default_gebiet: tiroler-oberland
+
+  - key: serfaus-fiss-ladis
+    adapter: serfaus
+    name: Serfaus-Fiss-Ladis Marketing (Langlaufen und Skigebietsstatus)
+    base_url: https://www.serfaus-fiss-ladis.at
+    art: portal
+    rang: 4
+    querpruefung: true
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Inhalte und Bilder für andere Seiten nur mit Erlaubnis der Redaktion"}
+    config:
+      default_gebiet: serfaus-fiss-ladis
+
+  - key: paznaun
+    adapter: paznaun
+    name: TVB Paznaun-Ischgl (Geöffnete Anlagen, Langlauf)
+    base_url: https://www.ischgl.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "robots.txt sperrt ajaxRequestType, nicht ajax=1; Fusszeile: alle Rechte vorbehalten"}
+    config:
+      pfad: /de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country
+      default_gebiet: paznaun
+      # Samnaun (Schweiz) meldet snow.myswitzerland.com
+      auslassen: [Samnaun]
