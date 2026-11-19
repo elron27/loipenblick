@@ -75,9 +75,12 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
+        unplausibel: set[int] = set()
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
-                          abo_dateien=abo_dateien(session, settings), version=settings.version)
+                          abo_dateien=abo_dateien(session, settings), version=settings.version,
+                          unplausibel=unplausibel)
+        ereignisse = ohne_unplausible(ereignisse, unplausibel)
     log.info("Seite erzeugt in %s", settings.site_dir)
     meldung = hochladen(settings)
     if meldung:
@@ -138,6 +141,18 @@ def hochladen(settings, **kw) -> tuple[str, str] | None:
     except Exception as e:
         log.error("Upload: %s", e)
         return upload_meldung(status, False, str(e))
+
+
+def ohne_unplausible(ereignisse: list, unplausibel: set[int]) -> list:
+    """D19 AK 5: Die Seite zeigt eine unplausible Offen-Meldung geschlossen, also meldet auch kein Push
+    und kein Abo-Mail sie als befahrbar oder frisch gespurt."""
+    bleiben = []
+    for e in ereignisse:
+        if e.art != "schliesst" and e.loipe_id in unplausibel:
+            log.info("Ereignis %s fuer %s nicht gemeldet: Offen-Meldung unplausibel (D19)", e.art, e.loipe)
+        else:
+            bleiben.append(e)
+    return bleiben
 
 
 def _melde(settings, sender, ereignisse, meldungen) -> None:
