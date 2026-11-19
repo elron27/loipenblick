@@ -610,3 +610,17 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200      412 tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
 200 https://www.holzgau.at/robots.txt
 200   130538 tests/fixtures/recherche-2026-11-19/p33/holzgau/start.html https://www.holzgau.at/
+# Lauf 2026-11-19 14:46 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.reutte.com/robots.txt
+200   164665 tests/fixtures/recherche-2026-11-19/p33/reutte/langlaufen.html https://www.reutte.com/de/erleben/sport-und-freizeitaktivitaeten/langlaufen
+200   151379 tests/fixtures/recherche-2026-11-19/p33/reutte/impressum.html https://www.reutte.com/de/service/impressum
+200   135613 tests/fixtures/recherche-2026-11-19/p33/reutte/agb.html https://www.reutte.com/de/agb
+200    49101 tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.default.xml https://www.reutte.com/sitemap.default.xml
+200 https://www.lechtal.at/robots.txt
+200   593319 tests/fixtures/recherche-2026-11-19/p33/lechtal/ort-holzgau.html https://www.lechtal.at/de/region/orte/holzgau.html
+200 https://maps.lechtal.at/robots.txt
+200     2879 tests/fixtures/recherche-2026-11-19/p33/lechtal/karte-v2.html https://maps.lechtal.at/v2/
+200 https://www.holzgau.at/robots.txt
+200   110540 tests/fixtures/recherche-2026-11-19/p33/holzgau/impressum.html https://www.holzgau.at/impressum-datenschutz/
+200 https://zugspitzarena.com/robots.txt
+200      524 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/sitemap.xml https://zugspitzarena.com/sitemap.xml
