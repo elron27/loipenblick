@@ -5,7 +5,7 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 ## Bis Freitag, 20.11.
 
 1. ~~Anbieter wählen.~~ Erledigt am 19.11.: **netcup Webhosting 1000** (2,69 €/Monat, .de-Domain dabei, 12 Monate Laufzeit). Ob SSH/SFTP dabei ist, widerspricht sich auf der netcup-Seite; nach der Bestellung im Panel nachsehen, sonst FTPS.
-2. ~~Domainnamen wählen.~~ Erledigt am 19.11.: **`loipenradar.de`**. Vor der Bestellung zwei Minuten Markensuche nach „Loipenradar“ im [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und bei [TMview](https://www.tmdn.org/tmview/) (EU und Österreich). Im Netz fand ich am 19.11. keine Seite, App oder Firma mit dem Namen.
+2. ~~Domainnamen wählen.~~ Erledigt am 19.11.: **`loipen-blick.de`** (passt zum Namen Loipenblick; `loipenblick.de` ist vergeben, die inklusive `.com` gäbe es bei netcup nur mit US-Standort). Vor der Bestellung kurz nach „Loipenblick“ im [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und bei [TMview](https://www.tmdn.org/tmview/) suchen.
 3. **Impressum-Adresse klären.** Pflicht sind Vor- und Nachname und eine ladungsfähige Anschrift, ein Postfach reicht nicht. Möglich: eigene Adresse, oder Adresse eines Familienangehörigen mit schriftlicher Zustellungsvollmacht, oder ein Anschriftenservice mit Vollmacht (kostet).
 4. **Quellbetreiber um Erlaubnis bitten** mit der Vorlage aus `livegang.md`, Abschnitt 8. Zuerst Tirol Werbung (info@tirol.at), dann Tegernseer Tal Tourismus, Bayrischzell, Fischbachau, Chiemgau (tourinfra), Aschau, Tannheimer Tal, Seefeld, Achensee, Kufstein, Kaiserwinkl, Kitzbüheler Alpen, Faistenau/Hintersee, Berchtesgaden. Antworten sammeln (Datum, Ja/Nein, Wunsch zum Quellenhinweis).
 

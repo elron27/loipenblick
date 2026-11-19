@@ -3,7 +3,7 @@
 posten:
   - {name: "NAS-Betrieb (Strom bleibt ausserhalb)", eur_pro_jahr: 0, stand: "V1, vorhanden"}
   - {name: "Webspace netcup Webhosting 1000 (2,69 EUR/Monat, 12 Monate)", eur_pro_jahr: 32.28, stand: "Planwert, gewaehlt 19.11.2026, ab Bestellung (B8)"}
-  - {name: "Domain loipenradar.de", eur_pro_jahr: 0, stand: "im netcup-Tarif enthalten"}
+  - {name: "Domain loipen-blick.de", eur_pro_jahr: 0, stand: "im netcup-Tarif enthalten"}
   - {name: "Push ueber ntfy.sh (kostenlos)", eur_pro_jahr: 0, stand: "oeffentlicher Dienst, Thema geheim halten"}
   - {name: "Wetterdaten DWD und Bright Sky", eur_pro_jahr: 0, stand: "freie Daten"}
   - {name: "Tailscale fuer Zugriff von unterwegs", eur_pro_jahr: 0, stand: "Free-Tarif"}

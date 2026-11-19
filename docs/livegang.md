@@ -11,7 +11,7 @@ Die Anforderungen dazu stehen in `spec/` (Filter `livegang`, Entscheidung E-17).
 | Thema | Empfehlung |
 |---|---|
 | Hosting | **Entschieden am 19.11.2026: netcup Webhosting 1000** (2,69 €/Monat mit .de-Domain, 12 Monate Laufzeit). Upload per SFTP, falls der Tarif SSH hat, sonst FTPS. Zweite Wahl bleibt Cloudflare Pages. |
-| Domain | **`loipenradar.de`** (Stefan, 19.11.), im netcup-Tarif enthalten. `loipenblick.de` ist vergeben, `.com` kostet Aufpreis. Die Seite heißt weiter Loipenblick. |
+| Domain | **`loipen-blick.de`** (Stefan, 19.11.), im netcup-Tarif enthalten. `loipenblick.de` ist vergeben; die inklusive `.com` bietet netcup nur mit US-Standort an. |
 | Update vom NAS | Upload in zwei Phasen: zuerst Daten-Dateien mit Inhalts-Hash im Namen, zuletzt `index.json` und HTML. Ein abgebrochener Upload lässt die alte Seite heil. |
 | Impressum | Nötig (§ 18 Abs. 1 MStV): Vor- und Nachname plus ladungsfähige Anschrift. Postfach reicht nicht. Lösung für die Privatadresse: Adresse mit Zustellungsvollmacht (Familie, Büroservice, Anwalt). |
 | Datenschutz | Datenschutzerklärung nötig. Ziel: Die Seite lädt beim Aufruf nichts von fremden Servern, dann braucht es keinen Cookie-Banner. Dafür die Kartenkacheln selbst hosten oder erst nach Klick laden. |
@@ -58,7 +58,7 @@ Preise laut Anbieterseite am 13.11.2026, inklusive 19 % MwSt.
 
 - **Endung .de.** Bei DENIC sind die Inhaberdaten von Privatpersonen im öffentlichen Whois nicht sichtbar, nur der Provider ([DENIC](https://www.denic.de/services/whois-service/)). Die Privatadresse erscheint also nicht über die Domain, sondern nur über das Impressum.
 - **Registrar.** Im netcup-Tarif ist eine .de-Domain enthalten. Sonst INWX: 4,71 € Registrierung, 3,60 € Verlängerung pro Jahr ([INWX](https://www.inwx.de/de/domain/pricelist)). Ob die Preise brutto sind, war auf der Seite nicht eindeutig.
-- **Name.** Gewählt: `loipenradar.de`. Eine Websuche am 19.11.2026 fand keine Seite, App oder Firma mit dem Namen „Loipenradar“; eine Markenrecherche im DPMA- und EUIPO-Register ist das nicht (siehe Checkliste). Keine Ortsnamen oder Marken Dritter im Namen (z. B. nicht „tirol-loipen.de“), um Streit um Namensrechte zu vermeiden.
+- **Name.** Gewählt: `loipen-blick.de`, passend zum Seitennamen Loipenblick. Verworfen: `loipenradar.de` (Name passt nicht, klingt militärisch), `loipenblick.com` (bei netcup nur mit US-Standort inklusive). Keine Ortsnamen oder Marken Dritter im Namen. Eine Markenrecherche im DPMA- und EUIPO-Register macht Stefan vor der Bestellung.
 - **E-Mail.** Eine Adresse auf der Domain (z. B. `kontakt@…`) als Weiterleitung auf Stefans Postfach. Sie steht im Impressum und auf der Seite für Quellbetreiber (B16). Die meisten Webspace-Tarife haben Weiterleitungen dabei.
 
 ## 4. Update-Workflow vom NAS
@@ -190,7 +190,7 @@ P17 verlangt schon, dass jede Quelle in `sources.yaml` „Nutzungsbedingungen ge
 
 ### Vorlage für die Anfrage an Quellbetreiber
 
-> Betreff: Loipenstatus auf loipenradar.de verlinken
+> Betreff: Loipenstatus auf loipen-blick.de verlinken
 >
 > Guten Tag,
 >
