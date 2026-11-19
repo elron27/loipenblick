@@ -136,7 +136,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
-        "st-anton", "nassfeld-nlw", "steiermark"}
+        "st-anton", "nassfeld-nlw", "steiermark",
+        "alpbachtal", "wildschoenau", "wilderkaiser"}
 
 
 @pytest.mark.req("U6", ak=1)
