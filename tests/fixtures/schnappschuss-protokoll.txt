@@ -609,3 +609,17 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   166623 tests/fixtures/recherche-2026-11-19/p34/stjohann/hosa-status.html https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/status.html
 200   242875 tests/fixtures/recherche-2026-11-19/p34/stjohann/pital-status.html https://www.kitzbueheler-alpen.com/de/pital/aktuelles/loipen-status.html
 200   211483 tests/fixtures/recherche-2026-11-19/p34/stjohann/bri-status.html https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+# Lauf 2026-11-19 14:46 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.kitzbuehel.com/robots.txt
+200   375488 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-de2.html https://www.kitzbuehel.com/aktivitaeten/langlaufen/
+200   632998 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/trail-conditions.html https://www.kitzbuehel.com/en/activities/ski-resort/trail-conditions/
+200   261801 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/impressum.html https://www.kitzbuehel.com/impressum/
+200   260188 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/agb.html https://www.kitzbuehel.com/agb/
+200 https://maps.kitzbuehel.com/robots.txt
+200     2997 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-v2.html https://maps.kitzbuehel.com/v2/de/gdi_summer/2d/-1/category/-1/-1/-1/18367/-1/
+200     2997 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-root.html https://maps.kitzbuehel.com/
+200 https://www.alpbachtal.at/robots.txt
+200   242092 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/impressum.html https://www.alpbachtal.at/de/info-und-service/impressum
+200   240290 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/agb.html https://www.alpbachtal.at/de/info-und-service/agb
+200 https://www.wildschoenau.com/robots.txt
+200   179185 tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/info-service/impressum

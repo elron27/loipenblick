@@ -1,21 +1,68 @@
-User-Agent: *
-Disallow:
-Disallow: /wx-tools/
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noindex" />
 
-User-agent: meta-externalagent
-Crawl-delay: 10
-Disallow: /wx-tools/
-Disallow: /*?
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description"  content="Interaktive Karte Kitzbuehel - Contwise Maps Phonix"/>
+    <script type="text/javascript">
+        if(navigator.userAgent.indexOf("edge") !== -1 || navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > -1){
+          /* Microsoft Internet Explorer detected in. */
+          alert("Achtung! Ihr Browser wird nicht untertützt. / Attention your browser isn't supported.");
+        }
+    </script>
 
-Sitemap: https://www.kitzbuehel.com/sitemap.xml
-Sitemap: https://www.kitzbuehel.com/en/sitemap.xml
-Sitemap: https://www.kitzbuehel.com/imagesitemap.xml
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.kitzbuehel.com/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.kitzbuehel.com/favicons/favicon-16x16.png">
+    <title></title>
 
-#              ___.                                              .__
-#__  _  __ ____\_ |__             ___________  ____  ______ _____|__| ____    ____
-#\ \/ \/ // __ \| __ \   ______ _/ ___\_  __ \/  _ \/  ___//  ___/  |/    \  / ___\
-# \     /\  ___/| \_\ \ /_____/ \  \___|  | \(  <_> )___ \ \___ \|  |   |  \/ /_/  >
-#  \/\_/  \___  >___  /          \___  >__|   \____/____  >____  >__|___|  /\___  /
-#             \/    \/               \/                 \/     \/        \//_____/
-#
-# why you are looking at this? please see https://www.web-crossing.com
+      </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+        var options = {
+          apikey: "kitzbuehel",
+          baseUrl: "https://tirol.mapservices.eu/nefos_app/",
+          center: [46.88647742351024, 12.546960000090522],
+          zoom: 10,
+          title: {
+            default: "",
+            de: "Interaktive Karte Kitzbühel - Touren im Sommer & Winter",
+            en: "Kitzbühel Interactive Map - Tours in Summer & Winter",
+            it: ""
+          },
+          assignedLayerNames: {
+            "skiResort": { autoLoadLinkedResources: true, objectType: "ski_resort" },
+            "lift": { layerName: "lift", objectType: "gdi_lift", polyline: { updateColorByStatus: true, addStatusIcon: false }, marker: { showLargeSelectedMarker: true, updateColorByStatus: true } },
+            "piste": { layerName: "default", objectType: "gdi_piste", polyline: { addStatusIcon: false }, marker: { showLargeSelectedMarker: true, updateColorByStatus: true, autoResizeSvgNumberFont: false } }
+          },
+          threedfly: false,
+          liveStateInterval: null,
+          markerClickCallback: null,
+          filterLinkedResourcesCallback: null,
+          filterSearchResourceCallback: null,
+          boundsMaxZoom: null,
+          defaultThemeColor: '#B41D28',
+          loadVectorTiles: true,
+          routingOptions: {
+            disableVAO: true,
+            vaoKey: "test"
+          },
+          useMapLibre: true,
+          showMainMap: null,
+          disableRoutingTool: false,
+          theme: null,
+          appStateDefaults: null,
+          enableStagePlanner: null,
+          stagePlannerConfig: null
+        }
+        phoenix.initRender(options);          
+    </script>
+    <script type="text/javascript" src="https://phoenix.contwise.io/map.bundle.js"></script>
+  </body>
+</html>
