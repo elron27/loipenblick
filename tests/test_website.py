@@ -137,7 +137,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
         "st-anton", "nassfeld-nlw", "steiermark",
-        "alpbachtal", "wildschoenau", "wilderkaiser"}
+        "alpbachtal", "wildschoenau", "wilderkaiser",
+        "oetztal", "pitztal", "tiroler-oberland", "nauders", "serfaus-fiss-ladis", "paznaun"}
 
 
 @pytest.mark.req("U6", ak=1)
