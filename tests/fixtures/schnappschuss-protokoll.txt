@@ -633,3 +633,14 @@ ROBOTS-VERBOT https://www.stubai.at/info-service/wetter/
 200 https://www.silberregion-karwendel.com/robots.txt
 200   201892 tests/fixtures/recherche-2026-11-19/karwendel/langlaufen.html https://www.silberregion-karwendel.com/de/langlaufen.html
 200   182833 tests/fixtures/recherche-2026-11-19/karwendel/wetter.html https://www.silberregion-karwendel.com/de/wetter.html
+# Lauf 2026-11-19 14:46 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://sdds4.intermaps.com/robots.txt
+200    83037 tests/fixtures/recherche-2026-11-19/innsbruck/intermaps-lebensraum.html https://sdds4.intermaps.com/innsbruck_new/lebensraum_innsbruck.aspx?lang=de
+200 https://maps.wipptal.at/robots.txt
+200     3022 tests/fixtures/recherche-2026-11-19/wipptal/maps-v2.html https://maps.wipptal.at/v2/
+403 https://www.stubai.at/robots.txt
+ROBOTS-VERBOT https://www.stubai.at/aktivitaeten/winter-aktiv/langlaufen/
+200 https://www.hall-wattens.at/robots.txt
+200   248136 tests/fixtures/recherche-2026-11-19/hall-wattens/tour-gnadenwald.html https://www.hall-wattens.at/de/tours/langlauf-loipe-gnadenwald.html
+200 https://www.silberregion-karwendel.com/robots.txt
+200   193658 tests/fixtures/recherche-2026-11-19/karwendel/tour-hinterriss.html https://www.silberregion-karwendel.com/de/tours/loipe-hinterriss.html

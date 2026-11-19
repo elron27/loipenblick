@@ -1,48 +1,98 @@
-User-agent: *
-
-Disallow: /*?sessionid
-Disallow: /epaper/
-Disallow: /tagung/webxanfrage/
-
-Disallow: /*?L=*
-Disallow: /*?tx_webxbookingemo_event[listevent]=*
-
-Disallow: /*?id=* # Deaktiviert non-realurl URLs
-
-Disallow: /pdf/*
-Disallow: /fileadmin/pdf/*
-
-Disallow: /kiosk
-Disallow: /en/kiosk
-
-# IR-1421: Mitgliederportal (Seitenbaum uid 4135) aus dem Index halten
-# -> deckt /mitgliederportal.html und alle /mitgliederportal/... Unterseiten ab.
-Disallow: /mitgliederportal
-
-# IR-1321: Test-/Demo-Äste nicht mehr crawlen lassen. Die Seiten liefern bereits
-# <meta name="robots" content="noindex,nofollow">; der Disallow stoppt zusätzlich
-# den Crawl. Anlass: Googlebot rief 06.-07.08.2026 die obsoleten Unterkunfts-
-# Detailseiten unter /skifahren/testdce/serviceprovider/unterkunft/ ab und löste
-# dabei täglich rund 10 HTTP-500-Fehler aus.
-# Die /*/-Varianten decken die Sprachpräfixe ab (/en/, /it/, /fr/, /es/, /nl/, ...)
-# sowie /skifahren/testdce; robots.txt-Pfade gelten immer ab Host-Root.
-Disallow: /testdce
-Disallow: /*/testdce
-Disallow: /testbookingemo
-Disallow: /*/testbookingemo
-Disallow: /convention/kongress/testevent
-Disallow: /*/convention/kongress/testevent
-Disallow: /test-1
-Disallow: /*/test-1
-
-Disallow: /markthalle/webcam/*
-Disallow: /miemingerplateau/webcam/*
-Disallow: /patscherkofel/webcam/*
-Disallow: /sonnenplateau/webcam/*
-
-Sitemap: https://www.innsbruck.info/sitemap.xml
-Sitemap: https://www.innsbruck.info/en/sitemap.xml
-Sitemap: https://www.innsbruck.info/it/sitemap.xml
-Sitemap: https://www.innsbruck.info/fr/sitemap.xml
-Sitemap: https://www.innsbruck.info/es/sitemap.xml
-Sitemap: https://www.innsbruck.info/nl/sitemap.xml
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>IIS 10.0 Detaillierter Fehler - 404.0 - Not Found</title> 
+<style type="text/css"> 
+<!-- 
+body{margin:0;font-size:.7em;font-family:Verdana,Arial,Helvetica,sans-serif;} 
+code{margin:0;color:#006600;font-size:1.1em;font-weight:bold;} 
+.config_source code{font-size:.8em;color:#000000;} 
+pre{margin:0;font-size:1.4em;word-wrap:break-word;} 
+ul,ol{margin:10px 0 10px 5px;} 
+ul.first,ol.first{margin-top:5px;} 
+fieldset{padding:0 15px 10px 15px;word-break:break-all;} 
+.summary-container fieldset{padding-bottom:5px;margin-top:4px;} 
+legend.no-expand-all{padding:2px 15px 4px 10px;margin:0 0 0 -12px;} 
+legend{color:#333333;;margin:4px 0 8px -12px;_margin-top:0px; 
+font-weight:bold;font-size:1em;} 
+a:link,a:visited{color:#007EFF;font-weight:bold;} 
+a:hover{text-decoration:none;} 
+h1{font-size:2.4em;margin:0;color:#FFF;} 
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.4em;margin:10px 0 0 0;color:#CC0000;} 
+h4{font-size:1.2em;margin:10px 0 5px 0; 
+}#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS",Verdana,sans-serif; 
+ color:#FFF;background-color:#5C87B2; 
+}#content{margin:0 0 0 2%;position:relative;} 
+.summary-container,.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;} 
+.content-container p{margin:0 0 10px 0; 
+}#details-left{width:35%;float:left;margin-right:2%; 
+}#details-right{width:63%;float:left;overflow:hidden; 
+}#server_version{width:96%;_height:1px;min-height:1px;margin:0 0 5px 0;padding:11px 2% 8px 2%;color:#FFFFFF; 
+ background-color:#5A7FA5;border-bottom:1px solid #C1CFDD;border-top:1px solid #4A6C8E;font-weight:normal; 
+ font-size:1em;color:#FFF;text-align:right; 
+}#server_version p{margin:5px 0;} 
+table{margin:4px 0 4px 0;width:100%;border:none;} 
+td,th{vertical-align:top;padding:3px 0;text-align:left;font-weight:normal;border:none;} 
+th{width:30%;text-align:right;padding-right:2%;font-weight:bold;} 
+thead th{background-color:#ebebeb;width:25%; 
+}#details-right th{width:20%;} 
+table tr.alt td,table tr.alt th{} 
+.highlight-code{color:#CC0000;font-weight:bold;font-style:italic;} 
+.clear{clear:both;} 
+.preferred{padding:0 5px 2px 5px;font-weight:normal;background:#006633;color:#FFF;font-size:.8em;} 
+--> 
+</style> 
+ 
+</head> 
+<body> 
+<div id="content"> 
+<div class="content-container"> 
+  <h3>HTTP-Fehler 404.0 - Not Found</h3> 
+  <h4>Die gesuchte Ressource wurde entfernt oder umbenannt, oder sie steht vorübergehend nicht zur Verfügung.</h4> 
+</div> 
+<div class="content-container"> 
+ <fieldset><h4>Wahrscheinlichste Ursachen:</h4> 
+  <ul> 	<li>Das angegebene Verzeichnis oder die angegebene Datei ist auf diesem Webserver nicht vorhanden.</li> 	<li>Die URL enthält einen Schreibfehler.</li> 	<li>Der Zugriff auf die Datei wird von einem benutzerdefinierten Filter oder Modul wie URLScan eingeschränkt.</li> </ul> 
+ </fieldset> 
+</div> 
+<div class="content-container"> 
+ <fieldset><h4>Mögliche Vorgehensweise:</h4> 
+  <ul> 	<li>Erstellen Sie den Inhalt auf dem Webserver.</li> 	<li>Überprüfen Sie die Browser-URL.</li> 	<li>Erstellen Sie eine Ablaufverfolgungsregel für Anforderungsfehler für diesen HTTP-Statuscode, und überprüfen Sie, welches Modul "SetStatus" aufruft. Weitere Informationen zum Erstellen von Überwachungsregeln für Anforderungsfehler finden Sie <a href="http://go.microsoft.com/fwlink/?LinkID=66439">hier</a>. </li> </ul> 
+ </fieldset> 
+</div> 
+ 
+<div class="content-container"> 
+ <fieldset><h4>Detaillierte Fehlerinformationen:</h4> 
+  <div id="details-left"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>Modul</th><td>&nbsp;&nbsp;&nbsp;IIS Web Core</td></tr> 
+    <tr><th>Benachrichtigung</th><td>&nbsp;&nbsp;&nbsp;MapRequestHandler</td></tr> 
+    <tr class="alt"><th>Handler</th><td>&nbsp;&nbsp;&nbsp;StaticFile</td></tr> 
+    <tr><th>Fehlercode</th><td>&nbsp;&nbsp;&nbsp;0x80070002</td></tr> 
+     
+   </table> 
+  </div> 
+  <div id="details-right"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>Angeforderte URL</th><td>&nbsp;&nbsp;&nbsp;https://sdds4.intermaps.com:443/robots.txt</td></tr> 
+    <tr><th>Physischer Pfad</th><td>&nbsp;&nbsp;&nbsp;D:\inetpub\SDDS4\robots.txt</td></tr> 
+    <tr class="alt"><th>Anmeldemethode</th><td>&nbsp;&nbsp;&nbsp;Anonym</td></tr> 
+    <tr><th>Benutzeranmeldung</th><td>&nbsp;&nbsp;&nbsp;Anonym</td></tr> 
+     
+   </table> 
+   <div class="clear"></div> 
+  </div> 
+ </fieldset> 
+</div> 
+ 
+<div class="content-container"> 
+ <fieldset><h4>Weitere Informationen:</h4> 
+  Dieser Fehler weist darauf hin, dass die Datei oder das Verzeichnis auf dem Server nicht vorhanden sind. Erstellen Sie die Datei oder das Verzeichnis, und führen Sie die Anforderung erneut aus. 
+  <p><a href="http://go.microsoft.com/fwlink/?LinkID=62293&amp;IIS70Error=404,0,0x80070002,14393">Weitere Informationen anzeigen &raquo;</a></p> 
+   
+ </fieldset> 
+</div> 
+</div> 
+</body> 
+</html> 
