@@ -10,8 +10,8 @@ Die Anforderungen dazu stehen in `spec/` (Filter `livegang`, Entscheidung E-17).
 
 | Thema | Empfehlung |
 |---|---|
-| Hosting | Deutscher Webspace mit SFTP oder FTPS, z. B. netcup Webhosting 1000 (2,69 €/Monat mit .de-Domain). Zweite Wahl: Cloudflare Pages (kostenlos, aber US-Anbieter, max. 25 MiB je Datei). |
-| Domain | .de, im Webspace-Tarif enthalten oder bei INWX (4,71 € Registrierung, 3,60 € Verlängerung pro Jahr). |
+| Hosting | **Entschieden am 19.11.2026: Hetzner Webhosting S** (1,90 €/Monat, keine Mindestlaufzeit, Nürnberg). Upload per SFTP, sonst FTPS. Zweite Wahl bleibt Cloudflare Pages. |
+| Domain | .de, bei Hetzner nicht im Tarif: dort ab 5,83 €/Jahr dazubuchen (oder INWX). `loipenblick.de` ist vergeben. |
 | Update vom NAS | Upload in zwei Phasen: zuerst Daten-Dateien mit Inhalts-Hash im Namen, zuletzt `index.json` und HTML. Ein abgebrochener Upload lässt die alte Seite heil. |
 | Impressum | Nötig (§ 18 Abs. 1 MStV): Vor- und Nachname plus ladungsfähige Anschrift. Postfach reicht nicht. Lösung für die Privatadresse: Adresse mit Zustellungsvollmacht (Familie, Büroservice, Anwalt). |
 | Datenschutz | Datenschutzerklärung nötig. Ziel: Die Seite lädt beim Aufruf nichts von fremden Servern, dann braucht es keinen Cookie-Banner. Dafür die Kartenkacheln selbst hosten oder erst nach Klick laden. |
@@ -19,7 +19,7 @@ Die Anforderungen dazu stehen in `spec/` (Filter `livegang`, Entscheidung E-17).
 | Datenquellen | Fakten (offen, km, Datum) sind frei, die Sammlung kann aber als Datenbank geschützt sein (§ 87b UrhG). Vor dem Livegang die Betreiber per Mail um Erlaubnis bitten, zuerst Tirol Werbung (701 Loipen). |
 | Haftung | „Ohne Gewähr“ ist schon da (B15). Dazu ein Hinweis, dass Sperrungen und Beschilderung vor Ort gelten. |
 | Monitoring | UptimeRobot (kostenlos) prüft die Seite von außen, Healthchecks.io (kostenlos) merkt, wenn das NAS keine Daten mehr schickt. |
-| Kosten | ca. 32 € im Jahr mit netcup (Webspace und Domain), Budget 60 €. |
+| Kosten | ca. 29 € im Jahr mit Hetzner (22,80 € Webspace, 5,83 € Domain), Budget 60 €. |
 
 ## 1. Was die Seite vom Hosting braucht
 
@@ -44,20 +44,22 @@ Preise laut Anbieterseite am 13.11.2026, inklusive 19 % MwSt.
 
 | Anbieter | Preis | Domain | Upload | Standort | Bewertung |
 |---|---|---|---|---|---|
-| **netcup Webhosting 1000** | 2,69 €/Monat, 12 Monate Laufzeit | 1 .de inklusive | „SSH access available“ laut Tarifliste, die Vergleichstabelle derselben Seite sagt „nicht enthalten“. Vor Bestellung prüfen. | Deutschland (laut Tabelle auch AT/USA, beim Bestellen wählen) | **Empfehlung.** Günstig, Domain dabei, deutscher Vertrag. [Quelle](https://www.netcup.com/en/hosting/hosting-comparison) |
-| Hetzner Webhosting S | 1,90 €/Monat, keine Mindestlaufzeit | nicht enthalten, ab 5,83 €/Jahr | SSH erst ab Tarif L (9,90 €) | Nürnberg | Gut, wenn netcup nicht passt. [Quelle](https://www.hetzner.com/de/webhosting/) |
+| netcup Webhosting 1000 | 2,69 €/Monat, 12 Monate Laufzeit | 1 .de inklusive | „SSH access available“ laut Tarifliste, die Vergleichstabelle derselben Seite sagt „nicht enthalten“. | Deutschland (laut Tabelle auch AT/USA, beim Bestellen wählen) | Ursprüngliche Empfehlung, nicht gewählt. [Quelle](https://www.netcup.com/en/hosting/hosting-comparison) |
+| **Hetzner Webhosting S** | 1,90 €/Monat, keine Mindestlaufzeit, 10 GB | nicht enthalten, ab 5,83 €/Jahr | SFTP/FTPS für alle Pakete laut Doku; SSH-Login erst ab Tarif L | Nürnberg | **Gewählt am 19.11.2026.** PHP, Let's Encrypt, mod_rewrite, unbegrenzt Postfächer und FTP-Benutzer, tägliches Backup 14 Tage. [Tarif](https://www.hetzner.com/de/webhosting/), [Doku](https://docs.hetzner.com/managed/webhosting/overview/) |
 | all-inkl Privat | 4,95 €/Monat, monatlich kündbar | 3 inklusive | SSH erst ab Premium (9,95 €); SSL in der Liste erst ab Privat+ (7,95 €) genannt | Deutschland | Am Budgetrand, SSL unklar. [Quelle](https://all-inkl.com/webhosting/) |
 | Uberspace | Zahl, was du für fair hältst | eigene Domain möglich | volle Linux-Shell, also SSH und rsync | nicht angegeben | Technisch am bequemsten (rsync, atomarer Wechsel per Symlink), Preis selbst gewählt. [Quelle](https://uberspace.de/de/) |
 | **Cloudflare Pages** | 0 € | eigene Domain (DNS bei Cloudflare) | `wrangler pages deploy site/`, jede Veröffentlichung ist ein eigener Stand mit Rollback | weltweites Netz, US-Firma | **Zweite Wahl.** Unbegrenzte Bandbreite, atomare Deploys. Aber: max. 20.000 Dateien und 25 MiB je Datei, also keine PMTiles-Karte; US-Anbieter in der Datenschutzerklärung; Node/wrangler auf dem NAS. [Limits](https://developers.cloudflare.com/pages/platform/limits/), [Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/), [Bandbreite](https://pages.cloudflare.com/) |
 | GitHub Pages | 0 € | eigene Domain | Push in ein Repo | US-Firma | Nicht empfohlen: Die Daten lägen mit Historie in einem öffentlichen Repo (Datenbankrecht, Abschnitt 8), dreimal täglich ein Commit bläht das Repo auf (Limit 1 GB), Soft-Limit 100 GB/Monat. [Quelle](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) |
 | Netlify Free | 0 € | eigene Domain | CLI | US-Firma | Fällt raus: 300 Credits im Monat, ein Produktions-Deploy kostet 15. Drei Läufe am Tag sind 90 Deploys, also 1.350 Credits. [Quelle](https://www.netlify.com/pricing/) |
 
-**Warum Webspace vor Cloudflare Pages:** Stefan will Deutschland/EU und eine einfache Datenschutzerklärung. Ein deutscher Webspace hat einen deutschen AVV, kein Drittland, kann große Kartendateien ausliefern und braucht auf dem NAS nur einen SFTP-Client. Den Vorteil von Cloudflare (atomare Deploys) holt der Upload-Ablauf in Abschnitt 4 nach. Bleibt netcup ohne SFTP/SSH, geht FTPS (FTP über TLS) genauso.
+**Warum Webspace vor Cloudflare Pages:** Stefan will Deutschland/EU und eine einfache Datenschutzerklärung. Ein deutscher Webspace hat einen deutschen AVV, kein Drittland, kann große Kartendateien ausliefern und braucht auf dem NAS nur einen SFTP-Client. Den Vorteil von Cloudflare (atomare Deploys) holt der Upload-Ablauf in Abschnitt 4 nach. Bei Hetzner nennt die Doku SFTP und FTPS; geht SFTP im Tarif S nicht, nimmt der Upload FTPS (FTP über TLS).
+
+**Bei Hetzner vor dem Livegang prüfen:** Ob `mod_headers` aktiv ist, steht nicht in der Doku (`mod_rewrite` schon). Davon hängen die Sicherheits-Header aus `.htaccess` ab (B24). Prüfung nach dem ersten Test-Upload: `curl -I https://test.<domain>/` muss `Content-Security-Policy` zeigen. Die Einrichtungsgebühr zeigt die Tarifseite widersprüchlich mit 0,00 € und 9,90 €; beim Bestellen ansehen.
 
 ## 3. Domain
 
 - **Endung .de.** Bei DENIC sind die Inhaberdaten von Privatpersonen im öffentlichen Whois nicht sichtbar, nur der Provider ([DENIC](https://www.denic.de/services/whois-service/)). Die Privatadresse erscheint also nicht über die Domain, sondern nur über das Impressum.
-- **Registrar.** Im netcup-Tarif ist eine .de-Domain enthalten. Sonst INWX: 4,71 € Registrierung, 3,60 € Verlängerung pro Jahr ([INWX](https://www.inwx.de/de/domain/pricelist)). Ob die Preise brutto sind, war auf der Seite nicht eindeutig.
+- **Registrar.** Bei Hetzner Webhosting S ist keine Domain dabei. Am einfachsten gleich bei Hetzner dazubuchen (ab 5,83 €/Jahr), dann liegen DNS und Webspace zusammen. Sonst INWX: 4,71 € Registrierung, 3,60 € Verlängerung pro Jahr ([INWX](https://www.inwx.de/de/domain/pricelist)). Ob die Preise brutto sind, war auf der Seite nicht eindeutig.
 - **Name.** Kurz, ohne Umlaut, z. B. `loipenblick.de`. Ob er frei ist, prüft Stefan bei DENIC. Keine Ortsnamen oder Marken Dritter im Namen (z. B. nicht „tirol-loipen.de“), um Streit um Namensrechte zu vermeiden.
 - **E-Mail.** Eine Adresse auf der Domain (z. B. `kontakt@…`) als Weiterleitung auf Stefans Postfach. Sie steht im Impressum und auf der Seite für Quellbetreiber (B16). Die meisten Webspace-Tarife haben Weiterleitungen dabei.
 
@@ -231,7 +233,7 @@ Die Ping-URL ist ein Geheimnis und gehört in die `.env` (`LOIPEN_HEARTBEAT_URL`
 
 ## 11. Kosten
 
-| Posten | netcup (Empfehlung) | Hetzner | Cloudflare Pages |
+| Posten | netcup | Hetzner (gewählt) | Cloudflare Pages |
 |---|---|---|---|
 | Webspace | 32,28 € | 22,80 € | 0 € |
 | Domain .de | inklusive | 5,83 € | 4,71 € (INWX) |

@@ -160,7 +160,7 @@ Mail an `LOIPEN_ABO_MELDUNGEN_AN` und beim nächsten Lauf als Push; sie ändern 
 3. Nach dem nächsten Lauf auf der Testadresse ein Abo anlegen, die Mail bestätigen und mit
    `docker compose exec worker python -m loipen.worker lauf` den Abgleich prüfen (Log: „Abo: 1 neu“).
 
-Voraussetzung ist ein Webspace mit PHP und `mail()`, bei netcup Webhosting gegeben. Mit Cloudflare
+Voraussetzung ist ein Webspace mit PHP und `mail()`, bei Hetzner Webhosting S gegeben (PHP 8). Mit Cloudflare
 Pages ginge das Abo nur mit einem eigenen Worker.
 
 ### Als App aufs Handy (U40, U41)
