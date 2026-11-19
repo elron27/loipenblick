@@ -62,6 +62,24 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.txt, Nutzungsbedingungen, was dort steht).
 
+### Zillertal (P35, geprüft 19.11.2026)
+
+| Ortsseite | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
+|---|---|---|---|---|---|
+| zillertal.at (Karte maps.zillertal.at) | Zillertal | Je Loipe Schneehöhe, Wetter, Anfahrt, Details; Quelle „Zillertal Tourismus GmbH“ | www.zillertal.at erlaubt, **maps.zillertal.at verbietet alles** (geprüft 19.11.2026) | **nicht anbindbar** | Die Loipenliste auf www.zillertal.at kommt nur aus der Karte. Der Schneebericht dort nennt nur Skigebiete (Lifte, Pisten). Bei der Anfrage an Zillertal Tourismus deshalb auch um einen Datenzugang bitten (Export, Schnittstelle oder Freigabe in robots.txt). |
+
+### Alpbachtal, Wildschönau, Wilder Kaiser, Kitzbühel, St. Johann (P34, geprüft 19.11.2026)
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Tourismusverband Alpbachtal & Tiroler Seenland | Alpbachtal (Quelle `alpbachtal`) | Loipenbericht-Tabelle: Status, gespurte km, Ort | info@alpbachtal.at | nicht angefragt | robots.txt erlaubt; Impressum und AGB ohne Regel zur Übernahme von Daten |
+| Tourismusverband Wildschönau | Wildschönau (Quelle `wildschoenau`) | Öffnungsstatus der Loipen, gespurte km | info@wildschoenau.com | nicht angefragt | robots.txt erlaubt (nur Suchparameter gesperrt); Impressum: Elemente urheberrechtlich geschützt, alle Rechte vorbehalten |
+| Tourismusverband Wilder Kaiser | Ellmau, Going, Scheffau, Söll (Quelle `wilderkaiser`) | Loipenstatus mit Ort, Stil, Länge | office@wilderkaiser.info | nicht angefragt | robots.txt erlaubt; Impressum: Links erwünscht, Einbinden in fremde Frames unzulässig, zur Datenübernahme nichts |
+| Kitzbühel Tourismus | Kitzbühel, Reith, Aurach, Jochberg | nicht angebunden | info@kitzbuehel.com | nicht nötig | Keine eigene Statusliste; die Karte maps.kitzbuehel.com lädt tirol.mapservices.eu, also dieselben Daten wie tirol.at |
+| Kitzbüheler Alpen, St. Johann in Tirol | St. Johann, Oberndorf, Kirchdorf, Erpfendorf | nicht neu angebunden | (wie Kitzbüheler Alpen, Abschnitt 1) | nicht nötig | /de/stjo/aktuelles/loipen-status.html ist eine Teilmenge der schon angebundenen Quelle `kitzbueheler-alpen`; zusätzlich nur Schneehöhe des Skigebiets |
+
+### Innsbruck, Stubai, Wipptal, Hall-Wattens, Silberregion Karwendel (P32, geprüft 19.11.2026)
+
 | Ortsseite | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
 |---|---|---|---|---|---|
 | innsbruck.info, Wintersportbericht von Intermaps (sdds4.intermaps.com) | Innsbruck und Feriendörfer, Sellrain, Kühtai, Mieminger Plateau | 40 Loipen in 9 Orten mit Status-Symbol und „Letzte Aktualisierung“, Temperatur je Ort | Intermaps ohne robots.txt (404) = keine Sperre (geprüft 19.11.2026) | **angebunden, `nur_test`** (P32) | Intermaps ist Bezahldienst (E-15/P17); Stefan 19.11.2026: Ausnahme nur für die Testversion. Impressum innsbruck.info: Elemente urheberrechtlich geschützt. Kontakt office@innsbruck.info, +43 512 53 56; öffentlich nur mit Zustimmung von Innsbruck Tourismus (ggf. auch Intermaps). |

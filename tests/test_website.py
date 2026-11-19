@@ -137,6 +137,7 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
         "st-anton", "nassfeld-nlw", "steiermark",
+        "alpbachtal", "wildschoenau", "wilderkaiser",
         "innsbruck", "hall-wattens", "silberregion-karwendel"}  # P32
 
 
