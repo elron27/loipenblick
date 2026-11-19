@@ -583,6 +583,41 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200 https://maps.lungau.at/robots.txt
 200  2009403 tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
 200     3188 tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
+# Lauf 2026-11-19 14:45 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tiroler-oberland.com/robots.txt
+200   586525 tests/fixtures/tiroler-oberland/2026-11-19/geoeffnete-einrichtungen.html https://www.tiroler-oberland.com/de/Aktuelles/Geoeffnete-Einrichtungen
+200   531082 tests/fixtures/tiroler-oberland/2026-11-19/schneebericht.html https://www.tiroler-oberland.com/de/Aktuelles/Schneebericht
+200 https://www.nauders.com/robots.txt
+200   780376 tests/fixtures/tiroler-oberland/2026-11-19/nauders-einrichtungen.html https://www.nauders.com/de/Aktuelles/Einrichtungen-Nauders
+200 https://www.serfaus-fiss-ladis.at/robots.txt
+200   736689 tests/fixtures/serfaus/2026-11-19/status.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebietsstatus-und-pistenplan
+200   576122 tests/fixtures/serfaus/2026-11-19/langlaufen.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/langlaufen
+200   444245 tests/fixtures/serfaus/2026-11-19/schneehoehen.html https://www.serfaus-fiss-ladis.at/de/live-info/schneehoehen-und-lawinenlagebericht
+200 https://www.ischgl.com/robots.txt
+200   414580 tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.json https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
+200   494080 tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.html https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country
+200 https://www.galtuer.com/robots.txt
+404   161726 tests/fixtures/paznaun/2026-11-19/galtuer-anlagen.json https://www.galtuer.com/de/winter/silvapark-galtuer/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
+200   416562 tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.json https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country&sorting=status-desc&ajax=1
+200   507763 tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.html https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country
+200   189569 tests/fixtures/paznaun/2026-11-19/ischgl-schneebericht.html https://www.ischgl.com/de/winter/schneebericht
+200   224070 tests/fixtures/paznaun/2026-11-19/loipen-katalog.html https://www.ischgl.com/de/winter/abseits-der-piste/langlaufen/loipen
+200 https://www.oetztal.com/robots.txt
+200   778418 tests/fixtures/oetztal/2026-11-19/loipenstatus.html https://www.oetztal.com/de/live-infos/loipenstatus
+200   959127 tests/fixtures/oetztal/2026-11-19/loipenangebot.html https://www.oetztal.com/de/aktivitaeten/winter/langlaufen/loipenangebot
+200   779971 tests/fixtures/oetztal/2026-11-19/lehenloipe.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/lehenloipe-umhausen-niederthai.r-23683688
+200     1238 tests/fixtures/oetztal/2026-11-19/sitemap.xml https://www.oetztal.com/sitemap.xml
+# Lauf 2026-11-19 14:51 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.pitztal.com/robots.txt
+200   187750 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen.html https://www.pitztal.com/de/tourenportal-langlaufen.html
+200   191843 tests/fixtures/pitztal/2026-11-19/jetzt-geoeffnet.html https://www.pitztal.com/de/jetzt-geoeffnet.html
+200   181907 tests/fixtures/pitztal/2026-11-19/tours/rifflseeloipe.html https://www.pitztal.com/de/tours/rifflseeloipe.html
+200   211790 tests/fixtures/pitztal/2026-11-19/tours/talloipe.html https://www.pitztal.com/de/tours/talloipe.html
+200   214934 tests/fixtures/pitztal/2026-11-19/tours/rollerstrecke-mandarfen.html https://www.pitztal.com/de/tours/rollerstrecke-mandarfen.html
+200   228980 tests/fixtures/pitztal/2026-11-19/tours.xml https://www.pitztal.com/de/tours.xml
+200 https://www.oetztal.com/robots.txt
+200   174448 tests/fixtures/oetztal/2026-11-19/sitemap-tours.xml https://www.oetztal.com/sitemap.tours_6.xml
+200   768732 tests/fixtures/oetztal/2026-11-19/nachtloipe-laengenfeld.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/4-1-nachtloipe-variante-laengenfeld.r-801776311
 # Lauf 2026-11-19 14:43 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.wilderkaiser.info/robots.txt
 200   338524 tests/fixtures/wilderkaiser/2026-11-19/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
@@ -671,6 +706,16 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 404    50410 tests/fixtures/recherche-2026-11-19/st/sitemap.xml https://www.st.johann.tirol/sitemap.xml
 200 https://www.ferienland-kufstein.com/robots.txt
 200   198820 tests/fixtures/recherche-2026-11-19/ferienland-kufstein/sitemap.xml https://www.ferienland-kufstein.com/sitemap.xml
+# Lauf 2026-11-19 16:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.pitztal.com/robots.txt
+200   136038 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-page2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?page=2
+200   187778 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-p2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?p=2
+200 https://www.oetztal.com/robots.txt
+200   791971 tests/fixtures/oetztal/2026-11-19/touren/7230466.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/langlaufloipe-zwieselstein-soelden.r-7230466
+200   773802 tests/fixtures/oetztal/2026-11-19/touren/6925433.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-obergurgl-nr-3.r-6925433
+200   797917 tests/fixtures/oetztal/2026-11-19/touren/7100318.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-bergsteigerdorf-vent.r-7100318
+200   778450 tests/fixtures/oetztal/2026-11-19/touren/7120810.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/loipe-ochsengarten.r-7120810
+# Lauf 2026-11-19 18:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 # Lauf 2026-11-19 17:34 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.zillertal.at/robots.txt
 200    37405 tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html
@@ -682,6 +727,7 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200 https://www.innsbruck.info/robots.txt
 200      662 tests/fixtures/recherche-2026-11-19/innsbruck/sitemap.xml https://www.innsbruck.info/sitemap.xml
 200 https://www.osttirol.com/robots.txt
+200     4317 tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
 200   352069 tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
 200 https://www.alpbachtal.at/robots.txt
 200     1973 tests/fixtures/recherche-2026-11-19/alpbachtal/sitemap.xml https://www.alpbachtal.at/sitemap.xml
@@ -701,6 +747,8 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200     1809 tests/fixtures/recherche-2026-11-19/serfaus-fiss-ladis/sitemap.xml https://www.serfaus-fiss-ladis.at/sitemap.xml
 200 https://www.ischgl.com/robots.txt
 200     1914 tests/fixtures/recherche-2026-11-19/ischgl/sitemap.xml https://www.ischgl.com/sitemap.xml
+200 https://www.stubai.at/robots.txt
+200     2175 tests/fixtures/recherche-2026-11-19/stubai/sitemap.xml https://www.stubai.at/sitemap.xml
 403 https://www.stubai.at/robots.txt
 ROBOTS-VERBOT https://www.stubai.at/sitemap.xml
 200 https://www.wipptal.at/robots.txt
