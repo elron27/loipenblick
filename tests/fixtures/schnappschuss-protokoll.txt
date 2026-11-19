@@ -607,3 +607,14 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   959127 tests/fixtures/oetztal/2026-11-19/loipenangebot.html https://www.oetztal.com/de/aktivitaeten/winter/langlaufen/loipenangebot
 200   779971 tests/fixtures/oetztal/2026-11-19/lehenloipe.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/lehenloipe-umhausen-niederthai.r-23683688
 200     1238 tests/fixtures/oetztal/2026-11-19/sitemap.xml https://www.oetztal.com/sitemap.xml
+# Lauf 2026-11-19 14:51 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.pitztal.com/robots.txt
+200   187750 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen.html https://www.pitztal.com/de/tourenportal-langlaufen.html
+200   191843 tests/fixtures/pitztal/2026-11-19/jetzt-geoeffnet.html https://www.pitztal.com/de/jetzt-geoeffnet.html
+200   181907 tests/fixtures/pitztal/2026-11-19/tours/rifflseeloipe.html https://www.pitztal.com/de/tours/rifflseeloipe.html
+200   211790 tests/fixtures/pitztal/2026-11-19/tours/talloipe.html https://www.pitztal.com/de/tours/talloipe.html
+200   214934 tests/fixtures/pitztal/2026-11-19/tours/rollerstrecke-mandarfen.html https://www.pitztal.com/de/tours/rollerstrecke-mandarfen.html
+200   228980 tests/fixtures/pitztal/2026-11-19/tours.xml https://www.pitztal.com/de/tours.xml
+200 https://www.oetztal.com/robots.txt
+200   174448 tests/fixtures/oetztal/2026-11-19/sitemap-tours.xml https://www.oetztal.com/sitemap.tours_6.xml
+200   768732 tests/fixtures/oetztal/2026-11-19/nachtloipe-laengenfeld.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/4-1-nachtloipe-variante-laengenfeld.r-801776311
