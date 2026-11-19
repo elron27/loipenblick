@@ -88,13 +88,17 @@ def erzeuge(
     kacheln: dict | None = None,
     abo_dateien: dict[str, bytes] | None = None,
     version: str | None = None,
+    unplausibel: set[int] | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
     log_tage, datenschutz_html. kacheln: url, attribution, fremd (B23).
-    abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py."""
+    abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py.
+    unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5)."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days)
+    if unplausibel is not None:
+        unplausibel.update(daten["unplausibel"])
     stand = app_version()
     r = dict(rechtliches or {})
     kacheln = kacheln or {"url": OSM_KACHELN, "attribution": OSM_ATTRIBUTION, "fremd": True}
