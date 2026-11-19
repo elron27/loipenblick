@@ -3,6 +3,7 @@
 from loipen.adapters.aschau import AschauAdapter
 from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
+from loipen.adapters.intermaps import IntermapsAdapter
 from loipen.adapters.kaernten import NlwBerichtAdapter
 from loipen.adapters.kitzalps import KitzAlpsAdapter
 from loipen.adapters.langlaufdorf import LanglaufdorfAdapter
@@ -13,6 +14,7 @@ from loipen.adapters.steiermark import SteiermarkLoipenberichtAdapter
 from loipen.adapters.suedtirol import DolomitiNordicSkiAdapter, OpenDataHubAdapter
 from loipen.adapters.tirolat import TirolAtAdapter
 from loipen.adapters.tourinfra import TourinfraAdapter
+from loipen.adapters.tourismus_mco import TourismusMcoAdapter
 from loipen.adapters.tvb_tirol import AchenseeAdapter, KaiserwinklAdapter, SkidataAdapter, StAntonAdapter
 
 ADAPTERS: dict[str, Adapter] = {
@@ -24,4 +26,6 @@ ADAPTERS: dict[str, Adapter] = {
     "stanton": StAntonAdapter(), "nlw": NlwBerichtAdapter(),
     "dolomiti": DolomitiNordicSkiAdapter(), "opendatahub": OpenDataHubAdapter(),
     "myswitzerland": MySwitzerlandAdapter(), "steiermark": SteiermarkLoipenberichtAdapter(),
+    # P32 (E-24): Ortsseiten Innsbruck, Hall-Wattens, Silberregion Karwendel
+    "intermaps": IntermapsAdapter(), "tourismus_mco": TourismusMcoAdapter(),
 }

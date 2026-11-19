@@ -77,7 +77,7 @@ class IntermapsAdapter:
                 d = LoipenDaten(source_key=_schluessel(f"{ort}-{name}"), name=name, source_url=url,
                                 gebiet_slug=gebiet_map.get(ort, config["default_gebiet"]), startpunkt=ort)
                 roh = symbole.get(_symbol(block.css("img::attr(src)").get()), "")
-                d.status, bekannt = normiere_zustand(roh)
+                d.status, bekannt = normiere_zustand(roh) if roh else (Status.UNBEKANNT, False)
                 if not bekannt:
                     d.status = LEGENDE.get(roh.lower(), Status.UNBEKANNT)
                     if roh.lower() not in LEGENDE:
