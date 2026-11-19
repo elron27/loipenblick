@@ -168,3 +168,22 @@ def test_p32_quellen_nur_test_rang_4_und_robots_geprueft():
     assert not keys & {"stubai", "wipptal", "innsbruck"}
     gebiete = {g["slug"] for g in lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]}
     assert set(INNSBRUCK["config"]["gebiet_map"].values()) <= gebiete
+
+
+# ---------- Querpruefung braucht die richtige tirol.at-Loipe (D15 mit P32) ----------
+
+@pytest.mark.req("P32", ak=4)
+@pytest.mark.req("D15")
+def test_p32_nummerierte_nachbarloipen_und_ortsnamen_werden_richtig_zugeordnet():
+    """Rinn hat Panoramaloipe 1, 2, 3 im Abstand von wenigen hundert Metern; frueher gewann der erste aehnliche
+    Eintrag, die Geschlossen-Meldung von Loipe 2 haette die Loipe 3 unplausibel gemacht."""
+    from loipen.dubletten import Eintrag, finde_dubletten
+
+    tirol = [Eintrag(1, "Langlauf Loipe Rinn - Panoramaloipe 3", "tirol", 3, "hall-wattens", "Hall-Wattens", 47.2578, 11.5060),
+             Eintrag(2, "Langlauf Loipe Rinn - Panoramaloipe 2", "tirol", 3, "hall-wattens", "Hall-Wattens", 47.2487, 11.4977),
+             Eintrag(3, "Langlauf Loipe Rinn - Panoramaloipe 1", "tirol", 3, "hall-wattens", "Hall-Wattens", 47.2487, 11.4977),
+             Eintrag(4, "Loipe Hinterriss", "tirol", 3, "hinterriss", "Hinterriß", 47.46692, 11.48496)]
+    orts = [Eintrag(11, "Langlauf Loipe Rinn - Panoramaloipe 2", "hall-wattens", 4, "hall-wattens", "Hall-Wattens", 47.24867, 11.49769),
+            Eintrag(12, "Langlauf Loipe Rinn - Panoramaloipe 1", "hall-wattens", 4, "hall-wattens", "Hall-Wattens", 47.24867, 11.49769),
+            Eintrag(13, "Loipe Hinterriss", "silberregion-karwendel", 4, "hinterriss", "Hinterriß", 47.46692, 11.48496)]
+    assert finde_dubletten(tirol + orts) == {11: 2, 12: 3, 13: 4}
