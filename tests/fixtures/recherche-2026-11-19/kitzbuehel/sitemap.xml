@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/typo3/sysext/seo/Resources/Public/CSS/Sitemap.xsl"?>
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-pages.xml/sitemap.xml</loc>
+            <lastmod>2026-11-13T07:48:41+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-highlights.xml/sitemap.xml</loc>
+            <lastmod>2026-11-06T14:57:13+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-blog.xml/sitemap.xml</loc>
+            <lastmod>2026-10-05T10:32:01+02:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-press.xml/sitemap.xml</loc>
+            <lastmod>2026-10-14T11:25:22+02:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-products.xml/sitemap.xml</loc>
+            <lastmod>2026-11-16T11:25:44+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-experiences.xml/sitemap.xml</loc>
+            <lastmod>2026-11-19T18:20:12+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-accommodations.xml/sitemap.xml</loc>
+            <lastmod>2026-11-19T17:02:40+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-events.xml/sitemap.xml</loc>
+            <lastmod>2026-11-19T18:20:19+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-infrastructures.xml/sitemap.xml</loc>
+            <lastmod>2026-11-19T18:20:19+01:00</lastmod>
+        </sitemap>
+    
+        <sitemap>
+            <loc>https://www.kitzbuehel.com/sitemap-tours.xml/sitemap.xml</loc>
+            <lastmod>2026-11-19T18:20:19+01:00</lastmod>
+        </sitemap>
+    
+</sitemapindex>
