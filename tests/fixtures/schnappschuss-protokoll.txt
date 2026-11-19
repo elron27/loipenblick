@@ -583,3 +583,32 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200 https://maps.lungau.at/robots.txt
 200  2009403 tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
 200     3188 tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
+# Lauf 2026-11-19 14:42 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.innsbruck.info/robots.txt
+200     1656 tests/fixtures/recherche-2026-11-19/innsbruck/robots.txt https://www.innsbruck.info/robots.txt
+200   168225 tests/fixtures/recherche-2026-11-19/innsbruck/langlauf.html https://www.innsbruck.info/sport/langlauf.html
+200   200302 tests/fixtures/recherche-2026-11-19/innsbruck/langlaufstrecken.html https://www.innsbruck.info/sport/d/langlaufstrecken.html
+404   128836 tests/fixtures/recherche-2026-11-19/innsbruck/schneebericht.html https://www.innsbruck.info/wetter-schnee/schneebericht.html
+200      662 tests/fixtures/recherche-2026-11-19/innsbruck/sitemap.xml https://www.innsbruck.info/sitemap.xml
+200    76941 tests/fixtures/recherche-2026-11-19/innsbruck/impressum.html https://www.innsbruck.info/impressum.html
+200 https://www.stubai.at/robots.txt
+200     1279 tests/fixtures/recherche-2026-11-19/stubai/robots.txt https://www.stubai.at/robots.txt
+200   365595 tests/fixtures/recherche-2026-11-19/stubai/langlaufen.html https://www.stubai.at/aktivitaeten/winter-aktiv/langlaufen/
+200     2175 tests/fixtures/recherche-2026-11-19/stubai/sitemap.xml https://www.stubai.at/sitemap.xml
+200   252250 tests/fixtures/recherche-2026-11-19/stubai/impressum.html https://www.stubai.at/impressum/
+200 https://www.wipptal.at/robots.txt
+200       67 tests/fixtures/recherche-2026-11-19/wipptal/robots.txt https://www.wipptal.at/robots.txt
+200   352932 tests/fixtures/recherche-2026-11-19/wipptal/start.html https://www.wipptal.at/
+200   308523 tests/fixtures/recherche-2026-11-19/wipptal/valsertal-en.html https://www.wipptal.at/en/your-wipptal/valsertal
+200      412 tests/fixtures/recherche-2026-11-19/wipptal/sitemap.xml https://www.wipptal.at/sitemap.xml
+200   258599 tests/fixtures/recherche-2026-11-19/wipptal/impressum.html https://www.wipptal.at/impressum
+200 https://www.hall-wattens.at/robots.txt
+200     1666 tests/fixtures/recherche-2026-11-19/hall-wattens/robots.txt https://www.hall-wattens.at/robots.txt
+200   240707 tests/fixtures/recherche-2026-11-19/hall-wattens/start.html https://www.hall-wattens.at/
+200   588420 tests/fixtures/recherche-2026-11-19/hall-wattens/sitemap.xml https://www.hall-wattens.at/sitemap.xml
+200   100040 tests/fixtures/recherche-2026-11-19/hall-wattens/impressum.html https://www.hall-wattens.at/de/impressum.html
+200 https://www.silberregion-karwendel.com/robots.txt
+200       88 tests/fixtures/recherche-2026-11-19/karwendel/robots.txt https://www.silberregion-karwendel.com/robots.txt
+200   510893 tests/fixtures/recherche-2026-11-19/karwendel/start.html https://www.silberregion-karwendel.com/
+200   161862 tests/fixtures/recherche-2026-11-19/karwendel/sitemap.xml https://www.silberregion-karwendel.com/sitemap.xml
+200   144385 tests/fixtures/recherche-2026-11-19/karwendel/impressum.html https://www.silberregion-karwendel.com/de/impressum
