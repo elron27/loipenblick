@@ -624,3 +624,7 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   110540 tests/fixtures/recherche-2026-11-19/p33/holzgau/impressum.html https://www.holzgau.at/impressum-datenschutz/
 200 https://zugspitzarena.com/robots.txt
 200      524 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/sitemap.xml https://zugspitzarena.com/sitemap.xml
+# Lauf 2026-11-19 14:49 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.osttirol.com/robots.txt
+200   160873 tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-uebungsrunde-peterer-feld.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/uebungsrunde-peterer-feld
+200   162151 tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-verbindungsloipe-dorf-gries.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/verbindungsloipe-dorf-gries
