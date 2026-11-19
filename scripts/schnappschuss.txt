@@ -1,3 +1,25 @@
-# <zielpfad> <url> -- Runde 20 (14.11.2026): Loipenuebersicht Lungau = contwise-Karte maps.lungau.at
-tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
+# <zielpfad> <url> -- Runde 21 (19.11.2026): Ortsseiten fuer die Querpruefung von tirol.at (E-24, nur Test)
+tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html
+tests/fixtures/recherche-2026-11-19/zillertal/sitemap.xml https://www.zillertal.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/oetztal/sitemap.xml https://www.oetztal.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/pitztal/sitemap.xml https://www.pitztal.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/innsbruck/sitemap.xml https://www.innsbruck.info/sitemap.xml
+tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/alpbachtal/sitemap.xml https://www.alpbachtal.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/wildschoenau/sitemap.xml https://www.wildschoenau.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/wilderkaiser/sitemap.xml https://www.wilderkaiser.info/sitemap.xml
+tests/fixtures/recherche-2026-11-19/lechtal/sitemap.xml https://www.lechtal.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/zugspitzarena/sitemap.xml https://www.zugspitzarena.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/tiroler-oberland/sitemap.xml https://www.tiroler-oberland.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/serfaus-fiss-ladis/sitemap.xml https://www.serfaus-fiss-ladis.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/ischgl/sitemap.xml https://www.ischgl.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/stubai/sitemap.xml https://www.stubai.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/wipptal/sitemap.xml https://www.wipptal.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/zillertalarena/sitemap.xml https://www.zillertalarena.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/mayrhofen/sitemap.xml https://www.mayrhofen.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/hall-wattens/sitemap.xml https://www.hall-wattens.at/sitemap.xml
+tests/fixtures/recherche-2026-11-19/silberregion-karwendel/sitemap.xml https://www.silberregion-karwendel.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/kitzbuehel/sitemap.xml https://www.kitzbuehel.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/st/sitemap.xml https://www.st.johann.tirol/sitemap.xml
+tests/fixtures/recherche-2026-11-19/ferienland-kufstein/sitemap.xml https://www.ferienland-kufstein.com/sitemap.xml

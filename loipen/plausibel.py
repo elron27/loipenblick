@@ -9,7 +9,10 @@ Am Saisonanfang meldet etwa tirol.at Loipen als geoeffnet, ohne Datum, obwohl im
    Sonderloipen (Snowfarming, Opening, Gletscher, Gruppen) liegen auf technischem oder hochalpinem Schnee
    und sind ausgenommen.
 2. Stand: Die Meldung der Quelle ist aelter als 7 Tage.
-3. Widerspruch: Ein oertlicher Bericht (Rang 1 oder 2) meldet dieselbe Loipe geschlossen.
+3. Widerspruch: Ein oertlicher Bericht (Rang 1 oder 2) oder eine Ortsseite zur Querpruefung (querpruefung: true
+   in sources.yaml, E-24) meldet dieselbe Loipe geschlossen.
+4. Ortsseite: Eine Ortsseite zur Querpruefung meldet fuer dieselbe Loipe 0 cm Schnee, und die fuehrende Quelle
+   belegt ihre Meldung nicht (wie bei Regel 1, Sonderloipen ausgenommen).
 
 Unplausibel heisst nach E-23: Die Seite zeigt die Loipe geschlossen, mit dem Wortlaut der Quelle und dem
 Grund. In der Datenbank bleibt der Rohwert stehen, die Pruefung laeuft nur beim Erzeugen der Seite.
@@ -46,7 +49,7 @@ def _schnee_grund(schnee: dict, heute: date, tmax_heute: float | None) -> str | 
 
 
 def gruende(z: Zustand | None, status: str, sonder: dict | None, schnee: dict | None, tmax_heute: float | None,
-            widerspruch: list[str], jetzt: datetime) -> list[str]:
+            widerspruch: list[str], jetzt: datetime, ortsseite_ohne_schnee: list[str] | None = None) -> list[str]:
     """Warum eine Offen-Meldung unplausibel ist. Leer heisst: plausibel oder gar nicht offen."""
     if z is None or status not in BEFAHRBAR:
         return []
@@ -63,6 +66,9 @@ def gruende(z: Zustand | None, status: str, sonder: dict | None, schnee: dict | 
         grund = _schnee_grund(schnee, jetzt.astimezone(BERLIN).date(), tmax_heute)
         if grund:
             ergebnis.append(grund)
+    if not beleg and not sonder:
+        for name in ortsseite_ohne_schnee or []:
+            ergebnis.append(f"Die Ortsseite ({name}) meldet 0 cm Schnee an der Loipe")
     for name in widerspruch:
         ergebnis.append(f"Der Loipenbericht vor Ort ({name}) meldet sie geschlossen")
     return ergebnis
