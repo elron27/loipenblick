@@ -13,7 +13,9 @@ from loipen.adapters.steiermark import SteiermarkLoipenberichtAdapter
 from loipen.adapters.suedtirol import DolomitiNordicSkiAdapter, OpenDataHubAdapter
 from loipen.adapters.tirolat import TirolAtAdapter
 from loipen.adapters.tourinfra import TourinfraAdapter
+from loipen.adapters.tvb_tabelle import TvbTabelleAdapter
 from loipen.adapters.tvb_tirol import AchenseeAdapter, KaiserwinklAdapter, SkidataAdapter, StAntonAdapter
+from loipen.adapters.wilderkaiser import WilderKaiserAdapter
 
 ADAPTERS: dict[str, Adapter] = {
     "ats": AtsAdapter(), "aschau": AschauAdapter(),
@@ -24,4 +26,5 @@ ADAPTERS: dict[str, Adapter] = {
     "stanton": StAntonAdapter(), "nlw": NlwBerichtAdapter(),
     "dolomiti": DolomitiNordicSkiAdapter(), "opendatahub": OpenDataHubAdapter(),
     "myswitzerland": MySwitzerlandAdapter(), "steiermark": SteiermarkLoipenberichtAdapter(),
+    "tvb_tabelle": TvbTabelleAdapter(), "wilderkaiser": WilderKaiserAdapter(),
 }

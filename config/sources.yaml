@@ -871,3 +871,54 @@ quellen:
         Fladnitz an der Teichalm: teichalm
         Hirschegg - Pack: hebalm
         Tamsweg: prebersee
+
+  # P34 (E-24, nur Test): Ortsseiten Alpbachtal, Wildschoenau, Wilder Kaiser pruefen tirol.at gegen.
+  # Rang 4: tirol.at bleibt fuehrend, die Ortsseite belegt "geschlossen" bzw. "0 km gespurt" (D19).
+  # Nicht angebunden: Kitzbuehel (Karte = tirol.mapservices.eu, dieselben Daten wie tirol.at) und
+  # St. Johann (/de/stjo/ ist eine Teilmenge der Quelle kitzbueheler-alpen). Befund: docs/kontaktliste.md 3.
+  - key: alpbachtal
+    adapter: tvb_tabelle
+    name: Alpbachtal Tourismus (Loipenbericht)
+    base_url: https://www.alpbachtal.at
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Der Loipenbericht Alpbachtal nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum und AGB ohne Regel zur Datenuebernahme; nicht angefragt"}
+    config:
+      pfad: /de/winter/langlaufen
+      default_gebiet: alpbachtal
+
+  - key: wildschoenau
+    adapter: tvb_tabelle
+    name: Wildschönau Tourismus (Öffnungsstatus Loipen)
+    base_url: https://www.wildschoenau.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Der Loipenstatus Wildschönau nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Elemente urheberrechtlich geschuetzt, alle Rechte vorbehalten; nicht angefragt"}
+    config:
+      pfad: /de/aktivitaeten/winter/langlaufen
+      default_gebiet: wildschoenau
+
+  - key: wilderkaiser
+    adapter: wilderkaiser
+    name: Tourismusverband Wilder Kaiser (Loipenstatus)
+    base_url: https://www.wilderkaiser.info
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Der Loipenstatus Wilder Kaiser nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Links erwuenscht, Einbetten in Frames unzulaessig; zur Datenuebernahme nichts; nicht angefragt"}
+    config:
+      pfad: /de/langlaufen-am-wilden-kaiser.html
+      default_gebiet: ellmau
+      gebiet_map:
+        Ellmau: ellmau
+        Going: going
+        Scheffau: soell
+        Söll: soell
