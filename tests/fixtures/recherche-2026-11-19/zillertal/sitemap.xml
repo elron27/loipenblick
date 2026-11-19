@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/typo3/sysext/seo/Resources/Public/CSS/Sitemap.xsl"?>
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <sitemap>
+            <loc>https://www.zillertal.at/sitemap.xml?sitemap=pages&amp;cHash=6b2518e3a80bcf2145486e7beba4761c</loc>
+            <lastmod>2026-10-28T11:05:19+01:00</lastmod>
+        </sitemap>
+    
+</sitemapindex>
