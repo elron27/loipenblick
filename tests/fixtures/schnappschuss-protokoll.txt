@@ -666,3 +666,12 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 404    50410 tests/fixtures/recherche-2026-11-19/st/sitemap.xml https://www.st.johann.tirol/sitemap.xml
 200 https://www.ferienland-kufstein.com/robots.txt
 200   198820 tests/fixtures/recherche-2026-11-19/ferienland-kufstein/sitemap.xml https://www.ferienland-kufstein.com/sitemap.xml
+# Lauf 2026-11-19 16:26 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.pitztal.com/robots.txt
+200   136038 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-page2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?page=2
+200   187778 tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-p2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?p=2
+200 https://www.oetztal.com/robots.txt
+200   791971 tests/fixtures/oetztal/2026-11-19/touren/7230466.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/langlaufloipe-zwieselstein-soelden.r-7230466
+200   773802 tests/fixtures/oetztal/2026-11-19/touren/6925433.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-obergurgl-nr-3.r-6925433
+200   797917 tests/fixtures/oetztal/2026-11-19/touren/7100318.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-bergsteigerdorf-vent.r-7100318
+200   778450 tests/fixtures/oetztal/2026-11-19/touren/7120810.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/loipe-ochsengarten.r-7120810
