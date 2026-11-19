@@ -1,3 +1,21 @@
-# <zielpfad> <url> -- Runde 20 (14.11.2026): Loipenuebersicht Lungau = contwise-Karte maps.lungau.at
-tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
+# <zielpfad> <url> -- Runde P33-1 (19.11.2026): Ortsseiten Ausserfern und Osttirol
+tests/fixtures/osttirol/2026-11-19/alle-loipen.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/alle-loipen
+tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-sonnenloipe-sillian.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/sonnenloipe-sillian
+tests/fixtures/recherche-2026-11-19/p33/osttirol/impressum.html https://www.osttirol.com/weitere-links/impressum
+tests/fixtures/recherche-2026-11-19/p33/osttirol/agb.html https://www.osttirol.com/weitere-links/aufenthaltsabgabe-und-agbs
+tests/fixtures/recherche-2026-11-19/p33/osttirol/schneebericht.html https://www.osttirol.com/service/schneebericht-und-schneekommunikation
+tests/fixtures/recherche-2026-11-19/p33/intermaps/osttirol-overview.html https://sdds4.intermaps.com/osttirol/osttirol_overview_report.aspx?lang=de
+tests/fixtures/recherche-2026-11-19/p33/intermaps/zugspitzarena-snowreport.html https://sdds4.intermaps.com/zugspitzarena/snowreport_zugspitzarena.aspx?lang=de
+tests/fixtures/recherche-2026-11-19/p33/intermaps/tza.html https://sdds4.intermaps.com/TZA/tza.aspx?lang=de
+tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
+tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/langlaufen.html https://zugspitzarena.com/de/winter-erlebnis/langlaufen
+tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/impressum.html https://zugspitzarena.com/de/Impressum
+tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/agb.html https://zugspitzarena.com/de/AGB
+tests/fixtures/recherche-2026-11-19/p33/lechtal/langlaufstrecken.html https://www.lechtal.at/de/aktivitaeten/langlaufstrecken.html
+tests/fixtures/recherche-2026-11-19/p33/lechtal/tours.xml https://www.lechtal.at/de/tours.xml
+tests/fixtures/recherche-2026-11-19/p33/lechtal/infrastructure.xml https://www.lechtal.at/de/infrastructure.xml
+tests/fixtures/recherche-2026-11-19/p33/lechtal/impressum.html https://www.lechtal.at/de/impressum.html
+tests/fixtures/recherche-2026-11-19/p33/lechtal/orte.html https://www.lechtal.at/de/region/orte/alle-orte-im-lechtal.html
+tests/fixtures/recherche-2026-11-19/p33/reutte/start.html https://www.reutte.com/
+tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
+tests/fixtures/recherche-2026-11-19/p33/holzgau/start.html https://www.holzgau.at/
