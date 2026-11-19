@@ -4,15 +4,15 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 
 ## Bis Freitag, 20.11.
 
-1. ~~Anbieter wählen.~~ Erledigt am 19.11.: **Hetzner Webhosting S** (1,90 €/Monat, keine Mindestlaufzeit). Die Domain kommt extra dazu (ab 5,83 €/Jahr).
-2. **Domainnamen prüfen** bei https://www.denic.de (`loipenblick.de` und `spurblick.de` sind vergeben, Ideen in `vorbereitung/domain.md`). Keine Orts- oder Markennamen Dritter.
+1. **Anbieter wählen.** Empfehlung: netcup Webhosting 1000 (2,69 €/Monat, .de-Domain dabei, 12 Monate Laufzeit). Vor der Bestellung im Tarif nachsehen, ob SFTP oder SSH dabei ist, sonst FTPS. Alternative: Cloudflare Pages (kostenlos, US-Anbieter, keine eigene Kartendatei möglich).
+2. **Domainnamen prüfen** bei https://www.denic.de (z. B. `loipenblick.de`). Keine Orts- oder Markennamen Dritter.
 3. **Impressum-Adresse klären.** Pflicht sind Vor- und Nachname und eine ladungsfähige Anschrift, ein Postfach reicht nicht. Möglich: eigene Adresse, oder Adresse eines Familienangehörigen mit schriftlicher Zustellungsvollmacht, oder ein Anschriftenservice mit Vollmacht (kostet).
 4. **Quellbetreiber um Erlaubnis bitten** mit der Vorlage aus `livegang.md`, Abschnitt 8. Zuerst Tirol Werbung (info@tirol.at), dann Tegernseer Tal Tourismus, Bayrischzell, Fischbachau, Chiemgau (tourinfra), Aschau, Tannheimer Tal, Seefeld, Achensee, Kufstein, Kaiserwinkl, Kitzbüheler Alpen, Faistenau/Hintersee, Berchtesgaden. Antworten sammeln (Datum, Ja/Nein, Wunsch zum Quellenhinweis).
 
 ## Bis Freitag, 27.11.
 
-5. **Webspace und Domain bestellen.** AVV (Vertrag zur Auftragsverarbeitung) im Kundenmenü abschließen, bei Hetzner unter https://accounts.hetzner.com/account/dpa: Datenkategorien (Server-Logs, bei Abo E-Mail-Adressen) und Betroffene (Besucher) wählen, Kästchen anklicken.
-6. **Let's Encrypt** in der konsoleH für die Domain einschalten. Die Umleitung auf HTTPS macht die `.htaccess` der Seite selbst.
+5. **Webspace und Domain bestellen.** AVV (Vertrag zur Auftragsverarbeitung) im Kundenmenü abschließen, bei netcup und Hetzner ist das ein Klick.
+6. **Let's Encrypt** für die Domain einschalten, „HTTP auf HTTPS umleiten“ aktivieren.
 7. **Eigenes SFTP/FTPS-Konto** nur für den Web-Ordner anlegen, dazu eine Subdomain `test.` (ohne Passwortschutz per `.htaccess`, weil der Upload die `.htaccess` mitbringt; die Testseite sperrt Suchmaschinen selbst).
 8. **Zugangsdaten in die `.env` auf dem NAS** eintragen: `LOIPEN_UPLOAD_URL`, `LOIPEN_UPLOAD_PASSWORT`, Impressum-Angaben und `LOIPEN_HOSTER` (Vorlage `.env.example`, Ablauf im README unter „Online stellen“). Nicht in Nachrichten oder ins Repo.
 9. **Log-Aufbewahrung** beim Hoster auf kurz stellen (z. B. 7 Tage), wenn einstellbar.
