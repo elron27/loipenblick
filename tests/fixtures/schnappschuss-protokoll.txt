@@ -583,7 +583,3 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200 https://maps.lungau.at/robots.txt
 200  2009403 tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
 200     3188 tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
-# Lauf 2026-11-19 08:22 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
-200 https://maps.lungau.at/robots.txt
-200  1923290 tests/fixtures/recherche-2026-11-14/lungau-maps/embedded.bundle.js https://maps.lungau.at/embedded.bundle.js
-200     3188 tests/fixtures/recherche-2026-11-14/lungau-maps/v2.html https://maps.lungau.at/v2/
