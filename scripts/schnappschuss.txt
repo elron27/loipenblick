@@ -1,21 +1,10 @@
-# <zielpfad> <url> -- Runde P34 (19.11.2026): Ortsseiten Alpbachtal, Wildschoenau, Wilder Kaiser, Kitzbuehel, St. Johann
-tests/fixtures/wilderkaiser/2026-11-19/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
-tests/fixtures/recherche-2026-11-19/p34/wilderkaiser/home.html https://www.wilderkaiser.info/de/
-tests/fixtures/recherche-2026-11-19/p34/wilderkaiser/impressum.html https://www.wilderkaiser.info/de/impressum.html
-tests/fixtures/wildschoenau/2026-11-19/langlaufen.html https://www.wildschoenau.com/de/aktivitaeten/winter/langlaufen
-tests/fixtures/recherche-2026-11-19/p34/wildschoenau/home.html https://www.wildschoenau.com/de
-tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/impressum
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/langlaufen-en.html https://www.alpbachtal.at/en/winter/cross-country-skiing
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/langlaufen-de.html https://www.alpbachtal.at/de/winter/langlaufen
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/schneebericht-en.html https://www.alpbachtal.at/en/info-and-service/weather/snowreport
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/schneebericht-de.html https://www.alpbachtal.at/de/info-und-service/wetter/schneebericht
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/reintalerseeloipe.html https://www.alpbachtal.at/en/info-and-service/alpbachtal-a-z/Lake-Reintal-Trail_isd_8908678
-tests/fixtures/recherche-2026-11-19/p34/alpbachtal/home.html https://www.alpbachtal.at/de
-tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/home.html https://www.kitzbuehel.com/de/
-tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-de.html https://www.kitzbuehel.com/de/sport/langlaufen/
-tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-en.html https://www.kitzbuehel.com/en/sport/cross-country-skiing/
-tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/sitemap.xml https://www.kitzbuehel.com/sitemap.xml
-tests/fixtures/recherche-2026-11-19/p34/stjohann/stjo-status.html https://www.kitzbueheler-alpen.com/de/stjo/aktuelles/loipen-status.html
-tests/fixtures/recherche-2026-11-19/p34/stjohann/hosa-status.html https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/status.html
-tests/fixtures/recherche-2026-11-19/p34/stjohann/pital-status.html https://www.kitzbueheler-alpen.com/de/pital/aktuelles/loipen-status.html
-tests/fixtures/recherche-2026-11-19/p34/stjohann/bri-status.html https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+# <zielpfad> <url> -- Runde P34b (19.11.2026): Kitzbuehel-Loipen, Impressum/Nutzungsbedingungen
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-de2.html https://www.kitzbuehel.com/aktivitaeten/langlaufen/
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/trail-conditions.html https://www.kitzbuehel.com/en/activities/ski-resort/trail-conditions/
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/impressum.html https://www.kitzbuehel.com/impressum/
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/agb.html https://www.kitzbuehel.com/agb/
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-v2.html https://maps.kitzbuehel.com/v2/de/gdi_summer/2d/-1/category/-1/-1/-1/18367/-1/
+tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-root.html https://maps.kitzbuehel.com/
+tests/fixtures/recherche-2026-11-19/p34/alpbachtal/impressum.html https://www.alpbachtal.at/de/info-und-service/impressum
+tests/fixtures/recherche-2026-11-19/p34/alpbachtal/agb.html https://www.alpbachtal.at/de/info-und-service/agb
+tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/info-service/impressum
