@@ -23,6 +23,7 @@ import argparse
 import hashlib
 import http.server
 import json
+import re
 import threading
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -36,6 +37,7 @@ from tests.wetterformat import brightsky, dwd_zip
 
 ROOT = Path(__file__).resolve().parents[2]
 WETTER = FIXTURES / "wetter"
+STAND = re.compile(r"aktualisiert am \d\d\.\d\d\.\d\d um \d\d:\d\d Uhr")
 GESCHLOSSEN, OFFEN = "<strong>nicht befahrbar</strong>", "<strong>geöffnet</strong>"
 
 
@@ -168,6 +170,8 @@ class Attrappe(http.server.BaseHTTPRequestHandler):
                     return self._sende(404, "nicht in den Fixtures", "text/plain")
                 if ZUSTAND.offen:
                     text = text.replace(GESCHLOSSEN, OFFEN)
+                    # D19: eine Oeffnung mit Stand vom Fruehjahr waere unplausibel; die Attrappe meldet sie frisch
+                    text = STAND.sub(datetime.now().strftime("aktualisiert am %d.%m.%y um %H:%M Uhr"), text)
                 typ = "application/json" if text.lstrip().startswith(("{", "[")) else "text/html; charset=utf-8"
                 return self._sende(200, text, typ)
         return self._sende(404, f"Attrappe kennt {host} nicht", "text/plain")
