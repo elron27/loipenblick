@@ -3,6 +3,7 @@
 from loipen.adapters.aschau import AschauAdapter
 from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
+from loipen.adapters.intermaps import IntermapsSchneeberichtAdapter
 from loipen.adapters.kaernten import NlwBerichtAdapter
 from loipen.adapters.kitzalps import KitzAlpsAdapter
 from loipen.adapters.langlaufdorf import LanglaufdorfAdapter
@@ -25,5 +26,5 @@ ADAPTERS: dict[str, Adapter] = {
     "stanton": StAntonAdapter(), "nlw": NlwBerichtAdapter(),
     "dolomiti": DolomitiNordicSkiAdapter(), "opendatahub": OpenDataHubAdapter(),
     "myswitzerland": MySwitzerlandAdapter(), "steiermark": SteiermarkLoipenberichtAdapter(),
-    "osttirol": OsttirolAdapter(),
+    "osttirol": OsttirolAdapter(), "intermaps": IntermapsSchneeberichtAdapter(),
 }

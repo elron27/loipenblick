@@ -5,6 +5,8 @@ Runde P33-1): tests/fixtures/osttirol/2026-11-19/alle-loipen.html, 59 Loipen, 58
 eine ohne Status (Verbindung Promenadenloipe und Talblickloipe Kals). Kein Datum, keine Schneehoehe, keine Koordinaten.
 """
 
+import re
+
 import pytest
 
 from loipen.adapters import ADAPTERS
@@ -77,3 +79,73 @@ def test_p33_quelle_nur_test_rang_4_querpruefung():
     assert set(q["config"]["gebiet_map"].values()) | {q["config"]["default_gebiet"]} <= slugs
     kontakt = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8")
     assert "Osttirol" in kontakt.split("## 3.")[1]
+
+
+# ---------- Tiroler Zugspitz Arena: Wintersportbericht bei Intermaps (P33 AK 4, P17 AK 3) ----------
+# Schnappschuss vom 19.11.2026 (Runde P33-1): 21 Langlaufloipen, alle geschlossen, Stand 19.11.2026 13:20,
+# Schneehoehe Tal "- cm" (keine Meldung).
+
+def lauf_zugspitz(config: dict | None = None, ersetze: dict | None = None):
+    q = next(x for x in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"] if x["key"] == "zugspitzarena")
+    fetcher = FixtureFetcher("zugspitzarena", q["base_url"], seiten=SEITEN_QUELLEN["zugspitzarena"], ersetze=ersetze)
+    return ADAPTERS[q["adapter"]].run(q["base_url"], config or q["config"], fetcher), fetcher, q
+
+
+@pytest.mark.req("P33", ak=4)
+def test_p33_zugspitz_arena_loipen_mit_status_stand_und_gebiet():
+    erg, fetcher, _ = lauf_zugspitz()
+    assert erg.warnungen == []
+    assert fetcher.abgerufen == ["https://sdds4.intermaps.com/zugspitzarena/snowreport_zugspitzarena.aspx?lang=de"]
+    assert len(erg.loipen) == 21 and len({d.source_key for d in erg.loipen}) == 21
+    assert {d.status for d in erg.loipen} == {Status.GESCHLOSSEN}
+    assert all(d.schneehoehe_cm is None for d in erg.loipen)  # "- cm" = keine Meldung
+    assert {d.quelle_aktualisiert_at.strftime("%d.%m.%Y %H:%M") for d in erg.loipen} == {"19.11.2026 13:20"}
+    kelmen = next(d for d in erg.loipen if d.name == "Berwang Loipe Kelmen - Namlos B23")
+    assert (kelmen.gebiet_slug, kelmen.laenge_km, kelmen.schwierigkeit) == ("berwang", 3.4, Schwierigkeit.MITTEL)
+    maehberg = next(d for d in erg.loipen if d.name.startswith("Bichlbach-Lähn"))
+    assert (maehberg.gebiet_slug, maehberg.schwierigkeit) == ("zugspitz-arena", Schwierigkeit.SCHWER)
+    moos = next(d for d in erg.loipen if d.name.startswith("Moos Ehrwald"))
+    assert moos.laenge_km == 13.9 and moos.gebiet_slug == "zugspitz-arena"
+
+
+@pytest.mark.req("P33", ak=4)
+def test_p33_zugspitz_arena_offen_in_vorbereitung_und_schneehoehe():
+    seite = (FixtureFetcher("zugspitzarena", "https://sdds4.intermaps.com",
+                            seiten=SEITEN_QUELLEN["zugspitzarena"])
+             .get("https://sdds4.intermaps.com/zugspitzarena/snowreport_zugspitzarena.aspx?lang=de"))
+    kelmer = seite.index("Berwang Kelmerfeld Loipe A23")
+    kelmen = seite.index("Berwang Loipe Kelmen - Namlos B23")
+    vor = seite[:kelmer].rsplit("images/icons/closed.png", 1)
+    zwischen = seite[kelmer:kelmen].rsplit("images/icons/closed.png", 1)
+    seite = (vor[0] + "images/icons/open.png" + vor[1] + zwischen[0] + "images/icons/inprep.png" + zwischen[1]
+             + seite[kelmen:])
+    seite = re.sub(r"(TAL</span>\s*<br />\s*)- cm", r"\g<1>0 cm", seite, count=1)
+    erg, _, _ = lauf_zugspitz(ersetze={"zugspitzarena/snowreport_zugspitzarena.aspx?lang=de": seite})
+    status = {d.name: (d.status, d.status_rohtext) for d in erg.loipen}
+    assert status["Berwang Kelmerfeld Loipe A23"] == (Status.OFFEN, "offen")
+    assert status["Berwang Loipe Kelmen - Namlos B23"] == (Status.GESCHLOSSEN, "in Vorbereitung")
+    assert {d.schneehoehe_cm for d in erg.loipen} == {0}
+
+
+@pytest.mark.req("P33", ak=2)
+def test_p33_zugspitz_arena_unbekannter_ort_und_leerer_bericht_warnen():
+    _, _, q = lauf_zugspitz()
+    config = {**q["config"], "gebiet_map": {k: v for k, v in q["config"]["gebiet_map"].items() if k != "Heiterwang"}}
+    erg, _, _ = lauf_zugspitz(config)
+    assert len(erg.warnungen) == 6 and all("Heiterwang" in w for w in erg.warnungen)
+    erg, _, _ = lauf_zugspitz(ersetze={"zugspitzarena/snowreport_zugspitzarena.aspx?lang=de": "<html></html>"})
+    assert erg.loipen == [] and len(erg.warnungen) == 2  # kein Stand, keine Loipen
+
+
+@pytest.mark.req("P17", ak=3)
+def test_p17_intermaps_nur_mit_ausnahme_fuer_die_testversion():
+    from tests.test_ausbau import ausnahme_p17
+
+    _, _, q = lauf_zugspitz()
+    assert ausnahme_p17(q) and q["rang"] == 4 and q["querpruefung"] is True
+    ohne = {**q, "nutzung": {**q["nutzung"], "erlaubnis": "ausstehend"}}
+    assert not ausnahme_p17(ohne)
+    ohne_grund = {**q, "nutzung": {k: v for k, v in q["nutzung"].items() if k != "ausnahme_p17"}}
+    assert not ausnahme_p17(ohne_grund)
+    kontakt = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8").split("## 3.")[1]
+    assert "Zugspitz Arena" in kontakt and "Intermaps" in kontakt

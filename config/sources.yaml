@@ -925,3 +925,32 @@ quellen:
       gebiet_je_loipe:
         "122288593": matrei  # Uebungsrunde Peterer Feld, Praegraten
         "122288598": matrei  # Verbindungsloipe Dorf - Gries, Praegraten
+
+  # Tiroler Zugspitz Arena (P33, E-24, 19.11.2026): Wintersportbericht bei Intermaps, eingebettet auf
+  # zugspitzarena.com/de/Info-Service/geoeffnete-anlagen. Die eigenen Seiten zeigen keinen Loipenstatus.
+  # Ausnahme zu P17 nur fuer die Testversion (Stefan, 19.11.2026): erlaubnis nur_test, vor dem Livegang
+  # Tourismusverband und Intermaps fragen (docs/kontaktliste.md Abschnitt 3). Querpruefung fuer tirol.at.
+  - key: zugspitzarena
+    adapter: intermaps
+    name: Tiroler Zugspitz Arena (Wintersportbericht, Intermaps)
+    base_url: https://sdds4.intermaps.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Der Wintersportbericht der Zugspitz Arena nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "robots.txt fehlt (404) = keine Sperre; Intermaps ist Bezahldienst (P17), Ausnahme nur Testversion",
+              ausnahme_p17: "Stefan 19.11.2026: nur Testversion, vor Livegang Erlaubnis einholen"}
+    config:
+      pfad: /zugspitzarena/snowreport_zugspitzarena.aspx?lang=de
+      default_gebiet: zugspitz-arena
+      # erstes Wort der Zeile (Ort) -> Gebiet
+      gebiet_map:
+        Berwang: berwang
+        Biberwier: zugspitz-arena
+        Bichlbach: zugspitz-arena
+        Ehrwald: zugspitz-arena
+        Heiterwang: zugspitz-arena
+        Lähn: zugspitz-arena
+        Lermoos: zugspitz-arena
+        Moos: zugspitz-arena
