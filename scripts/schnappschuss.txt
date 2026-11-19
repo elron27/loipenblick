@@ -1,9 +1,7 @@
-# <zielpfad> <url> -- Runde 22 (19.11.2026, P31): Pitztal, Oetztal-Tourensitemap
-tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen.html https://www.pitztal.com/de/tourenportal-langlaufen.html
-tests/fixtures/pitztal/2026-11-19/jetzt-geoeffnet.html https://www.pitztal.com/de/jetzt-geoeffnet.html
-tests/fixtures/pitztal/2026-11-19/tours/rifflseeloipe.html https://www.pitztal.com/de/tours/rifflseeloipe.html
-tests/fixtures/pitztal/2026-11-19/tours/talloipe.html https://www.pitztal.com/de/tours/talloipe.html
-tests/fixtures/pitztal/2026-11-19/tours/rollerstrecke-mandarfen.html https://www.pitztal.com/de/tours/rollerstrecke-mandarfen.html
-tests/fixtures/pitztal/2026-11-19/tours.xml https://www.pitztal.com/de/tours.xml
-tests/fixtures/oetztal/2026-11-19/sitemap-tours.xml https://www.oetztal.com/sitemap.tours_6.xml
-tests/fixtures/oetztal/2026-11-19/nachtloipe-laengenfeld.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/4-1-nachtloipe-variante-laengenfeld.r-801776311
+# <zielpfad> <url> -- Runde 23 (19.11.2026, P31): Pitztal Seite 2, weitere Oetztal-Loipen
+tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-page2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?page=2
+tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen-p2.html https://www.pitztal.com/de/tourenportal-langlaufen.html?p=2
+tests/fixtures/oetztal/2026-11-19/touren/7230466.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/langlaufloipe-zwieselstein-soelden.r-7230466
+tests/fixtures/oetztal/2026-11-19/touren/6925433.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-obergurgl-nr-3.r-6925433
+tests/fixtures/oetztal/2026-11-19/touren/7100318.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-bergsteigerdorf-vent.r-7100318
+tests/fixtures/oetztal/2026-11-19/touren/7120810.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/loipe-ochsengarten.r-7120810
