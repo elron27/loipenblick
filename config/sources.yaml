@@ -932,7 +932,7 @@ quellen:
   # Tourismusverband und Intermaps fragen (docs/kontaktliste.md Abschnitt 3). Querpruefung fuer tirol.at.
   - key: zugspitzarena
     adapter: intermaps
-    name: Tiroler Zugspitz Arena (Wintersportbericht, Intermaps)
+    name: Zugspitz Arena Tourismus (Wintersportbericht, Intermaps)
     base_url: https://sdds4.intermaps.com
     art: portal
     rang: 4
