@@ -20,7 +20,8 @@ permissions:
 jobs:
   live:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    # 30 Minuten reichten seit dem 16.11.2026 nicht mehr (26 Quellen, 5 s Abstand je Abruf)
+    timeout-minutes: 75
     services:
       postgres:
         image: postgres:16-alpine
