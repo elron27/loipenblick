@@ -20,7 +20,7 @@ from markupsafe import Markup
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from loipen.generator.daten import baue
+from loipen.generator.daten import baue, sichtbar
 from loipen.generator.icons import png_icon
 from loipen.konfig import CONFIG_DIR
 from loipen.models import Quelle
@@ -96,7 +96,7 @@ def erzeuge(
     unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5)."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
-    daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days)
+    daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days, oeffentlich=oeffentlich)
     if unplausibel is not None:
         unplausibel.update(daten["unplausibel"])
     stand = app_version()
@@ -148,7 +148,8 @@ def erzeuge(
                       trim_blocks=True, lstrip_blocks=True)
     anschrift = [z.strip() for z in (r.get("anschrift") or "").split("|") if z.strip()]
     quellen = [{"name": q.name, "url": q.base_url, "host": _host(q.base_url)}
-               for q in session.scalars(select(Quelle).where(Quelle.enabled).order_by(Quelle.name))]
+               for q in session.scalars(select(Quelle).where(Quelle.enabled).order_by(Quelle.name))
+               if sichtbar(q, oeffentlich)]
     werte = {"name": r.get("name"), "anschrift": anschrift, "email": r.get("email"), "hoster": r.get("hoster"),
              "log_tage": r.get("log_tage") or 7, "statistik_logs": bool(r.get("statistik_logs")),
              "kacheln_fremd": kacheln.get("fremd", True), "quellen": quellen,

@@ -12,6 +12,10 @@ from sqlalchemy.orm import Session
 
 from loipen.models import Gebiet, Herkunft, Parkplatz, Quelle, Region
 
+# Erlaubnis des Betreibers (Stefan, 19.11.2026; docs/kontaktliste.md): nur_test = Daten nur in der Testversion,
+# die oeffentliche Seite blendet die Quelle aus, bis der Betreiber zustimmt
+ERLAUBNIS = ("liegt_vor", "ausstehend", "nur_test")
+ERLAUBNIS_STANDARD = "ausstehend"
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 
 
@@ -48,6 +52,8 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
         for feld in ("robots_geprueft", "nutzungsbedingungen_geprueft"):
             if feld not in nutzung:
                 fehler.append(f"Quelle {q['key']}: nutzung.{feld} fehlt")
+        if nutzung.get("erlaubnis", ERLAUBNIS_STANDARD) not in ERLAUBNIS:
+            fehler.append(f"Quelle {q['key']}: nutzung.erlaubnis muss {', '.join(ERLAUBNIS)} sein")
         if str(nutzung.get("robots", "erlaubt")) != "erlaubt":
             fehler.append(f"Quelle {q['key']}: robots.txt erlaubt den Abruf nicht")
         # P20: eine Ortsseite nur, wenn sie ein Gebiet ohne andere Quelle schliesst
@@ -141,6 +147,9 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         config["waechter"] = {**standard_waechter, **(q.get("waechter") or {})}
         # D15: Rang der Quelle bei Dubletten (1 = fuehrend), Standard 10
         config["rang"] = int(q.get("rang", 10))
+        config["erlaubnis"] = (q.get("nutzung") or {}).get("erlaubnis", ERLAUBNIS_STANDARD)
+        # E-24: Ortsseite nur zur Querpruefung (Schneehoehe, Status) der fuehrenden Quelle
+        config["querpruefung"] = bool(q.get("querpruefung", False))
         # U36: warum Loipen dieser Quelle keinen Streckenverlauf haben (steht auf der Loipenseite)
         if q.get("strecke_hinweis"):
             config["strecke_hinweis"] = q["strecke_hinweis"]
@@ -160,3 +169,9 @@ def lade_und_abgleichen(session: Session, config_dir: Path = CONFIG_DIR) -> None
         lade_yaml(config_dir / "sources.yaml"),
         lade_yaml(config_dir / "gebiete.yaml"),
     )
+
+
+def nur_test_quellen(sources: dict) -> list[str]:
+    """Livegang-Pflichtpunkt: Quellen, die ohne Zustimmung des Betreibers nur in der Testversion laufen."""
+    return [q["key"] for q in sources.get("quellen", [])
+            if q.get("enabled", True) and (q.get("nutzung") or {}).get("erlaubnis") == "nur_test"]

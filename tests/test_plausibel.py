@@ -182,3 +182,31 @@ def test_d19_push_und_abo_melden_unplausible_oeffnung_nicht():
          Ereignis("oeffnet", "Stadionloipe", "ramsau", "Ramsau", "schladming", "offen", loipe_id=2)]
     rest = ohne_unplausible(e, {1})
     assert [(x.art, x.loipe_id) for x in rest] == [("schliesst", 1), ("oeffnet", 2)]
+
+
+@pytest.mark.req("D19", ak=3)
+@pytest.mark.req("B27")
+def test_d19_ortsseite_zur_querpruefung_meldet_0_cm_oder_geschlossen(session):
+    """E-24: zillertal.at (rang 4, querpruefung) prueft tirol.at gegen, auch ohne Stationsdaten."""
+    w = Welt(session)
+    g = w.gebiet("mayrhofen", schnee_cm=None, messtag=None)
+    w.loipe(g, "Langlaufen: Ginzling Loipe")
+    orts = w.loipe(g, "Langlaufen: Ginzling Loipe", "zillertal", 4, status="unbekannt")
+    orts.zustaende[-1].schneehoehe_cm = 0
+    w.quellen["zillertal"].config = {**w.quellen["zillertal"].config, "querpruefung": True}
+    w.loipe(g, "Zillergrund", lat=47.05)
+    w.loipe(g, "Zillergrund", "zillertal", 4, status="geschlossen", lat=47.05)
+    session.flush()
+    loipen = loipen_nach_name(baue(session, JETZT, CONFIG_DIR))
+    assert loipen["Langlaufen: Ginzling Loipe"]["unplausibel"] == ["Die Ortsseite (Quelle zillertal) meldet 0 cm Schnee an der Loipe"]
+    assert loipen["Zillergrund"]["unplausibel"] == ["Der Loipenbericht vor Ort (Quelle zillertal) meldet sie geschlossen"]
+    assert loipen["Zillergrund"]["status"] == Status.GESCHLOSSEN.value
+
+
+@pytest.mark.req("D19", ak=3)
+def test_d19_ortsseite_ohne_querpruefung_mit_rang_4_widerspricht_nicht(session):
+    w = Welt(session)
+    g = w.gebiet("mayrhofen", schnee_cm=None, messtag=None)
+    w.loipe(g, "Zillergrund", lat=47.05)
+    w.loipe(g, "Zillergrund", "kitzalps", 4, status="geschlossen", lat=47.05)
+    assert loipen_nach_name(baue(session, JETZT, CONFIG_DIR))["Zillergrund"]["status"] == Status.OFFEN.value

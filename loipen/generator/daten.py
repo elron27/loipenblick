@@ -113,7 +113,12 @@ def _mitte(gebiete: list[dict]) -> list[float] | None:
     return [round(sum(p[0] for p in punkte) / len(punkte), 3), round(sum(p[1] for p in punkte) / len(punkte), 3)]
 
 
-def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 7) -> dict:
+def sichtbar(quelle: Quelle, oeffentlich: bool) -> bool:
+    """Eine Quelle ohne Zustimmung (erlaubnis nur_test) erscheint nur in der Testversion (docs/kontaktliste.md)."""
+    return quelle.enabled and not (oeffentlich and (quelle.config or {}).get("erlaubnis") == "nur_test")
+
+
+def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 7, oeffentlich: bool = False) -> dict:
     """Gibt {"index": ..., "regionen": {slug: {...}}, "strecken": {slug: {...}}, "verdeckt": {id: fuehrend}} zurueck.
     "verdeckt" (Dubletten) braucht die Saisonstatistik fuer den Quellenvergleich (U39)."""
     heute = jetzt.astimezone(BERLIN).date()
@@ -123,13 +128,15 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
 
     # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
     # B16 AK 2: eine abgeschaltete Quelle verschwindet von der Seite
-    aktive = [l for l in session.scalars(select(Loipe).join(Quelle).where(Loipe.active, Quelle.enabled))]
+    aktive = [l for l in session.scalars(select(Loipe).join(Quelle).where(Loipe.active, Quelle.enabled))
+              if sichtbar(l.quelle, oeffentlich)]
     verdeckt = finde_dubletten([
         Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
                 l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
         for l in aktive])
     auch_bei: dict[int, list[dict]] = {}
     widerspruch: dict[int, list[str]] = {}  # D19 AK 3: oertliche Berichte, die die Loipe geschlossen melden
+    ohne_schnee: dict[int, list[str]] = {}  # E-24: Ortsseiten, die an der Loipe 0 cm Schnee melden
     lage: dict[int, tuple[float, float]] = {}
     laenge: dict[int, tuple[float, str]] = {}
     nach_id = {l.id: l for l in aktive}
@@ -147,10 +154,15 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
         if v.laenge_km is not None and fuehrend not in laenge:
             laenge[fuehrend] = (v.laenge_km, v.quelle.name)
+        vcfg = v.quelle.config or {}
+        quer = bool(vcfg.get("querpruefung"))  # E-24: Ortsseite, die nur zum Gegenpruefen dient
         if (eintrag["status"] == Status.GESCHLOSSEN.value
-                and int((v.quelle.config or {}).get("rang", 10)) <= plausibel.OERTLICH_BIS_RANG
+                and (quer or int(vcfg.get("rang", 10)) <= plausibel.OERTLICH_BIS_RANG)
                 and v.quelle.name not in widerspruch.get(fuehrend, [])):
             widerspruch.setdefault(fuehrend, []).append(v.quelle.name)
+        if (quer and zv and zv[-1].schneehoehe_cm == 0
+                and v.quelle.name not in ohne_schnee.get(fuehrend, [])):
+            ohne_schnee.setdefault(fuehrend, []).append(v.quelle.name)
         liste = auch_bei.setdefault(fuehrend, [])
         # tirol.at-Doppeleintraege einer Loipe nur einmal nennen; ein "offen" zaehlt fuer die Abweichung
         gleich = next((a for a in liste if a["quelle"] == eintrag["quelle"] and a["name"] == eintrag["name"]), None)
@@ -191,7 +203,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             tmax_heute = next((v["tmax"] for v in vorhersage if v["datum"] == heute.isoformat()), None)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
-                if not l.active or not l.quelle.enabled or l.id in verdeckt:
+                if not l.active or not sichtbar(l.quelle, oeffentlich) or l.id in verdeckt:
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
@@ -209,7 +221,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 zl = zustaende.get(l.id) or []
                 if d["status"] in plausibel.BEFAHRBAR and plausibel.anwenden(d, plausibel.gruende(
                         zl[-1] if zl else None, d["status"], d["sonder"], schnee if schnee["messtag"] else None,
-                        tmax_heute, widerspruch.get(l.id, []), jetzt)):
+                        tmax_heute, widerspruch.get(l.id, []), jetzt, ohne_schnee.get(l.id, []))):
                     unplausibel.append(l.id)
                 if d["lat"] is None and l.id in lage:
                     d["lat"], d["lon"] = lage[l.id]
@@ -277,8 +289,13 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             {"key": q.key, "name": q.name, "status": q.last_status, "letzter_lauf": _iso(q.last_run_at),
              "anzahl": q.last_count, "dauer_s": q.last_dauer_s, "fehler": q.last_error}
             for q in session.scalars(select(Quelle).order_by(Quelle.key))
+            if not (oeffentlich and (q.config or {}).get("erlaubnis") == "nur_test")
         ],
         "abdeckung": abdeckung,
+        # Quellen ohne Zustimmung, die nur die Testversion zeigt (docs/kontaktliste.md)
+        "nur_test": [] if oeffentlich else sorted(
+            q.key for q in session.scalars(select(Quelle).where(Quelle.enabled))
+            if (q.config or {}).get("erlaubnis") == "nur_test"),
         "dubletten": len(verdeckt),
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),
                        "veraltet": veraltet, "unplausibel": len(unplausibel), **kennzahl},

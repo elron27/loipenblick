@@ -116,3 +116,24 @@ def test_p34_quellen_nur_test_mit_rang_4_und_querpruefung():
         assert q["rang"] == 4 and q["querpruefung"] is True, key
         assert q["nutzung"]["erlaubnis"] == "nur_test", key
     assert quelle("tirol")["rang"] < 4  # tirol.at bleibt fuehrend
+
+
+@pytest.mark.req("P34", ak=3)
+def test_p34_ortsseiten_loipen_stehen_einmal_neben_tirol_at(session, tmp_path):
+    """Mit allen Fixtures: gleichnamige Loipen von tirol.at und der Ortsseite erscheinen einmal (D15)."""
+    import json
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    from loipen import generator
+    from tests.helpers import lade_alle_fixtures
+    from tests.test_lokale_quellen import gebiet
+
+    jetzt = datetime(2026, 11, 19, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
+    lade_alle_fixtures(session, jetzt)
+    generator.erzeuge(session, tmp_path, jetzt)
+    for slug, name in (("ellmau", "Bichlloipe Ellmau"), ("soell", "Sunnseitloipe"),
+                       ("wildschoenau", "Höhenloipe Markbachjoch")):
+        namen = [l["name"] for l in gebiet(tmp_path, slug)["loipen"]]
+        assert namen.count(name) == 1, (slug, namen)
+    assert json.loads((tmp_path / "daten.json").read_text(encoding="utf-8"))["dubletten"] > 0

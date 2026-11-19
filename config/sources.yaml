@@ -24,6 +24,11 @@
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
 #            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
+#            erlaubnis: liegt_vor | ausstehend (Standard) | nur_test. nur_test = Betreiber hat nicht zugestimmt und
+#            seine Bedingungen verbieten die Uebernahme; die Quelle laeuft nur in der Testversion und erscheint auf
+#            der oeffentlichen Seite (LOIPEN_OEFFENTLICH=true) nicht. Kontakte und Stand: docs/kontaktliste.md
+#   querpruefung: true = Ortsseite, die tirol.at gegenprueft (E-24). Mit rang 4 bleibt tirol.at fuehrend; meldet
+#            die Ortsseite die Loipe geschlossen oder 0 cm Schnee, gilt ein "offen" ohne Beleg als unplausibel (D19).
 #   art:     portal oder ortsseite; eine Ortsseite nennt unter schliesst die Gebiete, die sonst keine Quelle hat
 #   rang:    bei Dubletten gewinnt der kleinere Rang (1 = fuehrend), Standard 10. Ortsquellen mit
 #            Praeparierdatum (2) vor tirol.at (3, nur offen/gesperrt) vor Kitzbueheler Alpen (4, ohne Koordinate).
@@ -474,7 +479,7 @@ quellen:
     art: portal
     rang: 3
     strecke_hinweis: "Der Open Data Hub führt nur Start- und Zielpunkt der Loipe, keinen Streckenverlauf."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-13,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-13, erlaubnis: liegt_vor,
               hinweis: "robots.txt fehlt (404) = keine Sperre; Lizenz CC0 je Datensatz (LicenseInfo)"}
     config:
       pfad: /v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true
