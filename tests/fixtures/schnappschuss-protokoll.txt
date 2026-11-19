@@ -618,6 +618,46 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200 https://www.oetztal.com/robots.txt
 200   174448 tests/fixtures/oetztal/2026-11-19/sitemap-tours.xml https://www.oetztal.com/sitemap.tours_6.xml
 200   768732 tests/fixtures/oetztal/2026-11-19/nachtloipe-laengenfeld.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/4-1-nachtloipe-variante-laengenfeld.r-801776311
+# Lauf 2026-11-19 14:43 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.wilderkaiser.info/robots.txt
+200   338524 tests/fixtures/wilderkaiser/2026-11-19/langlaufen.html https://www.wilderkaiser.info/de/langlaufen-am-wilden-kaiser.html
+200   906917 tests/fixtures/recherche-2026-11-19/p34/wilderkaiser/home.html https://www.wilderkaiser.info/de/
+200   302562 tests/fixtures/recherche-2026-11-19/p34/wilderkaiser/impressum.html https://www.wilderkaiser.info/de/impressum.html
+200 https://www.wildschoenau.com/robots.txt
+200   419169 tests/fixtures/wildschoenau/2026-11-19/langlaufen.html https://www.wildschoenau.com/de/aktivitaeten/winter/langlaufen
+200   572364 tests/fixtures/recherche-2026-11-19/p34/wildschoenau/home.html https://www.wildschoenau.com/de
+404   234235 tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/impressum
+200 https://www.alpbachtal.at/robots.txt
+200   539836 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/langlaufen-en.html https://www.alpbachtal.at/en/winter/cross-country-skiing
+200   562600 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/langlaufen-de.html https://www.alpbachtal.at/de/winter/langlaufen
+200   267220 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/schneebericht-en.html https://www.alpbachtal.at/en/info-and-service/weather/snowreport
+404   333255 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/schneebericht-de.html https://www.alpbachtal.at/de/info-und-service/wetter/schneebericht
+200   286782 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/reintalerseeloipe.html https://www.alpbachtal.at/en/info-and-service/alpbachtal-a-z/Lake-Reintal-Trail_isd_8908678
+200   758161 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/home.html https://www.alpbachtal.at/de
+200 https://www.kitzbuehel.com/robots.txt
+404   255569 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/home.html https://www.kitzbuehel.com/de/
+404   255569 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-de.html https://www.kitzbuehel.com/de/sport/langlaufen/
+200   366768 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-en.html https://www.kitzbuehel.com/en/sport/cross-country-skiing/
+200     2043 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/sitemap.xml https://www.kitzbuehel.com/sitemap.xml
+200 https://www.kitzbueheler-alpen.com/robots.txt
+200   169517 tests/fixtures/recherche-2026-11-19/p34/stjohann/stjo-status.html https://www.kitzbueheler-alpen.com/de/stjo/aktuelles/loipen-status.html
+200   166623 tests/fixtures/recherche-2026-11-19/p34/stjohann/hosa-status.html https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/status.html
+200   242875 tests/fixtures/recherche-2026-11-19/p34/stjohann/pital-status.html https://www.kitzbueheler-alpen.com/de/pital/aktuelles/loipen-status.html
+200   211483 tests/fixtures/recherche-2026-11-19/p34/stjohann/bri-status.html https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+# Lauf 2026-11-19 14:46 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.kitzbuehel.com/robots.txt
+200   375488 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/langlaufen-de2.html https://www.kitzbuehel.com/aktivitaeten/langlaufen/
+200   632998 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/trail-conditions.html https://www.kitzbuehel.com/en/activities/ski-resort/trail-conditions/
+200   261801 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/impressum.html https://www.kitzbuehel.com/impressum/
+200   260188 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/agb.html https://www.kitzbuehel.com/agb/
+200 https://maps.kitzbuehel.com/robots.txt
+200     2997 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-v2.html https://maps.kitzbuehel.com/v2/de/gdi_summer/2d/-1/category/-1/-1/-1/18367/-1/
+200     2997 tests/fixtures/recherche-2026-11-19/p34/kitzbuehel/maps-root.html https://maps.kitzbuehel.com/
+200 https://www.alpbachtal.at/robots.txt
+200   242092 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/impressum.html https://www.alpbachtal.at/de/info-und-service/impressum
+200   240290 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/agb.html https://www.alpbachtal.at/de/info-und-service/agb
+200 https://www.wildschoenau.com/robots.txt
+200   179185 tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/info-service/impressum
 # Lauf 2026-11-19 14:51 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.zillertal.at/robots.txt
 200    37405 tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html
@@ -676,6 +716,7 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   797917 tests/fixtures/oetztal/2026-11-19/touren/7100318.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-bergsteigerdorf-vent.r-7100318
 200   778450 tests/fixtures/oetztal/2026-11-19/touren/7120810.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/loipe-ochsengarten.r-7120810
 # Lauf 2026-11-19 18:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+# Lauf 2026-11-19 17:34 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.zillertal.at/robots.txt
 200    37405 tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html
 200   111536 tests/fixtures/recherche-2026-11-19/zillertal/sitemap.xml https://www.zillertal.at/sitemap.xml
@@ -687,6 +728,7 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200      662 tests/fixtures/recherche-2026-11-19/innsbruck/sitemap.xml https://www.innsbruck.info/sitemap.xml
 200 https://www.osttirol.com/robots.txt
 200     4317 tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
+200   352069 tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
 200 https://www.alpbachtal.at/robots.txt
 200     1973 tests/fixtures/recherche-2026-11-19/alpbachtal/sitemap.xml https://www.alpbachtal.at/sitemap.xml
 200 https://www.wildschoenau.com/robots.txt
@@ -707,6 +749,8 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200     1914 tests/fixtures/recherche-2026-11-19/ischgl/sitemap.xml https://www.ischgl.com/sitemap.xml
 200 https://www.stubai.at/robots.txt
 200     2175 tests/fixtures/recherche-2026-11-19/stubai/sitemap.xml https://www.stubai.at/sitemap.xml
+403 https://www.stubai.at/robots.txt
+ROBOTS-VERBOT https://www.stubai.at/sitemap.xml
 200 https://www.wipptal.at/robots.txt
 200      412 tests/fixtures/recherche-2026-11-19/wipptal/sitemap.xml https://www.wipptal.at/sitemap.xml
 200 https://www.zillertalarena.com/robots.txt
