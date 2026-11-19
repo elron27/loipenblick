@@ -164,7 +164,10 @@ def test_b19_host_jeder_quelle_steht_in_der_cloud_umgebung():
 
     for url in (wetter.GEOSPHERE_URL, wetter.BRIGHTSKY_URL):
         assert urlparse(url).hostname in hosts
-    assert not any(v in h for h in hosts for v in VERBOTEN)
+    # Ausnahme nur fuer die Testversion (Stefan 19.11.2026, P32): Host einer nur_test-Quelle mit p17_ausnahme
+    ausnahmen = {urlparse(q["base_url"]).hostname for q in quellen()
+                 if q["nutzung"].get("erlaubnis") == "nur_test" and q["nutzung"].get("p17_ausnahme")}
+    assert not any(v in h for h in hosts - ausnahmen for v in VERBOTEN)
 
 
 # ---------- P19: eigener Abrufplan je Quelle ----------
