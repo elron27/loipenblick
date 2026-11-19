@@ -675,3 +675,51 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   773802 tests/fixtures/oetztal/2026-11-19/touren/6925433.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-obergurgl-nr-3.r-6925433
 200   797917 tests/fixtures/oetztal/2026-11-19/touren/7100318.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/uebungsloipe-bergsteigerdorf-vent.r-7100318
 200   778450 tests/fixtures/oetztal/2026-11-19/touren/7120810.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/loipe-ochsengarten.r-7120810
+# Lauf 2026-11-19 18:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.zillertal.at/robots.txt
+200    37405 tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html
+200   111536 tests/fixtures/recherche-2026-11-19/zillertal/sitemap.xml https://www.zillertal.at/sitemap.xml
+200 https://www.oetztal.com/robots.txt
+200     1238 tests/fixtures/recherche-2026-11-19/oetztal/sitemap.xml https://www.oetztal.com/sitemap.xml
+200 https://www.pitztal.com/robots.txt
+200   122781 tests/fixtures/recherche-2026-11-19/pitztal/sitemap.xml https://www.pitztal.com/sitemap.xml
+200 https://www.innsbruck.info/robots.txt
+200      662 tests/fixtures/recherche-2026-11-19/innsbruck/sitemap.xml https://www.innsbruck.info/sitemap.xml
+200 https://www.osttirol.com/robots.txt
+200     4317 tests/fixtures/recherche-2026-11-19/osttirol/sitemap.xml https://www.osttirol.com/sitemap.xml
+200 https://www.alpbachtal.at/robots.txt
+200     1973 tests/fixtures/recherche-2026-11-19/alpbachtal/sitemap.xml https://www.alpbachtal.at/sitemap.xml
+200 https://www.wildschoenau.com/robots.txt
+200     1973 tests/fixtures/recherche-2026-11-19/wildschoenau/sitemap.xml https://www.wildschoenau.com/sitemap.xml
+200 https://www.wilderkaiser.info/robots.txt
+200   118422 tests/fixtures/recherche-2026-11-19/wilderkaiser/sitemap.xml https://www.wilderkaiser.info/sitemap.xml
+200 https://www.lechtal.at/robots.txt
+200   217593 tests/fixtures/recherche-2026-11-19/lechtal/sitemap.xml https://www.lechtal.at/sitemap.xml
+200 https://www.reutte.com/robots.txt
+200      412 tests/fixtures/recherche-2026-11-19/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
+200 https://www.zugspitzarena.com/robots.txt
+200      524 tests/fixtures/recherche-2026-11-19/zugspitzarena/sitemap.xml https://www.zugspitzarena.com/sitemap.xml
+200 https://www.tiroler-oberland.com/robots.txt
+200     1423 tests/fixtures/recherche-2026-11-19/tiroler-oberland/sitemap.xml https://www.tiroler-oberland.com/sitemap.xml
+200 https://www.serfaus-fiss-ladis.at/robots.txt
+200     1809 tests/fixtures/recherche-2026-11-19/serfaus-fiss-ladis/sitemap.xml https://www.serfaus-fiss-ladis.at/sitemap.xml
+200 https://www.ischgl.com/robots.txt
+200     1914 tests/fixtures/recherche-2026-11-19/ischgl/sitemap.xml https://www.ischgl.com/sitemap.xml
+200 https://www.stubai.at/robots.txt
+200     2175 tests/fixtures/recherche-2026-11-19/stubai/sitemap.xml https://www.stubai.at/sitemap.xml
+200 https://www.wipptal.at/robots.txt
+200      412 tests/fixtures/recherche-2026-11-19/wipptal/sitemap.xml https://www.wipptal.at/sitemap.xml
+200 https://www.zillertalarena.com/robots.txt
+200     3395 tests/fixtures/recherche-2026-11-19/zillertalarena/sitemap.xml https://www.zillertalarena.com/sitemap.xml
+200 https://www.mayrhofen.at/robots.txt
+200   630714 tests/fixtures/recherche-2026-11-19/mayrhofen/sitemap.xml https://www.mayrhofen.at/sitemap.xml
+200 https://www.hall-wattens.at/robots.txt
+200   588420 tests/fixtures/recherche-2026-11-19/hall-wattens/sitemap.xml https://www.hall-wattens.at/sitemap.xml
+200 https://www.silberregion-karwendel.com/robots.txt
+200   161862 tests/fixtures/recherche-2026-11-19/silberregion-karwendel/sitemap.xml https://www.silberregion-karwendel.com/sitemap.xml
+200 https://www.kitzbuehel.com/robots.txt
+200     2043 tests/fixtures/recherche-2026-11-19/kitzbuehel/sitemap.xml https://www.kitzbuehel.com/sitemap.xml
+200 https://www.st.johann.tirol/robots.txt
+404    50410 tests/fixtures/recherche-2026-11-19/st/sitemap.xml https://www.st.johann.tirol/sitemap.xml
+200 https://www.ferienland-kufstein.com/robots.txt
+200   198820 tests/fixtures/recherche-2026-11-19/ferienland-kufstein/sitemap.xml https://www.ferienland-kufstein.com/sitemap.xml
