@@ -73,6 +73,7 @@ class FixtureFetcher:
 TIROL_LISTE = "aktivitaeten/sport/langlaufen/loipen"
 STEIERMARK_LISTE = "de/Urlaub-planen/Tourenportal?tourCategory=46459526"
 SEITEN_QUELLEN = {
+    "innsbruck": {"innsbruck_new/lebensraum_innsbruck.aspx?lang=de": "2026-11-19/lebensraum_innsbruck.html"},  # P32
     "steiermark": {STEIERMARK_LISTE: "2026-11-14/tourenportal-langlauf-p1.html",
                    **{f"{STEIERMARK_LISTE}&page={n}": f"2026-11-14/tourenportal-langlauf-p{n}.html" for n in range(2, 8)}},
     "sachrang": {"schneebericht-sachrang": "schneebericht.html"},

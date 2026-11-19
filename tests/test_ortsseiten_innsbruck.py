@@ -1,4 +1,4 @@
-"""Ortsseiten Hall-Wattens und Silberregion Karwendel als Querpruefung (P32, E-24, nur Test), Adapter Innsbruck bereit.
+"""Ortsseiten Innsbruck, Hall-Wattens, Silberregion Karwendel als Querpruefung (P32, E-24, nur Test).
 
 Schnappschuesse vom 19.11.2026 (Workflow Schnappschuss, Runden P32-1 bis P32-3):
 - tests/fixtures/innsbruck/2026-11-19/lebensraum_innsbruck.html: Intermaps-Wintersportbericht, den
@@ -7,8 +7,8 @@ Schnappschuesse vom 19.11.2026 (Workflow Schnappschuss, Runden P32-1 bis P32-3):
 - tests/fixtures/hall-wattens/2026-11-19/langlaufen.html: 7 Loipen (Rinn, Gnadenwald), alle geschlossen.
 - tests/fixtures/silberregion-karwendel/2026-11-19/langlaufen.html: 7 Loipen und ein Eintrag
   "TEST Loipe", alle geschlossen; Breite und Laenge im JSON vertauscht.
-Nicht angebunden (Befund in docs/kontaktliste.md): Innsbruck (Intermaps, nach E-15/P17 ausgeschlossen, bis
-Stefan entscheidet; der Adapter wird hier mit eigener Konfiguration geprueft), Stubai (robots.txt liefert dem Abruf 403, gilt als
+Innsbruck kommt von Intermaps (nach E-15/P17 ausgeschlossen); Stefan hat am 19.11.2026 eine Ausnahme nur fuer die
+Testversion freigegeben. Nicht angebunden (Befund in docs/kontaktliste.md): Stubai (robots.txt liefert dem Abruf 403, gilt als
 Verbot), Wipptal (keine eigene Statusseite, die Karte maps.wipptal.at zeigt die tirol.at-Daten).
 Im November ist alles geschlossen; "offen" wird mit abgeleiteten Seiten geprueft.
 """
@@ -27,21 +27,10 @@ from tests.helpers import FIXTURES, SEITEN_QUELLEN, FixtureFetcher
 
 STAND = "2026-11-19"
 INTERMAPS_PFAD = "innsbruck_new/lebensraum_innsbruck.aspx?lang=de"
-KEYS = ("hall-wattens", "silberregion-karwendel")
-# Innsbruck ist nicht in sources.yaml: Intermaps ist nach E-15/P17 ausgeschlossen, bis Stefan entscheidet.
-# Der Adapter wird mit dieser Konfiguration geprueft, damit er beim Einschalten bereitliegt.
-INNSBRUCK = {
-    "key": "innsbruck", "adapter": "intermaps", "base_url": "https://sdds4.intermaps.com",
-    "config": {"pfad": "/" + INTERMAPS_PFAD, "default_gebiet": "innsbruck",
-               "gebiet_map": {"Gries im Sellrain": "sellraintal", "Praxmar - Lüsens": "sellraintal", "Kühtai": "kuehtai",
-                              "Mieming": "mieming", "Obsteig": "mieming", "Wildermieming": "mieming",
-                              "Natters": "innsbruck", "Oberperfuss": "innsbruck", "Rinn": "hall-wattens"}},
-}
+KEYS = ("innsbruck", "hall-wattens", "silberregion-karwendel")
 
 
 def quelle(key: str) -> dict:
-    if key == "innsbruck":
-        return INNSBRUCK
     return next(q for q in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"] if q["key"] == key)
 
 
@@ -51,12 +40,11 @@ def fixture(key: str, datei: str) -> str:
 
 def lauf(key: str, ersetze: dict | None = None):
     q = quelle(key)
-    seiten = {INTERMAPS_PFAD: f"{STAND}/lebensraum_innsbruck.html"} if key == "innsbruck" else SEITEN_QUELLEN.get(key)
-    fetcher = FixtureFetcher(key, q["base_url"], seiten=seiten, ersetze=ersetze)
+    fetcher = FixtureFetcher(key, q["base_url"], seiten=SEITEN_QUELLEN.get(key), ersetze=ersetze)
     return ADAPTERS[q["adapter"]].run(q["base_url"], q["config"], fetcher), fetcher
 
 
-# ---------- AK 1: Innsbruck, Intermaps-Bericht (Adapter bereit, Quelle nicht eingeschaltet) ----------
+# ---------- AK 1: Innsbruck, Intermaps-Bericht ----------
 
 @pytest.mark.req("P32", ak=1)
 def test_p32_innsbruck_alle_loipen_mit_ort_stand_und_status():
@@ -164,10 +152,9 @@ def test_p32_quellen_nur_test_rang_4_und_robots_geprueft():
     assert isinstance(ADAPTERS["intermaps"], IntermapsAdapter)
     assert isinstance(ADAPTERS["tourismus_mco"], TourismusMcoAdapter)
     keys = {q["key"] for q in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"]}
-    # Stubai sperrt den Abruf, Wipptal hat nur tirol.at-Daten, Intermaps (Innsbruck) ist nach E-15/P17 ausgeschlossen
-    assert not keys & {"stubai", "wipptal", "innsbruck"}
-    gebiete = {g["slug"] for g in lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]}
-    assert set(INNSBRUCK["config"]["gebiet_map"].values()) <= gebiete
+    assert not keys & {"stubai", "wipptal"}  # Stubai sperrt den Abruf, Wipptal hat nur tirol.at-Daten
+    # Intermaps ist nach E-15/P17 ausgeschlossen; Innsbruck nur als Ausnahme fuer die Testversion (Stefan 19.11.2026)
+    assert quelle("innsbruck")["nutzung"]["p17_ausnahme"]
 
 
 # ---------- Querpruefung braucht die richtige tirol.at-Loipe (D15 mit P32) ----------

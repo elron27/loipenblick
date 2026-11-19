@@ -109,6 +109,9 @@ def test_p17_gespeicherte_robots_txt_erlaubt_unsere_abrufe(key):
 def test_p17_keine_quelle_mit_robots_sperre_konfiguriert():
     for q in quellen():
         assert q["nutzung"]["robots"] == "erlaubt", q["key"]
+        # Ausnahme nur fuer die Testversion (Stefan 19.11.2026, P32): nur_test mit Begruendung, oeffentlich ausgeblendet
+        if q["nutzung"].get("erlaubnis") == "nur_test" and q["nutzung"].get("p17_ausnahme"):
+            continue
         assert not any(v in q["base_url"].lower() for v in VERBOTEN), q["key"]
     s = sources()
     s["quellen"][0]["nutzung"]["robots"] = "gesperrt"

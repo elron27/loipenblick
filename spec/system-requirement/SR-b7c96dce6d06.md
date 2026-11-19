@@ -6,13 +6,13 @@ title: Loipenstatus der Ortsseiten Innsbruck, Hall-Wattens und Silberregion Karw
 kennung: P32
 prio: kann
 umfang: ausbau3
-rationale: "Stefan am 19.11.2026 (E-24): Tiroler Ortsseiten als Querprüfung für tirol.at aufnehmen, zunächst nur für die Testversion. Hall-Wattens und die Silberregion Karwendel zeigen den Status je Loipe im Tourenportal. Innsbruck bettet einen Intermaps-Wintersportbericht ein; Intermaps ist nach E-15 und P17 ausgeschlossen, der Adapter liegt bereit, bis Stefan entscheidet. Stubai (robots.txt 403) und Wipptal (nur tirol.at-Daten) entfallen."
+rationale: "Stefan am 19.11.2026 (E-24): Tiroler Ortsseiten als Querprüfung für tirol.at aufnehmen, zunächst nur für die Testversion. Innsbruck bettet einen Intermaps-Wintersportbericht ein; Intermaps ist nach E-15 und P17 ausgeschlossen, Stefan hat am 19.11.2026 eine Ausnahme nur für die Testversion freigegeben. Hall-Wattens und die Silberregion Karwendel zeigen den Status je Loipe im Tourenportal. Stubai (robots.txt 403) und Wipptal (nur tirol.at-Daten) entfallen."
 requirement-type: functional
 acceptance-criteria:
-  - "Innsbruck (Adapter bereit, Quelle erst nach Freigabe): alle Langlaufloipen des Wintersportberichts mit Ort, Gebiet, Technik, Status und dem Stand der Meldung; was ein Status-Symbol heißt, kommt aus der Legende derselben Seite (offen, geschlossen, in Vorbereitung = geschlossen, offen nicht frisch präpariert = eingeschränkt)."
+  - "Innsbruck: alle Langlaufloipen des Wintersportberichts mit Ort, Gebiet, Technik, Status und dem Stand der Meldung; was ein Status-Symbol heißt, kommt aus der Legende derselben Seite (offen, geschlossen, in Vorbereitung = geschlossen, offen nicht frisch präpariert = eingeschränkt)."
   - "Hall-Wattens und Silberregion Karwendel: alle Loipen der Langlaufseite mit Status, Länge, Schwierigkeit, Startpunkt und Lage; Testeinträge der Quelle fallen weg, vertauschte Breite und Länge werden korrigiert."
   - Ein unbekanntes Status-Symbol oder Statuswort ergibt Status unbekannt mit Rohtext, eine leere oder umgebaute Seite eine Warnung statt einer leeren Meldung ohne Hinweis.
-  - "Hall-Wattens und Silberregion Karwendel tragen erlaubnis nur_test, Rang 4 und querpruefung: true; tirol.at bleibt führend, ihre Geschlossen-Meldungen dienen nur der Plausibilitätsprüfung. Stubai, Wipptal und Innsbruck sind nicht konfiguriert."
+  - "Die drei Quellen tragen erlaubnis nur_test, Rang 4 und querpruefung: true; tirol.at bleibt führend, ihre Geschlossen-Meldungen dienen nur der Plausibilitätsprüfung und treffen die gleichnamige Loipe, nicht eine nummerierte Nachbarloipe. Innsbruck trägt die P17-Ausnahme mit Begründung; Stubai und Wipptal sind nicht konfiguriert."
 packages:
   - { id: aecf250b-eb6d-41e6-9041-3ce5eb9763a3, version: n2:22b0303ec030d854, title: Datenerfassung }
 derives-from:
