@@ -85,5 +85,6 @@ def test_worker_ablauf_gegen_die_attrappe(session, server):
     # + tirol, kitzbueheler-alpen, langlaufdorf, berchtesgaden, tannheimer, seefeld, achensee, kufsteinerland, kaiserwinkl,
     #   dolomiti-nordicski, opendatahub, engadin, davos-klosters, goms, gastein, ramsau, seefeld-tourinfra, myswitzerland
     assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 701 + 71 + 5 + 6 + 21 + 49 + 24 + 22 + 23 + 118 + 190 \
-        + 108 + 36 + 39 + 15 + 42 + 42 + 340 + 15 + 6 + 89  # St. Anton, Kaernten, Steiermark
+        + 108 + 36 + 39 + 15 + 42 + 42 + 340 + 15 + 6 + 89 \
+            + 6 + 14 + 11 + 11 + 10 + 20  # St. Anton, Kaernten, Steiermark; P31: Oetztal, Pitztal, Oberland, Nauders, Serfaus, Paznaun
     assert session.scalar(select(func.count()).select_from(Wetter)) == wetter.messungen + wetter.vorhersagen
