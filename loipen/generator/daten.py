@@ -12,6 +12,7 @@ from sqlalchemy.orm import Session
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.dubletten import Eintrag, finde_dubletten
 from loipen.konfig import lade_yaml
+from loipen import plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
 from loipen.wetter import gebiet_position, schnee_uebersicht
@@ -128,6 +129,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
         for l in aktive])
     auch_bei: dict[int, list[dict]] = {}
+    widerspruch: dict[int, list[str]] = {}  # D19 AK 3: oertliche Berichte, die die Loipe geschlossen melden
     lage: dict[int, tuple[float, float]] = {}
     laenge: dict[int, tuple[float, str]] = {}
     nach_id = {l.id: l for l in aktive}
@@ -145,6 +147,10 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
         if v.laenge_km is not None and fuehrend not in laenge:
             laenge[fuehrend] = (v.laenge_km, v.quelle.name)
+        if (eintrag["status"] == Status.GESCHLOSSEN.value
+                and int((v.quelle.config or {}).get("rang", 10)) <= plausibel.OERTLICH_BIS_RANG
+                and v.quelle.name not in widerspruch.get(fuehrend, [])):
+            widerspruch.setdefault(fuehrend, []).append(v.quelle.name)
         liste = auch_bei.setdefault(fuehrend, [])
         # tirol.at-Doppeleintraege einer Loipe nur einmal nennen; ein "offen" zaehlt fuer die Abweichung
         gleich = next((a for a in liste if a["quelle"] == eintrag["quelle"] and a["name"] == eintrag["name"]), None)
@@ -172,6 +178,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     kennzahl = {s.value: 0 for s in Status}
     veraltet = 0
     gesamt = 0
+    unplausibel: list[int] = []
     # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
     for region in sorted(session.scalars(select(Region)),
                          key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
@@ -179,6 +186,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         verlaeufe: dict[str, list] = {}
         for g in sorted(region.gebiete, key=lambda x: x.name):
             pos = gebiet_position(g)
+            schnee = schnee_uebersicht(session, g)
+            vorhersage = _vorhersage(session, g, heute)
+            tmax_heute = next((v["tmax"] for v in vorhersage if v["datum"] == heute.isoformat()), None)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
                 if not l.active or not l.quelle.enabled or l.id in verdeckt:
@@ -195,6 +205,12 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     if d["status"] in (Status.OFFEN.value, Status.EINGESCHRAENKT.value):
                         d["status_laut_quelle"] = d["status"]
                         d["status"] = Status.UNBEKANNT.value
+                # D19, E-23: offensichtliche Fehlmeldungen erscheinen geschlossen, mit Grund
+                zl = zustaende.get(l.id) or []
+                if d["status"] in plausibel.BEFAHRBAR and plausibel.anwenden(d, plausibel.gruende(
+                        zl[-1] if zl else None, d["status"], d["sonder"], schnee if schnee["messtag"] else None,
+                        tmax_heute, widerspruch.get(l.id, []), jetzt)):
+                    unplausibel.append(l.id)
                 if d["lat"] is None and l.id in lage:
                     d["lat"], d["lon"] = lage[l.id]
                     d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None
@@ -207,7 +223,6 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 if l.verlauf:
                     # Strecken getrennt, damit die Startseite klein bleibt; [lat, lon]
                     verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in l.verlauf["coordinates"]]
-            schnee = schnee_uebersicht(session, g)
             gebiete.append({
                 "slug": g.slug,
                 "name": g.name,
@@ -228,7 +243,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 ],
                 "haltestellen": g.haltestellen or [],
                 "schnee": {**schnee, "messtag": schnee["messtag"].isoformat() if schnee["messtag"] else None},
-                "vorhersage": _vorhersage(session, g, heute),
+                "vorhersage": vorhersage,
                 "loipen": loipen,
             })
         regionen[region.slug] = {"region": {"slug": region.slug, "name": region.name, "land": region.land,
@@ -266,6 +281,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         "abdeckung": abdeckung,
         "dubletten": len(verdeckt),
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),
-                       "veraltet": veraltet, **kennzahl},
+                       "veraltet": veraltet, "unplausibel": len(unplausibel), **kennzahl},
     }
-    return {"index": index, "regionen": regionen, "strecken": strecken, "verdeckt": verdeckt}
+    return {"index": index, "regionen": regionen, "strecken": strecken, "verdeckt": verdeckt,
+            "unplausibel": unplausibel}
