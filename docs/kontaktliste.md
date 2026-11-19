@@ -62,6 +62,12 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.txt, Nutzungsbedingungen, was dort steht).
 
+### Zillertal (P35, geprüft 19.11.2026)
+
+| Ortsseite | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
+|---|---|---|---|---|---|
+| zillertal.at (Karte maps.zillertal.at) | Zillertal | Je Loipe Schneehöhe, Wetter, Anfahrt, Details; Quelle „Zillertal Tourismus GmbH“ | www.zillertal.at erlaubt, **maps.zillertal.at verbietet alles** (geprüft 19.11.2026) | **nicht anbindbar** | Die Loipenliste auf www.zillertal.at kommt nur aus der Karte. Der Schneebericht dort nennt nur Skigebiete (Lifte, Pisten). Bei der Anfrage an Zillertal Tourismus deshalb auch um einen Datenzugang bitten (Export, Schnittstelle oder Freigabe in robots.txt). |
+
 ### Alpbachtal, Wildschönau, Wilder Kaiser, Kitzbühel, St. Johann (P34, geprüft 19.11.2026)
 
 | Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
