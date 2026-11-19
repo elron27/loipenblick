@@ -1,16 +1,6 @@
-# <zielpfad> <url> -- Runde P32-2 (19.11.2026): Loipen-, Status- und Schneeberichtsseiten
-tests/fixtures/recherche-2026-11-19/innsbruck/skifahren-schneebericht.html https://www.innsbruck.info/skifahren/service/schneebericht.html
-tests/fixtures/recherche-2026-11-19/innsbruck/loipe-rinn-panoramaloipe.html https://www.innsbruck.info/sport/m/langlaufzentrum-rinn-panoramaloipe.html
-tests/fixtures/recherche-2026-11-19/innsbruck/loipe-luesens.html https://www.innsbruck.info/sport/m/tiroler-loipe-luesens.html
-tests/fixtures/recherche-2026-11-19/innsbruck/loipe-gries-sellrain.html https://www.innsbruck.info/sport/m/rundloipe-gries-im-sellrain.html
-tests/fixtures/recherche-2026-11-19/stubai/geoeffnete-anlagen.html https://www.stubai.at/info-service/geoeffnete-anlagen/
-tests/fixtures/recherche-2026-11-19/stubai/loipe-falbeson-leicht-5.html https://www.stubai.at/interaktive-karte/tour/loipe-falbeson-leicht-5/
-tests/fixtures/recherche-2026-11-19/stubai/loipe-gamsgarten-10.html https://www.stubai.at/interaktive-karte/tour/loipe-gamsgarten-am-stubaier-gletscher-10/
-tests/fixtures/recherche-2026-11-19/stubai/wetter.html https://www.stubai.at/info-service/wetter/
-tests/fixtures/recherche-2026-11-19/wipptal/langlaufen.html https://www.wipptal.at/langlaufen
-tests/fixtures/recherche-2026-11-19/wipptal/sitemap.default.xml https://www.wipptal.at/sitemap.default.xml
-tests/fixtures/recherche-2026-11-19/hall-wattens/langlaufen-region.html https://www.hall-wattens.at/de/langlaufen-in-der-region-hall-wattens.html
-tests/fixtures/recherche-2026-11-19/hall-wattens/langlaufen.html https://www.hall-wattens.at/de/langlaufen.html
-tests/fixtures/recherche-2026-11-19/hall-wattens/ski-und-schneebericht.html https://www.hall-wattens.at/de/ski-und-schneebericht-der-region-hall-wattens.html
-tests/fixtures/recherche-2026-11-19/karwendel/langlaufen.html https://www.silberregion-karwendel.com/de/langlaufen.html
-tests/fixtures/recherche-2026-11-19/karwendel/wetter.html https://www.silberregion-karwendel.com/de/wetter.html
+# <zielpfad> <url> -- Runde P32-3 (19.11.2026): Intermaps Innsbruck, contwise Wipptal, Stubai erneut, Tourdetails
+tests/fixtures/recherche-2026-11-19/innsbruck/intermaps-lebensraum.html https://sdds4.intermaps.com/innsbruck_new/lebensraum_innsbruck.aspx?lang=de
+tests/fixtures/recherche-2026-11-19/wipptal/maps-v2.html https://maps.wipptal.at/v2/
+tests/fixtures/recherche-2026-11-19/stubai/langlaufen-2.html https://www.stubai.at/aktivitaeten/winter-aktiv/langlaufen/
+tests/fixtures/recherche-2026-11-19/hall-wattens/tour-gnadenwald.html https://www.hall-wattens.at/de/tours/langlauf-loipe-gnadenwald.html
+tests/fixtures/recherche-2026-11-19/karwendel/tour-hinterriss.html https://www.silberregion-karwendel.com/de/tours/loipe-hinterriss.html
