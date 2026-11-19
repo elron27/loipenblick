@@ -1,18 +1,9 @@
-# <zielpfad> <url> -- Runde 21 (19.11.2026, P31): Ortsseiten Oetztal, Tiroler Oberland/Nauders, Serfaus-Fiss-Ladis, Paznaun
-tests/fixtures/tiroler-oberland/2026-11-19/geoeffnete-einrichtungen.html https://www.tiroler-oberland.com/de/Aktuelles/Geoeffnete-Einrichtungen
-tests/fixtures/tiroler-oberland/2026-11-19/schneebericht.html https://www.tiroler-oberland.com/de/Aktuelles/Schneebericht
-tests/fixtures/tiroler-oberland/2026-11-19/nauders-einrichtungen.html https://www.nauders.com/de/Aktuelles/Einrichtungen-Nauders
-tests/fixtures/serfaus/2026-11-19/status.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebietsstatus-und-pistenplan
-tests/fixtures/serfaus/2026-11-19/langlaufen.html https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/langlaufen
-tests/fixtures/serfaus/2026-11-19/schneehoehen.html https://www.serfaus-fiss-ladis.at/de/live-info/schneehoehen-und-lawinenlagebericht
-tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.json https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
-tests/fixtures/paznaun/2026-11-19/ischgl-anlagen.html https://www.ischgl.com/de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country
-tests/fixtures/paznaun/2026-11-19/galtuer-anlagen.json https://www.galtuer.com/de/winter/silvapark-galtuer/geoeffnete-anlagen?type=cross-country&sorting=status-desc&ajax=1
-tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.json https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country&sorting=status-desc&ajax=1
-tests/fixtures/paznaun/2026-11-19/galtuer-anlagen-en.html https://www.galtuer.com/en/winter/silvapark-ski-resort/open-lifts-facilities?type=cross-country
-tests/fixtures/paznaun/2026-11-19/ischgl-schneebericht.html https://www.ischgl.com/de/winter/schneebericht
-tests/fixtures/paznaun/2026-11-19/loipen-katalog.html https://www.ischgl.com/de/winter/abseits-der-piste/langlaufen/loipen
-tests/fixtures/oetztal/2026-11-19/loipenstatus.html https://www.oetztal.com/de/live-infos/loipenstatus
-tests/fixtures/oetztal/2026-11-19/loipenangebot.html https://www.oetztal.com/de/aktivitaeten/winter/langlaufen/loipenangebot
-tests/fixtures/oetztal/2026-11-19/lehenloipe.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/lehenloipe-umhausen-niederthai.r-23683688
-tests/fixtures/oetztal/2026-11-19/sitemap.xml https://www.oetztal.com/sitemap.xml
+# <zielpfad> <url> -- Runde 22 (19.11.2026, P31): Pitztal, Oetztal-Tourensitemap
+tests/fixtures/pitztal/2026-11-19/tourenportal-langlaufen.html https://www.pitztal.com/de/tourenportal-langlaufen.html
+tests/fixtures/pitztal/2026-11-19/jetzt-geoeffnet.html https://www.pitztal.com/de/jetzt-geoeffnet.html
+tests/fixtures/pitztal/2026-11-19/tours/rifflseeloipe.html https://www.pitztal.com/de/tours/rifflseeloipe.html
+tests/fixtures/pitztal/2026-11-19/tours/talloipe.html https://www.pitztal.com/de/tours/talloipe.html
+tests/fixtures/pitztal/2026-11-19/tours/rollerstrecke-mandarfen.html https://www.pitztal.com/de/tours/rollerstrecke-mandarfen.html
+tests/fixtures/pitztal/2026-11-19/tours.xml https://www.pitztal.com/de/tours.xml
+tests/fixtures/oetztal/2026-11-19/sitemap-tours.xml https://www.oetztal.com/sitemap.tours_6.xml
+tests/fixtures/oetztal/2026-11-19/nachtloipe-laengenfeld.html https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/4-1-nachtloipe-variante-laengenfeld.r-801776311
