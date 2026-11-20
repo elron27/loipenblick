@@ -1,0 +1,1 @@
+# Aendern startet den Workflow OSM-Abgleich (.github/workflows/osm.yml). Lauf 2: 20.11.2026, Overpass-Server nach Ausfall nicht wieder fragen
