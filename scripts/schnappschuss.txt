@@ -1,19 +1,5 @@
-# <zielpfad> <url> -- Runde 25 (20.11.2026): Allgaeu, Listen-Seiten, Impressen, Intermaps Hoernerdoerfer
-tests/fixtures/recherche-2026-11-20/allgaeu/schneebericht-pois.html https://www.allgaeu.de/draussen/schneebericht-pois
-tests/fixtures/recherche-2026-11-20/allgaeu/bergsportbericht.html https://www.allgaeu.de/draussen/bergsportbericht
-tests/fixtures/recherche-2026-11-20/allgaeu/impressum.html https://www.allgaeu.de/impressum
-tests/fixtures/recherche-2026-11-20/bergsportbericht/schneebericht-bad-hindelang.pdf https://www.bergsportbericht.de/_pdf/bad-hindelang/schneebericht.pdf
-tests/fixtures/recherche-2026-11-20/bergsportbericht/start.html https://www.bergsportbericht.de/
-tests/fixtures/recherche-2026-11-20/badhindelang/bergbericht-winter-druck.html https://www.badhindelang.de/bergbericht-winter?type=1773135491
-tests/fixtures/recherche-2026-11-20/badhindelang/impressum.html https://www.badhindelang.de/impressum
-tests/fixtures/recherche-2026-11-20/kleinwalsertal/report-modal-7629.html https://www.kleinwalsertal.com/de/reportObjectModal/7629
-tests/fixtures/recherche-2026-11-20/kleinwalsertal/impressum.html https://www.kleinwalsertal.com/de/impressum
-tests/fixtures/recherche-2026-11-20/kleinwalsertal/agb.html https://www.kleinwalsertal.com/de/footer/agb
-tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum/
-tests/fixtures/recherche-2026-11-20/pfronten/impressum.html https://www.pfronten.de/service/impressum/
-tests/fixtures/recherche-2026-11-20/wertach/impressum.html https://www.wertach.de/impressum/
-tests/fixtures/recherche-2026-11-20/fuessen/impressum.html https://www.fuessen.de/impressum/
-tests/fixtures/recherche-2026-11-20/fuessen/agb.html https://www.fuessen.de/agb/
-tests/fixtures/recherche-2026-11-20/hoernerdoerfer/impressum.html https://www.hoernerdoerfer.de/impressum
-tests/fixtures/recherche-2026-11-20/isny/impressum.html https://www.isny.de/impressum/
-tests/fixtures/recherche-2026-11-20/intermaps/hoernerdoerfer.html https://sdds4.intermaps.com/hoernerdoerfer_srm/hoernerdoerfer.aspx
+# <zielpfad> <url> -- Runde 26 (20.11.2026): Allgaeu, Wetterstationen (DWD, GeoSphere Mittelberg) und Isny
+tests/fixtures/recherche-2026-11-20/dwd/RR_Tageswerte_Beschreibung_Stationen.txt https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/more_precip/recent/RR_Tageswerte_Beschreibung_Stationen.txt
+tests/fixtures/geosphere/2026-11-12/klima-v2-1d_allgaeu.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=174,11311,8301&start=2026-10-29T00:00&end=2026-11-11T00:00
+tests/fixtures/recherche-2026-11-20/isny/schneehoehen-loipenbericht.html https://www.isny.de/freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+tests/fixtures/recherche-2026-11-20/scheidegg/impressum.html https://www.scheidegg.de/impressum/
