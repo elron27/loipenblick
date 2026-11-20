@@ -3,7 +3,7 @@ id: 3f8eb6aa-35f7-486a-a2a6-c24cbdcb228e
 type: decision
 status: draft
 title: Spenden nur über einen einfachen Link, Adresse aus der .env
-kennung: "E-25"
+kennung: "E-28"
 rationale: "Stefan am 20.11.2026 wünscht einen Buy-me-a-coffee- oder PayPal-Spendenlink. Datenschutz-Ziel aus E-17: keine Drittanbieter beim Aufruf."
 ---
 

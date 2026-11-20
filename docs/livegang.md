@@ -130,7 +130,7 @@ Eine öffentliche Seite ist keine rein private Tätigkeit, die DSGVO gilt also. 
 | Ortssuche | lokal aus `index.json`, kein Dienst | Nichts zu tun. |
 | `localStorage` (gewählter Ort, Einstellungen) und Service-Worker-Cache | im Browser | Ausnahme nach § 25 Abs. 2 Nr. 2 TDDDG: unbedingt erforderlich für einen vom Nutzer ausdrücklich gewünschten Dienst ([Gesetz](https://www.gesetze-im-internet.de/ttdsg/__25.html)). Kein Banner, aber in der Datenschutzerklärung nennen. Nur für Funktionen speichern, die der Nutzer selbst auslöst. |
 | Links zu Google Maps (Navigation, Fahrplan) | erst beim Klick | Normaler Link, kein Einbetten. Hinweis in der Datenschutzerklärung genügt. |
-| Spendenlink (U45, `LOIPEN_SPENDEN_URL`) | erst beim Klick, dann PayPal bzw. Buy Me a Coffee | Normaler Link mit `rel="noopener noreferrer"`, kein Knopf-Skript oder Widget des Anbieters. Die eingebaute Vorlage bekommt einen eigenen Abschnitt, sobald die Adresse gesetzt ist. Bei eigenem Text den Baustein „PayPal“ bzw. „Zahlungsdienstleister“ aus dem Generator übernehmen. |
+| Spendenlink (U46, `LOIPEN_SPENDEN_URL`) | erst beim Klick, dann PayPal bzw. Buy Me a Coffee | Normaler Link mit `rel="noopener noreferrer"`, kein Knopf-Skript oder Widget des Anbieters. Die eingebaute Vorlage bekommt einen eigenen Abschnitt, sobald die Adresse gesetzt ist. Bei eigenem Text den Baustein „PayPal“ bzw. „Zahlungsdienstleister“ aus dem Generator übernehmen. |
 | Push über ntfy | nur Stefan und Freunde mit geheimem Thema | Nicht Teil der öffentlichen Seite. Wird Push öffentlich angeboten, kommt ntfy.sh in die Datenschutzerklärung (IP für Rate-Limiting, Nachrichten 12 h zwischengespeichert, [ntfy](https://docs.ntfy.sh/privacy/)). |
 
 ### Kartenkacheln
@@ -160,7 +160,7 @@ Entscheidung E-14 (Cookies mit Einwilligung) bleibt gültig, wird aber erst gebr
 
 Inhalt: Verantwortlicher (wie Impressum), Hosting und Server-Logs mit Frist, AVV, Karte (je nach Option), Standort im Browser, `localStorage` und Service Worker, externe Links, Statistik, Rechte der Betroffenen, Beschwerderecht bei der Aufsichtsbehörde (für Privatpersonen in Bayern das Bayerische Landesamt für Datenschutzaufsicht, BayLDA). Ein Generator wie [datenschutz-generator.de](https://datenschutz-generator.de/) oder der von e-recht24 liefert die Texte; die Nutzungsbedingungen des Generators (privat/kostenlos) prüft Stefan selbst. Der Generator der Seite schreibt die Seiten `impressum.html` und `datenschutz.html` aus Vorlagen mit Platzhaltern, die echten Daten kommen aus der `.env` bzw. `config/` auf dem NAS, nicht aus dem Repo.
 
-### Spendenlink (U45, E-25)
+### Spendenlink (U46, E-28)
 
 Stefan am 20.11.2026: Unterstützer sollen über Buy Me a Coffee oder PayPal etwas geben können. Umgesetzt als einfacher Link aus `LOIPEN_SPENDEN_URL` (leer = nichts). Er steht dezent in der Fußzeile jeder Seite und mit Erklärung auf „Hinweise und Betreiber“.
 

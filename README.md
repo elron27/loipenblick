@@ -143,7 +143,7 @@ die Seite „Hinweise und Betreiber“ mit. Die Karte lädt die Kacheln von Open
 einem Klick (B23). Eine Quelle schaltest du mit `enabled: false` in `config/sources.yaml` ab, ihre
 Loipen verschwinden mit dem nächsten Lauf (B16).
 
-Spendenlink (U45, E-25): `LOIPEN_SPENDEN_URL=https://paypal.me/DeinName` (oder eine Buy-Me-a-Coffee-Adresse)
+Spendenlink (U46, E-28): `LOIPEN_SPENDEN_URL=https://paypal.me/DeinName` (oder eine Buy-Me-a-Coffee-Adresse)
 in die `.env`, Container neu starten. Dann zeigen die Fußzeile und die Seite „Hinweise und Betreiber“ einen
 dezenten Link, die Datenschutzerklärung bekommt einen Abschnitt dazu. Leer = kein Link.
 

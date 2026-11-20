@@ -851,7 +851,7 @@ function standZeigen() {
   spendenZeigen();
   document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria" + (S.idx.image ? " · Version " + S.idx.image : "");
 }
-/* U45: Spendenlink nur, wenn das NAS eine Adresse liefert. Per DOM gebaut, nie als HTML-Text; nur https. */
+/* U46: Spendenlink nur, wenn das NAS eine Adresse liefert. Per DOM gebaut, nie als HTML-Text; nur https. */
 function spendenZeigen() {
   var p = document.getElementById("spenden"), sp = S.idx && S.idx.spenden;
   if (!p) return;

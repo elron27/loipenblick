@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     hoster: str | None = None  # Name und Anschrift des Webhosters fuer die Datenschutzerklaerung
     log_tage: int = 7
     datenschutz_datei: str | None = None  # eigener Text (HTML-Ausschnitt) statt der Vorlage
-    # U45/E-25: Spendenlink (z. B. https://paypal.me/name oder https://buymeacoffee.com/name). Leer = kein Link.
+    # U46/E-28: Spendenlink (z. B. https://paypal.me/name oder https://buymeacoffee.com/name). Leer = kein Link.
     spenden_url: str | None = None
     # E-Mail-Abo und Fehlermeldungen (E-18). Aktiv, wenn oeffentliche_url, abo_schluessel und abo_absender
     # gesetzt sind. Der Schluessel steht nur hier; auf dem Webspace liegt sein SHA-256.

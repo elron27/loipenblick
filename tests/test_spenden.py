@@ -1,4 +1,4 @@
-"""U45 / E-25: dezenter Spendenlink, nur aus LOIPEN_SPENDEN_URL, ohne Fremdskript."""
+"""U46 / E-28: dezenter Spendenlink, nur aus LOIPEN_SPENDEN_URL, ohne Fremdskript."""
 
 import functools
 import http.server
@@ -48,7 +48,7 @@ def lies(site: Path, name: str) -> str:
 
 # ---------- Generator ----------
 
-@pytest.mark.req("U45", ak=1)
+@pytest.mark.req("U46", ak=1)
 def test_u45_ohne_adresse_kein_spendenlink(sites):
     site = sites["ohne"]
     assert "spenden" not in json.loads(lies(site, "daten.json"))
@@ -57,7 +57,7 @@ def test_u45_ohne_adresse_kein_spendenlink(sites):
     assert 'id="spenden" class="fine spenden" hidden' in lies(site, "index.html")
 
 
-@pytest.mark.req("U45", ak=2)
+@pytest.mark.req("U46", ak=2)
 def test_u45_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(sites):
     site = sites["mit"]
     assert json.loads(lies(site, "daten.json"))["spenden"] == {"url": PAYPAL, "anbieter": "PayPal"}
@@ -69,7 +69,7 @@ def test_u45_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(s
         assert satz in hinweise, satz
 
 
-@pytest.mark.req("U45", ak=2)
+@pytest.mark.req("U46", ak=2)
 @pytest.mark.parametrize("url, anbieter", [
     ("https://paypal.me/Name", "PayPal"),
     ("https://www.paypal.com/donate/?hosted_button_id=ABC", "PayPal"),
@@ -82,7 +82,7 @@ def test_u45_anbieter_aus_der_adresse(url, anbieter):
     assert generator.spenden(url) == {"url": url, "anbieter": anbieter}
 
 
-@pytest.mark.req("U45", ak=3)
+@pytest.mark.req("U46", ak=3)
 @pytest.mark.parametrize("url", [
     "javascript:alert(1)", "http://paypal.me/Name", "paypal.me/Name", "https://", "data:text/html,x",
     'https://paypal.me/x" onclick="alert(1)', "https://paypal.me/x<script>", "  ",
@@ -93,7 +93,7 @@ def test_u45_nur_https_adressen_sonst_warnung(url, caplog):
     assert ("LOIPEN_SPENDEN_URL" in caplog.text) == bool(url.strip())
 
 
-@pytest.mark.req("U45", ak=3)
+@pytest.mark.req("U46", ak=3)
 def test_u45_ungueltige_adresse_erscheint_nirgends(sites):
     site = sites["ungueltig"]
     assert "spenden" not in json.loads(lies(site, "daten.json"))
@@ -101,7 +101,7 @@ def test_u45_ungueltige_adresse_erscheint_nirgends(sites):
         assert "javascript:" not in lies(site, name)
 
 
-@pytest.mark.req("U45", ak=4)
+@pytest.mark.req("U46", ak=4)
 def test_u45_datenschutz_nennt_anbieter_nur_mit_link(sites):
     assert "PayPal" not in lies(sites["ohne"], "datenschutz.html")
     ds = lies(sites["mit"], "datenschutz.html")
@@ -109,7 +109,7 @@ def test_u45_datenschutz_nennt_anbieter_nur_mit_link(sites):
     assert "Art. 6 Abs. 1 lit. b DSGVO" in ds
 
 
-@pytest.mark.req("U45")
+@pytest.mark.req("U46")
 def test_u45_adresse_kommt_aus_der_env(monkeypatch):
     monkeypatch.setenv("LOIPEN_SPENDEN_URL", PAYPAL)
     assert worker.rechtliches(Settings(_env_file=None))["spenden_url"] == PAYPAL
@@ -166,7 +166,7 @@ def oeffne(browser, basis, pfad="/#/", breite=1280):
     return ctx, page, fehler, anfragen
 
 
-@pytest.mark.req("U45", ak=1)
+@pytest.mark.req("U46", ak=1)
 def test_u45_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
     ctx, page, fehler, _ = oeffne(browser, seiten["ohne"])
     page.wait_for_selector("#view > *")
@@ -175,7 +175,7 @@ def test_u45_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
     ctx.close()
 
 
-@pytest.mark.req("U45", ak=[2, 4])
+@pytest.mark.req("U46", ak=[2, 4])
 @pytest.mark.parametrize("breite", [1280, 360])
 def test_u45_app_zeigt_link_in_fusszeile_ohne_anfrage_an_den_anbieter(browser, seiten, breite):
     for pfad in ("/#/", "/hinweise.html"):

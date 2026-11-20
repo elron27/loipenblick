@@ -85,7 +85,7 @@ SPENDEN_ANBIETER = (("paypal.me", "PayPal"), ("paypal.com", "PayPal"), ("buymeac
 
 
 def spenden(url: str | None) -> dict | None:
-    """U45/E-25: Spendenlink aus LOIPEN_SPENDEN_URL. Nur https-Adressen, sonst nichts (mit Warnung im Log)."""
+    """U46/E-28: Spendenlink aus LOIPEN_SPENDEN_URL. Nur https-Adressen, sonst nichts (mit Warnung im Log)."""
     url = (url or "").strip()
     if not url:
         return None
@@ -140,7 +140,7 @@ def erzeuge(
             schreibe(eintrag[feld], inhalt)
     index["kacheln"] = kacheln
     spende = spenden(r.get("spenden_url"))
-    if spende:  # U45 AK 1: ohne Adresse kein Eintrag, die App zeigt dann nichts
+    if spende:  # U46 AK 1: ohne Adresse kein Eintrag, die App zeigt dann nichts
         index["spenden"] = spende
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
     if version:  # B4: Stand des Images in der Fusszeile, damit ein Update am NAS pruefbar ist
