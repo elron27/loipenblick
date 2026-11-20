@@ -7,9 +7,6 @@ Achensee (contwise-Schneebericht, /de/live/schneebericht/):
   data-filter="crosscountry" mit einer Zeile je Loipe: Status-Symbol (span.red / span.yellow /
   span.green), Schwierigkeit als title, Name ("A3 - Ortsloipe Achenkirch"), je Technik
   "0 / 10 km geöffnet" mit title "Klassisch" bzw. "Skaten".
-- Seit dem 20.11.2026 (tests/fixtures/achensee/2026-11-20/, B28 AK 4): Name als Link auf maps.achensee.com,
-  nur noch eine Angabe "0 / 10 km geöffnet" je Loipe und darunter die Techniken als Text
-  ("Klassisch · Skaten", span.contwise-crosscountry-technique). Der Adapter liest beide Formen.
 
 Kufsteinerland (Skidata-Schneebericht, /de/schneebericht.html, Abschnitt .skidataCrossCountry):
 - je Ort ein Block mit h3, Zeilen .entry (.name, .length "2500 m", .state stateN) und
@@ -62,13 +59,6 @@ def _status(d: LoipenDaten, roh: str) -> None:
     d.status_rohtext = roh
 
 
-def _km_paar(werte: str) -> list:
-    """'0 / 4.5 km geöffnet' -> [0.0, 4.5]: Dezimalpunkt, nicht Tausender."""
-    teile = [_km(t.strip().replace(".", ",") + " km") if t.strip() else None
-             for t in werte.replace("km geöffnet", "").split("/")]
-    return (teile + [None, None])[:2]
-
-
 class AchenseeAdapter:
     def run(self, base_url: str, config: dict, fetcher: Fetcher) -> AdapterErgebnis:
         ergebnis = AdapterErgebnis()
@@ -80,9 +70,7 @@ class AchenseeAdapter:
             zeilen = block.xpath(".//*[@data-filter='crosscountry']/div[contains(concat(@class, ' '), '__activity__item ')]")
             for z in zeilen:
                 kopf = z.css(".jsSnowreportHead")
-                # Name: letzte nicht leere Spalte p-2, frueher als Text, seit 20.11.2026 als Link
-                spalte = kopf.xpath(".//div[contains(@class, '__head__column ')][1]//div[@class='p-2']")
-                name = next((n for n in reversed([_text(x) for x in spalte]) if n), "")
+                name = kopf.xpath(".//div[@class='p-2'][normalize-space()][last()]/text()").get(default="").strip()
                 if not name:
                     continue
                 d = LoipenDaten(source_key=_schluessel(f"{ort}-{name}"), name=name, source_url=url,
@@ -96,33 +84,23 @@ class AchenseeAdapter:
                     if not ok:
                         d.unbekannte_begriffe.append(("schwierigkeit", schw))
                 je_technik = {}
-                for sp in kopf.xpath(".//span[@title='Klassisch' or @title='Skaten']"):  # Format bis 19.11.
-                    je_technik[sp.attrib["title"]] = _km_paar(sp.xpath("following-sibling::span[1]/text()").get(default=""))
-                gesamt = None
-                if not je_technik:  # Format ab 20.11.: eine km-Angabe, Techniken als Text
-                    km_text = next((t for t in kopf.xpath(".//span/text()").getall() if "km geöffnet" in t), None)
-                    techniken = " ".join(kopf.css(".contwise-crosscountry-technique::text").getall())
-                    if km_text:
-                        gesamt = _km_paar(km_text)
-                        for titel in ("Klassisch", "Skaten"):
-                            if titel in techniken:
-                                je_technik[titel] = gesamt
+                for sp in kopf.xpath(".//span[@title='Klassisch' or @title='Skaten']"):
+                    werte = sp.xpath("following-sibling::span[1]/text()").get(default="")
+                    # "0 / 4.5 km geöffnet": Dezimalpunkt, nicht Tausender
+                    teile = [_km(t.strip().replace(".", ",") + " km") if t.strip() else None
+                             for t in werte.replace("km geöffnet", "").split("/")]
+                    je_technik[sp.attrib["title"]] = (teile + [None, None])[:2]
                 k, s = je_technik.get("Klassisch"), je_technik.get("Skaten")
                 d.technik = (Technik.BEIDES if k and s else Technik.KLASSISCH if k
                              else Technik.SKATING if s else Technik.UNBEKANNT)
-                if gesamt and ((k and s) or not (k or s)):
-                    d.gespurt_gesamt_km = gesamt[0]  # eine gemeinsame Angabe fuer beide Techniken
-                else:
-                    if k:
-                        d.gespurt_klassisch_km = k[0]
-                    if s:
-                        d.gespurt_skating_km = s[0]
-                d.laenge_km = max([x[1] for x in (k, s, gesamt) if x and x[1] is not None], default=None)
+                if k:
+                    d.gespurt_klassisch_km = k[0]
+                if s:
+                    d.gespurt_skating_km = s[0]
+                d.laenge_km = max([x[1] for x in (k, s) if x and x[1] is not None], default=None)
                 d.quelle_aktualisiert_at = stand
                 d.nachtloipe = True if "nacht" in name.lower() else None
-                # Freitext des Betreibers in der letzten Spalte (seit 20.11.2026, z. B. "Loipe aktuell geschlossen")
-                hinweis = _text(kopf.xpath("./div[contains(@class, '__head__column ')][last()]")) if kopf else ""
-                d.rohtext = f"{ort} ({stand}): {roh}; {je_technik or gesamt}" + (f"; Hinweis: {hinweis}" if hinweis else "")
+                d.rohtext = f"{ort} ({stand}): {roh}; {je_technik}"
                 ergebnis.loipen.append(d)
         if not ergebnis.loipen:
             ergebnis.warnungen.append("Keine Loipenzeilen gefunden, Seitenaufbau geaendert?")

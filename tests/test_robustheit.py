@@ -1,7 +1,7 @@
 """Robuster Abruf nach dem Worker-Log vom 20.11.2026: B28 (Aussetzer, Teilergebnisse, Wetter ohne Quelle,
-Achensee-Format) und B29 (tote Detailseiten, verschwundene Loipen).
+0 Loipen als Warnung) und B29 (tote Detailseiten, verschwundene Loipen).
 
-Schnappschuesse: tests/fixtures/achensee/2026-11-20/ (neuer contwise-Aufbau), tests/fixtures/tirol/2026-11-20/
+Schnappschuesse: tests/fixtures/tirol/2026-11-20/
 (bichlachrunde leitet auf eine Wandertour um, miesbergloipe 404), tests/fixtures/tegernsee/2026-11-20/
 (robots.txt mit Crawl-delay 5, Schneebericht-Seiten unveraendert).
 """
@@ -18,7 +18,6 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.ats import AtsAdapter, lese_statusseite
 from loipen.adapters.base import AdapterErgebnis, LoipenDaten
 from loipen.adapters.tirolat import TOTE_DETAILS_TAGE, TirolAtAdapter
-from loipen.adapters.tvb_tirol import AchenseeAdapter
 from loipen.fetcher import HoeflicherFetcher, HttpFehler
 from loipen.konfig import CONFIG_DIR, lade_und_abgleichen, lade_yaml
 from loipen.models import Gebiet, Loipe, Quelle, Status, Technik
@@ -199,36 +198,16 @@ def test_b28_tegernsee_bekommt_vorhersage_ohne_eine_einzige_loipe(db):
     assert any("lat=47.711" in u for u in f.urls)
 
 
-# --- B28 AK 4: Achensee mit neuem Seitenaufbau -------------------------------------------------------
-
-def achensee(stand: str):
-    q = next(x for x in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"] if x["key"] == "achensee")
-    f = FixtureFetcher("achensee", q["base_url"], seiten={"de/live/schneebericht": f"{stand}/schneebericht.html"})
-    return AchenseeAdapter().run(q["base_url"], q["config"], f)
-
-
-@pytest.mark.req("B28", ak=4)
-def test_b28_achensee_neuer_aufbau_vom_20_11():
-    r = achensee("2026-11-20")
-    assert r.warnungen == [] and len(r.loipen) == 24
-    a3 = next(l for l in r.loipen if l.name == "A3 - Ortsloipe Achenkirch")
-    assert a3.status == Status.GESCHLOSSEN and a3.technik == Technik.BEIDES
-    assert (a3.laenge_km, a3.gespurt_gesamt_km) == (10.0, 0.0)
-    assert a3.quelle_aktualisiert_at == datetime(2026, 11, 20, 11, 16, tzinfo=BERLIN)
-    m2 = next(l for l in r.loipen if l.name.startswith("M2"))
-    assert m2.technik == Technik.KLASSISCH and m2.gespurt_klassisch_km == 0.0 and m2.laenge_km == 4.5
-    # Freitext des Betreibers landet im Rohtext, nicht im Namen
-    assert any("Hinweis: Test-Daten - Loipe aktuell geschlossen" in l.rohtext for l in r.loipen)
-    assert all(not l.unbekannte_begriffe for l in r.loipen)
-    # dieselben Loipen wie im alten Aufbau: die Schluessel bleiben gleich, keine Dubletten in der Datenbank
-    assert {l.source_key for l in r.loipen} == {l.source_key for l in achensee("2026-11-13").loipen}
-
+# --- B28 AK 4: 0 Loipen trotz HTTP 200 -----------------------------------------------------------------
+# (Am 20.11. lieferte achensee.com so 0 Loipen. Achensee Tourismus hat der Nutzung am selben Tag widersprochen;
+# die Quelle wird abgeschaltet, deshalb gibt es fuer sie hier keinen Schnappschuss und keine Anpassung.)
 
 @pytest.mark.req("B28", ak=4)
 def test_b28_null_loipen_trotz_http_200_ist_eine_warnung(db):
-    q = _quelle(db, "achensee")
-    leer = "<html><body><div class='jsSnowreportBody'><h3>Achenkirch</h3></div></body></html>"
-    lauf = rufe_quelle_ab(db, q, FixtureFetcher("achensee", q.base_url, ersetze={"de/live/schneebericht": leer}), T0)
+    q = _quelle(db, "kufsteinerland")
+    leer = "<html><body><div class='skidataCrossCountry'><h3>Kufstein</h3></div></body></html>"
+    lauf = rufe_quelle_ab(db, q, FixtureFetcher("kufsteinerland", q.base_url,
+                                                ersetze={"de/schneebericht.html": leer}), T0)
     assert lauf.fehler is None and lauf.gefunden == 0
     assert lauf.status == "warnung"
     assert q.last_error == "Quelle lieferte 0 Loipen"
