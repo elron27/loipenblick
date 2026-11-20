@@ -301,6 +301,18 @@ class Abonnent(Base):
     letzte_mail_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
+class OsmDaten(Base):
+    """Verdichtete OpenStreetMap-Daten je Region (P40, P39): benannte Loipen (piste:type=nordic) und
+    Parkplaetze. Lizenz ODbL; wird woechentlich neu geholt (loipen/osm.py)."""
+
+    __tablename__ = "osm_daten"
+
+    region_slug: Mapped[str] = mapped_column(String(100), primary_key=True)
+    bbox: Mapped[list] = mapped_column(JSON)
+    inhalt: Mapped[dict] = mapped_column(JSON)
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
 class Meldeprotokoll(Base):
     """Was zuletzt je Loipe gemeldet wurde, ueber alle Kanaele (N11). Verhindert doppelte Nachrichten,
     etwa wenn eine Quelle kurz "unbekannt" meldet und die Loipe danach wieder "oeffnet"."""
