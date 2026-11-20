@@ -1174,3 +1174,112 @@ quellen:
         Lähn: zugspitz-arena
         Lermoos: zugspitz-arena
         Moos: zugspitz-arena
+
+  # ---------- Allgaeu (P38, 20.11.2026) ----------
+  # Stefan 20.11.2026: Allgaeu ueber die Seiten der Gemeinden und Tourismusaemter anbinden, nicht ueber den
+  # Sammeldienst loipen-allgaeu.de (robots-Sperre). Befund je Ort in docs/kontaktliste.md Abschnitt 3.
+  # Alle Impressen verlangen fuer Vervielfaeltigung und Verwertung eine schriftliche Zustimmung -> nur_test,
+  # gefragt wird mit einer Vorfuehrung der Testseite. Diese Orte haben sonst keine Quelle (Ortsseite, P20).
+  - key: oberstdorf
+    adapter: tramino_wsb
+    name: Tourismus Oberstdorf (Wintersportbericht)
+    base_url: https://www.oberstdorf.de
+    art: ortsseite
+    schliesst: [oberstdorf]
+    rang: 2
+    strecke_hinweis: "Der Oberstdorfer Wintersportbericht nennt keinen Streckenverlauf und keine Koordinaten."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum: Vervielfaeltigung und Verwertung nur mit schriftlicher Zustimmung, Kopien nur privat; Bericht ruht bis ca. Ende November"}
+    config:
+      pfad: /sommer/alpininfo/wintersportbericht/
+      default_gebiet: oberstdorf
+
+  - key: wertach
+    adapter: tramino_wsb
+    name: Tourist-Info Wertach (Wintersportbericht)
+    base_url: https://www.wertach.de
+    art: ortsseite
+    schliesst: [wertach]
+    rang: 2
+    strecke_hinweis: "Der Wintersportbericht Wertach nennt keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum wie Oberstdorf (Tramino-Vorlage): Verwertung nur mit schriftlicher Zustimmung; Aktualisierung werktags"}
+    config:
+      pfad: /service/wintersportbericht.html
+      default_gebiet: wertach
+
+  - key: pfronten
+    adapter: eopoi
+    name: Pfronten Tourismus (Wintersportbericht)
+    base_url: https://www.pfronten.de
+    art: ortsseite
+    schliesst: [pfronten]
+    rang: 2
+    strecke_hinweis: "Pfronten nennt den Einstieg je Loipe, aber keinen Streckenverlauf im Bericht."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum ohne Freigabe zur Datenuebernahme; Daten im HTML der Liste (eo-POI-Widget), der API-Schluessel der Seite wird nicht genutzt"}
+    config:
+      pfad: /aktiv/winterurlaub-im-allgaeu/wintersportbericht/liste-winter/
+      detail_pfad: /aktiv/winterurlaub-im-allgaeu/wintersportbericht/detail-winter/xxxSLUGxxx/
+      default_gebiet: pfronten
+
+  - key: kleinwalsertal
+    adapter: kleinwalsertal
+    name: Kleinwalsertal Tourismus (Loipen aktiv)
+    base_url: https://www.kleinwalsertal.com
+    art: ortsseite
+    schliesst: [kleinwalsertal]
+    rang: 2
+    strecke_hinweis: "Der Bergsportbericht Kleinwalsertal nennt keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum und AGB ohne Freigabe zur Datenuebernahme; nicht angefragt"}
+    config:
+      pfad: /de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-kleinwalsertal
+      default_gebiet: kleinwalsertal
+
+  - key: fuessen
+    adapter: fuessen
+    name: Füssen Tourismus und Marketing (Aktuelle Loipen-Info)
+    base_url: https://www.fuessen.de
+    art: ortsseite
+    schliesst: [fuessen]
+    rang: 2
+    strecke_hinweis: "Füssen meldet nur Loipengruppen (F1, W1/W2, H1/H2), keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum ohne Freigabe zur Datenuebernahme; nicht angefragt"}
+    config:
+      pfad: /outdoor/aktiver-winter/langlauf/
+      default_gebiet: fuessen
+
+  - key: isny
+    adapter: tramino_box
+    name: Isny Marketing (Schneehöhen- und Loipenbericht)
+    base_url: https://www.isny.de
+    art: ortsseite
+    schliesst: [isny]
+    rang: 2
+    strecke_hinweis: "Der Loipenbericht Isny nennt keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "Impressum Stadt Isny: Verwertung nur mit schriftlicher Zustimmung, Kopien nur privat"}
+    config:
+      pfad: /freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+      default_gebiet: isny
+
+  # Hoernerdoerfer: hoernerdoerfer.de bettet den Schneebericht von Intermaps ein (Listen-Layout "srm").
+  # Ausnahme zu P17 nur fuer die Testversion wie Innsbruck und Zugspitz Arena (Stefan, 19.11.2026).
+  - key: hoernerdoerfer
+    adapter: intermaps_liste
+    name: Tourismus Hörnerdörfer (Schneebericht, Intermaps)
+    base_url: https://sdds4.intermaps.com
+    art: ortsseite
+    schliesst: [hoernerdoerfer, balderschwang]
+    rang: 2
+    strecke_hinweis: "Der Schneebericht der Hörnerdörfer nennt nur Ort, Status und Länge, keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-20, nutzungsbedingungen_geprueft: 2026-11-20, erlaubnis: nur_test,
+              hinweis: "robots.txt fehlt (404) = keine Sperre; Impressum hoernerdoerfer.de: Nutzung der Daten zu anderen Zwecken nur mit schriftlicher Zustimmung",
+              p17_ausnahme: "Stefan 19.11.2026: Intermaps nur fuer die Testversion, vor dem Livegang Erlaubnis einholen"}
+    config:
+      pfad: /hoernerdoerfer_srm/hoernerdoerfer.aspx
+      default_gebiet: hoernerdoerfer
+      gebiet_map:
+        Balderschwang: balderschwang

@@ -87,9 +87,10 @@ function mache(gebiete) {
 }
 function namensZahl(t) { var h = 0; for (var k = 0; k < t.length; k++) h = (h * 31 + t.charCodeAt(k)) % 100003; return h; }
 function demoAnwenden() {
-  S.loipen.forEach(function (l, i) {
+  S.loipen.forEach(function (l) {
     if (l.status === "geschlossen" || l.status === "unbekannt") {
-      var r = (namensZahl(l.name) + i) % 9;  // nicht l.id: die haengt von der Datenbank ab
+      // nicht l.id (haengt von der Datenbank ab) und nicht die Stelle in der Gesamtliste (verschiebt sich mit jeder neuen Region)
+      var r = (namensZahl(l.name) + l.gebiet.loipen.indexOf(l)) % 9;
       if (r < 2) { l.status = "offen"; l.gespurt_km = l.laenge_km; l.veraltet = false; l.abgerufen = new Date().toISOString(); l.quelle_stand = l.abgerufen; }
       else if (r === 2) { l.status = "eingeschraenkt"; l.veraltet = false; l.abgerufen = new Date().toISOString(); }
     }

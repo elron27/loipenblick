@@ -1,6 +1,6 @@
 # Bestandsaufnahme Strecken und Parkinfos
 
-Datenstand der Seite: 2026-11-20T18:51+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
+Datenstand der Seite: 2026-11-20T17:16+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
 
 Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Daten zählen bei der führenden Loipe.
 
@@ -8,13 +8,13 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 
 | | Loipen | Anteil |
 | --- | ---: | ---: |
-| Loipen | 1741 | |
-| mit Streckenverlauf | 654 | 654 (38 %) |
+| Loipen | 1854 | |
+| mit Streckenverlauf | 681 | 681 (37 %) |
 | davon von der Quelle selbst | 372 | |
 | davon von einer anderen Quelle derselben Loipe | 0 | |
-| davon aus OpenStreetMap | 282 | |
-| mit Lage (Startpunkt) | 1252 | 1252 (72 %) |
-| mit Länge | 1247 | 1247 (72 %) |
+| davon aus OpenStreetMap | 309 | |
+| mit Lage (Startpunkt) | 1296 | 1296 (70 %) |
+| mit Länge | 1335 | 1335 (72 %) |
 | mit Parkplatz | 69 | 69 (4 %) |
 | davon von Hand recherchiert | 69 | |
 | davon aus OpenStreetMap | 0 | |
@@ -23,7 +23,7 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 
 | Quelle | Loipen | Strecke | davon OSM | Lage | Länge | Parkplatz | davon OSM |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Tirol Werbung (tirol.at) | 546 | 148 (27 %) | 148 | 546 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
+| Tirol Werbung (tirol.at) | 548 | 148 (27 %) | 148 | 548 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
 | Schweiz Tourismus (Schneebericht, Daten infosnow.ch) | 340 | 35 (10 %) | 35 | 35 (10 %) | 333 (98 %) | 0 (0 %) | 0 |
 | Dolomiti NordicSki (Loipenstatus) | 118 | 28 (24 %) | 28 | 85 (72 %) | 116 (98 %) | 0 (0 %) | 0 |
 | Engadin Tourismus (tourinfra Loipenmanager) | 108 | 108 (100 %) | 0 | 108 (100 %) | 108 (100 %) | 0 (0 %) | 0 |
@@ -35,12 +35,18 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Goms Tourismus (tourinfra Loipenmanager) | 39 | 39 (100 %) | 0 | 39 (100 %) | 39 (100 %) | 0 (0 %) | 0 |
 | Destination Davos Klosters (tourinfra Loipenmanager) | 36 | 36 (100 %) | 0 | 36 (100 %) | 36 (100 %) | 0 (0 %) | 0 |
 | Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 12 (46 %) | 0 |
+| Tourismus Hörnerdörfer (Schneebericht, Intermaps) | 26 | 2 (8 %) | 2 | 2 (8 %) | 25 (96 %) | 0 (0 %) | 0 |
+| Achensee Tourismus (Schneebericht) | 24 | 16 (67 %) | 16 | 22 (92 %) | 24 (100 %) | 0 (0 %) | 0 |
 | Tourismusverband Kaiserwinkl (Loipenbericht) | 23 | 15 (65 %) | 15 | 20 (87 %) | 23 (100 %) | 0 (0 %) | 0 |
 | Kufsteinerland (Schneebericht) | 22 | 3 (14 %) | 3 | 19 (86 %) | 20 (91 %) | 0 (0 %) | 0 |
 | Innsbruck Tourismus (Wintersportbericht, Intermaps) | 21 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Tourismusverband Tannheimer Tal (Loipenbericht) | 21 | 21 (100 %) | 0 | 21 (100 %) | 21 (100 %) | 0 (0 %) | 0 |
+| Kleinwalsertal Tourismus (Loipen aktiv) | 19 | 3 (16 %) | 3 | 3 (16 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Gastein Tourismus (tourinfra Loipenmanager) | 15 | 15 (100 %) | 0 | 15 (100 %) | 15 (100 %) | 0 (0 %) | 0 |
 | Tourismusverband St. Anton am Arlberg (Loipenzustand) | 15 | 0 (0 %) | 0 | 0 (0 %) | 15 (100 %) | 0 (0 %) | 0 |
+| Tourismus Oberstdorf (Wintersportbericht) | 14 | 0 (0 %) | 0 | 0 (0 %) | 14 (100 %) | 0 (0 %) | 0 |
+| Isny Marketing (Schneehöhen- und Loipenbericht) | 12 | 5 (42 %) | 5 | 5 (42 %) | 12 (100 %) | 0 (0 %) | 0 |
+| Pfronten Tourismus (Wintersportbericht) | 10 | 1 (10 %) | 1 | 10 (100 %) | 10 (100 %) | 0 (0 %) | 0 |
 | Bayrischzell Tourismus | 9 | 8 (89 %) | 8 | 9 (100 %) | 9 (100 %) | 8 (89 %) | 0 |
 | Kitzbüheler Alpen Loipenstatus | 9 | 1 (11 %) | 1 | 1 (11 %) | 9 (100 %) | 0 (0 %) | 0 |
 | Olympiaregion Seefeld (Loipenbericht) | 7 | 0 (0 %) | 0 | 1 (14 %) | 2 (29 %) | 0 (0 %) | 0 |
@@ -52,7 +58,9 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Aschau i. Chiemgau Schneebericht | 4 | 0 (0 %) | 0 | 4 (100 %) | 4 (100 %) | 0 (0 %) | 0 |
 | Osttirol Tourismus (Loipenliste) | 4 | 0 (0 %) | 0 | 0 (0 %) | 2 (50 %) | 0 (0 %) | 0 |
 | TVB Tiroler Oberland, Erlebnisraum Nauders (Einrichtungen) | 4 | 0 (0 %) | 0 | 0 (0 %) | 4 (100 %) | 0 (0 %) | 0 |
+| Füssen Tourismus und Marketing (Aktuelle Loipen-Info) | 3 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Tourismusverband Pitztal (Tourenportal Langlaufen) | 3 | 1 (33 %) | 1 | 3 (100 %) | 3 (100 %) | 0 (0 %) | 0 |
+| Tourist-Info Wertach (Wintersportbericht) | 3 | 0 (0 %) | 0 | 0 (0 %) | 3 (100 %) | 0 (0 %) | 0 |
 | Wildschönau Tourismus (Öffnungsstatus Loipen) | 3 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
 | TVB Paznaun-Ischgl (Geöffnete Anlagen, Langlauf) | 1 | 0 (0 %) | 0 | 0 (0 %) | 1 (100 %) | 0 (0 %) | 0 |
 | TVB Tiroler Oberland (Geöffnete Einrichtungen) | 1 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
@@ -76,14 +84,23 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Chiemgau | Schleching | 9 | 0 | 2 | 0 | unbekannt | 1 |
 | Leitzachtal | Bayrischzell | 11 | 2 | 1 | 4 | ja | 3 |
 | Leitzachtal | Fischbachau | 6 | 1 | 5 | 2 | unbekannt | 2 |
+| Oberallgäu | Balderschwang | 4 | 2 | 4 | 0 | unbekannt | 0 |
+| Oberallgäu | Hörnerdörfer (Fischen, Obermaiselstein, Bolsterlang, Ofterschwang) | 22 | 22 | 22 | 0 | unbekannt | 0 |
+| Oberallgäu | Oberstdorf | 14 | 14 | 14 | 0 | unbekannt | 0 |
+| Oberallgäu | Wertach | 3 | 3 | 3 | 0 | unbekannt | 0 |
+| Ostallgäu | Füssen, Weißensee und Hopfen am See | 3 | 3 | 3 | 0 | unbekannt | 0 |
+| Ostallgäu | Pfronten | 10 | 9 | 10 | 0 | unbekannt | 0 |
 | Priental | Sachrang | 4 | 4 | 4 | 0 | unbekannt | 3 |
 | Tegernseer Tal | Bad Wiessee | 4 | 2 | 3 | 1 | unbekannt | 0 |
 | Tegernseer Tal | Gmund | 5 | 2 | 5 | 0 | unbekannt | 0 |
 | Tegernseer Tal | Kreuth | 10 | 1 | 1 | 6 | unbekannt | 4 |
 | Tegernseer Tal | Rottach-Egern | 7 | 4 | 5 | 1 | unbekannt | 0 |
+| Württembergisches Allgäu | Isny und Maierhöfen | 12 | 7 | 12 | 0 | unbekannt | 0 |
+| Achensee und Karwendel | Achensee | 14 | 6 | 14 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Hinterriß | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Silberregion Karwendel | 6 | 6 | 6 | 0 | unbekannt | 0 |
-| Alpbachtal und Wildschönau | Alpbachtal | 15 | 15 | 15 | 0 | unbekannt | 0 |
+| Achensee und Karwendel | Steinberg am Rofan | 11 | 3 | 11 | 0 | unbekannt | 0 |
+| Alpbachtal und Wildschönau | Alpbachtal | 16 | 16 | 16 | 0 | unbekannt | 0 |
 | Alpbachtal und Wildschönau | Wildschönau | 19 | 15 | 19 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Altaussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Bad Aussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
@@ -193,6 +210,7 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Kitzbüheler Alpen | Kitzbühel | 17 | 15 | 17 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | Pillerseetal | 23 | 19 | 23 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | St. Johann in Tirol | 23 | 8 | 23 | 0 | unbekannt | 0 |
+| Kleinwalsertal | Kleinwalsertal (Riezlern, Hirschegg, Mittelberg, Baad) | 19 | 16 | 19 | 0 | unbekannt | 0 |
 | Kufsteinerland | Bad Häring | 5 | 5 | 5 | 0 | unbekannt | 0 |
 | Kufsteinerland | Ebbs | 2 | 2 | 2 | 0 | unbekannt | 0 |
 | Kufsteinerland | Kufstein | 7 | 7 | 7 | 0 | unbekannt | 0 |
