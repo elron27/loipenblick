@@ -62,6 +62,35 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.txt, Nutzungsbedingungen, was dort steht).
 
+### Zillertal (P35, geprüft 19.11.2026)
+
+| Ortsseite | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
+|---|---|---|---|---|---|
+| zillertal.at (Karte maps.zillertal.at) | Zillertal | Je Loipe Schneehöhe, Wetter, Anfahrt, Details; Quelle „Zillertal Tourismus GmbH“ | www.zillertal.at erlaubt, **maps.zillertal.at verbietet alles** (geprüft 19.11.2026) | **nicht anbindbar** | Die Loipenliste auf www.zillertal.at kommt nur aus der Karte. Der Schneebericht dort nennt nur Skigebiete (Lifte, Pisten). Bei der Anfrage an Zillertal Tourismus deshalb auch um einen Datenzugang bitten (Export, Schnittstelle oder Freigabe in robots.txt). |
+
+### Alpbachtal, Wildschönau, Wilder Kaiser, Kitzbühel, St. Johann (P34, geprüft 19.11.2026)
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Tourismusverband Alpbachtal & Tiroler Seenland | Alpbachtal (Quelle `alpbachtal`) | Loipenbericht-Tabelle: Status, gespurte km, Ort | info@alpbachtal.at | nicht angefragt | robots.txt erlaubt; Impressum und AGB ohne Regel zur Übernahme von Daten |
+| Tourismusverband Wildschönau | Wildschönau (Quelle `wildschoenau`) | Öffnungsstatus der Loipen, gespurte km | info@wildschoenau.com | nicht angefragt | robots.txt erlaubt (nur Suchparameter gesperrt); Impressum: Elemente urheberrechtlich geschützt, alle Rechte vorbehalten |
+| Tourismusverband Wilder Kaiser | Ellmau, Going, Scheffau, Söll (Quelle `wilderkaiser`) | Loipenstatus mit Ort, Stil, Länge | office@wilderkaiser.info | nicht angefragt | robots.txt erlaubt; Impressum: Links erwünscht, Einbinden in fremde Frames unzulässig, zur Datenübernahme nichts |
+| Kitzbühel Tourismus | Kitzbühel, Reith, Aurach, Jochberg | nicht angebunden | info@kitzbuehel.com | nicht nötig | Keine eigene Statusliste; die Karte maps.kitzbuehel.com lädt tirol.mapservices.eu, also dieselben Daten wie tirol.at |
+| Kitzbüheler Alpen, St. Johann in Tirol | St. Johann, Oberndorf, Kirchdorf, Erpfendorf | nicht neu angebunden | (wie Kitzbüheler Alpen, Abschnitt 1) | nicht nötig | /de/stjo/aktuelles/loipen-status.html ist eine Teilmenge der schon angebundenen Quelle `kitzbueheler-alpen`; zusätzlich nur Schneehöhe des Skigebiets |
+
+### Ötztal, Pitztal, Tiroler Oberland, Nauders, Serfaus-Fiss-Ladis, Paznaun (P31, geprüft 19.11.2026)
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Ötztal Tourismus (Körperschaft öffentlichen Rechts), Sölden | Ötztal (oetztal.com) | Loipenstatus, Länge, Schwierigkeit je Detailseite | info@oetztal.com, +43 57200 200 | nicht angefragt | Impressum und AGB (nur Buchungen) ohne Regel zur Weiterverwendung; robots.txt regelt nur Meta-Bots. Liste per Outdooractive-Schlüssel der Seite, den wir nicht nutzen. Geprüft 19.11.2026, `nur_test`. |
+| Tourismusverband Pitztal, Wenns | Pitztal (pitztal.com) | Loipenstatus, Länge, Startpunkt | info@pitztal.com, +43 5414 86 999 | nicht angefragt | Impressum: Verwendung von Grafiken und Texten in anderen Publikationen nur mit Zustimmung; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| TVB Tiroler Oberland, Ried i. O. | Tiroler Oberland, Kaunertal, Kaunergrat (tiroler-oberland.com) | Loipenstatus | office@tiroler-oberland.com, +43 50 225 100 | nicht angefragt | Impressum und AGB ohne Regel zur Weiterverwendung; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| TVB Tiroler Oberland, Erlebnisraum Nauders | Nauders (nauders.com) | Loipenstatus, Länge, Technik, Stand | office@nauders.com, +43 50 225 400 | nicht angefragt | wie Tiroler Oberland (derselbe Verband, eine Anfrage reicht). Geprüft 19.11.2026, `nur_test`. |
+| Serfaus-Fiss-Ladis Marketing GmbH (für den TVB), Serfaus | Serfaus-Fiss-Ladis (serfaus-fiss-ladis.at) | Loipenstatus, Länge, Technik | info@serfaus-fiss-ladis.at, +43 5476 6239 | nicht angefragt | Impressum: Inhalte und Bilder für andere Seiten nur mit ausdrücklicher Erlaubnis der Redaktion; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| Tourismusverband Paznaun-Ischgl, Ischgl | Paznaun mit Galtür und Silvretta (ischgl.com) | Loipenstatus, Länge, Technik, Startpunkt, Stand | info@paznaun-ischgl.com, +43 50990 100 | nicht angefragt | Fußzeile „Alle Rechte vorbehalten“, Impressum-Volltext extern (datareporter), AGB nur Buchungen; robots.txt sperrt ajaxRequestType, nicht ajax=1. Geprüft 19.11.2026, `nur_test`. |
+
+### Außerfern und Osttirol (P33, geprüft 19.11.2026)
+
 | Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
 |---|---|---|---|---|---|
 | Tourismusverband Osttirol (osttirol.com) | Osttirol (P33) | Status, Länge, Schwierigkeit von 59 Loipen (Seite „Alle Loipen“), Querprüfung tirol.at | info@osttirol.com | nicht angefragt | robots.txt ohne Sperre (geprüft 19.11.2026). Impressum: „Alle Inhalte und Bilder sind urheberrechtlich geschützt“, keine Freigabe zur Übernahme. Quelle mit erlaubnis nur_test. Der eigentliche Loipenzustandsbericht liegt bei Intermaps und wird nach P17 nicht abgerufen; in der Anfrage miterwähnen. |

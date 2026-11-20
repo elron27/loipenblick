@@ -1,0 +1,21 @@
+User-Agent: *
+Disallow:
+Disallow: /wx-tools/
+
+User-agent: meta-externalagent
+Crawl-delay: 10
+Disallow: /wx-tools/
+Disallow: /*?
+
+Sitemap: https://www.kitzbuehel.com/sitemap.xml
+Sitemap: https://www.kitzbuehel.com/en/sitemap.xml
+Sitemap: https://www.kitzbuehel.com/imagesitemap.xml
+
+#              ___.                                              .__
+#__  _  __ ____\_ |__             ___________  ____  ______ _____|__| ____    ____
+#\ \/ \/ // __ \| __ \   ______ _/ ___\_  __ \/  _ \/  ___//  ___/  |/    \  / ___\
+# \     /\  ___/| \_\ \ /_____/ \  \___|  | \(  <_> )___ \ \___ \|  |   |  \/ /_/  >
+#  \/\_/  \___  >___  /          \___  >__|   \____/____  >____  >__|___|  /\___  /
+#             \/    \/               \/                 \/     \/        \//_____/
+#
+# why you are looking at this? please see https://www.web-crossing.com

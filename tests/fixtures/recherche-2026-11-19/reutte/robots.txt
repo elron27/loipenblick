@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /vermieter*
+
+Sitemap: https://reutte.com/sitemap.xml

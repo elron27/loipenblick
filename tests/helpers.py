@@ -9,7 +9,9 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 # Quellen mit Schnappschuss-Ordner nach Datum (B19, CLAUDE.md Regel 10)
 STAND_QUELLEN = {"tirol": "2026-11-12", "kitzbueheler-alpen": "2026-11-12", "langlaufdorf": "2026-11-12",
-                 "berchtesgaden": "2026-11-12", "myswitzerland": "2026-11-13"}
+                 "berchtesgaden": "2026-11-12", "myswitzerland": "2026-11-13",
+                 # P34 (E-24)
+                 "alpbachtal": "2026-11-19", "wildschoenau": "2026-11-19", "wilderkaiser": "2026-11-19"}
 
 
 class FixtureFetcher:
@@ -71,6 +73,14 @@ class FixtureFetcher:
 
 TIROL_LISTE = "aktivitaeten/sport/langlaufen/loipen"
 STEIERMARK_LISTE = "de/Urlaub-planen/Tourenportal?tourCategory=46459526"
+PAZNAUN_ANLAGEN = "de/winter/silvretta-arena/geoeffnete-anlagen?type=cross-country"
+# Oetztal: 6 der 22 Loipen-Detailseiten liegen als Schnappschuss vor (Pfad laut Sitemap, Outdooractive-ID)
+OETZTAL_TOUREN = [("lehen-loipe-umhausen-niederthai.r-23683688", "23683688"),
+                  ("4-1-nachtloipe-variante-laengenfeld.r-801776311", "801776311"),
+                  ("langlaufloipe-zwieselstein-soelden.r-7230466", "7230466"),
+                  ("uebungsloipe-obergurgl-nr-3.r-6925433", "6925433"),
+                  ("uebungsloipe-bergsteigerdorf-vent.r-7100318", "7100318"),
+                  ("loipe-ochsengarten.r-7120810", "7120810")]
 SEITEN_QUELLEN = {
     "steiermark": {STEIERMARK_LISTE: "2026-11-14/tourenportal-langlauf-p1.html",
                    **{f"{STEIERMARK_LISTE}&page={n}": f"2026-11-14/tourenportal-langlauf-p{n}.html" for n in range(2, 8)}},
@@ -96,6 +106,17 @@ SEITEN_QUELLEN = {
     "dolomiti-nordicski": {"de/regionen/alta-badia/geoeffnete-loipen/2.html": "2026-11-13/loipen-de.html"},
     "opendatahub": {"v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true":
                     "2026-11-13/loipen.json"},
+    # P31 (19.11.2026): Tiroler Ortsseiten Oetztal bis Paznaun
+    "oetztal": {"sitemap.xml": "2026-11-19/sitemap.xml", "sitemap.tours_6.xml?t=1795094140": "2026-11-19/sitemap-tours.xml",
+                **{f"de/aktivitaeten/alle-routen-touren/{n}": f"2026-11-19/touren/{i}.html" for n, i in OETZTAL_TOUREN}},
+    "pitztal": {"de/tourenportal-langlaufen.html": "2026-11-19/tourenportal-langlaufen.html",
+                "de/tourenportal-langlaufen.html?page=2": "2026-11-19/tourenportal-langlaufen-page2.html"},
+    "tiroler-oberland": {"de/Aktuelles/Geoeffnete-Einrichtungen": "2026-11-19/geoeffnete-einrichtungen.html"},
+    "nauders": {"de/Aktuelles/Einrichtungen-Nauders": "2026-11-19/einrichtungen.html"},
+    "serfaus-fiss-ladis": {"de/winterurlaub/skigebiet-und-winteraktivitaeten/langlaufen": "2026-11-19/langlaufen.html",
+                           "de/winterurlaub/skigebietsstatus-und-pistenplan": "2026-11-19/status.html"},
+    "paznaun": {PAZNAUN_ANLAGEN: "2026-11-19/ischgl-anlagen.html",
+                f"{PAZNAUN_ANLAGEN}&sorting=status-desc&ajax=1": "2026-11-19/ischgl-anlagen.json"},
 }
 
 
