@@ -1,4 +1,4 @@
-"""Loipenberichte weiterer Allgaeuer Ortsseiten (P36, nur Test): Kleinwalsertal, Fuessen, Hoernerdoerfer.
+"""Loipenberichte weiterer Allgaeuer Ortsseiten (P38, nur Test): Kleinwalsertal, Fuessen, Hoernerdoerfer.
 
 Befund (Schnappschuesse vom 20.11.2026):
 - Kleinwalsertal (kleinwalsertal.com/de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-...):

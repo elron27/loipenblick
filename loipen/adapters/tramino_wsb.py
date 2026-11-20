@@ -1,4 +1,4 @@
-"""Wintersportbericht im Tramino-Baukasten, wie ihn Oberstdorf und Wertach zeigen (P36, Allgaeu, nur Test).
+"""Wintersportbericht im Tramino-Baukasten, wie ihn Oberstdorf und Wertach zeigen (P38, Allgaeu, nur Test).
 
 Befund (Schnappschuesse vom 20.11.2026, tests/fixtures/oberstdorf|wertach/2026-11-20/):
 - Beide Orte nutzen das Tramino-CMS mit dem Modul "Wintersportbericht". Die Loipen stehen in einer Tabelle

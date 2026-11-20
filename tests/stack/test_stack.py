@@ -52,7 +52,7 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            "oetztal": 6, "pitztal": 14, "tiroler-oberland": 11, "nauders": 11, "serfaus-fiss-ladis": 10, "paznaun": 20,
            "innsbruck": 40, "hall-wattens": 7, "silberregion-karwendel": 7,
            "osttirol": 59, "zugspitzarena": 21,
-           # P36: Allgaeu ueber Ortsseiten
+           # P38: Allgaeu ueber Ortsseiten
            "oberstdorf": 14, "wertach": 3, "pfronten": 10, "kleinwalsertal": 19, "fuessen": 3, "isny": 12,
            "hoernerdoerfer": 26}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]

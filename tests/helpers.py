@@ -13,7 +13,7 @@ STAND_QUELLEN = {"tirol": "2026-11-12", "kitzbueheler-alpen": "2026-11-12", "lan
                  # P34 (E-24)
                  "alpbachtal": "2026-11-19", "wildschoenau": "2026-11-19", "wilderkaiser": "2026-11-19",
                  "hall-wattens": "2026-11-19", "silberregion-karwendel": "2026-11-19",  # P32
-                 # P36 (Allgaeu)
+                 # P38 (Allgaeu)
                  "oberstdorf": "2026-11-20", "wertach": "2026-11-20", "pfronten": "2026-11-20",
                  "kleinwalsertal": "2026-11-20", "fuessen": "2026-11-20", "isny": "2026-11-20",
                  "hoernerdoerfer": "2026-11-20"}

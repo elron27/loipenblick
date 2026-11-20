@@ -46,7 +46,7 @@ ADAPTERS: dict[str, Adapter] = {
     "intermaps": IntermapsAdapter(), "tourismus_mco": TourismusMcoAdapter(),
     # P33: Osttirol, Zugspitz Arena (E-24)
     "osttirol": OsttirolAdapter(), "intermaps_schneebericht": IntermapsSchneeberichtAdapter(),
-    # P36: Allgaeu ueber Gemeinde- und Tourismusseiten (nur Test)
+    # P38: Allgaeu ueber Gemeinde- und Tourismusseiten (nur Test)
     "tramino_wsb": TraminoWsbAdapter(), "tramino_box": TraminoBoxAdapter(), "eopoi": EoPoiAdapter(),
     "kleinwalsertal": KleinwalsertalAdapter(), "fuessen": FuessenAdapter(), "intermaps_liste": IntermapsListeAdapter(),
 }

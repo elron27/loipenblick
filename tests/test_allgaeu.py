@@ -1,4 +1,4 @@
-"""Allgaeu ueber die Seiten der Gemeinden und Tourismusaemter (P36, E-26, nur Test).
+"""Allgaeu ueber die Seiten der Gemeinden und Tourismusaemter (P38, E-27, nur Test).
 
 Schnappschuesse vom 20.11.2026 (Workflow Schnappschuss, Runden 23 bis 26, Recherche unter
 tests/fixtures/recherche-2026-11-20/). Am 20.11. war im ganzen Allgaeu alles geschlossen; nur das
@@ -41,7 +41,7 @@ def leer(key: str, adapter, html: str):
     return lauf(key, adapter, ersetze={q["config"]["pfad"].strip("/"): html})
 
 
-@pytest.mark.req("P36", ak=1)
+@pytest.mark.req("P38", ak=1)
 def test_p36_oberstdorf_wintersportbericht():
     r = lauf("oberstdorf", TraminoWsbAdapter())
     assert r.warnungen == []
@@ -59,7 +59,7 @@ def test_p36_oberstdorf_wintersportbericht():
     assert all(not l.unbekannte_begriffe for l in r.loipen)
 
 
-@pytest.mark.req("P36", ak=1)
+@pytest.mark.req("P38", ak=1)
 def test_p36_wertach_laenge_technik_schwierigkeit_aus_dem_hinweis():
     r = lauf("wertach", TraminoWsbAdapter())
     assert r.warnungen == []
@@ -74,7 +74,7 @@ def test_p36_wertach_laenge_technik_schwierigkeit_aus_dem_hinweis():
     assert {l.quelle_aktualisiert_at for l in r.loipen} == {datetime(2026, 4, 2, tzinfo=BERLIN)}
 
 
-@pytest.mark.req("P36", ak=1)
+@pytest.mark.req("P38", ak=1)
 def test_p36_isny_kaesten_mit_laenge_in_metern():
     r = lauf("isny", TraminoBoxAdapter())
     assert r.warnungen == []
@@ -90,7 +90,7 @@ def test_p36_isny_kaesten_mit_laenge_in_metern():
     assert all(l.quelle_aktualisiert_at is None for l in r.loipen)  # "Zuletzt gespurt" ist im November leer
 
 
-@pytest.mark.req("P36", ak=2)
+@pytest.mark.req("P38", ak=2)
 def test_p36_pfronten_eo_poi_daten_aus_dem_html():
     r = lauf("pfronten", EoPoiAdapter())
     assert r.warnungen == []
@@ -110,7 +110,7 @@ def test_p36_pfronten_eo_poi_daten_aus_dem_html():
     assert {l.gebiet_slug for l in r.loipen} == {"pfronten"}
 
 
-@pytest.mark.req("P36", ak=3)
+@pytest.mark.req("P38", ak=3)
 def test_p36_kleinwalsertal_status_und_technik():
     r = lauf("kleinwalsertal", KleinwalsertalAdapter())
     assert r.warnungen == []
@@ -124,7 +124,7 @@ def test_p36_kleinwalsertal_status_und_technik():
     assert {l.gebiet_slug for l in r.loipen} == {"kleinwalsertal"}
 
 
-@pytest.mark.req("P36", ak=3)
+@pytest.mark.req("P38", ak=3)
 def test_p36_fuessen_loipengruppen():
     r = lauf("fuessen", FuessenAdapter())
     assert r.warnungen == []
@@ -134,7 +134,7 @@ def test_p36_fuessen_loipengruppen():
         ("Hopfen-Loipen (H1, H2)", "h1-h2", Status.GESCHLOSSEN)]
 
 
-@pytest.mark.req("P36", ak=3)
+@pytest.mark.req("P38", ak=3)
 def test_p36_hoernerdoerfer_intermaps_liste_mit_orten():
     r = lauf("hoernerdoerfer", IntermapsListeAdapter())
     assert r.warnungen == []
@@ -151,7 +151,7 @@ def test_p36_hoernerdoerfer_intermaps_liste_mit_orten():
     assert {l.quelle_aktualisiert_at for l in r.loipen} == {datetime(2026, 11, 20, 8, 1, tzinfo=BERLIN)}
 
 
-@pytest.mark.req("P36", ak=[1, 3])
+@pytest.mark.req("P38", ak=[1, 3])
 def test_p36_unbekanntes_symbol_und_leere_seite():
     t = ('<h4>Loipen</h4><table><tr><th></th><th>Name</th></tr>'
          '<tr><td><img src="https://tramino.s3.amazonaws.com/gfx/wsb/neu.png"></td><td><a href="/x">Testloipe</a></td>'
@@ -166,7 +166,7 @@ def test_p36_unbekanntes_symbol_und_leere_seite():
         assert r.loipen == [] and "Seitenaufbau" in r.warnungen[0], key
 
 
-@pytest.mark.req("P36", ak=4)
+@pytest.mark.req("P38", ak=4)
 def test_p36_quellen_ortsseiten_nur_test():
     for key in ALLGAEU:
         q = quelle(key)
@@ -180,7 +180,7 @@ def test_p36_quellen_ortsseiten_nur_test():
     assert not any("loipen-allgaeu" in q["base_url"] for q in alle)
 
 
-@pytest.mark.req("P36", ak=4)
+@pytest.mark.req("P38", ak=4)
 def test_p36_neue_gebiete_mit_lage_region_und_wetterstation():
     y = lade_yaml(CONFIG_DIR / "gebiete.yaml")
     g = {x["slug"]: x for x in y["gebiete"]}

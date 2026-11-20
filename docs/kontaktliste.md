@@ -108,7 +108,7 @@ Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.
 | Lechtal Tourismus (lechtal.at), Holzgau (holzgau.at) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@lechtal.at | nicht nötig | Loipenliste lädt per JavaScript, Karte maps.lechtal.at nutzt tirol.mapservices.eu (robots-Sperre, dieselben Daten wie tirol.at). holzgau.at nennt keine Loipen. Kein Mehrwert gegenüber tirol.at, nicht angebunden. |
 | Naturparkregion Reutte (reutte.com) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@reutte.com | nicht nötig | Langlaufseite zeigt nur die contwise-Karte (reutte.mapservices.eu) und eine Liste über phoenix.contwise.io, beide aus der Tiroler Datenbank wie tirol.at. Kein Mehrwert, nicht angebunden. |
 
-### Allgäu über Gemeinde- und Tourismusseiten (P36, E-26, geprüft 20.11.2026)
+### Allgäu über Gemeinde- und Tourismusseiten (P38, E-27, geprüft 20.11.2026)
 
 Stefan 20.11.2026: Allgäu über die Seiten der Gemeinden und Tourismusämter anbinden, nicht über loipen-allgaeu.de.
 Schnappschüsse Runden 23 bis 26 unter `tests/fixtures/recherche-2026-11-20/`. robots.txt war überall ohne Sperre.
@@ -126,3 +126,21 @@ Schnappschüsse Runden 23 bis 26 unter `tests/fixtures/recherche-2026-11-20/`. r
 | Allgäu GmbH (allgaeu.de, Schneebericht) | ganzes Allgäu | Sammelbericht | Kontakt laut Impressum | **nicht angebunden** | Lädt den Status ebenfalls nur im Browser über das eo-POI-Widget mit Schlüssel. |
 | Scheidegg, Westallgäu (scheidegg.de, westallgaeu.de) | Westallgäu | – | – | **nicht angebunden** | Scheidegg: eo-POI-Widget nur im Browser; westallgaeu.de ohne Loipenstatus. |
 | Oberstaufen, Nesselwang, Sulzberg (Vorarlberg) | Oberallgäu, Ostallgäu | – | – | **kein Status gefunden** | Langlaufseiten nur mit Beschreibung, kein Loipenstatus (Sulzberg: nur Startseite der Gemeinde). |
+
+## 4. Allgäu (geprüft 20.11.2026)
+
+Das Allgäu liegt westlich unseres bisherigen Ausbaus (Südostbayern, Tirol, Salzburg), zwischen Bodensee, Lech und
+Tannheimer Tal. Nach E-13 ist es eine spätere Ausbaustufe. Anbindung der eigentlichen Quellen (Gemeinden,
+Tourismusämter, Loipenvereine) wäre ein eigener Ausbau; dieser Abschnitt hält nur den Befund zum Vorbild fest.
+
+| Stelle | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
+|---|---|---|---|---|---|
+| loipen-allgaeu.de (Vorbild aus der Produktdefinition) | ganzes Allgäu mit Kleinwalsertal und Tannheimer Tal | Klickbare Karte mit rund 90 Orten, 72 Gebiete in 10 Regionen, rund 371 Loipen, Seite „Aktuelles“ (laut Stefans Screenshots vom 27.10.2026, Unterseiten nicht gesehen) | Abruf durch unseren Abrufdienst am 20.11.2026 wegen robots.txt abgelehnt; Inhalt der robots.txt selbst konnte nicht gelesen werden | **nicht anbindbar** | Selbst ein Sammeldienst (wie bergfex, D-17552a5cfa37): als Quelle ungeeignet, auch ohne robots-Sperre. Nutzen: Gebietsliste als Startkatalog (SR-40d931b69d60). Betreiber und Impressum unbekannt; bei Interesse an einer Zusammenarbeit kann Stefan das Impressum im Browser nachsehen. |
+
+Bestand am 20.11.2026: Von den 72 Gebieten des Vorbilds haben wir nur das Tannheimer Tal (mit Jungholz, aus
+tourinfra und tirol.at). Es fehlen alle bayerischen Allgäu-Gebiete, darunter Oberstdorf, die Hörnerdörfer
+(Fischen, Ofterschwang, Bolsterlang, Obermaiselstein, Balderschwang), Bad Hindelang mit Oberjoch und Unterjoch,
+Oberstaufen, Pfronten, Nesselwang, Füssen, Isny, Scheidegg und das Unterallgäu, außerdem das Kleinwalsertal und
+Sulzberg (beide Vorarlberg, dort haben wir gar nichts).
+
+Nachtrag 20.11.2026: Die Gemeinde- und Tourismusseiten sind inzwischen angebunden, Befund und Stand im Abschnitt 3 unter „Allgäu über Gemeinde- und Tourismusseiten“ (P38, E-27).

@@ -3,7 +3,7 @@ id: c2c4da0d-e864-48da-a175-5e738b4dd3ef
 type: decision
 status: draft
 title: Allgäu über die Seiten der Gemeinden und Tourismusämter
-kennung: "E-26"
+kennung: "E-27"
 rationale: "Stefan am 20.11.2026: „plane eine Anbindung über die Gemeinde- und Tourismusseiten und nicht von loipen-allgaeu.de“. Schnappschüsse vom 20.11.2026 (Runden 23 bis 26, robots.txt überall ohne Sperre)."
 ---
 

@@ -3244,7 +3244,7 @@ gebiete:
     id: '15712'
     name: Tamsweg
     dienst: geosphere
-# Allgaeu (P36, 20.11.2026): Lage aus den Loipenstarts der Ortsseiten bzw. OpenStreetMap (gerundet),
+# Allgaeu (P38, 20.11.2026): Lage aus den Loipenstarts der Ortsseiten bzw. OpenStreetMap (gerundet),
 # DWD-Stationen aus RR_Tageswerte_Beschreibung_Stationen.txt (Schnappschuss Runde 26), Kleinwalsertal GeoSphere Mittelberg.
 - slug: oberstdorf
   name: Oberstdorf

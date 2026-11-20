@@ -1,4 +1,4 @@
-"""Wintersportbericht im eo-POI-Widget (eberl online), wie ihn Pfronten zeigt (P36, Allgaeu, nur Test).
+"""Wintersportbericht im eo-POI-Widget (eberl online), wie ihn Pfronten zeigt (P38, Allgaeu, nur Test).
 
 Befund (Schnappschuss vom 20.11.2026, tests/fixtures/pfronten/2026-11-20/liste-winter.html):
 - pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/liste-winter/ liefert die Liste schon im HTML
