@@ -1,6 +1,6 @@
 # Bestandsaufnahme Strecken und Parkinfos
 
-Datenstand der Seite: 2026-11-20T08:46+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
+Datenstand der Seite: 2026-11-20T19:54+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
 
 Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Daten zählen bei der führenden Loipe.
 
