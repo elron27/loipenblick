@@ -3,19 +3,23 @@
 import logging
 import time
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
-from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Technik, utcnow
+from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Status, Technik, utcnow
 from loipen.ereignisse import Ereignis, ereignis_fuer
 from loipen.waechter import Meldung, pruefe
 from loipen.zustand import letzter_zustand, speichere_zustand
 
 log = logging.getLogger("loipen.ablauf")
+
+# B29: Eine Loipe, die ihre Quelle in vollstaendigen Laeufen so lange nicht mehr meldet, wird ausgeblendet
+# (active = False). Meldet die Quelle sie wieder, ist sie sofort wieder da.
+VERSCHWUNDEN_STUNDEN = 48
 
 
 @dataclass
@@ -30,6 +34,7 @@ class QuellenLauf:
     status_vorher: str | None = None
     status: str | None = None
     waechter: Meldung | None = None  # B26
+    ausgeblendet: list[str] = field(default_factory=list)  # B29
 
 
 def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
@@ -77,7 +82,9 @@ def rufe_quelle_ab(
 
     lauf.warnungen = list(ergebnis.warnungen)
     gebiete = {g.slug: g for g in session.scalars(select(Gebiet))}
+    gesehen: set[str] = set()
     for d in ergebnis.loipen:
+        gesehen.add(d.source_key)
         gebiet = gebiete.get(d.gebiet_slug)
         if gebiet is None:
             lauf.warnungen.append(f"{d.name}: unbekanntes Gebiet {d.gebiet_slug}")
@@ -99,6 +106,9 @@ def rufe_quelle_ab(
                 quelle.key, d.name, feld, roh,
             )
         alt = letzter_zustand(session, loipe)
+        if not ergebnis.vollstaendig and d.status == Status.UNBEKANNT and alt is not None:
+            # B28: Seite mit dem Zustand fehlt in diesem Teillauf, der letzte bekannte Zustand bleibt stehen
+            continue
         zustand, neu = speichere_zustand(
             session,
             loipe,
@@ -120,8 +130,41 @@ def rufe_quelle_ab(
             ereignis = ereignis_fuer(loipe, alt, zustand)
             if ereignis:
                 lauf.ereignisse.append(ereignis)
+    if ergebnis.vollstaendig and lauf.gefunden > 0:
+        _blende_verschwundene_aus(session, quelle, gesehen, lauf, jetzt)
+    elif not ergebnis.vollstaendig:
+        lauf.warnungen.append("Nur ein Teil der Seiten lesbar; fehlende Loipen behalten ihren letzten Zustand")
     _monitoring(session, quelle, lauf, jetzt, time.monotonic() - start)
     return lauf
+
+
+def _aware(dt: datetime) -> datetime:
+    return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+
+
+def _blende_verschwundene_aus(session: Session, quelle: Quelle, gesehen: set[str], lauf: QuellenLauf,
+                              jetzt: datetime) -> None:
+    """B29: Loipen, die die Quelle seit VERSCHWUNDEN_STUNDEN nicht mehr fuehrt, nicht mehr zeigen.
+
+    Nur nach einem vollstaendigen Lauf ohne Fehler. Liefert die Quelle weniger als die Haelfte der bisher
+    gezeigten Loipen, ist eher die Seite kaputt als das Angebot geschrumpft (B26): dann wird nichts
+    ausgeblendet."""
+    aktive = session.scalars(select(Loipe).where(Loipe.quelle_id == quelle.id, Loipe.active)).all()
+    if len(gesehen) * 2 < len(aktive):
+        return
+    grenze = _aware(jetzt) - timedelta(hours=VERSCHWUNDEN_STUNDEN)
+    for loipe in aktive:
+        if loipe.source_key in gesehen:
+            continue
+        z = letzter_zustand(session, loipe)
+        zuletzt = (z.zuletzt_bestaetigt_at if z else None) or loipe.created_at
+        if zuletzt is not None and _aware(zuletzt) > grenze:
+            continue
+        loipe.active = False
+        lauf.ausgeblendet.append(loipe.name)
+    if lauf.ausgeblendet:
+        log.info("Quelle %s: %d Loipen nicht mehr gemeldet, ausgeblendet: %s", quelle.key,
+                 len(lauf.ausgeblendet), ", ".join(lauf.ausgeblendet))
 
 
 def _monitoring(session: Session, quelle: Quelle, lauf: QuellenLauf, jetzt: datetime, dauer_s: float) -> None:

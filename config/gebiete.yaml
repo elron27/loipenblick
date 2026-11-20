@@ -260,6 +260,9 @@ gebiete:
   name: Bad Wiessee
   hoehe_m: 730
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7163
+  lon: 11.7213
   tourist_url: https://www.tegernsee.com/bad-wiessee
   nachbarn:
   - gmund
@@ -276,6 +279,9 @@ gebiete:
   name: Gmund
   hoehe_m: 740
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.751
+  lon: 11.7385
   tourist_url: https://www.tegernsee.com/gmund
   nachbarn:
   - bad-wiessee
@@ -284,6 +290,9 @@ gebiete:
   name: Kreuth
   hoehe_m: 780
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.6403
+  lon: 11.7476
   tourist_url: https://www.tegernsee.com/kreuth
   nachbarn:
   - rottach-egern
@@ -356,6 +365,9 @@ gebiete:
   name: Rottach-Egern
   hoehe_m: 730
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.6905
+  lon: 11.769
   tourist_url: https://www.tegernsee.com/rottach-egern
   nachbarn:
   - kreuth
@@ -375,6 +387,9 @@ gebiete:
   name: Tegernsee
   hoehe_m: 735
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.711
+  lon: 11.758
   tourist_url: https://www.tegernsee.com
   nachbarn:
   - gmund
@@ -450,6 +465,9 @@ gebiete:
   name: Fischbachau
   hoehe_m: 780
   region: leitzachtal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7186
+  lon: 11.9516
   tourist_url: https://www.fischbachau.de
   nachbarn:
   - bayrischzell
@@ -490,6 +508,9 @@ gebiete:
   name: Sachrang
   hoehe_m: 740
   region: priental
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.695
+  lon: 12.266
   tourist_url: https://www.aschau.de
   parkplaetze: []
   nachbarn: []
@@ -526,6 +547,9 @@ gebiete:
   name: Ruhpolding
   hoehe_m: 690
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7613
+  lon: 12.6436
   tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
   nachbarn:
   - inzell
@@ -559,6 +583,9 @@ gebiete:
   name: Reit im Winkl
   hoehe_m: 700
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.677
+  lon: 12.471
   tourist_url: https://www.reitimwinkl.de/schneebericht
   nachbarn:
   - ruhpolding
@@ -597,6 +624,9 @@ gebiete:
   name: Inzell
   hoehe_m: 700
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.763
+  lon: 12.752
   tourist_url: https://www.inzell.de/schneebericht
   nachbarn:
   - ruhpolding
@@ -621,6 +651,9 @@ gebiete:
   name: Schleching
   hoehe_m: 560
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7225
+  lon: 12.394
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - reit-im-winkl
@@ -649,6 +682,9 @@ gebiete:
   name: Unterwössen
   hoehe_m: 550
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.73
+  lon: 12.462
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - schleching
@@ -689,6 +725,9 @@ gebiete:
   name: Marquartstein / Grassau
   hoehe_m: 540
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.77
+  lon: 12.458
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - unterwoessen
@@ -723,6 +762,9 @@ gebiete:
   name: Bergen
   hoehe_m: 600
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.809
+  lon: 12.59
   tourist_url: https://www.bergen-chiemgau.de/skilanglauf
   nachbarn:
   - siegsdorf
@@ -756,6 +798,9 @@ gebiete:
   name: Siegsdorf
   hoehe_m: 610
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.822
+  lon: 12.643
   tourist_url: https://www.siegsdorf.de/langlaufen
   nachbarn:
   - bergen
@@ -793,6 +838,9 @@ gebiete:
   name: Chieming
   hoehe_m: 530
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.889
+  lon: 12.523
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
   nachbarn: []
 - slug: kufstein

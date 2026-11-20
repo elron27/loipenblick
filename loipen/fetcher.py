@@ -1,6 +1,11 @@
 """Ruecksichtsvoll abrufen (P7): robots.txt beachten, Abstand pro Domain, eigener
 User-Agent mit Kontakt, Cache per ETag und Last-Modified.
 
+Aussetzer (B28): Bricht die Verbindung ab (z. B. "Server disconnected without sending a response", wenn der
+Server eine ruhende Keep-Alive-Verbindung schliesst), laeuft die Zeit ab oder antwortet der Server mit 429/502/503/504,
+wird die Seite bis zu WIEDERHOLUNGEN-mal erneut geholt. Die Wartezeit verdoppelt sich (2x, 4x der Abstand je Domain),
+Retry-After wird beachtet (hoechstens MAX_WARTEN_S).
+
 Testbetrieb: Mit `umleitung` (LOIPEN_UMLEITUNG, z. B. http://attrappe:8080) gehen alle Abrufe an
 diesen Server statt ins Netz, aus https://host/pfad?q wird <umleitung>/host/pfad?q. So laeuft der
 ganze Stack in der CI gegen die gespeicherten Beispielseiten (tests/stack, docs/testumgebung.md).
@@ -15,6 +20,10 @@ from urllib.parse import urlsplit
 import httpx
 
 log = logging.getLogger("loipen.fetcher")
+
+WIEDERHOLUNGEN = 2  # also hoechstens 3 Versuche je Seite
+WIEDERHOLEN_BEI = frozenset({429, 502, 503, 504})
+MAX_WARTEN_S = 120.0
 
 
 class RobotsVerbot(Exception):
@@ -39,12 +48,14 @@ class HoeflicherFetcher:
         clock: Callable[[], float] = time.monotonic,
         timeout_s: float = 30.0,
         umleitung: str | None = None,
+        wiederholungen: int = WIEDERHOLUNGEN,
     ):
         self.umleitung = umleitung.rstrip("/") if umleitung else None
         if self.umleitung:
             log.warning("Testbetrieb: alle Abrufe gehen an %s statt an die echten Quellen", self.umleitung)
         self.user_agent = user_agent
         self.delay_s = delay_s
+        self.wiederholungen = wiederholungen
         self._sleep = sleep
         self._clock = clock
         self._client = httpx.Client(
@@ -86,7 +97,7 @@ class HoeflicherFetcher:
             self._warte(host, self.delay_s)
             parser = urllib.robotparser.RobotFileParser()
             try:
-                antwort = self._client.get(f"{host}/robots.txt")
+                antwort = self._senden(f"{host}/robots.txt")
             except httpx.HTTPError as e:
                 log.warning("robots.txt von %s nicht lesbar: %s", host, e)
                 parser = None
@@ -114,11 +125,39 @@ class HoeflicherFetcher:
             raise RobotsVerbot(f"robots.txt verbietet {url}")
         self._warte(host, self.abstand_fuer(host))
 
+    def _wartezeit(self, url: str, versuch: int, antwort: httpx.Response | None) -> float:
+        """2x, dann 4x der Abstand der Domain (mindestens 1 s), bei Retry-After dessen Wert."""
+        warten = max(self.abstand_fuer(self._host(url)), 1.0) * 2 ** (versuch + 1)
+        nach = antwort.headers.get("Retry-After") if antwort is not None else None
+        if nach and nach.strip().isdigit():
+            warten = max(warten, float(nach))
+        return min(warten, MAX_WARTEN_S)
+
+    def _senden(self, url: str, kopf: dict[str, str] | None = None) -> httpx.Response:
+        """Ein GET mit Wiederholung bei Aussetzern (B28). Der letzte Fehler geht an den Aufrufer."""
+        versuch = 0
+        while True:
+            try:
+                antwort = self._client.get(url, headers=kopf)
+            except (httpx.TransportError, httpx.TimeoutException) as e:
+                if versuch >= self.wiederholungen:
+                    raise
+                warten = self._wartezeit(url, versuch, None)
+                log.warning("%s: %s, neuer Versuch in %.0f s", url, type(e).__name__, warten)
+            else:
+                if antwort.status_code not in WIEDERHOLEN_BEI or versuch >= self.wiederholungen:
+                    return antwort
+                warten = self._wartezeit(url, versuch, antwort)
+                log.warning("%s: HTTP %d, neuer Versuch in %.0f s", url, antwort.status_code, warten)
+            versuch += 1
+            self._sleep(warten)
+            self._letzter_abruf[self._host(url)] = self._clock()
+
     def get_bytes(self, url: str) -> bytes:
         """Wie get, aber fuer Binaerdateien (z. B. ZIP vom DWD). Ohne Cache."""
         url = self.ziel(url)
         self._vorbereiten(url)
-        antwort = self._client.get(url)
+        antwort = self._senden(url)
         if antwort.status_code >= 400:
             raise HttpFehler(url, antwort.status_code)
         return antwort.content
@@ -135,7 +174,7 @@ class HoeflicherFetcher:
             if modified:
                 kopf["If-Modified-Since"] = modified
 
-        antwort = self._client.get(url, headers=kopf)
+        antwort = self._senden(url, kopf)
         if antwort.status_code == 304 and zwischen:
             return zwischen[2]
         if antwort.status_code >= 400:
