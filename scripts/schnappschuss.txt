@@ -1,5 +1,7 @@
-# <zielpfad> <url> -- Runde 22 (19.11.2026): Karte maps.zillertal.at (contwise) fuer den Adapter zillertal (P35, nur Test)
-tests/fixtures/recherche-2026-11-19/zillertal/maps-v2.html https://maps.zillertal.at/v2/de/gdi_summer/2d/-1/category/10/47.22702939886733/11.937699793825114/18426/-1/false/-1/-1/-1/eyIxODM2MSI6eyJzdWJDYXQiOnsiaW5kZXhWYWx1ZSI6MTgzNjR9fX0=/
-tests/fixtures/recherche-2026-11-19/zillertal/embedded.bundle.js https://maps.zillertal.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-19/zillertal/maps-robots.txt https://maps.zillertal.at/robots.txt
-tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# <zielpfad> <url> -- Runde 23 (20.11.2026): Worker-Log vom NAS, Tegernsee-Abbruch und Achensee 0 Loipen (B28)
+tests/fixtures/tegernsee/2026-11-20/a-ringseeloipe-42-km-skating-u-klassisch.html https://www.tegernsee.com/a-ringseeloipe-42-km-skating-u-klassisch
+tests/fixtures/tegernsee/2026-11-20/a-rundkurs-point-skating-u-klassisch.html https://www.tegernsee.com/a-rundkurs-point-skating-u-klassisch
+tests/fixtures/achensee/2026-11-20/schneebericht.html https://www.achensee.com/de/live/schneebericht/
+tests/fixtures/achensee/2026-11-20/schneebericht-ohne-slash.html https://www.achensee.com/de/live/schneebericht
+tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
+tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
