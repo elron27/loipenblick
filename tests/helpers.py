@@ -94,6 +94,8 @@ SEITEN_QUELLEN = {
     "kufsteinerland": {"de/schneebericht.html": "2026-11-13/schneebericht.html"},
     "st-anton": {"de/service/aktueller-loipenzustand": "2026-11-13/aktueller-loipenzustand.html"},
     "nassfeld-nlw": {"sportbericht/print/wintersportbericht-nps.pdf": "2026-11-13/wintersportbericht-nps.pdf"},
+    "zugspitzarena": {"zugspitzarena/snowreport_zugspitzarena.aspx?lang=de": "2026-11-19/snowreport.html"},
+    "osttirol": {"aktiv-outdoor/langlaufen-und-biathlon/alle-loipen": "2026-11-19/alle-loipen.html"},
     "kaiserwinkl": {"de/langlaufen-tirol/geoeffnete-loipen.html": "2026-11-13/geoeffnete-loipen.html"},
     # Listen vom 13.11. (mit Laenge, Stil je Eintrag; 12 offene Loipen), Detailseiten vom 12.11.
     "tirol": {TIROL_LISTE: "2026-11-13/loipen.html",

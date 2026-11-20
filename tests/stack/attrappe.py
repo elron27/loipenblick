@@ -166,14 +166,16 @@ class Attrappe(http.server.BaseHTTPRequestHandler):
                     if t.path.lower().endswith(".pdf"):  # PDF-Berichte (P28) unveraendert ausliefern
                         return self._sende(200, fetcher.get_bytes(url), "application/pdf")
                     text = fetcher.get(url)
-                except HttpFehler:
-                    return self._sende(404, "nicht in den Fixtures", "text/plain")
+                except HttpFehler:  # mehrere Quellen teilen sich einen Host (sdds4.intermaps.com: P32, P33)
+                    continue
                 if ZUSTAND.offen:
                     text = text.replace(GESCHLOSSEN, OFFEN)
                     # D19: eine Oeffnung mit Stand vom Fruehjahr waere unplausibel; die Attrappe meldet sie frisch
                     text = STAND.sub(datetime.now().strftime("aktualisiert am %d.%m.%y um %H:%M Uhr"), text)
                 typ = "application/json" if text.lstrip().startswith(("{", "[")) else "text/html; charset=utf-8"
                 return self._sende(200, text, typ)
+        if any(voll == p or voll.startswith(p + "/") for p, _, _ in self.quellen):
+            return self._sende(404, "nicht in den Fixtures", "text/plain")
         return self._sende(404, f"Attrappe kennt {host} nicht", "text/plain")
 
 

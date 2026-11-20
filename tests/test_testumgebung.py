@@ -88,5 +88,6 @@ def test_worker_ablauf_gegen_die_attrappe(session, server):
         + 108 + 36 + 39 + 15 + 42 + 42 + 340 + 15 + 6 + 89 \
         + 7 + 6 + 10 \
         + 6 + 14 + 11 + 11 + 10 + 20 \
-        + 40 + 7 + 7  # P31: Oetztal bis Paznaun; P32: Innsbruck, Hall-Wattens, Silberregion Karwendel
+        + 40 + 7 + 7 \
+        + 59 + 21  # P31: Oetztal bis Paznaun; P32: Innsbruck, Hall-Wattens, Silberregion Karwendel; P33: Osttirol, Zugspitz Arena
     assert session.scalar(select(func.count()).select_from(Wetter)) == wetter.messungen + wetter.vorhersagen

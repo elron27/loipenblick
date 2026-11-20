@@ -4,9 +4,11 @@ from loipen.adapters.aschau import AschauAdapter
 from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
 from loipen.adapters.intermaps import IntermapsAdapter
+from loipen.adapters.intermaps_schneebericht import IntermapsSchneeberichtAdapter
 from loipen.adapters.kaernten import NlwBerichtAdapter
 from loipen.adapters.kitzalps import KitzAlpsAdapter
 from loipen.adapters.langlaufdorf import LanglaufdorfAdapter
+from loipen.adapters.osttirol import OsttirolAdapter
 from loipen.adapters.schweiz import MySwitzerlandAdapter
 from loipen.adapters.seefeld import SeefeldAdapter
 from loipen.adapters.stammdaten import StammdatenAdapter
@@ -39,4 +41,6 @@ ADAPTERS: dict[str, Adapter] = {
     "serfaus": SerfausAdapter(), "paznaun": PaznaunAdapter(),
     # P32 (E-24): Ortsseiten Innsbruck, Hall-Wattens, Silberregion Karwendel
     "intermaps": IntermapsAdapter(), "tourismus_mco": TourismusMcoAdapter(),
+    # P33: Osttirol, Zugspitz Arena (E-24)
+    "osttirol": OsttirolAdapter(), "intermaps_schneebericht": IntermapsSchneeberichtAdapter(),
 }

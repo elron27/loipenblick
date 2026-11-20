@@ -139,7 +139,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "st-anton", "nassfeld-nlw", "steiermark",
         "alpbachtal", "wildschoenau", "wilderkaiser",
         "oetztal", "pitztal", "tiroler-oberland", "nauders", "serfaus-fiss-ladis", "paznaun",
-        "innsbruck", "hall-wattens", "silberregion-karwendel"}  # P32
+        "innsbruck", "hall-wattens", "silberregion-karwendel",  # P32
+        "osttirol", "zugspitzarena"}  # P33
 
 
 @pytest.mark.req("U6", ak=1)

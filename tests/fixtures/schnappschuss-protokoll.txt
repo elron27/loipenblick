@@ -658,6 +658,51 @@ ROBOTS-VERBOT https://www.val-gardena.com/de/winter/aktivitaeten/langlauf/
 200   240290 tests/fixtures/recherche-2026-11-19/p34/alpbachtal/agb.html https://www.alpbachtal.at/de/info-und-service/agb
 200 https://www.wildschoenau.com/robots.txt
 200   179185 tests/fixtures/recherche-2026-11-19/p34/wildschoenau/impressum.html https://www.wildschoenau.com/de/info-service/impressum
+# Lauf 2026-11-19 14:44 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.osttirol.com/robots.txt
+200   471732 tests/fixtures/osttirol/2026-11-19/alle-loipen.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/alle-loipen
+200   162410 tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-sonnenloipe-sillian.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/sonnenloipe-sillian
+200   135543 tests/fixtures/recherche-2026-11-19/p33/osttirol/impressum.html https://www.osttirol.com/weitere-links/impressum
+200   161762 tests/fixtures/recherche-2026-11-19/p33/osttirol/agb.html https://www.osttirol.com/weitere-links/aufenthaltsabgabe-und-agbs
+200   160907 tests/fixtures/recherche-2026-11-19/p33/osttirol/schneebericht.html https://www.osttirol.com/service/schneebericht-und-schneekommunikation
+404 https://sdds4.intermaps.com/robots.txt
+200    74397 tests/fixtures/recherche-2026-11-19/p33/intermaps/osttirol-overview.html https://sdds4.intermaps.com/osttirol/osttirol_overview_report.aspx?lang=de
+200    52253 tests/fixtures/recherche-2026-11-19/p33/intermaps/zugspitzarena-snowreport.html https://sdds4.intermaps.com/zugspitzarena/snowreport_zugspitzarena.aspx?lang=de
+200   284609 tests/fixtures/recherche-2026-11-19/p33/intermaps/tza.html https://sdds4.intermaps.com/TZA/tza.aspx?lang=de
+200 https://zugspitzarena.com/robots.txt
+200   525827 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/geoeffnete-anlagen.html https://zugspitzarena.com/de/Info-Service/geoeffnete-anlagen
+200   583682 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/langlaufen.html https://zugspitzarena.com/de/winter-erlebnis/langlaufen
+200   470088 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/impressum.html https://zugspitzarena.com/de/Impressum
+200   471958 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/agb.html https://zugspitzarena.com/de/AGB
+200 https://www.lechtal.at/robots.txt
+200   119810 tests/fixtures/recherche-2026-11-19/p33/lechtal/langlaufstrecken.html https://www.lechtal.at/de/aktivitaeten/langlaufstrecken.html
+200    85679 tests/fixtures/recherche-2026-11-19/p33/lechtal/tours.xml https://www.lechtal.at/de/tours.xml
+200   110657 tests/fixtures/recherche-2026-11-19/p33/lechtal/infrastructure.xml https://www.lechtal.at/de/infrastructure.xml
+200   200667 tests/fixtures/recherche-2026-11-19/p33/lechtal/impressum.html https://www.lechtal.at/de/impressum.html
+200   441136 tests/fixtures/recherche-2026-11-19/p33/lechtal/orte.html https://www.lechtal.at/de/region/orte/alle-orte-im-lechtal.html
+200 https://www.reutte.com/robots.txt
+200   263411 tests/fixtures/recherche-2026-11-19/p33/reutte/start.html https://www.reutte.com/
+200      412 tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.xml https://www.reutte.com/sitemap.xml
+200 https://www.holzgau.at/robots.txt
+200   130538 tests/fixtures/recherche-2026-11-19/p33/holzgau/start.html https://www.holzgau.at/
+# Lauf 2026-11-19 14:46 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.reutte.com/robots.txt
+200   164665 tests/fixtures/recherche-2026-11-19/p33/reutte/langlaufen.html https://www.reutte.com/de/erleben/sport-und-freizeitaktivitaeten/langlaufen
+200   151379 tests/fixtures/recherche-2026-11-19/p33/reutte/impressum.html https://www.reutte.com/de/service/impressum
+200   135613 tests/fixtures/recherche-2026-11-19/p33/reutte/agb.html https://www.reutte.com/de/agb
+200    49101 tests/fixtures/recherche-2026-11-19/p33/reutte/sitemap.default.xml https://www.reutte.com/sitemap.default.xml
+200 https://www.lechtal.at/robots.txt
+200   593319 tests/fixtures/recherche-2026-11-19/p33/lechtal/ort-holzgau.html https://www.lechtal.at/de/region/orte/holzgau.html
+200 https://maps.lechtal.at/robots.txt
+200     2879 tests/fixtures/recherche-2026-11-19/p33/lechtal/karte-v2.html https://maps.lechtal.at/v2/
+200 https://www.holzgau.at/robots.txt
+200   110540 tests/fixtures/recherche-2026-11-19/p33/holzgau/impressum.html https://www.holzgau.at/impressum-datenschutz/
+200 https://zugspitzarena.com/robots.txt
+200      524 tests/fixtures/recherche-2026-11-19/p33/zugspitzarena/sitemap.xml https://zugspitzarena.com/sitemap.xml
+# Lauf 2026-11-19 14:49 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.osttirol.com/robots.txt
+200   160873 tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-uebungsrunde-peterer-feld.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/uebungsrunde-peterer-feld
+200   162151 tests/fixtures/recherche-2026-11-19/p33/osttirol/detail-verbindungsloipe-dorf-gries.html https://www.osttirol.com/aktiv-outdoor/langlaufen-und-biathlon/detail/verbindungsloipe-dorf-gries
 # Lauf 2026-11-19 14:51 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.zillertal.at/robots.txt
 200    37405 tests/fixtures/recherche-2026-11-19/zillertal/langlaufloipen.html https://www.zillertal.at/winter/aktivitaeten/abseits-der-piste/langlaufloipen.html

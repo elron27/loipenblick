@@ -1,0 +1,9 @@
+User-Agent: *
+
+# Achtung bei livegang NICHTS mehr ändern, "Disallow:" passt so und erlaubt den zugriff des crawlers! 
+Disallow:                                  
+
+
+Sitemap: https://www.osttirol.com/sitemap.xml
+Sitemap: https://www.osttirol.com/en/sitemap.xml
+Sitemap: https://www.osttirol.com/it/sitemap.xml
