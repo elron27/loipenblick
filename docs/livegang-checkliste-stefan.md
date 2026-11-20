@@ -27,6 +27,8 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 13. **UptimeRobot** (Monitor auf `https://<domain>/`) und **Healthchecks.io** (Ping-URL in die `.env`) anlegen.
 14. **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen (die Seite sperrt automatische Abrufe), Ergebnis in den Thread schreiben.
 
+14a. **Spendenlink (wenn gewünscht).** Unter [paypal.com/paypalme](https://www.paypal.com/paypalme) mit dem eigenen PayPal-Konto einen Link anlegen (z. B. `paypal.me/Loipenblick`), dann in die NAS-`.env` die Zeile `LOIPEN_SPENDEN_URL=https://paypal.me/<Name>` eintragen und den Container neu erstellen. Auf der Testadresse prüfen: Fußzeile, „Hinweise und Betreiber“, Datenschutz. Hintergrund und Vergleich mit Buy Me a Coffee in [livegang.md](livegang.md), Abschnitt „Spendenlink“. Bei eigenem Datenschutztext den Baustein für PayPal ergänzen.
+
 ## Bis Freitag, 11.12.
 
 15. **Antworten der Quellen entscheiden:** Ja → bleibt. Nein → abschalten. Keine Antwort → zeigen mit Quellenhinweis oder bis zur Antwort abschalten.
