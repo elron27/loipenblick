@@ -932,3 +932,12 @@ NICHT ERREICHBAR https://en.schwangau.de: FEHLER <urlopen error [SSL: CERTIFICAT
 200    43237 tests/fixtures/recherche-2026-11-20/isny/impressum.html https://www.isny.de/impressum/
 404 https://sdds4.intermaps.com/robots.txt
 200    65507 tests/fixtures/recherche-2026-11-20/intermaps/hoernerdoerfer.html https://sdds4.intermaps.com/hoernerdoerfer_srm/hoernerdoerfer.aspx
+# Lauf 2026-11-20 07:19 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://opendata.dwd.de/robots.txt
+200  6643485 tests/fixtures/recherche-2026-11-20/dwd/RR_Tageswerte_Beschreibung_Stationen.txt https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/more_precip/recent/RR_Tageswerte_Beschreibung_Stationen.txt
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     2466 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_allgaeu.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=174,11311,8301&start=2026-10-29T00:00&end=2026-11-11T00:00
+200 https://www.isny.de/robots.txt
+200    59009 tests/fixtures/recherche-2026-11-20/isny/schneehoehen-loipenbericht.html https://www.isny.de/freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+404 https://www.scheidegg.de/robots.txt
+404  1608519 tests/fixtures/recherche-2026-11-20/scheidegg/impressum.html https://www.scheidegg.de/impressum/
