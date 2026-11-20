@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"  >
+<head>
+	<title>Winter in Oberstdorf</title>
+	
+	<meta name="description" content="In Oberstdorf ist Winterurlaub mehr als nur ein Traum in Weiß. Hier erlebt man gipfelwei(s)se Schnee- und Eisvergnügen in allen Facetten. Skifahren, Snowboarden, Winterwandern, Langlaufen, Rodeln im 2-Länder-Gebiet Oberstdorf - Kleinwalsertal.">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=1020">
+	<link rel="canonical" href="https://www.oberstdorf.de/winter/">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://storage.tramino.net/oberstdorf/1266318/16.png?r=1">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://storage.tramino.net/oberstdorf/1266318/32.png?r=1">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://storage.tramino.net/oberstdorf/1266318/180.png?r=1">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="/tramino/css/base.css?r=57" type="text/css" media="all"  >
+	<link rel="stylesheet" href="/tramino/css/form.css?r=57" type="text/css" media="all"  >
+	<link rel="stylesheet" href="/tramino/css/gui.css?r=57" type="text/css" media="all"  >
+	<link rel="stylesheet" href="https://tramino.s3.amazonaws.com/css/2731_4.css?r=57" type="text/css" media="all"  >
+
+		<!-- Init Consent -->
+		<script>
+		localStorage.setItem("consentPermission","false");
+		window.ConsentChecksum = "a69b7510e8319c5d8ad200a4fe5f706d_v1";
+		window.consentCodeBuffer = window.consentCodeBuffer || [];
+
+		window.setConsentCookie = function( cvalue ) {
+			const d = new Date();
+			const cname = "Consent";
+			const exdays = 365;
+
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			let expires = "expires="+ d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		window.getConsentCookie = function( ) {
+			let cname = "Consent";
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(';');
+
+			for(let i = 0; i <ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+
+		window.deleteConsentCookie = function( ) {
+			let cname = "Consent";
+			document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		}
+
+		window.releaseConsentBuffer = function() {			
+
+			let buffer = window.consentCodeBuffer;
+			const tempContainer = document.createElement('div');
+
+			window.onerror = function (error, url, line, column, stack) {
+
+				let fetch_url = "/api/codes/error/?" + new URLSearchParams({
+					error_message: error,
+					error_url: url,
+				}).toString()
+
+				fetch(fetch_url).then(function(response) {
+				
+				}).catch(function(err) {
+
+				});
+	        };
+
+			for (var i = 0; i < buffer.length; i++) {
+				let code_element = buffer[i];
+
+				if ( code_element.released === true ) {
+					console.log("[releaseConsentBuffer] skip double execution");
+					continue;
+				}
+
+				if ( code_element.type == "javascript" ) {
+	
+					(function() {
+						code_element.callback.call();
+						//eval(code_element.callback);
+					})();
+
+				} else if ( code_element.type == "src" ) {
+					var s = document.createElement('script');
+					s.type = 'text/javascript';
+					s.async = true;
+					s.src = code_element.src;
+					document.body.appendChild(s);
+				}
+				else if ( typeof code_element.content == "string" ) {
+					
+					if ( code_element.content !== undefined  ) {
+						code_element.content = code_element.content.replace(/script_blocker/g, 'script');
+						tempContainer.innerHTML += code_element.content;
+					}
+					
+				}
+
+				code_element.released = true;
+			}
+
+			let code_items = tempContainer.children;	
+			
+
+			for (let child of Array.from(code_items) ) {
+			
+				let error;
+								
+				if ( child.tagName === 'SCRIPT' ) {
+					
+					const newScript = document.createElement('script');
+					if ( child.src ) {
+						// Externe Skripte
+						if (child.type) {
+							newScript.type = child.type; // Type übernehmen
+						}
+						newScript.async = true; // Standardmäßig async laden
+						newScript.src = child.src;
+					} else {
+						// Inline-Skripte
+						try {
+							newScript.textContent = child.textContent;
+						} catch ( err ) {
+		                	// console.log( "Code Error", err )
+		                }
+					}
+					document.body.appendChild(newScript);
+				} else {
+					document.body.appendChild(child);
+				}
+                
+
+               
+            
+			}
+
+			window.onerror = null;
+
+		}
+		window.runInlineScriptsConsent = function(container, html) {
+			const tpl = document.createElement('template');
+			tpl.innerHTML = html;
+
+			const scripts = tpl.content.querySelectorAll('script_blocker');
+
+			container.innerHTML = '';
+			container.appendChild(tpl.content);
+
+			scripts.forEach(oldScript => {
+				const s = document.createElement('script');
+
+				// Attribute kopieren (src, async, type, etc.)
+				for (const { name, value } of Array.from(oldScript.attributes)) {
+				s.setAttribute(name, value);
+				}
+
+				// Inline-Code kopieren
+				if (!oldScript.src) {
+				s.textContent = oldScript.textContent;
+				}
+
+				oldScript.replaceWith(s);
+			});
+		}
+		window.releaseInlineBlocks = function() {
+
+			if ( typeof window.runInlineScriptsConsent === "function" ) {
+				
+				const inlineblocks = document.querySelectorAll(".T330");
+
+				inlineblocks.forEach(block => {
+					const wrapper = block.querySelector(".placeholder");
+					if ( wrapper !== null ) {
+						if ( wrapper.dataset.script ) {
+							window.runInlineScriptsConsent(wrapper, wrapper.dataset.script);
+						}
+					}
+					
+				});
+
+
+			}
+
+		}
+		window.checkConsent = function() {
+
+			let consent_html = document.querySelector(".TraminoConsent");
+
+			if ( window.ConsentChecksum ) {
+				if ( window.getConsentCookie() == window.ConsentChecksum ) {
+						return true
+					}
+			}
+
+			if ( consent_html !== null ) {
+				if ( consent_html.dataset.checksum ) {
+					if ( window.getConsentCookie() == consent_html.dataset.checksum ) {
+						return true
+					}
+				}
+			}
+
+			return false;
+
+		}
+
+
+		window.checkReleaseConsent = function() {
+
+			if ( window.checkConsent() ) {
+				window.releaseConsentBuffer();
+				localStorage.setItem("consentPermission","true");
+				console.log("[checkReleaseConsent] granted - codes released");
+			} else {
+				localStorage.setItem("consentPermission","false");
+				console.log("[checkReleaseConsent] not granted");
+			}
+		
+		}
+
+		</script>
+		
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+
+		if( window.checkConsent() === false ) {
+
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': 'denied',
+				'personalization_storage': 'denied',
+				'functionality_storage': 'denied',
+				'security_storage': 'denied',
+			});
+
+
+		} else {
+			gtag('consent', 'default', {
+				'ad_storage': 'granted',
+				'ad_user_data': 'granted',
+				'ad_personalization': 'granted',
+				'analytics_storage': 'granted',
+				'personalization_storage': 'granted',
+				'functionality_storage': 'granted',
+				'security_storage': 'granted',
+			});
+		}
+	</script>
+	
+	
+	<script>var Tramino = {"request_id":"c18cb8ca5ba91e9c29f4a0c1012b8f9e","lang":"de","base":"","page":119220,"client":100,"destination":100};</script>
+	<script>window.TraminoReady=function(f){$(document).ready(f)}</script>
+	<script  src="https://storage.tramino.net/static/root/js/jquery.min.js?r=57" type="text/javascript" ></script>
+
+	
+	<meta http-equiv="refresh" content="5; URL=/">
+	
+
+<meta property="og:title" content="Winterurlaub in Oberstdorf im Allgäu">
+<meta property="og:description" content="Skifahren, Snowboarden, Winterwandern, Langlaufen, Rodeln inmitten der Allgäuer Alpen im 2-Länder-Gebiet Oberstdorf - Kleinwalsertal">
+<meta property="og:site_name" content="Tourismus Oberstdorf">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="https://www.oberstdorf.de/winter/">
+<meta property="og:image" content="https://storage.tramino.net/oberstdorf-marketing/993321/800.jpg?r=1">
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T9R8DD6');
+</script>
+
+<meta name="facebook-domain-verification" content="7jpqhdffllbdkfg9hscvjlpua7riaf"/>
+
+
+</head>
+<body >
+
+
+<div id="error">
+	<a href="/">
+		
+			<img src="https://storage.tramino.net/oberstdorf/1269192/150.png" alt="Oberstdorf Isologo"  title="Oberstdorf Isologo" width="150" height="95"   loading="lazy"  />
+		
+	</a>
+	<h1>Seite nicht gefunden</h1>
+	
+	<a href="/">Weiter zur Startseite</a>
+	
+</div>
+
+
+		<script>if ( typeof window.checkReleaseConsent == "function" ) { window.checkReleaseConsent(); }</script>
+	
+
+
+</body>
+</html>

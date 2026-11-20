@@ -819,3 +819,48 @@ ROBOTS-VERBOT https://maps.zillertal.at/embedded.bundle.js
 ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
 200 https://www.zillertal.at/robots.txt
 200   186392 tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# Lauf 2026-11-20 07:08 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.oberstdorf.de/robots.txt
+200   250033 tests/fixtures/recherche-2026-11-20/oberstdorf/wintersportbericht.html https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/
+200   169256 tests/fixtures/recherche-2026-11-20/oberstdorf/wm-loipen.html https://www.oberstdorf.de/winter/langlaufen/wm-loipen.html
+404     9410 tests/fixtures/recherche-2026-11-20/oberstdorf/langlaufen.html https://www.oberstdorf.de/winter/langlaufen.html
+200 https://www.nordic-zentrum-oberstdorf.de/robots.txt
+200   116192 tests/fixtures/recherche-2026-11-20/nordic-zentrum/start.html https://www.nordic-zentrum-oberstdorf.de/
+200 https://www.kleinwalsertal.com/robots.txt
+200   476275 tests/fixtures/recherche-2026-11-20/kleinwalsertal/cross-country.html https://www.kleinwalsertal.com/en/Activities/Winter/Cross-Country
+200   477374 tests/fixtures/recherche-2026-11-20/kleinwalsertal/langlaufen.html https://www.kleinwalsertal.com/de/Aktivitaeten/Winter/Langlaufen
+200   292709 tests/fixtures/recherche-2026-11-20/kleinwalsertal/poi-schwarzwasserloipe.html https://www.kleinwalsertal.com/en/poi/schwarzwasserloipe~1658
+200 https://www.hoernerdoerfer.de/robots.txt
+200   150893 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/start.html https://www.hoernerdoerfer.de/
+404    77966 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/langlaufen.html https://www.hoernerdoerfer.de/winter/langlaufen
+200 https://www.badhindelang.de/robots.txt
+200   201308 tests/fixtures/recherche-2026-11-20/badhindelang/start.html https://www.badhindelang.de/
+404   152666 tests/fixtures/recherche-2026-11-20/badhindelang/langlaufen.html https://www.badhindelang.de/winter/langlaufen
+200 https://www.oberstaufen.de/robots.txt
+200   256140 tests/fixtures/recherche-2026-11-20/oberstaufen/start.html https://www.oberstaufen.de/
+404   110872 tests/fixtures/recherche-2026-11-20/oberstaufen/langlaufen.html https://www.oberstaufen.de/winter/langlaufen
+200 https://www.pfronten.de/robots.txt
+200   154517 tests/fixtures/recherche-2026-11-20/pfronten/start.html https://www.pfronten.de/
+404   102966 tests/fixtures/recherche-2026-11-20/pfronten/langlaufen.html https://www.pfronten.de/aktiv/winter/langlaufen/
+200 https://www.nesselwang.de/robots.txt
+200   101764 tests/fixtures/recherche-2026-11-20/nesselwang/start.html https://www.nesselwang.de/
+200 https://fuessen.de/robots.txt
+200   322976 tests/fixtures/recherche-2026-11-20/fuessen/cross-country.html https://fuessen.de/en/cross-country-skiing
+200 https://www.fuessen.de/robots.txt
+404   355177 tests/fixtures/recherche-2026-11-20/fuessen/langlaufen.html https://www.fuessen.de/langlaufen
+NICHT ERREICHBAR https://en.schwangau.de: FEHLER <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'en.schwangau.de'. (_ssl.c:1011)>
+200 https://www.isny.de/robots.txt
+200    80433 tests/fixtures/recherche-2026-11-20/isny/start.html https://www.isny.de/
+200 https://www.allgaeu.de/robots.txt
+200   140775 tests/fixtures/recherche-2026-11-20/allgaeu/start.html https://www.allgaeu.de/
+404   104823 tests/fixtures/recherche-2026-11-20/allgaeu/langlaufen.html https://www.allgaeu.de/langlaufen
+200 https://www.wertach.de/robots.txt
+200   179008 tests/fixtures/recherche-2026-11-20/wertach/start.html https://www.wertach.de/
+200 https://www.balderschwang.de/robots.txt
+200   165622 tests/fixtures/recherche-2026-11-20/balderschwang/start.html https://www.balderschwang.de/
+200 https://www.sulzberg.at/robots.txt
+200     4509 tests/fixtures/recherche-2026-11-20/sulzberg/start.html https://www.sulzberg.at/
+404 https://www.scheidegg.de/robots.txt
+200  1710275 tests/fixtures/recherche-2026-11-20/scheidegg/start.html https://www.scheidegg.de/
+200 https://www.westallgaeu.de/robots.txt
+200   100407 tests/fixtures/recherche-2026-11-20/westallgaeu/start.html https://www.westallgaeu.de/

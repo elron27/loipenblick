@@ -1,0 +1,2 @@
+Sitemap: https://www.sulzberg.at/sitemap.xml
+Crawl-delay: 20
