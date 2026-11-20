@@ -819,10 +819,3 @@ ROBOTS-VERBOT https://maps.zillertal.at/embedded.bundle.js
 ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
 200 https://www.zillertal.at/robots.txt
 200   186392 tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
-# Lauf 2026-11-20 00:07 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
-200 https://maps.zillertal.at/robots.txt
-ROBOTS-VERBOT https://maps.zillertal.at/v2/de/gdi_summer/2d/-1/category/10/47.22702939886733/11.937699793825114/18426/-1/false/-1/-1/-1/eyIxODM2MSI6eyJzdWJDYXQiOnsiaW5kZXhWYWx1ZSI6MTgzNjR9fX0=/
-ROBOTS-VERBOT https://maps.zillertal.at/embedded.bundle.js
-ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
-200 https://www.zillertal.at/robots.txt
-200   186020 tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
