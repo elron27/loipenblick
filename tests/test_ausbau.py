@@ -19,8 +19,8 @@ from sqlalchemy import select
 from loipen import generator
 from loipen.ablauf import rufe_quelle_ab
 from loipen.dubletten import Eintrag, finde_dubletten, gleich
-from loipen.konfig import CONFIG_DIR, abgleichen, lade_yaml, pruefe
-from loipen.models import Gebiet, Quelle, Region
+from loipen.konfig import CONFIG_DIR, abgleichen, ausgeblendet, lade_yaml, pruefe
+from loipen.models import Gebiet, Loipe, Quelle, Region
 from loipen.zeitplan import ist_faellig
 from tests.helpers import FIXTURES, SEITEN_QUELLEN, STAND_QUELLEN, TIROL_LISTE, FixtureFetcher, lade_alle_fixtures
 
@@ -38,6 +38,13 @@ def sources() -> dict:
 
 def gebiete_yaml() -> dict:
     return lade_yaml(CONFIG_DIR / "gebiete.yaml")
+
+
+def ausgeblendete(session) -> int:
+    """B30: Loipen eingeschalteter Quellen in ausgeblendeten Gebieten zaehlen bei der Quelle, fehlen aber auf der Seite."""
+    gebiete_aus, loipen_aus = ausgeblendet(gebiete_yaml())
+    return sum(1 for l in session.scalars(select(Loipe).where(Loipe.active)) if l.quelle.enabled
+               and (l.gebiet.slug in gebiete_aus or (l.gebiet.slug, l.name) in loipen_aus))
 
 
 def quellen() -> list[dict]:
@@ -244,7 +251,7 @@ def test_d15_echte_dublette_steht_einmal_in_den_daten(session, site):
     index = lies(site, "daten.json")
     # tirol.at fuehrt Bayrischzell und die Kitzbueheler Gebiete mit: gut 50 Dubletten, jede einmal gezeigt
     assert index["dubletten"] >= 50 and index["kennzahlen"]["loipen"] == len(namen)
-    assert sum(q["anzahl"] for q in index["quellen"]) - index["dubletten"] == len(namen)
+    assert sum(q["anzahl"] for q in index["quellen"]) - ausgeblendete(session) - index["dubletten"] == len(namen)
 
 
 @pytest.mark.req("D15", ak=2)
@@ -284,7 +291,8 @@ def test_p15_loipen_von_tirol_at_und_kitzbuehel_erscheinen_einmal(session, tmp_p
     # tirol.at fuehrt (Rang 3 vor 4) und traegt den Kitzbueheler Eintrag als "auch bei"
     assert doppelt and all(l["quelle"]["name"].startswith("Tirol") for l in doppelt)
     assert all(a["quelle"] == "Kitzbüheler Alpen Loipenstatus" for l in doppelt for a in l["auch_bei"])
-    assert index["kennzahlen"]["loipen"] == sum(q["anzahl"] for q in index["quellen"]) - index["dubletten"]
+    assert index["kennzahlen"]["loipen"] == (sum(q["anzahl"] for q in index["quellen"]) - ausgeblendete(session)
+                                             - index["dubletten"])
 
 
 # ---------- P13: neue Region, Abdeckung ----------

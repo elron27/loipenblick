@@ -146,8 +146,9 @@ def test_wetter_landet_mit_quelle_in_der_seite():
     gebiete = [g for r in index["regionen"] for g in http_json(f"{VORSCHAU}/{r['datei']}")["gebiete"]]
     import yaml
 
-    mit_station = {g["slug"] for g in yaml.safe_load((ROOT / "config" / "gebiete.yaml").read_text(encoding="utf-8"))["gebiete"]
-                   if g.get("wetterstation")}
+    konfig = yaml.safe_load((ROOT / "config" / "gebiete.yaml").read_text(encoding="utf-8"))
+    aus = set((konfig.get("ausgeblendet") or {}).get("gebiete") or {})  # B30: ausgeblendete Gebiete fehlen
+    mit_station = {g["slug"] for g in konfig["gebiete"] if g.get("wetterstation") and g["slug"] not in aus}
     mit_schnee = [g for g in gebiete if g["schnee"]["schneehoehe_cm"] is not None]
     assert {g["slug"] for g in mit_schnee} == mit_station
     mit_position = [g for g in gebiete if g["lat"] is not None]
