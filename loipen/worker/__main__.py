@@ -141,7 +141,7 @@ def rechtliches(settings) -> dict:
             log.exception("Datenschutztext %s nicht lesbar, nehme die Vorlage", settings.datenschutz_datei)
     return {"name": settings.impressum_name, "anschrift": settings.impressum_anschrift,
             "email": settings.impressum_email, "hoster": settings.hoster, "log_tage": settings.log_tage,
-            "datenschutz_html": text}
+            "datenschutz_html": text, "spenden_url": getattr(settings, "spenden_url", None)}
 
 
 def hochladen(settings, **kw) -> tuple[str, str] | None:
