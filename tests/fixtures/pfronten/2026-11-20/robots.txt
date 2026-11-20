@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.pfronten.de/sitemap.xml
+Sitemap: https://www.pfronten.de/accommodations-sitemap.xml
+Sitemap: https://www.pfronten.de/events-sitemap.xml
+
+# Feratel Sitemap examples
+# Sitemap: https://webapi.deskline.net/pfronten/de/accommodations/sitemap.xml?baseurl=https://www.pfronten.de/unterkuenfte-in-pfronten/&changefreq=daily&priority=0.9

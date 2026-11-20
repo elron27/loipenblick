@@ -1,8 +1,10 @@
 """Registry der Adapter. Neue Adapter werden hier eingetragen (P1)."""
 
+from loipen.adapters.allgaeu_orte import FuessenAdapter, IntermapsListeAdapter, KleinwalsertalAdapter, TraminoBoxAdapter
 from loipen.adapters.aschau import AschauAdapter
 from loipen.adapters.ats import AtsAdapter
 from loipen.adapters.base import Adapter
+from loipen.adapters.eopoi import EoPoiAdapter
 from loipen.adapters.intermaps import IntermapsAdapter
 from loipen.adapters.intermaps_schneebericht import IntermapsSchneeberichtAdapter
 from loipen.adapters.kaernten import NlwBerichtAdapter
@@ -23,6 +25,7 @@ from loipen.adapters.pitztal import PitztalAdapter
 from loipen.adapters.serfaus import SerfausAdapter
 from loipen.adapters.tiroler_oberland import TirolerOberlandAdapter
 from loipen.adapters.tourismus_mco import TourismusMcoAdapter
+from loipen.adapters.tramino_wsb import TraminoWsbAdapter
 from loipen.adapters.tvb_tirol import AchenseeAdapter, KaiserwinklAdapter, SkidataAdapter, StAntonAdapter
 from loipen.adapters.wilderkaiser import WilderKaiserAdapter
 
@@ -43,4 +46,7 @@ ADAPTERS: dict[str, Adapter] = {
     "intermaps": IntermapsAdapter(), "tourismus_mco": TourismusMcoAdapter(),
     # P33: Osttirol, Zugspitz Arena (E-24)
     "osttirol": OsttirolAdapter(), "intermaps_schneebericht": IntermapsSchneeberichtAdapter(),
+    # P36: Allgaeu ueber Gemeinde- und Tourismusseiten (nur Test)
+    "tramino_wsb": TraminoWsbAdapter(), "tramino_box": TraminoBoxAdapter(), "eopoi": EoPoiAdapter(),
+    "kleinwalsertal": KleinwalsertalAdapter(), "fuessen": FuessenAdapter(), "intermaps_liste": IntermapsListeAdapter(),
 }
