@@ -15,6 +15,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | `liegt_vor` | Betreiber hat zugestimmt (Datum und Wortlaut in der Notiz unten) | wird gezeigt |
 | `ausstehend` | angefragt oder Anfrage geplant; Nutzungsbedingungen verbieten die Übernahme nicht ausdrücklich | wird mit Quellenhinweis gezeigt (Regel aus der Livegang-Planung: bei Schweigen bis 11.12. mit Quellenhinweis zeigen) |
 | `nur_test` | Nutzungsbedingungen verbieten Übernahme/Speichern ohne Einwilligung, oder noch nicht geprüft | wird **nicht** gezeigt |
+| `abgelehnt` | Betreiber hat der Übernahme widersprochen (B30) | wird **nie** abgerufen und **nirgends** gezeigt, auch nicht in der Testversion; Gebiete, deren Loipen auch über andere Quellen kommen, stehen in `config/gebiete.yaml` unter `ausgeblendet` |
 
 ## 1. Quellbetreiber mit Loipendaten
 
@@ -28,7 +29,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | Chiemgau GmbH (Chiemgau Tourismus) | tourinfra Loipenmanager Chiemgau (Ruhpolding, Reit im Winkl, Inzell, Achental u. a.) | Loipenstatus, Strecken | Martina Tremel, Digitale Medien, Martina.Tremel@chiemgau.bayern | angefragt, **Antwort 20.11.2026: vorerst keine Freigabe** | Fragt, ob wir eine tourinfra-Schnittstelle nutzen oder Seiten auslesen; klärt intern und mit dem Systemanbieter (green-solutions). Bitte: Loipenmanager-Daten vorerst nicht übernehmen. Seit 20.11. `nur_test`. Antwortentwurf im Projekt-Thread "Chiemgau-Rückfrage". |
 | TVB Tannheimer Tal | tourinfra Loipenmanager | Loipenstatus, Strecken | info@tannheimertal.com | angefragt 19.11.2026 | |
 | TVB Olympiaregion Seefeld | seefeld.com, tourinfra | Loipenstatus, gespurte km | region@seefeld.com | angefragt 19.11.2026 | deckt beide Seefeld-Quellen ab |
-| TVB Achensee | achensee.com | Schneebericht | info@achensee.com | angefragt 19.11.2026 | |
+| TVB Achensee (Achensee Tourismus) | achensee.com; Gebiete Achensee (Maurach, Pertisau, Wiesing) und Steinberg am Rofan (Achenkirch, Steinberg) | Schneebericht | Martina Unterberger, Welcome-CENTER Achensee, info@achensee.com | angefragt 19.11.2026, **abgelehnt am 20.11.2026** | Wortlaut: „Wir stimmen dem automatisierten Abruf und der Übernahme unserer Loipendaten jedoch nicht zu. Bitte sehen Sie daher von einer Verwendung unserer Daten auf Ihrer Website ab.“ Seit 20.11. `erlaubnis: abgelehnt`, Quelle aus (B30, E-30). Die Gebiete `achensee` und `steinberg-rofan` sowie die Wiesinger Loipe „W1 - Loipe Buchbergl“ sind auch für tirol.at-Daten ausgeblendet, bis geklärt ist, ob Tirol Werbung diese Daten weitergeben darf. Rückgängig: Einträge unter `ausgeblendet` in `config/gebiete.yaml` löschen. Antwort- und Nachfrage-Entwurf im Projekt-Thread „Achensee nach Absage abschalten“. |
 | TVB Kufsteinerland | kufstein.com | Schneebericht | info@kufstein.com | angefragt 19.11.2026 | |
 | TVB Kaiserwinkl | kaiserwinkl.com | Loipenbericht | info@kaiserwinkl.com | angefragt 19.11.2026, **Antwort 19.11.** (fragt nach Schnittstelle) | Antwortentwurf: livegang/vorbereitung/antwort-schnittstelle.md |
 | Kitzbüheler Alpen | kitzbueheler-alpen.com | Loipenstatus | Adresse fehlt (Impressum) | **nicht angefragt** | Mail lag ohne Adresse bereit |

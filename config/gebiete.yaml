@@ -12,6 +12,15 @@
 # namen: weitere Namen je Sprache (P12), z. B. {it: Dobbiaco}.
 # Ausbaustufe 1 (E-15, Stand 12.11.2026): Gebietsmitten aus den Loipenstarts von tirol.at bzw.
 # berchtesgaden.de, Hoehen aus OpenStreetMap gerundet.
+# ausgeblendet (B30 AK 3, E-30): Gebiete und einzelne Loipen, die die Seite in keiner Version zeigt (auch nicht
+# in der Testversion), gleich welche Quelle sie liefert. Zum Rueckgaengigmachen den Eintrag loeschen.
+ausgeblendet:
+  gebiete:
+    achensee: "Achensee Tourismus hat der Übernahme seiner Loipendaten am 20.11.2026 widersprochen; dieselben Loipen kommen auch über tirol.at."
+    steinberg-rofan: "Achenkirch und Steinberg am Rofan gehören zu Achensee Tourismus (Widerspruch vom 20.11.2026)."
+  loipen:
+  # Wiesing gehoert zu Achensee Tourismus; tirol.at ordnet die Loipe nach der Lage dem Alpbachtal zu
+  - {gebiet: alpbachtal, name: "W1 - Loipe Buchbergl", grund: "Loipe in Wiesing, Gebiet von Achensee Tourismus (Widerspruch vom 20.11.2026)."}
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal

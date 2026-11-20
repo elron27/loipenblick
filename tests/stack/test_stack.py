@@ -43,7 +43,7 @@ NTFY = f"http://localhost:{ENV['NTFY_PORT']}"
 THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
 QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
            "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6,
-           "tannheimer": 21, "seefeld": 49, "achensee": 24, "kufsteinerland": 22, "kaiserwinkl": 23,
+           "tannheimer": 21, "seefeld": 49, "kufsteinerland": 22, "kaiserwinkl": 23,
            "dolomiti-nordicski": 118, "opendatahub": 190,
            "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
            "myswitzerland": 340, "st-anton": 15, "nassfeld-nlw": 6, "steiermark": 89,
@@ -55,6 +55,8 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            # P38: Allgaeu ueber Ortsseiten
            "oberstdorf": 14, "wertach": 3, "pfronten": 10, "kleinwalsertal": 19, "fuessen": 3, "isny": 12,
            "hoernerdoerfer": 26}
+# B30: tirol.at-Loipen in den Gebieten von Achensee Tourismus (Achensee 12, Steinberg am Rofan 11, Wiesing 1)
+AUSGEBLENDET = 24
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 
@@ -132,7 +134,7 @@ def test_start_lauf_holt_alle_quellen_und_erzeugt_die_seite():
         assert quellen[key]["status"] in ("ok", "warnung"), quellen[key]
     # D15: Hauswies-Runde (Bayrischzell/Fischbachau), Bayrischzell und Kitzbuehel auch bei tirol.at: einmal gezaehlt
     assert index["dubletten"] >= 50
-    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - AUSGEBLENDET - index["dubletten"]
     for region in index["regionen"]:
         daten = http_json(f"{VORSCHAU}/{region['datei']}")
         assert daten["gebiete"], region["slug"]
@@ -147,8 +149,9 @@ def test_wetter_landet_mit_quelle_in_der_seite():
     gebiete = [g for r in index["regionen"] for g in http_json(f"{VORSCHAU}/{r['datei']}")["gebiete"]]
     import yaml
 
-    mit_station = {g["slug"] for g in yaml.safe_load((ROOT / "config" / "gebiete.yaml").read_text(encoding="utf-8"))["gebiete"]
-                   if g.get("wetterstation")}
+    konfig = yaml.safe_load((ROOT / "config" / "gebiete.yaml").read_text(encoding="utf-8"))
+    aus = set((konfig.get("ausgeblendet") or {}).get("gebiete") or {})  # B30: ausgeblendete Gebiete fehlen
+    mit_station = {g["slug"] for g in konfig["gebiete"] if g.get("wetterstation") and g["slug"] not in aus}
     mit_schnee = [g for g in gebiete if g["schnee"]["schneehoehe_cm"] is not None]
     assert {g["slug"] for g in mit_schnee} == mit_station
     mit_position = [g for g in gebiete if g["lat"] is not None]
@@ -226,7 +229,7 @@ def test_neustart_und_update_behalten_die_daten():
     assert nachher["loipen"] == vorher["loipen"]  # keine doppelten Loipen nach dem Neustart
     assert nachher["zustaende"] >= vorher["zustaende"]
     index = http_json(f"{VORSCHAU}/daten.json")
-    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - AUSGEBLENDET - index["dubletten"]
 
 
 def test_bildschirmfotos_der_vorschau():

@@ -396,12 +396,13 @@ def test_u15_jede_gebietsseite_zeigt_mindestens_3_tage_vorhersage(seite):
 
 
 def test_talprofil_nadelhoehe_folgt_der_ortshoehe(seite):
-    """Hoeherer Ort steht weiter oben (kleineres y): Achensee 950 m ueber Bayrischzell 800 m."""
+    """Hoeherer Ort steht weiter oben (kleineres y): Alpbachtal 1000 m ueber Bayrischzell 800 m
+    (Achensee ist seit B30 ausgeblendet)."""
     seite.open("#/?demo=1")
     seite.wait_for_selector("svg .s-l", state="attached")
     y = seite.evaluate("""() => Object.fromEntries([...document.querySelectorAll('svg a')].map(a =>
         [a.querySelector('text').textContent, +a.querySelector('line').getAttribute('y1')]))""")
-    assert y["Achensee"] < y["Bayrischzell"]
+    assert y["Alpbachtal"] < y["Bayrischzell"]
     assert y["Kreuth"] < y["Bad Wiessee"]  # 780 m gegen 730 m
 
 

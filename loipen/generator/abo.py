@@ -12,6 +12,7 @@ from pathlib import Path
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from loipen.konfig import CONFIG_DIR, ausgeblendet, lade_yaml
 from loipen.mailabo import AboKonfig
 from loipen.models import Gebiet, Loipe
 
@@ -27,11 +28,18 @@ def php_array(d: dict[str, str]) -> str:
     return "<?php\n// Erzeugt vom NAS bei jedem Lauf. Nicht von Hand aendern.\nreturn [\n" + zeilen + "\n];\n"
 
 
-def ziele(session: Session) -> dict[str, str]:
+def ziele(session: Session, config_dir: Path = CONFIG_DIR) -> dict[str, str]:
+    """Was man abonnieren und melden kann. Ausgeblendete Gebiete und Loipen sowie abgelehnte Quellen
+    fehlen (B30), damit keine Mail ueber sie verschickt wird."""
+    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(config_dir / "gebiete.yaml"))
     z: dict[str, str] = {}
     for g in session.scalars(select(Gebiet).order_by(Gebiet.slug)):
-        z[f"g:{g.slug}"] = f"Alle Loipen im Gebiet {g.name}"
+        if g.slug not in gebiete_aus:
+            z[f"g:{g.slug}"] = f"Alle Loipen im Gebiet {g.name}"
     for l in session.scalars(select(Loipe).where(Loipe.active).order_by(Loipe.id)):
+        if (l.gebiet.slug in gebiete_aus or (l.gebiet.slug, l.name) in loipen_aus
+                or (l.quelle.config or {}).get("erlaubnis") == "abgelehnt"):
+            continue
         z[f"l:{l.id}"] = f"{l.name} ({l.gebiet.name})"
     return z
 

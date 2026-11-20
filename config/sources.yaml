@@ -24,7 +24,8 @@
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
 #            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
-#            erlaubnis: liegt_vor | ausstehend (Standard) | nur_test. nur_test = Betreiber hat nicht zugestimmt und
+#            erlaubnis: liegt_vor | ausstehend (Standard) | nur_test | abgelehnt. abgelehnt = Betreiber hat
+#            widersprochen: die Quelle wird nie abgerufen und nirgends gezeigt (B30). nur_test = Betreiber hat nicht zugestimmt und
 #            seine Bedingungen verbieten die Uebernahme; die Quelle laeuft nur in der Testversion und erscheint auf
 #            der oeffentlichen Seite (LOIPEN_OEFFENTLICH=true) nicht. Kontakte und Stand: docs/kontaktliste.md
 #   querpruefung: true = Ortsseite, die tirol.at gegenprueft (E-24). Mit rang 4 bleibt tirol.at fuehrend; meldet
@@ -237,14 +238,18 @@ quellen:
 
   # Weitere Tiroler Tourismusverbaende (P22, 13.11.2026): Status je Loipe mit Stand der Meldung, ohne
   # Koordinaten (Lage von tirol.at). Rang 2 vor tirol.at.
+  # Achensee Tourismus hat am 20.11.2026 schriftlich widersprochen ("stimmen dem automatisierten Abruf und der
+  # Uebernahme unserer Loipendaten nicht zu"). erlaubnis abgelehnt (B30, E-30): nie abrufen, nirgends zeigen,
+  # auch nicht in der Testversion. Die Gebiete achensee und steinberg-rofan sind in gebiete.yaml ausgeblendet.
   - key: achensee
+    enabled: false
     adapter: achensee
     name: Achensee Tourismus (Schneebericht)
     base_url: https://www.achensee.com
     art: portal
     rang: 2
     strecke_hinweis: "Der Schneebericht Achensee nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null, erlaubnis: abgelehnt}
     config:
       pfad: /de/live/schneebericht/
       default_gebiet: achensee

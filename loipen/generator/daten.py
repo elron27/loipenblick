@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.dubletten import Eintrag, finde_dubletten
-from loipen.konfig import lade_yaml
+from loipen.konfig import ausgeblendet, lade_yaml
 from loipen import osm, plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
@@ -139,8 +139,11 @@ def _mitte(gebiete: list[dict]) -> list[float] | None:
 
 
 def sichtbar(quelle: Quelle, oeffentlich: bool) -> bool:
-    """Eine Quelle ohne Zustimmung (erlaubnis nur_test) erscheint nur in der Testversion (docs/kontaktliste.md)."""
-    return quelle.enabled and not (oeffentlich and (quelle.config or {}).get("erlaubnis") == "nur_test")
+    """Eine Quelle ohne Zustimmung (erlaubnis nur_test) erscheint nur in der Testversion (docs/kontaktliste.md).
+    Eine abgelehnte Quelle (B30) erscheint nie, auch wenn noch alte Daten in der Datenbank liegen."""
+    erlaubnis = (quelle.config or {}).get("erlaubnis")
+    return (quelle.enabled and erlaubnis != "abgelehnt"
+            and not (oeffentlich and erlaubnis == "nur_test"))
 
 
 def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 7, oeffentlich: bool = False) -> dict:
@@ -153,8 +156,15 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
 
     # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
     # B16 AK 2: eine abgeschaltete Quelle verschwindet von der Seite
+    # B30 AK 3: ausgeblendete Gebiete und Loipen fehlen in beiden Versionen, gleich von welcher Quelle
+    gebiete_aus, loipen_aus = ausgeblendet(
+        lade_yaml(config_dir / "gebiete.yaml") if (config_dir / "gebiete.yaml").exists() else {})
+
+    def gezeigt(l: Loipe) -> bool:
+        return (sichtbar(l.quelle, oeffentlich) and l.gebiet.slug not in gebiete_aus
+                and (l.gebiet.slug, l.name) not in loipen_aus)
     aktive = [l for l in session.scalars(select(Loipe).join(Quelle).where(Loipe.active, Quelle.enabled))
-              if sichtbar(l.quelle, oeffentlich)]
+              if gezeigt(l)]
     verdeckt = finde_dubletten([
         Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
                 l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
@@ -224,17 +234,21 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
     for region in sorted(session.scalars(select(Region)),
                          key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
+        if region.gebiete and all(g.slug in gebiete_aus for g in region.gebiete):
+            continue  # B30 AK 3: Region ganz ausgeblendet
         gebiete = []
         verlaeufe: dict[str, list] = {}
         osm_region = osm_daten.get(region.slug) or {}
         for g in sorted(region.gebiete, key=lambda x: x.name):
+            if g.slug in gebiete_aus:
+                continue
             pos = gebiet_position(g)
             schnee = schnee_uebersicht(session, g)
             vorhersage = _vorhersage(session, g, heute)
             tmax_heute = next((v["tmax"] for v in vorhersage if v["datum"] == heute.isoformat()), None)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
-                if not l.active or not sichtbar(l.quelle, oeffentlich) or l.id in verdeckt:
+                if not l.active or not gezeigt(l) or l.id in verdeckt:
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
@@ -296,7 +310,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 "lon": pos[1] if pos else None,
                 "hoehe_m": g.hoehe_m,
                 "tourist_url": g.tourist_url,
-                "nachbarn": sorted(n.slug for n in g.nachbarn),
+                "nachbarn": sorted(n.slug for n in g.nachbarn if n.slug not in gebiete_aus),
                 "loipengebuehr": {"eur": g.loipengebuehr_eur, "text": g.loipengebuehr_text, "url": g.loipengebuehr_url},
                 "parkplaetze": [
                     {"name": p.name, "lat": p.lat, "lon": p.lon, "gebuehr_eur_tag": p.gebuehr_eur_tag,
@@ -339,7 +353,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             {"key": q.key, "name": q.name, "status": q.last_status, "letzter_lauf": _iso(q.last_run_at),
              "anzahl": q.last_count, "dauer_s": q.last_dauer_s, "fehler": q.last_error}
             for q in session.scalars(select(Quelle).order_by(Quelle.key))
-            if not (oeffentlich and (q.config or {}).get("erlaubnis") == "nur_test")
+            if (q.config or {}).get("erlaubnis") != "abgelehnt"
+            and not (oeffentlich and (q.config or {}).get("erlaubnis") == "nur_test")
         ],
         "abdeckung": abdeckung,
         # Quellen ohne Zustimmung, die nur die Testversion zeigt (docs/kontaktliste.md)
