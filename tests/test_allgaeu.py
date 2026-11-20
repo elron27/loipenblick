@@ -185,7 +185,7 @@ def test_p36_neue_gebiete_mit_lage_region_und_wetterstation():
     y = lade_yaml(CONFIG_DIR / "gebiete.yaml")
     g = {x["slug"]: x for x in y["gebiete"]}
     r = {x["slug"]: x for x in y["regionen"]}
-    dwd = (FIX / "recherche-2026-11-20" / "dwd" / "RR_Tageswerte_Beschreibung_Stationen.txt").read_text(
+    dwd = (FIX / "recherche-2026-11-20" / "dwd" / "RR_Tageswerte_Beschreibung_Stationen-allgaeu.txt").read_text(
         encoding="latin-1")
     aktiv = {z.split()[0] for z in dwd.splitlines()[2:] if z.strip() and z.split()[2] >= "20261101"}
     geo = json.loads((FIX / "geosphere" / "2026-11-12" / "klima-v2-1d_allgaeu.json").read_text())

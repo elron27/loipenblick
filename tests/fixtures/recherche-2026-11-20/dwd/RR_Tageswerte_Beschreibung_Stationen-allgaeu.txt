@@ -1,0 +1,131 @@
+Stations_id von_datum bis_datum Stationshoehe geoBreite geoLaenge Stationsname Bundesland Abgabe
+----------- --------- --------- ------------- --------- --------- ----------------------------------------- ---------- ------
+00058 19830701 20031231            623   47.8922     10.0796 Aichstetten                              Baden-Württemberg                        Frei
+00063 19510101 20261118            744   47.8173     10.5376 Aitrang                                  Bayern                                   Frei
+00145 19410101 20261118            648   47.7965     10.2779 Altusried-Krugzell                       Bayern                                   Frei
+00146 20060107 20261118            730   47.7922     10.0988 Altusried-Muthmannshofen                 Bayern                                   Frei
+00179 19410101 20051130            664   47.8963     10.9320 Apfeldorf                                Bayern                                   Frei
+00224 19310101 19810731           1045   47.7333     10.7333 Auerberg                                 Bayern                                   Frei
+00275 19510101 20261118           1039   47.4650     10.1043 Balderschwang                            Bayern                                   Frei
+00318 19310101 20261118            811   47.6921     10.9954 Bayersoien, Bad                          Bayern                                   Frei
+00319 19510101 20261118            753   47.9209     10.5024 Eggenthal-Grub                           Bayern                                   Frei
+00442 19810801 19820531            750   47.7333     10.7833 Bernbeuren                               Bayern                                   Frei
+00443 20040314 20261118            936   47.7388     10.7448 Bernbeuren-Prachtsried                   Bayern                                   Frei
+00565 19410101 20051231            896   47.6844     10.4119 Durach-Bodelsberg                        Bayern                                   Frei
+00575 19310101 20051231            744   47.7530     10.9865 Böbing                                   Bayern                                   Frei
+00758 19010101 20021231            900   47.6983     10.2405 Buchenberg                               Bayern                                   Frei
+00759 19610101 20261118            845   47.7083     10.1311 Buchenberg-Kreuzthal                     Bayern                                   Frei
+00859 19410101 19701230            920   47.3667     10.3000 Christlessee                             Bayern                                   Frei
+00941 19510101 20051231            722   47.8874     10.8315 Denklingen-Dienhausen                    Bayern                                   Frei
+01313 20031022 20261118            938   47.5695     10.9564 Ettal-Linderhof                          Bayern                                   Frei
+01372 19510101 20021031            757   47.4608     10.2696 Fischen                                  Bayern
+01524 19510101 20010630            790   47.5774     10.6296 Füssen-Weißensee                         Bayern                                   Frei
+01603 19010101 19541230            800   47.5667     10.0167 Genhofen Bezirk Sonth/Allgäu             Bayern                                   Frei
+01682 19410101 20261118            819   47.7034     10.5135 Görisried                                Bayern                                   Frei
+01734 19310101 20261118           1008   47.4562     10.9939 Grainau-Eibsee                           Bayern                                   Frei
+01788 19310101 20051231            676   47.8794     10.2552 Grönenbach-Thal                          Bayern                                   Frei
+01914 19310101 19601230            768   47.7500     10.1167 Häfeliswald                              Bayern                                   Frei
+01950 20060109 20261118            780   47.6463     10.8073 Halblech-Trauchgau                       Bayern                                   Frei
+02107 19710101 20040630            639   47.6310      9.8908 Heimenkirch                              Bayern                                   Frei
+02217 19410101 19890331            930   47.4550     10.4391 Hindelang (Oberes Ostrachtal)            Bayern                                   Frei
+02218 19310101 20190630            834   47.4862     10.3851 Hindelang-Hinterstein                    Bayern                                   Frei
+02219 19310101 19971031            850   47.4994     10.3888 Hindelang-Oberdorf, Bad                  Bayern                                   Frei
+02220 19780101 19950531           1140   47.5144     10.4074 Hindelang-Oberjoch                       Bayern                                   Frei
+02221 19800101 19991031           1053   47.5408     10.4371 Hindelang-Unterjoch                      Bayern
+02222 20040314 20261118           1015   47.5561     10.4274 Unterjoch                                Bayern                                   Frei
+02403 18960901 20261118            727   47.5621     10.2157 Immenstadt                               Bayern                                   Frei
+02404 19410101 20170930            935   47.5460     10.2060 Immenstadt (Wärterhaus)                  Bayern                                   Frei
+02405 19310101 20261118            959   47.6078     10.2020 Immenstadt-Reute                         Bayern                                   Frei
+02408 19310101 20051231            890   47.8027     10.7645 Ingenried/Oberbayern-Krottenhill         Bayern                                   Frei
+02423 18610101 20040430            712   47.6894     10.0416 Isny                                     Baden-Württemberg                        Frei
+02424 19790201 20041130            769   47.6724     10.1091 Isny-Bolsternang                         Baden-Württemberg                        Frei
+02542 19700501 20160331            716   47.8652     10.6007 Kaufbeuren                               Bayern                                   Frei
+02559 18950501 20261118            705   47.7233     10.3348 Kempten                                  Bayern                                   Frei
+02598 19800401 20261118            698   47.7746      9.9096 Kißlegg                                  Baden-Württemberg                        Frei
+02754 19460701 20261118            670   47.9084     10.1514 Kronburg                                 Bayern                                   Frei
+02903 19310101 19990930            730   47.6927     10.7981 Lechbruck                                Bayern                                   Frei
+02910 19510101 20051231            667   47.8544     10.1288 Legau                                    Bayern                                   Frei
+02923 19550101 19700530            663   47.9116     10.6124 Leinau                                   Bayern                                   Frei
+02967 19310101 20060430            655   47.8244     10.0213 Leutkirch                                Baden-Württemberg                        Frei
+03016 19700601 19880430            760   47.5980      9.8878 Lindenberg/Allgäu                        Bayern                                   Frei
+03130 19610101 20180228            745   47.6437     10.0440 Maierhöfen                               Bayern                                   Frei
+03189 18990601 20051231            730   47.7810     10.6166 Marktoberdorf                            Bayern                                   Frei
+03190 20041005 20261118            790   47.7196     10.6433 Marktoberdorf-Sulzschneid                Bayern                                   Frei
+03244 19510101 20261118            614   47.9821     10.1384 Memmingen                                Bayern                                   Frei
+03309 19510101 19771031            909   47.6500     10.6000 Mittersulzberg                           Bayern                                   Frei
+03344 19510101 19731231           1013   47.6000     10.3667 Mooshütte                                Bayern                                   Frei
+03464 19310101 20261117            878   47.6348     10.5077 Nesselwang                               Bayern                                   Frei
+03689 19310101 20261118            820   47.8345     10.3683 Untrasried-Maneberg                      Bayern                                   Frei
+03710 19460101 20261118            679   47.9329     10.7170 Westendorf, Kreis Ostallgäu              Bayern                                   Frei
+03714 19410101 20261118            896   47.5538      9.9406 Oberreute                                Bayern                                   Frei
+03727 19831001 20010930            800   47.5619     10.0313 Oberstaufen-Kalzhofen                    Bayern
+03728 19310101 19890430            890   47.5230     10.0377 Oberstaufen-Steibis                      Bayern                                   Frei
+03729 20050501 20261118            748   47.5577     10.0938 Oberstaufen-Thalkirchdorf                Bayern                                   Frei
+03730 19100101 20261118            806   47.3984     10.2759 Oberstdorf                               Bayern                                   Frei
+03731 19410101 20261118            941   47.3388     10.2660 Oberstdorf-Birgsau                       Bayern                                   Frei
+03799 19710101 20261118            598   47.6288      9.8355 Opfenbach                                Bayern                                   Frei
+03835 19410101 20261118            724   47.8796     10.7445 Osterzell                                Bayern                                   Frei
+03849 19410101 20261118            667   47.9303     10.3100 Ottobeuren                               Bayern                                   Frei
+03856 19490529 19930630           1010   47.6383     10.4313 Oy-Mittelberg                            Bayern                                   Frei
+03857 19931001 20261118            886   47.6362     10.3892 Oy-Mittelberg-Petersthal                 Bayern                                   Frei
+03892 19310101 20051231            704   47.8172     10.9393 Peiting-Herzogsägmühle                   Bayern                                   Frei
+03923 19410101 20051231            665   47.9447     10.6002 Pforzen-Ingenried/Allgäu                 Bayern                                   Frei
+03926 19510101 20261118            884   47.6063     10.5593 Pfronten-Rehbichel                       Bayern                                   Frei
+04165 19510101 20261118            855   47.5855     10.3230 Rettenberg-Kranzegg                      Bayern                                   Frei
+04201 19321115 19601230           1620   47.4342     10.9866 Riffelriß                                Bayern                                   Frei
+04251 20050301 20261118           1067   47.4069     10.1676 Oberstdorf-Rohrmoos                      Bayern                                   Frei
+04429 19811201 19940831            778   47.5880      9.8500 Scheidegg                                Bayern
+04578 19410101 20051231            730   47.8249     10.8362 Schwabbruck                              Bayern                                   Frei
+04597 19410101 20101231            792   47.5769     10.7181 Schwangau-Horn                           Bayern                                   Frei
+04598 19310101 19900630           1008   47.5574     10.7498 Schwangau-Neuschwanstein                 Bayern                                   Frei
+04641 20060117 20261118            802   47.6711     10.6271 Seeg (Kläranlage)                        Bayern                                   Frei
+04704 19310101 20261118            508   47.5776      9.7404 Sigmarszell-Zeisertsweiler               Bayern                                   Frei
+04760 20060108 20261118            730   47.5219     10.2613 Sonthofen (Flussmeisterstelle)           Bayern                                   Frei
+04850 18910101 20261118            779   47.7112     10.8758 Steingaden-Lauterbach                    Bayern                                   Frei
+04877 19610101 19960331            835   47.5974      9.9855 Stiefenhofen                             Bayern                                   Frei
+05166 19410101 19751231            841   47.6500     10.9667 Unternogg                                Bayern                                   Frei
+05169 19310101 20261118            831   47.7674     10.4604 Kraftisried                              Bayern                                   Frei
+05227 19310101 20261118            682   47.9692     10.9151 Vilgertshofen-Pflugdorf                  Bayern                                   Frei
+05318 19810101 20261118            597   47.8810      9.7327 Waldsee, Bad-Dinnenried                  Baden-Württemberg                        Frei
+05334 19510101 20051231            700   47.6241     10.2819 Waltenhofen-Martinszell                  Bayern                                   Frei
+05341 19410101 19921231            588   47.6816      9.8600 Wangen/Allgäu                            Baden-Württemberg                        Frei
+05366 19310101 19671230            927   47.4167     10.2500 Wasach                                   Bayern                                   Frei
+05456 19310101 20011231            800   47.6763     10.1480 Weitnau-Wengen                           Bayern                                   Frei
+05457 19410101 19971231            807   47.6135     10.6230 Weizern-Hopferau                         Bayern                                   Frei
+05496 19310101 20261116            974   47.5930     10.4086 Wertach-Bichel                           Bayern                                   Frei
+05497 19510101 20010630           1172   47.6008     10.4602 Wertach (Buronhütte)                     Bayern                                   Frei
+05535 19510101 19821231            986   47.6000     10.1000 Wiederhofen                              Bayern                                   Frei
+05557 19510101 20001231            755   47.7738     10.2277 Wiggensbach-Schachen                     Bayern                                   Frei
+05580 19510101 19821231            704   47.8333      9.9500 Willerazhofen                            Baden-Württemberg                        Frei
+05665 19791001 20041231            677   47.8180      9.7970 Wolfegg                                  Baden-Württemberg                        Frei
+05666 19310101 20240131            623   47.8081      9.7907 Wolfegg (Neckenfurt)                     Baden-Württemberg                        Frei
+05723 19510101 20261118            717   47.9562      9.8802 Wurzach, Bad-Oberschwarzach              Baden-Württemberg                        Frei
+05724 19881201 20261118            690   47.9589     10.0139 Rot an der Rot-Buch                      Baden-Württemberg                        Frei
+05792 19010101 20261118           2956   47.4210     10.9848 Zugspitze                                Bayern                                   Frei
+05993 20180624 20261117            653   47.7595      9.7724 Vogt                                     Baden-Württemberg                        Frei
+06169 19990901 20091112            761   47.7610     10.8601 Steingaden-Riesen                        Bayern                                   Frei
+06288 20031026 20261118           1320   47.2689     10.5355 Gramais/Österreich                       Tirol                                    Frei
+06290 20070701 20261118           1100   47.3594     10.4578 Hinterhornbach/Österreich                Tirol                                    Frei
+06294 20031025 20261118            600   47.5738      9.9033 Weiler-Simmerberg                        Bayern                                   Frei
+06300 20031010 20261118            796   47.5768     10.7179 Schwangau-Horn (LfW)                     Bayern                                   Frei
+06301 20070701 20261118           1040   47.5067     10.5019 Untergschwend/Österreich                 Tirol                                    Frei
+06307 20031009 20261118            825   47.4772     10.9403 Garmisch-Partenkirchen-Griesen           Bayern                                   Frei
+07226 20060915 20261118            640   47.7777      9.8870 Kißlegg, Kr. Ravensburg                  Baden-Württemberg                        Frei
+07325 20110901 20151115           2650   47.4165     10.9795 Schneefernerhaus                         Bayern                                   Frei
+07382 20061201 20261118            666   47.7096      9.8660 Wangen/Allgäu-Schwaderberg               Baden-Württemberg                        Frei
+07403 20070401 20261118            672   47.7955     10.0325 Leutkirch-Herlazhofen                    Baden-Württemberg                        Frei
+15555 20160501 20261118            815   47.8761     10.5849 Kaufbeuren-Oberbeuren                    Bayern                                   Frei
+15945 20180101 20261118            980   47.5121     10.3555 Hindelang, Bad-Gailenberg                Bayern                                   Frei
+19290 20211128 20260404            913   47.4708     10.2294 Bolsterlang-Kierwang                     Bayern
+19504 19310101 20051231            736   47.7938     10.0988 Alt.-Muthmannshofen                      Bayern                                   Frei
+19529 19820601 20021231            934   47.7388     10.7443 Bernbeuren a. Auerberg                   Bayern                                   Frei
+19623 19410101 19981130            940   47.5665     10.9583 Linderhof                                Bayern                                   Frei
+19638 19510101 20030430           1015   47.5560     10.4274 Unterjoch/Wertach                        Bayern                                   Frei
+19651 19510501 20030630            794   47.7197     10.6434 Sulzschneid                              Bayern                                   Frei
+19657 19310101 20031231            745   47.5569     10.0855 Thalkirchdorf/Oberallgäu                 Bayern                                   Frei
+19674 19510101 20051231            754   47.5130     10.2935 Sonthofen/Iller                          Bayern                                   Frei
+19675 19771101 20051231            850   47.6514     10.6098 Seeg                                     Bayern                                   Frei
+19751 20230417 20261118            869   47.6203     10.4601 Oy-Mittelberg/Grüntensee                 Bayern                                   Frei
+19775 19250101 20051231            804   47.6152     10.8054 Buching                                  Bayern                                   Frei
+19847 19510101 19741231           1070   47.4081     10.1667 Rohrmoos                                 Bayern                                   Frei
+20278 20260201 20261118           2956   47.4210     10.9848 Zugspitze_Plattform                      Bayern                                   Frei

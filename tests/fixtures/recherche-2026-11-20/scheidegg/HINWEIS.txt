@@ -1,0 +1,2 @@
+Gross (1,6 MB je Seite, eingebettete Bilder) und ohne Loipendaten im HTML: start.html, langlaufen.html, impressum.html nicht aufbewahrt.
+schneebericht.html laedt das eo-POI-Widget erst im Browser (data-api-url poi.api.eberl-online.net/v2).
