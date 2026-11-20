@@ -86,16 +86,23 @@ def urls(bbox: tuple[float, float, float, float]) -> list[str]:
     return [u.format(abfrage=quote(abfrage(*bbox))) for u in OVERPASS_URLS]
 
 
-def hole_parkplaetze(fetcher, bbox: tuple[float, float, float, float]) -> list[dict]:
-    """Erster Overpass-Server, der antwortet und dessen robots.txt den Abruf erlaubt (P7)."""
+def hole_parkplaetze(fetcher, bbox: tuple[float, float, float, float], aus: set[str] | None = None) -> list[dict]:
+    """Erster Overpass-Server, der antwortet und dessen robots.txt den Abruf erlaubt (P7).
+    aus: Server, die in diesem Lauf schon versagt haben; sie werden nicht noch einmal gefragt, damit ein
+    ueberlasteter Server (504, Zeitueberschreitung) nicht jede Region um Minuten verzoegert."""
+    aus = set() if aus is None else aus
     letzter: Exception | None = None
     for u in urls(bbox):
+        server = u.split("/api/")[0]
+        if server in aus:
+            continue
         try:
             return verdichte(fetcher.get(u))["parkplaetze"]
         except Exception as e:
             letzter = e
-            log.info("Overpass %s: %s", u.split("/api/")[0], e)
-    raise letzter or RuntimeError("kein Overpass-Server")
+            aus.add(server)
+            log.info("Overpass %s: %s", server, e)
+    raise letzter or RuntimeError("kein Overpass-Server erreichbar")
 
 
 def _ausduennen(punkte: list[list[float]], max_punkte: int) -> list[list[float]]:
@@ -257,6 +264,7 @@ def aktualisiere(session: Session, fetcher, jetzt: datetime | None = None, hoech
     auch_mit_strecke holt auch Routen zu Loipen mit eigener Strecke (nur fuer vergleiche() im OSM-Abgleich)."""
     jetzt = jetzt or utcnow()
     lauf = OsmLauf()
+    overpass_aus: set[str] = set()
     vorhanden = {d.region_slug: d for d in session.scalars(select(OsmDaten))}
     faellig = []
     for region in session.scalars(select(Region)):
@@ -295,7 +303,7 @@ def aktualisiere(session: Session, fetcher, jetzt: datetime | None = None, hoech
             if route:
                 loipen.append({**route, "geholt": jetzt.isoformat()})
         try:
-            parkplaetze = hole_parkplaetze(fetcher, bbox)
+            parkplaetze = hole_parkplaetze(fetcher, bbox, overpass_aus)
         except Exception as e:
             lauf.fehler.append(f"{region.slug}: Parkplaetze: {e}")
             parkplaetze = alt.get("parkplaetze", [])

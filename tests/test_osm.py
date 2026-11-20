@@ -189,6 +189,22 @@ def test_p36_abruf_routen_und_parkplaetze_mit_ausweichserver_und_wochenrhythmus(
     assert session.get(OsmDaten, "testtal").inhalt["loipen"]
 
 
+@pytest.mark.req("P36", ak=4)
+def test_p36_ein_versagender_overpass_server_wird_im_lauf_nicht_wieder_gefragt():
+    class Abrufer:
+        urls = []
+
+        def get(self, url):
+            self.urls.append(url)
+            raise HttpFehler(url, 504)
+
+    a, aus = Abrufer(), set()
+    for bbox in ((47.0, 11.0, 47.1, 11.1), (47.2, 11.0, 47.3, 11.1)):
+        with pytest.raises((HttpFehler, RuntimeError)):
+            osm.hole_parkplaetze(a, bbox, aus)
+    assert len(a.urls) == 3  # jeder der drei Server nur einmal
+
+
 # ---------- mit der erzeugten Seite ----------
 
 @pytest.fixture
