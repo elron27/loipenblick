@@ -864,3 +864,41 @@ NICHT ERREICHBAR https://en.schwangau.de: FEHLER <urlopen error [SSL: CERTIFICAT
 200  1710275 tests/fixtures/recherche-2026-11-20/scheidegg/start.html https://www.scheidegg.de/
 200 https://www.westallgaeu.de/robots.txt
 200   100407 tests/fixtures/recherche-2026-11-20/westallgaeu/start.html https://www.westallgaeu.de/
+# Lauf 2026-11-20 07:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.hoernerdoerfer.de/robots.txt
+200   112341 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/wintersportbericht.html https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+200   122731 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/langlaufen.html https://www.hoernerdoerfer.de/winterurlaub-allgaeu/langlaufen
+200 https://www.pfronten.de/robots.txt
+200    95355 tests/fixtures/recherche-2026-11-20/pfronten/wintersportbericht.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/
+200   571483 tests/fixtures/recherche-2026-11-20/pfronten/wsb-liste-winter.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/liste-winter/
+200    71061 tests/fixtures/recherche-2026-11-20/pfronten/wsb-detail-winter.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/detail-winter/
+200   218037 tests/fixtures/recherche-2026-11-20/pfronten/langlaufen.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/langlaufen/
+200 https://www.wertach.de/robots.txt
+200    98433 tests/fixtures/recherche-2026-11-20/wertach/wintersportbericht.html https://www.wertach.de/service/wintersportbericht.html
+200    89004 tests/fixtures/recherche-2026-11-20/wertach/langlauf.html https://www.wertach.de/natuerlich-erleben/winter/langlauf-skating/
+200 https://www.badhindelang.de/robots.txt
+200   144514 tests/fixtures/recherche-2026-11-20/badhindelang/bergbericht-winter.html https://www.badhindelang.de/bergbericht-winter
+200   176598 tests/fixtures/recherche-2026-11-20/badhindelang/winter.html https://www.badhindelang.de/winter
+200 https://www.oberstaufen.de/robots.txt
+200   150740 tests/fixtures/recherche-2026-11-20/oberstaufen/langlaufen.html https://www.oberstaufen.de/langlaufen
+200 https://www.nesselwang.de/robots.txt
+200    75844 tests/fixtures/recherche-2026-11-20/nesselwang/langlaufen.html https://www.nesselwang.de/langlaufen-im-allgaeu.html
+200 https://www.fuessen.de/robots.txt
+200   362209 tests/fixtures/recherche-2026-11-20/fuessen/langlauf.html https://www.fuessen.de/outdoor/aktiver-winter/langlauf/
+200 https://www.isny.de/robots.txt
+200    47274 tests/fixtures/recherche-2026-11-20/isny/wintersport.html https://www.isny.de/freizeit-urlaub/wintersport/
+404 https://www.scheidegg.de/robots.txt
+200  1621362 tests/fixtures/recherche-2026-11-20/scheidegg/schneebericht.html https://www.scheidegg.de/schneebericht/
+200  1623604 tests/fixtures/recherche-2026-11-20/scheidegg/langlaufen.html https://www.scheidegg.de/winter/langlaufen/
+200 https://www.westallgaeu.de/robots.txt
+200    53900 tests/fixtures/recherche-2026-11-20/westallgaeu/winter.html https://www.westallgaeu.de/winter
+200 https://www.allgaeu.de/robots.txt
+200    98411 tests/fixtures/recherche-2026-11-20/allgaeu/schneebericht.html https://www.allgaeu.de/draussen/schneebericht
+200   132052 tests/fixtures/recherche-2026-11-20/allgaeu/loipen.html https://www.allgaeu.de/draussen/langlauf/loipen
+200 https://www.kleinwalsertal.com/robots.txt
+200   316926 tests/fixtures/recherche-2026-11-20/kleinwalsertal/loipen-aktiv.html https://www.kleinwalsertal.com/de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-kleinwalsertal
+200   393782 tests/fixtures/recherche-2026-11-20/kleinwalsertal/loipen.html https://www.kleinwalsertal.com/de/entdecke-das-kleinwalsertal/skigebiete-kleinwalsertal/loipen-kleinwalsertal
+200 https://www.nordic-zentrum-oberstdorf.de/robots.txt
+200   119923 tests/fixtures/recherche-2026-11-20/nordic-zentrum/loipen.html https://www.nordic-zentrum-oberstdorf.de/nordic-active/loipen/
+200 https://www.oberstdorf.de/robots.txt
+404     9372 tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum.html
