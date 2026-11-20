@@ -230,6 +230,22 @@ regionen:
   name: Salzburger Lungau
   land: AT
   bundesland: Salzburg
+- slug: oberallgaeu
+  name: Oberallgäu
+  land: DE
+  bundesland: Bayern
+- slug: ostallgaeu
+  name: Ostallgäu
+  land: DE
+  bundesland: Bayern
+- slug: wuerttembergisches-allgaeu
+  name: Württembergisches Allgäu
+  land: DE
+  bundesland: Baden-Württemberg
+- slug: kleinwalsertal
+  name: Kleinwalsertal
+  land: AT
+  bundesland: Vorarlberg
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -3235,4 +3251,88 @@ gebiete:
   wetterstation:
     id: '15712'
     name: Tamsweg
+    dienst: geosphere
+# Allgaeu (P38, 20.11.2026): Lage aus den Loipenstarts der Ortsseiten bzw. OpenStreetMap (gerundet),
+# DWD-Stationen aus RR_Tageswerte_Beschreibung_Stationen.txt (Schnappschuss Runde 26), Kleinwalsertal GeoSphere Mittelberg.
+- slug: oberstdorf
+  name: Oberstdorf
+  hoehe_m: 815
+  region: oberallgaeu
+  lat: 47.405
+  lon: 10.279
+  tourist_url: https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/
+  wetterstation:
+    id: '03730'
+    name: Oberstdorf
+- slug: hoernerdoerfer
+  name: Hörnerdörfer (Fischen, Obermaiselstein, Bolsterlang, Ofterschwang)
+  hoehe_m: 760
+  region: oberallgaeu
+  lat: 47.457
+  lon: 10.272
+  tourist_url: https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+  wetterstation:
+    id: '04760'
+    name: Sonthofen
+- slug: balderschwang
+  name: Balderschwang
+  hoehe_m: 1045
+  region: oberallgaeu
+  lat: 47.466
+  lon: 10.096
+  tourist_url: https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+  wetterstation:
+    id: '00275'
+    name: Balderschwang
+- slug: wertach
+  name: Wertach
+  hoehe_m: 915
+  region: oberallgaeu
+  lat: 47.603
+  lon: 10.410
+  tourist_url: https://www.wertach.de/service/wintersportbericht.html
+  wetterstation:
+    id: '05496'
+    name: Wertach-Bichel
+- slug: pfronten
+  name: Pfronten
+  hoehe_m: 880
+  region: ostallgaeu
+  lat: 47.582
+  lon: 10.552
+  tourist_url: https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/
+  wetterstation:
+    id: '03926'
+    name: Pfronten-Rehbichel
+- slug: fuessen
+  name: Füssen, Weißensee und Hopfen am See
+  hoehe_m: 800
+  region: ostallgaeu
+  lat: 47.570
+  lon: 10.680
+  tourist_url: https://www.fuessen.de/outdoor/aktiver-winter/langlauf/
+  wetterstation:
+    id: '06300'
+    name: Schwangau-Horn
+- slug: isny
+  name: Isny und Maierhöfen
+  hoehe_m: 705
+  region: wuerttembergisches-allgaeu
+  lat: 47.690
+  lon: 10.040
+  tourist_url: https://www.isny.de/freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+  wetterstation:
+    id: '00759'
+    name: Buchenberg-Kreuzthal
+- slug: kleinwalsertal
+  name: Kleinwalsertal (Riezlern, Hirschegg, Mittelberg, Baad)
+  hoehe_m: 1100
+  region: kleinwalsertal
+  lat: 47.340
+  lon: 10.170
+  tourist_url: https://www.kleinwalsertal.com/de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-kleinwalsertal
+  grenzinfo: 'Österreich (Vorarlberg), nur über Oberstdorf erreichbar; auf der Zufahrt (B19, Walserstraße) keine Vignette nötig.'
+  wetterstation:
+    id: '11311'
+    name: Mittelberg
     dienst: geosphere

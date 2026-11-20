@@ -61,7 +61,9 @@ def test_b7_daten_liegen_als_json_je_region(site):
         # Kaernten (E-21)
         "nassfeld-gailtal", "weissensee",
         # Steiermark und Lungau (E-22)
-        "ausseerland", "gesaeuse", "murau", "murtal", "hochsteiermark", "oststeiermark", "lipizzanerheimat", "lungau"}
+        "ausseerland", "gesaeuse", "murau", "murtal", "hochsteiermark", "oststeiermark", "lipizzanerheimat", "lungau",
+        # Allgaeu (E-27)
+        "oberallgaeu", "ostallgaeu", "wuerttembergisches-allgaeu", "kleinwalsertal"}
     for r in index["regionen"]:
         region = lies(site, r["datei"])
         assert region["region"]["slug"] == r["slug"] and region["gebiete"]
@@ -140,7 +142,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "alpbachtal", "wildschoenau", "wilderkaiser",
         "oetztal", "pitztal", "tiroler-oberland", "nauders", "serfaus-fiss-ladis", "paznaun",
         "innsbruck", "hall-wattens", "silberregion-karwendel",  # P32
-        "osttirol", "zugspitzarena"}  # P33
+        "osttirol", "zugspitzarena",  # P33
+        "oberstdorf", "wertach", "pfronten", "kleinwalsertal", "fuessen", "isny", "hoernerdoerfer"}  # P38
 
 
 @pytest.mark.req("U6", ak=1)

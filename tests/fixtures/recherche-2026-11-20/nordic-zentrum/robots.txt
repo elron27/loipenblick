@@ -1,0 +1,10 @@
+User-agent: *
+
+
+Disallow: /stichworte/
+Disallow: /profile/
+Disallow: /cart/
+Disallow: /api/promotion/
+
+Sitemap: https://www.nordic-zentrum-oberstdorf.de/sitemap.xml
+Sitemap: https://www.nordic-zentrum-oberstdorf.de/sitemap-bilder.xml

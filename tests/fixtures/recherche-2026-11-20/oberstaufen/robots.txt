@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /outdooractive-details
+Disallow: /outdooractive-details.html
+Disallow: /cdn-cgi/
+Disallow: /8adc4786655deefbceee473803d4538f
+Disallow: /feratel-details
+Disallow: /feratel-details.html
+
+
+
+Sitemap: https://www.oberstaufen.de/sitemap-index.xml

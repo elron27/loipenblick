@@ -132,6 +132,25 @@ Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.
 | Lechtal Tourismus (lechtal.at), Holzgau (holzgau.at) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@lechtal.at | nicht nötig | Loipenliste lädt per JavaScript, Karte maps.lechtal.at nutzt tirol.mapservices.eu (robots-Sperre, dieselben Daten wie tirol.at). holzgau.at nennt keine Loipen. Kein Mehrwert gegenüber tirol.at, nicht angebunden. |
 | Naturparkregion Reutte (reutte.com) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@reutte.com | nicht nötig | Langlaufseite zeigt nur die contwise-Karte (reutte.mapservices.eu) und eine Liste über phoenix.contwise.io, beide aus der Tiroler Datenbank wie tirol.at. Kein Mehrwert, nicht angebunden. |
 
+### Allgäu über Gemeinde- und Tourismusseiten (P38, E-27, geprüft 20.11.2026)
+
+Stefan 20.11.2026: Allgäu über die Seiten der Gemeinden und Tourismusämter anbinden, nicht über loipen-allgaeu.de.
+Schnappschüsse Runden 23 bis 26 unter `tests/fixtures/recherche-2026-11-20/`. robots.txt war überall ohne Sperre.
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Tourismus Oberstdorf (oberstdorf.de, Wintersportbericht) | Oberallgäu | Status, Länge und Stand von 14 Loipen (inkl. Nordic Zentrum, Nachtloipe); die Seite nennt auch Parkplätze mit Gebühr | info@oberstdorf.de | nicht angefragt | Impressum: Vervielfältigung und Verwertung nur mit schriftlicher Zustimmung, Kopien nur privat. Quelle mit erlaubnis nur_test. Bericht ruht bis ca. Ende November. |
+| Tourist-Info Wertach (wertach.de, Wintersportbericht) | Oberallgäu | Status, Länge, Schwierigkeit von 3 Loipen, Stand | info@wertach.de | nicht angefragt | Impressum wie Oberstdorf (gleiche Tramino-Vorlage). nur_test. |
+| Tourismus Hörnerdörfer (hoernerdoerfer.de), Intermaps (sdds4.intermaps.com) | Oberallgäu, Balderschwang | Status, Länge und Stand von 26 Loipen in Fischen, Obermaiselstein, Bolsterlang, Ofterschwang, Balderschwang | info@hoernerdoerfer.de | nicht angefragt | Eigene Seite bettet nur den Intermaps-Bericht ein. Intermaps ist Bezahldienst (P17), Ausnahme nur Testversion wie Innsbruck. Impressum: Nutzung der Daten zu anderen Zwecken nur mit schriftlicher Zustimmung der Tourismus Hörnerdörfer GmbH. In der Anfrage nach dem Intermaps-Bericht fragen. |
+| Pfronten Tourismus (pfronten.de, Wintersportbericht) | Ostallgäu | Status, letztes Präparierdatum, Länge, Technik, Einstieg mit Koordinate von 10 Loipen | info@pfronten.de | nicht angefragt | Impressum ohne Freigabe zur Übernahme. Daten stehen im HTML der Liste (eo-POI-Widget von eberl online); der API-Schlüssel der Seite wird nicht genutzt. nur_test. |
+| Füssen Tourismus und Marketing (fuessen.de) | Ostallgäu | Status der Loipengruppen Füssen (F1), Weißensee (W1, W2), Hopfen (H1, H2) | tourismus@fuessen.de | nicht angefragt | Impressum ohne Freigabe zur Übernahme. nur_test. |
+| Isny Marketing, Stadt Isny (isny.de) | Württembergisches Allgäu | Status, Länge, Technik, Schwierigkeit von 12 Loipen in Isny und Maierhöfen | info@isny-marketing.de | nicht angefragt | Impressum Stadt Isny: Verwertung nur mit schriftlicher Zustimmung. nur_test. |
+| Kleinwalsertal Tourismus (kleinwalsertal.com, Loipen aktiv) | Kleinwalsertal (Vorarlberg) | Status und Technik von 19 Runden (Schwarzwasser-, Schwende-, Steinbockloipe) | info@kleinwalsertal.com | nicht angefragt | Impressum und AGB ohne Freigabe zur Übernahme. nur_test. |
+| Bad Hindelang Tourismus (badhindelang.de) | Oberallgäu | 10 Loipen in Oberjoch, Unterjoch, Bad Hindelang | Kontakt laut Impressum | **nicht angebunden** | Status nur über das eo-POI-Widget, das erst im Browser mit Schlüssel lädt, und im PDF „Schneebericht zum Ausdrucken“ von bergsportbericht.de (OYA media GmbH, kostenpflichtiger Dienst für Orte, Status nur als Farbsymbol). Möglich wäre: Bad Hindelang fragen, ob eine Liste wie in Pfronten ins HTML kann. |
+| Allgäu GmbH (allgaeu.de, Schneebericht) | ganzes Allgäu | Sammelbericht | Kontakt laut Impressum | **nicht angebunden** | Lädt den Status ebenfalls nur im Browser über das eo-POI-Widget mit Schlüssel. |
+| Scheidegg, Westallgäu (scheidegg.de, westallgaeu.de) | Westallgäu | – | – | **nicht angebunden** | Scheidegg: eo-POI-Widget nur im Browser; westallgaeu.de ohne Loipenstatus. |
+| Oberstaufen, Nesselwang, Sulzberg (Vorarlberg) | Oberallgäu, Ostallgäu | – | – | **kein Status gefunden** | Langlaufseiten nur mit Beschreibung, kein Loipenstatus (Sulzberg: nur Startseite der Gemeinde). |
+
 ## 5. Allgäu (geprüft 20.11.2026)
 
 Das Allgäu liegt westlich unseres bisherigen Ausbaus (Südostbayern, Tirol, Salzburg), zwischen Bodensee, Lech und
@@ -147,3 +166,5 @@ tourinfra und tirol.at). Es fehlen alle bayerischen Allgäu-Gebiete, darunter Ob
 (Fischen, Ofterschwang, Bolsterlang, Obermaiselstein, Balderschwang), Bad Hindelang mit Oberjoch und Unterjoch,
 Oberstaufen, Pfronten, Nesselwang, Füssen, Isny, Scheidegg und das Unterallgäu, außerdem das Kleinwalsertal und
 Sulzberg (beide Vorarlberg, dort haben wir gar nichts).
+
+Nachtrag 20.11.2026: Die Gemeinde- und Tourismusseiten sind inzwischen angebunden, Befund und Stand im Abschnitt 4 unter „Allgäu über Gemeinde- und Tourismusseiten“ (P38, E-27).

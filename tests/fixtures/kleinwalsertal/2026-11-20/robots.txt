@@ -1,0 +1,17 @@
+User-agent: *
+
+Sitemap: https://www.kleinwalsertal.com/sitemap.xml
+Sitemap: https://webapi.deskline.net/kleinwals/de/accommodations/sitemap.xml?baseurl=https://www.kleinwalsertal.com/de/urlaub-buchen/unterkuenfte-im-kleinwalsertal/unterkuenfte
+Sitemap: https://webapi.deskline.net/kleinwals/en/accommodations/sitemap.xml?baseurl=https://www.kleinwalsertal.com/en/book-holiday/accommodation-in-kleinwalsertal/accommodations
+
+Disallow: /tourensuche?*filter*
+Disallow: /en/discover-kleinwalsertal/tour-search-kleinwalsertal?*filter*
+
+Disallow: /de/entdecke-das-kleinwalsertal/infrastruktur-a-z?*filter*
+Disallow: /en/discover-kleinwalsertal/infrastructure-a-z?*filter*
+
+Disallow: /de/events?*filter*
+Disallow: /en/events?*filter*
+
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /

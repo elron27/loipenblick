@@ -1,0 +1,24 @@
+User-agent: *
+Crawl-delay: 5
+Disallow: /admin/
+Disallow: /cmscore/
+Disallow: /data/
+Disallow: /datamodules/
+Disallow: /extern/
+Disallow: /integration/
+Disallow: /service/
+Disallow: /tools/
+Disallow: /tron/
+
+User-agent: TurnitinBot
+Disallow: /
+User-agent: SEOkicks-Robot
+Disallow: /
+User-agent: SimplePie
+Disallow: /
+User-agent: Speedy
+Disallow: /
+User-agent: jobs.de-Robot
+Disallow: /
+
+Sitemap: https://www.westallgaeu.de/portal/frontend/sitemaps/westallgaeu/de.xml

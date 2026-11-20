@@ -819,6 +819,128 @@ ROBOTS-VERBOT https://maps.zillertal.at/embedded.bundle.js
 ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
 200 https://www.zillertal.at/robots.txt
 200   186392 tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# Lauf 2026-11-20 07:08 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.oberstdorf.de/robots.txt
+200   250033 tests/fixtures/recherche-2026-11-20/oberstdorf/wintersportbericht.html https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/
+200   169256 tests/fixtures/recherche-2026-11-20/oberstdorf/wm-loipen.html https://www.oberstdorf.de/winter/langlaufen/wm-loipen.html
+404     9410 tests/fixtures/recherche-2026-11-20/oberstdorf/langlaufen.html https://www.oberstdorf.de/winter/langlaufen.html
+200 https://www.nordic-zentrum-oberstdorf.de/robots.txt
+200   116192 tests/fixtures/recherche-2026-11-20/nordic-zentrum/start.html https://www.nordic-zentrum-oberstdorf.de/
+200 https://www.kleinwalsertal.com/robots.txt
+200   476275 tests/fixtures/recherche-2026-11-20/kleinwalsertal/cross-country.html https://www.kleinwalsertal.com/en/Activities/Winter/Cross-Country
+200   477374 tests/fixtures/recherche-2026-11-20/kleinwalsertal/langlaufen.html https://www.kleinwalsertal.com/de/Aktivitaeten/Winter/Langlaufen
+200   292709 tests/fixtures/recherche-2026-11-20/kleinwalsertal/poi-schwarzwasserloipe.html https://www.kleinwalsertal.com/en/poi/schwarzwasserloipe~1658
+200 https://www.hoernerdoerfer.de/robots.txt
+200   150893 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/start.html https://www.hoernerdoerfer.de/
+404    77966 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/langlaufen.html https://www.hoernerdoerfer.de/winter/langlaufen
+200 https://www.badhindelang.de/robots.txt
+200   201308 tests/fixtures/recherche-2026-11-20/badhindelang/start.html https://www.badhindelang.de/
+404   152666 tests/fixtures/recherche-2026-11-20/badhindelang/langlaufen.html https://www.badhindelang.de/winter/langlaufen
+200 https://www.oberstaufen.de/robots.txt
+200   256140 tests/fixtures/recherche-2026-11-20/oberstaufen/start.html https://www.oberstaufen.de/
+404   110872 tests/fixtures/recherche-2026-11-20/oberstaufen/langlaufen.html https://www.oberstaufen.de/winter/langlaufen
+200 https://www.pfronten.de/robots.txt
+200   154517 tests/fixtures/recherche-2026-11-20/pfronten/start.html https://www.pfronten.de/
+404   102966 tests/fixtures/recherche-2026-11-20/pfronten/langlaufen.html https://www.pfronten.de/aktiv/winter/langlaufen/
+200 https://www.nesselwang.de/robots.txt
+200   101764 tests/fixtures/recherche-2026-11-20/nesselwang/start.html https://www.nesselwang.de/
+200 https://fuessen.de/robots.txt
+200   322976 tests/fixtures/recherche-2026-11-20/fuessen/cross-country.html https://fuessen.de/en/cross-country-skiing
+200 https://www.fuessen.de/robots.txt
+404   355177 tests/fixtures/recherche-2026-11-20/fuessen/langlaufen.html https://www.fuessen.de/langlaufen
+NICHT ERREICHBAR https://en.schwangau.de: FEHLER <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'en.schwangau.de'. (_ssl.c:1011)>
+200 https://www.isny.de/robots.txt
+200    80433 tests/fixtures/recherche-2026-11-20/isny/start.html https://www.isny.de/
+200 https://www.allgaeu.de/robots.txt
+200   140775 tests/fixtures/recherche-2026-11-20/allgaeu/start.html https://www.allgaeu.de/
+404   104823 tests/fixtures/recherche-2026-11-20/allgaeu/langlaufen.html https://www.allgaeu.de/langlaufen
+200 https://www.wertach.de/robots.txt
+200   179008 tests/fixtures/recherche-2026-11-20/wertach/start.html https://www.wertach.de/
+200 https://www.balderschwang.de/robots.txt
+200   165622 tests/fixtures/recherche-2026-11-20/balderschwang/start.html https://www.balderschwang.de/
+200 https://www.sulzberg.at/robots.txt
+200     4509 tests/fixtures/recherche-2026-11-20/sulzberg/start.html https://www.sulzberg.at/
+404 https://www.scheidegg.de/robots.txt
+200  1710275 tests/fixtures/recherche-2026-11-20/scheidegg/start.html https://www.scheidegg.de/
+200 https://www.westallgaeu.de/robots.txt
+200   100407 tests/fixtures/recherche-2026-11-20/westallgaeu/start.html https://www.westallgaeu.de/
+# Lauf 2026-11-20 07:11 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.hoernerdoerfer.de/robots.txt
+200   112341 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/wintersportbericht.html https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+200   122731 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/langlaufen.html https://www.hoernerdoerfer.de/winterurlaub-allgaeu/langlaufen
+200 https://www.pfronten.de/robots.txt
+200    95355 tests/fixtures/recherche-2026-11-20/pfronten/wintersportbericht.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/
+200   571483 tests/fixtures/recherche-2026-11-20/pfronten/wsb-liste-winter.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/liste-winter/
+200    71061 tests/fixtures/recherche-2026-11-20/pfronten/wsb-detail-winter.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/detail-winter/
+200   218037 tests/fixtures/recherche-2026-11-20/pfronten/langlaufen.html https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/langlaufen/
+200 https://www.wertach.de/robots.txt
+200    98433 tests/fixtures/recherche-2026-11-20/wertach/wintersportbericht.html https://www.wertach.de/service/wintersportbericht.html
+200    89004 tests/fixtures/recherche-2026-11-20/wertach/langlauf.html https://www.wertach.de/natuerlich-erleben/winter/langlauf-skating/
+200 https://www.badhindelang.de/robots.txt
+200   144514 tests/fixtures/recherche-2026-11-20/badhindelang/bergbericht-winter.html https://www.badhindelang.de/bergbericht-winter
+200   176598 tests/fixtures/recherche-2026-11-20/badhindelang/winter.html https://www.badhindelang.de/winter
+200 https://www.oberstaufen.de/robots.txt
+200   150740 tests/fixtures/recherche-2026-11-20/oberstaufen/langlaufen.html https://www.oberstaufen.de/langlaufen
+200 https://www.nesselwang.de/robots.txt
+200    75844 tests/fixtures/recherche-2026-11-20/nesselwang/langlaufen.html https://www.nesselwang.de/langlaufen-im-allgaeu.html
+200 https://www.fuessen.de/robots.txt
+200   362209 tests/fixtures/recherche-2026-11-20/fuessen/langlauf.html https://www.fuessen.de/outdoor/aktiver-winter/langlauf/
+200 https://www.isny.de/robots.txt
+200    47274 tests/fixtures/recherche-2026-11-20/isny/wintersport.html https://www.isny.de/freizeit-urlaub/wintersport/
+404 https://www.scheidegg.de/robots.txt
+200  1621362 tests/fixtures/recherche-2026-11-20/scheidegg/schneebericht.html https://www.scheidegg.de/schneebericht/
+200  1623604 tests/fixtures/recherche-2026-11-20/scheidegg/langlaufen.html https://www.scheidegg.de/winter/langlaufen/
+200 https://www.westallgaeu.de/robots.txt
+200    53900 tests/fixtures/recherche-2026-11-20/westallgaeu/winter.html https://www.westallgaeu.de/winter
+200 https://www.allgaeu.de/robots.txt
+200    98411 tests/fixtures/recherche-2026-11-20/allgaeu/schneebericht.html https://www.allgaeu.de/draussen/schneebericht
+200   132052 tests/fixtures/recherche-2026-11-20/allgaeu/loipen.html https://www.allgaeu.de/draussen/langlauf/loipen
+200 https://www.kleinwalsertal.com/robots.txt
+200   316926 tests/fixtures/recherche-2026-11-20/kleinwalsertal/loipen-aktiv.html https://www.kleinwalsertal.com/de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-kleinwalsertal
+200   393782 tests/fixtures/recherche-2026-11-20/kleinwalsertal/loipen.html https://www.kleinwalsertal.com/de/entdecke-das-kleinwalsertal/skigebiete-kleinwalsertal/loipen-kleinwalsertal
+200 https://www.nordic-zentrum-oberstdorf.de/robots.txt
+200   119923 tests/fixtures/recherche-2026-11-20/nordic-zentrum/loipen.html https://www.nordic-zentrum-oberstdorf.de/nordic-active/loipen/
+200 https://www.oberstdorf.de/robots.txt
+404     9372 tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum.html
+# Lauf 2026-11-20 07:16 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.allgaeu.de/robots.txt
+200    95371 tests/fixtures/recherche-2026-11-20/allgaeu/schneebericht-pois.html https://www.allgaeu.de/draussen/schneebericht-pois
+200    98314 tests/fixtures/recherche-2026-11-20/allgaeu/bergsportbericht.html https://www.allgaeu.de/draussen/bergsportbericht
+200    90625 tests/fixtures/recherche-2026-11-20/allgaeu/impressum.html https://www.allgaeu.de/impressum
+200 https://www.bergsportbericht.de/robots.txt
+200   702114 tests/fixtures/recherche-2026-11-20/bergsportbericht/schneebericht-bad-hindelang.pdf https://www.bergsportbericht.de/_pdf/bad-hindelang/schneebericht.pdf
+200   180219 tests/fixtures/recherche-2026-11-20/bergsportbericht/start.html https://www.bergsportbericht.de/
+200 https://www.badhindelang.de/robots.txt
+200     1431 tests/fixtures/recherche-2026-11-20/badhindelang/bergbericht-winter-druck.html https://www.badhindelang.de/bergbericht-winter?type=1773135491
+200   138262 tests/fixtures/recherche-2026-11-20/badhindelang/impressum.html https://www.badhindelang.de/impressum
+200 https://www.kleinwalsertal.com/robots.txt
+200     1818 tests/fixtures/recherche-2026-11-20/kleinwalsertal/report-modal-7629.html https://www.kleinwalsertal.com/de/reportObjectModal/7629
+200   277711 tests/fixtures/recherche-2026-11-20/kleinwalsertal/impressum.html https://www.kleinwalsertal.com/de/impressum
+200   309000 tests/fixtures/recherche-2026-11-20/kleinwalsertal/agb.html https://www.kleinwalsertal.com/de/footer/agb
+200 https://www.oberstdorf.de/robots.txt
+200    91617 tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum/
+200 https://www.pfronten.de/robots.txt
+200    75748 tests/fixtures/recherche-2026-11-20/pfronten/impressum.html https://www.pfronten.de/service/impressum/
+200 https://www.wertach.de/robots.txt
+200    59533 tests/fixtures/recherche-2026-11-20/wertach/impressum.html https://www.wertach.de/impressum/
+200 https://www.fuessen.de/robots.txt
+200   336098 tests/fixtures/recherche-2026-11-20/fuessen/impressum.html https://www.fuessen.de/impressum/
+200   344291 tests/fixtures/recherche-2026-11-20/fuessen/agb.html https://www.fuessen.de/agb/
+200 https://www.hoernerdoerfer.de/robots.txt
+200    73316 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/impressum.html https://www.hoernerdoerfer.de/impressum
+200 https://www.isny.de/robots.txt
+200    43237 tests/fixtures/recherche-2026-11-20/isny/impressum.html https://www.isny.de/impressum/
+404 https://sdds4.intermaps.com/robots.txt
+200    65507 tests/fixtures/recherche-2026-11-20/intermaps/hoernerdoerfer.html https://sdds4.intermaps.com/hoernerdoerfer_srm/hoernerdoerfer.aspx
+# Lauf 2026-11-20 07:19 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://opendata.dwd.de/robots.txt
+200  6643485 tests/fixtures/recherche-2026-11-20/dwd/RR_Tageswerte_Beschreibung_Stationen.txt https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/more_precip/recent/RR_Tageswerte_Beschreibung_Stationen.txt
+404 https://dataset.api.hub.geosphere.at/robots.txt
+200     2466 tests/fixtures/geosphere/2026-11-12/klima-v2-1d_allgaeu.json https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters=rr,sh,sh_manu,shneu_manu&station_ids=174,11311,8301&start=2026-10-29T00:00&end=2026-11-11T00:00
+200 https://www.isny.de/robots.txt
+200    59009 tests/fixtures/recherche-2026-11-20/isny/schneehoehen-loipenbericht.html https://www.isny.de/freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+404 https://www.scheidegg.de/robots.txt
+404  1608519 tests/fixtures/recherche-2026-11-20/scheidegg/impressum.html https://www.scheidegg.de/impressum/
 # Lauf 2026-11-20 06:27 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 NICHT ERREICHBAR https://overpass-api.de: FEHLER <urlopen error [Errno 101] Network is unreachable>
 404 https://overpass.kumi.systems/robots.txt
@@ -859,6 +981,19 @@ FEHLER The read operation timed out https://overpass.kumi.systems/api/interprete
 404 https://overpass.private.coffee/robots.txt
 504      695 tests/fixtures/recherche-2026-11-20/osm/tegernsee-loipen-coffee.json https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22piste%3Atype%22%3D%22nordic%22%5D%5Bname%5D%2847.6%2C11.62%2C47.78%2C11.9%29%3Bout%20tags%20geom%3B
 # Lauf 2026-11-20 07:00 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://slopes.waymarkedtrails.org/robots.txt
+200    10008 tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
+200    10783 tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
+200    11515 tests/fixtures/recherche-2026-11-20/osm/wmt-engadin.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1079799,5844683,1118761,5877027&limit=100
+200     9736 tests/fixtures/recherche-2026-11-20/osm/wmt-leitzachtal.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1324702,6043868,1341400,6065364&limit=100
+200    11755 tests/fixtures/recherche-2026-11-20/osm/wmt-toblach.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1346966,5889997,1374796,5909490&limit=100
+200     9102 tests/fixtures/recherche-2026-11-20/osm/wmt-achensee.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1296872,6007610,1313570,6032315&limit=100
+200     3337 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/geojson
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123
+# Lauf 2026-11-20 16:08 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 404 https://slopes.waymarkedtrails.org/robots.txt
 200    10008 tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
 200    10783 tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
