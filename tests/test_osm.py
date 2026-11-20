@@ -304,7 +304,17 @@ def test_d20_bestandsaufnahme_zaehlt_was_die_seite_zeigt(testseite):
 def test_u45_anreise_abschnitt_auf_der_loipenseite():
     js = (STATIC / "app.js").read_text(encoding="utf-8")
     assert "function anreiseHtml(l)" in js and "miniKarte(l) + anreiseHtml(l)" in js
-    assert "laut OpenStreetMap, nicht von der Loipenquelle bestätigt" in js and " m vom Loipenstart" in js
+    assert "laut OpenStreetMap, nicht von der Loipenquelle bestätigt" in js and "vom Loipenstart" in js and "km\")" in js
     assert "noch keiner bekannt" in js and "Start der Loipe" in js
     assert "(l.parken || []).forEach" in js and "l.gebiet.parkplaetze.forEach" not in js
     assert "bei den einzelnen Loipen" in js
+
+
+def test_p36_verbindungsnamen_mit_anderem_endpunkt_passen_nicht():
+    """Echte Fehlzuordnungen aus der Treffergüte-Messung (Engadin, 20.11.): gleiche Seenloipe, anderer Abschnitt."""
+    orte = "Maloja, Sils und Silvaplana"
+    assert not osm.name_passt("009 Isola-Sils (Seenloipe)", ["Maloja-Isola"], orte)
+    assert not osm.name_passt("035 Silvaplana/Surlej-Champfèrersee (Seenloipe)",
+                              ["Sils - Silvaplana/Surlej (Seenloipe)"], orte)
+    # gute Treffer bleiben
+    assert osm.name_passt("006 Maloja-Isola (Seenloipe)", ["Maloja-Isola"], orte)

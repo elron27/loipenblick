@@ -1,6 +1,6 @@
 # Bestandsaufnahme Strecken und Parkinfos
 
-Datenstand der Seite: 2026-11-20T08:32+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
+Datenstand der Seite: 2026-11-20T08:46+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
 
 Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Daten zählen bei der führenden Loipe.
 
@@ -9,23 +9,23 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | | Loipen | Anteil |
 | --- | ---: | ---: |
 | Loipen | 1767 | |
-| mit Streckenverlauf | 679 | 679 (38 %) |
+| mit Streckenverlauf | 670 | 670 (38 %) |
 | davon von der Quelle selbst | 372 | |
 | davon von einer anderen Quelle derselben Loipe | 0 | |
-| davon aus OpenStreetMap | 307 | |
-| mit Lage (Startpunkt) | 1278 | 1278 (72 %) |
+| davon aus OpenStreetMap | 298 | |
+| mit Lage (Startpunkt) | 1276 | 1276 (72 %) |
 | mit Länge | 1271 | 1271 (72 %) |
-| mit Parkplatz | 68 | 68 (4 %) |
-| davon von Hand recherchiert | 68 | |
+| mit Parkplatz | 69 | 69 (4 %) |
+| davon von Hand recherchiert | 69 | |
 | davon aus OpenStreetMap | 0 | |
 
 ## Je Quelle
 
 | Quelle | Loipen | Strecke | davon OSM | Lage | Länge | Parkplatz | davon OSM |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Tirol Werbung (tirol.at) | 548 | 150 (27 %) | 150 | 548 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
-| Schweiz Tourismus (Schneebericht, Daten infosnow.ch) | 340 | 37 (11 %) | 37 | 37 (11 %) | 333 (98 %) | 0 (0 %) | 0 |
-| Dolomiti NordicSki (Loipenstatus) | 118 | 32 (27 %) | 32 | 85 (72 %) | 116 (98 %) | 0 (0 %) | 0 |
+| Tirol Werbung (tirol.at) | 548 | 148 (27 %) | 148 | 548 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
+| Schweiz Tourismus (Schneebericht, Daten infosnow.ch) | 340 | 35 (10 %) | 35 | 35 (10 %) | 333 (98 %) | 0 (0 %) | 0 |
+| Dolomiti NordicSki (Loipenstatus) | 118 | 28 (24 %) | 28 | 85 (72 %) | 116 (98 %) | 0 (0 %) | 0 |
 | Engadin Tourismus (tourinfra Loipenmanager) | 108 | 108 (100 %) | 0 | 108 (100 %) | 108 (100 %) | 0 (0 %) | 0 |
 | Open Data Hub Südtirol (LTS) | 108 | 9 (8 %) | 9 | 108 (100 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Steiermark Tourismus (Tourenportal Langlauf) | 76 | 10 (13 %) | 10 | 10 (13 %) | 75 (99 %) | 0 (0 %) | 0 |
@@ -34,9 +34,9 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Ramsau am Dachstein (tourinfra Loipenmanager) | 42 | 42 (100 %) | 0 | 42 (100 %) | 42 (100 %) | 0 (0 %) | 0 |
 | Goms Tourismus (tourinfra Loipenmanager) | 39 | 39 (100 %) | 0 | 39 (100 %) | 39 (100 %) | 0 (0 %) | 0 |
 | Destination Davos Klosters (tourinfra Loipenmanager) | 36 | 36 (100 %) | 0 | 36 (100 %) | 36 (100 %) | 0 (0 %) | 0 |
-| Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 11 (42 %) | 0 |
+| Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 12 (46 %) | 0 |
 | Achensee Tourismus (Schneebericht) | 24 | 16 (67 %) | 16 | 22 (92 %) | 24 (100 %) | 0 (0 %) | 0 |
-| Tourismusverband Kaiserwinkl (Loipenbericht) | 23 | 16 (70 %) | 16 | 20 (87 %) | 23 (100 %) | 0 (0 %) | 0 |
+| Tourismusverband Kaiserwinkl (Loipenbericht) | 23 | 15 (65 %) | 15 | 20 (87 %) | 23 (100 %) | 0 (0 %) | 0 |
 | Kufsteinerland (Schneebericht) | 22 | 3 (14 %) | 3 | 19 (86 %) | 20 (91 %) | 0 (0 %) | 0 |
 | Innsbruck Tourismus (Wintersportbericht, Intermaps) | 21 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Tourismusverband Tannheimer Tal (Loipenbericht) | 21 | 21 (100 %) | 0 | 21 (100 %) | 21 (100 %) | 0 (0 %) | 0 |
@@ -78,7 +78,7 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Leitzachtal | Bayrischzell | 11 | 2 | 1 | 4 | ja | 3 |
 | Leitzachtal | Fischbachau | 6 | 1 | 5 | 2 | unbekannt | 2 |
 | Priental | Sachrang | 4 | 4 | 4 | 0 | unbekannt | 3 |
-| Tegernseer Tal | Bad Wiessee | 4 | 2 | 4 | 0 | unbekannt | 0 |
+| Tegernseer Tal | Bad Wiessee | 4 | 2 | 3 | 1 | unbekannt | 0 |
 | Tegernseer Tal | Gmund | 5 | 2 | 5 | 0 | unbekannt | 0 |
 | Tegernseer Tal | Kreuth | 10 | 1 | 1 | 6 | unbekannt | 4 |
 | Tegernseer Tal | Rottach-Egern | 7 | 4 | 5 | 1 | unbekannt | 0 |
@@ -131,10 +131,10 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Drei Zinnen, Gsies und Antholz | Antholzertal | 24 | 23 | 24 | 0 | unbekannt | 0 |
 | Drei Zinnen, Gsies und Antholz | Gsieser Tal und Welsberg | 8 | 7 | 8 | 0 | unbekannt | 0 |
 | Drei Zinnen, Gsies und Antholz | Innichen | 4 | 4 | 4 | 0 | unbekannt | 0 |
-| Drei Zinnen, Gsies und Antholz | Niederdorf | 5 | 4 | 5 | 0 | unbekannt | 0 |
-| Drei Zinnen, Gsies und Antholz | Prags | 9 | 1 | 9 | 0 | unbekannt | 0 |
+| Drei Zinnen, Gsies und Antholz | Niederdorf | 5 | 5 | 5 | 0 | unbekannt | 0 |
+| Drei Zinnen, Gsies und Antholz | Prags | 9 | 3 | 9 | 0 | unbekannt | 0 |
 | Drei Zinnen, Gsies und Antholz | Sexten | 11 | 11 | 11 | 0 | unbekannt | 0 |
-| Drei Zinnen, Gsies und Antholz | Toblach | 21 | 15 | 21 | 0 | unbekannt | 0 |
+| Drei Zinnen, Gsies und Antholz | Toblach | 21 | 16 | 21 | 0 | unbekannt | 0 |
 | Eggental und Südtirols Süden | Aldein und Lavazè | 12 | 8 | 12 | 0 | unbekannt | 0 |
 | Eggental und Südtirols Süden | Eggental (Deutschnofen, Welschnofen) | 11 | 11 | 11 | 0 | unbekannt | 0 |
 | Eisacktal, Wipptal und Sarntal | Gossensass und Brenner | 2 | 2 | 2 | 0 | unbekannt | 0 |
@@ -159,7 +159,7 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Graubünden | Arosa Lenzerheide | 24 | 23 | 24 | 0 | unbekannt | 0 |
 | Graubünden | Bergün Filisur | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Graubünden | Brigels | 3 | 3 | 3 | 0 | unbekannt | 0 |
-| Graubünden | Disentis | 11 | 7 | 11 | 0 | unbekannt | 0 |
+| Graubünden | Disentis | 11 | 9 | 11 | 0 | unbekannt | 0 |
 | Graubünden | Grüsch-Danusa | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Graubünden | Laax | 12 | 10 | 12 | 0 | unbekannt | 0 |
 | Graubünden | Samnaun | 2 | 2 | 2 | 0 | unbekannt | 0 |
@@ -187,14 +187,14 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Jura und Drei-Seen-Land | Les Breuleux | 4 | 3 | 4 | 0 | unbekannt | 0 |
 | Jura und Drei-Seen-Land | Les Genevez | 3 | 3 | 3 | 0 | unbekannt | 0 |
 | Jura und Drei-Seen-Land | Saignelégier | 6 | 6 | 6 | 0 | unbekannt | 0 |
-| Kaiserwinkl | Kössen | 13 | 3 | 13 | 0 | unbekannt | 0 |
+| Kaiserwinkl | Kössen | 13 | 4 | 13 | 0 | unbekannt | 0 |
 | Kaiserwinkl | Schwendt | 7 | 3 | 7 | 0 | unbekannt | 0 |
 | Kaiserwinkl | Walchsee | 8 | 3 | 8 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | Brixental | 4 | 4 | 4 | 0 | unbekannt | 0 |
-| Kitzbüheler Alpen | Hohe Salve | 19 | 12 | 19 | 0 | unbekannt | 0 |
+| Kitzbüheler Alpen | Hohe Salve | 19 | 13 | 19 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | Jochberg und Pass Thurn | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | Kitzbühel | 17 | 15 | 17 | 0 | unbekannt | 0 |
-| Kitzbüheler Alpen | Pillerseetal | 23 | 18 | 23 | 0 | unbekannt | 0 |
+| Kitzbüheler Alpen | Pillerseetal | 23 | 19 | 23 | 0 | unbekannt | 0 |
 | Kitzbüheler Alpen | St. Johann in Tirol | 23 | 8 | 23 | 0 | unbekannt | 0 |
 | Kufsteinerland | Bad Häring | 5 | 5 | 5 | 0 | unbekannt | 0 |
 | Kufsteinerland | Ebbs | 2 | 2 | 2 | 0 | unbekannt | 0 |

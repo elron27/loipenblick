@@ -482,7 +482,7 @@ function anreiseHtml(l) {
   var p = l.parken || [], h = '<h2 class="sec">Anreise</h2><ul class="plain" id="anreise">';
   h += p.map(function (x) {
     var teile = ["Gebühr: " + (x.gebuehr_text || (x.gebuehr_eur_tag != null ? zahl(x.gebuehr_eur_tag, 2) + " € pro Tag" : "unbekannt"))];
-    if (x.entfernung_m != null) teile.push(x.entfernung_m < 50 ? "am Loipenstart" : zahl(x.entfernung_m) + " m vom Loipenstart");
+    if (x.entfernung_m != null) teile.push(x.entfernung_m < 50 ? "am Loipenstart" : (x.entfernung_m < 1000 ? Math.round(x.entfernung_m) + " m" : zahl(x.entfernung_m / 1000) + " km") + " vom Loipenstart");
     if (x.geschaetzt) teile.push("Lage ungefähr (Loipenstart)");
     if (x.quelle === "OpenStreetMap") teile.push("laut OpenStreetMap, nicht von der Loipenquelle bestätigt");
     return '<li class="glass"><span><b>' + esc(x.name) + '</b><br><span class="fine">' + esc(teile.join(" · ")) + '</span></span><a class="btn" href="' + esc(navLink(x.lat, x.lon)) + '" rel="noopener">Navigation</a></li>';

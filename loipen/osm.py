@@ -32,6 +32,7 @@ bestaetigt. Gebuehr nur aus dem Tag fee (yes/no), sonst unbekannt.
 import json
 import logging
 import math
+from difflib import SequenceMatcher
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from urllib.parse import quote
@@ -322,6 +323,17 @@ def _woerter(name: str, orte: str) -> set[str]:
     return {w for w in woerter(name, orte) if len(w) >= 3}
 
 
+def _widerspruch(a: str, b: str) -> bool:
+    """Beide Namen haben ein eigenes unterscheidendes Wort, das der andere nicht hat, auch mit Ortsnamen gezaehlt:
+    "Isola-Sils" ist nicht "Maloja-Isola", "Sportplatzrunde (kleine Runde)" nicht "(grosse Runde)".
+    Aehnlich geschriebene Woerter ("Bayrischzell"/"Bayerischzell") zaehlen als gleich."""
+    wa = {w for w in woerter(a) if len(w) >= 3} - (ALLGEMEIN - {"kleine", "grosse", "klein", "gross"})
+    wb = {w for w in woerter(b) if len(w) >= 3} - (ALLGEMEIN - {"kleine", "grosse", "klein", "gross"})
+    nur_a = {x for x in wa - wb if not any(SequenceMatcher(None, x, y).ratio() >= 0.8 for y in wb)}
+    nur_b = {y for y in wb - wa if not any(SequenceMatcher(None, x, y).ratio() >= 0.8 for x in wa)}
+    return bool(nur_a and nur_b)
+
+
 def name_wert(loipe: str, osm_namen: list[str], orte: str) -> float:
     """Aehnlichkeit 0..1 zwischen Loipenname und dem besten OSM-Namen: Anteil gemeinsamer Woerter (Jaccard) ohne
     Ortsnamen, Fuellwoerter, Nummern und Laengen. Gemeinsam muss mindestens ein unterscheidendes Wort sein
@@ -336,7 +348,7 @@ def name_wert(loipe: str, osm_namen: list[str], orte: str) -> float:
                 bester = max(bester, 1.0)
             continue
         gemeinsam = a & b
-        if not gemeinsam - ALLGEMEIN:
+        if not gemeinsam - ALLGEMEIN or _widerspruch(loipe, n):
             continue
         bester = max(bester, len(gemeinsam) / len(a | b))
     return bester
