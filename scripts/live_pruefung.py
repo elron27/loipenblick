@@ -94,7 +94,7 @@ def main() -> int:
     ap.add_argument("--ausgabe", type=Path, default=Path(".live"))
     ap.add_argument("--quelle", action="append", help="nur diese Quelle(n), Standard: alle")
     ap.add_argument("--ohne-wetter", action="store_true")
-    ap.add_argument("--ohne-osm", action="store_true", help="keine OpenStreetMap-Abfragen (P38, P39)")
+    ap.add_argument("--ohne-osm", action="store_true", help="keine OpenStreetMap-Abfragen (P40, P39)")
     ap.add_argument("--osm-direkt", action="store_true",
                     help="OpenStreetMap auch bei LOIPEN_UMLEITUNG echt abfragen (Workflow OSM-Abgleich: Quellen aus der Attrappe)")
     ap.add_argument("--erlaube-umleitung", action="store_true", help="nur um das Skript gegen die Attrappe zu testen")
@@ -136,7 +136,7 @@ def main() -> int:
             if wetter.vorhersagen == 0:
                 probleme.append("Wetter: keine Vorhersage geparst")
         if not args.ohne_osm:
-            # P38/P39: alle Regionen, eigener Fetcher mit langem Zeitlimit; Fehler sind nur Warnungen
+            # P40/P39: alle Regionen, eigener Fetcher mit langem Zeitlimit; Fehler sind nur Warnungen
             osm_fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, timeout_s=180,
                                             umleitung=None if args.osm_direkt else settings.umleitung)
             o = osm.aktualisiere(session, osm_fetcher, hoechstens=1000, auch_mit_strecke=args.osm_direkt)

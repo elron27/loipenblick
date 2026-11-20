@@ -164,7 +164,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     ohne_schnee: dict[int, list[str]] = {}  # E-24: Ortsseiten, die an der Loipe 0 cm Schnee melden
     lage: dict[int, tuple[float, float]] = {}
     laenge: dict[int, tuple[float, str]] = {}
-    strecke: dict[int, tuple[dict, str]] = {}  # P38: Streckenverlauf einer verdeckten Quelle
+    strecke: dict[int, tuple[dict, str]] = {}  # P40: Streckenverlauf einer verdeckten Quelle
     nach_id = {l.id: l for l in aktive}
     for versteckt, fuehrend in sorted(verdeckt.items()):
         v = nach_id[versteckt]
@@ -180,7 +180,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
         if v.laenge_km is not None and fuehrend not in laenge:
             laenge[fuehrend] = (v.laenge_km, v.quelle.name)
-        # P38 AK 1: ebenso der Streckenverlauf
+        # P40 AK 1: ebenso der Streckenverlauf
         if v.verlauf and fuehrend not in strecke:
             strecke[fuehrend] = (v.verlauf, v.quelle.name)
         vcfg = v.quelle.config or {}
@@ -268,7 +268,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in verlauf["coordinates"]]
                     d["strecke_von"], d["strecke_hinweis"] = von, None
                 else:
-                    # P38 AK 2: benannte OSM-Loipe, die nach Name, Lage und Laenge passt; mehrteilig als Liste von Linien
+                    # P40 AK 2: benannte OSM-Loipe, die nach Name, Lage und Laenge passt; mehrteilig als Liste von Linien
                     o = osm.strecke_fuer(d, {"name": g.name, "lat": pos[0] if pos else None,
                                              "lon": pos[1] if pos else None}, osm_region.get("loipen", []))
                     if o:

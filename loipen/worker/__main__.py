@@ -75,7 +75,7 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
-        if abrufer is None:  # P38/P39: OpenStreetMap einmal pro Woche je Region, eigener Fetcher mit langem Zeitlimit
+        if abrufer is None:  # P40/P39: OpenStreetMap einmal pro Woche je Region, eigener Fetcher mit langem Zeitlimit
             try:
                 osm_fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, timeout_s=180,
                                                 umleitung=settings.umleitung)

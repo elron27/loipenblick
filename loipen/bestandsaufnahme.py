@@ -18,7 +18,7 @@ class Zaehler:
     strecke: int = 0           # irgendein Streckenverlauf
     strecke_eigen: int = 0     # von der Quelle selbst
     strecke_dublette: int = 0  # von einer anderen Quelle derselben Loipe (D15)
-    strecke_osm: int = 0       # aus OpenStreetMap zugeordnet (P38)
+    strecke_osm: int = 0       # aus OpenStreetMap zugeordnet (P40)
     lage: int = 0
     laenge: int = 0
     parken: int = 0            # mindestens ein Parkplatz an der Loipe

@@ -1,4 +1,4 @@
-"""OpenStreetMap-Loipen und -Parkplaetze je Region (P38, P39, E-29)
+"""OpenStreetMap-Loipen und -Parkplaetze je Region (P40, P39, E-29)
 
 Revision ID: 0008
 Revises: 0007

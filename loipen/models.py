@@ -302,7 +302,7 @@ class Abonnent(Base):
 
 
 class OsmDaten(Base):
-    """Verdichtete OpenStreetMap-Daten je Region (P38, P39): benannte Loipen (piste:type=nordic) und
+    """Verdichtete OpenStreetMap-Daten je Region (P40, P39): benannte Loipen (piste:type=nordic) und
     Parkplaetze. Lizenz ODbL; wird woechentlich neu geholt (loipen/osm.py)."""
 
     __tablename__ = "osm_daten"
