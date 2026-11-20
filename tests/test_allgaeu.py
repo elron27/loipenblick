@@ -3,7 +3,7 @@
 Schnappschuesse vom 20.11.2026 (Workflow Schnappschuss, Runden 23 bis 26, Recherche unter
 tests/fixtures/recherche-2026-11-20/). Am 20.11. war im ganzen Allgaeu alles geschlossen; nur das
 Nordic Zentrum Oberstdorf meldete die Schnee-Depot-Loipe als teilweise befahrbar.
-Nicht angebunden (Befund in docs/kontaktliste.md Abschnitt 3): loipen-allgaeu.de (robots-Sperre,
+Nicht angebunden (Befund in docs/kontaktliste.md Abschnitt 4): loipen-allgaeu.de (robots-Sperre,
 Sammeldienst), Bad Hindelang, allgaeu.de, Scheidegg (Status nur ueber ein Browser-Widget mit Schluessel),
 Oberstaufen, Nesselwang (kein Status).
 """
@@ -18,6 +18,7 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.allgaeu_orte import FuessenAdapter, IntermapsListeAdapter, KleinwalsertalAdapter, TraminoBoxAdapter
 from loipen.adapters.eopoi import EoPoiAdapter
 from loipen.adapters.normalisierung import BERLIN
+from loipen import osm
 from loipen.adapters.tramino_wsb import TraminoWsbAdapter
 from loipen.konfig import CONFIG_DIR, lade_yaml
 from loipen.models import Schwierigkeit, Status, Technik
@@ -42,7 +43,7 @@ def leer(key: str, adapter, html: str):
 
 
 @pytest.mark.req("P38", ak=1)
-def test_p36_oberstdorf_wintersportbericht():
+def test_p38_oberstdorf_wintersportbericht():
     r = lauf("oberstdorf", TraminoWsbAdapter())
     assert r.warnungen == []
     assert len(r.loipen) == 14
@@ -60,7 +61,7 @@ def test_p36_oberstdorf_wintersportbericht():
 
 
 @pytest.mark.req("P38", ak=1)
-def test_p36_wertach_laenge_technik_schwierigkeit_aus_dem_hinweis():
+def test_p38_wertach_laenge_technik_schwierigkeit_aus_dem_hinweis():
     r = lauf("wertach", TraminoWsbAdapter())
     assert r.warnungen == []
     assert [l.name for l in r.loipen] == ["Rund- und Nachtloipe Klassisch und Skating", "Kolpingloipe",
@@ -75,7 +76,7 @@ def test_p36_wertach_laenge_technik_schwierigkeit_aus_dem_hinweis():
 
 
 @pytest.mark.req("P38", ak=1)
-def test_p36_isny_kaesten_mit_laenge_in_metern():
+def test_p38_isny_kaesten_mit_laenge_in_metern():
     r = lauf("isny", TraminoBoxAdapter())
     assert r.warnungen == []
     assert len(r.loipen) == 12
@@ -91,7 +92,7 @@ def test_p36_isny_kaesten_mit_laenge_in_metern():
 
 
 @pytest.mark.req("P38", ak=2)
-def test_p36_pfronten_eo_poi_daten_aus_dem_html():
+def test_p38_pfronten_eo_poi_daten_aus_dem_html():
     r = lauf("pfronten", EoPoiAdapter())
     assert r.warnungen == []
     namen = [l.name for l in r.loipen]
@@ -111,7 +112,7 @@ def test_p36_pfronten_eo_poi_daten_aus_dem_html():
 
 
 @pytest.mark.req("P38", ak=3)
-def test_p36_kleinwalsertal_status_und_technik():
+def test_p38_kleinwalsertal_status_und_technik():
     r = lauf("kleinwalsertal", KleinwalsertalAdapter())
     assert r.warnungen == []
     assert len(r.loipen) == 19
@@ -125,7 +126,7 @@ def test_p36_kleinwalsertal_status_und_technik():
 
 
 @pytest.mark.req("P38", ak=3)
-def test_p36_fuessen_loipengruppen():
+def test_p38_fuessen_loipengruppen():
     r = lauf("fuessen", FuessenAdapter())
     assert r.warnungen == []
     assert [(l.name, l.source_key, l.status) for l in r.loipen] == [
@@ -135,7 +136,7 @@ def test_p36_fuessen_loipengruppen():
 
 
 @pytest.mark.req("P38", ak=3)
-def test_p36_hoernerdoerfer_intermaps_liste_mit_orten():
+def test_p38_hoernerdoerfer_intermaps_liste_mit_orten():
     r = lauf("hoernerdoerfer", IntermapsListeAdapter())
     assert r.warnungen == []
     assert len(r.loipen) == 26
@@ -152,7 +153,7 @@ def test_p36_hoernerdoerfer_intermaps_liste_mit_orten():
 
 
 @pytest.mark.req("P38", ak=[1, 3])
-def test_p36_unbekanntes_symbol_und_leere_seite():
+def test_p38_unbekanntes_symbol_und_leere_seite():
     t = ('<h4>Loipen</h4><table><tr><th></th><th>Name</th></tr>'
          '<tr><td><img src="https://tramino.s3.amazonaws.com/gfx/wsb/neu.png"></td><td><a href="/x">Testloipe</a></td>'
          '<td class="lastcol">3 km</td></tr></table>')
@@ -167,7 +168,7 @@ def test_p36_unbekanntes_symbol_und_leere_seite():
 
 
 @pytest.mark.req("P38", ak=4)
-def test_p36_quellen_ortsseiten_nur_test():
+def test_p38_quellen_ortsseiten_nur_test():
     for key in ALLGAEU:
         q = quelle(key)
         assert q["adapter"] in ADAPTERS, key
@@ -181,7 +182,7 @@ def test_p36_quellen_ortsseiten_nur_test():
 
 
 @pytest.mark.req("P38", ak=4)
-def test_p36_neue_gebiete_mit_lage_region_und_wetterstation():
+def test_p38_neue_gebiete_mit_lage_region_und_wetterstation():
     y = lade_yaml(CONFIG_DIR / "gebiete.yaml")
     g = {x["slug"]: x for x in y["gebiete"]}
     r = {x["slug"]: x for x in y["regionen"]}
@@ -203,3 +204,25 @@ def test_p36_neue_gebiete_mit_lage_region_und_wetterstation():
             assert "dienst" not in st and st["id"] in aktiv, slug
     assert r[g["isny"]["region"]]["bundesland"] == "Baden-Württemberg"
     assert r[g["kleinwalsertal"]["region"]]["bundesland"] == "Vorarlberg"
+
+
+@pytest.mark.req("P40", ak=1)
+def test_p38_osm_strecken_fuer_isny_und_kleinwalsertal():
+    """Der OSM-Abgleich vom 20.11.2026 kennt die Allgaeu-Regionen; Isny und Kleinwalsertal bekommen Strecken."""
+    gebiete = {g["slug"]: g for g in lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]}
+
+    def treffer(key, adapter, region):
+        daten = json.loads((FIX / "osm" / f"{region}.json").read_text(encoding="utf-8"))["loipen"]
+        paare = {}
+        for l in lauf(key, adapter).loipen:
+            s = osm.strecke_fuer({"name": l.name, "lat": l.lat, "lon": l.lon, "laenge_km": l.laenge_km},
+                                 gebiete[l.gebiet_slug], daten)
+            if s:
+                paare[l.name] = s["namen"][0]
+        return paare
+
+    isny = treffer("isny", TraminoBoxAdapter(), "wuerttembergisches-allgaeu")
+    assert isny["Gschwendloipe"] == "Gschwendloipe" and isny["Lengersauloipe"] == "Lengersauloipe"
+    assert len(isny) >= 4
+    kwt = treffer("kleinwalsertal", KleinwalsertalAdapter(), "kleinwalsertal")
+    assert kwt["Steinbockloipe: Ahorn-Runde [kl]"] == "Steinbock Loipe - Ahorn"
