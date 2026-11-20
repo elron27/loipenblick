@@ -302,6 +302,17 @@ function talprofil(gebiete, schnee) {
   return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
 }
 
+/* U45: Schneehoehe mit dem Namen der Messstation des Gebiets. Fehlt die Messung, sagt der Chip das fuer genau
+   dieses Gebiet, statt den Wert eines anderen Gebiets zu zeigen. Aeltere Messungen tragen ihr Datum. */
+var NAH_KM = 50;
+function schneeChip(g) {
+  var s = g && g.schnee;
+  if (!s || s.schneehoehe_cm == null) return '<span class="chip" id="reco-schnee">Schneehöhe' + (g ? " " + esc(g.name) : "") + ": keine Messung</span>";
+  var st = s.station_name || s.station_id, heute = new Date().toISOString().slice(0, 10);
+  return '<span class="chip" id="reco-schnee" title="Gemessen am ' + esc(datum(s.messtag)) + (st ? " an der Station " + esc(st) : "") + '">Schnee ' +
+    (st ? "Station " + esc(st) : esc(g.name)) + ": " + zahl(s.schneehoehe_cm, 0) + " cm" + (s.messtag && s.messtag < heute ? " (" + esc(datum(s.messtag).slice(0, 6)) + ")" : "") + "</span>";
+}
+
 /* ---------- Seiten ---------- */
 function seiteHeute(q) {
   var o = S.ort, nah = S.gebiete.slice().sort(function (a, b) { return (dist(o, a) == null) - (dist(o, b) == null) || dist(o, a) - dist(o, b); });
@@ -316,9 +327,10 @@ function seiteHeute(q) {
     (reco ? 'Heute lohnt sich <span class="akz">' + esc(reco.name) + "</span>" : 'Heute keine <span class="akz">offene Loipe</span>') + "</h1><p>" +
     (reco ? esc(km(reco.laenge_km) + (reco.entf != null ? ", " + zahl(reco.entf, 0) + " km von " + o.name : "") + ", Stand " + alter(reco.abgerufen)) : "Alle Quellen melden die Loipen als geschlossen oder ohne Angabe. Wir prüfen in der Saison dreimal täglich.") +
     "</p></div>" + talprofil(zeig) + "</section>" +
-    '<div class="cols" style="margin-top:14px"><div class="reco glass"><h2>Heute in deiner Nähe</h2><div class="big">' + (reco ? esc(reco.name) : "Heute keine offene Loipe") + "</div><p>" +
-    (reco ? esc(reco.gebiet.name) + " · " + WORT[reco.status] : "Wir sagen es dir hier, sobald etwas gespurt ist.") + '</p><div class="facts">' +
-    (nah[0] && nah[0].schnee && nah[0].schnee.schneehoehe_cm != null ? '<span class="chip">Schnee ' + esc(nah[0].name) + ": " + zahl(nah[0].schnee.schneehoehe_cm, 0) + " cm</span>" : '<span class="chip">Schneehöhe: noch keine Messung</span>') +
+    '<div class="cols" style="margin-top:14px"><div class="reco glass"><h2>' + (reco && reco.entf != null && reco.entf > NAH_KM ? "Nächste offene Loipe" : "Heute in deiner Nähe") + "</h2>" + '<div class="big">' + (reco ? esc(reco.name) : "Heute keine offene Loipe") + "</div><p>" +
+    (reco ? esc(reco.gebiet.name) + " · " + WORT[reco.status] + (reco.entf != null ? " · " + zahl(reco.entf, 0) + " km entfernt" : "") : "Wir sagen es dir hier, sobald etwas gespurt ist.") + '</p><div class="facts">' +
+    /* U45: die Schneehoehe gehoert zur empfohlenen Loipe, nicht zum Gebiet am Standort */
+    schneeChip(reco ? reco.gebiet : nah[0]) +
     (reco ? '<a class="btn prim" href="#/loipe/' + reco.id + '">Zur Loipe</a>' : "") + "</div></div>" +
     /* U34: die Kennzahlen fuehren direkt zur passend gefilterten Liste */
     '<div class="stats"><a class="stat glass" id="k-offen" href="#/loipen?offen=1&amp;sort=entfernung"><b>' + offene.length + '</b><span>befahrbar</span>' + (sonderOffen ? '<small class="sz">+' + sonderOffen + " Sonder&shy;loipe" + (sonderOffen > 1 ? "n" : "") + "</small>" : "") + '</a><a class="stat glass" href="#/loipen"><b>' + kz.loipen + '</b><span>Loipen im Blick</span></a><a class="stat glass" href="#/abdeckung"><b>' + (S.idx.quellen.length - fehler) + "/" + S.idx.quellen.length + "</b><span>Quellen ohne Fehler</span></a></div></div>";
