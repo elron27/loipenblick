@@ -1,6 +1,6 @@
 # Kontaktliste: Stellen, die wir fragen oder informieren müssen
 
-Stand 19.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
+Stand 20.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
 `livegang/vorbereitung/kontaktliste.md` im Projektordner.
 
 **Vorgehen (Stefan, 19.11.2026):** Daten von Quellen ohne Zustimmung dürfen in die **Testversion**. Die Quelle steht dann in
@@ -25,7 +25,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | Tourist-Info Bayrischzell | bayrischzell.de | Loipenstatus | tourist-info@bayrischzell.de | angefragt 19.11.2026 | |
 | Gemeinde Fischbachau | fischbachau.de | Loipenstatus | rathaus@fischbachau.de | angefragt 19.11.2026 | |
 | Gemeinde Aschau i. Chiemgau | aschau.de (Sachrang) | Loipenstatus | gemeinde@aschau.de | angefragt 19.11.2026 | |
-| Chiemgau Tourismus | tourinfra Loipenmanager Chiemgau | Loipenstatus, Strecken | Adresse fehlt (Impressum chiemgau-tourismus.de) | **nicht angefragt** | Mail lag ohne Adresse bereit |
+| Chiemgau GmbH (Chiemgau Tourismus) | tourinfra Loipenmanager Chiemgau (Ruhpolding, Reit im Winkl, Inzell, Achental u. a.) | Loipenstatus, Strecken | Martina Tremel, Digitale Medien, Martina.Tremel@chiemgau.bayern | angefragt, **Antwort 20.11.2026: vorerst keine Freigabe** | Fragt, ob wir eine tourinfra-Schnittstelle nutzen oder Seiten auslesen; klärt intern und mit dem Systemanbieter (green-solutions). Bitte: Loipenmanager-Daten vorerst nicht übernehmen. Seit 20.11. `nur_test`. Antwortentwurf im Projekt-Thread "Chiemgau-Rückfrage". |
 | TVB Tannheimer Tal | tourinfra Loipenmanager | Loipenstatus, Strecken | info@tannheimertal.com | angefragt 19.11.2026 | |
 | TVB Olympiaregion Seefeld | seefeld.com, tourinfra | Loipenstatus, gespurte km | region@seefeld.com | angefragt 19.11.2026 | deckt beide Seefeld-Quellen ab |
 | TVB Achensee | achensee.com | Schneebericht | info@achensee.com | angefragt 19.11.2026 | |
@@ -58,7 +58,31 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | OpenStreetMap | Kartenkacheln | Tile Usage Policy (kein Massenabruf, Attribution) | vor dem Livegang prüfen, ob eigener Kachelanbieter nötig ist |
 | MeteoSchweiz | Schneehöhen Schweiz (geplant) | Open Data, Bedingungen noch prüfen | noch nicht angebunden |
 
-## 3. Ortsseiten für die Querprüfung von tirol.at (in Arbeit)
+
+## 3. tourinfra-Loipenmanager (green-solutions)
+
+Acht Quellen lesen dieselbe Abfrage `module.tourinfra.com/<kunde>/inc/ajax.php?ajaxtype=getLoipenmanager`, also das
+JSON, das auch das Loipenbericht-Widget auf der Webseite des Betreibers lädt. Das ist keine für Dritte freigegebene oder
+dokumentierte Schnittstelle. Systemanbieter: green-solutions GmbH & Co. KG, Viehmarktplatz 6, 82418 Murnau,
+office@green-solutions.info, +49 8841 4874011 (Impressum green-solutions.info, gelesen 20.11.2026). Auf ihren Seiten steht
+nichts zu einer offenen Schnittstelle oder zur Weitergabe an externe Plattformen.
+
+Die Daten gehören dem jeweiligen Tourismusverband, nicht green-solutions. Die Rückfrage der Chiemgau GmbH (20.11.2026)
+betrifft deshalb zunächst nur den Chiemgau. Sagt green-solutions aber allgemein, dass der Abruf des Widget-JSON durch Dritte
+nicht gewünscht ist, gilt das für alle acht:
+
+| Quelle (`key`) | Betreiber | Erlaubnis-Stand |
+|---|---|---|
+| `chiemgau` | Chiemgau GmbH | `nur_test` seit 20.11.2026 (Freigabe ausstehend) |
+| `tannheimer` | TVB Tannheimer Tal | angefragt 19.11.2026 |
+| `seefeld-tourinfra` | TVB Olympiaregion Seefeld | angefragt 19.11.2026 |
+| `engadin` | Engadin Tourismus | nicht angefragt |
+| `davos-klosters` | Destination Davos Klosters | nicht angefragt |
+| `goms` | Goms Tourismus | nicht angefragt |
+| `gastein` | Gastein Tourismus | nicht angefragt |
+| `ramsau` | TVB Ramsau am Dachstein | nicht angefragt |
+
+## 4. Ortsseiten für die Querprüfung von tirol.at (in Arbeit)
 
 Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.txt, Nutzungsbedingungen, was dort steht).
 
@@ -127,7 +151,7 @@ Schnappschüsse Runden 23 bis 26 unter `tests/fixtures/recherche-2026-11-20/`. r
 | Scheidegg, Westallgäu (scheidegg.de, westallgaeu.de) | Westallgäu | – | – | **nicht angebunden** | Scheidegg: eo-POI-Widget nur im Browser; westallgaeu.de ohne Loipenstatus. |
 | Oberstaufen, Nesselwang, Sulzberg (Vorarlberg) | Oberallgäu, Ostallgäu | – | – | **kein Status gefunden** | Langlaufseiten nur mit Beschreibung, kein Loipenstatus (Sulzberg: nur Startseite der Gemeinde). |
 
-## 4. Allgäu (geprüft 20.11.2026)
+## 5. Allgäu (geprüft 20.11.2026)
 
 Das Allgäu liegt westlich unseres bisherigen Ausbaus (Südostbayern, Tirol, Salzburg), zwischen Bodensee, Lech und
 Tannheimer Tal. Nach E-13 ist es eine spätere Ausbaustufe. Anbindung der eigentlichen Quellen (Gemeinden,
@@ -143,4 +167,4 @@ tourinfra und tirol.at). Es fehlen alle bayerischen Allgäu-Gebiete, darunter Ob
 Oberstaufen, Pfronten, Nesselwang, Füssen, Isny, Scheidegg und das Unterallgäu, außerdem das Kleinwalsertal und
 Sulzberg (beide Vorarlberg, dort haben wir gar nichts).
 
-Nachtrag 20.11.2026: Die Gemeinde- und Tourismusseiten sind inzwischen angebunden, Befund und Stand im Abschnitt 3 unter „Allgäu über Gemeinde- und Tourismusseiten“ (P38, E-27).
+Nachtrag 20.11.2026: Die Gemeinde- und Tourismusseiten sind inzwischen angebunden, Befund und Stand im Abschnitt 4 unter „Allgäu über Gemeinde- und Tourismusseiten“ (P38, E-27).
