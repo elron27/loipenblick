@@ -1,5 +1,12 @@
-# <zielpfad> <url> -- Runde 22 (19.11.2026): Karte maps.zillertal.at (contwise) fuer den Adapter zillertal (P35, nur Test)
-tests/fixtures/recherche-2026-11-19/zillertal/maps-v2.html https://maps.zillertal.at/v2/de/gdi_summer/2d/-1/category/10/47.22702939886733/11.937699793825114/18426/-1/false/-1/-1/-1/eyIxODM2MSI6eyJzdWJDYXQiOnsiaW5kZXhWYWx1ZSI6MTgzNjR9fX0=/
-tests/fixtures/recherche-2026-11-19/zillertal/embedded.bundle.js https://maps.zillertal.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-19/zillertal/maps-robots.txt https://maps.zillertal.at/robots.txt
-tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# <zielpfad> <url> -- Runde 26 (20.11.2026): Waymarked Trails Slopes (OSM-Loipen als Routen), Liste und Geometrie
+tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
+tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-engadin.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1079799,5844683,1118761,5877027&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-leitzachtal.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1324702,6043868,1341400,6065364&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-toblach.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1346966,5889997,1374796,5909490&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-achensee.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1296872,6007610,1313570,6032315&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123

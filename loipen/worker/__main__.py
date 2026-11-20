@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 from apscheduler.schedulers.blocking import BlockingScheduler
 from sqlalchemy import select
 
-from loipen import generator
+from loipen import generator, osm
 from loipen.ablauf import rufe_quelle_ab
 from loipen.benachrichtigung import PushKonfig, entprelle
 from loipen.benachrichtigung import veroeffentliche as push_veroeffentliche
@@ -77,6 +77,18 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
+        if abrufer is None:  # P40/P39: OpenStreetMap einmal pro Woche je Region, eigener Fetcher mit langem Zeitlimit
+            try:
+                osm_fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, timeout_s=180,
+                                                umleitung=settings.umleitung)
+                try:
+                    o = osm.aktualisiere(session, osm_fetcher)
+                finally:
+                    osm_fetcher.close()
+                if o.abgerufen or o.fehler:
+                    log.info("OpenStreetMap: %d Regionen aktualisiert, %d Fehler", len(o.abgerufen), len(o.fehler))
+            except Exception:
+                log.exception("OpenStreetMap-Aktualisierung fehlgeschlagen")
         unplausibel: set[int] = set()
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
