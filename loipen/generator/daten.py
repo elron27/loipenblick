@@ -12,7 +12,7 @@ from sqlalchemy.orm import Session
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.dubletten import Eintrag, finde_dubletten
 from loipen.konfig import lade_yaml
-from loipen import plausibel
+from loipen import osm, plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
 from loipen.wetter import gebiet_position, schnee_uebersicht
@@ -93,6 +93,31 @@ def _netz(rohtext: str | None) -> dict | None:
     return {"offen": roh["offen"], "alle": roh["alle"]}
 
 
+HAND_PARK_NAH_KM = 1.5  # P39 AK 1: recherchierter Parkplatz des Gebiets, der zur Loipe gehoert
+
+
+def _parken(d: dict, punkte: list | None, gebiet: Gebiet, osm_parkplaetze: list[dict]) -> list[dict]:
+    """P39: Parkplaetze an dieser Loipe, der naechste zuerst. Von Hand recherchierte (config/gebiete.yaml) gehen vor;
+    nur wenn keiner in der Naehe liegt, kommen oeffentliche Parkplaetze aus OpenStreetMap am Loipenstart dazu."""
+    start = None
+    if punkte:
+        erster = punkte[0][0] if isinstance(punkte[0][0], list) else punkte[0]
+        start = (erster[0], erster[1])
+    if d["lat"] is not None:
+        start = (d["lat"], d["lon"])
+    hand = []
+    for p in gebiet.parkplaetze:
+        abstand = osm.km(start, (p.lat, p.lon)) if start else None
+        if abstand is None or abstand <= HAND_PARK_NAH_KM:
+            hand.append((abstand if abstand is not None else 0, {
+                "name": p.name, "lat": p.lat, "lon": p.lon, "gebuehr_eur_tag": p.gebuehr_eur_tag,
+                "gebuehr_text": p.gebuehr_text, "url": p.quelle_url, "geschaetzt": p.koordinate_geschaetzt,
+                "entfernung_m": int(round(abstand * 1000, -1)) if abstand is not None else None, "quelle": "hand"}))
+    if hand:
+        return [p for _, p in sorted(hand, key=lambda x: x[0])]
+    return osm.parkplaetze_bei(start, osm_parkplaetze) if start else []
+
+
 def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:
     zeilen = session.scalars(
         select(Wetter).where(
@@ -139,6 +164,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     ohne_schnee: dict[int, list[str]] = {}  # E-24: Ortsseiten, die an der Loipe 0 cm Schnee melden
     lage: dict[int, tuple[float, float]] = {}
     laenge: dict[int, tuple[float, str]] = {}
+    strecke: dict[int, tuple[dict, str]] = {}  # P40: Streckenverlauf einer verdeckten Quelle
     nach_id = {l.id: l for l in aktive}
     for versteckt, fuehrend in sorted(verdeckt.items()):
         v = nach_id[versteckt]
@@ -154,6 +180,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
         if v.laenge_km is not None and fuehrend not in laenge:
             laenge[fuehrend] = (v.laenge_km, v.quelle.name)
+        # P40 AK 1: ebenso der Streckenverlauf
+        if v.verlauf and fuehrend not in strecke:
+            strecke[fuehrend] = (v.verlauf, v.quelle.name)
         vcfg = v.quelle.config or {}
         quer = bool(vcfg.get("querpruefung"))  # E-24: Ortsseite, die nur zum Gegenpruefen dient
         if (eintrag["status"] == Status.GESCHLOSSEN.value
@@ -191,11 +220,13 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     veraltet = 0
     gesamt = 0
     unplausibel: list[int] = []
+    osm_daten = osm.lade(session)
     # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
     for region in sorted(session.scalars(select(Region)),
                          key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
         gebiete = []
         verlaeufe: dict[str, list] = {}
+        osm_region = osm_daten.get(region.slug) or {}
         for g in sorted(region.gebiete, key=lambda x: x.name):
             pos = gebiet_position(g)
             schnee = schnee_uebersicht(session, g)
@@ -228,13 +259,32 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None
                 if d["laenge_km"] is None and l.id in laenge:
                     d["laenge_km"], d["laenge_von"] = laenge[l.id]
+                d["strecke_von"] = None
+                if l.verlauf:
+                    # Strecken getrennt, damit die Startseite klein bleibt; [lat, lon]
+                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in l.verlauf["coordinates"]]
+                elif l.id in strecke:
+                    verlauf, von = strecke[l.id]
+                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in verlauf["coordinates"]]
+                    d["strecke_von"], d["strecke_hinweis"] = von, None
+                else:
+                    # P40 AK 2: benannte OSM-Loipe, die nach Name, Lage und Laenge passt; mehrteilig als Liste von Linien
+                    o = osm.strecke_fuer(d, {"name": g.name, "lat": pos[0] if pos else None,
+                                             "lon": pos[1] if pos else None}, osm_region.get("loipen", []))
+                    if o:
+                        linien = osm.linien_fuer_seite(o["linien"])
+                        verlaeufe[str(l.id)] = linien[0] if len(linien) == 1 else linien
+                        d["strecke_von"], d["strecke_hinweis"] = osm.QUELLE, None
+                        d["strecke_osm"] = {"name": o["namen"][0], "url": f"https://www.openstreetmap.org/{o['id']}",
+                                            "laenge_km": o["laenge_km"]}
+                        if d["lat"] is None:
+                            d["lat"], d["lon"] = linien[0][0]
+                            d["lage_von"] = osm.QUELLE
+                d["parken"] = _parken(d, verlaeufe.get(str(l.id)), g, osm_region.get("parkplaetze", []))
                 loipen.append(d)
                 kennzahl[d["status"]] += 1
                 veraltet += d["veraltet"]
                 gesamt += 1
-                if l.verlauf:
-                    # Strecken getrennt, damit die Startseite klein bleibt; [lat, lon]
-                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in l.verlauf["coordinates"]]
             gebiete.append({
                 "slug": g.slug,
                 "name": g.name,

@@ -1,5 +1,12 @@
-# <zielpfad> <url> -- Runde 23 (20.11.2026): Worker-Log vom NAS, Tegernsee-Abbruch und Achensee 0 Loipen (B28)
-tests/fixtures/tegernsee/2026-11-20/a-ringseeloipe-42-km-skating-u-klassisch.html https://www.tegernsee.com/a-ringseeloipe-42-km-skating-u-klassisch
-tests/fixtures/tegernsee/2026-11-20/a-rundkurs-point-skating-u-klassisch.html https://www.tegernsee.com/a-rundkurs-point-skating-u-klassisch
-tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
-tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
+# <zielpfad> <url> -- Runde 26 (20.11.2026): Waymarked Trails Slopes (OSM-Loipen als Routen), Liste und Geometrie
+tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
+tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-engadin.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1079799,5844683,1118761,5877027&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-leitzachtal.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1324702,6043868,1341400,6065364&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-toblach.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1346966,5889997,1374796,5909490&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-achensee.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1296872,6007610,1313570,6032315&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123

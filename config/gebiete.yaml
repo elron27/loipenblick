@@ -242,6 +242,14 @@ gebiete:
   nachbarn:
   - gmund
   - tegernsee
+  parkplaetze:
+  - name: Parkplatz Wilhelminastraße
+    lat: 47.7201
+    lon: 11.722
+    gebuehr_text: '8-18 Uhr: erste halbe Stunde frei, dann 1,00 € je angefangene halbe Stunde, ab 2,5 Std. Tagesticket 10,00 €'
+    url: https://www.tegernsee.com/a-parkplatz-wilhelminastrasse
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 10.0
 - slug: gmund
   name: Gmund
   hoehe_m: 740
