@@ -44,6 +44,9 @@ class AdapterErgebnis:
     loipen: list[LoipenDaten] = field(default_factory=list)
     # Einzelne Seiten, die nicht gelesen werden konnten; der Lauf geht trotzdem weiter
     warnungen: list[str] = field(default_factory=list)
+    # False, wenn Seiten wegen Netzfehlern fehlen: die Loipen sind dann nur ein Teil (B28). Fehlende Loipen
+    # werden in diesem Fall nicht als verschwunden behandelt (B29).
+    vollstaendig: bool = True
 
 
 class Fetcher(Protocol):
