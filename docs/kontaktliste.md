@@ -78,6 +78,17 @@ Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.
 | Kitzbühel Tourismus | Kitzbühel, Reith, Aurach, Jochberg | nicht angebunden | info@kitzbuehel.com | nicht nötig | Keine eigene Statusliste; die Karte maps.kitzbuehel.com lädt tirol.mapservices.eu, also dieselben Daten wie tirol.at |
 | Kitzbüheler Alpen, St. Johann in Tirol | St. Johann, Oberndorf, Kirchdorf, Erpfendorf | nicht neu angebunden | (wie Kitzbüheler Alpen, Abschnitt 1) | nicht nötig | /de/stjo/aktuelles/loipen-status.html ist eine Teilmenge der schon angebundenen Quelle `kitzbueheler-alpen`; zusätzlich nur Schneehöhe des Skigebiets |
 
+### Ötztal, Pitztal, Tiroler Oberland, Nauders, Serfaus-Fiss-Ladis, Paznaun (P31, geprüft 19.11.2026)
+
+| Stelle | Region | Wofür | Kontakt | Stand | Notiz zu den Nutzungsbedingungen |
+|---|---|---|---|---|---|
+| Ötztal Tourismus (Körperschaft öffentlichen Rechts), Sölden | Ötztal (oetztal.com) | Loipenstatus, Länge, Schwierigkeit je Detailseite | info@oetztal.com, +43 57200 200 | nicht angefragt | Impressum und AGB (nur Buchungen) ohne Regel zur Weiterverwendung; robots.txt regelt nur Meta-Bots. Liste per Outdooractive-Schlüssel der Seite, den wir nicht nutzen. Geprüft 19.11.2026, `nur_test`. |
+| Tourismusverband Pitztal, Wenns | Pitztal (pitztal.com) | Loipenstatus, Länge, Startpunkt | info@pitztal.com, +43 5414 86 999 | nicht angefragt | Impressum: Verwendung von Grafiken und Texten in anderen Publikationen nur mit Zustimmung; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| TVB Tiroler Oberland, Ried i. O. | Tiroler Oberland, Kaunertal, Kaunergrat (tiroler-oberland.com) | Loipenstatus | office@tiroler-oberland.com, +43 50 225 100 | nicht angefragt | Impressum und AGB ohne Regel zur Weiterverwendung; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| TVB Tiroler Oberland, Erlebnisraum Nauders | Nauders (nauders.com) | Loipenstatus, Länge, Technik, Stand | office@nauders.com, +43 50 225 400 | nicht angefragt | wie Tiroler Oberland (derselbe Verband, eine Anfrage reicht). Geprüft 19.11.2026, `nur_test`. |
+| Serfaus-Fiss-Ladis Marketing GmbH (für den TVB), Serfaus | Serfaus-Fiss-Ladis (serfaus-fiss-ladis.at) | Loipenstatus, Länge, Technik | info@serfaus-fiss-ladis.at, +43 5476 6239 | nicht angefragt | Impressum: Inhalte und Bilder für andere Seiten nur mit ausdrücklicher Erlaubnis der Redaktion; robots.txt erlaubt alles. Geprüft 19.11.2026, `nur_test`. |
+| Tourismusverband Paznaun-Ischgl, Ischgl | Paznaun mit Galtür und Silvretta (ischgl.com) | Loipenstatus, Länge, Technik, Startpunkt, Stand | info@paznaun-ischgl.com, +43 50990 100 | nicht angefragt | Fußzeile „Alle Rechte vorbehalten“, Impressum-Volltext extern (datareporter), AGB nur Buchungen; robots.txt sperrt ajaxRequestType, nicht ajax=1. Geprüft 19.11.2026, `nur_test`. |
+
 ### Innsbruck, Stubai, Wipptal, Hall-Wattens, Silberregion Karwendel (P32, geprüft 19.11.2026)
 
 | Ortsseite | Region | Was dort steht | robots.txt | Ergebnis | Notiz |

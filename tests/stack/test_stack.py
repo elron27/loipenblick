@@ -48,6 +48,8 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
            "myswitzerland": 340, "st-anton": 15, "nassfeld-nlw": 6, "steiermark": 89,
            "alpbachtal": 7, "wildschoenau": 6, "wilderkaiser": 10,
+           # P31: Ortsseiten Oetztal bis Paznaun (Oetztal: 6 von 22 Detailseiten im Schnappschuss)
+           "oetztal": 6, "pitztal": 14, "tiroler-oberland": 11, "nauders": 11, "serfaus-fiss-ladis": 10, "paznaun": 20,
            "innsbruck": 40, "hall-wattens": 7, "silberregion-karwendel": 7}
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
