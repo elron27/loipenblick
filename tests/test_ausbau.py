@@ -28,12 +28,6 @@ ROOT = Path(__file__).resolve().parent.parent
 JETZT = datetime(2026, 11, 12, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
 UA = "LoipenBot"
 VERBOTEN = ("salzkammergut.at", "intermaps", "bergfex")
-
-
-def ausnahme_p17(q: dict) -> bool:
-    """Stefan 19.11.2026 (E-24): Intermaps nur fuer die Testversion, mit erlaubnis nur_test und Begruendung."""
-    n = q.get("nutzung") or {}
-    return n.get("erlaubnis") == "nur_test" and bool(n.get("ausnahme_p17")) and "intermaps" in q["base_url"]
 NEUE_QUELLEN = ("tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden")
 DATUM = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -115,7 +109,10 @@ def test_p17_gespeicherte_robots_txt_erlaubt_unsere_abrufe(key):
 def test_p17_keine_quelle_mit_robots_sperre_konfiguriert():
     for q in quellen():
         assert q["nutzung"]["robots"] == "erlaubt", q["key"]
-        assert ausnahme_p17(q) or not any(v in q["base_url"].lower() for v in VERBOTEN), q["key"]
+        # Ausnahme nur fuer die Testversion (Stefan 19.11.2026, P32): nur_test mit Begruendung, oeffentlich ausgeblendet
+        if q["nutzung"].get("erlaubnis") == "nur_test" and q["nutzung"].get("p17_ausnahme"):
+            continue
+        assert not any(v in q["base_url"].lower() for v in VERBOTEN), q["key"]
     s = sources()
     s["quellen"][0]["nutzung"]["robots"] = "gesperrt"
     assert any("robots.txt erlaubt den Abruf nicht" in f for f in pruefe(s, gebiete_yaml()))
@@ -167,7 +164,9 @@ def test_b19_host_jeder_quelle_steht_in_der_cloud_umgebung():
 
     for url in (wetter.GEOSPHERE_URL, wetter.BRIGHTSKY_URL):
         assert urlparse(url).hostname in hosts
-    ausnahmen = {urlparse(q["base_url"]).hostname for q in quellen() if ausnahme_p17(q)}
+    # Ausnahme nur fuer die Testversion (Stefan 19.11.2026, P32): Host einer nur_test-Quelle mit p17_ausnahme
+    ausnahmen = {urlparse(q["base_url"]).hostname for q in quellen()
+                 if q["nutzung"].get("erlaubnis") == "nur_test" and q["nutzung"].get("p17_ausnahme")}
     assert not any(v in h for h in hosts - ausnahmen for v in VERBOTEN)
 
 

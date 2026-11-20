@@ -92,7 +92,9 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
                 and abstand < SELBE_QUELLE_KM)
     ka, kb = schluessel(a.name, a.gebiet_name), schluessel(b.name, b.gebiet_name)
     if not ka or not kb:
-        return False
+        # P32: der Name besteht nur aus dem Ortsnamen ("Loipe Hinterriss" im Gebiet Hinterriß); gleicher Name im
+        # gleichen Gebiet ist dieselbe Loipe
+        return a.gebiet == b.gebiet and kurzname(a.name).lower() == kurzname(b.name).lower()
     aehnlich = SequenceMatcher(None, ka, kb).ratio()
     abstand = _km(a, b)
     if abstand is None:
@@ -121,13 +123,24 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
     return (aehnlich >= AEHNLICH and abstand < NAH_KM) or (ka == kb and abstand < GLEICH_NAH_KM)
 
 
+def _naehe(b: Eintrag, e: Eintrag) -> tuple:
+    """Rangfolge unter passenden Eintraegen: gleicher Name, gleiche Nummern, aehnlichster Schluessel, kleinster Abstand."""
+    abstand = _km(b, e)
+    return (kurzname(b.name).lower() == kurzname(e.name).lower(), nummern(b.name) == nummern(e.name),
+            SequenceMatcher(None, schluessel(b.name, b.gebiet_name), schluessel(e.name, e.gebiet_name)).ratio(),
+            -(abstand if abstand is not None else 1e9))
+
+
 def finde_dubletten(eintraege: list[Eintrag]) -> dict[int, int]:
     """id des verdeckten Eintrags -> id des fuehrenden. Fuehrend ist der kleinste Rang, dann die kleinste id."""
     reihenfolge = sorted(eintraege, key=lambda e: (e.rang, e.id))
     fuehrend: dict[int, int] = {}
     behalten: list[Eintrag] = []
     for e in reihenfolge:
-        treffer = next((b for b in behalten if gleich(b, e)), None)
+        # P32: von mehreren passenden Eintraegen gewinnt der aehnlichste ("Rinn - Panoramaloipe 2" gehoert zu
+        # "Panoramaloipe 2", nicht zur zuerst gefundenen "Panoramaloipe 3" in 200 m Abstand)
+        kandidaten = [b for b in behalten if gleich(b, e)]
+        treffer = max(kandidaten, key=lambda b: _naehe(b, e), default=None)
         if treffer:
             fuehrend[e.id] = treffer.id
         else:

@@ -1,18 +1,15 @@
-"""Adapter intermaps: Wintersportbericht der Tiroler Zugspitz Arena bei Intermaps, nur Testversion (P33, E-24).
+"""Adapter: Wintersportbericht von Intermaps (SDDS), wie ihn Innsbruck Tourismus einbettet (P32, E-24).
 
-Stefan am 19.11.2026: Die Zugspitz Arena zeigt ihren Loipenstatus nur ueber das eingebettete
-Intermaps-Fenster; fuer die Testversion darf es gelesen werden (Ausnahme zu P17, nur mit
-erlaubnis nur_test). Vor dem Livegang wird der Tourismusverband gefragt (docs/kontaktliste.md).
-
-Befund des Schnappschusses vom 19.11.2026 (tests/fixtures/zugspitzarena/2026-11-19/snowreport.html):
-- Kopf: "letzte Aktualisierung: 19.11.2026 13:20" und eine Tabelle SCHNEEHOEHE TAL/MITTE/BERG ("- cm" =
-  keine Meldung).
-- Abschnitt "Langlaufloipen" (h4) mit je Loipe einem div: Status-Bild images/icons/open.png, closed.png
-  oder inprep.png ("in Vorbereitung"), Schwierigkeit als div.difficulty-easy/-medium/-hard und
-  "<Ort> <Name> <Nummer> (leicht ) 1.4 km" als span.
-- Keine Koordinaten; die Lage kommt ueber die Dubletten-Erkennung von tirol.at.
-Gebiet ueber das erste Wort (Ort) aus config["gebiet_map"], sonst default_gebiet mit Warnung.
-Die Schneehoehe Tal gilt fuer alle Loipen des Berichts, wenn sie als Zahl gemeldet ist.
+Befund des Schnappschusses vom 19.11.2026 (tests/fixtures/innsbruck/2026-11-19/):
+- innsbruck.info/skifahren/service/schneebericht.html bettet per iframe
+  sdds4.intermaps.com/innsbruck_new/lebensraum_innsbruck.aspx?lang=de ein; die Seite ist reines HTML.
+- Kopf: "Letzte Aktualisierung 19.11.2026 15:46:31" (Stand der ganzen Meldung).
+- Abschnitt div.row.infrastructure mit h2 "Langlaufloipen (0 von 40 geöffnet)". Darin abwechselnd ein
+  Ortsblock (b = Ort, Telefon, Temperatur) und je Loipe div.object mit Status-Symbol (img .../<nr>.png)
+  und span = Name, z. B. "Rundloipe Gries (klassisch & skating)".
+- Was die Symbolnummer heisst, steht in der Legende derselben Seite (169 offen, 94 geschlossen,
+  126 in Vorbereitung, 412 offen (nicht frisch präpariert)); der Adapter liest die Zuordnung von dort.
+Keine Laenge, keine Koordinate, kein Praeparierdatum je Loipe.
 """
 
 import re
@@ -20,73 +17,82 @@ import re
 from parsel import Selector
 
 from loipen.adapters.base import AdapterErgebnis, Fetcher, LoipenDaten
-from loipen.adapters.normalisierung import parse_datum
-from loipen.adapters.tirolat import slug
-from loipen.models import Schwierigkeit, Status
+from loipen.adapters.normalisierung import normiere_zustand, parse_datum
+from loipen.models import Status, Technik
 
-STATUS_BILD = {"open": (Status.OFFEN, "offen"), "closed": (Status.GESCHLOSSEN, "geschlossen"),
-               # in Vorbereitung = heute noch nicht befahrbar
-               "inprep": (Status.GESCHLOSSEN, "in Vorbereitung")}
-SCHWIERIGKEIT = {"easy": Schwierigkeit.LEICHT, "medium": Schwierigkeit.MITTEL, "hard": Schwierigkeit.SCHWER,
-                 "difficult": Schwierigkeit.SCHWER}
-ZEILE = re.compile(r"^(?P<name>.*?)\s*\((?P<schw>[^)]*)\)\s*(?P<km>\d+(?:[.,]\d+)?)\s*km\s*$")
+# Legendenwoerter, die die allgemeine Tabelle (normalisierung.ZUSTAND) nicht kennt
+LEGENDE = {
+    "in vorbereitung": Status.GESCHLOSSEN,
+    "offen (nicht frisch präpariert)": Status.EINGESCHRAENKT,
+}
 
 
-def _text(sel) -> str:
-    return re.sub(r"\s+", " ", sel.xpath("normalize-space()").get(default="")).strip()
+def _symbol(src: str) -> str:
+    treffer = re.search(r"/(\d+)\.png", src or "")
+    return treffer.group(1) if treffer else ""
 
 
-def schneehoehe_tal(sel: Selector) -> int | None:
-    """'TAL - cm' -> None (keine Meldung), 'TAL 15 cm' -> 15."""
-    zelle = sel.xpath("//td[span[normalize-space()='TAL']]")[:1]
-    treffer = re.search(r"TAL\s*(\d+)\s*cm", _text(zelle)) if zelle else None
-    return int(treffer.group(1)) if treffer else None
+def _schluessel(text: str) -> str:
+    text = text.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
 
 
-class IntermapsSchneeberichtAdapter:
+def legende(sel: Selector) -> dict[str, str]:
+    """{"169": "offen", "94": "geschlossen", ...} aus dem Legendenblock."""
+    karte = {}
+    for img in sel.css(".legend img"):
+        text = img.xpath("following-sibling::text()[1]").get(default="").strip()
+        if text:
+            karte[_symbol(img.attrib.get("src", ""))] = text
+    return karte
+
+
+def technik(name: str) -> Technik:
+    n = name.lower()
+    k, s = "klassisch" in n, "skating" in n
+    return Technik.BEIDES if k and s else Technik.KLASSISCH if k else Technik.SKATING if s else Technik.UNBEKANNT
+
+
+class IntermapsAdapter:
     def run(self, base_url: str, config: dict, fetcher: Fetcher) -> AdapterErgebnis:
         ergebnis = AdapterErgebnis()
         url = base_url.rstrip("/") + config["pfad"]
         sel = Selector(fetcher.get(url))
-        kopf = _text(sel.xpath("//b[contains(., 'letzte Aktualisierung')]/.."))
-        stand = parse_datum(kopf)
-        if stand is None:
-            ergebnis.warnungen.append("Kein Stand (letzte Aktualisierung) gefunden")
-        tal = schneehoehe_tal(sel)
-        abschnitt = sel.xpath("//h4[normalize-space()='Langlaufloipen']/following-sibling::div[1]")
-        gesehen: set[str] = set()
-        for zeile in abschnitt.xpath("./div"):
-            text = _text(zeile.css("span"))
-            m = ZEILE.match(text)
-            name = m.group("name").strip() if m else text
-            if not name:
+        kopf = " ".join(sel.css(".header-title ::text").getall())
+        treffer = re.search(r"Aktualisierung\s+(\d{1,2}\.\d{1,2}\.\d{4})\s+(\d{1,2}:\d{2})", kopf)
+        stand = parse_datum(f"{treffer.group(1)} {treffer.group(2)}") if treffer else None
+        symbole = legende(sel)
+        gebiet_map = config.get("gebiet_map", {})
+        for abschnitt in sel.css("div.infrastructure"):
+            if not abschnitt.css("h2::text").get(default="").strip().startswith("Langlaufloipen"):
                 continue
-            key = slug(name)
-            if key in gesehen:
-                continue
-            gesehen.add(key)
-            ort = name.split()[0].split("-")[0]
-            gebiet = (config.get("gebiet_map") or {}).get(ort)
-            if gebiet is None:
-                gebiet = config["default_gebiet"]
-                ergebnis.warnungen.append(f"Loipe {name!r}: Ort {ort!r} ohne Gebiet, Standardgebiet {gebiet}")
-            d = LoipenDaten(source_key=key, name=name, source_url=url, gebiet_slug=gebiet)
-            bild = zeile.xpath("./img/@src").get(default="")
-            art = re.search(r"/(\w+)\.png$", bild)
-            if art and art.group(1) in STATUS_BILD:
-                d.status, d.status_rohtext = STATUS_BILD[art.group(1)]
-            else:
-                d.unbekannte_begriffe.append(("status", bild))
-            klasse = " ".join(zeile.css("div.difficulty-icon::attr(class)").getall())
-            schw = re.search(r"difficulty-(easy|medium|hard|difficult)\b", klasse)
-            if schw and schw.group(1) in SCHWIERIGKEIT:
-                d.schwierigkeit = SCHWIERIGKEIT[schw.group(1)]
-            if m:
-                d.laenge_km = float(m.group("km").replace(",", "."))
-            d.quelle_aktualisiert_at = stand
-            d.schneehoehe_cm = tal
-            d.rohtext = f"{d.status_rohtext or bild}; {text}; Stand {kopf}"
-            ergebnis.loipen.append(d)
+            ort = None
+            for block in abschnitt.css(".cols-3 > div"):
+                if "object" not in block.attrib.get("class", "").split():
+                    ort = block.css("b::text").get(default="").strip() or ort
+                    continue
+                name = re.sub(r"\s+", " ", block.css("span::text").get(default="")).strip()
+                if not name:
+                    continue
+                d = LoipenDaten(source_key=_schluessel(f"{ort}-{name}"), name=name, source_url=url,
+                                gebiet_slug=gebiet_map.get(ort, config["default_gebiet"]), startpunkt=ort)
+                roh = symbole.get(_symbol(block.css("img::attr(src)").get()), "")
+                d.status, bekannt = normiere_zustand(roh) if roh else (Status.UNBEKANNT, False)
+                if not bekannt:
+                    d.status = LEGENDE.get(roh.lower(), Status.UNBEKANNT)
+                    if roh.lower() not in LEGENDE:
+                        d.unbekannte_begriffe.append(("status", roh or "Symbol ohne Legende"))
+                d.status_rohtext = roh or None
+                d.technik = technik(name)
+                d.nachtloipe = True if "nacht" in name.lower() else None
+                d.quelle_aktualisiert_at = stand
+                d.rohtext = f"{ort} ({stand}): {roh}"
+                ergebnis.loipen.append(d)
         if not ergebnis.loipen:
-            ergebnis.warnungen.append("Keine Langlaufloipen im Bericht gefunden, Seitenaufbau geaendert?")
+            ergebnis.warnungen.append("Keine Langlaufloipen im Intermaps-Bericht gefunden, Seitenaufbau geaendert?")
+        if stand is None:
+            ergebnis.warnungen.append("Kein Stand 'Letzte Aktualisierung' im Intermaps-Bericht gefunden")
         return ergebnis
+
+
+__all__ = ["IntermapsAdapter"]

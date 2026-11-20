@@ -43,5 +43,7 @@ hosts:
   - www.nauders.com
   - www.serfaus-fiss-ladis.at
   - www.ischgl.com
-  - www.osttirol.com
-  - sdds4.intermaps.com
+  - www.hall-wattens.at  # P32, noch von Stefan in der Umgebung zu ergaenzen
+  - www.silberregion-karwendel.com  # P32, ebenso
+  - sdds4.intermaps.com  # P32 (Innsbruck, nur Test), ebenso
+  - www.osttirol.com  # P33, noch von Stefan in der Umgebung zu ergaenzen

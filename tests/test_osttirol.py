@@ -137,15 +137,18 @@ def test_p33_zugspitz_arena_unbekannter_ort_und_leerer_bericht_warnen():
     assert erg.loipen == [] and len(erg.warnungen) == 2  # kein Stand, keine Loipen
 
 
+def ausnahme_p17(q: dict) -> bool:
+    """Dieselbe Bedingung wie in tests/test_ausbau.py (P17): nur_test und eine Begruendung unter p17_ausnahme."""
+    return q["nutzung"].get("erlaubnis") == "nur_test" and bool(q["nutzung"].get("p17_ausnahme"))
+
+
 @pytest.mark.req("P17", ak=3)
 def test_p17_intermaps_nur_mit_ausnahme_fuer_die_testversion():
-    from tests.test_ausbau import ausnahme_p17
-
     _, _, q = lauf_zugspitz()
     assert ausnahme_p17(q) and q["rang"] == 4 and q["querpruefung"] is True
     ohne = {**q, "nutzung": {**q["nutzung"], "erlaubnis": "ausstehend"}}
     assert not ausnahme_p17(ohne)
-    ohne_grund = {**q, "nutzung": {k: v for k, v in q["nutzung"].items() if k != "ausnahme_p17"}}
+    ohne_grund = {**q, "nutzung": {k: v for k, v in q["nutzung"].items() if k != "p17_ausnahme"}}
     assert not ausnahme_p17(ohne_grund)
     kontakt = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8").split("## 3.")[1]
     assert "Zugspitz Arena" in kontakt and "Intermaps" in kontakt
