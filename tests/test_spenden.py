@@ -3,7 +3,6 @@
 import functools
 import http.server
 import json
-import logging
 import os
 import threading
 from datetime import datetime
@@ -49,7 +48,7 @@ def lies(site: Path, name: str) -> str:
 # ---------- Generator ----------
 
 @pytest.mark.req("U46", ak=1)
-def test_u45_ohne_adresse_kein_spendenlink(sites):
+def test_u46_ohne_adresse_kein_spendenlink(sites):
     site = sites["ohne"]
     assert "spenden" not in json.loads(lies(site, "daten.json"))
     for name in TEXTSEITEN:
@@ -60,7 +59,7 @@ def test_u45_ohne_adresse_kein_spendenlink(sites):
 
 
 @pytest.mark.req("U46", ak=2)
-def test_u45_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(sites):
+def test_u46_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(sites):
     site = sites["mit"]
     assert json.loads(lies(site, "daten.json"))["spenden"] == {"url": PAYPAL, "anbieter": "PayPal"}
     for name in TEXTSEITEN:  # Fusszeile jeder Textseite
@@ -82,7 +81,7 @@ def test_u45_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(s
     ("https://ko-fi.com/name", "Ko-fi"),
     ("https://spenden.example.org/loipen", "spenden.example.org"),
 ])
-def test_u45_anbieter_aus_der_adresse(url, anbieter):
+def test_u46_anbieter_aus_der_adresse(url, anbieter):
     assert generator.spenden(url) == {"url": url, "anbieter": anbieter}
 
 
@@ -91,14 +90,16 @@ def test_u45_anbieter_aus_der_adresse(url, anbieter):
     "javascript:alert(1)", "http://paypal.me/Name", "paypal.me/Name", "https://", "data:text/html,x",
     'https://paypal.me/x" onclick="alert(1)', "https://paypal.me/x<script>", "  ",
 ])
-def test_u45_nur_https_adressen_sonst_warnung(url, caplog):
-    with caplog.at_level(logging.WARNING, logger="loipen.generator"):
-        assert generator.spenden(url) is None
-    assert ("LOIPEN_SPENDEN_URL" in caplog.text) == bool(url.strip())
+def test_u46_nur_https_adressen_sonst_warnung(url, monkeypatch):
+    # eigener Ersatz statt caplog: andere Tests stellen die Log-Weitergabe um
+    warnungen = []
+    monkeypatch.setattr(generator.log, "warning", lambda msg, *a: warnungen.append(msg % a))
+    assert generator.spenden(url) is None
+    assert any("LOIPEN_SPENDEN_URL" in w for w in warnungen) == bool(url.strip())
 
 
 @pytest.mark.req("U46", ak=3)
-def test_u45_ungueltige_adresse_erscheint_nirgends(sites):
+def test_u46_ungueltige_adresse_erscheint_nirgends(sites):
     site = sites["ungueltig"]
     assert "spenden" not in json.loads(lies(site, "daten.json"))
     for name in TEXTSEITEN:
@@ -106,7 +107,7 @@ def test_u45_ungueltige_adresse_erscheint_nirgends(sites):
 
 
 @pytest.mark.req("U46", ak=4)
-def test_u45_datenschutz_nennt_anbieter_nur_mit_link(sites):
+def test_u46_datenschutz_nennt_anbieter_nur_mit_link(sites):
     assert "PayPal" not in lies(sites["ohne"], "datenschutz.html")
     ds = lies(sites["mit"], "datenschutz.html")
     assert "<h2>Unterstützen über PayPal</h2>" in ds and "gewöhnlicher Link" in ds
@@ -114,7 +115,7 @@ def test_u45_datenschutz_nennt_anbieter_nur_mit_link(sites):
 
 
 @pytest.mark.req("U46")
-def test_u45_adresse_kommt_aus_der_env(monkeypatch):
+def test_u46_adresse_kommt_aus_der_env(monkeypatch):
     monkeypatch.setenv("LOIPEN_SPENDEN_URL", PAYPAL)
     assert worker.rechtliches(Settings(_env_file=None))["spenden_url"] == PAYPAL
     monkeypatch.delenv("LOIPEN_SPENDEN_URL")
@@ -171,7 +172,7 @@ def oeffne(browser, basis, pfad="/#/", breite=1280):
 
 
 @pytest.mark.req("U46", ak=1)
-def test_u45_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
+def test_u46_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
     ctx, page, fehler, _ = oeffne(browser, seiten["ohne"])
     page.wait_for_selector("#view > *")
     assert page.locator("#spenden").is_hidden()
@@ -182,7 +183,7 @@ def test_u45_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
 
 @pytest.mark.req("U46", ak=[2, 4])
 @pytest.mark.parametrize("breite", [1280, 360])
-def test_u45_app_zeigt_link_in_fusszeile_ohne_anfrage_an_den_anbieter(browser, seiten, breite):
+def test_u46_app_zeigt_link_in_fusszeile_ohne_anfrage_an_den_anbieter(browser, seiten, breite):
     for pfad in ("/#/", "/hinweise.html"):
         ctx, page, fehler, anfragen = oeffne(browser, seiten["mit"], pfad, breite)
         link = page.locator("footer .spenden a")
