@@ -853,10 +853,12 @@ function standZeigen() {
 }
 /* U46: Spendenlink nur, wenn das NAS eine Adresse liefert. Per DOM gebaut, nie als HTML-Text; nur https. */
 function spendenZeigen() {
-  var p = document.getElementById("spenden"), sp = S.idx && S.idx.spenden;
+  var p = document.getElementById("spenden"), kopf = document.getElementById("spenden-kopf"), sp = S.idx && S.idx.spenden;
+  var gueltig = !!(sp && typeof sp.url === "string" && sp.url.indexOf("https://") === 0);
+  if (kopf) kopf.hidden = !gueltig; // Herz oben fuehrt zur Erklaerung auf der Hinweise-Seite, nicht direkt zum Anbieter
   if (!p) return;
   p.textContent = "";
-  if (!sp || typeof sp.url !== "string" || sp.url.indexOf("https://") !== 0) { p.hidden = true; return; }
+  if (!gueltig) { p.hidden = true; return; }
   var a = document.createElement("a");
   a.href = sp.url;
   a.rel = "noopener noreferrer";

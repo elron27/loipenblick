@@ -162,7 +162,7 @@ Inhalt: Verantwortlicher (wie Impressum), Hosting und Server-Logs mit Frist, AVV
 
 ### Spendenlink (U46, E-28)
 
-Stefan am 20.11.2026: Unterstützer sollen über Buy Me a Coffee oder PayPal etwas geben können. Umgesetzt als einfacher Link aus `LOIPEN_SPENDEN_URL` (leer = nichts). Er steht dezent in der Fußzeile jeder Seite und mit Erklärung auf „Hinweise und Betreiber“.
+Stefan am 20.11.2026: Unterstützer sollen über Buy Me a Coffee oder PayPal etwas geben können. Umgesetzt als einfacher Link aus `LOIPEN_SPENDEN_URL` (leer = nichts). Er steht dezent in der Fußzeile jeder Seite, als Herz „Unterstützen“ in der Kopfzeile (führt zur Erklärung, nicht direkt zu PayPal) und mit Erklärung auf „Hinweise und Betreiber“.
 
 **Vergleich (Stand 20.11.2026):**
 

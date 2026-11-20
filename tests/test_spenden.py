@@ -55,6 +55,8 @@ def test_u45_ohne_adresse_kein_spendenlink(sites):
     for name in TEXTSEITEN:
         assert "unterstützen" not in lies(site, name).lower(), name
     assert 'id="spenden" class="fine spenden" hidden' in lies(site, "index.html")
+    assert 'id="spenden-kopf" href="hinweise.html#unterstuetzen" title="Loipenblick unterstützen" hidden' in lies(site, "index.html")
+    assert all("spenden-kopf" not in lies(site, name) for name in TEXTSEITEN)
 
 
 @pytest.mark.req("U46", ak=2)
@@ -63,6 +65,8 @@ def test_u45_link_in_fusszeile_und_hinweisen_mit_freiwillig_ohne_gegenleistung(s
     assert json.loads(lies(site, "daten.json"))["spenden"] == {"url": PAYPAL, "anbieter": "PayPal"}
     for name in TEXTSEITEN:  # Fusszeile jeder Textseite
         assert f'<a href="{PAYPAL}" rel="noopener noreferrer">über PayPal unterstützen</a>' in lies(site, name), name
+    for name in TEXTSEITEN:  # Herz in der Kopfzeile jeder Textseite
+        assert 'class="spenden-kopf" href="hinweise.html#unterstuetzen"' in lies(site, name), name
     hinweise = lies(site, "hinweise.html")
     assert 'id="unterstuetzen"' in hinweise
     for satz in ("freiwillig", "keine Gegenleistung", "Spendenquittung ist nicht möglich", "Privatperson"):
@@ -171,6 +175,7 @@ def test_u45_app_ohne_adresse_zeigt_keinen_link(browser, seiten):
     ctx, page, fehler, _ = oeffne(browser, seiten["ohne"])
     page.wait_for_selector("#view > *")
     assert page.locator("#spenden").is_hidden()
+    assert page.locator("#spenden-kopf").is_hidden()
     assert fehler == []
     ctx.close()
 
@@ -185,6 +190,9 @@ def test_u45_app_zeigt_link_in_fusszeile_ohne_anfrage_an_den_anbieter(browser, s
         assert link.get_attribute("href") == PAYPAL
         assert "noopener" in link.get_attribute("rel")
         assert link.inner_text() == "über PayPal unterstützen"
+        herz = page.locator("header .spenden-kopf")  # Herz oben: fuehrt erst zur Erklaerung
+        assert herz.is_visible() and herz.get_attribute("href") == "hinweise.html#unterstuetzen"
+        assert herz.get_attribute("title") == "Loipenblick unterstützen"
         basis = seiten["mit"]
         assert [u for u in anfragen if not u.startswith(basis)] == []  # B23: nichts von Dritten, auch nicht PayPal
         assert page.evaluate("document.documentElement.scrollWidth") <= breite

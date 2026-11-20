@@ -20,7 +20,8 @@
       <a href="./#/karte">Karte</a>
       <a href="./#/loipen">Loipen</a>
     </nav>
-  </div>
+{% if spenden %}    <a class="spenden-kopf" href="hinweise.html#unterstuetzen" title="Loipenblick unterstützen"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.9 4.5 7.2 4.5c2 0 3.5 1.1 4.8 2.8 1.3-1.7 2.8-2.8 4.8-2.8 3.3 0 5.6 3.1 4.4 6.6-1.7 4.8-9.2 9.4-9.2 9.4z"/></svg><span>Unterstützen</span></a>
+{% endif %}  </div>
 </header>
 <main id="view" class="wrap text">
 <h1>{{ titel }}</h1>
