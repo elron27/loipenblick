@@ -34,7 +34,12 @@
 <p>Über „Angabe falsch? Melden“ bei einer Loipe kannst du uns einen Hinweis schicken. Wir erhalten die Loipe, die Art des Fehlers, deinen Text und, nur wenn du sie angibst, deine E-Mail-Adresse für Rückfragen. Die Meldung geht per Mail an den Betreiber und wird gelöscht, sobald sie bearbeitet ist; die Kopie auf dem Webhoster löscht der nächste Abgleich. Rechtsgrundlage ist unser berechtigtes Interesse an richtigen Angaben (Art. 6 Abs. 1 lit. f DSGVO), bei Angabe einer Adresse deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Eine Meldung ändert den angezeigten Status nicht.</p>
 {% endif %}
 
-<h2>Links zu anderen Seiten</h2>
+{% if spenden %}
+<h2>Unterstützen über {{ spenden.anbieter }}</h2>
+<p>„Unterstützen“ ist ein gewöhnlicher Link. Beim Aufruf von Loipenblick wird nichts von {{ spenden.anbieter }} geladen und nichts dorthin gesendet. Erst wenn du auf den Link klickst, öffnet sich die Seite von {{ spenden.anbieter }}; für alles, was du dort eingibst (zum Beispiel Name, E-Mail-Adresse und Zahlungsdaten), ist der Anbieter nach seiner eigenen Datenschutzerklärung verantwortlich.</p>
+<p>Gibst du etwas, erhalten wir vom Anbieter nur, was er an den Empfänger einer Zahlung weitergibt, in der Regel Name, E-Mail-Adresse, Betrag, Datum und eine Nachricht, falls du eine schreibst. Wir nutzen diese Angaben nur, um die Zahlung zuzuordnen, gegebenenfalls zu danken oder zurückzuzahlen (Art. 6 Abs. 1 lit. b DSGVO), und geben sie an niemanden weiter. Sie bleiben im Konto beim Anbieter, solange gesetzliche Aufbewahrungspflichten es verlangen (Art. 6 Abs. 1 lit. c DSGVO).</p>
+
+{% endif %}<h2>Links zu anderen Seiten</h2>
 <p>Links zur Quelle einer Loipe, zu Google Maps (Navigation, Fahrplan) und zu anderen Seiten öffnen die Seite des jeweiligen Anbieters. Erst dann gilt dessen Datenschutzerklärung.</p>
 
 <h2>Deine Rechte</h2>

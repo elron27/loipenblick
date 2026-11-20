@@ -130,6 +130,7 @@ Eine öffentliche Seite ist keine rein private Tätigkeit, die DSGVO gilt also. 
 | Ortssuche | lokal aus `index.json`, kein Dienst | Nichts zu tun. |
 | `localStorage` (gewählter Ort, Einstellungen) und Service-Worker-Cache | im Browser | Ausnahme nach § 25 Abs. 2 Nr. 2 TDDDG: unbedingt erforderlich für einen vom Nutzer ausdrücklich gewünschten Dienst ([Gesetz](https://www.gesetze-im-internet.de/ttdsg/__25.html)). Kein Banner, aber in der Datenschutzerklärung nennen. Nur für Funktionen speichern, die der Nutzer selbst auslöst. |
 | Links zu Google Maps (Navigation, Fahrplan) | erst beim Klick | Normaler Link, kein Einbetten. Hinweis in der Datenschutzerklärung genügt. |
+| Spendenlink (U45, `LOIPEN_SPENDEN_URL`) | erst beim Klick, dann PayPal bzw. Buy Me a Coffee | Normaler Link mit `rel="noopener noreferrer"`, kein Knopf-Skript oder Widget des Anbieters. Die eingebaute Vorlage bekommt einen eigenen Abschnitt, sobald die Adresse gesetzt ist. Bei eigenem Text den Baustein „PayPal“ bzw. „Zahlungsdienstleister“ aus dem Generator übernehmen. |
 | Push über ntfy | nur Stefan und Freunde mit geheimem Thema | Nicht Teil der öffentlichen Seite. Wird Push öffentlich angeboten, kommt ntfy.sh in die Datenschutzerklärung (IP für Rate-Limiting, Nachrichten 12 h zwischengespeichert, [ntfy](https://docs.ntfy.sh/privacy/)). |
 
 ### Kartenkacheln
@@ -158,6 +159,29 @@ Entscheidung E-14 (Cookies mit Einwilligung) bleibt gültig, wird aber erst gebr
 ### Datenschutzerklärung
 
 Inhalt: Verantwortlicher (wie Impressum), Hosting und Server-Logs mit Frist, AVV, Karte (je nach Option), Standort im Browser, `localStorage` und Service Worker, externe Links, Statistik, Rechte der Betroffenen, Beschwerderecht bei der Aufsichtsbehörde (für Privatpersonen in Bayern das Bayerische Landesamt für Datenschutzaufsicht, BayLDA). Ein Generator wie [datenschutz-generator.de](https://datenschutz-generator.de/) oder der von e-recht24 liefert die Texte; die Nutzungsbedingungen des Generators (privat/kostenlos) prüft Stefan selbst. Der Generator der Seite schreibt die Seiten `impressum.html` und `datenschutz.html` aus Vorlagen mit Platzhaltern, die echten Daten kommen aus der `.env` bzw. `config/` auf dem NAS, nicht aus dem Repo.
+
+### Spendenlink (U45, E-25)
+
+Stefan am 20.11.2026: Unterstützer sollen über Buy Me a Coffee oder PayPal etwas geben können. Umgesetzt als einfacher Link aus `LOIPEN_SPENDEN_URL` (leer = nichts). Er steht dezent in der Fußzeile jeder Seite und mit Erklärung auf „Hinweise und Betreiber“.
+
+**Vergleich (Stand 20.11.2026):**
+
+| | PayPal.Me | Buy Me a Coffee |
+|---|---|---|
+| Gebühr je Spende | 2,49 % + 0,35 € ([PayPal-Gebühren DE](https://www.paypal.com/de/digital-wallet/paypal-consumer-fees), Stand 7.9.2026) | 5 % Plattform + Stripe 2,9 % + 0,30 $, +1 % außerhalb der USA, +0,5 % Auszahlung ([BMC-Hilfe](https://help.buymeacoffee.com/en/articles/8105744)), also bei 5 € rund 0,47 € gegen rund 0,75 € |
+| Anmeldung | PayPal-Konto, das Stefan schon hat, dazu einen PayPal.Me-Link anlegen | neues Konto plus Auszahlung über Stripe (Identität, Bankkonto) |
+| Datenschutz | PayPal (Europe) S.à r.l., Luxemburg, also EU | US-Firma, Daten in den USA |
+| Was der Spender sieht | Stefans echten Namen und Profilbild ([PayPal.Me-Bedingungen](https://www.paypal.com/de/paypalme/pages/terms)) | nur den Seitennamen |
+
+**Empfehlung: PayPal.Me**, weil billiger, ohne neue Anmeldung und in der EU. Wichtig: Laut PayPal.Me-Bedingungen darf ein als „privat“ angelegter Link nicht für geschäftliche Zahlungen genutzt werden; Zahlungen Fremder über eine Website behandelt PayPal als Spende bzw. Zahlung mit Gebühr. Darum nie um „Freunde und Familie“ bitten, die Gebühr von 2,49 % + 0,35 € gehört dazu. Wer Stefans Namen nicht zeigen will, nimmt Buy Me a Coffee.
+
+**Recht, kurz (keine Rechtsberatung):**
+
+- Spenden an eine Privatperson sind Schenkungen. Eine Spendenquittung gibt es nur von gemeinnützigen Organisationen, darum steht auf der Seite „keine Spendenquittung möglich“. Nicht „steuerlich absetzbar“ schreiben.
+- „Freiwillig, keine Gegenleistung“ steht auf der Hinweise-Seite. Gibt es je eine Gegenleistung (Werbung, Premium-Funktionen), wird daraus Einnahme statt Geschenk.
+- Schenkungsteuer: Freibetrag für Fremde 20.000 € in zehn Jahren je Schenker (§ 16 ErbStG), für kleine Beträge praktisch ohne Bedeutung. Werden die Beiträge regelmäßig und größer, mit dem Steuerberater klären, ob es Einnahmen sind.
+- Impressum: unverändert, das Spendenangebot macht die Seite nicht zum Shop. Der Name im Impressum ist ohnehin derselbe, den PayPal zeigt.
+- Datenschutz: Beim Aufruf geht nichts an PayPal (B23 bleibt erfüllt, Test in `tests/test_spenden.py`). Die Vorlage nennt den Anbieter, was Stefan bei einer Spende erhält (Name, E-Mail, Betrag, Nachricht) und die Rechtsgrundlage (Art. 6 Abs. 1 lit. b und c DSGVO).
 
 ## 7. Haftungshinweise
 

@@ -30,7 +30,8 @@
   <div class="wrap">
     <p><strong>Alle Angaben ohne Gewähr.</strong> Maßgeblich ist immer die Quelle vor Ort.</p>
     <p class="fine rechtlich"><a href="hinweise.html">Hinweise und Betreiber</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
-  </div>
+{% if spenden %}    <p class="fine spenden">Loipenblick ist kostenlos und ohne Werbung. Wer mag, kann es <a href="{{ spenden.url }}" rel="noopener noreferrer">über {{ spenden.anbieter }} unterstützen</a>.</p>
+{% endif %}  </div>
 </footer>
 </body>
 </html>
