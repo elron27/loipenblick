@@ -43,7 +43,7 @@ NTFY = f"http://localhost:{ENV['NTFY_PORT']}"
 THEMA = ENV["LOIPEN_NTFY_URL"].rstrip("/").rsplit("/", 1)[-1]
 QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, "chiemgau": 69,
            "tirol": 701, "kitzbueheler-alpen": 71, "langlaufdorf": 5, "berchtesgaden": 6,
-           "tannheimer": 21, "seefeld": 49, "achensee": 24, "kufsteinerland": 22, "kaiserwinkl": 23,
+           "tannheimer": 21, "seefeld": 49, "kufsteinerland": 22, "kaiserwinkl": 23,
            "dolomiti-nordicski": 118, "opendatahub": 190,
            "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
            "myswitzerland": 340, "st-anton": 15, "nassfeld-nlw": 6, "steiermark": 89,
@@ -52,6 +52,8 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            "oetztal": 6, "pitztal": 14, "tiroler-oberland": 11, "nauders": 11, "serfaus-fiss-ladis": 10, "paznaun": 20,
            "innsbruck": 40, "hall-wattens": 7, "silberregion-karwendel": 7,
            "osttirol": 59, "zugspitzarena": 21}
+# B30: tirol.at-Loipen in den Gebieten von Achensee Tourismus (Achensee 12, Steinberg am Rofan 11, Wiesing 1)
+AUSGEBLENDET = 24
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 
@@ -129,7 +131,7 @@ def test_start_lauf_holt_alle_quellen_und_erzeugt_die_seite():
         assert quellen[key]["status"] in ("ok", "warnung"), quellen[key]
     # D15: Hauswies-Runde (Bayrischzell/Fischbachau), Bayrischzell und Kitzbuehel auch bei tirol.at: einmal gezaehlt
     assert index["dubletten"] >= 50
-    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - AUSGEBLENDET - index["dubletten"]
     for region in index["regionen"]:
         daten = http_json(f"{VORSCHAU}/{region['datei']}")
         assert daten["gebiete"], region["slug"]
@@ -223,7 +225,7 @@ def test_neustart_und_update_behalten_die_daten():
     assert nachher["loipen"] == vorher["loipen"]  # keine doppelten Loipen nach dem Neustart
     assert nachher["zustaende"] >= vorher["zustaende"]
     index = http_json(f"{VORSCHAU}/daten.json")
-    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - index["dubletten"]
+    assert index["kennzahlen"]["loipen"] == sum(QUELLEN.values()) - AUSGEBLENDET - index["dubletten"]
 
 
 def test_bildschirmfotos_der_vorschau():

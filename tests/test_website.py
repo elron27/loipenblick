@@ -8,10 +8,11 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import pytest
-from sqlalchemy import func, select
+from sqlalchemy import select
 
 from loipen import generator
 from loipen.models import Loipe, Quelle
+from loipen.konfig import CONFIG_DIR, ausgeblendet, lade_yaml
 from tests.helpers import lade_alle_fixtures
 
 JETZT = datetime(2026, 11, 9, 12, 0, tzinfo=ZoneInfo("Europe/Berlin"))
@@ -128,12 +129,16 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     index = lies(site, "daten.json")
     kz = index["kennzahlen"]
     # Dubletten (D15) zaehlen einmal: die Hauswies-Runde steht bei Bayrischzell und Fischbachau
-    assert kz["loipen"] + index["dubletten"] == session.scalar(select(func.count()).select_from(Loipe))
+    # B30: Loipen abgelehnter Quellen und ausgeblendeter Gebiete zaehlen nicht mit
+    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(CONFIG_DIR / "gebiete.yaml"))
+    gezeigt = [l for l in session.scalars(select(Loipe)) if l.quelle.enabled
+               and l.gebiet.slug not in gebiete_aus and (l.gebiet.slug, l.name) not in loipen_aus]
+    assert kz["loipen"] + index["dubletten"] == len(gezeigt)
     assert kz["offen"] + kz["eingeschraenkt"] + kz["geschlossen"] + kz["unbekannt"] == kz["loipen"]
     assert kz["gebiete"] == sum(r["gebiete"] for r in lies(site, "daten.json")["regionen"])
     assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
-        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "achensee", "kufsteinerland", "kaiserwinkl",
+        "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "kufsteinerland", "kaiserwinkl",  # achensee abgelehnt (B30)
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
         "st-anton", "nassfeld-nlw", "steiermark",

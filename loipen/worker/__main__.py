@@ -26,7 +26,7 @@ from loipen.ereignisse import (
 from loipen.fetcher import HoeflicherFetcher
 from loipen.generator import abo as abo_vorlage
 from loipen.mailabo import AboKonfig, lauf_abo, smtp_versand
-from loipen.konfig import lade_und_abgleichen, lade_yaml
+from loipen.konfig import ausgeblendet, lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
 from loipen.sicherung import sichere
 from loipen.waechter import melde as waechter_melde
@@ -60,6 +60,8 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
         for quelle in quellen:
             if nur_faellige and not ist_faellig(nur_faellige, quelle.config.get("zeitplan")):
                 continue
+            if quelle.config.get("erlaubnis") == "abgelehnt":  # B30: doppelt abgesichert, enabled ist schon aus
+                continue
             log.info("Quelle %s wird abgerufen", quelle.key)
             ergebnis = rufe_quelle_ab(session, quelle, abrufer or fetcher())
             ereignisse += ergebnis.ereignisse
@@ -83,6 +85,7 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                           abo_dateien=abo_dateien(session, settings), version=settings.version,
                           unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite())
         ereignisse = ohne_unplausible(ereignisse, unplausibel)
+        ereignisse = ohne_ausgeblendete(ereignisse, Path(settings.config_dir))
         # N11: Wiederholungen zurueckhalten, fuer alle Kanaele. Eingetragen wird vor dem Versand: Ein
         # Versandfehler holt eine Nachricht nicht nach, sonst kaemen bei einer Stoerung spaeter Doppelte.
         ereignisse = entprelle(session, ereignisse)
@@ -146,6 +149,12 @@ def hochladen(settings, **kw) -> tuple[str, str] | None:
     except Exception as e:
         log.error("Upload: %s", e)
         return upload_meldung(status, False, str(e))
+
+
+def ohne_ausgeblendete(ereignisse: list, config_dir: Path) -> list:
+    """B30 AK 3: Was die Seite nicht zeigt, meldet auch kein Push und kein Abo-Mail."""
+    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(config_dir / "gebiete.yaml"))
+    return [e for e in ereignisse if e.gebiet not in gebiete_aus and (e.gebiet, e.loipe) not in loipen_aus]
 
 
 def ohne_unplausible(ereignisse: list, unplausibel: set[int]) -> list:

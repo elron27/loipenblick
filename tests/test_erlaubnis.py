@@ -46,7 +46,7 @@ def test_b27_erlaubnis_nur_mit_erlaubten_werten():
     assert any("nutzung.erlaubnis" in f for f in fehler)
     q["nutzung"]["erlaubnis"] = "nur_test"
     assert not any("nutzung.erlaubnis" in f for f in pruefe({"quellen": [q]}, gebiete))
-    assert ERLAUBNIS == ("liegt_vor", "ausstehend", "nur_test")
+    assert ERLAUBNIS == ("liegt_vor", "ausstehend", "nur_test", "abgelehnt")
 
 
 @pytest.mark.req("B27", ak=3)

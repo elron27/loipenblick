@@ -13,8 +13,9 @@ from sqlalchemy.orm import Session
 from loipen.models import Gebiet, Herkunft, Parkplatz, Quelle, Region
 
 # Erlaubnis des Betreibers (Stefan, 19.11.2026; docs/kontaktliste.md): nur_test = Daten nur in der Testversion,
-# die oeffentliche Seite blendet die Quelle aus, bis der Betreiber zustimmt
-ERLAUBNIS = ("liegt_vor", "ausstehend", "nur_test")
+# die oeffentliche Seite blendet die Quelle aus, bis der Betreiber zustimmt. abgelehnt (B30, 20.11.2026) = der
+# Betreiber hat widersprochen: die Quelle wird nie abgerufen und nirgends gezeigt, auch nicht in der Testversion
+ERLAUBNIS = ("liegt_vor", "ausstehend", "nur_test", "abgelehnt")
 ERLAUBNIS_STANDARD = "ausstehend"
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 
@@ -42,6 +43,16 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
         for p in g.get("parkplaetze", []):
             if p.get("lat") is None or p.get("lon") is None or not p.get("name"):
                 fehler.append(f"Gebiet {g['slug']}: Parkplatz ohne Name oder Koordinaten")
+    # B30 AK 3: ausgeblendete Gebiete und Loipen nennen ein bekanntes Gebiet und einen Grund
+    aus = gebiete.get("ausgeblendet") or {}
+    for slug, grund in (aus.get("gebiete") or {}).items():
+        if slug not in slugs:
+            fehler.append(f"ausgeblendet: unbekanntes Gebiet {slug}")
+        if not str(grund or "").strip():
+            fehler.append(f"ausgeblendet: Gebiet {slug} ohne Grund")
+    for l in aus.get("loipen") or []:
+        if l.get("gebiet") not in slugs or not l.get("name") or not str(l.get("grund") or "").strip():
+            fehler.append(f"ausgeblendet: Loipe {l.get('name')} braucht bekanntes Gebiet, Name und Grund")
     keys = [q["key"] for q in sources.get("quellen", [])]
     if len(keys) != len(set(keys)):
         fehler.append("sources.yaml: ein Quellen-Key kommt doppelt vor")
@@ -159,7 +170,8 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
                 g["slug"]: [g["lat"], g["lon"]] for g in gebiete.get("gebiete", [])
                 if g["slug"] in config["gebiete"] and g.get("lat") is not None}
         quelle.config = config
-        quelle.enabled = q.get("enabled", True)
+        # B30: eine abgelehnte Quelle ist immer aus, auch wenn enabled fehlt oder true ist
+        quelle.enabled = q.get("enabled", True) and config["erlaubnis"] != "abgelehnt"
     session.flush()
 
 
@@ -169,6 +181,19 @@ def lade_und_abgleichen(session: Session, config_dir: Path = CONFIG_DIR) -> None
         lade_yaml(config_dir / "sources.yaml"),
         lade_yaml(config_dir / "gebiete.yaml"),
     )
+
+
+def abgelehnte_quellen(sources: dict) -> list[str]:
+    """B30: Quellen, deren Betreiber der Uebernahme widersprochen hat (nie abrufen, nie zeigen)."""
+    return [q["key"] for q in sources.get("quellen", []) if (q.get("nutzung") or {}).get("erlaubnis") == "abgelehnt"]
+
+
+def ausgeblendet(gebiete: dict) -> tuple[dict[str, str], set[tuple[str, str]]]:
+    """B30 AK 3: Gebiete (slug -> Grund) und einzelne Loipen ((gebiet, name)), die die Seite in keiner Version
+    zeigt, z. B. weil der oertliche Verband widersprochen hat und dieselben Daten auch ueber tirol.at kommen."""
+    aus = gebiete.get("ausgeblendet") or {}
+    return (dict(aus.get("gebiete") or {}),
+            {(l["gebiet"], l["name"]) for l in aus.get("loipen") or []})
 
 
 def nur_test_quellen(sources: dict) -> list[str]:
