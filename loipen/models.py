@@ -311,3 +311,25 @@ class OsmDaten(Base):
     bbox: Mapped[list] = mapped_column(JSON)
     inhalt: Mapped[dict] = mapped_column(JSON)
     abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class Meldeprotokoll(Base):
+    """Was zuletzt je Loipe gemeldet wurde, ueber alle Kanaele (N11). Verhindert doppelte Nachrichten,
+    etwa wenn eine Quelle kurz "unbekannt" meldet und die Loipe danach wieder "oeffnet"."""
+
+    __tablename__ = "meldeprotokoll"
+
+    loipe_id: Mapped[int] = mapped_column(ForeignKey("loipen.id", ondelete="CASCADE"), primary_key=True)
+    status_art: Mapped[str | None] = mapped_column(String(16))  # zuletzt gemeldet: oeffnet oder schliesst
+    status_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    befahrbar_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))  # oeffnet oder frisch_gespurt
+
+
+class PushTag(Base):
+    """Oeffentliche Push-Nachrichten je Tag (N10): ntfy.sh begrenzt die Nachrichten je Absender und Tag."""
+
+    __tablename__ = "push_tage"
+
+    tag: Mapped[date] = mapped_column(Date, primary_key=True)
+    anzahl: Mapped[int] = mapped_column(Integer, default=0)
+    grenze_gemeldet: Mapped[bool] = mapped_column(Boolean, default=False)

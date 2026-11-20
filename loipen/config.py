@@ -19,6 +19,12 @@ class Settings(BaseSettings):
     # Ein Zustand aelter als stale_days gilt als unbekannt
     stale_days: int = 7
     ntfy_url: str | None = None
+    # Oeffentlicher Push ohne Konto (N10): ntfy-Themen je Loipe und Gebiet. Leer = aus, die Seite zeigt nichts.
+    # Das Praefix steht auf der Seite (3 bis 40 Zeichen, Buchstaben, Ziffern, - und _).
+    push_praefix: str | None = None
+    push_server: str = "https://ntfy.sh"
+    push_token: str | None = None  # nur mit ntfy-Konto (Themen reservieren, hoehere Grenze)
+    push_max_tag: int = 150  # ntfy.sh ohne Konto erlaubt 250 Nachrichten am Tag, der Rest bleibt fuer ntfy_url
     # Livegang (docs/livegang.md). Alles leer = nur lokale Vorschau, kein Upload.
     # B8/B21: Ziel des Uploads, z. B. sftp://benutzer@host:22/pfad oder ftps://benutzer@host/pfad
     upload_url: str | None = None

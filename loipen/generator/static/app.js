@@ -315,7 +315,7 @@ function seiteHeute(q) {
     '<section class="sky"><div class="herotxt"><div class="eyebrow">' + esc(new Date().toLocaleDateString("de-DE", {weekday: "long", day: "numeric", month: "long"})) + " · " + esc(o ? o.name : "") + "</div><h1>" +
     (reco ? 'Heute lohnt sich <span class="akz">' + esc(reco.name) + "</span>" : 'Heute keine <span class="akz">offene Loipe</span>') + "</h1><p>" +
     (reco ? esc(km(reco.laenge_km) + (reco.entf != null ? ", " + zahl(reco.entf, 0) + " km von " + o.name : "") + ", Stand " + alter(reco.abgerufen)) : "Alle Quellen melden die Loipen als geschlossen oder ohne Angabe. Wir prüfen in der Saison dreimal täglich.") +
-    "</p></div>" + talprofil(zeig) + "</section>" +
+    "</p></div>" + talprofil(zeig) + "</section>" + meineKurz() +
     '<div class="cols" style="margin-top:14px"><div class="reco glass"><h2>Heute in deiner Nähe</h2><div class="big">' + (reco ? esc(reco.name) : "Heute keine offene Loipe") + "</div><p>" +
     (reco ? esc(reco.gebiet.name) + " · " + WORT[reco.status] : "Wir sagen es dir hier, sobald etwas gespurt ist.") + '</p><div class="facts">' +
     (nah[0] && nah[0].schnee && nah[0].schnee.schneehoehe_cm != null ? '<span class="chip">Schnee ' + esc(nah[0].name) + ": " + zahl(nah[0].schnee.schneehoehe_cm, 0) + " cm</span>" : '<span class="chip">Schneehöhe: noch keine Messung</span>') +
@@ -408,7 +408,7 @@ function seiteGebiet(slug) {
     (g.parkplaetze.length ? g.parkplaetze.map(function (p) { return '<li class="glass"><span><b>' + esc(p.name) + "</b><br><span class=\"fine\">Gebühr: " + esc(p.gebuehr_text || (p.gebuehr_eur_tag != null ? zahl(p.gebuehr_eur_tag, 2) + " € pro Tag" : "unbekannt")) + (p.geschaetzt ? " · Lage ungefähr (Loipenstart)" : "") + '</span></span><a class="btn" href="' + esc(navLink(p.lat, p.lon)) + '" rel="noopener">Navigation</a></li>'; }).join("") : (g.loipen.some(function (l) { return l.parken && l.parken.length; }) ? '<li class="glass"><span>Parkplätze</span><b>bei den einzelnen Loipen</b></li>' : '<li class="glass"><span>Parkplätze</span><b>noch nicht erfasst</b></li>')) +
     (g.haltestellen.length ? g.haltestellen.map(function (s) { return '<li class="glass"><span><b>' + esc(s.name) + '</b><br><span class="fine">Haltestelle (' + esc(s.art || "ÖPNV") + ')</span></span><a class="btn" href="' + esc(oevLink(s.lat, s.lon)) + '" rel="noopener">Fahrplan</a></li>'; }).join("") : '<li class="glass"><span>Haltestelle</span><b>keine bekannt</b></li>') +
     '</ul><h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
-    (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("g:" + g.slug, "eine Loipe im Gebiet " + g.name) : "");
+    (S.idx.abo || S.idx.push ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("g:" + g.slug, "eine Loipe im Gebiet " + g.name) + pushBlock([], g) : "");
   view.innerHTML = h;
 }
 
@@ -509,7 +509,7 @@ function zeichneLoipe(l) {
   (function () {
     var g = l.gebiet;
     var hist = l.historie.map(function (t) { return '<span class="' + (t.status ? "" : "keine ") + '" style="' + (t.status ? "background:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + "-bg);color:var(--" + ({offen: "ok", eingeschraenkt: "mid", geschlossen: "bad", unbekannt: "unk"}[t.status]) + ')"' : "") + ' title="' + esc(t.tag + ": " + (t.status ? WORT[t.status] : "noch keine Daten")) + '">' + (t.status ? {offen: "✓", eingeschraenkt: "!", geschlossen: "✕", unbekannt: "?"}[t.status] : "·") + "</span>"; }).join("");
-    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><h1>" + esc(l.name) + "</h1><p>" + chip(l.status) + sonderBadge(l) + plausiBadge(l) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
+    view.innerHTML = '<p><a href="#/gebiet/' + esc(g.slug) + '">← ' + esc(g.name) + "</a></p><div class=\"titel\"><h1>" + esc(l.name) + "</h1>" + merkKnopf(l) + "</div><p>" + chip(l.status) + sonderBadge(l) + plausiBadge(l) + (l.veraltet ? ' <span class="badge">veraltet</span>' : "") + (l.quelle_fehler ? ' <span class="badge">letzter Abruf fehlgeschlagen</span>' : "") + "</p>" +
       (l.unplausibel ? '<p class="hinweis glass" id="unplausibel"><b>' + esc(l.quelle.name) + " meldet diese Loipe " + esc(WORT[l.status_laut_quelle].toLowerCase()) + ", das ist aber unplausibel.</b> " + esc(l.unplausibel.join(". ")) + ". Wir zeigen sie deshalb geschlossen, bis die Quelle es belegt.</p>" : "") +
       (l.sonder ? '<p class="hinweis glass" id="sonder"><b>Sonderloipe: ' + esc(l.sonder.kurz) + ".</b> " + esc(l.sonder.text) + (offenGemeldet(l) ? " Sie zählt deshalb nicht zu den befahrbaren Loipen des Gebiets." : "") + "</p>" : "") +
       '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + "</b>" + (l.laenge_von ? '<span class="fine">laut ' + esc(l.laenge_von) + "</span>" : "") + '</div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
@@ -524,7 +524,7 @@ function zeichneLoipe(l) {
       (l.nicht_im_bericht ? '<li class="glass" id="nicht-im-bericht"><span>Loipenbericht vor Ort</span><span>' + esc(l.nicht_im_bericht) +
         " führt diese Loipe nicht" + (l.status_laut_quelle ? '. <span class="badge abw">' + esc(l.quelle.name) + " meldet " + esc(WORT[l.status_laut_quelle]) + ", unbestätigt</span>" : "") +
         "</span></li>" : "") + "</ul>" +
-      (S.idx.abo ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("l:" + l.id, "diese Loipe") + meldeFormular(l) : "");
+      (S.idx.abo || S.idx.push ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("l:" + l.id, "diese Loipe") + pushBlock([l], g) + meldeFormular(l) : "");
     miniKarteZeichnen(l);
     if (LB.saisonLoipe) LB.saisonLoipe(l, document.getElementById("saison"));  /* U19 */
   })();
@@ -732,12 +732,91 @@ function ortDialog() {
 
 /* ---------- E-Mail-Abo und Meldungen (E-18, N5, N9) ---------- */
 /* Die Formulare schicken an abo/*.php auf dem Webspace. Ohne Abo-Konfiguration (S.idx.abo) gibt es sie nicht. */
+/* ---------- U7: Merkliste "Meine Loipen" (nur im Browser) ---------- */
+var ABO_MAX = 20; /* wie ABO_MAX_ZIELE in abo/_kern.php */
+var STERN = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>';
+function merkliste() { var m = speicher("merkliste"); return Array.isArray(m) ? m.map(String) : []; }
+function gemerkt(id) { return merkliste().indexOf(String(id)) >= 0; }
+function merke(id, an) {
+  var m = merkliste().filter(function (x) { return x !== String(id); });
+  if (an) m.push(String(id));
+  speicher("merkliste", m);
+}
+function merkKnopf(l) {
+  var an = gemerkt(l.id);
+  return '<button type="button" class="btn merken' + (an ? " an" : "") + '" data-merken="' + esc(l.id) + '" aria-pressed="' + an + '">' + STERN + "<span>" + (an ? "Gemerkt" : "Merken") + "</span></button>";
+}
+function meineLoipen() {
+  var ids = merkliste();
+  return ids.map(function (id) { return S.loipen.filter(function (x) { return String(x.id) === id; })[0]; }).filter(Boolean);
+}
+function meineKurz() {
+  var m = meineLoipen();
+  if (!m.length) return "";
+  return '<section class="meine glass" id="meine-kurz"><div class="kopf"><h2>Meine Loipen</h2><a class="fine" href="#/meine">Alle ' + m.length + " ansehen und benachrichtigen</a></div>" +
+    m.slice(0, 6).map(function (l) { return '<a class="r" href="#/loipe/' + l.id + '"><span>' + esc(l.name) + ' <span class="fine">· ' + esc(l.gebiet.name) + "</span></span>" + chip(l.status) + "</a>"; }).join("") + "</section>";
+}
+function seiteMeine() {
+  var m = meineLoipen();
+  var h = "<h1>Meine Loipen</h1>";
+  if (!m.length) {
+    view.innerHTML = h + '<p class="leer glass" id="meine-leer">Noch keine Loipe gemerkt. Öffne eine Loipe und tippe auf <b>Merken</b>. Die Liste bleibt in diesem Browser gespeichert, ohne Konto.</p><p><a class="btn" href="#/loipen">Zur Liste aller Loipen</a></p>';
+    return;
+  }
+  h += '<p class="fine">Gespeichert nur in diesem Browser. ' + m.length + (m.length === 1 ? " Loipe" : " Loipen") + ".</p>" +
+    '<div class="list" id="meine-liste">' + m.map(function (l) {
+      return '<div class="mz">' + loipeKarte(l, true) + '<button type="button" class="btn weg" data-merken="' + esc(l.id) + '" aria-pressed="true" aria-label="' + esc(l.name) + ' nicht mehr merken">Entfernen</button></div>';
+    }).join("") + "</div>";
+  if (S.idx.abo || S.idx.push) {
+    h += '<h2 class="sec">Benachrichtigen, wenn sich etwas tut</h2>';
+    if (S.idx.abo) h += aboFormular(m.map(function (l) { return "l:" + l.id; }), m.length === 1 ? "diese Loipe" : "eine deiner " + Math.min(m.length, ABO_MAX) + " Loipen") +
+      (m.length > ABO_MAX ? '<p class="fine">Ein E-Mail-Abo umfasst höchstens ' + ABO_MAX + " Loipen, hier die ersten " + ABO_MAX + ".</p>" : "");
+    if (S.idx.push) h += pushBlock(m, null);
+  }
+  view.innerHTML = h;
+}
+
+/* ---------- N10: Push ohne Konto ueber ntfy-Themen ---------- */
+function themaLoipe(l) { return S.idx.push.praefix + "-l" + l.id; }
+function themaGebiet(g) { return (S.idx.push.praefix + "-g-" + String(g.slug).replace(/[^A-Za-z0-9_-]/g, "-")).slice(0, 64); }
+function themaLink(t) { return safeUrl(S.idx.push.server) + "/" + encodeURIComponent(t); }
+function themaZeile(t, text) {
+  return '<li class="glass thema"><span><b>' + esc(text) + '</b><code>' + esc(t) + '</code></span><span class="knoepfe"><a class="btn prim" href="' + esc(themaLink(t)) + '" rel="noopener" target="_blank">In ntfy abonnieren</a><button type="button" class="btn" data-kopieren="' + esc(t) + '">Thema kopieren</button></span></li>';
+}
+function pushBlock(loipen, gebiet) {
+  if (!S.idx.push) return "";
+  var zeilen = loipen.map(function (l) { return themaZeile(themaLoipe(l), loipen.length === 1 && gebiet ? "Diese Loipe" : l.name); }).join("") +
+    (gebiet ? themaZeile(themaGebiet(gebiet), "Alle Loipen in " + gebiet.name) : "");
+  return '<details class="glass formular" id="push"><summary>Per Push aufs Handy, ohne Konto</summary><div class="inhalt">' +
+    '<p class="fine">Installiere die kostenlose App <b>ntfy</b> (Android oder iPhone) und abonniere das Thema. Du bekommst eine Nachricht, wenn eine Loipe öffnet, frisch gespurt wird oder schließt, höchstens eine je Aktualisierung. In der App: Plus antippen, Thema einfügen, fertig.</p>' +
+    '<ul class="plain themen">' + zeilen + "</ul>" +
+    '<p class="fine">Erst der Link oder die App verbindet dich mit ntfy; die Seite selbst lädt nichts von dort. Abmelden: Thema in der App löschen. Siehe <a href="datenschutz.html">Datenschutzerklärung</a>.</p></div></details>';
+}
+function merkenBinden() {
+  view.addEventListener("click", function (ev) {
+    var t = ev.target.closest ? ev.target.closest("button[data-merken],button[data-kopieren]") : null;
+    if (!t) return;
+    if (t.dataset.kopieren) {
+      var fertig = function () { t.textContent = "Kopiert"; };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t.dataset.kopieren).then(fertig, function () {});
+      else { var r = document.createRange(); r.selectNodeContents(t.parentNode.parentNode.querySelector("code")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+      return;
+    }
+    var id = t.dataset.merken, an = !gemerkt(id);
+    merke(id, an);
+    if (pfad(location.hash) === "/meine") { route(); return; }
+    t.classList.toggle("an", an); t.setAttribute("aria-pressed", String(an));
+    t.querySelector("span").textContent = an ? "Gemerkt" : "Merken";
+  });
+}
+
 var HONIG = '<label class="vh" aria-hidden="true">Webseite <input name="webseite" tabindex="-1" autocomplete="off"></label>';
 function aboFormular(ziel, was) {
   if (!S.idx.abo) return "";
+  var ziele = [].concat(ziel).slice(0, ABO_MAX);
   var art = function (wert, text, an) { return '<label class="wahl"><input type="checkbox" name="ereignis[]" value="' + wert + '"' + (an ? " checked" : "") + "> " + text + "</label>"; };
   return '<details class="glass formular" id="abo"><summary>Per E-Mail benachrichtigen</summary>' +
-    '<form method="post" action="abo/anmelden.php" data-formular="abo"><input type="hidden" name="ziel[]" value="' + esc(ziel) + '">' +
+    '<form method="post" action="abo/anmelden.php" data-formular="abo">' + ziele.map(function (z) { return '<input type="hidden" name="ziel[]" value="' + esc(z) + '">'; }).join("") +
     '<p class="fine">Wir schicken dir eine Mail, wenn ' + esc(was) + ":</p>" +
     '<div class="wahlen">' + art("oeffnet", "öffnet", true) + art("frisch_gespurt", "frisch gespurt wird", true) + art("schliesst", "schließt", false) + "</div>" +
     '<label class="feld">E-Mail-Adresse<input type="email" name="email" required autocomplete="email" maxlength="254" placeholder="du@beispiel.de"></label>' + HONIG +
@@ -872,7 +951,7 @@ function standZeigen() {
 }
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
-  var tab = p.indexOf("/karte") === 0 ? "karte" : p === "/statistik" ? "statistik" : p.indexOf("/loipen") === 0 || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
+  var tab = p.indexOf("/karte") === 0 ? "karte" : p === "/statistik" ? "statistik" : p.indexOf("/loipen") === 0 || p === "/meine" || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
   document.querySelectorAll(".tabs a").forEach(function (a) { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   if (q.demo && (q.demo === "1") !== S.demo) { location.reload(); return; }
   kartenAbbauen();
@@ -881,6 +960,7 @@ function route() {
     if (p === "/karte") seiteKarte(q);
     else if (p === "/loipen") seiteListe(q);
     else if (p === "/abdeckung") seiteAbdeckung();
+    else if (p === "/meine") seiteMeine();
     else if (LB.seiten[p]) LB.seiten[p](q);  /* z. B. /statistik aus statistik.js */
     else if (p.indexOf("/gebiet/") === 0) seiteGebiet(decodeURIComponent(p.slice(8)));
     else if (p.indexOf("/loipe/") === 0) seiteLoipe(decodeURIComponent(p.slice(7)));
@@ -902,7 +982,7 @@ function start() {
     if (kw) { widerrufZeigen(); kw.addEventListener("click", function () { try { localStorage.removeItem("karte_ok"); } catch (e) {} kw.hidden = true; route(); }); }
     window.addEventListener("hashchange", route);
     document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - letztePruefung > 10 * 60000) auffrischen(); });
-    formulareBinden();
+    formulareBinden(); merkenBinden();
     installBinden(); netzBinden();
     route();
     gpsBeimStart(parseQuery(location.hash));
