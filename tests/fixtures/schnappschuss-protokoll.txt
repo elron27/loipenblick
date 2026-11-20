@@ -829,3 +829,10 @@ ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
 200 https://www.tirol.at/robots.txt
 200   190253 tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
 404    72170 tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
+# Lauf 2026-11-20 14:12 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tegernsee.com/robots.txt
+200    43886 tests/fixtures/tegernsee/2026-11-20/a-ringseeloipe-42-km-skating-u-klassisch.html https://www.tegernsee.com/a-ringseeloipe-42-km-skating-u-klassisch
+200    44047 tests/fixtures/tegernsee/2026-11-20/a-rundkurs-point-skating-u-klassisch.html https://www.tegernsee.com/a-rundkurs-point-skating-u-klassisch
+200 https://www.tirol.at/robots.txt
+200   190289 tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
+404    67498 tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
