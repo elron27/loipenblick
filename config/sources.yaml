@@ -1021,3 +1021,64 @@ quellen:
       default_gebiet: paznaun
       # Samnaun (Schweiz) meldet snow.myswitzerland.com
       auslassen: [Samnaun]
+
+  # ---------- E-24, P32: Ortsseiten Innsbruck, Hall-Wattens, Silberregion Karwendel (Querpruefung, nur Test) ----------
+  # Stubai (stubai.at) liefert dem Abruf auf robots.txt ein 403 (Cloudflare) und faellt damit aus; das Wipptal hat
+  # keine eigene Statusseite (die Karte maps.wipptal.at zeigt die tirol.at-Daten). Innsbruck bettet einen Intermaps-
+  # Wintersportbericht ein (sdds4.intermaps.com). Intermaps ist nach E-15/P17 ausgeschlossen; Stefan hat am 19.11.2026
+  # eine Ausnahme nur fuer die Testversion freigegeben (nur_test, oeffentlich ausgeblendet, Livegang-Punkt 15a).
+  # Befund: docs/kontaktliste.md, Abschnitt 3.
+  - key: innsbruck
+    adapter: intermaps
+    name: Innsbruck Tourismus (Wintersportbericht, Intermaps)
+    base_url: https://sdds4.intermaps.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Der Wintersportbericht von Innsbruck nennt nur Ort und Status, keinen Streckenverlauf."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              p17_ausnahme: "Stefan 19.11.2026: Intermaps nur fuer die Testversion, oeffentlich erst mit Zustimmung von Innsbruck Tourismus",
+              hinweis: "Eingebettet auf innsbruck.info/skifahren/service/schneebericht.html; robots.txt fehlt (404) = keine Sperre. Impressum innsbruck.info: Elemente urheberrechtlich geschuetzt"}
+    config:
+      pfad: /innsbruck_new/lebensraum_innsbruck.aspx?lang=de
+      default_gebiet: innsbruck
+      gebiet_map:
+        Gries im Sellrain: sellraintal
+        Praxmar - Lüsens: sellraintal
+        Kühtai: kuehtai
+        Mieming: mieming
+        Obsteig: mieming
+        Wildermieming: mieming
+        Natters: innsbruck
+        Oberperfuss: innsbruck
+        Rinn: hall-wattens
+
+  - key: hall-wattens
+    adapter: tourismus_mco
+    name: Tourismusverband Region Hall-Wattens (Langlaufen)
+    base_url: https://www.hall-wattens.at
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Die Seite von Hall-Wattens nennt nur den Startpunkt der Loipe."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Verwendung von Texten, Grafiken, Bildern nur mit ausdruecklicher Genehmigung"}
+    config:
+      pfad: /de/langlaufen.html
+      default_gebiet: hall-wattens
+
+  - key: silberregion-karwendel
+    adapter: tourismus_mco
+    name: Tourismusverband Silberregion Karwendel (Langlaufen)
+    base_url: https://www.silberregion-karwendel.com
+    art: portal
+    rang: 4
+    querpruefung: true
+    strecke_hinweis: "Die Seite der Silberregion Karwendel nennt nur den Startpunkt der Loipe."
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-19, nutzungsbedingungen_geprueft: 2026-11-19, erlaubnis: nur_test,
+              hinweis: "Impressum: Vervielfaeltigung ohne Einverstaendnis des Urhebers nicht erlaubt"}
+    config:
+      pfad: /de/langlaufen.html
+      default_gebiet: silberregion-karwendel
+      gebiet_map:
+        Hinterriss: hinterriss

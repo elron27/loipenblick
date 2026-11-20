@@ -138,7 +138,8 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",
         "st-anton", "nassfeld-nlw", "steiermark",
         "alpbachtal", "wildschoenau", "wilderkaiser",
-        "oetztal", "pitztal", "tiroler-oberland", "nauders", "serfaus-fiss-ladis", "paznaun"}
+        "oetztal", "pitztal", "tiroler-oberland", "nauders", "serfaus-fiss-ladis", "paznaun",
+        "innsbruck", "hall-wattens", "silberregion-karwendel"}  # P32
 
 
 @pytest.mark.req("U6", ak=1)
