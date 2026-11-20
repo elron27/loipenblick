@@ -1,6 +1,6 @@
 # Bestandsaufnahme Strecken und Parkinfos
 
-Datenstand der Seite: 2026-11-20T08:46+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
+Datenstand der Seite: 2026-11-20T18:51+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
 
 Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Daten zählen bei der führenden Loipe.
 
@@ -8,13 +8,13 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 
 | | Loipen | Anteil |
 | --- | ---: | ---: |
-| Loipen | 1767 | |
-| mit Streckenverlauf | 670 | 670 (38 %) |
+| Loipen | 1741 | |
+| mit Streckenverlauf | 654 | 654 (38 %) |
 | davon von der Quelle selbst | 372 | |
 | davon von einer anderen Quelle derselben Loipe | 0 | |
-| davon aus OpenStreetMap | 298 | |
-| mit Lage (Startpunkt) | 1276 | 1276 (72 %) |
-| mit Länge | 1271 | 1271 (72 %) |
+| davon aus OpenStreetMap | 282 | |
+| mit Lage (Startpunkt) | 1252 | 1252 (72 %) |
+| mit Länge | 1247 | 1247 (72 %) |
 | mit Parkplatz | 69 | 69 (4 %) |
 | davon von Hand recherchiert | 69 | |
 | davon aus OpenStreetMap | 0 | |
@@ -23,7 +23,7 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 
 | Quelle | Loipen | Strecke | davon OSM | Lage | Länge | Parkplatz | davon OSM |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Tirol Werbung (tirol.at) | 548 | 148 (27 %) | 148 | 548 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
+| Tirol Werbung (tirol.at) | 546 | 148 (27 %) | 148 | 546 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
 | Schweiz Tourismus (Schneebericht, Daten infosnow.ch) | 340 | 35 (10 %) | 35 | 35 (10 %) | 333 (98 %) | 0 (0 %) | 0 |
 | Dolomiti NordicSki (Loipenstatus) | 118 | 28 (24 %) | 28 | 85 (72 %) | 116 (98 %) | 0 (0 %) | 0 |
 | Engadin Tourismus (tourinfra Loipenmanager) | 108 | 108 (100 %) | 0 | 108 (100 %) | 108 (100 %) | 0 (0 %) | 0 |
@@ -35,7 +35,6 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Goms Tourismus (tourinfra Loipenmanager) | 39 | 39 (100 %) | 0 | 39 (100 %) | 39 (100 %) | 0 (0 %) | 0 |
 | Destination Davos Klosters (tourinfra Loipenmanager) | 36 | 36 (100 %) | 0 | 36 (100 %) | 36 (100 %) | 0 (0 %) | 0 |
 | Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 12 (46 %) | 0 |
-| Achensee Tourismus (Schneebericht) | 24 | 16 (67 %) | 16 | 22 (92 %) | 24 (100 %) | 0 (0 %) | 0 |
 | Tourismusverband Kaiserwinkl (Loipenbericht) | 23 | 15 (65 %) | 15 | 20 (87 %) | 23 (100 %) | 0 (0 %) | 0 |
 | Kufsteinerland (Schneebericht) | 22 | 3 (14 %) | 3 | 19 (86 %) | 20 (91 %) | 0 (0 %) | 0 |
 | Innsbruck Tourismus (Wintersportbericht, Intermaps) | 21 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
@@ -82,11 +81,9 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Tegernseer Tal | Gmund | 5 | 2 | 5 | 0 | unbekannt | 0 |
 | Tegernseer Tal | Kreuth | 10 | 1 | 1 | 6 | unbekannt | 4 |
 | Tegernseer Tal | Rottach-Egern | 7 | 4 | 5 | 1 | unbekannt | 0 |
-| Achensee und Karwendel | Achensee | 14 | 6 | 14 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Hinterriß | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Silberregion Karwendel | 6 | 6 | 6 | 0 | unbekannt | 0 |
-| Achensee und Karwendel | Steinberg am Rofan | 11 | 3 | 11 | 0 | unbekannt | 0 |
-| Alpbachtal und Wildschönau | Alpbachtal | 16 | 16 | 16 | 0 | unbekannt | 0 |
+| Alpbachtal und Wildschönau | Alpbachtal | 15 | 15 | 15 | 0 | unbekannt | 0 |
 | Alpbachtal und Wildschönau | Wildschönau | 19 | 15 | 19 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Altaussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Bad Aussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
