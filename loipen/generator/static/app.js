@@ -302,7 +302,7 @@ function talprofil(gebiete, schnee) {
   return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
 }
 
-/* U45: Schneehoehe mit dem Namen der Messstation des Gebiets. Fehlt die Messung, sagt der Chip das fuer genau
+/* U48: Schneehoehe mit dem Namen der Messstation des Gebiets. Fehlt die Messung, sagt der Chip das fuer genau
    dieses Gebiet, statt den Wert eines anderen Gebiets zu zeigen. Aeltere Messungen tragen ihr Datum. */
 var NAH_KM = 50;
 function schneeChip(g) {
@@ -329,7 +329,7 @@ function seiteHeute(q) {
     "</p></div>" + talprofil(zeig) + "</section>" +
     '<div class="cols" style="margin-top:14px"><div class="reco glass"><h2>' + (reco && reco.entf != null && reco.entf > NAH_KM ? "Nächste offene Loipe" : "Heute in deiner Nähe") + "</h2>" + '<div class="big">' + (reco ? esc(reco.name) : "Heute keine offene Loipe") + "</div><p>" +
     (reco ? esc(reco.gebiet.name) + " · " + WORT[reco.status] + (reco.entf != null ? " · " + zahl(reco.entf, 0) + " km entfernt" : "") : "Wir sagen es dir hier, sobald etwas gespurt ist.") + '</p><div class="facts">' +
-    /* U45: die Schneehoehe gehoert zur empfohlenen Loipe, nicht zum Gebiet am Standort */
+    /* U48: die Schneehoehe gehoert zur empfohlenen Loipe, nicht zum Gebiet am Standort */
     schneeChip(reco ? reco.gebiet : nah[0]) +
     (reco ? '<a class="btn prim" href="#/loipe/' + reco.id + '">Zur Loipe</a>' : "") + "</div></div>" +
     /* U34: die Kennzahlen fuehren direkt zur passend gefilterten Liste */

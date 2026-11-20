@@ -1,4 +1,4 @@
-"""Startseite: Schneehoehe zur empfohlenen Loipe (U45).
+"""Startseite: Schneehoehe zur empfohlenen Loipe (U48).
 
 Stefan am 20.11.2026 mit einem Screenshot der Testseite: Standort Fischbachau, die Karte "Heute in deiner Naehe"
 empfiehlt die einzige offene Loipe "Langlaufen: Ginzling Loipe" (Mayrhofen und Hippach, gut 60 km entfernt), der
@@ -96,31 +96,31 @@ def startseite(browser, seiten, name):  # noqa: F811
     return karte
 
 
-@pytest.mark.req("U45", ak=1)
-def test_u45_chip_zeigt_station_der_empfohlenen_loipe(browser, seiten):  # noqa: F811
+@pytest.mark.req("U48", ak=1)
+def test_u48_chip_zeigt_station_der_empfohlenen_loipe(browser, seiten):  # noqa: F811
     k = startseite(browser, seiten, "schnee")
     assert k["loipe"] == "Langlaufen: Ginzling Loipe"
     assert "Fischbachau" not in k["chip"]
     assert re.fullmatch(r"Schnee Station Mayrhofen: 15 cm \(\d\d\.\d\d\.\)", k["chip"]), k["chip"]
 
 
-@pytest.mark.req("U45", ak=2)
-def test_u45_ohne_messung_kein_fremder_wert(browser, seiten):  # noqa: F811
+@pytest.mark.req("U48", ak=2)
+def test_u48_ohne_messung_kein_fremder_wert(browser, seiten):  # noqa: F811
     k = startseite(browser, seiten, "ohne")
     assert k["loipe"] == "Langlaufen: Ginzling Loipe"
     assert k["chip"] == "Schneehöhe Mayrhofen und Hippach: keine Messung"
 
 
-@pytest.mark.req("U45", ak=3)
-def test_u45_weit_entfernte_empfehlung_nennt_die_entfernung(browser, seiten):  # noqa: F811
+@pytest.mark.req("U48", ak=3)
+def test_u48_weit_entfernte_empfehlung_nennt_die_entfernung(browser, seiten):  # noqa: F811
     k = startseite(browser, seiten, "schnee")
     assert k["titel"].lower() == "nächste offene loipe"
     assert re.fullmatch(r"Mayrhofen und Hippach · Offen · \d+ km entfernt", k["zeile"]), k["zeile"]
 
 
-@pytest.mark.req("U45", ak=1)
+@pytest.mark.req("U48", ak=1)
 @pytest.mark.req("D19", ak=1)
-def test_u45_bei_0_cm_in_mayrhofen_keine_empfehlung(browser, seiten):  # noqa: F811
+def test_u48_bei_0_cm_in_mayrhofen_keine_empfehlung(browser, seiten):  # noqa: F811
     """Mit 0 cm an der Station Mayrhofen ist die Ginzling-Meldung unplausibel (E-23): keine Empfehlung, der
     Chip gehoert dann zum Gebiet am Standort und nennt dessen Station."""
     k = startseite(browser, seiten, "null")
