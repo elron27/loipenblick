@@ -1,5 +1,28 @@
-# <zielpfad> <url> -- Runde 22 (19.11.2026): Karte maps.zillertal.at (contwise) fuer den Adapter zillertal (P35, nur Test)
-tests/fixtures/recherche-2026-11-19/zillertal/maps-v2.html https://maps.zillertal.at/v2/de/gdi_summer/2d/-1/category/10/47.22702939886733/11.937699793825114/18426/-1/false/-1/-1/-1/eyIxODM2MSI6eyJzdWJDYXQiOnsiaW5kZXhWYWx1ZSI6MTgzNjR9fX0=/
-tests/fixtures/recherche-2026-11-19/zillertal/embedded.bundle.js https://maps.zillertal.at/embedded.bundle.js
-tests/fixtures/recherche-2026-11-19/zillertal/maps-robots.txt https://maps.zillertal.at/robots.txt
-tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# <zielpfad> <url> -- Runde 23 (20.11.2026): Allgaeu ueber Gemeinde- und Tourismusseiten (Recherche, ein Ordner je Host)
+tests/fixtures/recherche-2026-11-20/oberstdorf/wintersportbericht.html https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/
+tests/fixtures/recherche-2026-11-20/oberstdorf/wm-loipen.html https://www.oberstdorf.de/winter/langlaufen/wm-loipen.html
+tests/fixtures/recherche-2026-11-20/oberstdorf/langlaufen.html https://www.oberstdorf.de/winter/langlaufen.html
+tests/fixtures/recherche-2026-11-20/nordic-zentrum/start.html https://www.nordic-zentrum-oberstdorf.de/
+tests/fixtures/recherche-2026-11-20/kleinwalsertal/cross-country.html https://www.kleinwalsertal.com/en/Activities/Winter/Cross-Country
+tests/fixtures/recherche-2026-11-20/kleinwalsertal/langlaufen.html https://www.kleinwalsertal.com/de/Aktivitaeten/Winter/Langlaufen
+tests/fixtures/recherche-2026-11-20/kleinwalsertal/poi-schwarzwasserloipe.html https://www.kleinwalsertal.com/en/poi/schwarzwasserloipe~1658
+tests/fixtures/recherche-2026-11-20/hoernerdoerfer/start.html https://www.hoernerdoerfer.de/
+tests/fixtures/recherche-2026-11-20/hoernerdoerfer/langlaufen.html https://www.hoernerdoerfer.de/winter/langlaufen
+tests/fixtures/recherche-2026-11-20/badhindelang/start.html https://www.badhindelang.de/
+tests/fixtures/recherche-2026-11-20/badhindelang/langlaufen.html https://www.badhindelang.de/winter/langlaufen
+tests/fixtures/recherche-2026-11-20/oberstaufen/start.html https://www.oberstaufen.de/
+tests/fixtures/recherche-2026-11-20/oberstaufen/langlaufen.html https://www.oberstaufen.de/winter/langlaufen
+tests/fixtures/recherche-2026-11-20/pfronten/start.html https://www.pfronten.de/
+tests/fixtures/recherche-2026-11-20/pfronten/langlaufen.html https://www.pfronten.de/aktiv/winter/langlaufen/
+tests/fixtures/recherche-2026-11-20/nesselwang/start.html https://www.nesselwang.de/
+tests/fixtures/recherche-2026-11-20/fuessen/cross-country.html https://fuessen.de/en/cross-country-skiing
+tests/fixtures/recherche-2026-11-20/fuessen/langlaufen.html https://www.fuessen.de/langlaufen
+tests/fixtures/recherche-2026-11-20/schwangau/wintersport.html https://en.schwangau.de/activities/wintersports-fun-in-the-snow
+tests/fixtures/recherche-2026-11-20/isny/start.html https://www.isny.de/
+tests/fixtures/recherche-2026-11-20/allgaeu/start.html https://www.allgaeu.de/
+tests/fixtures/recherche-2026-11-20/allgaeu/langlaufen.html https://www.allgaeu.de/langlaufen
+tests/fixtures/recherche-2026-11-20/wertach/start.html https://www.wertach.de/
+tests/fixtures/recherche-2026-11-20/balderschwang/start.html https://www.balderschwang.de/
+tests/fixtures/recherche-2026-11-20/sulzberg/start.html https://www.sulzberg.at/
+tests/fixtures/recherche-2026-11-20/scheidegg/start.html https://www.scheidegg.de/
+tests/fixtures/recherche-2026-11-20/westallgaeu/start.html https://www.westallgaeu.de/
