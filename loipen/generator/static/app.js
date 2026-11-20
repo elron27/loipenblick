@@ -927,7 +927,23 @@ function datenFehler(e) {
   auffrischen();
 }
 function standZeigen() {
+  spendenZeigen();
   document.getElementById("stand").textContent = "Stand der Daten: " + datum(S.idx.erzeugt) + " · Wetter: Deutscher Wetterdienst, Bright Sky, GeoSphere Austria" + (S.idx.image ? " · Version " + S.idx.image : "");
+}
+/* U46: Spendenlink nur, wenn das NAS eine Adresse liefert. Per DOM gebaut, nie als HTML-Text; nur https. */
+function spendenZeigen() {
+  var p = document.getElementById("spenden"), kopf = document.getElementById("spenden-kopf"), sp = S.idx && S.idx.spenden;
+  var gueltig = !!(sp && typeof sp.url === "string" && sp.url.indexOf("https://") === 0);
+  if (kopf) kopf.hidden = !gueltig; // Herz oben fuehrt zur Erklaerung auf der Hinweise-Seite, nicht direkt zum Anbieter
+  if (!p) return;
+  p.textContent = "";
+  if (!gueltig) { p.hidden = true; return; }
+  var a = document.createElement("a");
+  a.href = sp.url;
+  a.rel = "noopener noreferrer";
+  a.textContent = "über " + sp.anbieter + " unterstützen";
+  p.append("Loipenblick ist kostenlos und ohne Werbung. Wer mag, kann es ", a, ".");
+  p.hidden = false;
 }
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";

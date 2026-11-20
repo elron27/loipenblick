@@ -215,3 +215,12 @@ details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:point
 .thema code{display:block;font-size:13px;color:var(--mute);overflow-wrap:anywhere;margin-top:2px}
 .thema .knoepfe{display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:560px){.mz{grid-template-columns:1fr}.mz .weg{justify-self:end}}
+/* U46: Unterstuetzen-Herz in der Kopfzeile, Text erst auf breiten Schirmen */
+.spenden-kopf{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;justify-content:center;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;flex:none}
+.spenden-kopf[hidden]{display:none}
+.spenden-kopf svg{width:20px;height:20px;stroke:#d9475f;fill:#d9475f2e}
+.spenden-kopf:hover svg{fill:#d9475f}
+.spenden-kopf span{display:none}
+@media (min-width:1100px){.spenden-kopf span{display:inline}}
+.textseite .spenden-kopf{margin-left:auto}
+.text h2[id]{scroll-margin-top:80px}

@@ -8,9 +8,9 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 
 | Ordner | Typ | Inhalt |
 |---|---|---|
-| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-39 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P30, P34, D1–D19, U1–U44, N1–N12, B1–B29 |
-| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-25 (u. a. E-25: Push ohne Konto über öffentliche ntfy-Themen je Loipe und Gebiet; E-24: Quellen ohne Zustimmung erst testen, dann fragen; E-23: unplausible Offen-Meldungen als geschlossen zeigen; E-22: Steiermark über das Tourenportal von Steiermark Tourismus; E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
+| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-40 (N-05 ersetzt durch N-09) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P30, P34, D1–D19, U1–U46, N1–N12, B1–B29 |
+| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-28 (u. a. E-28: Spenden nur über einen einfachen Link; E-25: Push ohne Konto über öffentliche ntfy-Themen je Loipe und Gebiet; E-24: Quellen ohne Zustimmung erst testen, dann fragen; E-23: unplausible Offen-Meldungen als geschlossen zeigen; E-22: Steiermark über das Tourenportal von Steiermark Tourismus; E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
 | `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
 | `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `ausbau-3`, `livegang` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
