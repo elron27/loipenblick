@@ -12,7 +12,11 @@ STAND_QUELLEN = {"tirol": "2026-11-12", "kitzbueheler-alpen": "2026-11-12", "lan
                  "berchtesgaden": "2026-11-12", "myswitzerland": "2026-11-13",
                  # P34 (E-24)
                  "alpbachtal": "2026-11-19", "wildschoenau": "2026-11-19", "wilderkaiser": "2026-11-19",
-                 "hall-wattens": "2026-11-19", "silberregion-karwendel": "2026-11-19"}  # P32
+                 "hall-wattens": "2026-11-19", "silberregion-karwendel": "2026-11-19",  # P32
+                 # P38 (Allgaeu)
+                 "oberstdorf": "2026-11-20", "wertach": "2026-11-20", "pfronten": "2026-11-20",
+                 "kleinwalsertal": "2026-11-20", "fuessen": "2026-11-20", "isny": "2026-11-20",
+                 "hoernerdoerfer": "2026-11-20"}
 
 
 class FixtureFetcher:

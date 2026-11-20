@@ -47,3 +47,10 @@ hosts:
   - www.silberregion-karwendel.com  # P32, ebenso
   - sdds4.intermaps.com  # P32 (Innsbruck, nur Test), ebenso
   - www.osttirol.com  # P33, noch von Stefan in der Umgebung zu ergaenzen
+  # P38 (20.11.2026): Allgaeu, noch von Stefan in der Umgebung zu ergaenzen
+  - www.oberstdorf.de
+  - www.wertach.de
+  - www.pfronten.de
+  - www.kleinwalsertal.com
+  - www.fuessen.de
+  - www.isny.de
