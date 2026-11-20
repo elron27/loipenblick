@@ -198,3 +198,20 @@ details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:point
 .dg.befahrbar .pt{fill:var(--ok)}.dg.schnee .pt{fill:var(--cy)}
 .s-kz .glass{box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 #s-quellen td{white-space:nowrap}
+/* U7 Merkliste, N10 Push-Themen */
+.titel{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.titel h1{margin-right:auto}
+.merken svg{flex:none}
+.merken.an{border-color:var(--cy);color:var(--cy)}
+.merken.an svg{fill:currentColor}
+.meine{margin-top:14px;padding:14px 18px}
+.meine .kopf{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.meine h2{margin:0 0 6px;font-size:18px}
+.meine .r{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:15px;min-height:44px;padding:4px 0;border-top:1px solid var(--line);color:inherit;text-decoration:none}
+.meine .r:hover span:first-child{color:var(--cy)}
+.mz{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.formular .inhalt{padding:0 20px 20px;display:grid;gap:12px;max-width:720px}
+.themen li.thema{align-items:center}
+.thema code{display:block;font-size:13px;color:var(--mute);overflow-wrap:anywhere;margin-top:2px}
+.thema .knoepfe{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.mz{grid-template-columns:1fr}.mz .weg{justify-self:end}}
