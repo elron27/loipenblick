@@ -59,3 +59,9 @@ def test_b27_livegang_liste_nennt_nur_test_quellen():
     assert isinstance(nur_test_quellen(lade_yaml(CONFIG_DIR / "sources.yaml")), list)
     checkliste = (CONFIG_DIR.parent / "docs" / "livegang-checkliste-stefan.md").read_text(encoding="utf-8")
     assert "nur_test" in checkliste and "kontaktliste.md" in checkliste
+
+
+@pytest.mark.req("B27", ak=3)
+def test_b27_chiemgau_ohne_freigabe_nur_in_der_testversion():
+    """Chiemgau GmbH 20.11.2026: Freigabe ausstehend, Loipenmanager-Daten vorerst nicht uebernehmen."""
+    assert "chiemgau" in nur_test_quellen(lade_yaml(CONFIG_DIR / "sources.yaml"))
