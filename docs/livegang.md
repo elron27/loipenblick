@@ -131,7 +131,7 @@ Eine öffentliche Seite ist keine rein private Tätigkeit, die DSGVO gilt also. 
 | `localStorage` (gewählter Ort, Einstellungen) und Service-Worker-Cache | im Browser | Ausnahme nach § 25 Abs. 2 Nr. 2 TDDDG: unbedingt erforderlich für einen vom Nutzer ausdrücklich gewünschten Dienst ([Gesetz](https://www.gesetze-im-internet.de/ttdsg/__25.html)). Kein Banner, aber in der Datenschutzerklärung nennen. Nur für Funktionen speichern, die der Nutzer selbst auslöst. |
 | Links zu Google Maps (Navigation, Fahrplan) | erst beim Klick | Normaler Link, kein Einbetten. Hinweis in der Datenschutzerklärung genügt. |
 | Spendenlink (U46, `LOIPEN_SPENDEN_URL`) | erst beim Klick, dann PayPal bzw. Buy Me a Coffee | Normaler Link mit `rel="noopener noreferrer"`, kein Knopf-Skript oder Widget des Anbieters. Die eingebaute Vorlage bekommt einen eigenen Abschnitt, sobald die Adresse gesetzt ist. Bei eigenem Text den Baustein „PayPal“ bzw. „Zahlungsdienstleister“ aus dem Generator übernehmen. |
-| Push über ntfy | nur Stefan und Freunde mit geheimem Thema | Nicht Teil der öffentlichen Seite. Wird Push öffentlich angeboten, kommt ntfy.sh in die Datenschutzerklärung (IP für Rate-Limiting, Nachrichten 12 h zwischengespeichert, [ntfy](https://docs.ntfy.sh/privacy/)). |
+| Push über ntfy | Stefan (geheimes Thema, `LOIPEN_NTFY_URL`) und seit E-25 alle Besucher über öffentliche Themen je Loipe und Gebiet (`LOIPEN_PUSH_PRAEFIX`) | Die Seite lädt nichts von ntfy. Mit `LOIPEN_PUSH_PRAEFIX` steht ntfy in der Datenschutzerklärung (IP beim Abonnieren, Nachrichten 12 h zwischengespeichert, [ntfy](https://docs.ntfy.sh/privacy/)). Siehe [benachrichtigung.md](benachrichtigung.md). |
 
 ### Kartenkacheln
 

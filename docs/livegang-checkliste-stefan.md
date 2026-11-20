@@ -18,6 +18,7 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 9. **Log-Aufbewahrung** beim Hoster auf kurz stellen (z. B. 7 Tage), wenn einstellbar.
 10. **E-Mail-Weiterleitung** `kontakt@<domain>` auf dein Postfach einrichten.
 10a. **Postfach `abo@<domain>`** für das E-Mail-Abo anlegen und Zugangsdaten (SMTP) sowie einen Schlüssel (`openssl rand -hex 32`) in die `.env` eintragen (`LOIPEN_ABO_*`, `LOIPEN_SMTP_*`, README „E-Mail-Abo“). Prüfen, dass der Tarif PHP und `mail()` erlaubt.
+10b. **Push für Besucher einschalten** (E-25, freiwillig): in der `.env` auf dem NAS `LOIPEN_PUSH_PRAEFIX=loipenblick-` plus drei bis fünf zufällige Zeichen eintragen (z. B. `loipenblick-x7q`), Container neu erstellen. Danach zeigt jede Loipe „Per Push aufs Handy“. Test: ntfy-App installieren, Thema einer Loipe abonnieren. Details in [benachrichtigung.md](benachrichtigung.md).
 
 ## Bis Freitag, 4.12.
 

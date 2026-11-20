@@ -110,11 +110,13 @@ def erzeuge(
     abo_dateien: dict[str, bytes] | None = None,
     version: str | None = None,
     unplausibel: set[int] | None = None,
+    push: dict | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
     log_tage, datenschutz_html, spenden_url. kacheln: url, attribution, fremd (B23).
     abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py.
-    unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5)."""
+    unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5).
+    push: server und praefix der oeffentlichen ntfy-Themen (N10), sonst kein Push-Hinweis auf der Seite."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days, oeffentlich=oeffentlich)
@@ -143,6 +145,7 @@ def erzeuge(
     if spende:  # U46 AK 1: ohne Adresse kein Eintrag, die App zeigt dann nichts
         index["spenden"] = spende
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
+    index["push"] = push or None  # N10: ntfy-Themen je Loipe und Gebiet
     if version:  # B4: Stand des Images in der Fusszeile, damit ein Update am NAS pruefbar ist
         index["image"] = version[:7] if len(version) == 40 else version
 
@@ -178,6 +181,7 @@ def erzeuge(
              "log_tage": r.get("log_tage") or 7, "statistik_logs": bool(r.get("statistik_logs")),
              "kacheln_fremd": kacheln.get("fremd", True), "quellen": quellen,
              "fehlt": rechtliches_fehlt(r), "abo": bool(abo_dateien), "spenden": spende,
+             "push": push or None,
              "eigener_text": Markup(r["datenschutz_html"]) if r.get("datenschutz_html") else None}
     for name, titel, base in (("impressum", "Impressum", None), ("datenschutz", "Datenschutz", None),
                               ("hinweise", "Hinweise und Betreiber", None), ("404", "Nicht gefunden", "/")):

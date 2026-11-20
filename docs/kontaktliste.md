@@ -107,3 +107,19 @@ Wird ergänzt, sobald je Region die Ortsseite gefunden und geprüft ist (robots.
 | Tiroler Zugspitz Arena (zugspitzarena.com), Intermaps (sdds4.intermaps.com) | Außerfern (P33) | Loipenstatus, Länge, Schwierigkeit und Stand von 21 Loipen (Ehrwald, Lermoos, Biberwier, Berwang, Bichlbach, Heiterwang) aus dem Wintersportbericht, Querprüfung tirol.at | info@zugspitzarena.com | nicht angefragt | Eigene Seiten zeigen keinen Loipenstatus, nur ein eingebettetes Intermaps-Fenster. Intermaps ist ein Bezahldienst (P17); Stefan hat am 19.11.2026 eine Ausnahme nur für die Testversion erlaubt (erlaubnis nur_test, p17_ausnahme). robots.txt bei Intermaps fehlt (404). Impressum der Zugspitz Arena: Vervielfältigung und Verwertung nur mit schriftlicher Zustimmung, Kopien nur privat. In der Anfrage ausdrücklich nach der Nutzung des Intermaps-Berichts fragen; ggf. Intermaps selbst fragen. |
 | Lechtal Tourismus (lechtal.at), Holzgau (holzgau.at) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@lechtal.at | nicht nötig | Loipenliste lädt per JavaScript, Karte maps.lechtal.at nutzt tirol.mapservices.eu (robots-Sperre, dieselben Daten wie tirol.at). holzgau.at nennt keine Loipen. Kein Mehrwert gegenüber tirol.at, nicht angebunden. |
 | Naturparkregion Reutte (reutte.com) | Außerfern (P33) | keine eigene Statusangabe gefunden | info@reutte.com | nicht nötig | Langlaufseite zeigt nur die contwise-Karte (reutte.mapservices.eu) und eine Liste über phoenix.contwise.io, beide aus der Tiroler Datenbank wie tirol.at. Kein Mehrwert, nicht angebunden. |
+
+## 4. Allgäu (geprüft 20.11.2026)
+
+Das Allgäu liegt westlich unseres bisherigen Ausbaus (Südostbayern, Tirol, Salzburg), zwischen Bodensee, Lech und
+Tannheimer Tal. Nach E-13 ist es eine spätere Ausbaustufe. Anbindung der eigentlichen Quellen (Gemeinden,
+Tourismusämter, Loipenvereine) wäre ein eigener Ausbau; dieser Abschnitt hält nur den Befund zum Vorbild fest.
+
+| Stelle | Region | Was dort steht | robots.txt | Ergebnis | Notiz |
+|---|---|---|---|---|---|
+| loipen-allgaeu.de (Vorbild aus der Produktdefinition) | ganzes Allgäu mit Kleinwalsertal und Tannheimer Tal | Klickbare Karte mit rund 90 Orten, 72 Gebiete in 10 Regionen, rund 371 Loipen, Seite „Aktuelles“ (laut Stefans Screenshots vom 27.10.2026, Unterseiten nicht gesehen) | Abruf durch unseren Abrufdienst am 20.11.2026 wegen robots.txt abgelehnt; Inhalt der robots.txt selbst konnte nicht gelesen werden | **nicht anbindbar** | Selbst ein Sammeldienst (wie bergfex, D-17552a5cfa37): als Quelle ungeeignet, auch ohne robots-Sperre. Nutzen: Gebietsliste als Startkatalog (SR-40d931b69d60). Betreiber und Impressum unbekannt; bei Interesse an einer Zusammenarbeit kann Stefan das Impressum im Browser nachsehen. |
+
+Bestand am 20.11.2026: Von den 72 Gebieten des Vorbilds haben wir nur das Tannheimer Tal (mit Jungholz, aus
+tourinfra und tirol.at). Es fehlen alle bayerischen Allgäu-Gebiete, darunter Oberstdorf, die Hörnerdörfer
+(Fischen, Ofterschwang, Bolsterlang, Obermaiselstein, Balderschwang), Bad Hindelang mit Oberjoch und Unterjoch,
+Oberstaufen, Pfronten, Nesselwang, Füssen, Isny, Scheidegg und das Unterallgäu, außerdem das Kleinwalsertal und
+Sulzberg (beide Vorarlberg, dort haben wir gar nichts).

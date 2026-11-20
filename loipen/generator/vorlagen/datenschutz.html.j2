@@ -21,7 +21,7 @@
 <p>Wenn du auf „Mein Standort“ tippst, fragt dein Browser, ob er den Standort freigeben darf. Der Standort wird nur in deinem Browser verwendet, um Entfernungen zu berechnen, und nie an den Server oder Dritte gesendet. Die Ortssuche läuft ebenfalls nur in deinem Browser.</p>
 
 <h2>Speicher im Browser</h2>
-<p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was du selbst wählst: den gewählten Ort und ob die Karte geladen werden darf. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
+<p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was du selbst wählst: den gewählten Ort, ob die Karte geladen werden darf, und die Loipen, die du dir mit „Merken“ auf deine Liste „Meine Loipen“ gesetzt hast. Die Merkliste verlässt deinen Browser nicht; nur wenn du für sie ein E-Mail-Abo anfragst, gehen die gewählten Loipen mit dem Formular an uns. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
 
 {% if abo %}
 <h2>E-Mail-Benachrichtigung</h2>
@@ -39,7 +39,15 @@
 <p>„Unterstützen“ ist ein gewöhnlicher Link. Beim Aufruf von Loipenblick wird nichts von {{ spenden.anbieter }} geladen und nichts dorthin gesendet. Erst wenn du auf den Link klickst, öffnet sich die Seite von {{ spenden.anbieter }}; für alles, was du dort eingibst (zum Beispiel Name, E-Mail-Adresse und Zahlungsdaten), ist der Anbieter nach seiner eigenen Datenschutzerklärung verantwortlich.</p>
 <p>Gibst du etwas, erhalten wir vom Anbieter nur, was er an den Empfänger einer Zahlung weitergibt, in der Regel Name, E-Mail-Adresse, Betrag, Datum und eine Nachricht, falls du eine schreibst. Wir nutzen diese Angaben nur, um die Zahlung zuzuordnen, gegebenenfalls zu danken oder zurückzuzahlen (Art. 6 Abs. 1 lit. b DSGVO), und geben sie an niemanden weiter. Sie bleiben im Konto beim Anbieter, solange gesetzliche Aufbewahrungspflichten es verlangen (Art. 6 Abs. 1 lit. c DSGVO).</p>
 
-{% endif %}<h2>Links zu anderen Seiten</h2>
+{% endif %}
+{% if push %}
+<h2>Push-Benachrichtigung mit ntfy</h2>
+<p>Jede Loipe und jedes Gebiet hat ein öffentliches Thema beim Benachrichtigungsdienst ntfy ({{ push.server }}). Wenn du es in der ntfy-App oder im Browser abonnierst, bekommst du eine Nachricht, sobald die Loipe öffnet, frisch gespurt wird oder schließt. Dafür brauchst du kein Konto, und wir erfahren nicht, wer ein Thema abonniert hat: Wir schicken die Nachricht nur an das Thema, die Zustellung übernimmt ntfy.</p>
+<p>Die Seite lädt nichts von ntfy. Erst wenn du auf „In ntfy abonnieren“ tippst oder ein Thema in der App einträgst, verbindet sich dein Gerät mit den Servern von ntfy; dabei werden deine IP-Adresse und das abonnierte Thema übertragen, bei Handys je nach Einstellung auch über die Push-Dienste von Google oder Apple. Unsere Nachrichten hält ntfy bis zu 12 Stunden vor, damit Geräte sie auch nach kurzer Funkstille bekommen. Die Server können außerhalb der EU stehen. Es gilt die <a href="https://docs.ntfy.sh/privacy/" rel="noopener">Datenschutzerklärung von ntfy</a>. Rechtsgrundlage ist deine Einwilligung durch das Abonnieren (Art. 6 Abs. 1 lit. a DSGVO). Abmelden geht jederzeit, indem du das Thema in der App löschst.</p>
+<p>Die Themen sind öffentlich. Inhalte, die nicht von Loipenblick stammen, können wir nicht ausschließen; unsere Nachrichten verweisen immer auf diese Seite, wo der aktuelle Stand steht.</p>
+{% endif %}
+
+<h2>Links zu anderen Seiten</h2>
 <p>Links zur Quelle einer Loipe, zu Google Maps (Navigation, Fahrplan) und zu anderen Seiten öffnen die Seite des jeweiligen Anbieters. Erst dann gilt dessen Datenschutzerklärung.</p>
 
 <h2>Deine Rechte</h2>

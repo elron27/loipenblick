@@ -16,6 +16,8 @@ from sqlalchemy import select
 
 from loipen import generator
 from loipen.ablauf import rufe_quelle_ab
+from loipen.benachrichtigung import PushKonfig, entprelle
+from loipen.benachrichtigung import veroeffentliche as push_veroeffentliche
 from loipen.config import get_settings
 from loipen.db import session_scope
 from loipen.ereignisse import (
@@ -79,8 +81,11 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
                           abo_dateien=abo_dateien(session, settings), version=settings.version,
-                          unplausibel=unplausibel)
+                          unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite())
         ereignisse = ohne_unplausible(ereignisse, unplausibel)
+        # N11: Wiederholungen zurueckhalten, fuer alle Kanaele. Eingetragen wird vor dem Versand: Ein
+        # Versandfehler holt eine Nachricht nicht nach, sonst kaemen bei einer Stoerung spaeter Doppelte.
+        ereignisse = entprelle(session, ereignisse)
     log.info("Seite erzeugt in %s", settings.site_dir)
     meldung = hochladen(settings)
     if meldung:
@@ -173,6 +178,14 @@ def _melde(settings, sender, ereignisse, meldungen) -> None:
         lauf_abo(session_scope, AboKonfig.aus_settings(settings), ereignisse, sender)
     except Exception:
         log.exception("E-Mail-Abo fehlgeschlagen")
+    push = PushKonfig.aus_settings(settings)
+    if push.aktiv and ereignisse:
+        try:  # N10: oeffentliche ntfy-Themen je Loipe und Gebiet
+            with session_scope() as session:
+                n = push_veroeffentliche(session, push, ereignisse, betreiber=sender)
+            log.info("%d oeffentliche Push-Nachrichten", n)
+        except Exception:
+            log.exception("Oeffentlicher Push fehlgeschlagen")
 
 
 def sicherung() -> None:
