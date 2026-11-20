@@ -459,3 +459,24 @@ def test_b25_fusszeile_verlinkt_hinweise_impressum_datenschutz(seite, basis):
     assert "Loipenblick" in seite.locator("header").inner_text()
     for datei in ("impressum.html", "datenschutz.html"):
         assert seite.locator("footer").get_by_role("link", name=re.compile(datei[:5], re.I)).count() >= 1
+
+
+def _loipe_id(seite, name):
+    seite.open("#/loipen")
+    return seite.evaluate("n => (S.loipen.filter(l => l.name === n)[0] || {}).id", name)
+
+
+@pytest.mark.req("U45", ak=[1, 2])
+def test_u45_anreise_mit_parkplatz_entfernung_und_navigation(seite):
+    # Wildbad Kreuth: der von Hand recherchierte Parkplatz liegt am Start der Loipe
+    seite.open(f"#/loipe/{_loipe_id(seite, 'Loipe Wildbad Kreuth - Klamm')}")
+    anreise = seite.locator("#anreise").inner_text()
+    assert "Parkplatz Wildbad Kreuth" in anreise and "Gebühr:" in anreise and "vom Loipenstart" in anreise
+    links = seite.locator("#anreise a.btn", has_text="Navigation").evaluate_all("els => els.map(e => e.href)")
+    assert links and all(l.startswith("https://www.google.com/maps/dir/?api=1&destination=47.") for l in links)
+    # eine Loipe ohne Parkplatz: Hinweis und Navigation zum Start, kein leerer Abschnitt
+    ohne = seite.evaluate("() => (S.loipen.filter(l => !(l.parken || []).length && l.lat != null)[0] || {}).id")
+    seite.open(f"#/loipe/{ohne}")
+    anreise = seite.locator("#anreise").inner_text()
+    assert "noch keiner bekannt" in anreise and "Start der Loipe" in anreise
+    assert seite.locator("#anreise a.btn", has_text="Navigation").count() == 1
