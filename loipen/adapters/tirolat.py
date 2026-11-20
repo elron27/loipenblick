@@ -18,6 +18,12 @@ naeher als config["radius_km"] liegt. Eine neue Region = neue Gebiete in beiden 
 Seit 12.11.2026 sind alle 701 Loipen der Karte zugeordnet (66 Tiroler Gebiete plus Bayrischzell, das
 tirol.at mitfuehrt). Gleiche Namen teilen sich zunaechst eine geratene Detailadresse; die Kennungspruefung
 meldet das, der richtige Pfad kommt dann aus den Listeneintraegen oder aus config["slugs"].
+
+Tote Detailseiten (B29, Worker-Log vom 20.11.2026): Rund 15 geratene Detailadressen liefern 404, und
+/loipen/bichlachrunde leitet auf /wandern/wandertouren/bichlachrunde um. Solche Loipen stehen weiter auf
+der Karte und behalten Status und Lage aus der Liste. Ihre Detailseite wird aber TOTE_DETAILS_TAGE lang
+nicht mehr abgerufen, damit sie nicht in jedem Lauf das Kontingent der Detailseiten aufbrauchen, und
+die Daten einer Seite ausserhalb der Loipen (Wandertour) werden nicht uebernommen.
 """
 
 import html as htmllib
@@ -28,12 +34,14 @@ import re
 import time
 
 from loipen.adapters.base import AdapterErgebnis, Fetcher, LoipenDaten
+from loipen.fetcher import HttpFehler
 from loipen.adapters.normalisierung import normiere_schwierigkeit, normiere_zustand, parse_zahl, slugify
 from loipen.models import Status, Technik
 
 log = logging.getLogger("loipen.adapters.tirolat")
 
 LISTE = "/aktivitaeten/sport/langlaufen/loipen"
+TOTE_DETAILS_TAGE = 7
 OFFEN_FILTER = "addressbaseOpened%5B209%5D%5B%5D=OPEN"
 # Eintraege der Karte, die keine Loipen sind (Skischulen, Verleih, Geschaefte)
 KEINE_LOIPE = re.compile(r"schule|rental|store|verleih|shop|sport mit style", re.I)
@@ -166,6 +174,18 @@ class TirolAtAdapter:
 
     def __init__(self, uhr=time.time):
         self._uhr = uhr
+        # Kennung -> Zeitpunkt, seit dem die Detailseite 404 liefert oder keine Loipe mehr ist (B29).
+        # Lebt im Speicher des Workers; nach einem Neustart wird jede tote Seite einmal neu versucht.
+        self._tote_details: dict[str, float] = {}
+
+    def _tot(self, ident: str) -> bool:
+        seit = self._tote_details.get(ident)
+        if seit is None:
+            return False
+        if self._uhr() - seit > TOTE_DETAILS_TAGE * 86400:
+            del self._tote_details[ident]
+            return False
+        return True
 
     def _details(self, gewaehlt: list[tuple[dict, str]], je_lauf: int, mit_laenge: set | None,
                  aus_liste: dict[str, dict]) -> set[int]:
@@ -173,14 +193,15 @@ class TirolAtAdapter:
         Loipen ohne Laenge dran, die auch die Liste nicht nennt; der Rest des Kontingents im Wechsel."""
         block = list(self._auswahl(len(gewaehlt), je_lauf))
         if mit_laenge is None:
-            return set(block)
+            return {i for i in block if not self._tot(gewaehlt[i][0]["ident"])}
         fehlend = [i for i, (m, _) in enumerate(gewaehlt)
-                   if m["ident"] not in mit_laenge and (aus_liste.get(m["ident"]) or {}).get("laenge_km") is None]
+                   if m["ident"] not in mit_laenge and not self._tot(m["ident"]) and (aus_liste.get(m["ident"]) or {}).get("laenge_km") is None]
         auswahl = set(fehlend[:je_lauf])
         for i in block:
             if len(auswahl) >= je_lauf:
                 break
-            auswahl.add(i)
+            if not self._tot(gewaehlt[i][0]["ident"]):
+                auswahl.add(i)
         return auswahl
 
     def _auswahl(self, n: int, je_lauf: int) -> range:
@@ -236,6 +257,7 @@ class TirolAtAdapter:
         mit_laenge = config.get("_mit_laenge")
         details = self._details(gewaehlt, int(config.get("details_pro_lauf", 20)),
                                 set(mit_laenge) if mit_laenge is not None else None, aus_liste)
+        tot: list[str] = []
         for i, (m, gebiet) in enumerate(gewaehlt):
             pfad = bekannte_pfade.get(m["ident"]) or slug(m["title"])
             url = f"{basis}{config.get('liste_pfad', LISTE)}/{pfad}"
@@ -247,10 +269,22 @@ class TirolAtAdapter:
             self._liste(d, aus_liste.get(m["ident"]))
             if i in details:
                 try:
-                    self._detail(d, fetcher.get(url), ergebnis)
+                    if not self._detail(d, fetcher.get(url), ergebnis):
+                        self._tote_details[m["ident"]] = self._uhr()
+                except HttpFehler as e:
+                    if e.status in (404, 410):
+                        self._tote_details[m["ident"]] = self._uhr()
+                        tot.append(m["title"])
+                    else:
+                        ergebnis.warnungen.append(f"{m['title']}: Detailseite nicht lesbar (HTTP {e.status})")
                 except Exception as e:  # eine fehlende Detailseite stoppt die anderen nicht
                     ergebnis.warnungen.append(f"{m['title']}: Detailseite nicht lesbar ({type(e).__name__}: {e})")
             ergebnis.loipen.append(d)
+        if tot:
+            # eine Sammelwarnung statt einer je Seite; die Loipen bleiben mit den Daten der Liste
+            ergebnis.warnungen.append(
+                f"{len(tot)} Detailseiten nicht gefunden (404), {TOTE_DETAILS_TAGE} Tage ausgesetzt: "
+                + ", ".join(tot[:5]) + (" …" if len(tot) > 5 else ""))
         return ergebnis
 
     @staticmethod
@@ -265,13 +299,18 @@ class TirolAtAdapter:
             d.technik = technik_aus_stilen(f["stile"])
 
     @staticmethod
-    def _detail(d: LoipenDaten, seite: str, ergebnis: AdapterErgebnis) -> None:
+    def _detail(d: LoipenDaten, seite: str, ergebnis: AdapterErgebnis) -> bool:
+        """Uebernimmt die Detailseite. False, wenn sie keine Loipe (mehr) beschreibt."""
         f = parse_detail(seite)
+        if f.get("url") and LISTE not in f["url"]:
+            # Umleitung auf eine andere Kategorie (z. B. Wandertour): nichts uebernehmen
+            ergebnis.warnungen.append(f"{d.name}: Detailseite leitet auf {f['url']} um, keine Loipe mehr")
+            return False
         if f.get("kennung") and f"addressbase_{f['kennung']}" != d.source_key:
             ergebnis.warnungen.append(
                 f"{d.name}: Detailseite {d.source_url} gehoert zu addressbase_{f['kennung']}, "
                 "Pfad in config.slugs eintragen")
-            return
+            return True
         if "status" in f:
             _, bekannt = normiere_zustand(f["status"])
             if not bekannt:
@@ -296,3 +335,4 @@ class TirolAtAdapter:
         if f.get("url"):
             d.source_url = f["url"]
         d.rohtext = json.dumps({k: f.get(k) for k in ("status", "verband", "merkmale")}, ensure_ascii=False)
+        return True

@@ -819,6 +819,23 @@ ROBOTS-VERBOT https://maps.zillertal.at/embedded.bundle.js
 ROBOTS-VERBOT https://maps.zillertal.at/robots.txt
 200 https://www.zillertal.at/robots.txt
 200   186392 tests/fixtures/recherche-2026-11-19/zillertal/schneebericht.html https://www.zillertal.at/winter/urlaub/schneebericht.html
+# Lauf 2026-11-20 10:16 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tegernsee.com/robots.txt
+200    43886 tests/fixtures/tegernsee/2026-11-20/a-ringseeloipe-42-km-skating-u-klassisch.html https://www.tegernsee.com/a-ringseeloipe-42-km-skating-u-klassisch
+200    44047 tests/fixtures/tegernsee/2026-11-20/a-rundkurs-point-skating-u-klassisch.html https://www.tegernsee.com/a-rundkurs-point-skating-u-klassisch
+200 https://www.achensee.com/robots.txt
+200   725309 tests/fixtures/achensee/2026-11-20/schneebericht.html https://www.achensee.com/de/live/schneebericht/
+200   725309 tests/fixtures/achensee/2026-11-20/schneebericht-ohne-slash.html https://www.achensee.com/de/live/schneebericht
+200 https://www.tirol.at/robots.txt
+200   190253 tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
+404    72170 tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
+# Lauf 2026-11-20 14:12 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.tegernsee.com/robots.txt
+200    43886 tests/fixtures/tegernsee/2026-11-20/a-ringseeloipe-42-km-skating-u-klassisch.html https://www.tegernsee.com/a-ringseeloipe-42-km-skating-u-klassisch
+200    44047 tests/fixtures/tegernsee/2026-11-20/a-rundkurs-point-skating-u-klassisch.html https://www.tegernsee.com/a-rundkurs-point-skating-u-klassisch
+200 https://www.tirol.at/robots.txt
+200   190289 tests/fixtures/tirol/2026-11-20/bichlachrunde.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/bichlachrunde
+404    67498 tests/fixtures/tirol/2026-11-20/miesbergloipe-404.html https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/miesbergloipe
 # Lauf 2026-11-20 07:08 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
 200 https://www.oberstdorf.de/robots.txt
 200   250033 tests/fixtures/recherche-2026-11-20/oberstdorf/wintersportbericht.html https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/

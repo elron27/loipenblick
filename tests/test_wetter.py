@@ -182,6 +182,8 @@ def test_gebiet_position_aus_parkplaetzen_oder_loipen(session):
     lat, lon = gebiet_position(g)
     assert 47.6 < lat < 47.7 and 11.9 < lon < 12.1
     leer = session.scalar(select(Gebiet).where(Gebiet.slug == "chieming"))
+    assert gebiet_position(leer) == (47.889, 12.523)  # seit B28 hat jedes Gebiet eine eigene Koordinate
+    leer.lat = leer.lon = None  # ohne Koordinate, Loipen und Parkplaetze gibt es keine Position
     assert gebiet_position(leer) is None
 
 
