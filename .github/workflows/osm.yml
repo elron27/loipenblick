@@ -1,0 +1,59 @@
+name: OSM-Abgleich
+
+# P36, P37, D20: Quellen aus der Attrappe (tests/fixtures, schont die Quellen), OpenStreetMap echt ueber Overpass.
+# Ergebnis auf demselben Branch: verdichtete OSM-Daten je Region unter tests/fixtures/osm/ und die Bestandsaufnahme
+# docs/bestandsaufnahme-strecken-parken.md. Laeuft, wenn sich scripts/osm-abgleich.txt auf einem claude/-Branch
+# aendert, oder von Hand.
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["scripts/osm-abgleich.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  abgleich:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: loipen
+          POSTGRES_PASSWORD: loipen
+          POSTGRES_DB: loipen_osm
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U loipen" --health-interval 5s --health-retries 10
+    env:
+      LOIPEN_DATABASE_URL: postgresql+psycopg://loipen:loipen@localhost:5432/loipen_osm
+      LOIPEN_USER_AGENT: ${{ vars.LOIPEN_USER_AGENT || 'LoipenBot/0.1 (+https://github.com/elron27/loipenblick)' }}
+      LOIPEN_REQUEST_DELAY_S: "5"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: alembic upgrade head
+      - name: Quellen aus der Attrappe, OpenStreetMap echt
+        run: |
+          python -m tests.stack.attrappe --port 18081 &
+          sleep 3
+          LOIPEN_UMLEITUNG=http://localhost:18081 LOIPEN_REQUEST_DELAY_S=0 \
+            python scripts/live_pruefung.py --ausgabe .osm --ohne-wetter --erlaube-umleitung --osm-direkt || true
+          test -f .osm/bestandsaufnahme.md
+      - name: Ergebnis auf den Branch legen
+        run: |
+          mkdir -p tests/fixtures/osm
+          cp .osm/osm/*.json tests/fixtures/osm/ 2>/dev/null || true
+          python scripts/bestandsaufnahme.py --seite .osm/site --ausgabe docs/bestandsaufnahme-strecken-parken.md \
+            --hinweis "Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom $(date -u +%d.%m.%Y)." > /dev/null
+          cat .osm/bericht.md >> "$GITHUB_STEP_SUMMARY"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A tests/fixtures/osm docs/bestandsaufnahme-strecken-parken.md
+          git diff --cached --quiet || git commit -m "OSM-Abgleich ($(date -u +%F))"
+          git push

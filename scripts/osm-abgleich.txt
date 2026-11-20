@@ -1,0 +1,1 @@
+# Aendern startet den Workflow OSM-Abgleich (.github/workflows/osm.yml). Lauf 1: 20.11.2026

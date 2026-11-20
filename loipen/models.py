@@ -299,3 +299,15 @@ class Abonnent(Base):
     angefragt_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     bestaetigt_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     letzte_mail_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class OsmDaten(Base):
+    """Verdichtete OpenStreetMap-Daten je Region (P36, P37): benannte Loipen (piste:type=nordic) und
+    Parkplaetze. Lizenz ODbL; wird woechentlich neu geholt (loipen/osm.py)."""
+
+    __tablename__ = "osm_daten"
+
+    region_slug: Mapped[str] = mapped_column(String(100), primary_key=True)
+    bbox: Mapped[list] = mapped_column(JSON)
+    inhalt: Mapped[dict] = mapped_column(JSON)
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)

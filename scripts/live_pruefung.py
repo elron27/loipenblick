@@ -19,6 +19,7 @@ Die Datenbank sollte eine eigene, leere sein (Migrationen vorher: alembic upgrad
 """
 
 import argparse
+import json
 import logging
 import os
 import re
@@ -31,7 +32,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from sqlalchemy import select  # noqa: E402
 
-from loipen import generator  # noqa: E402
+from loipen import generator, osm  # noqa: E402
+from loipen.bestandsaufnahme import als_markdown, lies_seite  # noqa: E402
 from loipen.ablauf import rufe_quelle_ab  # noqa: E402
 from loipen.config import get_settings  # noqa: E402
 from loipen.db import session_scope  # noqa: E402
@@ -92,6 +94,9 @@ def main() -> int:
     ap.add_argument("--ausgabe", type=Path, default=Path(".live"))
     ap.add_argument("--quelle", action="append", help="nur diese Quelle(n), Standard: alle")
     ap.add_argument("--ohne-wetter", action="store_true")
+    ap.add_argument("--ohne-osm", action="store_true", help="keine OpenStreetMap-Abfragen (P36, P37)")
+    ap.add_argument("--osm-direkt", action="store_true",
+                    help="OpenStreetMap auch bei LOIPEN_UMLEITUNG echt abfragen (Workflow OSM-Abgleich: Quellen aus der Attrappe)")
     ap.add_argument("--erlaube-umleitung", action="store_true", help="nur um das Skript gegen die Attrappe zu testen")
     args = ap.parse_args()
 
@@ -130,11 +135,37 @@ def main() -> int:
                 probleme.append("Wetter: keine DWD-Messwerte geparst")
             if wetter.vorhersagen == 0:
                 probleme.append("Wetter: keine Vorhersage geparst")
+        if not args.ohne_osm:
+            # P36/P37: alle Regionen, eigener Fetcher mit langem Zeitlimit; Fehler sind nur Warnungen
+            osm_fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, timeout_s=180,
+                                            umleitung=None if args.osm_direkt else settings.umleitung)
+            o = osm.aktualisiere(session, osm_fetcher, hoechstens=1000, auch_mit_strecke=args.osm_direkt)
+            # verdichtete Daten je Region als Fixture (tests/fixtures/osm/, CLAUDE.md Regel 10)
+            for slug, inhalt in osm.lade(session).items():
+                datei = ausgabe / "osm" / f"{slug}.json"
+                datei.parent.mkdir(parents=True, exist_ok=True)
+                datei.write_text(json.dumps(inhalt, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+            zeilen += ["", f"**OpenStreetMap:** {len(o.abgerufen)} Regionen abgerufen, {len(o.fehler)} Fehler."]
+            zeilen += [f"- {f}" for f in o.fehler[:20]]
+            if args.osm_direkt:
+                v = osm.vergleiche(session)
+                zeilen += ["", f"**Treffergüte gegen eigene Strecken (tourinfra):** {v.geprueft} Loipen geprüft, "
+                           f"{v.zugeordnet} zugeordnet, davon {v.richtig} deckungsgleich (mittlerer Abstand unter 300 m)."]
+                zeilen += [f"- daneben: {f}" for f in v.falsch[:40]]
         generator.erzeuge(session, ausgabe / "site", config_dir=settings.config_dir, stale_days=settings.stale_days)
 
     unbekannt = sorted({m for m in sammler.meldungen if m.startswith("Unbekannter Quelltext")})
     if unbekannt:
         zeilen += ["", "**Unbekannte Begriffe** (Normalisierung ergänzen):"] + [f"- {m}" for m in unbekannt[:50]]
+    # D20: Bestandsaufnahme Strecken und Parkinfos aus der eben erzeugten Seite, als eigene Datei
+    (ausgabe / "bestandsaufnahme.md").parent.mkdir(parents=True, exist_ok=True)
+    bestand = lies_seite(ausgabe / "site")
+    (ausgabe / "bestandsaufnahme.md").write_text(als_markdown(bestand, hinweis="Live-Prüfung mit echten Quellen."),
+                                                 encoding="utf-8")
+    g = bestand.gesamt
+    zeilen += ["", f"**Bestandsaufnahme (D20):** {g.strecke} von {g.loipen} Loipen mit Streckenverlauf "
+               f"({g.strecke_osm} aus OpenStreetMap), {g.parken} mit Parkplatz ({g.parken_osm} aus OpenStreetMap); "
+               "Tabelle in bestandsaufnahme.md."]
     zeilen += ["", f"{fetcher.anzahl} Antworten aufgezeichnet (Artefakt `live-aufnahme`), Seite im Artefakt `live-seite`."]
     zeilen += ["", "**Ergebnis:** " + ("alles in Ordnung" if not probleme else "Probleme:")] + [f"- {p}" for p in probleme]
 
