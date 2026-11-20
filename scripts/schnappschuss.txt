@@ -1,9 +1,12 @@
-# <zielpfad> <url> -- Runde 25 (20.11.2026): Overpass getrennt (Loipen / Parkplaetze), openstreetmap.fr, Waymarked Trails Slopes
-tests/fixtures/recherche-2026-11-20/osm/robots-wmt.txt https://slopes.waymarkedtrails.org/robots.txt
-tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-4326.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=11.62,47.60,11.90,47.78&limit=100
-tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-3857.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=100
-tests/fixtures/recherche-2026-11-20/osm/robots-osmfr.txt https://overpass.openstreetmap.fr/robots.txt
-tests/fixtures/recherche-2026-11-20/osm/tegernsee-loipen-osmfr.json https://overpass.openstreetmap.fr/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22piste%3Atype%22%3D%22nordic%22%5D%5Bname%5D%2847.6%2C11.62%2C47.78%2C11.9%29%3Bout%20tags%20geom%3B
-tests/fixtures/recherche-2026-11-20/osm/tegernsee-loipen-kumi.json https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22piste%3Atype%22%3D%22nordic%22%5D%5Bname%5D%2847.6%2C11.62%2C47.78%2C11.9%29%3Bout%20tags%20geom%3B
-tests/fixtures/recherche-2026-11-20/osm/tegernsee-park-kumi.json https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22amenity%22%3D%22parking%22%5D%2847.6%2C11.62%2C47.78%2C11.9%29%3Bout%20tags%20center%3B
-tests/fixtures/recherche-2026-11-20/osm/tegernsee-loipen-coffee.json https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22piste%3Atype%22%3D%22nordic%22%5D%5Bname%5D%2847.6%2C11.62%2C47.78%2C11.9%29%3Bout%20tags%20geom%3B
+# <zielpfad> <url> -- Runde 26 (20.11.2026): Waymarked Trails Slopes (OSM-Loipen als Routen), Liste und Geometrie
+tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
+tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-engadin.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1079799,5844683,1118761,5877027&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-leitzachtal.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1324702,6043868,1341400,6065364&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-toblach.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1346966,5889997,1374796,5909490&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-achensee.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1296872,6007610,1313570,6032315&limit=100
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
+tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
+tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123
