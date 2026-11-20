@@ -1,4 +1,4 @@
-"""Streckenverlaeufe und Parkplaetze aus OpenStreetMap (P36, P37, E-25).
+"""Streckenverlaeufe und Parkplaetze aus OpenStreetMap (P38, P39, E-29).
 
 Die meisten Quellen nennen nur den Startpunkt einer Loipe (tirol.at sperrt die GPX-Dateien per robots.txt,
 Berchtesgaden ebenso). OpenStreetMap fuehrt viele Loipen als Weg oder Route mit piste:type=nordic und
@@ -418,7 +418,7 @@ class Vergleich:
 
 
 def vergleiche(session: Session, nah_km: float = 0.3) -> Vergleich:
-    """Treffergüte (P36): Loipen mit eigener Strecke (tourinfra) so zuordnen, als haetten sie keine, und pruefen,
+    """Treffergüte (P38): Loipen mit eigener Strecke (tourinfra) so zuordnen, als haetten sie keine, und pruefen,
     ob die OSM-Strecke auf der eigenen liegt (mittlerer Abstand der OSM-Punkte unter nah_km)."""
     from loipen.models import Loipe  # noqa: PLC0415
     from loipen.wetter import gebiet_position  # noqa: PLC0415

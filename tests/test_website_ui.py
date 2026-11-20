@@ -471,8 +471,8 @@ def _alle_loipen(basis):
     return [l for r in hole("daten.json")["regionen"] for g in hole(r["datei"])["gebiete"] for l in g["loipen"]]
 
 
-@pytest.mark.req("U45", ak=[1, 2])
-def test_u45_anreise_mit_parkplatz_entfernung_und_navigation(seite, basis):
+@pytest.mark.req("U47", ak=[1, 2])
+def test_u47_anreise_mit_parkplatz_entfernung_und_navigation(seite, basis):
     loipen = _alle_loipen(basis)
     # Wildbad Kreuth: der von Hand recherchierte Parkplatz liegt am Start der Loipe
     kreuth = next(l["id"] for l in loipen if l["name"] == "Loipe Wildbad Kreuth - Klamm")

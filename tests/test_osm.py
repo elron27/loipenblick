@@ -1,4 +1,4 @@
-"""OpenStreetMap-Strecken und -Parkplaetze, Anreise je Loipe, Bestandsaufnahme: P36, P37, U45, D20 (E-25)."""
+"""OpenStreetMap-Strecken und -Parkplaetze, Anreise je Loipe, Bestandsaufnahme: P38, P39, U47, D20 (E-29)."""
 
 import json
 from datetime import datetime, timedelta
@@ -56,8 +56,8 @@ def loipe(name, lat=47.6001, lon=11.7001, laenge=4.0):
 GEBIET = {"name": "Testdorf", "lat": 47.605, "lon": 11.705}
 
 
-@pytest.mark.req("P36", ak=2)
-def test_p36_verdichten_behaelt_nur_benannte_loipen_und_oeffentliche_parkplaetze():
+@pytest.mark.req("P38", ak=2)
+def test_p38_verdichten_behaelt_nur_benannte_loipen_und_oeffentliche_parkplaetze():
     d = osm.verdichte(json.dumps(ANTWORT))
     assert {l["id"] for l in d["loipen"]} == {"way/1", "way/3", "way/4", "relation/9"}
     assert len(next(l for l in d["loipen"] if l["id"] == "relation/9")["linien"]) == 2
@@ -69,8 +69,8 @@ def test_p36_verdichten_behaelt_nur_benannte_loipen_und_oeffentliche_parkplaetze
     assert parks["node/14"]["gebuehr_text"] is None
 
 
-@pytest.mark.req("P36", ak=2)
-def test_p36_zuordnung_nach_name_lage_und_laenge():
+@pytest.mark.req("P38", ak=2)
+def test_p38_zuordnung_nach_name_lage_und_laenge():
     d = osm.verdichte(ANTWORT)
     assert osm.strecke_fuer(loipe("Sonnenloipe Testdorf"), GEBIET, d["loipen"])["id"] == "way/1"
     # Name passt nicht
@@ -86,8 +86,8 @@ def test_p36_zuordnung_nach_name_lage_und_laenge():
     assert osm.strecke_fuer(loipe("Moosrunde", lat=47.62, lon=11.70, laenge=2), GEBIET, d["loipen"])["id"] == "relation/9"
 
 
-@pytest.mark.req("P36", ak=2)
-def test_p36_ohne_startpunkt_nur_eindeutig_nahe_der_gebietsmitte():
+@pytest.mark.req("P38", ak=2)
+def test_p38_ohne_startpunkt_nur_eindeutig_nahe_der_gebietsmitte():
     d = osm.verdichte(ANTWORT)
     ohne = loipe("Sonnenloipe", lat=None, lon=None)
     assert osm.strecke_fuer(ohne, GEBIET, d["loipen"])["id"] == "way/1"  # die zweite liegt 20 km weg
@@ -96,8 +96,8 @@ def test_p36_ohne_startpunkt_nur_eindeutig_nahe_der_gebietsmitte():
     assert osm.strecke_fuer(ohne, {"name": "X", "lat": None, "lon": None}, d["loipen"]) is None
 
 
-@pytest.mark.req("P37", ak=2)
-def test_p37_osm_parkplaetze_bis_500_m_naechster_zuerst():
+@pytest.mark.req("P39", ak=2)
+def test_p39_osm_parkplaetze_bis_500_m_naechster_zuerst():
     d = osm.verdichte(ANTWORT)
     p = osm.parkplaetze_bei((47.6001, 11.7001), d["parkplaetze"])
     assert [x["name"] for x in p] == ["Parkplatz Sonnenloipe", "Parkplatz"]
@@ -108,8 +108,8 @@ def test_p37_osm_parkplaetze_bis_500_m_naechster_zuerst():
 OSM_FIXTURES = Path(__file__).parent / "fixtures" / "osm" / "2026-11-20"
 
 
-@pytest.mark.req("P36", ak=2)
-def test_p36_waymarked_trails_route_aus_echtem_schnappschuss():
+@pytest.mark.req("P38", ak=2)
+def test_p38_waymarked_trails_route_aus_echtem_schnappschuss():
     """Ringseeloipe (Gmund) aus slopes.waymarkedtrails.org, Schnappschuss vom 20.11.2026."""
     r = osm.wmt_route((OSM_FIXTURES / "wmt-relation-6850122.json").read_text(encoding="utf-8"))
     assert r["id"] == "relation/6850122" and r["namen"] == ["Ringseeloipe"] and r["laenge_km"] == 4.72
@@ -134,8 +134,8 @@ def test_p36_waymarked_trails_route_aus_echtem_schnappschuss():
     assert s["id"] == "relation/2"
 
 
-@pytest.mark.req("P36", ak=4)
-def test_p36_abruf_routen_und_parkplaetze_mit_ausweichserver_und_wochenrhythmus(session):
+@pytest.mark.req("P38", ak=4)
+def test_p38_abruf_routen_und_parkplaetze_mit_ausweichserver_und_wochenrhythmus(session):
     region = Region(slug="testtal", name="Testtal", land="DE", bundesland="Bayern")
     session.add(region)
     session.flush()
@@ -189,8 +189,8 @@ def test_p36_abruf_routen_und_parkplaetze_mit_ausweichserver_und_wochenrhythmus(
     assert session.get(OsmDaten, "testtal").inhalt["loipen"]
 
 
-@pytest.mark.req("P36", ak=4)
-def test_p36_ein_versagender_overpass_server_wird_im_lauf_nicht_wieder_gefragt():
+@pytest.mark.req("P38", ak=4)
+def test_p38_ein_versagender_overpass_server_wird_im_lauf_nicht_wieder_gefragt():
     class Abrufer:
         urls = []
 
@@ -252,16 +252,16 @@ def seite_loipen(site):
     return {l["name"]: l for g in daten["gebiete"] for l in g["loipen"]}, strecken, r
 
 
-@pytest.mark.req("P36", ak=1)
-def test_p36_strecke_von_der_dublette(testseite):
+@pytest.mark.req("P38", ak=1)
+def test_p38_strecke_von_der_dublette(testseite):
     loipen, strecken, _ = seite_loipen(testseite)
     bach = loipen["Bachloipe"]
     assert bach["quelle"]["name"] == "Testquelle" and bach["strecke_von"] == "Nebenquelle"
     assert strecken[str(bach["id"])][0] == [47.6502, 11.7502] and bach["strecke_hinweis"] is None
 
 
-@pytest.mark.req("P36", ak=[2, 3])
-def test_p36_osm_strecke_in_der_seite_mit_herkunft(testseite):
+@pytest.mark.req("P38", ak=[2, 3])
+def test_p38_osm_strecke_in_der_seite_mit_herkunft(testseite):
     loipen, strecken, r = seite_loipen(testseite)
     sonne = loipen["Sonnenloipe"]
     assert sonne["strecke_von"] == "OpenStreetMap" and sonne["strecke_osm"]["url"] == "https://www.openstreetmap.org/way/1"
@@ -275,8 +275,8 @@ def test_p36_osm_strecke_in_der_seite_mit_herkunft(testseite):
     assert 'id="osm-daten"' in hinweise and "Open Database License (ODbL) 1.0" in hinweise
 
 
-@pytest.mark.req("P37", ak=[1, 2, 3])
-def test_p37_parkplaetze_je_loipe(testseite):
+@pytest.mark.req("P39", ak=[1, 2, 3])
+def test_p39_parkplaetze_je_loipe(testseite):
     loipen, _, _ = seite_loipen(testseite)
     bach = loipen["Bachloipe"]["parken"]  # von Hand recherchiert, 40 m vom Start: OSM wird nicht gebraucht
     assert [p["name"] for p in bach] == ["Parkplatz Bach (von Hand)"] and bach[0]["quelle"] == "hand"
@@ -300,8 +300,8 @@ def test_d20_bestandsaufnahme_zaehlt_was_die_seite_zeigt(testseite):
     assert "| Testtal | Testdorf | 3 | 1 | 0 | 1 | unbekannt | 0 |" in md
 
 
-@pytest.mark.req("U45", ak=[1, 2, 3])
-def test_u45_anreise_abschnitt_auf_der_loipenseite():
+@pytest.mark.req("U47", ak=[1, 2, 3])
+def test_u47_anreise_abschnitt_auf_der_loipenseite():
     js = (STATIC / "app.js").read_text(encoding="utf-8")
     assert "function anreiseHtml(l)" in js and "miniKarte(l) + anreiseHtml(l)" in js
     assert "laut OpenStreetMap, nicht von der Loipenquelle bestätigt" in js and "vom Loipenstart" in js and "km\")" in js
@@ -310,7 +310,7 @@ def test_u45_anreise_abschnitt_auf_der_loipenseite():
     assert "bei den einzelnen Loipen" in js
 
 
-def test_p36_verbindungsnamen_mit_anderem_endpunkt_passen_nicht():
+def test_p38_verbindungsnamen_mit_anderem_endpunkt_passen_nicht():
     """Echte Fehlzuordnungen aus der Treffergüte-Messung (Engadin, 20.11.): gleiche Seenloipe, anderer Abschnitt."""
     orte = "Maloja, Sils und Silvaplana"
     assert not osm.name_passt("009 Isola-Sils (Seenloipe)", ["Maloja-Isola"], orte)

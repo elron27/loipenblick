@@ -1,6 +1,6 @@
 name: OSM-Abgleich
 
-# P36, P37, D20: Quellen aus der Attrappe (tests/fixtures, schont die Quellen), OpenStreetMap echt ueber Overpass.
+# P38, P39, D20: Quellen aus der Attrappe (tests/fixtures, schont die Quellen), OpenStreetMap echt ueber Overpass.
 # Ergebnis auf demselben Branch: verdichtete OSM-Daten je Region unter tests/fixtures/osm/ und die Bestandsaufnahme
 # docs/bestandsaufnahme-strecken-parken.md. Laeuft, wenn sich scripts/osm-abgleich.txt auf einem claude/-Branch
 # aendert, oder von Hand.

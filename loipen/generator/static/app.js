@@ -471,13 +471,13 @@ function miniKarteZeichnen(l) {
   var gr = L.featureGroup(gruppe), b = gr.getBounds();
   setTimeout(function () { m.invalidateSize(); m.fitBounds(b.pad(.25), {maxZoom: 15}); }, 0);
 }
-/* P36 AK 3: Herkunft eines Streckenverlaufs, der nicht von der Quelle der Loipe stammt */
+/* P38 AK 3: Herkunft eines Streckenverlaufs, der nicht von der Quelle der Loipe stammt */
 function streckeHerkunft(l) {
   if (l.strecke_von === "OpenStreetMap") return '<p class="fine" id="strecke-osm">Streckenverlauf aus <a href="' + esc(safeUrl(l.strecke_osm && l.strecke_osm.url)) + '" rel="noopener">OpenStreetMap</a>' + (l.strecke_osm && l.strecke_osm.name ? " („" + esc(l.strecke_osm.name) + "“)" : "") + ', zugeordnet über Name und Lage, nicht von ' + esc(l.quelle.name) + ' bestätigt. © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a>, ODbL.</p>';
   if (l.strecke_von) return '<p class="fine" id="strecke-von">Streckenverlauf laut ' + esc(l.strecke_von) + ".</p>";
   return "";
 }
-/* P37: Parkplaetze an der Loipe; ohne Parkplatz die Navigation zum Startpunkt */
+/* P39: Parkplaetze an der Loipe; ohne Parkplatz die Navigation zum Startpunkt */
 function anreiseHtml(l) {
   var p = l.parken || [], h = '<h2 class="sec">Anreise</h2><ul class="plain" id="anreise">';
   h += p.map(function (x) {

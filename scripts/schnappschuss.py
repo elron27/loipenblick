@@ -41,7 +41,7 @@ def schluessel_ersetzen(inhalt: bytes) -> bytes:
 
 def holen(url: str) -> tuple[int, bytes]:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "de"})
-    # Overpass-Abfragen (OpenStreetMap, P36) rechnen laenger als eine Seite laedt
+    # Overpass-Abfragen (OpenStreetMap, P38) rechnen laenger als eine Seite laedt
     timeout = 180 if "/api/interpreter" in url else 40
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
