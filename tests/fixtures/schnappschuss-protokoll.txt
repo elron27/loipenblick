@@ -902,3 +902,33 @@ NICHT ERREICHBAR https://en.schwangau.de: FEHLER <urlopen error [SSL: CERTIFICAT
 200   119923 tests/fixtures/recherche-2026-11-20/nordic-zentrum/loipen.html https://www.nordic-zentrum-oberstdorf.de/nordic-active/loipen/
 200 https://www.oberstdorf.de/robots.txt
 404     9372 tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum.html
+# Lauf 2026-11-20 07:16 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://www.allgaeu.de/robots.txt
+200    95371 tests/fixtures/recherche-2026-11-20/allgaeu/schneebericht-pois.html https://www.allgaeu.de/draussen/schneebericht-pois
+200    98314 tests/fixtures/recherche-2026-11-20/allgaeu/bergsportbericht.html https://www.allgaeu.de/draussen/bergsportbericht
+200    90625 tests/fixtures/recherche-2026-11-20/allgaeu/impressum.html https://www.allgaeu.de/impressum
+200 https://www.bergsportbericht.de/robots.txt
+200   702114 tests/fixtures/recherche-2026-11-20/bergsportbericht/schneebericht-bad-hindelang.pdf https://www.bergsportbericht.de/_pdf/bad-hindelang/schneebericht.pdf
+200   180219 tests/fixtures/recherche-2026-11-20/bergsportbericht/start.html https://www.bergsportbericht.de/
+200 https://www.badhindelang.de/robots.txt
+200     1431 tests/fixtures/recherche-2026-11-20/badhindelang/bergbericht-winter-druck.html https://www.badhindelang.de/bergbericht-winter?type=1773135491
+200   138262 tests/fixtures/recherche-2026-11-20/badhindelang/impressum.html https://www.badhindelang.de/impressum
+200 https://www.kleinwalsertal.com/robots.txt
+200     1818 tests/fixtures/recherche-2026-11-20/kleinwalsertal/report-modal-7629.html https://www.kleinwalsertal.com/de/reportObjectModal/7629
+200   277711 tests/fixtures/recherche-2026-11-20/kleinwalsertal/impressum.html https://www.kleinwalsertal.com/de/impressum
+200   309000 tests/fixtures/recherche-2026-11-20/kleinwalsertal/agb.html https://www.kleinwalsertal.com/de/footer/agb
+200 https://www.oberstdorf.de/robots.txt
+200    91617 tests/fixtures/recherche-2026-11-20/oberstdorf/impressum.html https://www.oberstdorf.de/impressum/
+200 https://www.pfronten.de/robots.txt
+200    75748 tests/fixtures/recherche-2026-11-20/pfronten/impressum.html https://www.pfronten.de/service/impressum/
+200 https://www.wertach.de/robots.txt
+200    59533 tests/fixtures/recherche-2026-11-20/wertach/impressum.html https://www.wertach.de/impressum/
+200 https://www.fuessen.de/robots.txt
+200   336098 tests/fixtures/recherche-2026-11-20/fuessen/impressum.html https://www.fuessen.de/impressum/
+200   344291 tests/fixtures/recherche-2026-11-20/fuessen/agb.html https://www.fuessen.de/agb/
+200 https://www.hoernerdoerfer.de/robots.txt
+200    73316 tests/fixtures/recherche-2026-11-20/hoernerdoerfer/impressum.html https://www.hoernerdoerfer.de/impressum
+200 https://www.isny.de/robots.txt
+200    43237 tests/fixtures/recherche-2026-11-20/isny/impressum.html https://www.isny.de/impressum/
+404 https://sdds4.intermaps.com/robots.txt
+200    65507 tests/fixtures/recherche-2026-11-20/intermaps/hoernerdoerfer.html https://sdds4.intermaps.com/hoernerdoerfer_srm/hoernerdoerfer.aspx

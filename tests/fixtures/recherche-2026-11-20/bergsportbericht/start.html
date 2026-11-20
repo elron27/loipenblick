@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html class="html" lang="de">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO plugin v28.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Startseite - Bergsportbericht</title>
+<link data-rocket-prefetch href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://cdn.eberl-online.cloud" rel="dns-prefetch"><link rel="preload" data-rocket-preload as="image" href="https://www.bergsportbericht.de/wp-content/uploads/2021/03/allgaeuer-alpen.jpeg" fetchpriority="high">
+	<link rel="canonical" href="https://www.bergsportbericht.de/" />
+	<meta property="og:locale" content="de_DE" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Startseite - Bergsportbericht" />
+	<meta property="og:description" content="AKTUELL &amp; UMFASSEND Alle Winterdaten —für Print und Online Jetzt teilnehmen AKTUELL &amp; UMFASSEND Berg- und Wintersportberichtim Allgäu (Print und Online) Jetzt teilnehmen Bergsportbericht Allgäu Bergsportbericht Mehr erfahren WintersportberichtAllgäu Wintersportbericht Mehr erfahren Der offizielle Berg- und Wintersportbericht im Allgäu Für Bergbahnen, Orte und Plattformen Darstellung auf der eigenen Webseite, Darstellung auf allgäuweiten Plattformen und Veröffentlichung [&hellip;]" />
+	<meta property="og:url" content="https://www.bergsportbericht.de/" />
+	<meta property="og:site_name" content="Bergsportbericht" />
+	<meta property="article:modified_time" content="2023-04-17T06:45:36+00:00" />
+	<meta property="og:image" content="https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.bergsportbericht.de\/","url":"https:\/\/www.bergsportbericht.de\/","name":"Startseite - Bergsportbericht","isPartOf":{"@id":"https:\/\/www.bergsportbericht.de\/#website"},"about":{"@id":"https:\/\/www.bergsportbericht.de\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.bergsportbericht.de\/#primaryimage"},"image":{"@id":"https:\/\/www.bergsportbericht.de\/#primaryimage"},"thumbnailUrl":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads\/2018\/10\/Karte-richtig.png","datePublished":"2018-06-05T12:36:29+00:00","dateModified":"2023-04-17T06:45:36+00:00","breadcrumb":{"@id":"https:\/\/www.bergsportbericht.de\/#breadcrumb"},"inLanguage":"de","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.bergsportbericht.de\/"]}]},{"@type":"ImageObject","inLanguage":"de","@id":"https:\/\/www.bergsportbericht.de\/#primaryimage","url":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads\/2018\/10\/Karte-richtig.png","contentUrl":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads\/2018\/10\/Karte-richtig.png"},{"@type":"BreadcrumbList","@id":"https:\/\/www.bergsportbericht.de\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite"}]},{"@type":"WebSite","@id":"https:\/\/www.bergsportbericht.de\/#website","url":"https:\/\/www.bergsportbericht.de\/","name":"Bergsportbericht","description":"Sommer- und Wintersportbericht","publisher":{"@id":"https:\/\/www.bergsportbericht.de\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.bergsportbericht.de\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"de"},{"@type":"Organization","@id":"https:\/\/www.bergsportbericht.de\/#organization","name":"Bergsportbericht","url":"https:\/\/www.bergsportbericht.de\/","logo":{"@type":"ImageObject","inLanguage":"de","@id":"https:\/\/www.bergsportbericht.de\/#\/schema\/logo\/image\/","url":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads\/2018\/10\/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png","contentUrl":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads\/2018\/10\/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png","width":293,"height":143,"caption":"Bergsportbericht"},"image":{"@id":"https:\/\/www.bergsportbericht.de\/#\/schema\/logo\/image\/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Bergsportbericht &raquo; Feed" href="https://www.bergsportbericht.de/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bergsportbericht &raquo; Kommentar-Feed" href="https://www.bergsportbericht.de/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.bergsportbericht.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bergsportbericht.de%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.bergsportbericht.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bergsportbericht.de%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:where(.wp-block-gallery.is-layout-flex){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}:where(.wp-block-gallery.is-layout-grid){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}
+:where(.wp-block-latest-posts.is-layout-flex){gap: 1.25em;}:where(.wp-block-latest-posts.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='font-awesome-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='simple-line-icons-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=1795084171' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css' href='https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/css/style.min.css?ver=4.2.8' media='all' />
+<link rel='stylesheet' id='oceanwp-hamburgers-css' href='https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css?ver=4.2.8' media='all' />
+<link data-minify="1" rel='stylesheet' id='oceanwp-spin-r-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/spin-r.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='oceanwp-google-font-raleway-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/uploads/sgf-css/font-1f21813052b672723868dc15559ed34a.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='oceanwp-google-font-roboto-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/uploads/sgf-css/font-431ea3b5da2737fa814044909aa4f3c9.css?ver=1795084171' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=4.4.1' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1795084171' media='all' />
+<link rel='stylesheet' id='elementor-post-2145-css' href='https://www.bergsportbericht.de/wp-content/uploads/elementor/css/post-2145.css?ver=1795084170' media='all' />
+<link data-minify="1" rel='stylesheet' id='font-awesome-5-all-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=1795084171' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='e-shapes-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/conditionals/shapes.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-flip-box-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor-pro/assets/css/widget-flip-box.min.css?ver=4.3.2' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-counter-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='elementor-post-9-css' href='https://www.bergsportbericht.de/wp-content/uploads/elementor/css/post-9.css?ver=1795084170' media='all' />
+<link rel='stylesheet' id='elementor-post-733-css' href='https://www.bergsportbericht.de/wp-content/uploads/elementor/css/post-733.css?ver=1795084170' media='all' />
+<link rel='stylesheet' id='eael-general-css' href='https://www.bergsportbericht.de/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=6.8.9' media='all' />
+<link data-minify="1" rel='stylesheet' id='oe-widgets-style-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='hm_custom_css-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/uploads/hm_custom_css_js/custom.css?ver=1795084171' media='all' />
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.bergsportbericht.de/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-raleway-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/raleway.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-nunitosans-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/nunitosans.css?ver=1795084171' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1795084171' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://www.bergsportbericht.de/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=1795084171' media='all' />
+<script id="jquery-core-js" src="https://www.bergsportbericht.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" data-rocket-defer defer></script>
+<script id="jquery-migrate-js" src="https://www.bergsportbericht.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" data-rocket-defer defer></script>
+<script id="font-awesome-4-shim-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.4.1" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://www.bergsportbericht.de/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.bergsportbericht.de/wp-json/wp/v2/pages/9" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bergsportbericht.de/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.5" />
+<link rel='shortlink' href='https://www.bergsportbericht.de/' />
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+  let gaProperty = 'UA-128975091-1';// <-- EDIT
+  let disableStr = 'ga-disable-' + gaProperty;
+  if (document.cookie.indexOf(disableStr + '=true') > -1) {
+    // muss vor Google Analytics Schnipsel kommen damit optOut funktioniert
+    window[disableStr] = true;
+  }
+  function gaOptout() {
+    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+    window[disableStr] = true;
+    alert('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.');
+  }
+  // insert link directly ( if possible in elementor :S )
+  // <a href="javascript:gaOptout()">Google Analytics deaktivieren</a>  
+  // otherwise add the insert_gaOptOut_here id to the link set in elementor to '#'
+  document.addEventListener("DOMContentLoaded", function(event) {
+    try{
+    	document.getElementById('insert_gaOptOut_here').setAttribute('href', "javascript:gaOptout()");
+    }catch(e){}
+  });
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async type="text/plain" data-type="application/javascript" data-src="https://www.googletagmanager.com/gtag/js?id=UA-128975091-1" data-name="googleAnalytics"></script>
+<script type="text/plain" data-type="application/javascript" data-name="googleAnalytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128975091-1', {'anonymize_ip': true});
+</script><!-- start Simple Custom CSS and JS -->
+<style>
+.klaro.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok {
+display: block;
+}
+.klaro.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok .cn-buttons {
+display: flex;
+flex-direction: column;
+margin-top: 0;
+}
+.klaro.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok .cn-buttons .cm-btn {
+border-radius: 0;
+margin-top: 0;
+margin-bottom: 10px;
+}
+@media (min-width:480px) {.klaro.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok .cn-buttons .cm-btn {
+margin-left: auto;
+margin-right: auto;
+}
+
+}
+.klaro.klaro .cookie-modal,.klaro.klaro .cookie-notice {
+font-size: 12px;
+}
+.klaro.klaro .cookie-modal .cm-modal.cm-klaro,.klaro.klaro .cookie-notice .cm-modal.cm-klaro {
+background: #fff;
+}
+.klaro.klaro .cookie-modal .us-info-text,.klaro.klaro .cookie-notice .us-info-text {
+font-size: 10px;
+}
+.klaro.klaro .cookie-modal .klaro-header .cn-headline,.klaro.klaro .cookie-notice .klaro-header .cn-headline {
+font-size: 16px;
+}
+@media (min-width:480px) {.klaro.klaro .cookie-modal .klaro-header .cn-headline,.klaro.klaro .cookie-notice .klaro-header .cn-headline {
+width: 60%;
+display: inline-block;
+}
+.klaro.klaro .cookie-modal .klaro-header .customer-logo,.klaro.klaro .cookie-notice .klaro-header .customer-logo {
+display: inline-block;
+max-width: 35%;
+}
+.klaro.klaro .cookie-modal .klaro-header + p,.klaro.klaro .cookie-notice .klaro-header + p {
+width: 90%;
+}
+
+}
+.klaro.klaro .cookie-modal .slider,.klaro.klaro .cookie-notice .slider {
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+}
+.klaro.klaro .cookie-modal a,.klaro.klaro .cookie-notice a {
+color: #444;
+text-decoration: none;
+}
+.klaro.klaro .cookie-modal p,.klaro.klaro .cookie-modal strong,.klaro.klaro .cookie-modal h1,.klaro.klaro .cookie-modal h2,.klaro.klaro .cookie-modal ul,.klaro.klaro .cookie-modal li,.klaro.klaro .cookie-notice p,.klaro.klaro .cookie-notice strong,.klaro.klaro .cookie-notice h1,.klaro.klaro .cookie-notice h2,.klaro.klaro .cookie-notice ul,.klaro.klaro .cookie-notice li {
+font-family: inherit;
+color: #212529;
+}
+.klaro.klaro .cookie-modal p,.klaro.klaro .cookie-modal h1,.klaro.klaro .cookie-modal h2,.klaro.klaro .cookie-modal ul,.klaro.klaro .cookie-modal li,.klaro.klaro .cookie-notice p,.klaro.klaro .cookie-notice h1,.klaro.klaro .cookie-notice h2,.klaro.klaro .cookie-notice ul,.klaro.klaro .cookie-notice li {
+display: block;
+text-align: left;
+margin: 0;
+padding: 0;
+margin-top: 10px;
+}
+.klaro.klaro .cookie-modal ul,.klaro.klaro .cookie-notice ul {
+margin-bottom: 10px;
+margin-left: 5px;
+}
+.klaro.klaro .cookie-modal .cm-btn,.klaro.klaro .cookie-notice .cm-btn {
+color: #fff;
+padding: 0.5em;
+margin-right: 0.5em;
+border: 0;
+}
+.klaro.klaro .cookie-modal .cm-btn.cm-btn-sm,.klaro.klaro .cookie-notice .cm-btn.cm-btn-sm {
+padding: 0.4em;
+font-size: 1em;
+}
+.klaro.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro.klaro .cookie-notice .cm-btn.cm-btn-close {
+background: #eee;
+color: #000;
+}
+.klaro.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro.klaro .cookie-notice .cm-btn.cm-btn-success {
+background: #508E2D;
+border-radius: 0;
+}
+.klaro.klaro .cookie-modal .cm-btn.cm-btn-success.cm-btn-info,.klaro.klaro .cookie-notice .cm-btn.cm-btn-success.cm-btn-info {
+background: #ccc;
+border-radius: 0;
+}
+.klaro.klaro .cookie-modal .cm-btn.cm-btn-danger,.klaro.klaro .cookie-notice .cm-btn.cm-btn-danger {
+background: #fff;
+color: #000;
+border: 1px solid #000;
+}
+.klaro.klaro .cookie-modal {
+width: 100%;
+height: 100%;
+position: fixed;
+overflow: hidden;
+left: 0;
+top: 0;
+z-index: 100000;
+}
+.klaro.klaro .cookie-modal .cm-bg {
+background: rgba(0,0,0,0.5);
+height: 100%;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal {
+z-index: 9999;
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+width: 100%;
+max-height: 98%;
+top: 50%;
+transform: translateY(-50%);
+position: fixed;
+overflow: auto;
+background: #fff;
+color: #212529;
+}
+@media (min-width:800px) {.klaro.klaro .cookie-modal .cm-modal {
+max-width: 500px;
+}
+
+}
+@media (min-width:1024px) {.klaro.klaro .cookie-modal .cm-modal {
+position: relative;
+margin: 0 auto;
+max-width: 500px;
+height: auto;
+width: auto;
+}
+
+}
+.klaro.klaro .cookie-modal .cm-modal .hide {
+border: none;
+background: none;
+position: absolute;
+top: 20px;
+right: 20px;
+}
+.klaro.klaro .cookie-modal .cm-modal .hide svg {
+stroke: #212529;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer {
+padding: 1em;
+border-top: 1px solid #212529;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer a.cm-powered-by {
+position: absolute;
+right: 1em;
+color: #9ba5ae;
+font-size: 0.8em;
+padding-top: 4px;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-header {
+padding: 1em;
+padding-right: 24px;
+border-bottom: 1px solid #212529;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-header h1 {
+margin: 0;
+font-size: 2em;
+display: block;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-header h1.title {
+padding-right: 20px;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body {
+padding: 1em;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul {
+display: block;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body span {
+display: inline-block;
+width: auto;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps {
+padding: 0;
+margin: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app {
+position: relative;
+line-height: 20px;
+vertical-align: middle;
+padding-left: 60px;
+min-height: 40px;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app:first-child {
+margin-top: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app .switch {
+position: absolute;
+left: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app p {
+margin-top: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app p.purposes {
+font-size: 0.8em;
+color: #9ba5ae;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app.cm-toggle-all {
+border-top: 1px solid #212529;
+padding-top: 1em;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-app-title {
+font-weight: 600;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-opt-out,.klaro.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-required {
+padding-left: 0.2em;
+font-size: 0.8em;
+color: #9ba5ae;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-btn-decline {
+display: none;
+}
+.klaro.klaro .cookie-notice {
+background: #fff;
+z-index: 9997;
+position: fixed;
+width: 100%;
+bottom: 0;
+right: 0;
+}
+@media (min-width:990px) {.klaro.klaro .cookie-notice {
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+position: fixed;
+bottom: 20px;
+right: 20px;
+max-width: 300px;
+}
+
+}
+@media (max-width:989px) {.klaro.klaro .cookie-notice {
+border: none;
+border-top: 1px solid #212529;
+}
+
+}
+.klaro.klaro .cookie-notice .cn-body {
+margin-bottom: 0;
+margin-right: 0;
+bottom: 0;
+padding: 1em;
+padding-top: 0;
+}
+.klaro.klaro .cookie-notice .cn-body:after {
+clear: both;
+}
+.klaro.klaro .cookie-notice .cn-body p {
+margin-bottom: 0.5em;
+}
+.klaro.klaro .cookie-notice .cn-body p.cn-changes {
+text-decoration: underline;
+}
+.klaro.klaro .cookie-notice .cn-body .cn-learn-more {
+display: inline-block;
+}
+.klaro.klaro .cookie-notice .cn-body div.cn-ok {
+padding-top: 0.5em;
+margin: 0;
+}
+.klaro.klaro .cookie-notice .cn-body div.cn-ok .cm-btn-success {
+padding: 0.5em 0.5em;
+}
+.klaro.klaro .cookie-notice-hidden {
+display: none !important;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer-buttons {
+justify-content: flex-start;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer-buttons .cm-btn-success {
+order: 0;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer-buttons .cm-btn-accept {
+order: 1;
+}
+.klaro.klaro .cookie-modal .cm-list-input.required:checked + .cm-list-label .slider.slider {
+background: #508E2D;
+opacity: 1;
+}
+.klaro.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider {
+background: #508E2D;
+}
+.klaro.klaro .cookie-modal .cm-list-input.only-required + .cm-list-label .slider {
+background: #ccc;
+}
+.klaro.klaro .cookie-modal .cm-list-input.half-checked:checked + .cm-list-label .slider {
+background: #508E2D;
+}
+.klaro.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by {
+text-align: left;
+}
+.klaro.klaro .cookie-modal .cm-btn {
+border-radius: 0;
+}
+
+#klaro .cookie-modal .cm-modal.cm-klaro {
+max-width: 500px !important;
+}
+#klaro .cookie-notice {
+position: fixed;
+background: rgba(0,0,0,0.5);
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+max-width: unset;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#klaro .cookie-notice:not(.cookie-modal-notice) {
+z-index: 10001;
+}
+#klaro .cn-body {
+background: white;
+padding: 24px;
+max-width: 500px;
+}
+#klaro .cn-body .cn-body-footer {
+margin-top: 10px;
+}
+#klaro .cn-body-footer {
+margin-bottom: 15px;
+text-align: center;
+}
+#klaro .cn-ok .cn-buttons .cm-btn {
+width: 100%;
+text-align: center;
+}
+@media (min-width:480px) {#klaro .cn-ok .cn-buttons .cm-btn {
+width: 50%;
+}
+
+}
+#klaro .cn-ok .cn-buttons a.cm-btn {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content {
+margin-left: 0 !important;
+display: block !important;
+}
+
+
+.klaro .cookie-modal .switch,.klaro .cookie-notice .switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 30px;
+}
+.klaro .cookie-modal .cm-app-input:checked + .cm-app-label .slider,.klaro .cookie-notice .cm-app-input:checked + .cm-app-label .slider {
+background-color: #0885BA;
+}
+.klaro .cookie-modal .cm-app-input.required:checked + .cm-app-label .slider,.klaro .cookie-notice .cm-app-input.required:checked + .cm-app-label .slider {
+opacity: 0.8;
+background-color: #006A4E;
+cursor: not-allowed;
+}
+.klaro .cookie-modal .slider,.klaro .cookie-notice .slider {
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+}
+.klaro .cookie-modal .cm-app-input,.klaro .cookie-notice .cm-app-input {
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+width: 50px;
+height: 30px;
+}
+.klaro .cookie-modal .cm-app-label .slider,.klaro .cookie-notice .cm-app-label .slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+width: 50px;
+display: inline-block;
+}
+.klaro .cookie-modal .cm-app-label .slider:before,.klaro .cookie-notice .cm-app-label .slider:before {
+position: absolute;
+content: "";
+height: 20px;
+width: 20px;
+left: 5px;
+bottom: 5px;
+background-color: white;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+}
+.klaro .cookie-modal .cm-app-label .slider.round,.klaro .cookie-notice .cm-app-label .slider.round {
+border-radius: 30px;
+}
+.klaro .cookie-modal .cm-app-label .slider.round:before,.klaro .cookie-notice .cm-app-label .slider.round:before {
+border-radius: 50%;
+}
+.klaro .cookie-modal .cm-app-label input:focus + .slider,.klaro .cookie-notice .cm-app-label input:focus + .slider {
+box-shadow: 0 0 1px #0885BA;
+}
+.klaro .cookie-modal .cm-app-label input:checked + .slider:before,.klaro .cookie-notice .cm-app-label input:checked + .slider:before {
+-webkit-transform: translateX(20px);
+-ms-transform: translateX(20px);
+transform: translateX(20px);
+}
+.klaro .cookie-modal .cm-app-input:focus + .cm-app-label .slider,.klaro .cookie-notice .cm-app-input:focus + .cm-app-label .slider {
+box-shadow: 0 4px 6px 0 rgba(125,125,125,0.2),5px 5px 10px 0 rgba(125,125,125,0.19);
+}
+.klaro .cookie-modal .cm-app-input:checked + .cm-app-label .slider:before,.klaro .cookie-notice .cm-app-input:checked + .cm-app-label .slider:before {
+-webkit-transform: translateX(20px);
+-ms-transform: translateX(20px);
+transform: translateX(20px);
+}
+.klaro .cookie-modal .slider,.klaro .cookie-notice .slider {
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+}
+.klaro .cookie-modal a,.klaro .cookie-notice a {
+color: #00AA3E;
+text-decoration: none;
+}
+.klaro .cookie-modal p,.klaro .cookie-modal strong,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .cookie-notice p,.klaro .cookie-notice strong,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li {
+font-family: inherit;
+color: #eee;
+}
+.klaro .cookie-modal p,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .cookie-notice p,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li {
+display: block;
+text-align: left;
+margin: 0;
+padding: 0;
+margin-top: 0.7em;
+}
+.klaro .cookie-modal .cm-link,.klaro .cookie-notice .cm-link {
+padding-left: 4px;
+vertical-align: middle;
+}
+.klaro .cookie-modal .cm-btn,.klaro .cookie-notice .cm-btn {
+background: #555;
+color: #eee;
+border-radius: 6px;
+padding: 6px 10px;
+margin-right: 0.5em;
+border: 0;
+}
+.klaro .cookie-modal .cm-btn:disabled,.klaro .cookie-notice .cm-btn:disabled {
+opacity: 0.5;
+}
+.klaro .cookie-modal .cm-btn.cm-btn-sm,.klaro .cookie-notice .cm-btn.cm-btn-sm {
+padding: 0.4em;
+font-size: 1em;
+}
+.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro .cookie-notice .cm-btn.cm-btn-close {
+background: #eee;
+color: #000;
+}
+.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro .cookie-notice .cm-btn.cm-btn-success {
+background: #00AA3E;
+}
+.klaro .cookie-modal .cm-btn.cm-btn-info,.klaro .cookie-notice .cm-btn.cm-btn-info {
+background: #0885BA;
+}
+.klaro .cookie-modal .cm-btn.cm-btn-right,.klaro .cookie-notice .cm-btn.cm-btn-right {
+float: right;
+margin-left: 0.5em;
+margin-right: 0;
+}
+.klaro .cookie-modal {
+width: 100%;
+height: 100%;
+position: fixed;
+overflow: hidden;
+left: 0;
+top: 0;
+z-index: 1000;
+}
+.klaro .cookie-modal .cm-bg {
+background: rgba(0,0,0,0.5);
+height: 100%;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+.klaro .cookie-modal .cm-modal {
+z-index: 1001;
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+width: 100%;
+max-height: 98%;
+top: 50%;
+transform: translateY(-50%);
+position: fixed;
+overflow: auto;
+background: #333;
+color: #eee;
+}
+@media (min-width:1024px) {.klaro .cookie-modal .cm-modal {
+border-radius: 4px;
+position: relative;
+margin: 0 auto;
+max-width: 640px;
+height: auto;
+width: auto;
+}
+
+}
+.klaro .cookie-modal .cm-modal .hide {
+border: none;
+background: none;
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 1;
+}
+.klaro .cookie-modal .cm-modal .hide svg {
+stroke: #eee;
+}
+.klaro .cookie-modal .cm-modal .cm-footer {
+padding: 1em;
+border-top: 1px solid #555;
+}
+.klaro .cookie-modal .cm-modal .cm-footer-buttons::before,.klaro .cookie-modal .cm-modal .cm-footer-buttons::after {
+content: " ";
+display: table;
+}
+.klaro .cookie-modal .cm-modal .cm-footer-buttons::after {
+clear: both;
+}
+.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by {
+font-size: 0.8em;
+padding-top: 4px;
+text-align: center;
+}
+.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a {
+color: #999;
+}
+.klaro .cookie-modal .cm-modal .cm-header {
+padding: 1em;
+padding-right: 24px;
+border-bottom: 1px solid #555;
+}
+.klaro .cookie-modal .cm-modal .cm-header h1 {
+margin: 0;
+font-size: 2em;
+display: block;
+}
+.klaro .cookie-modal .cm-modal .cm-header h1.title {
+padding-right: 20px;
+}
+.klaro .cookie-modal .cm-modal .cm-body {
+padding: 1em;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul {
+display: block;
+}
+.klaro .cookie-modal .cm-modal .cm-body span {
+display: inline-block;
+width: auto;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps {
+padding: 0;
+margin: 0;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app {
+position: relative;
+line-height: 20px;
+vertical-align: middle;
+padding-left: 60px;
+min-height: 40px;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app:first-child {
+margin-top: 0;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app .switch {
+position: absolute;
+left: 0;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app p {
+margin-top: 0;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app p.purposes {
+font-size: 0.8em;
+color: #999;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app.cm-toggle-all {
+border-top: 1px solid #555;
+padding-top: 1em;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-app-title {
+font-weight: 600;
+}
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-apps li.cm-app span.cm-required {
+padding-left: 0.2em;
+font-size: 0.8em;
+color: #999;
+}
+.klaro .cookie-notice {
+background: #333;
+z-index: 999;
+position: fixed;
+width: 100%;
+bottom: 0;
+right: 0;
+}
+@media (min-width:990px) {.klaro .cookie-notice {
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);
+border-radius: 4px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+max-width: 300px;
+}
+
+}
+@media (max-width:989px) {.klaro .cookie-notice {
+border: none;
+border-radius: 0;
+}
+
+}
+.klaro .cookie-notice .cn-body {
+margin-bottom: 0;
+margin-right: 0;
+bottom: 0;
+padding: 1em;
+padding-top: 0;
+}
+.klaro .cookie-notice .cn-body p {
+margin-bottom: 0.5em;
+}
+.klaro .cookie-notice .cn-body p.cn-changes {
+text-decoration: underline;
+}
+.klaro .cookie-notice .cn-body .cm-learn-more {
+display: block;
+}
+.klaro .cookie-notice .cn-body p.cn-ok {
+padding-top: 0.5em;
+margin: 0;
+}
+.klaro .cookie-notice-hidden {
+display: none !important;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<meta name="generator" content="Elementor 4.4.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://www.bergsportbericht.de/wp-content/uploads/2018/11/Allgäuer-Zeitung_Logo-150x150.png.webp" sizes="32x32" />
+<link rel="icon" href="https://www.bergsportbericht.de/wp-content/uploads/2018/11/Allgäuer-Zeitung_Logo.png.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.bergsportbericht.de/wp-content/uploads/2018/11/Allgäuer-Zeitung_Logo.png.webp" />
+<meta name="msapplication-TileImage" content="https://www.bergsportbericht.de/wp-content/uploads/2018/11/Allgäuer-Zeitung_Logo.png" />
+<style id="wp-custom-css">
+/* custom css and js * ist installiert,* bitte das benutzen */
+</style>
+<!-- OceanWP CSS -->
+<style type="text/css">
+/* Colors */a:hover,a.light:hover,.theme-heading .text::before,.theme-heading .text::after,#top-bar-content >a:hover,#top-bar-social li.oceanwp-email a:hover,#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header.medium-header #medium-searchform button:hover,.oceanwp-mobile-menu-icon a:hover,.blog-entry.post .blog-entry-header .entry-title a:hover,.blog-entry.post .blog-entry-readmore a:hover,.blog-entry.thumbnail-entry .blog-entry-category a,ul.meta li a:hover,.dropcap,.single nav.post-navigation .nav-links .title,body .related-post-title a:hover,body #wp-calendar caption,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .custom-links-widget .oceanwp-custom-links li a:hover,body .custom-links-widget .oceanwp-custom-links li a:hover:before,body .posts-thumbnails-widget li a:hover,body .social-widget li.oceanwp-email a:hover,.comment-author .comment-meta .comment-reply-link,#respond #cancel-comment-reply-link:hover,#footer-widgets .footer-box a:hover,#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover,.sidr a:hover,.sidr-class-dropdown-toggle:hover,.sidr-class-menu-item-has-children.active >a,.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,input[type=checkbox]:checked:before{color:#a8c1c7}.single nav.post-navigation .nav-links .title .owp-icon use,.blog-entry.post .blog-entry-readmore a:hover .owp-icon use,body .contact-info-widget.default .owp-icon use,body .contact-info-widget.big-icons .owp-icon use{stroke:#a8c1c7}input[type="button"],input[type="reset"],input[type="submit"],button[type="submit"],.button,#site-navigation-wrap .dropdown-menu >li.btn >a >span,.thumbnail:hover i,.thumbnail:hover .link-post-svg-icon,.post-quote-content,.omw-modal .omw-close-modal,body .contact-info-widget.big-icons li:hover i,body .contact-info-widget.big-icons li:hover .owp-icon,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button,.woocommerce-cart .wp-element-button,.woocommerce-checkout .wp-element-button,.wp-block-button__link{background-color:#a8c1c7}.widget-title{border-color:#a8c1c7}blockquote{border-color:#a8c1c7}.wp-block-quote{border-color:#a8c1c7}#searchform-dropdown{border-color:#a8c1c7}.dropdown-menu .sub-menu{border-color:#a8c1c7}.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#a8c1c7}.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#a8c1c7}.social-widget li.oceanwp-email a:hover{border-color:#a8c1c7}#respond #cancel-comment-reply-link:hover{border-color:#a8c1c7}body .contact-info-widget.big-icons li:hover i{border-color:#a8c1c7}body .contact-info-widget.big-icons li:hover .owp-icon{border-color:#a8c1c7}#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#a8c1c7}input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button[type="submit"]:hover,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,button[type="submit"]:focus,.button:hover,.button:focus,#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,.post-quote-author,.omw-modal .omw-close-modal:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.woocommerce-cart .wp-element-button:hover,.woocommerce-checkout .wp-element-button:hover,.wp-block-button__link:hover{background-color:#50727c}a:hover{color:#a8c1c7}a:hover .owp-icon use{stroke:#a8c1c7}body .theme-button,body input[type="submit"],body button[type="submit"],body button,body .button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button,.woocommerce-cart .wp-element-button,.woocommerce-checkout .wp-element-button,.wp-block-button__link{background-color:#a8c1c7}body .theme-button:hover,body input[type="submit"]:hover,body button[type="submit"]:hover,body button:hover,body .button:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:active,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:active,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:active,.woocommerce-cart .wp-element-button:hover,.woocommerce-checkout .wp-element-button:hover,.wp-block-button__link:hover{background-color:#50727c}body .theme-button,body input[type="submit"],body button[type="submit"],body button,body .button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button,.woocommerce-cart .wp-element-button,.woocommerce-checkout .wp-element-button,.wp-block-button__link{border-color:#ffffff}body .theme-button:hover,body input[type="submit"]:hover,body button[type="submit"]:hover,body button:hover,body .button:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:active,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:active,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:active,.woocommerce-cart .wp-element-button:hover,.woocommerce-checkout .wp-element-button:hover,.wp-block-button__link:hover{border-color:#ffffff}.site-breadcrumbs a:hover,.background-image-page-header .site-breadcrumbs a:hover{color:#50727c}.site-breadcrumbs a:hover .owp-icon use,.background-image-page-header .site-breadcrumbs a:hover .owp-icon use{stroke:#50727c}body{color:#666666}h1,h2,h3,h4,h5,h6,.theme-heading,.widget-title,.oceanwp-widget-recent-posts-title,.comment-reply-title,.entry-title,.sidebar-box .widget-title{color:#50727c}h1{color:#50727c}h2{color:#50727c}h3{color:#50727c}h4{color:#50727c}/* OceanWP Style Settings CSS */.container{width:1920px}@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}.theme-button,input[type="submit"],button[type="submit"],button,.button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-style:solid}.theme-button,input[type="submit"],button[type="submit"],button,.button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-width:1px}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea,.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{border-style:solid}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-style:solid}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea{border-radius:3px}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-radius:3px}#main #content-wrap,.separate-layout #main #content-wrap{padding-top:0}#scroll-top{width:42px;height:42px;line-height:42px}#scroll-top{font-size:20px}#scroll-top .owp-icon{width:20px;height:20px}#scroll-top{background-color:#a8c1c7}#scroll-top:hover{background-color:#50727c}/* Header */@media only screen and (max-width:959px){body.default-breakpoint #site-logo #site-logo-inner{height:97px}}@media only screen and (max-width:959px){body.default-breakpoint .oceanwp-mobile-menu-icon a,body.default-breakpoint .oceanwp-mobile-menu-icon>button,.mobile-menu-close{line-height:97px}}#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:70px}#site-navigation-wrap .dropdown-menu >li >a,#site-navigation-wrap .dropdown-menu >li >button.site-search-toggle,#site-navigation-wrap .dropdown-menu >li >span.opl-logout-link,.oceanwp-mobile-menu-icon a,.oceanwp-mobile-menu-icon>button,.mobile-menu-close,.after-header-content-inner >a{line-height:70px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-header{border-color:#50727c}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:500px}@media (max-width:768px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:200px}}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:200px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:70px}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#2191fb}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#2191fb}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #2191fb,-10px 0 #2191fb}.effect-two #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-eight #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-eight #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#a8c1c7}.effect-six #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-six #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{border-color:#a8c1c7}.effect-ten #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span,.effect-ten #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span{-webkit-box-shadow:0 0 10px 4px #a8c1c7;-moz-box-shadow:0 0 10px 4px #a8c1c7;box-shadow:0 0 10px 4px #a8c1c7}#site-navigation-wrap .dropdown-menu >li >a,#site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle,#site-navigation-wrap .dropdown-menu >li >button.site-search-toggle{padding:0 50px}#site-navigation-wrap .dropdown-menu >li >a,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle,.oceanwp-mobile-menu-icon a,.oceanwp-mobile-menu-icon>button,#searchform-header-replace-close{color:#50727c}#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle .owp-icon use,.oceanwp-mobile-menu-icon a .owp-icon use,.oceanwp-mobile-menu-icon>button .owp-icon use,#searchform-header-replace-close .owp-icon use{stroke:#50727c}#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle:hover,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle:hover,.oceanwp-mobile-menu-icon a:hover,.oceanwp-mobile-menu-icon>button:hover,#searchform-header-replace-close:hover{color:#666666}#site-navigation-wrap .dropdown-menu >li >a:hover .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle:hover .owp-icon use,#site-navigation-wrap .dropdown-menu >li >button.site-search-toggle:hover .owp-icon use,.oceanwp-mobile-menu-icon>button:hover .owp-icon use,.oceanwp-mobile-menu-icon a:hover .owp-icon use,#searchform-header-replace-close:hover .owp-icon use{stroke:#666666}#site-navigation-wrap .dropdown-menu >.current-menu-item >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >button.dropdown-toggle,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >a:hover,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a:hover{color:#666666}.dropdown-menu .sub-menu{min-width:260px}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{background-color:#50727c}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{border-color:#000000}.dropdown-menu ul li.menu-item,.navigation >ul >li >ul.megamenu.sub-menu >li,.navigation .megamenu li ul.sub-menu{border-color:#ffffff}.dropdown-menu ul li a.menu-link{color:#ffffff}.dropdown-menu ul li a.menu-link .owp-icon use{stroke:#ffffff}.dropdown-menu ul li a.menu-link:hover{color:#50727c}.dropdown-menu ul li a.menu-link:hover .owp-icon use{stroke:#50727c}.dropdown-menu ul li a.menu-link:hover{background-color:#a8c1c7}.dropdown-menu ul >.current-menu-item >a.menu-link{color:#ffffff}@media (max-width:1080px){#top-bar-nav,#site-navigation-wrap,.oceanwp-social-menu,.after-header-content{display:none}.center-logo #site-logo{float:none;position:absolute;left:50%;padding:0;-webkit-transform:translateX(-50%);transform:translateX(-50%)}#site-header.center-header #site-logo,.oceanwp-mobile-menu-icon,#oceanwp-cart-sidebar-wrap{display:block}body.vertical-header-style #outer-wrap{margin:0 !important}#site-header.vertical-header{position:relative;width:100%;left:0 !important;right:0 !important}#site-header.vertical-header .has-template >#site-logo{display:block}#site-header.vertical-header #site-header-inner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;align-items:center;padding:0;max-width:90%}#site-header.vertical-header #site-header-inner >*:not(.oceanwp-mobile-menu-icon){display:none}#site-header.vertical-header #site-header-inner >*{padding:0 !important}#site-header.vertical-header #site-header-inner #site-logo{display:block;margin:0;width:50%;text-align:left}body.rtl #site-header.vertical-header #site-header-inner #site-logo{text-align:right}#site-header.vertical-header #site-header-inner .oceanwp-mobile-menu-icon{width:50%;text-align:right}body.rtl #site-header.vertical-header #site-header-inner .oceanwp-mobile-menu-icon{text-align:left}#site-header.vertical-header .vertical-toggle,body.vertical-header-style.vh-closed #site-header.vertical-header .vertical-toggle{display:none}#site-logo.has-responsive-logo .custom-logo-link{display:none}#site-logo.has-responsive-logo .responsive-logo-link{display:block}.is-sticky #site-logo.has-sticky-logo .responsive-logo-link{display:none}.is-sticky #site-logo.has-responsive-logo .sticky-logo-link{display:block}#top-bar.has-no-content #top-bar-social.top-bar-left,#top-bar.has-no-content #top-bar-social.top-bar-right{position:inherit;left:auto;right:auto;float:none;height:auto;line-height:1.5em;margin-top:0;text-align:center}#top-bar.has-no-content #top-bar-social li{float:none;display:inline-block}.owp-cart-overlay,#side-panel-wrap a.side-panel-btn{display:none !important}#site-logo.has-responsive-logo a.site-logo-text{display:none}}@media (max-width:1080px){#site-logo #site-logo-inner{height:97px}}@media (max-width:1080px){.oceanwp-mobile-menu-icon a,.oceanwp-mobile-menu-icon>button{line-height:97px}}#site-logo.has-responsive-logo .responsive-logo-link img{max-height:80px}.mobile-menu .hamburger-inner,.mobile-menu .hamburger-inner::before,.mobile-menu .hamburger-inner::after{background-color:#50727c}body .sidr a,body .sidr-class-dropdown-toggle,#mobile-dropdown ul li a,#mobile-dropdown ul li >button.menu-link.dropdown-toggle,#mobile-dropdown ul li a .dropdown-toggle,.menu-item-has-children>.oceanwp-sub-menu-toggle:not(.oceanwp-sub-menu-toggle-vertical-header),#mobile-fullscreen ul li a,#mobile-fullscreen ul li >button.menu-link.dropdown-toggle,#mobile-fullscreen .oceanwp-social-menu.simple-social ul li a{color:#ffffff}#mobile-fullscreen a.close .close-icon-inner,#mobile-fullscreen a.close .close-icon-inner::after,#mobile-fullscreen button.close .close-icon-inner,#mobile-fullscreen button.close .close-icon-inner::after{background-color:#ffffff}body .sidr a:hover,body .sidr-class-dropdown-toggle:hover,.menu-item-has-children>.oceanwp-sub-menu-toggle:not(.oceanwp-sub-menu-toggle-vertical-header):hover,body .sidr-class-dropdown-toggle .fa,body .sidr-class-menu-item-has-children.active >a,body .sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,#mobile-dropdown ul li a:hover,#mobile-dropdown ul li >button.menu-link.dropdown-toggle:hover,#mobile-dropdown ul li >button.menu-link.dropdown-toggle:focus-visible,#mobile-dropdown ul li a .dropdown-toggle:hover,#mobile-dropdown .menu-item-has-children.active >a,#mobile-dropdown .menu-item-has-children.active >button.menu-link.dropdown-toggle,#mobile-dropdown .menu-item-has-children.active >a >.dropdown-toggle,#mobile-dropdown .menu-item-has-children.open-sub >button.menu-link.dropdown-toggle,#mobile-fullscreen ul li a:hover,#mobile-fullscreen ul li >button.menu-link.dropdown-toggle:hover,#mobile-fullscreen ul li >button.menu-link.dropdown-toggle:focus-visible,#mobile-fullscreen .menu-item-has-children.active >button.menu-link.dropdown-toggle,#mobile-fullscreen .menu-item-has-children.open-sub >button.menu-link.dropdown-toggle,#mobile-fullscreen .oceanwp-social-menu.simple-social ul li a:hover{color:#547681}#mobile-fullscreen a.close:hover .close-icon-inner,#mobile-fullscreen a.close:hover .close-icon-inner::after,#mobile-fullscreen button.close:hover .close-icon-inner,#mobile-fullscreen button.close:hover .close-icon-inner::after{background-color:#547681}#mobile-fullscreen{background-color:#3b555d}/* Blog CSS */.single-post.content-max-width #wrap .thumbnail,.single-post.content-max-width #wrap .wp-block-buttons,.single-post.content-max-width #wrap .wp-block-verse,.single-post.content-max-width #wrap .entry-header,.single-post.content-max-width #wrap ul.meta,.single-post.content-max-width #wrap .entry-content p,.single-post.content-max-width #wrap .entry-content h1,.single-post.content-max-width #wrap .entry-content h2,.single-post.content-max-width #wrap .entry-content h3,.single-post.content-max-width #wrap .entry-content h4,.single-post.content-max-width #wrap .entry-content h5,.single-post.content-max-width #wrap .entry-content h6,.single-post.content-max-width #wrap .wp-block-image,.single-post.content-max-width #wrap .wp-block-gallery,.single-post.content-max-width #wrap .wp-block-video,.single-post.content-max-width #wrap .wp-block-quote,.single-post.content-max-width #wrap .wp-block-text-columns,.single-post.content-max-width #wrap .wp-block-code,.single-post.content-max-width #wrap .entry-content ul,.single-post.content-max-width #wrap .entry-content ol,.single-post.content-max-width #wrap .wp-block-cover-text,.single-post.content-max-width #wrap .wp-block-cover,.single-post.content-max-width #wrap .wp-block-columns,.single-post.content-max-width #wrap .post-tags,.single-post.content-max-width #wrap .comments-area,.single-post.content-max-width #wrap .wp-block-embed,#wrap .wp-block-separator.is-style-wide:not(.size-full){max-width:1920px}.single-post.content-max-width #wrap .wp-block-image.alignleft,.single-post.content-max-width #wrap .wp-block-image.alignright{max-width:960px}.single-post.content-max-width #wrap .wp-block-image.alignleft{margin-left:calc( 50% - 960px)}.single-post.content-max-width #wrap .wp-block-image.alignright{margin-right:calc( 50% - 960px)}.single-post.content-max-width #wrap .wp-block-embed,.single-post.content-max-width #wrap .wp-block-verse{margin-left:auto;margin-right:auto}.ocean-single-post-header ul.meta-item li a:hover{color:#333333}/* Sidebar */.widget-area .sidebar-box,.separate-layout .sidebar-box{margin-bottom:px}.widget-title{border-color:#547681}/* Footer Widgets */#footer-widgets .footer-box a:hover,#footer-widgets a:hover{color:#547681}/* Footer Copyright */#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover{color:#547681}/* Typography */body{font-family:Raleway;font-size:15px;line-height:1.8;font-weight:400}h1,h2,h3,h4,h5,h6,.theme-heading,.widget-title,.oceanwp-widget-recent-posts-title,.comment-reply-title,.entry-title,.sidebar-box .widget-title{font-family:Raleway;line-height:1.4}h1{font-family:Raleway;font-size:54px;line-height:1.4;font-weight:700}@media screen and (max-width:768px){h1{font-size:42px}}@media screen and (max-width:480px){h1{font-size:42px}}h2{font-family:Raleway;font-size:36px;line-height:1.4;font-weight:600}@media screen and (max-width:480px){h2{font-size:27px}}h3{font-family:Raleway;font-size:30px;line-height:1.4;font-weight:500}h4{font-family:Raleway;font-size:17px;line-height:1.4;font-weight:500}h5{font-size:14px;line-height:1.4}h6{font-size:15px;line-height:1.4}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-size:32px;line-height:1.4}.page-header .page-subheading,.page-header.background-image-page-header .page-subheading{font-size:15px;line-height:1.8}.site-breadcrumbs,.site-breadcrumbs a{font-size:13px;line-height:1.4}#top-bar-content,#top-bar-social-alt{font-size:12px;line-height:1.8}#site-logo a.site-logo-text{font-size:24px;line-height:1.8}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Raleway;font-size:18px;font-weight:600}.dropdown-menu ul li a.menu-link,#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-size:12px;line-height:1.2;letter-spacing:.6px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,button.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,#mobile-dropdown ul li >button.menu-link.dropdown-toggle,body #mobile-fullscreen ul li a,body #mobile-fullscreen ul li >button.menu-link.dropdown-toggle{font-family:Raleway;font-size:28px;line-height:2.2}@media screen and (max-width:480px){.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,button.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,#mobile-dropdown ul li >button.menu-link.dropdown-toggle,body #mobile-fullscreen ul li a,body #mobile-fullscreen ul li >button.menu-link.dropdown-toggle{font-size:18px}}@media screen and (max-width:480px){.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,button.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,#mobile-dropdown ul li >button.menu-link.dropdown-toggle,body #mobile-fullscreen ul li a,body #mobile-fullscreen ul li >button.menu-link.dropdown-toggle{line-height:1.5}}.blog-entry.post .blog-entry-header .entry-title a{font-size:24px;line-height:1.4}.ocean-single-post-header .single-post-title{font-size:34px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header ul.meta-item li,.ocean-single-post-header ul.meta-item li a{font-size:13px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header .post-author-name,.ocean-single-post-header .post-author-name a{font-size:14px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header .post-author-description{font-size:12px;line-height:1.4;letter-spacing:.6px}.single-post .entry-title{line-height:1.4;letter-spacing:.6px}.single-post ul.meta li,.single-post ul.meta li a{font-size:14px;line-height:1.4;letter-spacing:.6px}.sidebar-box .widget-title,.sidebar-box.widget_block .wp-block-heading{font-size:13px;line-height:1;letter-spacing:1px}#footer-widgets .footer-box .widget-title{font-family:Roboto;font-size:13px;line-height:1;letter-spacing:1px}#footer-bottom #copyright{font-size:12px;line-height:1}#footer-bottom #footer-bottom-menu{font-size:14px;line-height:1}.ocean-preloader--active .preloader-after-content{font-size:20px;line-height:1.8;letter-spacing:.6px}
+</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><meta name="generator" content="WP Rocket 3.24.1" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_preconnect_external_domains wpr_oci wpr_cache_webp wpr_minify_css wpr_cdn wpr_preload_links wpr_desktop wpr_insights" /></head>
+
+<body class="home wp-singular page-template page-template-elementor_header_footer page page-id-9 wp-custom-logo wp-embed-responsive wp-theme-oceanwp oceanwp-theme fullscreen-mobile content-full-width content-max-width page-header-disabled elementor-default elementor-template-full-width elementor-kit-2145 elementor-page elementor-page-9" >
+
+	
+	
+	<div  id="outer-wrap" class="site clr">
+
+		<a class="skip-link screen-reader-text" href="#main">Zum Inhalt springen</a>
+
+		
+		<div  id="wrap" class="clr">
+
+			
+			
+<header  id="site-header" class="minimal-header has-social effect-two clr" data-height="70" role="banner">
+
+	
+					
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr has-responsive-logo" >
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="https://www.bergsportbericht.de/" class="custom-logo-link" rel="home" aria-current="page"><img width="293" height="143" src="https://www.bergsportbericht.de/wp-content/uploads/2018/10/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png.webp" class="custom-logo" alt="Bergsportbericht" decoding="async" srcset="https://www.bergsportbericht.de/wp-content/uploads/2018/10/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png.webp 1x,https://www.bergsportbericht.de/wp-content/uploads/2018/10/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png.webp 2x" /></a><a href="https://www.bergsportbericht.de/" class="responsive-logo-link" rel="home"><img src="https://www.bergsportbericht.de/wp-content/uploads/2018/10/cropped-cropped-allgaeu-allgaeuer-ZeitungLogo.png.webp" class="responsive-logo" width="293" height="143" alt="" /></a>
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+			<div id="site-navigation-wrap" class="no-top-border clr">
+			
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr"  aria-label="Main website navigation" >
+
+				<ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu"><li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://www.bergsportbericht.de/so-funktionierts/" class="menu-link"><span class="text-wrap">So funktioniert’s</span></a></li><li id="menu-item-2421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2421"><a href="https://www.bergsportbericht.de/wintersportbericht-einbindung/" class="menu-link"><span class="text-wrap">Einbindung Bericht</span></a></li><li id="menu-item-1434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1434"><a href="https://www.bergsportbericht.de/reichweite/" class="menu-link"><span class="text-wrap">Reichweite</span></a></li><li id="menu-item-817" class="self-styled-button1 menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="https://www.bergsportbericht.de/bestellung/" class="menu-link"><span class="text-wrap">Bestellung</span></a></li></ul>
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+
+			
+		
+	
+				
+	
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="https://www.bergsportbericht.de/#mobile-menu-toggle" class="mobile-menu"  aria-controls="mobile-fullscreen" aria-expanded="false" aria-label="Mobilmenü">
+							<div class="hamburger hamburger--spin-r" aria-hidden="true">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+								<span class="oceanwp-text">Menü</span>
+				<span class="oceanwp-close-text">Schließen</span>
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+	
+
+			</div><!-- #site-header-inner -->
+
+			
+			
+			
+		
+</header><!-- #site-header -->
+
+
+			
+			<main  id="main" class="site-main clr" role="main">
+
+						<div data-elementor-type="wp-post" data-elementor-id="9" class="elementor elementor-9" data-elementor-post-type="page">
+						<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-ad206c3 elementor-section-height-min-height elementor-section-stretched elementor-section-content-middle elementor-hidden-tablet elementor-hidden-phone elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="ad206c3" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;mountains&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+							<div class="elementor-background-overlay"></div>
+						<div class="elementor-shape elementor-shape-bottom" aria-hidden="true" data-negative="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+	<path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"/>
+	<path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"/>
+	<path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"/>
+</svg>		</div>
+					<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-52ca2a1" data-id="52ca2a1" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5f0f8b7 elementor-widget elementor-widget-heading" data-id="5f0f8b7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">AKTUELL &amp; UMFASSEND</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8ec0870 elementor-widget elementor-widget-heading" data-id="8ec0870" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Alle Winterdaten —<br>für Print und Online</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2478b3e elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="2478b3e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs elementor-animation-grow" href="/bestellung/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Jetzt teilnehmen</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-fa77ecb" data-id="fa77ecb" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-4dc3861 elementor-section-full_width elementor-section-height-min-height elementor-section-stretched elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-height-default elementor-section-items-middle" data-id="4dc3861" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-29e22d6" data-id="29e22d6" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-bcfe12d elementor-widget elementor-widget-heading" data-id="bcfe12d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">AKTUELL &amp; UMFASSEND</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-6864a1f elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="6864a1f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Berg- und Wintersportbericht<br>im Allgäu <span style="font-weight: normal">(Print und Online)</span></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0c00f3b elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="0c00f3b" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="/bestellung/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Jetzt teilnehmen</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-2ad9dfa elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2ad9dfa" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-9fa5ef7" data-id="9fa5ef7" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-84e27d4 elementor-flip-box--effect-zoom-out elementor-widget elementor-widget-flip-box" data-id="84e27d4" data-element_type="widget" data-e-type="widget" data-widget_type="flip-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-flip-box" tabindex="0">
+			<div class="elementor-flip-box__layer elementor-flip-box__front">
+				<div class="elementor-flip-box__layer__overlay">
+					<div class="elementor-flip-box__layer__inner">
+													<div class="elementor-icon-wrapper elementor-view-default">
+								<div class="elementor-icon">
+									<i aria-hidden="true" class="fas fa-hiking"></i>								</div>
+							</div>
+						
+													<h3 class="elementor-flip-box__layer__title">
+								Bergsportbericht <br>Allgäu 							</h3>
+						
+											</div>
+				</div>
+			</div>
+			<div class="elementor-flip-box__layer elementor-flip-box__back">
+			<div class="elementor-flip-box__layer__overlay">
+				<div class="elementor-flip-box__layer__inner">
+											<h3 class="elementor-flip-box__layer__title">
+							<br />Bergsportbericht						</h3>
+					
+											<div class="elementor-flip-box__layer__description">
+							 
+						</div>
+					
+											<a class="elementor-flip-box__button elementor-button elementor-size-md" href="/bergsportbericht/">
+							Mehr erfahren						</a>
+								</div>
+		</div>
+		</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-38ea644" data-id="38ea644" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1030bd5 elementor-flip-box--effect-zoom-out elementor-widget elementor-widget-flip-box" data-id="1030bd5" data-element_type="widget" data-e-type="widget" data-widget_type="flip-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-flip-box" tabindex="0">
+			<div class="elementor-flip-box__layer elementor-flip-box__front">
+				<div class="elementor-flip-box__layer__overlay">
+					<div class="elementor-flip-box__layer__inner">
+													<div class="elementor-icon-wrapper elementor-view-default">
+								<div class="elementor-icon">
+									<i aria-hidden="true" class="fas fa-skiing"></i>								</div>
+							</div>
+						
+													<h3 class="elementor-flip-box__layer__title">
+								Wintersportbericht<br>Allgäu 							</h3>
+						
+											</div>
+				</div>
+			</div>
+			<div class="elementor-flip-box__layer elementor-flip-box__back">
+			<div class="elementor-flip-box__layer__overlay">
+				<div class="elementor-flip-box__layer__inner">
+											<h3 class="elementor-flip-box__layer__title">
+							Wintersportbericht						</h3>
+					
+					
+											<a class="elementor-flip-box__button elementor-button elementor-size-md" href="/allgaeu/">
+							Mehr erfahren						</a>
+								</div>
+		</div>
+		</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-1b7079a elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1b7079a" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e79a479" data-id="e79a479" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-74bfd9b elementor-widget elementor-widget-spacer" data-id="74bfd9b" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1860143 elementor-widget elementor-widget-heading" data-id="1860143" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">Der offizielle Berg- und Wintersportbericht im Allgäu</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ab7e9a1 elementor-widget elementor-widget-text-editor" data-id="ab7e9a1" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h4><b>Für Bergbahnen, Orte und Plattformen</b></h4>								</div>
+				</div>
+				<div class="elementor-element elementor-element-f000ab0 elementor-widget elementor-widget-text-editor" data-id="f000ab0" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Darstellung auf der eigenen Webseite, Darstellung auf allgäuweiten Plattformen und <br />Veröffentlichung in der Zeitung sowie angeschlossenen Partnerplattformen</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-eda3a5f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="eda3a5f" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-396a25c" data-id="396a25c" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e095ba8 elementor-flip-box--effect-zoom-out elementor-widget elementor-widget-flip-box" data-id="e095ba8" data-element_type="widget" data-e-type="widget" data-widget_type="flip-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-flip-box" tabindex="0">
+			<div class="elementor-flip-box__layer elementor-flip-box__front">
+				<div class="elementor-flip-box__layer__overlay">
+					<div class="elementor-flip-box__layer__inner">
+													<div class="elementor-icon-wrapper elementor-view-default">
+								<div class="elementor-icon">
+									<i aria-hidden="true" class="fas fa-edit"></i>								</div>
+							</div>
+						
+													<h3 class="elementor-flip-box__layer__title">
+								Ihre <br />Bestellung 							</h3>
+						
+											</div>
+				</div>
+			</div>
+			<div class="elementor-flip-box__layer elementor-flip-box__back">
+			<div class="elementor-flip-box__layer__overlay">
+				<div class="elementor-flip-box__layer__inner">
+											<h3 class="elementor-flip-box__layer__title">
+							Jetzt dabei sein						</h3>
+					
+					
+											<a class="elementor-flip-box__button elementor-button elementor-size-md" href="/bestellung/">
+							Bestellen						</a>
+								</div>
+		</div>
+		</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8712c2d" data-id="8712c2d" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c0c1d71 elementor-flip-box--effect-zoom-out elementor-widget elementor-widget-flip-box" data-id="c0c1d71" data-element_type="widget" data-e-type="widget" data-widget_type="flip-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-flip-box" tabindex="0">
+			<div class="elementor-flip-box__layer elementor-flip-box__front">
+				<div class="elementor-flip-box__layer__overlay">
+					<div class="elementor-flip-box__layer__inner">
+													<div class="elementor-icon-wrapper elementor-view-default">
+								<div class="elementor-icon">
+									<i aria-hidden="true" class="fab fa-connectdevelop"></i>								</div>
+							</div>
+						
+													<h3 class="elementor-flip-box__layer__title">
+								Wie  <br />funktioniert's?							</h3>
+						
+											</div>
+				</div>
+			</div>
+			<div class="elementor-flip-box__layer elementor-flip-box__back">
+			<div class="elementor-flip-box__layer__overlay">
+				<div class="elementor-flip-box__layer__inner">
+											<h3 class="elementor-flip-box__layer__title">
+							<br />Vorgehensweise						</h3>
+					
+											<div class="elementor-flip-box__layer__description">
+							 
+						</div>
+					
+											<a class="elementor-flip-box__button elementor-button elementor-size-md" href="/so-funktionierts/">
+							Mehr erfahren						</a>
+								</div>
+		</div>
+		</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e5bb39b" data-id="e5bb39b" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cad9312 elementor-flip-box--effect-zoom-out elementor-widget elementor-widget-flip-box" data-id="cad9312" data-element_type="widget" data-e-type="widget" data-widget_type="flip-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-flip-box" tabindex="0">
+			<div class="elementor-flip-box__layer elementor-flip-box__front">
+				<div class="elementor-flip-box__layer__overlay">
+					<div class="elementor-flip-box__layer__inner">
+													<div class="elementor-icon-wrapper elementor-view-default">
+								<div class="elementor-icon">
+									<i aria-hidden="true" class="far fa-dot-circle"></i>								</div>
+							</div>
+						
+													<h3 class="elementor-flip-box__layer__title">
+								Die  <br />Reichweite							</h3>
+						
+											</div>
+				</div>
+			</div>
+			<div class="elementor-flip-box__layer elementor-flip-box__back">
+			<div class="elementor-flip-box__layer__overlay">
+				<div class="elementor-flip-box__layer__inner">
+											<h3 class="elementor-flip-box__layer__title">
+							Im Internet <br />In der Zeitung 						</h3>
+					
+					
+											<a class="elementor-flip-box__button elementor-button elementor-size-md" href="/reichweite/">
+							Mehr erfahren						</a>
+								</div>
+		</div>
+		</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-a0a2ced elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a0a2ced" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7d97bf1" data-id="7d97bf1" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ab6e6c8 elementor-widget elementor-widget-spacer" data-id="ab6e6c8" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-715a0f8 elementor-widget elementor-widget-heading" data-id="715a0f8" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Der Bergsportbericht in Zahlen</h2>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-4ab3204 elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ab3204" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;shape_divider_bottom&quot;:&quot;mountains&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+					<div class="elementor-shape elementor-shape-bottom" aria-hidden="true" data-negative="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+	<path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"/>
+	<path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"/>
+	<path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"/>
+</svg>		</div>
+					<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e5c3ab5" data-id="e5c3ab5" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-58ffad7 elementor-widget elementor-widget-heading" data-id="58ffad7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">ca.</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-7fbd4f9 elementor-widget elementor-widget-counter" data-id="7fbd4f9" data-element_type="widget" data-e-type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+			<div class="elementor-counter-title">Zeitungsauflagen</div>			<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix"></span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="1800000" data-from-value="1" data-delimiter=".">1</span>
+				<span class="elementor-counter-number-suffix"></span>
+			</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8f030b3" data-id="8f030b3" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7a65b2e elementor-widget elementor-widget-heading" data-id="7a65b2e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">über</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-dc90a21 elementor-widget elementor-widget-counter" data-id="dc90a21" data-element_type="widget" data-e-type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+			<div class="elementor-counter-title">Plattformen</div>			<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix">1</span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="9" data-from-value="1" data-delimiter=".">1</span>
+				<span class="elementor-counter-number-suffix"></span>
+			</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a10d5d4" data-id="a10d5d4" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c08d730 elementor-widget elementor-widget-heading" data-id="c08d730" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">über</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-cbe7bfb elementor-widget elementor-widget-counter" data-id="cbe7bfb" data-element_type="widget" data-e-type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+			<div class="elementor-counter-title">Bergsportbericht Aktivitäten</div>			<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix"></span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="1000" data-from-value="1" data-delimiter=".">1</span>
+				<span class="elementor-counter-number-suffix"></span>
+			</div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-1036b66 elementor-section-content-middle elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1036b66" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ea2a897" data-id="ea2a897" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7f87d36 elementor-widget elementor-widget-image" data-id="7f87d36" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="547" height="546" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20547%20546'%3E%3C/svg%3E" class="attachment-large size-large wp-image-1417" alt="" data-lazy-srcset="https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig.png.webp 547w,https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig-150x150.png.webp 150w,https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig-300x300.png.webp 300w" data-lazy-sizes="(max-width: 547px) 100vw, 547px" data-lazy-src="https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig.png.webp" /><noscript><img fetchpriority="high" decoding="async" width="547" height="546" src="https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig.png.webp" class="attachment-large size-large wp-image-1417" alt="" srcset="https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig.png.webp 547w,https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig-150x150.png.webp 150w,https://www.bergsportbericht.de/wp-content/uploads/2018/10/Karte-richtig-300x300.png.webp 300w" sizes="(max-width: 547px) 100vw, 547px" /></noscript>															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ba27e99" data-id="ba27e99" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6259347 elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="6259347" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><span style="font-family: Roboto;font-size: 42px;font-style: normal;font-weight: 800">PRINT</span><br>Verbreitungsgebiet</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-f419184 elementor-hidden-desktop elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="f419184" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><span style="font-family: Roboto;font-size: 42px;font-style: normal;font-weight: 800">PRINT</span><br>Verbreitungs-gebiet</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e0a7c04 elementor-widget elementor-widget-text-editor" data-id="e0a7c04" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Der Wintersportbericht in unseren Zeitungen:</p><ul><li>Tageszeitung Oberallgäu</li><li>Extra Oberallgäu</li><li>Tageszeitung Gesamtausgabe Allgäu</li><li>Extra Gesamtausgabe Allgäu</li><li>Hallo Allgäu Gesamtausgabe</li></ul>								</div>
+				</div>
+				<div class="elementor-element elementor-element-a88533f elementor-widget elementor-widget-button" data-id="a88533f" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-md elementor-animation-grow" href="/reichweite/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Zur Reichweite</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-89eed84 elementor-hidden-phone elementor-widget elementor-widget-spacer" data-id="89eed84" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-0167c2b elementor-section-content-middle elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0167c2b" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ca69259" data-id="ca69259" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-577098e elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="577098e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><span style="font-family: Roboto;font-size: 42px;font-style: normal;font-weight: 800">ONLINE</span><br>Verbreitungsgebiet</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2adc357 elementor-hidden-desktop elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="2adc357" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><span style="font-family: Roboto;font-size: 42px;font-style: normal;font-weight: 800">ONLINE</span><br>Verbreitungs-gebiet</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-b185764 elementor-widget elementor-widget-text-editor" data-id="b185764" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Darstellung des Winterportberichts auf zahlreichen Destinationsseiten und Portalen.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-764eb5b elementor-widget elementor-widget-button" data-id="764eb5b" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-md elementor-animation-grow" href="/reichweite/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Zur Reichweite</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-fa7f3b7 elementor-hidden-phone elementor-widget elementor-widget-spacer" data-id="fa7f3b7" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ed0346d" data-id="ed0346d" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap">
+					<div class="elementor-background-overlay"></div>
+							</div>
+		</div>
+					</div>
+		</section>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-d9aae11 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9aae11" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;gradient&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4c6473d" data-id="4c6473d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-9ebe89c elementor-widget elementor-widget-heading" data-id="9ebe89c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">Wir sind für Sie da!</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-d6340d0 elementor-hidden-phone elementor-widget elementor-widget-heading" data-id="d6340d0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">support@oya-media.de</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-d5e6a11 elementor-hidden-phone elementor-widget elementor-widget-text-editor" data-id="d5e6a11" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Wir sind Montag bis Freitag von 08:00 — 17:00 Uhr für Sie erreichbar</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+	</main><!-- #main -->
+
+	
+	
+			<footer data-elementor-type="footer" data-elementor-id="733" class="elementor elementor-733 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-2f42978 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2f42978" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-54ad037" data-id="54ad037" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-640feb3 elementor-widget elementor-widget-text-editor" data-id="640feb3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>OYA media GmbH<br /><span style="font-size: 18px;">Salzstraße 1<br /></span><span style="font-size: 18px;">87509 Immenstadt i. Allgäu</span></p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-0c38e49" data-id="0c38e49" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4ee9a4c elementor-widget elementor-widget-heading" data-id="4ee9a4c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">Service</h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0358c17 elementor-align-start elementor-mobile-align-start elementor-tablet-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0358c17" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="/agb/">
+
+											<span class="elementor-icon-list-text">AGB</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/impressum/">
+
+											<span class="elementor-icon-list-text">Impressum</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="/datenschutz/">
+
+											<span class="elementor-icon-list-text">Datenschutz</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d2f0bfc" data-id="d2f0bfc" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-88ed60c elementor-widget elementor-widget-heading" data-id="88ed60c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">Mediengruppe Allgäuer Zeitung</h3>				</div>
+				</div>
+				<section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-inner-section elementor-element elementor-element-3da76b2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3da76b2" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-narrow">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-f9fca4c" data-id="f9fca4c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c0c5c3a elementor-align-left elementor-widget elementor-widget-button" data-id="c0c5c3a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.allgaeuer-zeitung.de/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Allgäuer Zeitung</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e1d41e3" data-id="e1d41e3" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b92fda8 elementor-align-left elementor-widget elementor-widget-button" data-id="b92fda8" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.oya-media.de/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">OYA media</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-dd53bed" data-id="dd53bed" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+		
+	
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a aria-label="Zum Seitenanfang scrollen" href="#" id="scroll-top" class="scroll-top-right"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
+
+
+
+
+<div id="mobile-fullscreen" class="clr" >
+
+	<div  id="mobile-fullscreen-inner" class="clr">
+
+		<a href="https://www.bergsportbericht.de/#mobile-fullscreen-menu" class="close" aria-label="Mobile-Menü schließen" aria-controls="mobile-fullscreen" >
+			<div class="close-icon-wrap" aria-hidden="true">
+				<div class="close-icon-inner"></div>
+			</div>
+		</a>
+
+		<nav class="clr has-social" aria-label="Mobile navigation">
+
+			<ul id="menu-main-menu-1" class="fs-dropdown-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://www.bergsportbericht.de/so-funktionierts/">So funktioniert’s</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2421"><a href="https://www.bergsportbericht.de/wintersportbericht-einbindung/">Einbindung Bericht</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1434"><a href="https://www.bergsportbericht.de/reichweite/">Reichweite</a></li>
+<li class="self-styled-button1 menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="https://www.bergsportbericht.de/bestellung/">Bestellung</a></li>
+</ul>
+		</nav>
+
+	</div>
+
+</div>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/oceanwp/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script type="text/rocketlazyloadscript">
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+			<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/detail/|/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.bergsportbericht.de","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="imagesloaded-js" src="https://www.bergsportbericht.de/wp-includes/js/imagesloaded.min.js?ver=5.0.0" data-rocket-defer defer></script>
+<script id="oceanwp-main-js-extra">
+var oceanwpLocalize = {"nonce":"edfa2eea99","isRTL":"","menuSearchStyle":"disabled","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","mobileDropdownTarget":"link","semanticMobileHeader":"","semanticDesktopHeader":"","customScrollOffset":"0","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","loadMoreLoadingText":"Wird geladen\u00a0\u2026","ajax_url":"https://www.bergsportbericht.de/wp-admin/admin-ajax.php","oe_mc_wpnonce":"b9fa1b0133"};
+//# sourceURL=oceanwp-main-js-extra
+</script>
+<script id="oceanwp-main-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/theme.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-full-screen-mobile-menu-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/full-screen-mobile-menu.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="ow-magnific-popup-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/vendors/magnific-popup.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-lightbox-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/ow-lightbox.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="ow-flickity-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-slider-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/ow-slider.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-scroll-effect-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/scroll-effect.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-scroll-top-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/scroll-top.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="oceanwp-select-js" src="https://www.bergsportbericht.de/wp-content/themes/oceanwp/assets/js/select.min.js?ver=4.2.8" data-rocket-defer defer></script>
+<script id="elementor-webpack-runtime-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.4.1" data-rocket-defer defer></script>
+<script id="elementor-frontend-modules-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.4.1" data-rocket-defer defer></script>
+<script id="jquery-ui-core-js-before">window.addEventListener('DOMContentLoaded', function() {
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+});</script>
+<script id="jquery-ui-core-js" src="https://www.bergsportbericht.de/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2" data-rocket-defer defer></script>
+<script id="elementor-frontend-js-extra">
+var EAELImageMaskingConfig = {"svg_dir_url":"https://www.bergsportbericht.de/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/img/image-masking/svg-shapes/"};
+//# sourceURL=elementor-frontend-js-extra
+</script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Auf Facebook teilen","shareOnX":"Auf X teilen","pinIt":"Anheften","download":"Download","downloadImage":"Bild downloaden","fullscreen":"Vollbild","zoom":"Zoom","share":"Teilen","playVideo":"Video abspielen","previous":"Zur\u00fcck","next":"Weiter","close":"Schlie\u00dfen","a11yCarouselPrevSlideMessage":"Vorheriger Slide","a11yCarouselNextSlideMessage":"N\u00e4chster Slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobil Hochformat","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobil Querformat","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Hochformat","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Querformat","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Breitbild","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},
+"hasCustomBreakpoints":false},"version":"4.4.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"e_mcp_revision_snapshots":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/www.bergsportbericht.de\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.bergsportbericht.de\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.bergsportbericht.de\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"62fa0f0851","atomicFormsSendForm":"59645135c1"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":9,"title":"Startseite%20-%20Bergsportbericht","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.4.1" data-rocket-defer defer></script>
+<script id="jquery-numerator-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1" data-rocket-defer defer></script>
+<script id="eael-general-js-extra">
+var localize = {"ajaxurl":"https://www.bergsportbericht.de/wp-admin/admin-ajax.php","nonce":"6c3df69229","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https://www.bergsportbericht.de/","cart_redirectition":"","cart_page_url":"","el_breakpoints":{"mobile":{"label":"Mobil Hochformat","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobil Querformat","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Hochformat","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Querformat","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Breitbild","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"ParticleThemesData":{"default":"{\"particles\":{\"number\":{\"value\":160,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":true,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"repulse\"},\"onclick\":{\"enable\":true,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","nasa":"{\"particles\":{\"number\":{\"value\":250,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":1,\"random\":true,\"anim\":{\"enable\":true,\"speed\":1,\"opacity_min\":0,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":4,\"size_min\":0.3,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":1,\"direction\":\"none\",\"random\":true,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":600}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":250,\"size\":0,\"duration\":2,\"opacity\":0,\"speed\":3},\"repulse\":{\"distance\":400,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","bubble":"{\"particles\":{\"number\":{\"value\":15,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#1b1e34\"},\"shape\":{\"type\":\"polygon\",\"stroke\":{\"width\":0,\"color\":\"#000\"},\"polygon\":{\"nb_sides\":6},\"image\":{\"src\":\"img/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":50,\"random\":false,\"anim\":{\"enable\":true,\"speed\":10,\"size_min\":40,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":200,\"color\":\"#ffffff\",\"opacity\":1,\"width\":2},\"move\":{\"enable\":true,\"speed\":8,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":false,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","snow":"{\"particles\":{\"number\":{\"value\":450,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#fff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":500,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":2},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"bottom\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":0.5}},\"bubble\":{\"distance\":400,\"size\":4,\"duration\":0.3,\"opacity\":1,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","nyan_cat":"{\"particles\":{\"number\":{\"value\":150,\"density\":{\"enable\":false,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"star\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"http://wiki.lexisnexis.com/academic/images/f/fb/Itunes_podcast_icon_300.jpg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":4,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":14,\"direction\":\"left\",\"random\":false,\"straight\":true,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":200,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}"},"eael_login_nonce":"2a6c780e0e","eael_register_nonce":"127c7c7397","eael_lostpassword_nonce":"28ab3f0513","eael_resetpassword_nonce":"b9f7288c20"};
+//# sourceURL=eael-general-js-extra
+</script>
+<script id="eael-general-js" src="https://www.bergsportbericht.de/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.8.9" data-rocket-defer defer></script>
+<script id="wp-hooks-js" src="https://www.bergsportbericht.de/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.bergsportbericht.de/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.bergsportbericht.de\/wp-admin\/admin-ajax.php","nonce":"a801440c04","urls":{"assets":"https:\/\/www.bergsportbericht.de\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.bergsportbericht.de\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},
+"facebook_sdk":{"lang":"de_DE","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.bergsportbericht.de\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script id="elementor-pro-frontend-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.3.2" data-rocket-defer defer></script>
+<script id="pro-elements-handlers-js" src="https://www.bergsportbericht.de/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.3.2" data-rocket-defer defer></script>
+<script>
+    
+  //array für tag-manager falls nötig initialisieren
+if (!window.dataLayer) {
+	window.dataLayer = [];
+}
+var klaroConfig = {
+	elementID: 'klaro',
+	storageMethod: 'cookie',
+	cookieName: 'klaro',
+	cookieExpiresAfterDays: 365,
+	// You can change to cookie domain for the consent manager itself.
+	// Use this if you want to get consent once for multiple matching domains.
+	// If undefined, Klaro will use the current domain.
+	//cookieDomain: '.domain.tld',
+	privacyPolicy: '/datenschutz',
+	// Defines the default state for applications (true=enabled by default).
+	default: false,
+	mustConsent: 0,
+	htmlTexts: true,
+	logo: '/wp-content/uploads/2021/03/allgaeu-eberlmedien-logo.jpg',
+	acceptAll: true,
+	hideDeclineAll: true,
+	translations: {
+		// If you erase the "consentModal" translations, Klaro will use the
+		// bundled translations.
+		de: {
+			// Put a link to your privacy policy here (relative or absolute) if you need multiple languages. Overrides global privacyPolicy link.
+			privacyPolicyUrl: '/datenschutz/',
+			poweredBy: 'Powered by Eberl Online & Klaro',
+			close: 'Schließen',
+			acceptSelected: 'Speichern',
+			decline: 'Notwendige Cookies akzeptieren',
+			ok: 'Alle akzeptieren',
+			irgendwas: 'asedf123',
+			consentNotice: {
+				learnMore: 'Einstellungen anpassen',
+				description: 'Wir verwenden Cookies und ähnliche Technologien zur statistischen Nutzungsanalyse. Indem Sie "Alle akzeptieren" klicken, stimmen Sie diesen (jederzeit widerruflich) zu.'
+			},
+			consentModal: {
+				title: 'Informationen, die wir speichern',
+				description: 'Hier können Sie einsehen und anpassen, welche Information wir über Sie speichern.',
+				// This privacy policy seems not in use. But it still exists in Resources/Public/JavaScript/Klaro/klaro.js, so keep it in this Partial just in case.
+				privacyPolicy: {
+					name: 'Datenschutzerklärung',
+					text: 'Weitere Details finden Sie in unserer {privacyPolicy}.'
+				},
+			},
+			// the actual privacyPolicy in the consentModal
+			privacyPolicy: {
+				name: 'Datenschutzerklärung',
+				text: 'Weitere Details finden Sie in unserer {privacyPolicy}.'
+			},
+			klaro: {
+				description: 'Dieses Cookie speichert Ihre Entscheidungen in diesem Fenster.',
+			},
+			browserupdate: {
+				description: 'Hinweis bei Verwendung eines veralteten Browsers.',
+			},
+            googleMaps: {
+				description: 'Darstellung von GoogleMaps Karten.',
+			},
+            shop: {
+				description: 'Technisch notwendige Cookies für den Betrieb des Online-Shops.',
+			},
+            fontawesome: {
+				description: 'Schriftarten (Web-Fonts) von Font Awesome.',
+			},
+            googleAdwords: {
+				description: 'Google Adsense Cookies.',
+			},
+			adsense: {
+				description: 'Anzeigen von Werbeanzeigen (Beispiel).',
+			},
+			matomo: {
+				description: 'Sammeln von Besucherstatistiken.',
+			},
+			facebookPixel: {
+				description: 'Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird.',
+			},
+			googleAnalytics: {
+				description: 'Dieses Cookie hilft uns bei der Verbesserung und Analyse unserer Website.',
+			},
+			googleFonts: {
+				description: 'Web-Schriftarten von Google gehostet.',
+			},
+			googleReCaptcha: {
+				description: 'Spamschutz für Formulare.',
+			},
+			twitter: {
+				description: 'Auf dieser Website werden Services des Kurznachrichtendienstes Twitter eingebunden. Die Cookies sind zur korrekten Funktion notwendig.',
+			},
+			youtubevimeo: {
+				description: 'YouTube Videos abspielen.',
+			},
+			purposes: {
+				analytics: 'Statistik',
+				security: 'Notwendige Dienste',
+				marketing: 'Marketing',
+				advertising: 'Anzeigen von Werbung',
+				styling: 'Darstellung',
+				socialmedia: 'Social Media',
+				externalMedia: 'Funktionale Cookies',
+			},
+			acceptSelected: 'Auswahl speichern',
+			customSettings: {
+				UsInfoText: 'Hinweis zur Verarbeitung Ihrer auf dieser Webseite erhobenen Daten in den USA: Wir weisen Sie darauf hin, dass bezogen auf einzelne Cookies und Dienstleister eine Verarbeitung Ihrer Daten in den USA erfolgt. Die USA werden vom Europäischen Gerichtshof als ein Land mit einem nach EU-Standards unzureichendem Datenschutzniveau eingeschätzt. Es besteht insbesondere das Risiko, dass Ihre Daten durch US-Behörden, zu Kontroll- und zu Überwachungszwecken, möglicherweise auch ohne Rechtsbehelfsmöglichkeiten, verarbeitet werden können.',
+				privacyPolicy: 'Datenschutz',
+				imprintLink: '/impressum',
+				imprint: 'Impressum',
+				consentHeadline: 'Wir brauchen Ihre Zustimmung',
+			}
+		},
+		en: {
+			consentModal: {
+				title: 'Information that we collect',
+				description: 'Here you can see and customize the information that we collect about you.',
+			},
+			adsense: {
+				description: 'Displaying of advertisements (just an example).',
+			},
+			matomo: {
+				description: 'Collecting of visitor statistics.',
+			},
+			facebookPixel: {
+				description: 'Cookie from Facebook, which is used for website analysis, ad targeting and ad measurement.',
+			},
+			googleAnalytics: {
+				description: 'Collecting of visitor statistics.',
+			},
+			googleFonts: {
+				description: 'Web fonts hosted by Google.',
+			},
+			twitter: {
+				description: 'Services of the short news service Twitter are integrated on this website. The cookies are necessary for correct functionality.',
+			},
+			youtubevimeo: {
+				description: 'Play YouTube or Vimeo Videos.',
+			},
+			purposes: {
+				analytics: 'Analytics',
+				security: 'Security',
+				marketing: 'Marketing',
+				advertising: 'Advertising',
+				styling: 'Styling',
+				socialmedia: 'Social Media',
+				externalMedia: 'External Media',
+			},
+			acceptSelected: 'Accept selected',
+			customSettings: {
+				UsInfoText: 'Hinweis zur Verarbeitung Ihrer auf dieser Webseite erhobenen Daten in den USA: Wir weisen Sie darauf hin, dass bezogen auf einzelne Cookies und Dienstleister eine Verarbeitung Ihrer Daten in den USA erfolgt. Die USA werden vom Europäischen Gerichtshof als ein Land mit einem nach EU-Standards unzureichendem Datenschutzniveau eingeschätzt. Es besteht insbesondere das Risiko, dass Ihre Daten durch US-Behörden, zu Kontroll- und zu Überwachungszwecken, möglicherweise auch ohne Rechtsbehelfsmöglichkeiten, verarbeitet werden können.',
+				privacyPolicy: 'Datenschutz',
+				imprintLink: '/impressum',
+				imprint: 'Impressum',
+				consentHeadline: 'Wir brauchen Ihre Zustimmung',
+			}
+		},
+	},
+
+	// This is a list of third-party apps that Klaro will manage for you.
+	services: [],
+};
+/*
+klaroConfig.services.push({
+	name: 'klaro',
+	default: false,
+	required: true,
+	title: 'Klaro',
+	purposes: ['security'],
+}, );
+  
+klaroConfig.services.push({
+	name: 'browserupdate',
+	default: false,
+	required: true,
+	title: 'Browser Update',
+	purposes: ['security'],
+}, );
+*/
+	klaroConfig.services.push({
+	name: 'googleReCaptcha',
+	default: false,
+	required: true,
+	title: 'Google reCAPTCHA',
+	purposes: ['security'],
+}, );	
+var gaPath = "/";
+var gaDomain = "www.bergsportbericht.de";
+klaroConfig.services.push({
+	name: 'googleAnalytics',
+	default: false,
+	title: 'Google Analytics',
+	purposes: ['marketing'],
+	cookies: [
+		[/^_g(a|id|at_.*|ac_.*)$/, gaPath, gaDomain],
+	],
+	callback: function(consent, app) {
+		var consentcheck = app.name + consent;
+		if (consentcheck == "googleAnalyticsfalse") {
+			window.dataLayer.push({
+				'event': 'consent-analyticsOff'
+			});
+		} else {
+			window.dataLayer.push({
+				'event': 'consent-analyticsOn'
+			});
+		}
+	},
+}, );
+
+	
+</script>
+
+<script data-minify="1" defer data-config="klaroConfig" type="application/javascript" src="https://www.bergsportbericht.de/wp-content/cache/min/1/klaro/v0.7.9/klaro.js?ver=1782795669"></script>
+
+<script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+  jQuery(document).ready(function($) {
+	try {
+
+		/**
+		 * Adds an 'Accept All' Button to the Klaro Modal
+		 */
+
+		function addEnableAllButton(language) {
+
+			let elementID = klaroConfig.elementID;
+			if (typeof elementID === 'undefined') {
+				// use default
+				elementID = 'klaro';
+			}
+
+			// get Elements
+			const el = document.getElementById(elementID);
+			const footer = el.getElementsByClassName('cm-footer-buttons')[0];
+
+			const saveBtn = el.querySelector('button.cm-btn-success') || el.querySelector('button.cm-btn-danger');
+			const acceptAllBtn = document.createElement('button');
+			// degrade saveBtn
+			saveBtn.classList.remove('cm-btn-success');
+			saveBtn.classList.add('cm-btn-danger');
+			// model accept btn
+			acceptAllBtn.classList.add('cm-btn'); // IE does not support 2 values
+			acceptAllBtn.classList.add('cm-btn-success');
+			acceptAllBtn.innerText = klaroConfig['translations'][language]['ok'];
+			acceptAllBtn.addEventListener('click', function() {
+				klaroEnableAll(el);
+				saveBtn.click();
+			});
+			// place accept btn
+			$(footer).prepend(acceptAllBtn); // and IE does not know Node.prepend()
+
+			$('#klaro .cm-bg').off('click');
+			$('#klaro .cm-bg').on('click', function() {
+				$('#klaro p a.cm-learn-more').on('click', function() {
+					addEnableAllButton();
+				});
+			});
+		}
+
+		/**
+		 * get language from html lang attribute and return language variable
+		 */
+
+		function getLanguage() {
+			switch ($('html').attr('lang')) {
+				case 'de-DE':
+					return 'de';
+				default:
+					return 'de';
+			}
+		}
+
+		/**
+		 Enables all Klaro Cookie consent choices
+		 */
+		function klaroEnableAll(klaroEl) {
+			// all the check sliders (input checkboxes)
+			const checks = klaroEl.getElementsByClassName('cm-list-input');
+			// last one is toggle all, so we can ignore it
+			for (let i = 0; i < checks.length - 1; i++) {
+				if (checks[i].checked !== true) {
+					checks[i].click();
+				}
+			}
+		}
+
+
+
+
+		function changeKlaroHTML(language) {
+			//Change klaro layout
+			var klaroChangeLink = $('#klaro .cn-learn-more');
+			var klaroAcceptAllLink = $('#klaro .cn-ok .cm-btn-success');
+			klaroChangeLink.detach();
+			klaroChangeLink.addClass('cm-btn cm-btn-danger no-hover');
+			klaroChangeLink.html(klaroConfig['translations'][language]['consentNotice']['learnMore']);
+			klaroAcceptAllLink.detach();
+			$('#klaro .cn-ok .cn-buttons').append(klaroAcceptAllLink);
+			$('#klaro .cn-ok .cn-buttons').append(klaroChangeLink);
+
+			if ($('#klaro .cn-headline').length < 1) {
+				$('#klaro .cn-body').prepend('<div class="klaro-header">' +
+					'<span class="cn-headline">' + klaroConfig['translations'][language]['customSettings']['consentHeadline'] + '</span>' +
+					'<img class="customer-logo" src="' + klaroConfig['logo'] + '">' +
+					'</div>')
+			}
+
+			if ($('#klaro .cn-body-footer').length < 1) {
+				$('#klaro .cn-body').append('<div class="cn-body-footer"><a href="' + klaroConfig['translations'][language]['privacyPolicyUrl'] + '">' + klaroConfig['translations'][language]['customSettings']['privacyPolicy'] + '</a> | <a href="' + klaroConfig['translations'][language]['customSettings']['imprintLink'] + '">' + klaroConfig['translations'][language]['customSettings']['imprint'] + '</a></div>');
+				$('#klaro .cn-body-footer').after('<div class="us-info-text">' + klaroConfig['translations'][language]['customSettings']['UsInfoText'] + '</div>');
+			}
+
+		}
+
+
+
+		let language = getLanguage();
+		changeKlaroHTML(language);
+		$('#klaro, .change-cookie-settings').on('click', function() {
+			changeKlaroHTML(language);
+		});
+		$('.ytblocked, .change-cookie-settings').on('click', function() {
+			addEnableAllButton(language);
+		});
+
+
+		// Footer-Link for opening Klaro settings
+		$('#menu-1-f809e7b > li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-2886').click(function() {
+			klaro.show();
+			return false;
+		});
+
+
+	} catch (e) {} // you shall scheiter stumm
+});
+
+});</script>
+<!-- start Simple Custom CSS and JS -->
+<script type="text/rocketlazyloadscript">
+// Datum Format Änderung  
+// #50885
+let dateFormat = 'd.m.Y';
+
+jQuery( document ).ready( function( $ ){
+  setTimeout( function(){
+    $('.flatpickr-input').each(function(){ flatpickr( $(this)[0] ).set('dateFormat', dateFormat);});
+  }, 1000 );
+});
+
+// src: http://browserupdate.org 
+// #51554
+var $buoop = {
+  required:{e:-2,f:-3,o:-3,s:-1,c:-3},
+  insecure:true,
+  api:2019.04,
+  text: '<b class="buorg-mainmsg">Ihr Webbrowser ({brow_name}) ist veraltet.</b> ' +
+		'Aus diesem Grund kann es zu Problemen bei der Darstellung der Website kommen.<br>' + 
+  		'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Geschwindigkeit und den besten Komfort auf dieser Seite. <br>'+
+  		'<a {up_but}>Browser aktualisieren</a> <a id="buorgig">Ignorieren</a></span>'
+}; 
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "https://cdn.eberl-online.cloud//browserupdate/update.min.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){console.log(e);window.attachEvent("onload", $buo_f)}</script>
+<!-- end Simple Custom CSS and JS -->
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.bergsportbericht.de/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadImg(id,l){var s='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'.replace("ID",id),img=document.createElement("img");if(true&&!l&&false){img.setAttribute("loading","lazy");img.setAttribute("src",s);}else if(true&&!l&&!false){img.setAttribute("data-lazy-src",s);}else{img.setAttribute("src",s);}img.setAttribute("width","480");img.setAttribute("height","360");return img;}function lazyLoadThumb(id,alt,l){if(!/^[A-Za-z0-9_-]{11}$/.test(id)){return null;}var frag=document.createDocumentFragment(),img=lazyLoadImg(id,l);img.setAttribute("alt",alt);frag.appendChild(img);var btn=document.createElement("button");btn.setAttribute("class","play");btn.setAttribute("aria-label","Play YouTube video");frag.appendChild(btn);return frag;}function lazyLoadYoutubeIframe(){var src=this.parentNode.dataset.src,url;try{url=new URL(src,"https://www.youtube.com");}catch(err){return;}if("https:"!==url.protocol&&"http:"!==url.protocol){return;}if(["youtube.com","www.youtube.com","youtube-nocookie.com","www.youtube-nocookie.com"].indexOf(url.hostname)===-1){return;}if(url.username||url.password||url.port){return;}if(!/^\/embed\/[A-Za-z0-9_-]{11}\/?$/.test(url.pathname)){return;}url=new URL("https://"+url.hostname+url.pathname.replace(/\/$/,""));var query=this.parentNode.dataset.query||"";new URLSearchParams(query).forEach(function(v,k){url.searchParams.set(k,v);});url.searchParams.set("autoplay","1");var e=document.createElement("iframe");e.setAttribute("src",url.href);e.setAttribute("frameborder","0");e.setAttribute("allowfullscreen","1");e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");this.parentNode.parentNode.replaceChild(e,this.parentNode);}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,frag,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++){u='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'.replace("ID",a[t].dataset.id);l=exclusions.some(function(exclusion){return u.indexOf(exclusion)!==-1;});e=document.createElement("div");e.setAttribute("data-id",a[t].dataset.id);e.setAttribute("data-query",a[t].dataset.query);e.setAttribute("data-src",a[t].dataset.src);frag=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l);if(!frag){continue;}e.appendChild(frag);a[t].appendChild(e);e.querySelector(".play").onclick=lazyLoadYoutubeIframe;}});</script><script>(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}})}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(o)})}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}l(t,e){this.i().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
