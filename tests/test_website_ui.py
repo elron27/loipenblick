@@ -396,12 +396,13 @@ def test_u15_jede_gebietsseite_zeigt_mindestens_3_tage_vorhersage(seite):
 
 
 def test_talprofil_nadelhoehe_folgt_der_ortshoehe(seite):
-    """Hoeherer Ort steht weiter oben (kleineres y): Achensee 950 m ueber Bayrischzell 800 m."""
+    """Hoeherer Ort steht weiter oben (kleineres y): Alpbachtal 1000 m ueber Bayrischzell 800 m
+    (Achensee ist seit B30 ausgeblendet)."""
     seite.open("#/?demo=1")
     seite.wait_for_selector("svg .s-l", state="attached")
     y = seite.evaluate("""() => Object.fromEntries([...document.querySelectorAll('svg a')].map(a =>
         [a.querySelector('text').textContent, +a.querySelector('line').getAttribute('y1')]))""")
-    assert y["Achensee"] < y["Bayrischzell"]
+    assert y["Alpbachtal"] < y["Bayrischzell"]
     assert y["Kreuth"] < y["Bad Wiessee"]  # 780 m gegen 730 m
 
 
@@ -459,3 +460,31 @@ def test_b25_fusszeile_verlinkt_hinweise_impressum_datenschutz(seite, basis):
     assert "Loipenblick" in seite.locator("header").inner_text()
     for datei in ("impressum.html", "datenschutz.html"):
         assert seite.locator("footer").get_by_role("link", name=re.compile(datei[:5], re.I)).count() >= 1
+
+
+def _alle_loipen(basis):
+    import urllib.request
+
+    def hole(rel):
+        with urllib.request.urlopen(f"{basis}/{rel}") as r:
+            return json.loads(r.read().decode("utf-8"))
+
+    return [l for r in hole("daten.json")["regionen"] for g in hole(r["datei"])["gebiete"] for l in g["loipen"]]
+
+
+@pytest.mark.req("U47", ak=[1, 2])
+def test_u47_anreise_mit_parkplatz_entfernung_und_navigation(seite, basis):
+    loipen = _alle_loipen(basis)
+    # Wildbad Kreuth: der von Hand recherchierte Parkplatz liegt am Start der Loipe
+    kreuth = next(l["id"] for l in loipen if l["name"] == "Loipe Wildbad Kreuth - Klamm")
+    seite.open(f"#/loipe/{kreuth}")
+    anreise = seite.locator("#anreise").inner_text()
+    assert "Parkplatz Wildbad Kreuth" in anreise and "Gebühr:" in anreise and "vom Loipenstart" in anreise
+    links = seite.locator("#anreise a.btn", has_text="Navigation").evaluate_all("els => els.map(e => e.href)")
+    assert links and all(l.startswith("https://www.google.com/maps/dir/?api=1&destination=47.") for l in links)
+    # eine Loipe ohne Parkplatz: Hinweis und Navigation zum Start, kein leerer Abschnitt
+    ohne = next(l["id"] for l in loipen if not l["parken"] and l["lat"] is not None)
+    seite.open(f"#/loipe/{ohne}")
+    anreise = seite.locator("#anreise").inner_text()
+    assert "noch keiner bekannt" in anreise and "Start der Loipe" in anreise
+    assert seite.locator("#anreise a.btn", has_text="Navigation").count() == 1

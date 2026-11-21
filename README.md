@@ -87,6 +87,10 @@ Passwort wählen, in der ntfy-App abonnieren). Wer wofür benachrichtigt wird, s
 Abos auf Loipen, Gebiete oder Regionen mit den Ereignissen `oeffnet`, `frisch_gespurt`, `schliesst`.
 Ein Abo meldet sich nur bei seinen Zielen und seinen Ereignissen. Der erste Abruf einer Loipe löst nichts aus.
 
+**Push für Besucher (N10, E-25).** Mit `LOIPEN_PUSH_PRAEFIX` bekommt jede Loipe und jedes Gebiet ein öffentliches
+ntfy-Thema, das Besucher ohne Konto abonnieren. Doppelte Nachrichten hält das Meldeprotokoll zurück (N11).
+Merkliste, Tagesgrenze und Grenzen stehen in [docs/benachrichtigung.md](docs/benachrichtigung.md).
+
 **Sicherung (B14).** Täglich um 3:30 Uhr schreibt der Worker `loipen-JJJJMMTT-HHMM.dump` in `BACKUP_DIR`
 und löscht Dumps, die älter als 30 Tage sind. `BACKUP_DIR` muss in einem Ordner liegen, den das
 NAS-Backup erfasst (z. B. `/volume1/backup/loipenblick`). Sofort sichern:
@@ -142,6 +146,10 @@ Die Seite bringt `.htaccess` (HTTPS-Umleitung, Sicherheits- und Cache-Header), `
 die Seite „Hinweise und Betreiber“ mit. Die Karte lädt die Kacheln von OpenStreetMap erst nach
 einem Klick (B23). Eine Quelle schaltest du mit `enabled: false` in `config/sources.yaml` ab, ihre
 Loipen verschwinden mit dem nächsten Lauf (B16).
+
+Spendenlink (U46, E-28): `LOIPEN_SPENDEN_URL=https://paypal.me/DeinName` (oder eine Buy-Me-a-Coffee-Adresse)
+in die `.env`, Container neu starten. Dann zeigen die Fußzeile und die Seite „Hinweise und Betreiber“ einen
+dezenten Link, die Datenschutzerklärung bekommt einen Abschnitt dazu. Leer = kein Link.
 
 ### E-Mail-Abo und Fehlermeldungen (E-18)
 

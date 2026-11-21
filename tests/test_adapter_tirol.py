@@ -153,7 +153,8 @@ def test_detailseiten_im_wechsel():
 def test_fehlende_detailseite_stoppt_den_lauf_nicht():
     erg, _ = lauf(details_pro_lauf=1000)
     assert len(erg.loipen) == ALLE
-    assert any("TS1 Mitterland Loipe: Detailseite nicht lesbar" in w for w in erg.warnungen)
+    # B29: 404-Seiten kommen in eine Sammelwarnung und werden eine Woche lang nicht mehr abgerufen
+    assert any("Detailseiten nicht gefunden (404)" in w for w in erg.warnungen)
 
 
 def test_falsche_detailseite_wird_erkannt():

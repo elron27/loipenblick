@@ -14,8 +14,10 @@ from zoneinfo import ZoneInfo
 from apscheduler.schedulers.blocking import BlockingScheduler
 from sqlalchemy import select
 
-from loipen import generator
+from loipen import generator, osm
 from loipen.ablauf import rufe_quelle_ab
+from loipen.benachrichtigung import PushKonfig, entprelle
+from loipen.benachrichtigung import veroeffentliche as push_veroeffentliche
 from loipen.config import get_settings
 from loipen.db import session_scope
 from loipen.ereignisse import (
@@ -24,7 +26,7 @@ from loipen.ereignisse import (
 from loipen.fetcher import HoeflicherFetcher
 from loipen.generator import abo as abo_vorlage
 from loipen.mailabo import AboKonfig, lauf_abo, smtp_versand
-from loipen.konfig import lade_und_abgleichen, lade_yaml
+from loipen.konfig import ausgeblendet, lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
 from loipen.sicherung import sichere
 from loipen.waechter import melde as waechter_melde
@@ -58,6 +60,8 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
         for quelle in quellen:
             if nur_faellige and not ist_faellig(nur_faellige, quelle.config.get("zeitplan")):
                 continue
+            if quelle.config.get("erlaubnis") == "abgelehnt":  # B30: doppelt abgesichert, enabled ist schon aus
+                continue
             log.info("Quelle %s wird abgerufen", quelle.key)
             ergebnis = rufe_quelle_ab(session, quelle, abrufer or fetcher())
             ereignisse += ergebnis.ereignisse
@@ -75,12 +79,28 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                 log.warning("Wetter: %s", w)
         except Exception:  # Wetter darf den Lauf nie verhindern
             log.exception("Wetter-Aktualisierung fehlgeschlagen")
+        if abrufer is None:  # P40/P39: OpenStreetMap einmal pro Woche je Region, eigener Fetcher mit langem Zeitlimit
+            try:
+                osm_fetcher = HoeflicherFetcher(settings.user_agent, settings.request_delay_s, timeout_s=180,
+                                                umleitung=settings.umleitung)
+                try:
+                    o = osm.aktualisiere(session, osm_fetcher)
+                finally:
+                    osm_fetcher.close()
+                if o.abgerufen or o.fehler:
+                    log.info("OpenStreetMap: %d Regionen aktualisiert, %d Fehler", len(o.abgerufen), len(o.fehler))
+            except Exception:
+                log.exception("OpenStreetMap-Aktualisierung fehlgeschlagen")
         unplausibel: set[int] = set()
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
                           abo_dateien=abo_dateien(session, settings), version=settings.version,
-                          unplausibel=unplausibel)
+                          unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite())
         ereignisse = ohne_unplausible(ereignisse, unplausibel)
+        ereignisse = ohne_ausgeblendete(ereignisse, Path(settings.config_dir))
+        # N11: Wiederholungen zurueckhalten, fuer alle Kanaele. Eingetragen wird vor dem Versand: Ein
+        # Versandfehler holt eine Nachricht nicht nach, sonst kaemen bei einer Stoerung spaeter Doppelte.
+        ereignisse = entprelle(session, ereignisse)
     log.info("Seite erzeugt in %s", settings.site_dir)
     meldung = hochladen(settings)
     if meldung:
@@ -124,7 +144,7 @@ def rechtliches(settings) -> dict:
             log.exception("Datenschutztext %s nicht lesbar, nehme die Vorlage", settings.datenschutz_datei)
     return {"name": settings.impressum_name, "anschrift": settings.impressum_anschrift,
             "email": settings.impressum_email, "hoster": settings.hoster, "log_tage": settings.log_tage,
-            "datenschutz_html": text}
+            "datenschutz_html": text, "spenden_url": getattr(settings, "spenden_url", None)}
 
 
 def hochladen(settings, **kw) -> tuple[str, str] | None:
@@ -141,6 +161,12 @@ def hochladen(settings, **kw) -> tuple[str, str] | None:
     except Exception as e:
         log.error("Upload: %s", e)
         return upload_meldung(status, False, str(e))
+
+
+def ohne_ausgeblendete(ereignisse: list, config_dir: Path) -> list:
+    """B30 AK 3: Was die Seite nicht zeigt, meldet auch kein Push und kein Abo-Mail."""
+    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(config_dir / "gebiete.yaml"))
+    return [e for e in ereignisse if e.gebiet not in gebiete_aus and (e.gebiet, e.loipe) not in loipen_aus]
 
 
 def ohne_unplausible(ereignisse: list, unplausibel: set[int]) -> list:
@@ -173,6 +199,14 @@ def _melde(settings, sender, ereignisse, meldungen) -> None:
         lauf_abo(session_scope, AboKonfig.aus_settings(settings), ereignisse, sender)
     except Exception:
         log.exception("E-Mail-Abo fehlgeschlagen")
+    push = PushKonfig.aus_settings(settings)
+    if push.aktiv and ereignisse:
+        try:  # N10: oeffentliche ntfy-Themen je Loipe und Gebiet
+            with session_scope() as session:
+                n = push_veroeffentliche(session, push, ereignisse, betreiber=sender)
+            log.info("%d oeffentliche Push-Nachrichten", n)
+        except Exception:
+            log.exception("Oeffentlicher Push fehlgeschlagen")
 
 
 def sicherung() -> None:

@@ -12,6 +12,15 @@
 # namen: weitere Namen je Sprache (P12), z. B. {it: Dobbiaco}.
 # Ausbaustufe 1 (E-15, Stand 12.11.2026): Gebietsmitten aus den Loipenstarts von tirol.at bzw.
 # berchtesgaden.de, Hoehen aus OpenStreetMap gerundet.
+# ausgeblendet (B30 AK 3, E-30): Gebiete und einzelne Loipen, die die Seite in keiner Version zeigt (auch nicht
+# in der Testversion), gleich welche Quelle sie liefert. Zum Rueckgaengigmachen den Eintrag loeschen.
+ausgeblendet:
+  gebiete:
+    achensee: "Achensee Tourismus hat der Übernahme seiner Loipendaten am 20.11.2026 widersprochen; dieselben Loipen kommen auch über tirol.at."
+    steinberg-rofan: "Achenkirch und Steinberg am Rofan gehören zu Achensee Tourismus (Widerspruch vom 20.11.2026)."
+  loipen:
+  # Wiesing gehoert zu Achensee Tourismus; tirol.at ordnet die Loipe nach der Lage dem Alpbachtal zu
+  - {gebiet: alpbachtal, name: "W1 - Loipe Buchbergl", grund: "Loipe in Wiesing, Gebiet von Achensee Tourismus (Widerspruch vom 20.11.2026)."}
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal
@@ -230,19 +239,49 @@ regionen:
   name: Salzburger Lungau
   land: AT
   bundesland: Salzburg
+- slug: oberallgaeu
+  name: Oberallgäu
+  land: DE
+  bundesland: Bayern
+- slug: ostallgaeu
+  name: Ostallgäu
+  land: DE
+  bundesland: Bayern
+- slug: wuerttembergisches-allgaeu
+  name: Württembergisches Allgäu
+  land: DE
+  bundesland: Baden-Württemberg
+- slug: kleinwalsertal
+  name: Kleinwalsertal
+  land: AT
+  bundesland: Vorarlberg
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
   hoehe_m: 730
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7163
+  lon: 11.7213
   tourist_url: https://www.tegernsee.com/bad-wiessee
   nachbarn:
   - gmund
   - tegernsee
+  parkplaetze:
+  - name: Parkplatz Wilhelminastraße
+    lat: 47.7201
+    lon: 11.722
+    gebuehr_text: '8-18 Uhr: erste halbe Stunde frei, dann 1,00 € je angefangene halbe Stunde, ab 2,5 Std. Tagesticket 10,00 €'
+    url: https://www.tegernsee.com/a-parkplatz-wilhelminastrasse
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 10.0
 - slug: gmund
   name: Gmund
   hoehe_m: 740
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.751
+  lon: 11.7385
   tourist_url: https://www.tegernsee.com/gmund
   nachbarn:
   - bad-wiessee
@@ -251,6 +290,9 @@ gebiete:
   name: Kreuth
   hoehe_m: 780
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.6403
+  lon: 11.7476
   tourist_url: https://www.tegernsee.com/kreuth
   nachbarn:
   - rottach-egern
@@ -323,6 +365,9 @@ gebiete:
   name: Rottach-Egern
   hoehe_m: 730
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.6905
+  lon: 11.769
   tourist_url: https://www.tegernsee.com/rottach-egern
   nachbarn:
   - kreuth
@@ -342,6 +387,9 @@ gebiete:
   name: Tegernsee
   hoehe_m: 735
   region: tegernseer-tal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.711
+  lon: 11.758
   tourist_url: https://www.tegernsee.com
   nachbarn:
   - gmund
@@ -417,6 +465,9 @@ gebiete:
   name: Fischbachau
   hoehe_m: 780
   region: leitzachtal
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7186
+  lon: 11.9516
   tourist_url: https://www.fischbachau.de
   nachbarn:
   - bayrischzell
@@ -457,6 +508,9 @@ gebiete:
   name: Sachrang
   hoehe_m: 740
   region: priental
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.695
+  lon: 12.266
   tourist_url: https://www.aschau.de
   parkplaetze: []
   nachbarn: []
@@ -493,6 +547,9 @@ gebiete:
   name: Ruhpolding
   hoehe_m: 690
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7613
+  lon: 12.6436
   tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
   nachbarn:
   - inzell
@@ -526,6 +583,9 @@ gebiete:
   name: Reit im Winkl
   hoehe_m: 700
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.677
+  lon: 12.471
   tourist_url: https://www.reitimwinkl.de/schneebericht
   nachbarn:
   - ruhpolding
@@ -564,6 +624,9 @@ gebiete:
   name: Inzell
   hoehe_m: 700
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.763
+  lon: 12.752
   tourist_url: https://www.inzell.de/schneebericht
   nachbarn:
   - ruhpolding
@@ -588,6 +651,9 @@ gebiete:
   name: Schleching
   hoehe_m: 560
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.7225
+  lon: 12.394
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - reit-im-winkl
@@ -616,6 +682,9 @@ gebiete:
   name: Unterwössen
   hoehe_m: 550
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.73
+  lon: 12.462
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - schleching
@@ -656,6 +725,9 @@ gebiete:
   name: Marquartstein / Grassau
   hoehe_m: 540
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.77
+  lon: 12.458
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
   nachbarn:
   - unterwoessen
@@ -690,6 +762,9 @@ gebiete:
   name: Bergen
   hoehe_m: 600
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.809
+  lon: 12.59
   tourist_url: https://www.bergen-chiemgau.de/skilanglauf
   nachbarn:
   - siegsdorf
@@ -723,6 +798,9 @@ gebiete:
   name: Siegsdorf
   hoehe_m: 610
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.822
+  lon: 12.643
   tourist_url: https://www.siegsdorf.de/langlaufen
   nachbarn:
   - bergen
@@ -760,6 +838,9 @@ gebiete:
   name: Chieming
   hoehe_m: 530
   region: chiemgau
+  # Ortsmitte (OpenStreetMap, gerundet), damit Wetter und Talprofil nicht vom Abruf der Quelle abhaengen (B28)
+  lat: 47.889
+  lon: 12.523
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
   nachbarn: []
 - slug: kufstein
@@ -3227,4 +3308,88 @@ gebiete:
   wetterstation:
     id: '15712'
     name: Tamsweg
+    dienst: geosphere
+# Allgaeu (P38, 20.11.2026): Lage aus den Loipenstarts der Ortsseiten bzw. OpenStreetMap (gerundet),
+# DWD-Stationen aus RR_Tageswerte_Beschreibung_Stationen.txt (Schnappschuss Runde 26), Kleinwalsertal GeoSphere Mittelberg.
+- slug: oberstdorf
+  name: Oberstdorf
+  hoehe_m: 815
+  region: oberallgaeu
+  lat: 47.405
+  lon: 10.279
+  tourist_url: https://www.oberstdorf.de/sommer/alpininfo/wintersportbericht/
+  wetterstation:
+    id: '03730'
+    name: Oberstdorf
+- slug: hoernerdoerfer
+  name: Hörnerdörfer (Fischen, Obermaiselstein, Bolsterlang, Ofterschwang)
+  hoehe_m: 760
+  region: oberallgaeu
+  lat: 47.457
+  lon: 10.272
+  tourist_url: https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+  wetterstation:
+    id: '04760'
+    name: Sonthofen
+- slug: balderschwang
+  name: Balderschwang
+  hoehe_m: 1045
+  region: oberallgaeu
+  lat: 47.466
+  lon: 10.096
+  tourist_url: https://www.hoernerdoerfer.de/winterurlaub-allgaeu/wintersportbericht
+  wetterstation:
+    id: '00275'
+    name: Balderschwang
+- slug: wertach
+  name: Wertach
+  hoehe_m: 915
+  region: oberallgaeu
+  lat: 47.603
+  lon: 10.410
+  tourist_url: https://www.wertach.de/service/wintersportbericht.html
+  wetterstation:
+    id: '05496'
+    name: Wertach-Bichel
+- slug: pfronten
+  name: Pfronten
+  hoehe_m: 880
+  region: ostallgaeu
+  lat: 47.582
+  lon: 10.552
+  tourist_url: https://www.pfronten.de/aktiv/winterurlaub-im-allgaeu/wintersportbericht/
+  wetterstation:
+    id: '03926'
+    name: Pfronten-Rehbichel
+- slug: fuessen
+  name: Füssen, Weißensee und Hopfen am See
+  hoehe_m: 800
+  region: ostallgaeu
+  lat: 47.570
+  lon: 10.680
+  tourist_url: https://www.fuessen.de/outdoor/aktiver-winter/langlauf/
+  wetterstation:
+    id: '06300'
+    name: Schwangau-Horn
+- slug: isny
+  name: Isny und Maierhöfen
+  hoehe_m: 705
+  region: wuerttembergisches-allgaeu
+  lat: 47.690
+  lon: 10.040
+  tourist_url: https://www.isny.de/freizeit-urlaub/wintersport/schneehoehen-loipenbericht.html
+  wetterstation:
+    id: '00759'
+    name: Buchenberg-Kreuzthal
+- slug: kleinwalsertal
+  name: Kleinwalsertal (Riezlern, Hirschegg, Mittelberg, Baad)
+  hoehe_m: 1100
+  region: kleinwalsertal
+  lat: 47.340
+  lon: 10.170
+  tourist_url: https://www.kleinwalsertal.com/de/kleinwalsertal-live/bergsportbericht-kleinwalsertal/loipen-aktiv-kleinwalsertal
+  grenzinfo: 'Österreich (Vorarlberg), nur über Oberstdorf erreichbar; auf der Zufahrt (B19, Walserstraße) keine Vignette nötig.'
+  wetterstation:
+    id: '11311'
+    name: Mittelberg
     dienst: geosphere

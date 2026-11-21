@@ -15,6 +15,7 @@ import logging
 import re
 from urllib.parse import urljoin, urlsplit
 
+import httpx
 from parsel import Selector
 
 from loipen.adapters.base import AdapterErgebnis, Fetcher, LoipenDaten
@@ -33,6 +34,10 @@ log = logging.getLogger("loipen.adapters.ats")
 MAX_SEITEN = 20  # Schutz gegen endloses Blaettern
 _BLAETTERN = re.compile(r"/langlaufen/(\d+)")
 _STOPPWOERTER = {"loipe", "skatingloipe", "klassisch", "skating", "u", "und", "km"}
+
+
+def _kurz(e: Exception) -> str:
+    return f"HTTP {e.status}" if isinstance(e, HttpFehler) else f"{type(e).__name__}: {e}"
 
 
 def _text(sel: Selector) -> str:
@@ -146,7 +151,7 @@ class AtsAdapter:
         default = config["default_gebiet"]
         gebiet_map = config.get("gebiet_map", {})
 
-        touren = self._entdecke(base_url, config.get("list_path", "/langlaufen"), fetcher)
+        touren = self._entdecke(base_url, config.get("list_path", "/langlaufen"), fetcher, ergebnis)
         status = self._lade_statusseiten(base_url, config.get("statusseiten", []), fetcher, ergebnis)
 
         # Status den Touren ueber den Namen zuordnen; Ortsnamen zaehlen dabei nicht
@@ -195,7 +200,7 @@ class AtsAdapter:
         m = re.search(r"\(([\d,\.]+)\s*km", titel)
         return parse_zahl(m.group(1)) if m else None
 
-    def _entdecke(self, base_url: str, list_path: str, fetcher: Fetcher) -> list[dict]:
+    def _entdecke(self, base_url: str, list_path: str, fetcher: Fetcher, ergebnis: AdapterErgebnis) -> list[dict]:
         touren: dict[str, dict] = {}
         offen = ["0"]
         besucht: set[str] = set()
@@ -205,7 +210,15 @@ class AtsAdapter:
                 continue
             besucht.add(seite)
             url = f"{base_url}{list_path}" + (f"/{seite}" if seite != "0" else "")
-            neu, weitere = lese_liste(fetcher.get(url), base_url)
+            try:
+                html = fetcher.get(url)
+            except (HttpFehler, httpx.HTTPError) as e:
+                if not touren:
+                    raise  # ohne erste Listenseite gibt es nichts Sinnvolles (Quelle faellt aus, B26)
+                ergebnis.warnungen.append(f"Listenseite {url}: {_kurz(e)}")
+                ergebnis.vollstaendig = False
+                continue
+            neu, weitere = lese_liste(html, base_url)
             for t in neu:
                 touren.setdefault(t["slug"], t)
             offen += [s for s in weitere if s not in besucht]
@@ -218,6 +231,12 @@ class AtsAdapter:
                 seite = lese_statusseite(fetcher.get(f"{base_url}/{slug}"))
             except HttpFehler as e:
                 ergebnis.warnungen.append(f"Schneebericht-Seite {slug}: HTTP {e.status}")
+                continue
+            except httpx.HTTPError as e:
+                # Verbindungsabbruch auch nach den Wiederholungen des Fetchers (B28): Seite fehlt in diesem
+                # Lauf, die uebrigen Seiten zaehlen trotzdem; die Loipe behaelt ihren letzten Zustand.
+                ergebnis.warnungen.append(f"Schneebericht-Seite {slug}: {_kurz(e)}")
+                ergebnis.vollstaendig = False
                 continue
             if seite is None:
                 ergebnis.warnungen.append(f"Schneebericht-Seite {slug}: kein Loipenzustand gefunden")

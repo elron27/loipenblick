@@ -7,7 +7,13 @@
 </ul>
 <p>Alle Angaben ohne Gewähr. Loipenblick übernimmt nur Fakten (offen oder geschlossen, gespurte Kilometer, Datum) und keine Texte oder Bilder der Quellen.</p>
 
-<h2 id="betreiber">Für Gemeinden und Loipenbetreiber</h2>
+{% if spenden %}
+<h2 id="unterstuetzen">Loipenblick unterstützen</h2>
+<p>Loipenblick ist ein privates Projekt: kostenlos, ohne Werbung und ohne Tracking. Webspace und Domain bezahlt der Betreiber selbst. Wer die Seite nützlich findet, kann freiwillig etwas dazugeben.</p>
+<p><a class="btn" href="{{ spenden.url }}" rel="noopener noreferrer">Über {{ spenden.anbieter }} unterstützen</a></p>
+<p class="fine">Der Beitrag ist freiwillig und geht an den Betreiber als Privatperson. Er begründet keine Gegenleistung, keinen Anspruch auf bestimmte Funktionen oder Daten und keine Mitgliedschaft. Eine Spendenquittung ist nicht möglich, weil Loipenblick keine gemeinnützige Organisation ist. Der Link führt zu {{ spenden.anbieter }}; dort gelten dessen Bedingungen und Datenschutzerklärung.</p>
+
+{% endif %}<h2 id="betreiber">Für Gemeinden und Loipenbetreiber</h2>
 <p>Loipenblick zeigt den Zustand Ihrer Loipen mit Ihrem Namen als Quelle und einem Link auf Ihre Seite. Die Daten werden höchstens einige Male am Tag abgerufen, unter Beachtung der robots.txt.</p>
 <p>Etwas stimmt nicht, Sie wünschen einen anderen Quellenhinweis, eine Schnittstelle oder wollen nicht gelistet werden? {% if email %}Schreiben Sie an <a href="mailto:{{ email }}">{{ email }}</a>.{% else %}Die Kontaktadresse steht im <a href="impressum.html">Impressum</a>.{% endif %} Eine Quelle lässt sich jederzeit abschalten, ihre Daten verschwinden dann mit dem nächsten Lauf.</p>
 
@@ -21,4 +27,5 @@
   <li>Wetter in Deutschland: Quelle: Deutscher Wetterdienst, abgerufen direkt und über Bright Sky (brightsky.dev).</li>
   <li>Wetter in Österreich: Datenquelle: GeoSphere Austria - <a href="https://data.hub.geosphere.at" rel="noopener">https://data.hub.geosphere.at</a> (CC BY 4.0).</li>
   <li>Karte: © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a> (ODbL).</li>
+  <li id="osm-daten">Streckenverläufe und Parkplätze, die bei einer Loipe mit „aus OpenStreetMap“ bzw. „laut OpenStreetMap“ gekennzeichnet sind: © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a>, verfügbar unter der <a href="https://opendatacommons.org/licenses/odbl/1-0/" rel="noopener">Open Database License (ODbL) 1.0</a>. Loipenblick ordnet sie über Name und Lage zu; die Loipenquelle hat sie nicht bestätigt. Die zugeordneten Strecken stehen in den Dateien unter <code>strecken/</code> und dürfen unter derselben Lizenz weiterverwendet werden.</li>
 </ul>

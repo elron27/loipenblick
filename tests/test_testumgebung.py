@@ -77,17 +77,18 @@ def test_worker_ablauf_gegen_die_attrappe(session, server):
     """Wie ein Worker-Lauf im Teststack: alle Quellen und das Wetter ueber HTTP aus der Attrappe."""
     lade_und_abgleichen(session)
     f = HoeflicherFetcher("LoipenBot-Test", 0, umleitung=server)
-    for q in session.scalars(select(Quelle).order_by(Quelle.key)).all():
+    for q in session.scalars(select(Quelle).where(Quelle.enabled).order_by(Quelle.key)).all():  # B30: ohne achensee
         lauf = rufe_quelle_ab(session, q, f)
         assert lauf.fehler is None and lauf.gefunden > 0, q.key
     wetter = aktualisiere_wetter(session, f)
     assert wetter.messungen > 0 and wetter.vorhersagen > 0
-    # + tirol, kitzbueheler-alpen, langlaufdorf, berchtesgaden, tannheimer, seefeld, achensee, kufsteinerland, kaiserwinkl,
-    #   dolomiti-nordicski, opendatahub, engadin, davos-klosters, goms, gastein, ramsau, seefeld-tourinfra, myswitzerland
-    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 701 + 71 + 5 + 6 + 21 + 49 + 24 + 22 + 23 + 118 + 190 \
+    # + tirol, kitzbueheler-alpen, langlaufdorf, berchtesgaden, tannheimer, seefeld, kufsteinerland, kaiserwinkl,
+    #   (achensee ist abgelehnt, B30) dolomiti-nordicski, opendatahub, engadin, davos-klosters, goms, gastein, ramsau, seefeld-tourinfra, myswitzerland
+    assert session.scalar(select(func.count()).select_from(Loipe)) == 26 + 9 + 7 + 4 + 69 + 701 + 71 + 5 + 6 + 21 + 49 + 22 + 23 + 118 + 190 \
         + 108 + 36 + 39 + 15 + 42 + 42 + 340 + 15 + 6 + 89 \
         + 7 + 6 + 10 \
         + 6 + 14 + 11 + 11 + 10 + 20 \
         + 40 + 7 + 7 \
-        + 59 + 21  # P31: Oetztal bis Paznaun; P32: Innsbruck, Hall-Wattens, Silberregion Karwendel; P33: Osttirol, Zugspitz Arena
+        + 59 + 21 \
+        + 14 + 3 + 10 + 19 + 3 + 12 + 26  # P31: Oetztal bis Paznaun; P32: Innsbruck, Hall-Wattens, Silberregion Karwendel; P33: Osttirol, Zugspitz Arena; P38: Allgaeu
     assert session.scalar(select(func.count()).select_from(Wetter)) == wetter.messungen + wetter.vorhersagen

@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /fileadmin
+Allow: /fileadmin/Mediendatenbank
+Allow: /fileadmin/_processed_
+Disallow: /uploads
+Allow: /uploads/images
+Disallow: /*cHash
+Disallow: /*tx_form_formframework
+Sitemap: https://www.badhindelang.de/sitemap.xml
+Sitemap: https://www.badhindelang.de/sitemap-poi.xml
+Sitemap: https://www.badhindelang.de/sitemap-unterkuenfte.xml
+Sitemap: https://www.badhindelang.de/sitemap-erlebnisse.xml
+Sitemap: https://www.badhindelang.de/sitemap-events.xml

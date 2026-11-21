@@ -11,8 +11,8 @@ from sqlalchemy.orm import Session
 
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.dubletten import Eintrag, finde_dubletten
-from loipen.konfig import lade_yaml
-from loipen import plausibel
+from loipen.konfig import ausgeblendet, lade_yaml
+from loipen import osm, plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
 from loipen.wetter import gebiet_position, schnee_uebersicht
@@ -93,6 +93,31 @@ def _netz(rohtext: str | None) -> dict | None:
     return {"offen": roh["offen"], "alle": roh["alle"]}
 
 
+HAND_PARK_NAH_KM = 1.5  # P39 AK 1: recherchierter Parkplatz des Gebiets, der zur Loipe gehoert
+
+
+def _parken(d: dict, punkte: list | None, gebiet: Gebiet, osm_parkplaetze: list[dict]) -> list[dict]:
+    """P39: Parkplaetze an dieser Loipe, der naechste zuerst. Von Hand recherchierte (config/gebiete.yaml) gehen vor;
+    nur wenn keiner in der Naehe liegt, kommen oeffentliche Parkplaetze aus OpenStreetMap am Loipenstart dazu."""
+    start = None
+    if punkte:
+        erster = punkte[0][0] if isinstance(punkte[0][0], list) else punkte[0]
+        start = (erster[0], erster[1])
+    if d["lat"] is not None:
+        start = (d["lat"], d["lon"])
+    hand = []
+    for p in gebiet.parkplaetze:
+        abstand = osm.km(start, (p.lat, p.lon)) if start else None
+        if abstand is None or abstand <= HAND_PARK_NAH_KM:
+            hand.append((abstand if abstand is not None else 0, {
+                "name": p.name, "lat": p.lat, "lon": p.lon, "gebuehr_eur_tag": p.gebuehr_eur_tag,
+                "gebuehr_text": p.gebuehr_text, "url": p.quelle_url, "geschaetzt": p.koordinate_geschaetzt,
+                "entfernung_m": int(round(abstand * 1000, -1)) if abstand is not None else None, "quelle": "hand"}))
+    if hand:
+        return [p for _, p in sorted(hand, key=lambda x: x[0])]
+    return osm.parkplaetze_bei(start, osm_parkplaetze) if start else []
+
+
 def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:
     zeilen = session.scalars(
         select(Wetter).where(
@@ -114,8 +139,11 @@ def _mitte(gebiete: list[dict]) -> list[float] | None:
 
 
 def sichtbar(quelle: Quelle, oeffentlich: bool) -> bool:
-    """Eine Quelle ohne Zustimmung (erlaubnis nur_test) erscheint nur in der Testversion (docs/kontaktliste.md)."""
-    return quelle.enabled and not (oeffentlich and (quelle.config or {}).get("erlaubnis") == "nur_test")
+    """Eine Quelle ohne Zustimmung (erlaubnis nur_test) erscheint nur in der Testversion (docs/kontaktliste.md).
+    Eine abgelehnte Quelle (B30) erscheint nie, auch wenn noch alte Daten in der Datenbank liegen."""
+    erlaubnis = (quelle.config or {}).get("erlaubnis")
+    return (quelle.enabled and erlaubnis != "abgelehnt"
+            and not (oeffentlich and erlaubnis == "nur_test"))
 
 
 def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 7, oeffentlich: bool = False) -> dict:
@@ -128,8 +156,15 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
 
     # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
     # B16 AK 2: eine abgeschaltete Quelle verschwindet von der Seite
+    # B30 AK 3: ausgeblendete Gebiete und Loipen fehlen in beiden Versionen, gleich von welcher Quelle
+    gebiete_aus, loipen_aus = ausgeblendet(
+        lade_yaml(config_dir / "gebiete.yaml") if (config_dir / "gebiete.yaml").exists() else {})
+
+    def gezeigt(l: Loipe) -> bool:
+        return (sichtbar(l.quelle, oeffentlich) and l.gebiet.slug not in gebiete_aus
+                and (l.gebiet.slug, l.name) not in loipen_aus)
     aktive = [l for l in session.scalars(select(Loipe).join(Quelle).where(Loipe.active, Quelle.enabled))
-              if sichtbar(l.quelle, oeffentlich)]
+              if gezeigt(l)]
     verdeckt = finde_dubletten([
         Eintrag(l.id, l.name, l.quelle.key, int((l.quelle.config or {}).get("rang", 10)), l.gebiet.slug, l.gebiet.name,
                 l.lat, l.lon, l.gebiet.region.slug if l.gebiet.region else "")
@@ -139,6 +174,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     ohne_schnee: dict[int, list[str]] = {}  # E-24: Ortsseiten, die an der Loipe 0 cm Schnee melden
     lage: dict[int, tuple[float, float]] = {}
     laenge: dict[int, tuple[float, str]] = {}
+    strecke: dict[int, tuple[dict, str]] = {}  # P40: Streckenverlauf einer verdeckten Quelle
     nach_id = {l.id: l for l in aktive}
     for versteckt, fuehrend in sorted(verdeckt.items()):
         v = nach_id[versteckt]
@@ -154,6 +190,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         # ebenso die Laenge, wenn die fuehrende Quelle keine nennt (13.11.2026)
         if v.laenge_km is not None and fuehrend not in laenge:
             laenge[fuehrend] = (v.laenge_km, v.quelle.name)
+        # P40 AK 1: ebenso der Streckenverlauf
+        if v.verlauf and fuehrend not in strecke:
+            strecke[fuehrend] = (v.verlauf, v.quelle.name)
         vcfg = v.quelle.config or {}
         quer = bool(vcfg.get("querpruefung"))  # E-24: Ortsseite, die nur zum Gegenpruefen dient
         if (eintrag["status"] == Status.GESCHLOSSEN.value
@@ -191,19 +230,25 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     veraltet = 0
     gesamt = 0
     unplausibel: list[int] = []
+    osm_daten = osm.lade(session)
     # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
     for region in sorted(session.scalars(select(Region)),
                          key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
+        if region.gebiete and all(g.slug in gebiete_aus for g in region.gebiete):
+            continue  # B30 AK 3: Region ganz ausgeblendet
         gebiete = []
         verlaeufe: dict[str, list] = {}
+        osm_region = osm_daten.get(region.slug) or {}
         for g in sorted(region.gebiete, key=lambda x: x.name):
+            if g.slug in gebiete_aus:
+                continue
             pos = gebiet_position(g)
             schnee = schnee_uebersicht(session, g)
             vorhersage = _vorhersage(session, g, heute)
             tmax_heute = next((v["tmax"] for v in vorhersage if v["datum"] == heute.isoformat()), None)
             loipen = []
             for l in sorted(g.loipen, key=lambda x: x.name):
-                if not l.active or not sichtbar(l.quelle, oeffentlich) or l.id in verdeckt:
+                if not l.active or not gezeigt(l) or l.id in verdeckt:
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
@@ -228,13 +273,32 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     d["lage_von"] = auch_bei[l.id][0]["quelle"] if auch_bei.get(l.id) else None
                 if d["laenge_km"] is None and l.id in laenge:
                     d["laenge_km"], d["laenge_von"] = laenge[l.id]
+                d["strecke_von"] = None
+                if l.verlauf:
+                    # Strecken getrennt, damit die Startseite klein bleibt; [lat, lon]
+                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in l.verlauf["coordinates"]]
+                elif l.id in strecke:
+                    verlauf, von = strecke[l.id]
+                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in verlauf["coordinates"]]
+                    d["strecke_von"], d["strecke_hinweis"] = von, None
+                else:
+                    # P40 AK 2: benannte OSM-Loipe, die nach Name, Lage und Laenge passt; mehrteilig als Liste von Linien
+                    o = osm.strecke_fuer(d, {"name": g.name, "lat": pos[0] if pos else None,
+                                             "lon": pos[1] if pos else None}, osm_region.get("loipen", []))
+                    if o:
+                        linien = osm.linien_fuer_seite(o["linien"])
+                        verlaeufe[str(l.id)] = linien[0] if len(linien) == 1 else linien
+                        d["strecke_von"], d["strecke_hinweis"] = osm.QUELLE, None
+                        d["strecke_osm"] = {"name": o["namen"][0], "url": f"https://www.openstreetmap.org/{o['id']}",
+                                            "laenge_km": o["laenge_km"]}
+                        if d["lat"] is None:
+                            d["lat"], d["lon"] = linien[0][0]
+                            d["lage_von"] = osm.QUELLE
+                d["parken"] = _parken(d, verlaeufe.get(str(l.id)), g, osm_region.get("parkplaetze", []))
                 loipen.append(d)
                 kennzahl[d["status"]] += 1
                 veraltet += d["veraltet"]
                 gesamt += 1
-                if l.verlauf:
-                    # Strecken getrennt, damit die Startseite klein bleibt; [lat, lon]
-                    verlaeufe[str(l.id)] = [[lat, lon] for lon, lat in l.verlauf["coordinates"]]
             gebiete.append({
                 "slug": g.slug,
                 "name": g.name,
@@ -246,7 +310,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 "lon": pos[1] if pos else None,
                 "hoehe_m": g.hoehe_m,
                 "tourist_url": g.tourist_url,
-                "nachbarn": sorted(n.slug for n in g.nachbarn),
+                "nachbarn": sorted(n.slug for n in g.nachbarn if n.slug not in gebiete_aus),
                 "loipengebuehr": {"eur": g.loipengebuehr_eur, "text": g.loipengebuehr_text, "url": g.loipengebuehr_url},
                 "parkplaetze": [
                     {"name": p.name, "lat": p.lat, "lon": p.lon, "gebuehr_eur_tag": p.gebuehr_eur_tag,
@@ -289,7 +353,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             {"key": q.key, "name": q.name, "status": q.last_status, "letzter_lauf": _iso(q.last_run_at),
              "anzahl": q.last_count, "dauer_s": q.last_dauer_s, "fehler": q.last_error}
             for q in session.scalars(select(Quelle).order_by(Quelle.key))
-            if not (oeffentlich and (q.config or {}).get("erlaubnis") == "nur_test")
+            if (q.config or {}).get("erlaubnis") != "abgelehnt"
+            and not (oeffentlich and (q.config or {}).get("erlaubnis") == "nur_test")
         ],
         "abdeckung": abdeckung,
         # Quellen ohne Zustimmung, die nur die Testversion zeigt (docs/kontaktliste.md)

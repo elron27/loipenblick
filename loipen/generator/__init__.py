@@ -8,11 +8,13 @@ spaeter unveraendert auf einen Webspace hochgeladen (B12).
 
 import hashlib
 import json
+import logging
 import os
 import shutil
 import tempfile
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -31,6 +33,7 @@ VORLAGEN = Path(__file__).parent / "vorlagen"
 OSM_KACHELN = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
 OSM_ATTRIBUTION = '© <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende</a>'
 HASH_LAENGE = 12
+log = logging.getLogger(__name__)
 HINWEIS = "Alle Angaben ohne Gewähr. Quelle und Stand stehen bei jedem Wert."
 
 
@@ -77,6 +80,24 @@ def rechtliches_fehlt(r: dict) -> list[str]:
                                     ("E-Mail", r.get("email"))) if not wert]
 
 
+SPENDEN_ANBIETER = (("paypal.me", "PayPal"), ("paypal.com", "PayPal"), ("buymeacoffee.com", "Buy Me a Coffee"),
+                    ("ko-fi.com", "Ko-fi"), ("liberapay.com", "Liberapay"))
+
+
+def spenden(url: str | None) -> dict | None:
+    """U46/E-28: Spendenlink aus LOIPEN_SPENDEN_URL. Nur https-Adressen, sonst nichts (mit Warnung im Log)."""
+    url = (url or "").strip()
+    if not url:
+        return None
+    teile = urlparse(url)
+    if teile.scheme != "https" or not teile.hostname or any(z in url for z in "\"<>'` \t\r\n"):
+        log.warning("LOIPEN_SPENDEN_URL ist keine gueltige https-Adresse, kein Spendenlink: %r", url)
+        return None
+    host = teile.hostname.lower().removeprefix("www.")
+    anbieter = next((name for domain, name in SPENDEN_ANBIETER if host == domain or host.endswith("." + domain)), host)
+    return {"url": url, "anbieter": anbieter}
+
+
 def erzeuge(
     session: Session,
     site_dir: str | Path,
@@ -89,11 +110,13 @@ def erzeuge(
     abo_dateien: dict[str, bytes] | None = None,
     version: str | None = None,
     unplausibel: set[int] | None = None,
+    push: dict | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
-    log_tage, datenschutz_html. kacheln: url, attribution, fremd (B23).
+    log_tage, datenschutz_html, spenden_url. kacheln: url, attribution, fremd (B23).
     abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py.
-    unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5)."""
+    unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5).
+    push: server und praefix der oeffentlichen ntfy-Themen (N10), sonst kein Push-Hinweis auf der Seite."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days, oeffentlich=oeffentlich)
@@ -118,7 +141,11 @@ def erzeuge(
             eintrag[feld] = hash_name(ordner, slug, inhalt)
             schreibe(eintrag[feld], inhalt)
     index["kacheln"] = kacheln
+    spende = spenden(r.get("spenden_url"))
+    if spende:  # U46 AK 1: ohne Adresse kein Eintrag, die App zeigt dann nichts
+        index["spenden"] = spende
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
+    index["push"] = push or None  # N10: ntfy-Themen je Loipe und Gebiet
     if version:  # B4: Stand des Images in der Fusszeile, damit ein Update am NAS pruefbar ist
         index["image"] = version[:7] if len(version) == 40 else version
 
@@ -153,13 +180,14 @@ def erzeuge(
     werte = {"name": r.get("name"), "anschrift": anschrift, "email": r.get("email"), "hoster": r.get("hoster"),
              "log_tage": r.get("log_tage") or 7, "statistik_logs": bool(r.get("statistik_logs")),
              "kacheln_fremd": kacheln.get("fremd", True), "quellen": quellen,
-             "fehlt": rechtliches_fehlt(r), "abo": bool(abo_dateien),
+             "fehlt": rechtliches_fehlt(r), "abo": bool(abo_dateien), "spenden": spende,
+             "push": push or None,
              "eigener_text": Markup(r["datenschutz_html"]) if r.get("datenschutz_html") else None}
     for name, titel, base in (("impressum", "Impressum", None), ("datenschutz", "Datenschutz", None),
                               ("hinweise", "Hinweise und Betreiber", None), ("404", "Nicht gefunden", "/")):
         inhalt = Markup(env.get_template(f"{name}.html.j2").render(**werte))
         schreibe(f"{name}.html", env.get_template("seite.html.j2").render(
-            titel=titel, inhalt=inhalt, stand=stand, oeffentlich=oeffentlich, base=base))
+            titel=titel, inhalt=inhalt, stand=stand, oeffentlich=oeffentlich, base=base, spenden=spende))
     bild_hosts = [f"https://{_host(kacheln['url'])}"] if kacheln.get("fremd", True) else []
     schreibe(".htaccess", env.get_template("htaccess.j2").render(oeffentlich=oeffentlich, bild_hosts=bild_hosts))
     if abo_dateien:

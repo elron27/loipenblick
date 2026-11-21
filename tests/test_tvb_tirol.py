@@ -149,8 +149,9 @@ def test_p22_verbandsbericht_fuehrt_vor_tirol_at(site):
     assert ku1["quelle_stand"].startswith("2026-11-11T14:08")
     assert ku1["auch_bei"][0]["quelle"] == "Tirol Werbung (tirol.at)"
     assert ku1["lat"] is not None  # Lage von tirol.at
-    namen = [l["name"] for l in gebiet(site, "achensee")["loipen"]]
-    assert "P4 - Gerntal" not in namen and "P4 - Loipe Pletzach-Gern" in namen
+    # Achensee: Abgleich ueber Verbandsnummern nur noch im Einheitstest oben; die Seite blendet das Gebiet aus (B30)
+    with pytest.raises(KeyError):
+        gebiet(site, "achensee")
 
 
 @pytest.mark.req("P22", ak=3)
