@@ -1,6 +1,6 @@
 # Bestandsaufnahme Strecken und Parkinfos
 
-Datenstand der Seite: 2026-11-20T17:16+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 20.11.2026.
+Datenstand der Seite: 2026-11-21T06:52+01:00. Loipen aus den Schnappschüssen in tests/fixtures (Stand der Quellen bis 19.11.2026), OpenStreetMap vom 21.11.2026.
 
 Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Daten zählen bei der führenden Loipe.
 
@@ -8,22 +8,22 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 
 | | Loipen | Anteil |
 | --- | ---: | ---: |
-| Loipen | 1854 | |
-| mit Streckenverlauf | 681 | 681 (37 %) |
+| Loipen | 1828 | |
+| mit Streckenverlauf | 665 | 665 (36 %) |
 | davon von der Quelle selbst | 372 | |
 | davon von einer anderen Quelle derselben Loipe | 0 | |
-| davon aus OpenStreetMap | 309 | |
-| mit Lage (Startpunkt) | 1296 | 1296 (70 %) |
-| mit Länge | 1335 | 1335 (72 %) |
-| mit Parkplatz | 69 | 69 (4 %) |
+| davon aus OpenStreetMap | 293 | |
+| mit Lage (Startpunkt) | 1272 | 1272 (70 %) |
+| mit Länge | 1311 | 1311 (72 %) |
+| mit Parkplatz | 84 | 84 (5 %) |
 | davon von Hand recherchiert | 69 | |
-| davon aus OpenStreetMap | 0 | |
+| davon aus OpenStreetMap | 15 | |
 
 ## Je Quelle
 
 | Quelle | Loipen | Strecke | davon OSM | Lage | Länge | Parkplatz | davon OSM |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Tirol Werbung (tirol.at) | 548 | 148 (27 %) | 148 | 548 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
+| Tirol Werbung (tirol.at) | 546 | 148 (27 %) | 148 | 546 (100 %) | 214 (39 %) | 2 (0 %) | 0 |
 | Schweiz Tourismus (Schneebericht, Daten infosnow.ch) | 340 | 35 (10 %) | 35 | 35 (10 %) | 333 (98 %) | 0 (0 %) | 0 |
 | Dolomiti NordicSki (Loipenstatus) | 118 | 28 (24 %) | 28 | 85 (72 %) | 116 (98 %) | 0 (0 %) | 0 |
 | Engadin Tourismus (tourinfra Loipenmanager) | 108 | 108 (100 %) | 0 | 108 (100 %) | 108 (100 %) | 0 (0 %) | 0 |
@@ -34,9 +34,8 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Ramsau am Dachstein (tourinfra Loipenmanager) | 42 | 42 (100 %) | 0 | 42 (100 %) | 42 (100 %) | 0 (0 %) | 0 |
 | Goms Tourismus (tourinfra Loipenmanager) | 39 | 39 (100 %) | 0 | 39 (100 %) | 39 (100 %) | 0 (0 %) | 0 |
 | Destination Davos Klosters (tourinfra Loipenmanager) | 36 | 36 (100 %) | 0 | 36 (100 %) | 36 (100 %) | 0 (0 %) | 0 |
-| Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 12 (46 %) | 0 |
+| Tegernseer Tal Tourismus | 26 | 17 (65 %) | 17 | 26 (100 %) | 26 (100 %) | 22 (85 %) | 10 |
 | Tourismus Hörnerdörfer (Schneebericht, Intermaps) | 26 | 2 (8 %) | 2 | 2 (8 %) | 25 (96 %) | 0 (0 %) | 0 |
-| Achensee Tourismus (Schneebericht) | 24 | 16 (67 %) | 16 | 22 (92 %) | 24 (100 %) | 0 (0 %) | 0 |
 | Tourismusverband Kaiserwinkl (Loipenbericht) | 23 | 15 (65 %) | 15 | 20 (87 %) | 23 (100 %) | 0 (0 %) | 0 |
 | Kufsteinerland (Schneebericht) | 22 | 3 (14 %) | 3 | 19 (86 %) | 20 (91 %) | 0 (0 %) | 0 |
 | Innsbruck Tourismus (Wintersportbericht, Intermaps) | 21 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
@@ -51,7 +50,7 @@ Gezählt wird, was die Seite zeigt: verdeckte Dubletten zählen nicht, ihre Date
 | Kitzbüheler Alpen Loipenstatus | 9 | 1 (11 %) | 1 | 1 (11 %) | 9 (100 %) | 0 (0 %) | 0 |
 | Olympiaregion Seefeld (Loipenbericht) | 7 | 0 (0 %) | 0 | 1 (14 %) | 2 (29 %) | 0 (0 %) | 0 |
 | Bergerlebnis Berchtesgaden | 6 | 1 (17 %) | 1 | 6 (100 %) | 6 (100 %) | 0 (0 %) | 0 |
-| Fischbachau Tourismus | 6 | 5 (83 %) | 5 | 6 (100 %) | 6 (100 %) | 1 (17 %) | 0 |
+| Fischbachau Tourismus | 6 | 5 (83 %) | 5 | 6 (100 %) | 6 (100 %) | 6 (100 %) | 5 |
 | Nassfeld-Pressegger See (Wintersportbericht) | 6 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
 | Langlaufdorf Faistenau / Hintersee | 5 | 1 (20 %) | 1 | 1 (20 %) | 5 (100 %) | 0 (0 %) | 0 |
 | Alpbachtal Tourismus (Loipenbericht) | 4 | 0 (0 %) | 0 | 0 (0 %) | 0 (0 %) | 0 (0 %) | 0 |
@@ -83,7 +82,7 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Chiemgau | Ruhpolding | 8 | 0 | 6 | 0 | ja | 1 |
 | Chiemgau | Schleching | 9 | 0 | 2 | 0 | unbekannt | 1 |
 | Leitzachtal | Bayrischzell | 11 | 2 | 1 | 4 | ja | 3 |
-| Leitzachtal | Fischbachau | 6 | 1 | 5 | 2 | unbekannt | 2 |
+| Leitzachtal | Fischbachau | 6 | 1 | 0 | 2 | unbekannt | 2 |
 | Oberallgäu | Balderschwang | 4 | 2 | 4 | 0 | unbekannt | 0 |
 | Oberallgäu | Hörnerdörfer (Fischen, Obermaiselstein, Bolsterlang, Ofterschwang) | 22 | 22 | 22 | 0 | unbekannt | 0 |
 | Oberallgäu | Oberstdorf | 14 | 14 | 14 | 0 | unbekannt | 0 |
@@ -91,16 +90,14 @@ Gebiete, in denen mindestens einer Loipe Strecke oder Parkplatz fehlt. „Hand�
 | Ostallgäu | Füssen, Weißensee und Hopfen am See | 3 | 3 | 3 | 0 | unbekannt | 0 |
 | Ostallgäu | Pfronten | 10 | 9 | 10 | 0 | unbekannt | 0 |
 | Priental | Sachrang | 4 | 4 | 4 | 0 | unbekannt | 3 |
-| Tegernseer Tal | Bad Wiessee | 4 | 2 | 3 | 1 | unbekannt | 0 |
-| Tegernseer Tal | Gmund | 5 | 2 | 5 | 0 | unbekannt | 0 |
+| Tegernseer Tal | Bad Wiessee | 4 | 2 | 0 | 1 | unbekannt | 0 |
+| Tegernseer Tal | Gmund | 5 | 2 | 1 | 0 | unbekannt | 0 |
 | Tegernseer Tal | Kreuth | 10 | 1 | 1 | 6 | unbekannt | 4 |
-| Tegernseer Tal | Rottach-Egern | 7 | 4 | 5 | 1 | unbekannt | 0 |
+| Tegernseer Tal | Rottach-Egern | 7 | 4 | 2 | 1 | unbekannt | 0 |
 | Württembergisches Allgäu | Isny und Maierhöfen | 12 | 7 | 12 | 0 | unbekannt | 0 |
-| Achensee und Karwendel | Achensee | 14 | 6 | 14 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Hinterriß | 1 | 1 | 1 | 0 | unbekannt | 0 |
 | Achensee und Karwendel | Silberregion Karwendel | 6 | 6 | 6 | 0 | unbekannt | 0 |
-| Achensee und Karwendel | Steinberg am Rofan | 11 | 3 | 11 | 0 | unbekannt | 0 |
-| Alpbachtal und Wildschönau | Alpbachtal | 16 | 16 | 16 | 0 | unbekannt | 0 |
+| Alpbachtal und Wildschönau | Alpbachtal | 15 | 15 | 15 | 0 | unbekannt | 0 |
 | Alpbachtal und Wildschönau | Wildschönau | 19 | 15 | 19 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Altaussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
 | Ausseerland-Salzkammergut | Bad Aussee | 3 | 3 | 3 | 0 | unbekannt | 0 |
