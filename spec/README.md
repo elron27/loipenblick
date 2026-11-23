@@ -8,11 +8,11 @@ Der Inhalt stammt aus dem [Anforderungsdokument](https://claude.ai/artifact/RWrf
 
 | Ordner | Typ | Inhalt |
 |---|---|---|
-| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-40 (N-05 ersetzt durch N-09) |
-| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P30, P34, D1–D19, U1–U48, N1–N12, B1–B30 |
-| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-28, E-30 (u. a. E-30: Achensee nach Absage ganz ausblenden, auch die tirol.at-Daten; E-28: Spenden nur über einen einfachen Link; E-25: Push ohne Konto über öffentliche ntfy-Themen je Loipe und Gebiet; E-24: Quellen ohne Zustimmung erst testen, dann fragen; E-23: unplausible Offen-Meldungen als geschlossen zeigen; E-22: Steiermark über das Tourenportal von Steiermark Tourismus; E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
-| `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb |
-| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `ausbau-3`, `livegang` und `spaeter` |
+| `need/` | Bedürfnis (N) | Was Langläufer und Betreiber wollen, in ihren Worten: N-01 bis N-44 (N-05 ersetzt durch N-09; N-41 bis N-44 für die Schneekarte) |
+| `system-requirement/` | Systemanforderung (SR) | Was das System können muss, mit Akzeptanzkriterien: P1–P30, P34, D1–D19, U1–U48, N1–N12, B1–B30, S1–S25 (Schneekarte) |
+| `decision/` | Entscheidung (D) | Getroffene Festlegungen: E-01 bis E-36 (u. a. E-31 bis E-36: Schneekarte als Modul, keine eigene Lawinenbewertung, kein Open-Meteo, zuerst sammeln, Warnregionen als Zuschnitt, Abgrenzung zu Skitourenguru; E-30: Achensee nach Absage ganz ausblenden, auch die tirol.at-Daten; E-28: Spenden nur über einen einfachen Link; E-25: Push ohne Konto über öffentliche ntfy-Themen je Loipe und Gebiet; E-24: Quellen ohne Zustimmung erst testen, dann fragen; E-23: unplausible Offen-Meldungen als geschlossen zeigen; E-22: Steiermark über das Tourenportal von Steiermark Tourismus; E-19: Südtirol über Dolomiti NordicSki und Open Data Hub; E-18: E-Mail-Abo und Fehlermeldungen über PHP im Ordner abo/; E-17: Livegang mit deutschem Webspace; E-16: regionale Loipenberichte vor tirol.at; E-15: Ausbaustufe 1 Tirol und Salzburg; E-10: NAS parst, statische Website extern; E-11: Version 1 zuerst lokal testen) |
+| `package/` | Paket (PKG) | Themen: Datenerfassung, Datenmodell, Oberfläche, Benachrichtigung, Betrieb, Schneekarte |
+| `filters/` | gespeicherte Filter | `version-1`, `ausbau-1`, `ausbau-2`, `ausbau-3`, `livegang`, `schneekarte-sammeln`, `schneekarte-v1` und `spaeter` |
 | `metamodel/` | Metamodell | Standardmodell plus `loipen.yaml` |
 
 Beziehungen: Jede Systemanforderung *leitet sich ab von* (`derives-from`) einem oder mehreren Bedürfnissen und *beruht auf* (`based-on`) den Entscheidungen, die sie betreffen.
@@ -21,7 +21,7 @@ Eigene Eigenschaften (`metamodel/loipen.yaml`):
 
 - `kennung`: lesbare ID wie `P1`, `U5`, `N-01`, `E-05`. Jeder Befehl nimmt sie als Verweis.
 - `prio`: `muss`, `soll`, `kann` wie im Anforderungsdokument.
-- `umfang`: `v1`, `ausbau1` (Kufstein/Tirol und Salzburg, Plan vom 12.11.2026), `ausbau2` (Südtirol und Cortina/Comelico, 13.11.2026), `livegang` (öffentlicher Betrieb im Winter 2026/27, [docs/livegang.md](../docs/livegang.md)) oder `spaeter`.
+- `umfang`: `v1`, `ausbau1` (Kufstein/Tirol und Salzburg, Plan vom 12.11.2026), `ausbau2` (Südtirol und Cortina/Comelico, 13.11.2026), `livegang` (öffentlicher Betrieb im Winter 2026/27, [docs/livegang.md](../docs/livegang.md)), `schnee0` (Schneekarte: Sammel-Job, Quellen, Lizenzen und Datenmodell, sofort), `schnee1` (Schneekarte Version 1: Karte, Zeitachse, Lawinenanzeige) oder `spaeter`.
 
 Alle Elemente stehen auf `draft`. Den Status setzt nur ein Mensch, ReqSeq berechnet ihn nie.
 
