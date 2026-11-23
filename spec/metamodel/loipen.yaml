@@ -22,7 +22,7 @@ properties:
       - { key: kann, name: Kann }
   - key: umfang
     name: Umfang
-    description: "In Version 1, in Ausbaustufe 1 (Kufstein/Tirol und Salzburg), in Ausbaustufe 2 (Südtirol), für den Livegang (Winter 2026/27) oder später."
+    description: "In Version 1, in Ausbaustufe 1 (Kufstein/Tirol und Salzburg), in Ausbaustufe 2 (Südtirol), für den Livegang (Winter 2026/27), für die Schneekarte (schnee0 = Sammel-Job sofort, schnee1 = erste Ansicht) oder später."
     kind: choice
     choices:
       - { key: v1, name: Version 1 }
@@ -30,4 +30,6 @@ properties:
       - { key: ausbau2, name: Ausbaustufe 2 }
       - { key: ausbau3, name: Ausbaustufe 3 }
       - { key: livegang, name: Livegang }
+      - { key: schnee0, name: "Schneekarte: sofort sammeln" }
+      - { key: schnee1, name: Schneekarte Version 1 }
       - { key: spaeter, name: Später }
