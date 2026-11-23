@@ -24,7 +24,8 @@
 # Pflichtangaben je Quelle (P17, P20, D15):
 #   nutzung: robots (erlaubt), robots_geprueft (Datum), nutzungsbedingungen_geprueft (Datum oder null =
 #            noch offen, vor dem Oeffentlichschalten pruefen, Blindspot 6)
-#            erlaubnis: liegt_vor | ausstehend (Standard) | nur_test | abgelehnt. abgelehnt = Betreiber hat
+#            erlaubnis: liegt_vor | ausstehend (Standard) | nur_test | abgelehnt. liegt_vor braucht beleg: eine Datei
+#            unter docs/erlaubnisse/ mit Datum und Wortlaut der Zustimmung (B31). abgelehnt = Betreiber hat
 #            widersprochen: die Quelle wird nie abgerufen und nirgends gezeigt (B30). nur_test = Betreiber hat nicht zugestimmt und
 #            seine Bedingungen verbieten die Uebernahme; die Quelle laeuft nur in der Testversion und erscheint auf
 #            der oeffentlichen Seite (LOIPEN_OEFFENTLICH=true) nicht. Kontakte und Stand: docs/kontaktliste.md
@@ -328,7 +329,10 @@ quellen:
     art: portal
     rang: 3
     strecke_hinweis: "tirol.at sperrt die GPX-Dateien der Loipen per robots.txt, daher nur der Startpunkt."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null,
+    # Freigabe der Tirol Werbung GmbH vom 23.11.2026 (B31, E-37): Abholung ueber die Website mit Quellangabe und
+    # Link auf tirol.at ist in Ordnung. Beleg: docs/erlaubnisse/tirol-werbung-2026-11-23.md
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: 2026-11-23, erlaubnis: liegt_vor,
+              beleg: docs/erlaubnisse/tirol-werbung-2026-11-23.md, bedingung: "Quellangabe und Link auf tirol.at",
               hinweis: "GPX auf tirol.mapservices.eu per robots.txt gesperrt, daher kein Streckenverlauf"}
     config:
       default_gebiet: kufstein
@@ -489,6 +493,7 @@ quellen:
     rang: 3
     strecke_hinweis: "Der Open Data Hub führt nur Start- und Zielpunkt der Loipe, keinen Streckenverlauf."
     nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-13, erlaubnis: liegt_vor,
+              beleg: docs/erlaubnisse/opendatahub-cc0.md,
               hinweis: "robots.txt fehlt (404) = keine Sperre; Lizenz CC0 je Datensatz (LicenseInfo)"}
     config:
       pfad: /v1/ODHActivityPoi?odhtagfilter=loipen&pagesize=400&language=de&removenullvalues=true

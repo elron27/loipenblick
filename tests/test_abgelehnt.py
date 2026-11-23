@@ -2,8 +2,9 @@
 
 Anlass: Achensee Tourismus hat am 20.11.2026 schriftlich widersprochen ("Wir stimmen dem automatisierten Abruf
 und der Uebernahme unserer Loipendaten jedoch nicht zu"). Die Quelle wird nie abgerufen und nirgends gezeigt,
-auch nicht in der Testversion. Dieselben Loipen kommen ueber tirol.at; bis zur Klaerung sind die Gebiete von
-Achensee Tourismus deshalb ganz ausgeblendet (config/gebiete.yaml, Block ausgeblendet)."""
+auch nicht in der Testversion. Dieselben Loipen kommen ueber tirol.at; bis 23.11.2026 waren die Gebiete von
+Achensee Tourismus deshalb ganz ausgeblendet. Seit der Freigabe der Tirol Werbung (23.11.2026) zeigt die Seite sie
+ueber tirol.at wieder (Stefans Entscheidung, E-37); der Block ausgeblendet in config/gebiete.yaml ist leer."""
 
 import json
 from datetime import timedelta
@@ -84,12 +85,10 @@ def test_b30_abgelehnte_quelle_fehlt_in_beiden_versionen(session, oeffentlich):
 
 # ---------- AK 3: Gebiete und Loipen ausblenden, gleich von welcher Quelle ----------
 
-@pytest.mark.req("B30", ak=3)
-def test_b30_gebiete_von_achensee_tourismus_sind_ausgeblendet():
+@pytest.mark.req("B31", ak=4)
+def test_b31_achensee_gebiete_nach_tirol_freigabe_nicht_mehr_ausgeblendet():
     gebiete, loipen = ausgeblendet(GEBIETE)
-    assert set(gebiete) == ACHENSEE_GEBIETE
-    assert ("alpbachtal", "W1 - Loipe Buchbergl") in loipen
-    assert all("20.11.2026" in grund for grund in gebiete.values())
+    assert gebiete == {} and loipen == set()
     assert pruefe(SOURCES, GEBIETE) == []
 
 
@@ -140,33 +139,28 @@ def site(engine, tmp_path_factory):
     return ziel, abo_ziele
 
 
-@pytest.mark.req("B30", ak=3)
-def test_b30_seite_zeigt_keine_achensee_loipen(site):
+@pytest.mark.req("B30", ak=2)
+@pytest.mark.req("B31", ak=4)
+def test_b30_seite_zeigt_achensee_nur_ueber_tirol_at(site):
     ziel, _ = site
     index = json.loads((ziel / "daten.json").read_text(encoding="utf-8"))
     assert "achensee" not in {q["key"] for q in index["quellen"]}
     alle = [g for r in index["regionen"] for g in json.loads((ziel / r["datei"]).read_text(encoding="utf-8"))["gebiete"]]
-    slugs = {g["slug"] for g in alle}
-    assert not slugs & ACHENSEE_GEBIETE
-    assert {"hinterriss", "silberregion-karwendel"} <= slugs  # Rest der Region bleibt
-    namen = {l["name"] for g in alle for l in g["loipen"]}
-    for name in ("P4 - Gerntal", "Dorfloipe Pertisau", "Seeloipe Oberautal", "S2 - Guffertloipe", "W1 - Loipe Buchbergl"):
-        assert name not in namen
-    assert not any(ACHENSEE_GEBIETE & set(g["nachbarn"]) for g in alle)
+    achensee = [g for g in alle if g["slug"] in ACHENSEE_GEBIETE]
+    assert {g["slug"] for g in achensee} == ACHENSEE_GEBIETE
+    loipen = [l for g in achensee for l in g["loipen"]]
+    assert loipen and all(l["quelle"]["name"] == "Tirol Werbung (tirol.at)" for l in loipen)
     text = json.dumps(alle, ensure_ascii=False)
     assert "Achensee Tourismus" not in text and "achensee.com" not in text
 
 
-@pytest.mark.req("B30", ak=3)
-def test_b30_kein_abo_und_kein_push_fuer_ausgeblendetes(site):
+@pytest.mark.req("B31", ak=4)
+def test_b31_abo_und_push_fuer_achensee_wieder_moeglich(site):
     _, abo_ziele = site
-    assert "g:achensee" not in abo_ziele and "g:steinberg-rofan" not in abo_ziele
-    assert not any("W1 - Loipe Buchbergl" in v or "Pertisau" in v for v in abo_ziele.values())
-    assert "g:hinterriss" in abo_ziele
+    assert "g:achensee" in abo_ziele and "g:steinberg-rofan" in abo_ziele
     e = [Ereignis("oeffnet", "Dorfloipe Pertisau", "achensee", "Achensee", "achensee-karwendel", "offen"),
-         Ereignis("oeffnet", "W1 - Loipe Buchbergl", "alpbachtal", "Alpbachtal", "alpbachtal-wildschoenau", "offen"),
          Ereignis("oeffnet", "Loipe Hinterriss", "hinterriss", "Hinterriß", "achensee-karwendel", "offen")]
-    assert [x.loipe for x in ohne_ausgeblendete(e, CONFIG_DIR)] == ["Loipe Hinterriss"]
+    assert [x.loipe for x in ohne_ausgeblendete(e, CONFIG_DIR)] == ["Dorfloipe Pertisau", "Loipe Hinterriss"]
 
 
 # ---------- AK 4: Kontaktliste und Checkliste ----------

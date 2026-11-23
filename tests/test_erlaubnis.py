@@ -1,11 +1,16 @@
 """Erlaubnis je Quelle (B27, Stefan 19.11.2026): Quellen ohne Zustimmung laufen nur in der Testversion."""
 
+import json
+import re
 from datetime import timedelta
 
 import pytest
 
+from loipen import generator
 from loipen.generator.daten import baue
 from loipen.konfig import CONFIG_DIR, ERLAUBNIS, lade_yaml, nur_test_quellen, pruefe
+from tests.helpers import lade_alle_fixtures
+from tests.test_livegang import JETZT as JETZT_FIXTURES, RECHT
 from tests.test_plausibel import JETZT, Welt, loipen_nach_name
 
 
@@ -65,3 +70,47 @@ def test_b27_livegang_liste_nennt_nur_test_quellen():
 def test_b27_chiemgau_ohne_freigabe_nur_in_der_testversion():
     """Chiemgau GmbH 20.11.2026: Freigabe ausstehend, Loipenmanager-Daten vorerst nicht uebernehmen."""
     assert "chiemgau" in nur_test_quellen(lade_yaml(CONFIG_DIR / "sources.yaml"))
+
+
+@pytest.mark.req("B31", ak=1)
+def test_b31_liegt_vor_nur_mit_beleg():
+    gebiete = lade_yaml(CONFIG_DIR / "gebiete.yaml")
+    q = {"key": "x", "adapter": "tirolat", "name": "X", "base_url": "https://x.example", "default_gebiet": None,
+         "nutzung": {"robots": "erlaubt", "robots_geprueft": "2026-11-23", "nutzungsbedingungen_geprueft": None,
+                     "erlaubnis": "liegt_vor"}, "config": {"default_gebiet": gebiete["gebiete"][0]["slug"]}}
+    assert any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
+    q["nutzung"]["beleg"] = "docs/erlaubnisse/gibt-es-nicht.md"
+    assert any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
+    q["nutzung"]["beleg"] = "docs/erlaubnisse/tirol-werbung-2026-11-23.md"
+    assert not any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
+    # die echte Konfiguration: jede Zustimmung ist belegt
+    assert not any("nutzung.beleg" in f for f in pruefe(lade_yaml(CONFIG_DIR / "sources.yaml"), gebiete))
+
+
+@pytest.mark.req("B31", ak=2)
+def test_b31_tirol_at_freigegeben_mit_beleg_ohne_telefonnummern():
+    """Tirol Werbung GmbH 23.11.2026: Abholung mit Quellangabe und Verlinkung zu tirol.at in Ordnung."""
+    tirol = next(q for q in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"] if q["key"] == "tirol")
+    assert tirol["nutzung"]["erlaubnis"] == "liegt_vor"
+    beleg = (CONFIG_DIR.parent / tirol["nutzung"]["beleg"]).read_text(encoding="utf-8")
+    assert "23.11.2026" in beleg and "Quellangabe und Verlinkung zu unserer Seite" in beleg
+    assert "LTO Freigabetool" in beleg
+    assert not re.search(r"\+\d{2}[\d ]{6,}", beleg), "keine Telefonnummern im Beleg"
+    assert "tirol" not in nur_test_quellen(lade_yaml(CONFIG_DIR / "sources.yaml"))
+    kontakte = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8")
+    zeile = next(z for z in kontakte.splitlines() if z.startswith("| Tirol Werbung GmbH"))
+    assert "Erlaubnis am 23.11.2026" in zeile and "nachfassen, falls" not in zeile
+
+
+@pytest.mark.req("B31", ak=3)
+def test_b31_tirol_loipen_oeffentlich_mit_quellangabe_und_link(session, tmp_path):
+    lade_alle_fixtures(session, JETZT_FIXTURES)
+    generator.erzeuge(session, tmp_path, JETZT_FIXTURES, oeffentlich=True, rechtliches=RECHT)
+    index = json.loads((tmp_path / "daten.json").read_text(encoding="utf-8"))
+    tirol = [l for r in index["regionen"]
+             for g in json.loads((tmp_path / r["datei"]).read_text(encoding="utf-8"))["gebiete"]
+             for l in g["loipen"] if l["quelle"]["name"] == "Tirol Werbung (tirol.at)"]
+    assert tirol, "tirol.at-Loipen fehlen auf der oeffentlichen Seite"
+    assert all(l["quelle"]["url"].startswith("https://www.tirol.at/") for l in tirol)
+    hinweise = (tmp_path / "hinweise.html").read_text(encoding="utf-8")
+    assert "Tirol Werbung (tirol.at)" in hinweise and 'href="https://www.tirol.at"' in hinweise
