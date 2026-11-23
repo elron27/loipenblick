@@ -149,9 +149,9 @@ def test_p22_verbandsbericht_fuehrt_vor_tirol_at(site):
     assert ku1["quelle_stand"].startswith("2026-11-11T14:08")
     assert ku1["auch_bei"][0]["quelle"] == "Tirol Werbung (tirol.at)"
     assert ku1["lat"] is not None  # Lage von tirol.at
-    # Achensee: Abgleich ueber Verbandsnummern nur noch im Einheitstest oben; die Seite blendet das Gebiet aus (B30)
-    with pytest.raises(KeyError):
-        gebiet(site, "achensee")
+    # Achensee: Quelle abgelehnt (B30), das Gebiet zeigt seit E-37 nur die Loipen von tirol.at
+    achensee = gebiet(site, "achensee")["loipen"]
+    assert achensee and all(l["quelle"]["name"] == "Tirol Werbung (tirol.at)" for l in achensee)
 
 
 @pytest.mark.req("P22", ak=3)
