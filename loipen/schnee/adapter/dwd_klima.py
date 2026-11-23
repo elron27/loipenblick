@@ -10,7 +10,7 @@ Fehlwert -999. Daten bis gestern; recent umfasst rund 500 Tage, also auch den Re
 import csv
 import io
 import zipfile
-from datetime import date, datetime
+from datetime import datetime
 
 from loipen.schnee.adapter._hilfe import BERLIN, antwort, zahl
 from loipen.schnee.daten import Ergebnis, MesswertDaten, StationDaten

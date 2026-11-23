@@ -13,8 +13,14 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from loipen.models import (
-    LageberichtFassung, LageberichtRegion, SchneeModellwert, SchneeMesswert, SchneeRohdatei, SchneeStation,
-    Warnregion, utcnow,
+    LageberichtFassung,
+    LageberichtRegion,
+    SchneeMesswert,
+    SchneeModellwert,
+    SchneeRohdatei,
+    SchneeStation,
+    Warnregion,
+    utcnow,
 )
 from loipen.schnee.daten import Ergebnis
 

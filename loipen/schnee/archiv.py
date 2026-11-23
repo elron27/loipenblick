@@ -51,7 +51,10 @@ def lade_nach(session_scope: Callable, q: SchneeQuelle, fetcher, wurzel: Path, v
                 if url in vorhanden:
                     stand["uebersprungen"] += 1
                     continue
-                a = antwort(fetcher, url, "archiv", tag=tag.isoformat())
+                if hasattr(mod, "hole"):  # eigener Abruf, z. B. ERA5-Land ueber die CDS-API
+                    a = mod.hole(fetcher, url, "archiv", session=session, tag=tag.isoformat())
+                else:
+                    a = antwort(fetcher, url, "archiv", tag=tag.isoformat())
                 stand["abrufe"] += 1
                 schlafen(pause_s)
                 if a.art == "fehler":

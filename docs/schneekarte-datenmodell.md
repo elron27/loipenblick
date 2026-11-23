@@ -1,6 +1,6 @@
 # Schneekarte: Datenmodell und Sammel-Job
 
-Stand 23.11.2026. Anforderungen S1 bis S9 und S21 (Filter `schneekarte-sammeln`), Entscheidungen E-31 bis E-36.
+Stand 23.11.2026. Anforderungen S1 bis S9, S21 und S26 (Filter `schneekarte-sammeln`), Entscheidungen E-31 bis E-36 und E-38.
 Quellen und Lizenzen: [schneekarte-quellen.md](schneekarte-quellen.md).
 
 ## Grundsätze
@@ -20,7 +20,7 @@ Quellen und Lizenzen: [schneekarte-quellen.md](schneekarte-quellen.md).
 | `schnee_rohdateien` | jede Antwort einer Quelle: URL, SHA-256, Pfad, Größe, Abrufzeit | gleicher Inhalt nur einmal (SHA-256 eindeutig); Datei unter `<backup>/schnee-roh/<quelle>/<JJJJ>/<MM>/<TT>/<sha>.gz` |
 | `schnee_stationen` | Messstation: Kennung der Quelle, Name, Lage, **Höhe (Pflicht)**, Betreiber, Land, Warnregion, Messart (automatisch, Hand, Modell), Messgrößen, aktiv | eindeutig je (Quelle, Kennung); ohne Höhe nicht übernommen; verschwundene Stationen werden inaktiv, nie gelöscht |
 | `schnee_messwerte` | ein Rohwert: Station, Zeitpunkt, Größe, Wert, Einheit, Takt (Tag oder Einzelwert), **Fassung**, Verdacht, Rohdatei | ein zweiter Abruf legt nichts doppelt an; ändert die Quelle einen Wert, entsteht Fassung 2, Fassung 1 bleibt |
-| `schnee_modellwerte` | Mittel, Minimum und Maximum je Warnregion und 500-m-Höhenband (SNOWGRID, für S10) | eindeutig je (Quelle, Region, Band, Tag, Größe) |
+| `schnee_modellwerte` | Mittel, Minimum und Maximum je Warnregion und Tag: ERA5-Land-Schneefall `sf` (mm Wasser) und Schneehöhe `hs` (cm) über die ganze Region (`hoehe_von` = -1, S26); später SNOWGRID je 500-m-Höhenband (S10) | eindeutig je (Quelle, Region, Band, Tag, Größe) |
 | `warnregionen` | EAWS-Mikroregion mit Umriss (GeoJSON, mit `start_date`/`end_date`) | ID wie `AT-07-04-01` |
 | `lagebericht_fassungen` | eine veröffentlichte Fassung: Dienst, Bulletin-ID, **Ausgabezeit**, gültig von/bis, Sprache, Link, Tendenz, nachgeladen, Rohdatei | eindeutig je (Dienst, Bulletin-ID, Ausgabezeit): Abendbericht und Morgen-Aktualisierung sind zwei Zeilen |
 | `lagebericht_regionen` | was eine Fassung für eine Warnregion sagt: Stufen (Stufe, Tageszeit, Höhe unten/oben oder „treeline“, Expositionen), Probleme | eindeutig je (Fassung, Region) |
@@ -29,6 +29,15 @@ Quellen und Lizenzen: [schneekarte-quellen.md](schneekarte-quellen.md).
 Größen in `schnee_messwerte`: `hs` Schneehöhe (cm), `hs_hand` Schneehöhe von Hand (cm, GeoSphere), `hn24`
 Neuschnee 24 h (cm, nur gemessen), `hsd24` Änderung der Schneehöhe in 24 h (cm, Angabe der Quelle), `rr`/`rr24`
 Niederschlag (mm), `ta`, `ta_min`, `ta_max` Lufttemperatur (°C), `ff` Wind (km/h bzw. m/s laut Einheit).
+
+## Schneefall für den ganzen Alpenraum (S26, E-38)
+
+Hauptgröße ist der Schneefall je Tag und Warnregion aus ERA5-Land (Copernicus, CC BY 4.0, Raster 0,1 Grad, ab 1950,
+rund 5 Tage Verzug). Der Job fragt täglich um 9 Uhr die letzten acht verfügbaren Tage ab, damit ein Ausfall
+nachkommt. Je Monat geht eine Anfrage an die CDS-API, nur für 00:00 UTC: Der Schneefall-Wert um 00 UTC ist die
+Summe des Vortags, die Schneehöhe der Stand am Ende des Vortags. Je Warnregion zählen die Zellen, deren Mittelpunkt
+in der Region liegt; eine kleine Region ohne Zellmittelpunkt bekommt die nächste Zelle. Die Stationen bleiben die
+Referenz. Beispiel: Schneefall im Karwendel im Dezember = Summe von `sf` der Karwendel-Regionen vom 1. bis 31.12.
 
 ## Sammel-Job
 
@@ -51,6 +60,7 @@ Niederschlag (mm), `ta`, `ta_min`, `ta_max` Lufttemperatur (°C), `ff` Wind (km/
 | Kärnten | 25.01.2021 (EAWS), 2025/26 avalanche.report | `schnee-archiv kaernten 2025-11-01` |
 | SLF | 15.11.2023 | `schnee-archiv slf` |
 | AINEVA | 15.12.2021 | `schnee-archiv aineva` |
+| ERA5-Land (Schneefall, ganzer Alpenraum) | 1950 | `schnee-archiv era5-land 2000-11-01` (je Monat eine Anfrage; die CDS-Warteschlange braucht je Anfrage einige Minuten, 25 Winter also rund einen Tag) |
 
 Nur Tage vom 1. November bis 31. Mai, höchstens eine Anfrage je Sekunde, nach jedem Tag gespeichert. Ein
 Abbruch schadet nicht: Beim nächsten Start werden vorhandene Tage übersprungen. Grobe Dauer: Euregio etwa
@@ -61,7 +71,7 @@ bei der Quelle (ab 1900, 1775, 1961) und können jederzeit nachgeholt werden.
 
 | | pro Tag | pro Jahr |
 |---|---|---|
-| Rohdateien gepackt | ca. 1 MB | ca. 0,4 GB |
+| Rohdateien gepackt (davon ERA5-Land rund 0,1 MB) | ca. 1 MB | ca. 0,4 GB |
 | Datenbank (rund 5.000 neue Messwerte am Tag; Bayern nur ein Wert je Stunde, die 10-Minuten-Werte bleiben in der Rohdatei) | ca. 1 MB | ca. 0,4 GB |
 
 Ziel aus S9: unter 2 GB pro Winter. Rohdateien gehen nie auf den Webspace.

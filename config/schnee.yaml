@@ -264,6 +264,23 @@ quellen:
     paket: 40
     url: https://dataset.api.hub.geosphere.at/v1/timeseries/historical/snowgrid_cl-v2-1d-1km?parameters=snow_depth&start={von}T00:00&end={bis}T00:00&{lat_lon}&output_format=geojson
 
+  - key: era5-land
+    name: ERA5-Land (Copernicus), Schneefall und Schneehöhe je Warnregion für den ganzen Alpenraum
+    adapter: era5_land
+    laender: [DE, AT, IT, CH, FR, SI, LI]
+    lizenz: CC BY 4.0
+    lizenz_url: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview
+    namensnennung: "Generated using Copernicus Climate Change Service information [Jahr]. Muñoz Sabater, J. (2019): ERA5-Land hourly data from 1950 to present. C3S Climate Data Store, DOI 10.24381/cds.e2161bac"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz; Nutzungsbedingungen einmal auf der Datensatzseite annehmen
+    geprueft_am: 2026-11-23
+    archiv_ab: 1950-01-01
+    uhrzeiten: [9]
+    verzug_tage: 5
+    fenster_tage: 7
+    flaeche: [48.5, 4.5, 43.0, 17.5]  # Nord, West, Süd, Ost
+    groessen: [sf, hs]
+
   - key: slf-stationen
     name: IMIS-Stationen Schweiz (SLF)
     adapter: slf_stationen
