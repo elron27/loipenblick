@@ -1,0 +1,135 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "Die Gefahrenstellen liegen an allen Expositionen oberhalb von rund 2200 m. Lawinen k\u00f6nnen vor allem in schattigen, windgesch\u00fctzten Lagen den schwachen Altschnee mitrei\u00dfen und mittlere Gr\u00f6\u00dfe erreichen. Vorsicht vor allem an Felswandf\u00fc\u00dfen und hinter Gel\u00e4ndekanten sowie in Rinnen und Mulden. Die umfangreichen Triebschneeansammlungen k\u00f6nnen vielerorts leicht ausgel\u00f6st werden.",
+        "highlights": "Triebschneeansammlungen bilden die Hauptgefahr."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "few",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "few",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "c13e42c4-f1d9-4ca7-82b0-c0d4eb004957",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": []
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-34-BL-05",
+          "name": "Alpago - Cansiglio"
+        },
+        {
+          "regionID": "IT-34-BL-06",
+          "name": "Vette Feltrine, Visentin, Grappa"
+        },
+        {
+          "regionID": "IT-34-BL-03",
+          "name": "Ansiei - Comelico"
+        },
+        {
+          "regionID": "IT-34-BL-04",
+          "name": "Cadore"
+        },
+        {
+          "regionID": "IT-34-VR-01",
+          "name": "Baldo, Lessini"
+        },
+        {
+          "regionID": "IT-34-BL-01",
+          "name": "Agordino, Zoldano"
+        },
+        {
+          "regionID": "IT-34-BL-02",
+          "name": "Ampezzo - Cadore"
+        },
+        {
+          "regionID": "IT-34-VI-01",
+          "name": "Altopiano, Pasubio, Carega"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Die Triebschneeansammlungen liegen vor allem an Schattenh\u00e4ngen in der H\u00f6he auf weichen Schichten. Die Triebschneeansammlungen sind schlecht mit dem Altschnee verbunden. <br/> Im unteren Teil der Altschneedecke sind vor allem an windgesch\u00fctzten Schattenh\u00e4ngen kantig aufgebaute Schwachschichten vorhanden. <br/> Die Schneedecke ist allgemein kleinr\u00e4umig sehr unterschiedlich. <br/> Verbreitet liegt wenig Schnee."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Veneto",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    }
+  ]
+}

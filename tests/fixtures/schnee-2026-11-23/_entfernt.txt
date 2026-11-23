@@ -1,0 +1,7 @@
+slf-caaml/eaws_2026-11-23-CH.de.json	Groesse 4.5 MB; zur Einhaltung des 50-MB-Limits geloescht (sha256 im Manifest bleibt)
+slf-caaml/eaws_2026-11-23-CH.raw.json	Groesse 2.1 MB; inhaltlich gleich dem SLF-Originalabruf aktuell_caaml_de_json.json; geloescht
+slf-caaml/bulletin-list_caaml_de_json_limit2.json	Groesse 4.2 MB (2 Berichte inkl. Geometrien); geloescht
+euregio-caaml/archive_tyrol_caaml_index.html	Verzeichnisliste 4.4 MB; geloescht, Ergebnis (1993-12-13 .. 2018-05-01) in quellen.md
+_tmp/bayern_webclient_main.js	JS-Bundle (5.2 MB) nur zur Suche nach API-Endpunkten geladen; geloescht
+dwd-klima/RR_Tageswerte_Beschreibung_Stationen.txt	Stationsliste (bei 6 MB abgeschnitten, ueberwiegend Leerzeichen-Auffuellung); geloescht, Treffer fuer Wendelstein/Berchtesgaden in quellen.md
+_tmp/ar_main.js	JS-Bundle von avalanche.report nur zur Endpunktsuche geladen; geloescht

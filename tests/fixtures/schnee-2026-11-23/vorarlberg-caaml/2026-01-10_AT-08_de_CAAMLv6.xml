@@ -1,0 +1,224 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="4c52d00d-15c6-429e-b8ac-4797da8f2cc5" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Andreas Pecl</name>
+      </person>
+    </source>
+    <region regionID="AT-08-05-01">
+      <name>Rätikon Ost</name>
+    </region>
+    <region regionID="AT-08-06">
+      <name>Silvretta West</name>
+    </region>
+    <region regionID="AT-08-05-02">
+      <name>Rätikon West</name>
+    </region>
+    <region regionID="AT-08-03-02">
+      <name>Lechquellengebirge</name>
+    </region>
+    <region regionID="AT-08-01">
+      <name>Bregenzerwaldgebirge</name>
+    </region>
+    <region regionID="AT-08-02">
+      <name>Allgäuer Alpen West</name>
+    </region>
+    <region regionID="AT-08-03-01">
+      <name>Lechtaler Alpen Vorarlberg</name>
+    </region>
+    <region regionID="AT-08-04">
+      <name>Verwallgruppe West</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>2000</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>schwacher Altschnee und frischer Triebschnee sind störanfällig</highlights>
+      <comment>Neu- und frischer Triebschnee verbinden sich nur schlecht mit der schwachen Altschneedecke. Einzelne Personen können Schneebrettlawinen im Trieb- und Altschnee auslösen. Wenn solche die gesamte Schneedecke mitreissen können sie vor allem in den neuschneereicheren Regionen auch groß werden. Gefahrenstellen sind vor allem an steilen Schattenhängen sowie in eingewehten Rinnen und Mulden aller Expositionen vorhanden. Anzahl und Umfang der Gefahrenstellen nehmen mit der Seehöhe zu. Aktivitäten abseits gesicherter Bereiche erfordern defensives Verhalten.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es gibt verbreitet 15 bis 30 cm, im Verwall und Lechquellengebirge auch bis 50 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegen auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht. Die Altschneedecke ist ungünstig aufgebaut.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit weiterem Neuschnee und Wind steigt die Lawinengefahr auf Sonntag deutlich an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="cf7431bf-5f6e-4af5-8de6-44433754b9b2" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Andreas Pecl</name>
+      </person>
+    </source>
+    <region regionID="AT-08-07">
+      <name>Voralpenbereich</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>oberhalb der Waldgrenzen Anstieg der Lawinengefahr</highlights>
+      <comment>Frischer Triebschnee und schwacher Altschnee sind störanfällig. Einzelne Wintersportler können kleine bis mittlere Schneebrettlawinen auslösen. Gefahrenstellen liegen vor allem oberhalb der Waldgrenzen in eingewehten Rinnen und Mulden sowie im extremen Steilgelände. Nebst der Verschüttungsgefahr sollte vor allem die Mitreiß- und Absturzgefahr beachtet werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es gibt verbreitet 15 bis 30 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegt auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit weiterem Neuschnee und Wind auf Sonntag steigt die Lawinengefahr an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <customData>
+    <ALBINA>
+      <generalHeadline>mit Neuschnee und Wind in höheren Lagen oft erhebliche Lawinengefahr</generalHeadline>
+    </ALBINA>
+  </customData>
+</bulletins>

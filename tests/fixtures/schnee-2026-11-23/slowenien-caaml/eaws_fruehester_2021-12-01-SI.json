@@ -1,0 +1,743 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "SI1"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T00:00:00+01:00",
+        "endTime": "2021-12-01T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI1"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI2"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T00:00:00+01:00",
+        "endTime": "2021-12-01T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI2"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI3"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T00:00:00+01:00",
+        "endTime": "2021-12-01T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI3"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI4"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T00:00:00+01:00",
+        "endTime": "2021-12-01T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI4"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI5"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T00:00:00+01:00",
+        "endTime": "2021-12-01T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI5"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI1"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T12:00:00+01:00",
+        "endTime": "2021-12-01T23:59:59.999000+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI1_PM",
+      "predecessor_id": "BulletinSiID-SI1"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI2"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T12:00:00+01:00",
+        "endTime": "2021-12-01T23:59:59.999000+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI2_PM",
+      "predecessor_id": "BulletinSiID-SI2"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI3"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T12:00:00+01:00",
+        "endTime": "2021-12-01T23:59:59.999000+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI3_PM",
+      "predecessor_id": "BulletinSiID-SI3"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI4"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T12:00:00+01:00",
+        "endTime": "2021-12-01T23:59:59.999000+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI4_PM",
+      "predecessor_id": "BulletinSiID-SI4"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "SI5"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T12:00:00+01:00",
+        "endTime": "2021-12-01T23:59:59.999000+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "dangerRating": {
+            "elevation": {
+              "upperBound": "3000"
+            },
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "new_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T08:17:34+01:00",
+      "wxSynopsisComment": "Danes se bo poobla\u010dilo, popoldne in zve\u010der se bodo za\u010dele pojavljati manj\u0161e padavine na zahodu. Pono\u010di se bodo padavine na zahodu krepile. Meja sne\u017eenja bo sprva med 700 in 1000 m nadmorske vi\u0161ine, pono\u010di se bo \u0161e nekoliko dvignila. Pihal bo mo\u010dan jugozahodnik, ki bo popoldne po\u010dasi slabel.\nDo jutri zjutraj bodo padavine dosegle tudi vzhodni del na\u0161ih gora. Jutri bo obla\u010dno in megleno s padavinami, ki jih bo najve\u010d na jugozahodu dr\u017eave, manj pa na severu. Meja sne\u017eenja se bo popoldne spu\u0161\u010dala in zve\u010der ter v no\u010di na petek bo sne\u017eilo tudi marsikje po ni\u017einah. Popoldne bo zapihal severovzhodnik.\nDo petka zjutraj bodo padavine ponehale, \u010dez dan se bo delno zjasnilo. Pihal bo okrepljen severni veter. Temperatura v hribih bo pod ni\u010dlo.\nV soboto bo suho vreme, v no\u010di na nedeljo pa bodo spet padavine, amanj kot v \u010detrtek.",
+      "snowpackStructureComment": "V torek je bilo \u0161e mrzlo, do danes pa se je otoplilo in sneg, ki je zapadel ob koncu tedna, se je za\u010del sesedati in preobra\u017eati. Jugozahodni veter dela nove zamete. Vetru izpostavljene lege so mo\u010dno spihane, zaradi vetra je nastala tudi skorja, ki ponekod dr\u017ei \u010dlove\u0161ko te\u017eo. Veliko je klo\u017e. V zati\u0161nih legah je sneg mehak in se globoko predira.\n                Sne\u017ena odeja se bo danes nekoliko sesedla, jugozahodnik bo delal nove zamete. V \u010detrtek in v no\u010di na petek bo v hribih in gorah zapadlo od 10 do okoli 40 cm snega. Koli\u010dina bo seveda odvisna od nadmorske vi\u0161ine, pa tudi od geografske lege. Tokrat bo nekoliko manj snega zapadlo v Julijskih Alpah in zahodnih Karavankah, predvidoma do 40 cm, ve\u010d pa v osrednjem delu na\u0161ih gora, spet nekoliko manj v vzhodnih Karavankah. Nad okoli 1500 m bo sneg \u017ee na za\u010detku ve\u010dinoma suh, ni\u017eje pa moker. Veter bo ob sne\u017eenju delal nove zamete in opasti, sprva predvsem na vzhodnih, nato na ju\u017enih in zahodnih straneh grebenov in sedel. Ni\u017eje, kjer bo sprva de\u017eevalo, se bo sneg talil, s strmih travnatih pobo\u010dij se bodo lahko spro\u017eili posamezni talni plazovi mokrega snega. Vi\u0161je se bo nevarnost plazov ohranila predvsem zaradi novih klo\u017e, sprva pa tudi zaradi novega snega, ki se bo lahko plazil s strmih pobo\u010dij. Ob koncu tedna bo v gorah mrzlo, zato se plazovne razmere ne bodo kaj dosti izbolj\u0161ale.",
+      "avalancheActivityHighlights": null,
+      "avalancheActivityComment": "Nevarnost sne\u017enih plazov je v nadmorskih vi\u0161inah nad okoli 1800 m ZNATNA, 3. stopnje, ni\u017eje pa ve\u010dinoma ZMERNA, 2. stopnje. Nevarna so predvsem mesta z napihanim snegom, kjer lahko na strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eite klo\u017easti plaz, na manj strmih pobo\u010djih pa le ob veliki dodatni obremenitvi sne\u017ene odeje. Spontano plazenje je malo verjetno. Napihan sneg je na vseh straneh.",
+      "bulletinID": "BulletinSiID-SI5_PM",
+      "predecessor_id": "BulletinSiID-SI5"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-11T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-11T15:00:00Z",
+      "endTime" : "2026-04-12T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Florian Herla"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht Durchzug von hohen und teils mittelhohen Wolkenfeldern. In den südöstlichen Gebieten voraussichtlich etwas bessere Abstrahlung. Föhnig und vormittags vom Lechquellengebirge südwärts noch überwiegend sonnig, teils aber recht windig. Tagsüber quillt es stärker, viele Berge geraten in Haufenwolken und die Neigung zu gewittrigen Schauern steigt später am Tag an. Temperatur in 2000 m: 3 bis 7 Grad, in 3000 m um 0 Grad. Höhenwind: mäßig bis lebhaft aus Süd bis Südost."
+    },
+    "avalancheActivity" : {
+      "highlights" : "In Abhängigkeit von nächtlicher Bewölkung von früh weg erhöhte Nassschneegefahr",
+      "comment" : "Die Gefahr von nassen Lawinen ist bereits ab den Morgenstunden erhöht, insbesondere in sehr steilen Hängen im Nordsektor zwischen 1800--2400 m und dort wo die nächtliche Abstrahlung durch Bewölkung eingeschränkt war. Mit tageszeitlicher Erwärmung und Sonneneinstrahlung steigt die Lawinengefahr rasch weiter an. Dies an allen Expositionen unter 2400 m sowie an sehr steilen Sonnenhängen in der Höhe. Spontane Lawinen sind zu erwarten und Personen können nasse Schneebretter auslösen. Lawinen können groß werden bzw. in ihrer Sturzbahn mehr nassen Schnee mitreißen und große Lauflängen erreichen. Touren sollten früh gestartet und rechtzeitig beendet werden.\n\nIm Hochgebirge können kleinräumige, kammnahe Triebschneeansammlungen schattseitig noch störanfällig sein. Zudem können Wintersportler stellenweise Lawinen in oberflächennahen Schwachschichten hochgelegener Schattenhänge auslösen. Solche Gefahrenstellen sind kaum zu erkennen.\n\nAuf der harten Schneeoberfläche besteht im Steilgelände Absturzgefahr."
+    },
+    "snowpackStructure" : {
+      "comment" : "Nach teils reduzierter nächtlicher Abstrahlung und milder Temperaturen gefriert die Schneedecke nur knapp. In einem Höhenband zwischen etwa 1800--2400 m ist die Schneedecke auch im Nordsektor durchnässt und der bodennahe Schwimmschnee bereits ab den Morgenstunden störanfällig. Im hochgelegenen, schattseitigen Steilgelände befinden sich ungünstige Zwischenschichten im obersten Meter der Schneedecke, die stellenweise gestört werden können. Ein mächtiger Mittelteil aus kompakten Schichten überdeckt eine Basis aus Tiefenreif und kantigen Kristallen."
+    },
+    "tendency" : [ {
+      "highlights" : "Bis einschließlich Montag weiterhin milde Temperaturen bei stark bewölkter Nacht. Die Schneedecke kann sich über Nacht nicht verfestigen.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-04-12T15:00:00Z",
+        "endTime" : "2026-04-13T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-12"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "upperBound" : "2400"
+      },
+      "validTimePeriod" : "earlier",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "SE", "S", "SW", "W", "NE", "N" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2400"
+      },
+      "validTimePeriod" : "earlier",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "W", "NE", "N" ]
+    }, {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "upperBound" : "3000"
+      },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "SE", "SW", "S", "W", "NE", "N" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2400"
+      },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "W", "NE", "N" ]
+    } ],
+    "bulletinID" : "26be2b12-5b7c-4b11-ab48-bb2016516855",
+    "dangerRatings" : [ {
+      "mainValue" : "moderate",
+      "validTimePeriod" : "earlier"
+    }, {
+      "mainValue" : "considerable",
+      "elevation" : {
+        "upperBound" : "3000"
+      },
+      "validTimePeriod" : "later"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "3000"
+      },
+      "validTimePeriod" : "later"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Rätikon Ost",
+      "regionID" : "AT-08-05-01"
+    }, {
+      "name" : "Rätikon West",
+      "regionID" : "AT-08-05-02"
+    }, {
+      "name" : "Silvretta West",
+      "regionID" : "AT-08-06"
+    }, {
+      "name" : "Lechquellengebirge",
+      "regionID" : "AT-08-03-02"
+    }, {
+      "name" : "Allgäuer Alpen West",
+      "regionID" : "AT-08-02"
+    }, {
+      "name" : "Lechtaler Alpen Vorarlberg",
+      "regionID" : "AT-08-03-01"
+    }, {
+      "name" : "Verwallgruppe West",
+      "regionID" : "AT-08-04"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-11T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-11T15:00:00Z",
+      "endTime" : "2026-04-12T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Florian Herla"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht Durchzug von hohen und teils mittelhohen Wolkenfeldern, die sich in den frühen Morgenstunden stark verdichten. Einzelne Regenschauer sind möglich. Temperatur in 2000 m: 3 bis 7 Grad, in 3000 m um 0 Grad. Höhenwind: mäßig bis lebhaft aus Süd bis Südost."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Ganztags Nassschneegefahr",
+      "comment" : "Die Schneedecke gefriert kaum und weicht schon am Vormittag auf. Spontane und durch Personen ausgelöste Nassschneelawinen sind möglich, bleiben aber meist mittelgroß.\n\nAn noch nicht entladenen, schneereicheren Steilhängen mit glattem Untergrund können sich in allen Expositionen Gleitschneelawinen lösen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die nächtliche Abstrahlung ist stark eingeschränkt und somit verfestigt sich die Schneedecke kaum. Sie ist in allen Höhen und Expositionen stark durchnässt."
+    },
+    "tendency" : [ {
+      "highlights" : "Die Situation ändert sich vorerst nicht. Foranschreitende Ausaperung.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-12T15:00:00Z",
+        "endTime" : "2026-04-13T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-12"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "W", "N", "SE", "NE", "E" ]
+    } ],
+    "bulletinID" : "d0a8cec9-09e8-43b1-8c82-a2562e85f901",
+    "dangerRatings" : [ {
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Bregenzerwaldgebirge",
+      "regionID" : "AT-08-01"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-11T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-11T15:00:00Z",
+      "endTime" : "2026-04-12T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Florian Herla"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht Durchzug von hohen und teils mittelhohen Wolkenfeldern, die sich in den frühen Morgenstunden stark verdichten. Einzelne Regenschauer sind möglich. Temperatur in 2000 m: 3 bis 7 Grad, in 3000 m um 0 Grad. Höhenwind: mäßig bis lebhaft aus Süd bis Südost."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Kleine Nassschneerutsche möglich",
+      "comment" : "Es können sich vor allem in extrem steilem Gelände nasse Lockerschneelawinen von selbst lösen. Lawinen bleiben meist klein."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die Südseiten sind weitgehend ausgeapert. Wo eine Schneedecke existiert, ist sie stark durchnässt."
+    },
+    "tendency" : [ {
+      "highlights" : "Foranschreitende Ausaperung.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-12T15:00:00Z",
+        "endTime" : "2026-04-13T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-12"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "N", "SE", "W", "NE", "E" ]
+    } ],
+    "bulletinID" : "3a41f9e0-1420-4c04-946f-8d533753af91",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Voralpenbereich",
+      "regionID" : "AT-08-07"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Nächtliche Abstrahlung teils reduziert"
+    }
+  }
+}

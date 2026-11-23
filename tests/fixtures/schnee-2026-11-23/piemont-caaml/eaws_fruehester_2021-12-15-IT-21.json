@@ -1,0 +1,445 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VB-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-VB-03_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VB-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-VB-02_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VB-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-VB-01_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VC-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-VC-01_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-TO-03_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-TO-01_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-TO-04_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-TO-02_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-CN-03_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-CN-01_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-CN-02_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-CN-04_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-15T00:00:00",
+      "bulletinID": "IT-21-CN-05_2021-12-15T15:12:01.737871+01:00"
+    }
+  ]
+}

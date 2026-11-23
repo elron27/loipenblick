@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /area-riservata/
+Disallow: /area-istituzionale-aineva/
+Disallow: /rilievi/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://aineva.it/sitemap.xml

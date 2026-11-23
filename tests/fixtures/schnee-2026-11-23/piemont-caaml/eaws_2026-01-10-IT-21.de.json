@@ -1,0 +1,364 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "Der F\u00f6hn hat den Neuschnee und teilweise auch Altschnee verfrachtet. In den letzten Tagen wuchsen die Triebschneeansammlungen an. Die schon etwas \u00e4lteren Triebschneeansammlungen sind \u00fcberschneit und damit kaum mehr erkennbar. <br/> Die Triebschneeansammlungen k\u00f6nnen von einzelnen Wintersportlern ausgel\u00f6st werden. Dies vor allem in Kammlagen, Rinnen und Mulden in den Niederschlagsgebieten. Lawinen k\u00f6nnen teilweise im Altschnee anbrechen und recht gro\u00df werden. <br/> In den F\u00f6hngebieten sind die Gefahrenstellen h\u00e4ufiger. <br/> Wummger\u00e4usche und Risse beim Betreten der Schneedecke sind deutliche Zeichen eines schwachen Schneedeckenaufbaus. <br/> <br/> Eine vorsichtige Routenwahl und Entlastungsabst\u00e4nde werden empfohlen.",
+        "highlights": "Die frischen Triebschneeansammlungen k\u00f6nnen leicht ausgel\u00f6st werden."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "W",
+            "NE",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "NE",
+            "SE",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "frequency": "some",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "682fec82-58f3-4ef6-82c8-4e5d6c866e06",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6",
+            "DP1"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-21-VB-03",
+          "name": "Alpi Lepontine Sud"
+        },
+        {
+          "regionID": "IT-21-TO-01",
+          "name": "Alpi Graie di confine"
+        },
+        {
+          "regionID": "IT-21-TO-04",
+          "name": "Alpi Cozie"
+        },
+        {
+          "regionID": "IT-21-TO-05",
+          "name": "IT-21-TO-05"
+        },
+        {
+          "regionID": "IT-21-TO-02",
+          "name": "Alpi Cozie Nord di confine"
+        },
+        {
+          "regionID": "IT-21-TO-03",
+          "name": "Alpi Graie"
+        },
+        {
+          "regionID": "IT-21-VC-01",
+          "name": "Alpi Pennine"
+        },
+        {
+          "regionID": "IT-21-VB-01",
+          "name": "Alpi Pennine di confine"
+        },
+        {
+          "regionID": "IT-21-VB-02",
+          "name": "Alpi Lepontine Nord"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "In den letzten zwei Tagen fielen verbreitet 15 bis 25 cm Schnee, lokal auch mehr. Der Nordwestwind hat den Neuschnee und teilweise auch Altschnee verfrachtet. Seit Donnerstag, 8. Januar entstanden an allen Expositionen Triebschneeansammlungen. <br/> Es liegen je nach Windeinfluss sehr unterschiedliche Schneeh\u00f6hen. In der Altschneedecke sind an Schattenh\u00e4ngen grobk\u00f6rnige Schwachschichten vorhanden."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Piemonte",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Bis am Nachmittag bl\u00e4st der Wind vor allem in den F\u00f6hngebieten stark bis st\u00fcrmisch.",
+          "tendencyType": "steady",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Der Wind bl\u00e4st in den F\u00f6hngebieten stark bis st\u00fcrmisch. Lokal wenig Neuschnee. <br/> Vor allem in Rinnen, Mulden und hinter Gel\u00e4ndekanten entstehen teils leicht ausl\u00f6sbare Triebschneeansammlungen. Schon einzelne Skifahrer k\u00f6nnen stellenweise Lawinen ausl\u00f6sen. Die frischen Triebschneeansammlungen sind meist klein aber kritisch zu beurteilen. <br/> Zudem entstanden v.a. in Kammlagen und im Hochgebirge harte Triebschneeansammlungen. Diese k\u00f6nnen vor allem in ihren Randbereichen vor allem mit gro\u00dfer Belastung ausgel\u00f6st werden und vereinzelt gro\u00df werden.",
+        "highlights": "Vorsicht vor frischem und \u00e4lterem Triebschnee. Entlastungsabst\u00e4nde werden empfohlen."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "W",
+            "NE",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "NE",
+            "SE",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "32ba2c0d-c1ae-49ac-a319-69a98014c717",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6",
+            "DP1"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-21-CN-04",
+          "name": "Alpi Marittime Orientali"
+        },
+        {
+          "regionID": "IT-21-CN-05",
+          "name": "Alpi Liguri"
+        },
+        {
+          "regionID": "IT-21-CN-03",
+          "name": "Alpi Cozie Sud"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "In den letzten zwei Tagen fielen verbreitet 5 bis 10 cm Schnee, lokal auch mehr. Der Nordwestwind hat den Neuschnee und teilweise auch Altschnee verfrachtet. Seit Donnerstag, 8. Januar entstanden an allen Expositionen Triebschneeansammlungen. <br/> Frische und \u00e4ltere Triebschneeansammlungen liegen oberhalb der Waldgrenze auf einer ung\u00fcnstigen Altschneeoberfl\u00e4che. In der Altschneedecke sind an Schattenh\u00e4ngen grobk\u00f6rnige Schwachschichten vorhanden."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Piemonte",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Bis am Nachmittag bl\u00e4st der Wind verbreitet stark.",
+          "tendencyType": "steady",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Der Nordwestwind hat den lockeren Altschnee verfrachtet. Die harten Triebschneeansammlungen k\u00f6nnen v.a. an sehr steilen Nordost-, Ost- und S\u00fcdosth\u00e4ngen und allgemein in mittleren und hohen Lagen ausgel\u00f6st werden. Frische und \u00e4ltere Triebschneeansammlungen entstanden v.a. in Kammlagen, Rinnen und Mulden. <br/> Entlastungsabst\u00e4nde und Einzelabfahrten werden empfohlen. <br/> <br/> V.a. unterhalb von rund 1800 m sind vereinzelt Gleitschneelawinen m\u00f6glich. Vorsicht in H\u00e4ngen mit Gleitschneerissen.",
+        "highlights": "Die frischen und schon etwas \u00e4lteren Triebschneeansammlungen bilden die Hauptgefahr."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "11335bb5-6a7e-4bdb-ac15-52d1810ba13e",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6",
+            "DP2"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-21-CN-01",
+          "name": "Alpi Cozie Sud di confine"
+        },
+        {
+          "regionID": "IT-21-CN-02",
+          "name": "Alpi Marittime Occidentali"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Es war kalt. Die Schneedecke ist aufbauend umgewandelt. <br/> Zudem entstanden v.a. in Kammlagen und im Hochgebirge harte Triebschneeansammlungen. Mit tiefen Temperaturen und teils starkem Nordwestwind wuchsen die Triebschneeansammlungen in den letzten Tagen an. <br/> <br/> Besonders in hohen Lagen und im Hochgebirge liegen je nach Windeinfluss sehr unterschiedliche Schneeh\u00f6hen. <br/>"
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Piemonte",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "tendencyType": "steady",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "V.a. aus hoch gelegenen Einzugsgebieten muss mit spontanen gro\u00dfen Lawinen gerechnet werden, die bis in die T\u00e4ler vorsto\u00dfen. Sie k\u00f6nnen oberhalb von rund 2300 m in den verschiedenen Neu- und Triebschneeschichten anrei\u00dfen. <br/> Die Triebschneeansammlungen werden auf ung\u00fcnstige Schichten abgelagert. Sie sind vorsichtig zu beurteilen. <br/> Einzelne Tourengeher k\u00f6nnen Lawinen ausl\u00f6sen.",
+        "highlights": "Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gel\u00e4nde. <br/> Die Gefahr von spontanen Lawinen nimmt allm\u00e4hlich ab."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 4,
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "frequency": "some",
+          "snowpackStability": "very_poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "new_snow",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "89c17126-fd39-47c4-845d-7f31b61c9f48",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-11-23"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "upperBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "high",
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-11-22T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-23-AO-22",
+          "name": "D - VAL VENY"
+        },
+        {
+          "regionID": "IT-23-AO-16",
+          "name": "D - VALGRISENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-14",
+          "name": "D - VAL FERRET"
+        },
+        {
+          "regionID": "IT-23-AO-15",
+          "name": "D - VALLE DI LA THUILE"
+        },
+        {
+          "regionID": "IT-23-AO-18",
+          "name": "D - GRAN SAN BERNARDO OLLOMONT"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Oberhalb von rund 2200 m liegen 80 bis 140 cm Schnee, lokal bis zu 170 cm, besonders oberhalb von rund 2600 m. <br/> Besonders an sehr steilen H\u00e4ngen sind mehrere mittlere trockene Lawinen abgegangen. <br/> Mit teils starkem Nordwestwind entstanden am Sonntag frische Triebschneeansammlungen. Die Schneedecke wird teilweise instabil. <br/> Der untere Teil der Schneedecke ist feucht, vor allem unterhalb von rund 2300 m."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Valle d'Aosta",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Die Gefahr spontaner Lawinen wird allm\u00e4hlich abnehmen.",
+          "tendencyType": "decreasing",
+          "validTime": {
+            "startTime": "2026-11-23T23:00:00+00:00",
+            "endTime": "2026-11-24T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-11-22T23:00:00+00:00",
+        "endTime": "2026-11-23T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "V.a. aus hoch gelegenen Einzugsgebieten muss mit spontanen gro\u00dfen Lawinen gerechnet werden, die bis in tiefe Lagen vorsto\u00dfen. Sie k\u00f6nnen oberhalb von rund 2300 m in den verschiedenen Neu- und Triebschneeschichten anrei\u00dfen. <br/> Die Triebschneeansammlungen werden auf ung\u00fcnstige Schichten abgelagert. Sie sind und vorsichtig zu beurteilen. <br/> Einzelne Tourengeher k\u00f6nnen Lawinen ausl\u00f6sen. In Kammlagen, Rinnen und Mulden und an Felswandf\u00fc\u00dfen ist die Ausl\u00f6sebereitschaft h\u00f6her.",
+        "highlights": "Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gel\u00e4nde. <br/> Der Neuschnee sowie die Triebschneeansammlungen bilden die Hauptgefahr."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "new_snow",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "f9690f40-2b2f-4849-99f1-5f724db01d9e",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-11-23"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "upperBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-11-22T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-23-AO-20",
+          "name": "D - CERVINIA E ALTA VALPELLINE"
+        },
+        {
+          "regionID": "IT-23-AO-01",
+          "name": "A - SAINT-PIERRE SAINT-NICHOLAS"
+        },
+        {
+          "regionID": "IT-23-AO-13",
+          "name": "C - VALSAVARENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-21",
+          "name": "C - VAL DI RHEMES"
+        },
+        {
+          "regionID": "IT-23-AO-17",
+          "name": "D - LA SALLE MORGEX"
+        },
+        {
+          "regionID": "IT-23-AO-19",
+          "name": "D - BASSA E MEDIA VALPELLINE"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Oberhalb von rund 2200 m liegen 60 bis 100 cm Schnee, besonders oberhalb von rund 2500 m. <br/> Besonders an sehr steilen H\u00e4ngen sind mehrere mittlere trockene Lawinen abgegangen. <br/> Mit teils starkem Nordwestwind entstanden am Sonntag frische Triebschneeansammlungen. Die Schneedecke wird teilweise instabil. <br/> Der untere Teil der Schneedecke ist feucht, vor allem unterhalb von rund 2300 m."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Valle d'Aosta",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Die Gefahr spontaner Lawinen wird allm\u00e4hlich abnehmen.",
+          "tendencyType": "decreasing",
+          "validTime": {
+            "startTime": "2026-11-23T23:00:00+00:00",
+            "endTime": "2026-11-24T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-11-22T23:00:00+00:00",
+        "endTime": "2026-11-23T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Mit Neuschnee und Wind sind im Tagesverlauf spontane Lawinen m\u00f6glich, aber diese k\u00f6nnen teils mittlere Gr\u00f6\u00dfe erreichen. Sie k\u00f6nnen oberhalb von rund 2300 m in den verschiedenen Neu- und Triebschneeschichten anrei\u00dfen. <br/> Die Triebschneeansammlungen werden auf ung\u00fcnstige Schichten abgelagert. Sie sind und vorsichtig zu beurteilen. <br/> Einzelne Tourengeher k\u00f6nnen Lawinen ausl\u00f6sen. In Kammlagen, Rinnen und Mulden und an Felswandf\u00fc\u00dfen ist die Ausl\u00f6sebereitschaft h\u00f6her.",
+        "highlights": "Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gel\u00e4nde. <br/> Die Triebschneeansammlungen bilden die Hauptgefahr."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "new_snow",
+          "aspects": [
+            "E",
+            "SE",
+            "W",
+            "NW",
+            "N",
+            "S",
+            "SW",
+            "NE"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "frequency": "few",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "b5e1e96d-f809-4f6a-b21b-2317d22d78b5",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-11-23"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": []
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-11-22T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-23-AO-23",
+          "name": "A - TESTATA SAINT-BARTHELEMY"
+        },
+        {
+          "regionID": "IT-23-AO-12",
+          "name": "C - VAL DI COGNE AYMAVILLES"
+        },
+        {
+          "regionID": "IT-23-AO-24",
+          "name": "A - VALTOURNENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-02",
+          "name": "A - INTROD ARVIER"
+        },
+        {
+          "regionID": "IT-23-AO-10",
+          "name": "B - CHAMPDEPRAZ MONTE AVIC"
+        },
+        {
+          "regionID": "IT-23-AO-11",
+          "name": "B - VALLE DI CHAMPORCHER"
+        },
+        {
+          "regionID": "IT-23-AO-05",
+          "name": "A - BASSA VALTOURNENCHE CHATILLON"
+        },
+        {
+          "regionID": "IT-23-AO-06",
+          "name": "B - ALTA VALLE DI GRESSONEY"
+        },
+        {
+          "regionID": "IT-23-AO-25",
+          "name": "B - TESTATA VAL D'AYAS SAINT-JACQUES"
+        },
+        {
+          "regionID": "IT-23-AO-03",
+          "name": "A - QUART NUS"
+        },
+        {
+          "regionID": "IT-23-AO-26",
+          "name": "A - PONTEY"
+        },
+        {
+          "regionID": "IT-23-AO-04",
+          "name": "A - POLLEIN SAINT MARCEL"
+        },
+        {
+          "regionID": "IT-23-AO-09",
+          "name": "B - VALLI DI GRESSONEY, AYAS, CHAMPORCHER"
+        },
+        {
+          "regionID": "IT-23-AO-07",
+          "name": "B - MEDIA VAL D'AYAS BRUSSON"
+        },
+        {
+          "regionID": "IT-23-AO-08",
+          "name": "B - MEDIA VALLE DEL LYS"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Oberhalb von rund 2000 m liegen 20 bis 50 cm Schnee. <br/> Mit teils starkem Nordwestwind entstanden am Samstag frische Triebschneeansammlungen. Die Schneedecke wird teilweise instabil. <br/> Der untere Teil der Schneedecke ist feucht, vor allem unterhalb von rund 2300 m. <br/> In tiefen und mittleren Lagen liegt nur wenig Schnee."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Valle d'Aosta",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Die Gefahr spontaner Lawinen wird allm\u00e4hlich abnehmen.",
+          "tendencyType": "decreasing",
+          "validTime": {
+            "startTime": "2026-11-23T23:00:00+00:00",
+            "endTime": "2026-11-24T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-11-22T23:00:00+00:00",
+        "endTime": "2026-11-23T23:00:00+00:00"
+      }
+    }
+  ]
+}

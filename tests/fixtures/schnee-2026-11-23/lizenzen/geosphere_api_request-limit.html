@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Limit &mdash; Dataset API Documentation v1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=7d041694" />
+
+  
+    <link rel="shortcut icon" href="../_static/icon.svg"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5cb08e4e"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="OpenApi Specification" href="openapi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo_negative_lime.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Dataset API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="authentication.html">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="endpoints.html">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type.html">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mode.html">Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openapi.html">OpenApi Specification</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Request Limit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#request-rate-limit">Request Rate Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#request-size-limit">Request Size Limit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dataset API Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Request Limit</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Geosphere-Austria/dataset-api-docs/blob/main/src/user-guide/request-limit.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="request-limit">
+<span id="id1"></span><h1>Request Limit<a class="headerlink" href="#request-limit" title="Link to this heading"></a></h1>
+<p>Requests are limited at the rate at which requests can be sent and in the size of the data is requested.</p>
+<section id="request-rate-limit">
+<span id="id2"></span><h2>Request Rate Limit<a class="headerlink" href="#request-rate-limit" title="Link to this heading"></a></h2>
+<p>A users requests are limited to <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">requests</span> <span class="pre">per</span> <span class="pre">second</span></code> and <code class="docutils literal notranslate"><span class="pre">240</span> <span class="pre">requests</span> <span class="pre">per</span> <span class="pre">hour</span></code>.</p>
+<p>You can also check the response header for the rate limit, the remaining number of requests until that limit is hit and the duration until the rate limit is reset:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x-ratelimit-limit-hour</span></code> the hourly rate limit,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x-ratelimit-limit-second</span></code> the rate limit per second,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x-ratelimit-remaining-second</span></code> the remaining requests per second</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x-ratelimit-remaining-hour</span></code> the remaining requests per hour,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ratelimit-reset</span></code> seconds until the rate limit is reset.</p></li>
+</ul>
+<p>The server responses with status code 429 when the rate limit is exceeded.</p>
+</section>
+<section id="request-size-limit">
+<span id="id3"></span><h2>Request Size Limit<a class="headerlink" href="#request-size-limit" title="Link to this heading"></a></h2>
+<p>A request size limit is enforced. When the request format is <code class="docutils literal notranslate"><span class="pre">JSON</span></code> or <code class="docutils literal notranslate"><span class="pre">CSV</span></code> the limit is 1000000 values, when
+requesting NetCDF files the limit is 10000000 values.</p>
+<p>The request size is calculated by <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">parameters</span></code> * <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">time</span> <span class="pre">steps</span></code> *  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">locations</span></code>.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li><p>Given a data source with 15 minute temporal resolution the request for 2 parameters for a 6-hour interval from 3
+stations will result in a request size of</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">144</span>
+</pre></div>
+</div>
+</li>
+<li><p>Given a data source with 1 hour temporal resolution and 1 by 1 km spatial resolution the request for 12 parameters
+for a 24-hour interval on a 6 * 8 km grid results in a request size of</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span> <span class="o">=</span> <span class="mi">13824</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The request size is calculated before the request is processed.</p>
+</div>
+<p>Because the request size is calculated before the request is processed missing values are included in the calculation
+count. Therefore, a request may hit the request size limit even if no values for the requested range exist. For example
+the request
+<code class="docutils literal notranslate"><span class="pre">v1/station/historical/tawes-v1-10min?station_ids=11072&amp;parameters=TL&amp;parameters=TLMIN&amp;parameters=TLMAX&amp;start=1990-01-01&amp;end=2000-01-01</span></code>
+requesting multiple parameters for the 1990s for TAWES station <code class="docutils literal notranslate"><span class="pre">11072</span></code> (<em>Neusiedl am See</em>) will say the request is too big
+even if the station only went into service in 2016.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The request response header <em>datapoint-count</em> returns the request size in number of requested datapoints.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="openapi.html" class="btn btn-neutral float-left" title="OpenApi Specification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Geosphere Austria.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

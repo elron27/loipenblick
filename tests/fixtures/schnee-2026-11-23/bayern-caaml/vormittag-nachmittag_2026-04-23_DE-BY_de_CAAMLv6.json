@@ -1,0 +1,178 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-22T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-22T15:00:00Z",
+      "endTime" : "2026-04-23T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Bayern"
+      }
+    },
+    "avalancheActivity" : {
+      "highlights" : "Absturzgefahr auf hartgefrorenen Schneeoberflächen am Morgen und ganztags im Schatten.",
+      "comment" : "Die Lawinengefahr steigt im Tagesverlauf oberhalb von 1600 m auf mäßig an, ansonsten ist sie gering. Nassschnee ist das Problem. Auf wenigen Steilhängen mit glattem Untergrund, wie auf Wiesenhängen oder Felsplatten, können Gleitschneelawinen abgehen. Zudem können sich mit dem Aufweichen der Schneedecke nasse Lockerschnee- oder Schneebrettlawinen in extrem steilem Gelände von selbst lösen oder in sehr steilem Gelände von einzelnen Personen ausgelöst werden. Die Lawinen erreichen mittlere Größe. Der Schwerpunkt der Lawinenaktivität liegt in den Mittagsstunden und am Nachmittag."
+    },
+    "snowpackStructure" : {
+      "comment" : "Mit der Abstrahlung über Nacht bildet sich ein tragfähiger Harschdeckel, der mit Erwärmung und Sonne im Tagesverlauf wieder aufweicht. Ansonsten ist die Schneedecke bis in die Hochlagen durchfeuchtet und besteht überwiegend aus Schmelzformen. Nur in nordexponierten Hängen der Hochlagen können tief in der Schneedecke vereinzelt noch Schichten aus kantigen Kristallen vorhanden sein. Nordseitig unterhalb von 1600 m und in den kompletten Südseiten liegt kaum noch Schnee."
+    },
+    "tendency" : [ {
+      "highlights" : "Keine Änderung.",
+      "validTime" : {
+        "startTime" : "2026-04-23T15:00:00Z",
+        "endTime" : "2026-04-24T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-23"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "gliding_snow",
+      "elevation" : { },
+      "validTimePeriod" : "earlier",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "glide"
+        }
+      },
+      "aspects" : [ "NW", "W", "N", "E", "NE" ]
+    }, {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "1600"
+      },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "E", "W", "NE", "N" ]
+    }, {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "upperBound" : "1600"
+      },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "E", "W", "NE", "N" ]
+    } ],
+    "bulletinID" : "2edacf94-c5b7-458e-9e47-18717d4aa70a",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "earlier"
+    }, {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "1600"
+      },
+      "validTimePeriod" : "later"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "1600"
+      },
+      "validTimePeriod" : "later"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Werdenfelser Alpen",
+      "regionID" : "DE-BY-30"
+    }, {
+      "name" : "Berchtesgadener Alpen",
+      "regionID" : "DE-BY-60"
+    }, {
+      "name" : "Allgäuer Alpen Mitte",
+      "regionID" : "DE-BY-12"
+    }, {
+      "name" : "Ammergauer Alpen Nord",
+      "regionID" : "DE-BY-20"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-22T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-22T15:00:00Z",
+      "endTime" : "2026-04-23T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Bayern"
+      }
+    },
+    "avalancheActivity" : {
+      "highlights" : "Die Schneereste sind morgens und ganztags im Schatten hart und eisig. Vorsicht Absturzgefahr!",
+      "comment" : "Die Lawinengefahr ist gering. Nassschnee kann in seltenen Fällen und am ehesten ab dem späten Vormittag problematisch sein. Vereinzelt können sich an sehr steilen Hängen mit ausreichend Schnee nasse Lockerschnee- oder auf glattem Untergrund nasse Gleitschneelawinen von selbst lösen. Lawinen bleiben meist klein."
+    },
+    "snowpackStructure" : {
+      "comment" : "Nachts bildet sich ein tragfähiger Harschdeckel, der tagsüber in der Sonne wieder aufweicht. Ansonsten ist die verbliebene Schneedecke lückig, durchnässt und besteht vollständig aus Schmelzformen. Die Südseiten sind bis auf einzelne Schneefelder in Gipfel- und Kammlagen weitestgehend schneefrei."
+    },
+    "tendency" : [ {
+      "highlights" : "Keine Änderung der Lawinengefahr.",
+      "validTime" : {
+        "startTime" : "2026-04-23T15:00:00Z",
+        "endTime" : "2026-04-24T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-23"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "N", "NE" ]
+    } ],
+    "bulletinID" : "9271310a-808d-4501-a3e4-a52d307a330a",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Chiemgauer Alpen Ost",
+      "regionID" : "DE-BY-52"
+    }, {
+      "name" : "Bayrische Voralpen West",
+      "regionID" : "DE-BY-41"
+    }, {
+      "name" : "Chiemgauer Alpen West",
+      "regionID" : "DE-BY-51"
+    }, {
+      "name" : "Allgäuer Voralpen",
+      "regionID" : "DE-BY-11"
+    }, {
+      "name" : "Bayrische Voralpen Ost",
+      "regionID" : "DE-BY-43"
+    }, {
+      "name" : "Bayrische Voralpen Mitte",
+      "regionID" : "DE-BY-42"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Klassische Frühjahrsverhältnisse: Anstieg der Lawinengefahr im Tagesverlauf."
+    }
+  }
+}

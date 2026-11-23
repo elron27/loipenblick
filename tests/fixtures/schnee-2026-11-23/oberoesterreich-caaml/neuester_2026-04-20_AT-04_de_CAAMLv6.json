@@ -1,0 +1,144 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-19T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-19T15:00:00Z",
+      "endTime" : "2026-04-20T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Oberösterreich"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Das Wetter am Montag gestaltet sich windig und wechselhaft. Viele Wolken wechseln mit Sonnenschein. Vor allem im Bereich der Kalkalpen gibt es am Nachmittag auch ein paar Schauer, die Schneefallgrenze liegt bei etwa 1200 m Seehöhe. In 1500 m hat es um 3 Grad, in 2000 m um -2 Grad. Der Nordwestwind erreicht Spitzen um etwa 40 km/h.\nAm Dienstag setzt sich das wechselhafte Wetter mit Sonnenschein, Quellwolken und ein paar Schneeschauern fort. Die Schneefallgrenze liegt bei 1000 bis 1400 m Seehöhe. In 1500 m beträgt die Temperatur um 2 Grad, in 2000 m um -4 Grad. Tagsüber frischt Nordwind auf, der Spitzen um 30 km/h erreicht."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Geringe Lawinengefahr!",
+      "comment" : "Die Lawinengefahr bleibt gering. Nur in Steilhängen höherer Lagen mit einer ausreichend mächtigen Schneedecke sind einzelne, meist kleine, selten mittlere Nassschneelawinen in allen Expositionen möglich."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die Schneedecke kann sich mit der Abkühlung oberflächig etwas festigen. Sonst ist sie bis in die Hochlagen durchnässt bzw. durchfeuchtet und generell nur wenig gefestigt. Am Nachmittag gibt es ein paar Schneeschauer. Tiefe und auch mittlere Lagen sind schon oft aper."
+    },
+    "tendency" : [ {
+      "highlights" : "In den kommenden Tagen keine wesentliche Änderung der Lawinensituation.\n\nDie Herausgabe von Lawinenberichten wird für die Saison 2025/26 beendet.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-20T15:00:00Z",
+        "endTime" : "2026-04-21T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-20"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "SE", "W", "N", "E", "NE" ]
+    } ],
+    "bulletinID" : "9b8ece16-ce32-4db4-8099-698170f2aaa5",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Kasbergblock",
+      "regionID" : "AT-04-07"
+    }, {
+      "name" : "Sengsengebirge",
+      "regionID" : "AT-04-08"
+    }, {
+      "name" : "Zimnitzmassiv, Höllengebirge",
+      "regionID" : "AT-04-05"
+    }, {
+      "name" : "Traunstein, Eibenberg",
+      "regionID" : "AT-04-06"
+    }, {
+      "name" : "Kalmberg, Katergebirge",
+      "regionID" : "AT-04-02"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-19T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-19T15:00:00Z",
+      "endTime" : "2026-04-20T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Oberösterreich"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Das Wetter am Montag gestaltet sich windig und wechselhaft. Viele Wolken wechseln mit Sonnenschein. Vor allem im Bereich der Kalkalpen gibt es am Nachmittag auch ein paar Schauer, die Schneefallgrenze liegt bei etwa 1200 m Seehöhe. In 1500 m hat es um 3 Grad, in 2000 m um -2 Grad. Der Nordwestwind erreicht Spitzen um etwa 40 km/h.\nAm Dienstag setzt sich das wechselhafte Wetter mit Sonnenschein, Quellwolken und ein paar Schneeschauern fort. Die Schneefallgrenze liegt bei 1000 bis 1400 m Seehöhe. In 1500 m beträgt die Temperatur um 2 Grad, in 2000 m um -4 Grad. Tagsüber frischt Nordwind auf, der Spitzen um 30 km/h erreicht."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Überwiegend geringe, lokal mäßige Lawinengefahr!",
+      "comment" : "Mit der Abkühlung geht die Gefahr für Nassschneelawinen allgemein zurück. Die Lawinengefahr ist überwiegend gering, teils je nach Schneelage lokal auch mäßig.  Aus nicht entladenem Steilgelände sind bei zeitweiligem Sonnenschein oder Regenschauer in höheren Lagen einzelne spontane bzw. auch durch Personen ausgelöste kleine bis mittlere Nassschneelawinen weiterhin möglich."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die Schneedecke kann sich mit der Abkühlung etwas festigen. Sonst ist sie bis in die Hochlagen durchnässt bzw. durchfeuchtet und generell nur wenig gefestigt. Am Nachmittag gibt es ein paar Schneeschauer. Nur mehr in schattseitigen Hochlagen können noch vereinzelt Schwachschichten in der Altschneedecke vorhanden sein. Tiefe und auch mittlere Lagen sind schon oft aper."
+    },
+    "tendency" : [ {
+      "highlights" : "In den kommenden Tagen keine wesentliche Änderung der Lawinensituation.\n\nDie Herausgabe von Lawinenberichten wird für die Saison 2025/26 beendet.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-20T15:00:00Z",
+        "endTime" : "2026-04-21T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-20"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "SE", "W", "N", "E", "NE" ]
+    } ],
+    "bulletinID" : "a95c75c3-661d-47db-927c-493121ea5232",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Totes Gebirge Nord",
+      "regionID" : "AT-04-03"
+    }, {
+      "name" : "Phyrgas, Haller Mauern",
+      "regionID" : "AT-04-04"
+    }, {
+      "name" : "Dachstein, Gosaukamm",
+      "regionID" : "AT-04-01"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Windig, wechselhaft und kühler - lokales Nassschneeproblem!"
+    }
+  }
+}

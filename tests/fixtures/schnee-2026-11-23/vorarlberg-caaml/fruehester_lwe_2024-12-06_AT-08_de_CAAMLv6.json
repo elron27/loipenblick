@@ -1,0 +1,154 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-12-05T17:19:21Z",
+    "validTime" : {
+      "startTime" : "2024-12-05T16:00:00Z",
+      "endTime" : "2024-12-06T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "weatherForecast" : {
+      "comment" : "Der Freitag beginnt zuerst trüb und stürmisch. Es regnet anfangs bis gegen 2000 m. In den Morgenstunden sinkt die Schneefallgrenze gegen 1300 m. Am Vormittag gibt es vorübergehend auch Auflockerungen. Danach wechselhaft und windig mit Wolken, Sonne und noch einzelnen Schauern. Temperatur in 2000 m: Rückgang von +1 auf -5 Grad, Höhenwind: Starker bis stürmischer Westwind"
+    },
+    "avalancheActivity" : {
+      "highlights" : "mit Neuschnee und Wind oberhalb der Waldgrenzen Anstieg der Lawinengefahr",
+      "comment" : "Unterhalb der Waldgrenzen ist die Lawinengefahr gering. Vereinzelte Gefahrenstellen für kleine Lawinenauslösungen (Rutsche) sind im extremen Steilgelände anzutreffen. Dabei ist neben einer Mitreiss- auch die Absturzgefahr zu beachten. Oberhalb der Waldgrenzen entstehen kleinräumig frische Triebschneeansammlungen. Solche sind störanfällig und leicht als kleine Schneebrettlawine auslösbar. Dem Lawinenwarndienst liegen erst wenige Informationen zur Schneedecke in den Regionen vor. Eine sorgfältige Beurteilung vor Ort ist zu empfehlen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es fällt wenig Neuschnee auf eine meist gut verfestigte, geringmächtige Altschneedecke. In den Hochlagen wird dieser mit zeitweise starkem bis stürmischem Wind verfrachtet. Somit entstehen untertags oberhalb der Waldgrenzen vor allem in Kamm- und Passlagen frische, meist nur kleine Triebschneeansammlungen. Solche wachsen untertags an und sind vor allem in eingewehten Rinnen und Mulden störanfällig."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Mit weiterem Neuschnee und Windeinfluss wird die Lawinengefahr am Wochenende deutlich ansteigen.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2024-12-06T16:00:00Z",
+        "endTime" : "2024-12-07T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-06"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "some",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "N", "NE", "E", "W", "SE" ]
+    } ],
+    "bulletinID" : "0b831530-ad0e-4dfe-b638-3ef95e073fbb",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Rätikon East",
+      "regionID" : "AT-08-05-01"
+    }, {
+      "name" : "Rätikon West",
+      "regionID" : "AT-08-05-02"
+    }, {
+      "name" : "Silvretta",
+      "regionID" : "AT-08-06"
+    }, {
+      "name" : "Lechquellen Mountains",
+      "regionID" : "AT-08-03-02"
+    }, {
+      "name" : "Allgäuer Alpen",
+      "regionID" : "AT-08-02"
+    }, {
+      "name" : "Lechtaler Alps",
+      "regionID" : "AT-08-03-01"
+    }, {
+      "name" : "Verwall",
+      "regionID" : "AT-08-04"
+    } ]
+  }, {
+    "publicationTime" : "2024-12-05T17:19:21Z",
+    "validTime" : {
+      "startTime" : "2024-12-05T16:00:00Z",
+      "endTime" : "2024-12-06T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "weatherForecast" : {
+      "comment" : "Der Freitag beginnt zuerst trüb und stürmisch. Es regnet anfangs bis gegen 2000 m. In den Morgenstunden sinkt die Schneefallgrenze gegen 1300 m. Am Vormittag gibt es vorübergehend auch Auflockerungen. Danach wechselhaft und windig mit Wolken, Sonne und noch einzelnen Schauern. Temperatur in 2000 m: Rückgang von +1 auf -5 Grad, Höhenwind: Starker bis stürmischer Westwind"
+    },
+    "avalancheActivity" : {
+      "highlights" : "mit Neuschnee und Wind Anstieg der Lawinengefahr",
+      "comment" : "Unterhalb der Waldgrenzen ist kein ausgeprägtes Lawinenproblem vorhanden. Vereinzelte Gefahrenstellen für kleine Lawinenauslösungen (Rutsche) sind im extremen Steilgelände anzutreffen. Dabei ist neben einer Mitreiss- auch die Absturzgefahr zu beachten. Oberhalb der Waldgrenzen entstehen kleinräumig frische Triebschneeansammlungen. Solche sind leicht auslösbar. Dem Lawinenwarndienst liegen erst wenige Informationen zur Schneedecke in den Regionen vor. Eine sorgfältige Beurteilung vor Ort ist zu empfehlen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es fällt wenig Neuschnee auf eine meist gut verfestigte, geringmächtige Altschneedecke. In den Hochlagen wird dieser mit zeitweise starkem bis stürmischem Wind verfrachtet. Somit entstehen vor allem in Kamm- und Passlagen untertags frische, meist nur kleine Triebschneeansammlungen. Solche wachsen untertags an und sind vor allem in eingewehten Rinnen und Mulden störanfällig."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Mit weiterem Neuschnee und Windeinfluss wird die Lawinengefahr am Wochenende deutlich ansteigen.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2024-12-06T16:00:00Z",
+        "endTime" : "2024-12-07T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-06"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "no_distinct_avalanche_problem",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "fair",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "N", "S", "NE", "SW", "E", "W", "SE" ]
+    } ],
+    "bulletinID" : "21aa5f35-c099-49eb-b499-6333749a0de3",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Lechtaler Alps",
+      "regionID" : "AT-08-07"
+    }, {
+      "name" : "Bregenzerwaldgebirge",
+      "regionID" : "AT-08-01"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "mit Neuschnee und Wind oberhalb der Waldgrenzen Anstieg der Lawinengefahr"
+  }
+}

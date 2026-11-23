@@ -1,0 +1,101 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-11-30T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-11-30T16:00:00Z",
+      "endTime" : "2024-12-01T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Der Sonntag bringt strahlenden Sonnenschein. Die Temperaturen steigen in allen Höhenlagen deutlich an. Der Wind weht meist nur schwach bis mäßig aus südlichen Richtungen. Die Temperaturen liegen in 2000 m bei 2 bis 4 Grad, in 3000 m bei -1 Grad. Die Nacht auf Montag verläuft sternenklar."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Einzelne Gefahrenstellen im Altschnee",
+      "comment" : "Die Lawinengefahr ist gering.\nAb etwa 2500 m können Triebschneepakete vereinzelt durch das Gewicht eines Wintersportlers ausgelöst werden, vor allem im Ostsektor. Die Absturz- und Verletzungsgefahr ist dabei allerdings größer als die Verschüttungsgefahr.\nAb etwa 2600 m besteht rein schattseitig (NW bis NO) ein kleines Altschneeproblem. Hier kann an wenigen Stellen im Steilgelände ein kleines Schneebrett mit geringer Zusatzbelastung abgehen.  \nAllgemein liegt noch sehr wenig Schnee und so geht die Hauptgefahr für Verletzungen im alpinen Raum eher vom Gelände/Untergrund (Steine, Felsen, Gletscherspalten, Latschen) aus als von Schnee und Lawinen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es liegt noch sehr wenig Schnee und sinnvolle Skitouren sind noch kaum möglich. Ab etwa 2600 m hat sich schattseitig der Septemberschnee halten können, dieser ist sehr kompakt. Zwischen Septemberschnee und Novemberschnee konnten vereinzelt kantige Kristalle gefunden werden, die als Schwachschicht dienen können. An der Oberfläche liegen in hohen und hochalpinen Lagen wenige Zentimeter Neuschnee von dieser Woche bzw. Triebschnee. Lokal kam der Triebschnee auf lockerem Schnee zu liegen."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Warten auf nennenswerte Schneemengen.",
+      "validTime" : {
+        "startTime" : "2024-12-01T16:00:00Z",
+        "endTime" : "2024-12-02T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-01"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NE", "N", "E", "S", "SE" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2600"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "NE", "N" ]
+    } ],
+    "bulletinID" : "65aaeaf1-4ed6-4535-8a1f-6a30fa38bb5c",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Großvenedigergruppe Nord",
+      "regionID" : "AT-05-11"
+    }, {
+      "name" : "Glocknergruppe Nord",
+      "regionID" : "AT-05-10"
+    }, {
+      "name" : "Goldberggruppe Nord",
+      "regionID" : "AT-05-09"
+    }, {
+      "name" : "Großvenedigergruppe Alpenhauptkamm",
+      "regionID" : "AT-05-07"
+    }, {
+      "name" : "Glocknergruppe Alpenhauptkamm",
+      "regionID" : "AT-05-06"
+    }, {
+      "name" : "Goldberggruppe Alpenhauptkamm",
+      "regionID" : "AT-05-05"
+    }, {
+      "name" : "Niedere Tauern Alpenhauptkamm",
+      "regionID" : "AT-05-04"
+    }, {
+      "name" : "Ankogelgruppe, Muhr",
+      "regionID" : "AT-05-03"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "Noch sehr wenig Schnee"
+  }
+}

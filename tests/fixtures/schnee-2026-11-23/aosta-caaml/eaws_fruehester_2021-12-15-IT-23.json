@@ -1,0 +1,914 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A01_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A02_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A03_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A04_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A05_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B06"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B06_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B07"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B07_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B08"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B08_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B09"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B09_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B10"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B10_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B11"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B11_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-C12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-C12_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-C13"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-C13_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D14"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D14_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D15"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D15_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D16"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D16_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D17"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D17_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D18"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D18_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D19"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D19_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D20"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D20_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-C21"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-C21_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-D22"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-D22_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A23"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A23_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A24"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A24_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-B25"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-B25_2021-12-15T15:12:01.737871+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-23-AO-A26"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-14T17:00:00",
+        "endTime": "2021-12-15T17:00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": []
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-14T00:00:00",
+      "bulletinID": "IT-23-AO-A26_2021-12-15T15:12:01.737871+01:00"
+    }
+  ]
+}

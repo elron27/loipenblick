@@ -1,0 +1,328 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "BYALL"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYALL"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYAMM"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYAMM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYWFK"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYWFK"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYBVA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYBVA"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYCHG"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYCHG"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYBGD"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-26T00:00:00+01:00",
+        "endTime": "2021-01-26T23:59:59+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW"
+            ]
+          },
+          "problemType": "wind_drifted_snow"
+        }
+      ],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-01-26T07:35:22+01:00",
+      "wxSynopsisComment": null,
+      "snowpackStructureComment": "The Bavarian Alps got a burst of fresh snow (20-40 cm) on Tuesday morning. Snowfall will continue on Tuesday. Strong westerly winds will generate small, trigger-sensitive snowdrifts. These layers of expansively metamorphosed crystals will be covered, making the proneness to triggering high. At higher altitudes the snowpack shows marked effects of wind, gullies and bowls are filled with drifts, combs and ridges are windblown. Icy, snow-bare surfaces are being blanketed by new drifts. At intermediate altitudes, melt-freeze crusts have formed down to about 1400 m, atop that powdery fresh snow has been deposited. On shady slopes there is still powder. Amid wintery temperatures the snowpack has consolidated, at ground level there is a slightly moist layer. At ground level above 1600 m there are weak layers of faceted crystals which have persisted, they are still prone to triggering in the eastern Bavarian Alps in particular. The coming days will be wintery. Snowdrift risks still require highest caution. Please note: ski areas are currently not being supervised or secured from avalanches.",
+      "avalancheActivityHighlights": "Caution: trigger-sensitive snowdrifts above 1500m",
+      "avalancheActivityComment": "Avalanche danger is considerable in the Bavarian Alps above 1500m. Main problem: fresh snowdrifts. The newly formed snowdrift accumulations are generally small-sized, but increase in both size and frequency with ascending altitude and can be triggered even by the weight of one single skier. The slab avalanches which are unleashed are small-to-medium sized. Avalanche prone locations are found primarily in steep ridgeline terrain in all aspects, as well as in freshly wind-loaded gullies and bowls, behind protruberances and knolls, and in forest clearances. On steep rocky slopes which have been wind-loaded in zones where recent snowfall has been heaviest, naturally triggered small, loosely-packed and slab avalanches are possible.",
+      "bulletinID": "BYCAAMLGenID3575-BYBGD"
+    }
+  ]
+}

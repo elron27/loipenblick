@@ -1,0 +1,679 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "CH-1221"
+        },
+        {
+          "regionID": "CH-1121"
+        },
+        {
+          "regionID": "CH-1231"
+        },
+        {
+          "regionID": "CH-1228"
+        },
+        {
+          "regionID": "CH-1227"
+        },
+        {
+          "regionID": "CH-1226"
+        },
+        {
+          "regionID": "CH-1225"
+        },
+        {
+          "regionID": "CH-1114"
+        },
+        {
+          "regionID": "CH-1213"
+        },
+        {
+          "regionID": "CH-1224"
+        },
+        {
+          "regionID": "CH-1312"
+        },
+        {
+          "regionID": "CH-1113"
+        },
+        {
+          "regionID": "CH-1223"
+        },
+        {
+          "regionID": "CH-1311"
+        },
+        {
+          "regionID": "CH-1112"
+        },
+        {
+          "regionID": "CH-1222"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "mainValue": "considerable",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948724",
+      "avalancheActivityComment": "As a consequence of a strong to storm force westerly wind, further wind slabs will form. Avalanches can in some cases be released easily and reach medium size. Whumpfing sounds and the formation of shooting cracks when stepping on the snowpack can indicate the danger. Backcountry touring and other off-piste activities call for experience in the assessment of avalanche danger. Below approximately 1800 m small and medium-sized gliding avalanches and moist snow slides are to be expected."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-3224"
+        },
+        {
+          "regionID": "CH-4214"
+        },
+        {
+          "regionID": "CH-4215"
+        },
+        {
+          "regionID": "CH-7123"
+        },
+        {
+          "regionID": "CH-7124"
+        },
+        {
+          "regionID": "CH-5122"
+        },
+        {
+          "regionID": "CH-5221"
+        },
+        {
+          "regionID": "CH-6112"
+        },
+        {
+          "regionID": "CH-7121"
+        },
+        {
+          "regionID": "CH-5121"
+        },
+        {
+          "regionID": "CH-6111"
+        },
+        {
+          "regionID": "CH-7122"
+        },
+        {
+          "regionID": "CH-4111"
+        },
+        {
+          "regionID": "CH-5124"
+        },
+        {
+          "regionID": "CH-5223"
+        },
+        {
+          "regionID": "CH-4112"
+        },
+        {
+          "regionID": "CH-4211"
+        },
+        {
+          "regionID": "CH-5123"
+        },
+        {
+          "regionID": "CH-5222"
+        },
+        {
+          "regionID": "CH-7125"
+        },
+        {
+          "regionID": "CH-4114"
+        },
+        {
+          "regionID": "CH-4213"
+        },
+        {
+          "regionID": "CH-7126"
+        },
+        {
+          "regionID": "CH-5216"
+        },
+        {
+          "regionID": "CH-5215"
+        },
+        {
+          "regionID": "CH-7112"
+        },
+        {
+          "regionID": "CH-7113"
+        },
+        {
+          "regionID": "CH-4241"
+        },
+        {
+          "regionID": "CH-5111"
+        },
+        {
+          "regionID": "CH-5232"
+        },
+        {
+          "regionID": "CH-7231"
+        },
+        {
+          "regionID": "CH-4121"
+        },
+        {
+          "regionID": "CH-4242"
+        },
+        {
+          "regionID": "CH-5231"
+        },
+        {
+          "regionID": "CH-7111"
+        },
+        {
+          "regionID": "CH-5113"
+        },
+        {
+          "regionID": "CH-5212"
+        },
+        {
+          "regionID": "CH-5234"
+        },
+        {
+          "regionID": "CH-4244"
+        },
+        {
+          "regionID": "CH-5112"
+        },
+        {
+          "regionID": "CH-5211"
+        },
+        {
+          "regionID": "CH-5233"
+        },
+        {
+          "regionID": "CH-2224"
+        },
+        {
+          "regionID": "CH-5214"
+        },
+        {
+          "regionID": "CH-7114"
+        },
+        {
+          "regionID": "CH-3311"
+        },
+        {
+          "regionID": "CH-7115"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "mainValue": "considerable",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948725",
+      "avalancheActivityComment": "The new snow and wind slabs of the last four days are lying on top of a weakly bonded old snowpack. Avalanches can be released, even by a single winter sport participant and reach medium size. Whumpfing sounds and the formation of shooting cracks when stepping on the snowpack serve as an alarm indicating the danger. Experience in the assessment of avalanche danger is important."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-1111"
+        },
+        {
+          "regionID": "CH-1122"
+        },
+        {
+          "regionID": "CH-2112"
+        },
+        {
+          "regionID": "CH-2131"
+        },
+        {
+          "regionID": "CH-3221"
+        },
+        {
+          "regionID": "CH-1212"
+        },
+        {
+          "regionID": "CH-3211"
+        },
+        {
+          "regionID": "CH-1211"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "mainValue": "moderate",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948726",
+      "avalancheActivityComment": "As a consequence of new snow and a strong southwesterly wind, further wind slabs will form especially adjacent to ridgelines. These can be released by a single winter sport participant. Mostly avalanches are small. The wind slabs are to be avoided especially in very steep terrain. On very steep grassy slopes gliding avalanches and moist snow slides are to be expected."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-6121"
+        },
+        {
+          "regionID": "CH-6132"
+        },
+        {
+          "regionID": "CH-7211"
+        },
+        {
+          "regionID": "CH-7222"
+        },
+        {
+          "regionID": "CH-6131"
+        },
+        {
+          "regionID": "CH-6211"
+        },
+        {
+          "regionID": "CH-6122"
+        },
+        {
+          "regionID": "CH-7221"
+        },
+        {
+          "regionID": "CH-6114"
+        },
+        {
+          "regionID": "CH-6113"
+        },
+        {
+          "regionID": "CH-6212"
+        },
+        {
+          "regionID": "CH-6115"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "mainValue": "moderate",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948729",
+      "avalancheActivityComment": "The wind slabs of the last three days are bonding only slowly with the old snowpack. Avalanches can in some cases be released easily, but they will be small in most cases. Apart from the danger of being buried, restraint should be exercised in particular in view of the danger of avalanches sweeping people along and giving rise to falls."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-4115"
+        },
+        {
+          "regionID": "CH-4225"
+        },
+        {
+          "regionID": "CH-4116"
+        },
+        {
+          "regionID": "CH-4231"
+        },
+        {
+          "regionID": "CH-4122"
+        },
+        {
+          "regionID": "CH-4221"
+        },
+        {
+          "regionID": "CH-4232"
+        },
+        {
+          "regionID": "CH-4123"
+        },
+        {
+          "regionID": "CH-4222"
+        },
+        {
+          "regionID": "CH-4113"
+        },
+        {
+          "regionID": "CH-4124"
+        },
+        {
+          "regionID": "CH-4212"
+        },
+        {
+          "regionID": "CH-4223"
+        },
+        {
+          "regionID": "CH-4125"
+        },
+        {
+          "regionID": "CH-4224"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "customData": [],
+          "mainValue": "moderate",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948728",
+      "avalancheActivityComment": "Adjacent to ridgelines and in pass areas as well as at elevated altitudes wind slabs formed. In some places new snow and wind slabs are lying on a weakly bonded old snowpack. Avalanches can in some cases be released easily, but they will be small in most cases. Apart from the danger of being buried, restraint should be exercised as well in view of the danger of avalanches sweeping people along and giving rise to falls."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-8113"
+        },
+        {
+          "regionID": "CH-8212"
+        },
+        {
+          "regionID": "CH-8114"
+        },
+        {
+          "regionID": "CH-8213"
+        },
+        {
+          "regionID": "CH-8224"
+        },
+        {
+          "regionID": "CH-8111"
+        },
+        {
+          "regionID": "CH-8221"
+        },
+        {
+          "regionID": "CH-8112"
+        },
+        {
+          "regionID": "CH-8211"
+        },
+        {
+          "regionID": "CH-8222"
+        },
+        {
+          "regionID": "CH-8214"
+        },
+        {
+          "regionID": "CH-8215"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "low",
+          "aspect": []
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948727",
+      "avalancheActivityComment": "Thus far only a little snow is lying. Adjacent to ridgelines wind slabs formed. These are to be evaluated with care and prudence in particular in terrain where there is a danger of falling. \n Wet snow slides are possible as a consequence of the rain."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-1243"
+        },
+        {
+          "regionID": "CH-2134"
+        },
+        {
+          "regionID": "CH-2211"
+        },
+        {
+          "regionID": "CH-1242"
+        },
+        {
+          "regionID": "CH-2111"
+        },
+        {
+          "regionID": "CH-2133"
+        },
+        {
+          "regionID": "CH-1241"
+        },
+        {
+          "regionID": "CH-2132"
+        },
+        {
+          "regionID": "CH-1247"
+        },
+        {
+          "regionID": "CH-1246"
+        },
+        {
+          "regionID": "CH-1245"
+        },
+        {
+          "regionID": "CH-3222"
+        },
+        {
+          "regionID": "CH-1244"
+        },
+        {
+          "regionID": "CH-2212"
+        },
+        {
+          "regionID": "CH-3223"
+        },
+        {
+          "regionID": "CH-1232"
+        },
+        {
+          "regionID": "CH-2123"
+        },
+        {
+          "regionID": "CH-2222"
+        },
+        {
+          "regionID": "CH-3114"
+        },
+        {
+          "regionID": "CH-2122"
+        },
+        {
+          "regionID": "CH-2221"
+        },
+        {
+          "regionID": "CH-2121"
+        },
+        {
+          "regionID": "CH-4243"
+        },
+        {
+          "regionID": "CH-3111"
+        },
+        {
+          "regionID": "CH-1234"
+        },
+        {
+          "regionID": "CH-3112"
+        },
+        {
+          "regionID": "CH-1233"
+        },
+        {
+          "regionID": "CH-2124"
+        },
+        {
+          "regionID": "CH-2223"
+        },
+        {
+          "regionID": "CH-3113"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T17:00:00+01:00",
+        "endTime": "2021-12-01T17:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "mainValue": "considerable",
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ]
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Thursday and on Thursday night in the northern regions, snowfall is anticipated. On the northern flank of the Alps, in the Lower Valais, as well as in northern Grisons, 20 to 40 cm of fresh snow is expected over widespread areas. The snowfall level will descend once again down to low lying areas. On Friday it will remain predominantly dry. On Thursday in the southern regions, skies will be overcast, accompanied by a small amount of precipitation; on Friday it will be predominantly sunny as a result of increasingly strong northerly winds. \n Avalanche danger levels are expected to increase over widespread areas in the northern regions as a result of fresh fallen snow and wind. In the southern regions, avalanche danger is not expected to change significantly."
+      },
+      "publicationTime": "2021-11-30T17:00:00+01:00",
+      "avalancheActivityHighlights": "As a consequence of new snow and wind a considerable avalanche danger will be encountered over a wide area",
+      "snowpackStructureComment": "As a result of strong-velocity westerly winds the loosely-packed snow is being transported in many places. Particularly in the regions on the northern flank of the Alps where recent snowfall has been heaviest, large-sized snowdrift accumulations are forming which are prone to triggering. \n Prior to the snowfall of the last four days there was little snow on the ground in the western and the northern regions. In the Jura region and the Prealps the fresh snow fell predominantly on bare ground. Where there was already snow, the bonding of the fresh snow/freshly generated drifts with the old snowpack beneath it in many places, particularly on west-facing, north-facing and east-facing slopes above approximately 2000, is unfavourable. Avalanches can be triggered at this transition point between snow layers. \n As a result of higher temperatures below 2000 m, gliding avalanches can be expected on the northern flank of the Alps more than anywhere else. These releases can grow to medium size.",
+      "wxSynopsisComment": "During the night the snowfall came to an end in the northern regions. During the daytime in the northern regions skies were predominantly overcast. On the northern flank of the Alps and in Grisons, snowfall set in once again during the course of the morning. The snowfall level lay in low lying areas. On the southern flank of the Alps it was quite sunny and dry. \nFresh snow: During the night in the central and eastern sectors of the northern flank of the Alps as well as in the northern Pr\u00e4ttigau, an additional amount of snowfall was registered (up to 15 cm). In the remaining regions of Switzerland there was only a small amount of additional snowfall or else it remained dry. Thus, between Friday evening and Tuesday morning the following overall amounts of fresh snow were registered:  - Northern flank of the Alps from Lake Brienzersee as far as the S\u00e4ntis: 60 to 90 cm, more than 100 cm in some places in the Glarus Alps; \n - remaining sectors of the northern flank of the Alps, Emosson, remaining parts of the Gotthard region, northern Grisons, Moesano and eastern Ticino: 30 to 60 cm; \n - in the other regions of Switzerland, 15 to 30 cm.\n \n \nTemperature: At midday at 2000 m, between -7 \u00b0C in the northern regions and -3 \u00b0C in the southern regions. \nWind: Winds were frequently blowing at strong velocity, from northerly to northwesterly directions during the night, during the daytime shifting to westerly.\nIn the evening and during the early part of the night in the northern regions, snowfall is anticipated over widespread areas, subsequently skies will clear up. The snowfall level will lie at approximately 1000 m. In the southern regions skies will be clear. During the morning hours, cloud cover will move in from the northwest. Subsequently in the Jura region, in the western sector of the northern flank of the Alps and in the Valais, a small amount of precipitation is anticipated. The snowfall level in the Jura region and on the northern flank of the Alps will lie at approximately 1300 m, in the Valais in low lying areas. In the eastern and southern regions, skies will be overcast also during the afternoon, but it is expected to remain dry. \nFresh snow: Between Tuesday midday and Wednesday afternoon, the following amounts of fresh snow are expected above 1500 m: \n  - Northern Alpine Ridge from the Aletsch region into the Alpstein, as well as Silvretta and Samnaun: 10 to 20 cm; in the Urner and Glarus Alps, as well as in the Samnaun, as much as 30 cm; \n - in the other regions of Switzerland, only a few centimetres; on the southern flank of the Alps it is expected to remain dry.\n \n \nTemperature: At midday at 2000 m, between 0 \u00b0C in the northern regions and -4 \u00b0C in the southern regions. \nWind: Jura region, Prealps, as well as generally at high altitudes: winds will be blowing at moderate to strong velocity, frequently intensifying to storm strength during the afternoon, from southwesterly to westerly directions.",
+      "bulletinID": "8948723",
+      "avalancheActivityComment": "As a consequence of a strong to storm force westerly wind, sometimes large wind slabs will form. The large quantity of fresh snow of the last few days and the wind slabs can be released by a single winter sport participant. During the night individual natural avalanches are possible. Additionally in some places avalanches can also be released in near-ground layers and reach large size. This applies especially on north facing slopes above approximately 2400 m. Whumpfing sounds and the formation of shooting cracks when stepping on the snowpack serve as an alarm indicating the danger. \n Backcountry touring and other off-piste activities call for experience in the assessment of avalanche danger and restraint. Below approximately 1800 m small and medium-sized gliding avalanches and moist snow slides are to be expected."
+    }
+  ]
+}

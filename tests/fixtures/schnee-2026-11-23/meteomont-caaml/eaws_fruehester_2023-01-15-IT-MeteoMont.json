@@ -1,0 +1,6218 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-1",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "51",
+          "snowDepthAltitude": "1515",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-2",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "51",
+          "snowDepthAltitude": "1710",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-3",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "71",
+          "snowDepthAltitude": "1870",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-1",
+          "name": "VENETO / Dolomiti settentrionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "54",
+          "snowDepthAltitude": "2050",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-2",
+          "name": "VENETO / Dolomiti meridionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "52",
+          "snowDepthAltitude": "2010",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-3",
+          "name": "VENETO / Prealpi"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "34",
+          "snowDepthAltitude": "1606",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-1",
+          "name": "LOMBARDIA / Alpi Retiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40-60",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-2",
+          "name": "LOMBARDIA / Alpi Orobiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40-50",
+          "snowDepthAltitude": "1800",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-3",
+          "name": "LOMBARDIA / Prealpi Lombarde"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "10-40",
+          "snowDepthAltitude": "1700",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-4",
+          "name": "LOMBARDIA / Appennino Pavese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "-",
+          "snowDepthAltitude": "-",
+          "freshSnow": "-"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-1",
+          "name": "PIEMONTE / Alpi Lepontine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "90",
+          "snowDepthAltitude": "2453",
+          "freshSnow": "5"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-2",
+          "name": "PIEMONTE / Alpi Pennine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "55",
+          "snowDepthAltitude": "2075",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-3",
+          "name": "PIEMONTE / Alpi Graie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "38",
+          "snowDepthAltitude": "2304",
+          "freshSnow": "4"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-4",
+          "name": "PIEMONTE / Alpi Cozie nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "56",
+          "snowDepthAltitude": "2280",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-5",
+          "name": "PIEMONTE / Alpi Cozie sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "33",
+          "snowDepthAltitude": "2337",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-6",
+          "name": "PIEMONTE / Alpi Marittime"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "48",
+          "snowDepthAltitude": "2305",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-7",
+          "name": "PIEMONTE / Alpi Liguri nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "11",
+          "snowDepthAltitude": "1928",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-1",
+          "name": "LIGURIA / Alpi Liguri sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "30",
+          "snowDepthAltitude": "1800",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-2",
+          "name": "LIGURIA / Appennino Ligure"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "/",
+          "snowDepthAltitude": "/",
+          "freshSnow": "/"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-1",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "",
+          "snowDepthAltitude": "",
+          "freshSnow": ""
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-2",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Centrale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-3",
+          "name": "EMILIA ROMAGNA / Appennino Romagnolo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "",
+          "snowDepthAltitude": "",
+          "freshSnow": ""
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-1",
+          "name": "TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "",
+          "snowDepthAltitude": "",
+          "freshSnow": ""
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-2",
+          "name": "TOSCANA / Appennino Toscano meridionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "",
+          "snowDepthAltitude": "",
+          "freshSnow": ""
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-3",
+          "name": "None / Monte Amiata"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "4",
+          "snowDepthAltitude": "1650",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-1",
+          "name": "MARCHE / Appennino Umbro-Marchigiano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "",
+          "snowDepthAltitude": "",
+          "freshSnow": ""
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-2",
+          "name": "MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "5-15",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-1",
+          "name": "ABRUZZO / Gran Sasso Est - Laga Est"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "5",
+          "snowDepthAltitude": "1349",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-2",
+          "name": "ABRUZZO / Gran Sasso Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "2135",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-3",
+          "name": "ABRUZZO / Majella"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "8",
+          "snowDepthAltitude": "1300",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-4",
+          "name": "ABRUZZO / P.N. Abruzzo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "14",
+          "snowDepthAltitude": "1470",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-5",
+          "name": "ABRUZZO / Velino - Sirente"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1573",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-6",
+          "name": "MOLISE / Mainarde-Alto Molise"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "14",
+          "snowDepthAltitude": "1490",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-7",
+          "name": "MOLISE / Matese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1429",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-1",
+          "name": "LAZIO / Terminillo Monti Reatini e Laga Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "6",
+          "snowDepthAltitude": "1670",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-2",
+          "name": "LAZIO / Monti Simbruini e Meta"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "5",
+          "snowDepthAltitude": "1790",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-1",
+          "name": "PUGLIA / Appennino Campano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "4-11",
+          "snowDepthAltitude": "1400",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-2",
+          "name": "BASILICATA / Appennino Lucano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "3-6",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-3",
+          "name": "CALABRIA / Appennino Calabro"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-15T00:00:00+01:00",
+        "endTime": "2023-01-16T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0-4",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-1",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-2",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-3",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-1",
+          "name": "VENETO / Dolomiti settentrionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-2",
+          "name": "VENETO / Dolomiti meridionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-3",
+          "name": "VENETO / Prealpi"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-1",
+          "name": "LOMBARDIA / Alpi Retiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-2",
+          "name": "LOMBARDIA / Alpi Orobiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-3",
+          "name": "LOMBARDIA / Prealpi Lombarde"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-4",
+          "name": "LOMBARDIA / Appennino Pavese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-1",
+          "name": "PIEMONTE / Alpi Lepontine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-2",
+          "name": "PIEMONTE / Alpi Pennine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-3",
+          "name": "PIEMONTE / Alpi Graie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-4",
+          "name": "PIEMONTE / Alpi Cozie nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-5",
+          "name": "PIEMONTE / Alpi Cozie sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-6",
+          "name": "PIEMONTE / Alpi Marittime"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-7",
+          "name": "PIEMONTE / Alpi Liguri nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-1",
+          "name": "LIGURIA / Alpi Liguri sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-2",
+          "name": "LIGURIA / Appennino Ligure"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-1",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-2",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Centrale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-3",
+          "name": "EMILIA ROMAGNA / Appennino Romagnolo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-1",
+          "name": "TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-2",
+          "name": "TOSCANA / Appennino Toscano meridionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-3",
+          "name": "None / Monte Amiata"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-1",
+          "name": "MARCHE / Appennino Umbro-Marchigiano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-2",
+          "name": "MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-1",
+          "name": "ABRUZZO / Gran Sasso Est - Laga Est"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-2",
+          "name": "ABRUZZO / Gran Sasso Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-3",
+          "name": "ABRUZZO / Majella"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-4",
+          "name": "ABRUZZO / P.N. Abruzzo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-5",
+          "name": "ABRUZZO / Velino - Sirente"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-6",
+          "name": "MOLISE / Mainarde-Alto Molise"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-7",
+          "name": "MOLISE / Matese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-1",
+          "name": "LAZIO / Terminillo Monti Reatini e Laga Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-2",
+          "name": "LAZIO / Monti Simbruini e Meta"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-1",
+          "name": "PUGLIA / Appennino Campano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-2",
+          "name": "BASILICATA / Appennino Lucano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-3",
+          "name": "CALABRIA / Appennino Calabro"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-16T00:00:00+01:00",
+        "endTime": "2023-01-17T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-1",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-2",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-3",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-1",
+          "name": "VENETO / Dolomiti settentrionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-2",
+          "name": "VENETO / Dolomiti meridionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-3",
+          "name": "VENETO / Prealpi"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-1",
+          "name": "LOMBARDIA / Alpi Retiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-2",
+          "name": "LOMBARDIA / Alpi Orobiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-3",
+          "name": "LOMBARDIA / Prealpi Lombarde"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-4",
+          "name": "LOMBARDIA / Appennino Pavese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-1",
+          "name": "PIEMONTE / Alpi Lepontine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-2",
+          "name": "PIEMONTE / Alpi Pennine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-3",
+          "name": "PIEMONTE / Alpi Graie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-4",
+          "name": "PIEMONTE / Alpi Cozie nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-5",
+          "name": "PIEMONTE / Alpi Cozie sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-6",
+          "name": "PIEMONTE / Alpi Marittime"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-7",
+          "name": "PIEMONTE / Alpi Liguri nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-1",
+          "name": "LIGURIA / Alpi Liguri sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-2",
+          "name": "LIGURIA / Appennino Ligure"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-1",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-2",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Centrale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-3",
+          "name": "EMILIA ROMAGNA / Appennino Romagnolo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-1",
+          "name": "TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-2",
+          "name": "TOSCANA / Appennino Toscano meridionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-3",
+          "name": "None / Monte Amiata"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-1",
+          "name": "MARCHE / Appennino Umbro-Marchigiano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-2",
+          "name": "MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-1",
+          "name": "ABRUZZO / Gran Sasso Est - Laga Est"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-2",
+          "name": "ABRUZZO / Gran Sasso Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-3",
+          "name": "ABRUZZO / Majella"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-4",
+          "name": "ABRUZZO / P.N. Abruzzo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-5",
+          "name": "ABRUZZO / Velino - Sirente"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-6",
+          "name": "MOLISE / Mainarde-Alto Molise"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-7",
+          "name": "MOLISE / Matese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-1",
+          "name": "LAZIO / Terminillo Monti Reatini e Laga Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-2",
+          "name": "LAZIO / Monti Simbruini e Meta"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-1",
+          "name": "PUGLIA / Appennino Campano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-2",
+          "name": "BASILICATA / Appennino Lucano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-3",
+          "name": "CALABRIA / Appennino Calabro"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-17T00:00:00+01:00",
+        "endTime": "2023-01-18T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-1",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-2",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-01-3",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-1",
+          "name": "VENETO / Dolomiti settentrionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-2",
+          "name": "VENETO / Dolomiti meridionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-02-3",
+          "name": "VENETO / Prealpi"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-1",
+          "name": "LOMBARDIA / Alpi Retiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-2",
+          "name": "LOMBARDIA / Alpi Orobiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-3",
+          "name": "LOMBARDIA / Prealpi Lombarde"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-04-4",
+          "name": "LOMBARDIA / Appennino Pavese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-1",
+          "name": "PIEMONTE / Alpi Lepontine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-2",
+          "name": "PIEMONTE / Alpi Pennine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-3",
+          "name": "PIEMONTE / Alpi Graie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-4",
+          "name": "PIEMONTE / Alpi Cozie nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-5",
+          "name": "PIEMONTE / Alpi Cozie sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-6",
+          "name": "PIEMONTE / Alpi Marittime"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-06-7",
+          "name": "PIEMONTE / Alpi Liguri nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-1",
+          "name": "LIGURIA / Alpi Liguri sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-07-2",
+          "name": "LIGURIA / Appennino Ligure"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-1",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-2",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Centrale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-08-3",
+          "name": "EMILIA ROMAGNA / Appennino Romagnolo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-1",
+          "name": "TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-2",
+          "name": "TOSCANA / Appennino Toscano meridionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-09-3",
+          "name": "None / Monte Amiata"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-1",
+          "name": "MARCHE / Appennino Umbro-Marchigiano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-10-2",
+          "name": "MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-1",
+          "name": "ABRUZZO / Gran Sasso Est - Laga Est"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-2",
+          "name": "ABRUZZO / Gran Sasso Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-3",
+          "name": "ABRUZZO / Majella"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-4",
+          "name": "ABRUZZO / P.N. Abruzzo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-5",
+          "name": "ABRUZZO / Velino - Sirente"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-6",
+          "name": "MOLISE / Mainarde-Alto Molise"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-11-7",
+          "name": "MOLISE / Matese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-1",
+          "name": "LAZIO / Terminillo Monti Reatini e Laga Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-12-2",
+          "name": "LAZIO / Monti Simbruini e Meta"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-1",
+          "name": "PUGLIA / Appennino Campano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-2",
+          "name": "BASILICATA / Appennino Lucano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-MeteoMont-13-3",
+          "name": "CALABRIA / Appennino Calabro"
+        }
+      ],
+      "validTime": {
+        "startTime": "2023-01-18T00:00:00+01:00",
+        "endTime": "2023-01-19T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://meteomont.carabinieri.it/home?lang=en"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": null,
+          "snowDepthAltitude": null,
+          "freshSnow": null
+        }
+      }
+    }
+  ]
+}

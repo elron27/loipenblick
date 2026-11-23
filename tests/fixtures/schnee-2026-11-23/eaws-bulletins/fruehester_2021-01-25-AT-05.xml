@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <observations>
+    <Bulletin gml:id="RID254RGR1">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID254RGR1">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>above treeline, triggerable in transitions from shallow to deeper snow, avoid very steep slopes</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>AVOID very steep slopes. Concealed old-snow problem.</avActivityHighlights>
+          <avActivityComment>Thin fresh snow from Saturday is not avalanche-relevant. The concealed, persistent weak layers inside the snowpack constitute an old-snow problem. Here. triggering slab avalanches on isolated very steep slopes above the treeline is possible, particularly by large additional loading (single person on foot, groups, falls, etc.) Potential danger points are found increasingly in NW-NE-SE aspects, in isolated cases also in the other aspects. Transitions from shallow to deeper snow are treacherous, also shallow-snow zones. Potential slabs could grow to large size.</avActivityComment>
+          <snowpackStructureComment>The 10 cm of fresh snow from Saturday is cold and loosely-packed. Beneath it the snow base is highly varied. On south-facing slopes there is melt-freeze snow, on north-facing slopes there is snow which has nothing beneath it. Dominant in the current situation and for the approaching round of fresh snow: the soft weak layer of faceted granular crystals inside the not-very-deep snowpack.</snowpackStructureComment>
+          <wxSynopsisComment>On Monday, cloud cover will descend rapidly. At high altitudes, fog will create limited visibility. In the course of the afternoon, light or moderate snowall will set in. By evening, about 5 cm of fresh fallen snow is expected in the Osterhorn Massif, in Pongau, in Heutal about 10 cm. Above the timberline, westerly winds will be blowing at about 30 km/hr. Temperature at 2000 m, -11 degrees.&#13;
+On Monday night, heavy snowfall is expected (15-20 cm by Wednesday morning).</wxSynopsisComment>
+          <tendencyComment>On Tuesday and Wednesday, noticeable rise in avalanche danger levels due to wind, cold fresh snow and instable snowdrift accumulations. Danger will rise to CONSIDERABLE (snowdrifts combined with old-snow problem above forest edges).</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-05-19"/>
+      <locRef xlink:href="AT-05-20"/>
+      <locRef xlink:href="AT-05-21"/>
+      <locRef xlink:href="AT-05-12"/>
+    </Bulletin>
+    <Bulletin gml:id="RID254RGR2">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID254RGR2">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineHi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineLo"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>above treeline, triggerable in transitions from shallow to deep snow and in zones where snow is shallow, avoid very steep zones, settling noises persist</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <comment>ridgeline snowdrift accumulations above 2000 m are easily triggerable, triggered avalanches can sometimes fracture down to more deeply embedded layers</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Old-snow problem demands restraint and experience</avActivityHighlights>
+          <avActivityComment>Triggering a slab avalanche is possible on numerous steep slopes above the timberline. Even the impulse of one single skier is sufficient to release an avalanche. Potential danger zones are found increasingly on NW-NE-SE facing slopes, in isolated cases also in other aspects. Ridgeline steep slopes are delicate (recognizable snowdrift problem), transitions from shallow to deep snow and shallow-snow zones (concealed snowdrift problem) are treacherous. Triggered slab avalanches can grow to medium, in isolated cases also to large size.</avActivityComment>
+          <snowpackStructureComment>The cold fresh snow (10-20 cm) is poorly bonded to the snow base, but the amounts are not relevant. On south-facing slopes the melt-freeze crust is breaking beneath the powder layer on top of it; on wind-exposed slopes the base is hard; on shady slopes there is often nothing beneath the fresh snow. Dominating the current situation (crucial for the fresh snow forecast for next week)&amp;nbsp;are the soft weak layers of faceted granular snow inside the not very thick snowpack.</snowpackStructureComment>
+          <wxSynopsisComment>On Monday, lower cloud cover borderline will descend rapidly; at higher altitudes, fog will create poor visibility, light-to-moderate snowfall is expected to set in during the afternoon. By evening, about 10 cm of fresh snow is expected in the western regions, further east about 5 cm. Above the treeline, westerly winds will be blowing at 30 km/hr. Temperature at 2000 m, -11 degrees; at 3000 m, -18 degrees.&#13;
+On Monday night, heavy snowfall is expected, bringing 15-20 cm of fresh snow by Wednesday morning.</wxSynopsisComment>
+          <tendencyComment>On Tuesday and Wednesday&amp;nbsp;avalanche danger levels will increase measurably&amp;nbsp;due to wind, cold fresh snow and instable snowdrifts. CONSIDERABLE avalanche danger widespread, and on Wednesday probably at the upper notch of that danger level (snowdrifts combined with old-snow problem above the timberline).</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-05-16"/>
+      <locRef xlink:href="AT-05-18"/>
+      <locRef xlink:href="AT-05-14"/>
+      <locRef xlink:href="AT-05-13"/>
+      <locRef xlink:href="AT-05-17"/>
+      <locRef xlink:href="AT-05-15"/>
+      <locRef xlink:href="AT-05-11"/>
+      <locRef xlink:href="AT-05-10"/>
+      <locRef xlink:href="AT-05-09"/>
+      <locRef xlink:href="AT-05-08"/>
+      <locRef xlink:href="AT-05-02"/>
+    </Bulletin>
+    <Bulletin gml:id="RID254RGR3">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID254RGR3">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>near ridgelines, in gullies, steep bowls, also forest edges on north-facgin slopes and distant from ridgeline behind protruberances, small snowdrift avalanches can fracture down to deeper layers.</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>above treeline, triggerable in transitions from shallow to deep snow, in shallow-snow zones, avoid very steep slopes</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Snowdrift problem and beneath that, an enduring old-snow problem</avActivityHighlights>
+          <avActivityComment>Avalanche prone locations are still numerous, not easy to recognize. The very steep slopes should be avoided. Most danger zones are found in extended N-E-S aspects in steep ridgeline terrain. Caution in northern aspects behind protruberances (snowdrift problem). Second risk syndrome: apart form cold snowdrifts in rimline areas of shallow-snow zones, i.e. entries into wind-loaded ridges and steep rocky terrain (old snow problem). There, a single skier can trigger a concealed weak layer. Superficial avalanches can then fracture down to more deeply embedded layers in the snowpack and grow to larger size. Isolated naturally triggered avalanche cannot be ruled out on very steep and heavily wind-loaded slopes on N-E-SE facing slopes.</avActivityComment>
+          <snowpackStructureComment>The cold fresh snow/drifts (20-30 cm) are not bonding well with the snow base. Fresh drifts have been deposited atop the cold fresh snow in a relatively instable way. The base beneath it is highly varied. Wind-exposed zones are hard, south-facing slopes beneath the melt-freeze crusts break beneath the powder, on shady slopes the shallow-snow zones have nothing beneath them. Dominating the current situation (especially for the fresh snowfall forecast for&amp;nbsp;this week)&amp;nbsp;are the soft weak layers of faceted granular snow inside the snowpack.</snowpackStructureComment>
+          <wxSynopsisComment>On Monday, lower cloud cover will rapidly descend, at higher altitudes the fog will provide poor visibility. During the afternoon, light to moderate snowfall will set in. By evening, 10 cm is expected in Hohe Tauern; in Lungau and Niedere Tauern up to 5 cm. Above the treeline, westerly winds will be blowing at 30 km/hr. Temperature at 2000 m, -11 degrees; at 3000 m, -18 degrees.On Monday night, heavy snowfall (15-20 cm possible by Wednesday morning).</wxSynopsisComment>
+          <tendencyComment>On Tuesday and Wednesday, noticeable increase in avalanche danger levels due to wind, cold fresh snow and instable snowdrifts. CONSIDERABLE avalanche danger is expected widespread. On Wednesday at latest, the uppermost notch of this danger level is expected (snowdrift combined with old-snow problem above the forest edges).</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-05-01"/>
+      <locRef xlink:href="AT-05-04"/>
+      <locRef xlink:href="AT-05-03"/>
+      <locRef xlink:href="AT-05-05"/>
+      <locRef xlink:href="AT-05-06"/>
+      <locRef xlink:href="AT-05-07"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>

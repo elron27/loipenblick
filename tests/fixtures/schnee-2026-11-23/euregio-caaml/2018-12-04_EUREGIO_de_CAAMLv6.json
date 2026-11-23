@@ -1,0 +1,607 @@
+{
+  "bulletins" : [ {
+    "avalancheActivity" : {
+      "comment" : "Die Altschneedecke bleibt meist gut verfestigt. Verschiedene Triebschneeschichten liegen teilweise auf einer glatten Altschneeoberfläche.",
+      "highlights" : "Die Triebschneeansammlungen sind für Geübte gut erkennbar und vorsichtig zu beurteilen."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "W", "NE", "NW", "N", "E" ],
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "5f19135d-060c-4f91-9310-6cc6efbecd1d",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "2500"
+      },
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:00:00Z",
+    "regions" : [ {
+      "name" : "Primiero - Pale di S. Martino",
+      "regionID" : "IT-32-TN-13"
+    }, {
+      "name" : "Südlicher Adamello",
+      "regionID" : "IT-32-TN-02"
+    }, {
+      "name" : "Adamello - Presanella",
+      "regionID" : "IT-32-TN-01"
+    }, {
+      "name" : "Nördliche Brenta - Peller",
+      "regionID" : "IT-32-TN-04"
+    }, {
+      "name" : "Fassatal",
+      "regionID" : "IT-32-TN-16"
+    }, {
+      "name" : "Südliche Brenta",
+      "regionID" : "IT-32-TN-05"
+    }, {
+      "name" : "Südliche Lagorai",
+      "regionID" : "IT-32-TN-08"
+    }, {
+      "name" : "Nördliche Lagorai",
+      "regionID" : "IT-32-TN-07"
+    }, {
+      "name" : "Latemar",
+      "regionID" : "IT-32-TN-09"
+    }, {
+      "name" : "Maddalene",
+      "regionID" : "IT-32-TN-20"
+    }, {
+      "name" : "Pine' - Fersental",
+      "regionID" : "IT-32-TN-21"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Frische und ältere Triebschneeansammlungen bilden die Hauptgefahr."
+    },
+    "tendency" : {
+      "highlights" : "Die Schneedecke bleibt meist günstig."
+    },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Die frischen Triebschneeansammlungen liegen auf ungünstigen Schichten. Die Gefahrenstellen liegen vor allem an den Expositionen Nordwest über Nord bis Südost oberhalb von rund 2500 m sowie an Übergängen von wenig zu viel Schnee. Wintersportler können vereinzelt Lawinen auslösen, auch solche mittlerer Grösse. Nebst der Verschüttungsgefahr sollte auch die Mitreiss- und Absturzgefahr beachtet werden. Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gelände, weshalb die Lawinengefahr vor Ort besonders gründlich überprüft werden sollte.",
+      "highlights" : "Vorsicht vor frischem Triebschnee."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "NE", "NW", "N", "E" ],
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "8112d8ae-3355-43cc-9d1e-c08ef9fd5bf3",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "2500"
+      },
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:28:20Z",
+    "regions" : [ {
+      "name" : "Glocknergruppe",
+      "regionID" : "AT-07-26"
+    }, {
+      "name" : "Glockturmgruppe",
+      "regionID" : "AT-07-19"
+    }, {
+      "name" : "Weißkugelgruppe",
+      "regionID" : "AT-07-20"
+    }, {
+      "name" : "Gurgler Gruppe",
+      "regionID" : "AT-07-21"
+    }, {
+      "name" : "Zentrale Stubaier Alpen",
+      "regionID" : "AT-07-22"
+    }, {
+      "name" : "Silvretta",
+      "regionID" : "AT-07-12"
+    }, {
+      "name" : "Nördliche Zillertaler Alpen",
+      "regionID" : "AT-07-23"
+    }, {
+      "name" : "Samnaungruppe",
+      "regionID" : "AT-07-13"
+    }, {
+      "name" : "Venedigergruppe",
+      "regionID" : "AT-07-24"
+    }, {
+      "name" : "Lasörling Gruppe",
+      "regionID" : "AT-07-25"
+    }, {
+      "name" : "Texelgruppe",
+      "regionID" : "IT-32-BZ-07"
+    }, {
+      "name" : "Durreckgruppe",
+      "regionID" : "IT-32-BZ-11"
+    }, {
+      "name" : "Münstertaler Alpen",
+      "regionID" : "IT-32-BZ-01"
+    }, {
+      "name" : "Langtaufers",
+      "regionID" : "IT-32-BZ-02"
+    }, {
+      "name" : "Schnalser Kamm",
+      "regionID" : "IT-32-BZ-03"
+    }, {
+      "name" : "Südliche Stubaier Alpen",
+      "regionID" : "IT-32-BZ-04"
+    }, {
+      "name" : "Südliche Zillertaler Alpen und Hohe Tauern",
+      "regionID" : "IT-32-BZ-05"
+    }, {
+      "name" : "Saldurn-Mastaun Kamm",
+      "regionID" : "IT-32-BZ-06"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Es fielen vor allem im Nordwesten oberhalb von rund 2000 m bis zu 30 cm Schnee. Neu- und Triebschnee überlagern eine recht günstige Altschneedecke."
+    },
+    "tendency" : { },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Die frischen Triebschneeansammlungen liegen auf ungünstigen Schichten. Die Gefahrenstellen liegen vor allem an den Expositionen Nordwest über Nord bis Südost oberhalb von rund 2500 m sowie an Übergängen von wenig zu viel Schnee. Wintersportler können vereinzelt Lawinen auslösen, auch solche mittlerer Grösse. Nebst der Verschüttungsgefahr sollte auch die Mitreiss- und Absturzgefahr beachtet werden. Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gelände, weshalb die Lawinengefahr vor Ort besonders gründlich überprüft werden sollte.",
+      "highlights" : "Vorsicht vor frischem Triebschnee."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "NE", "NW", "N", "E" ],
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "029f7ba3-6ea7-4dd6-86af-1e78dac04f38",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "2500"
+      },
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:00:00Z",
+    "regions" : [ {
+      "name" : "Ortlergruppe",
+      "regionID" : "IT-32-BZ-14"
+    }, {
+      "name" : "Ultental",
+      "regionID" : "IT-32-BZ-15"
+    }, {
+      "name" : "Sole, Pejo und Rabbi",
+      "regionID" : "IT-32-TN-19"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Frische und ältere Triebschneeansammlungen sind oft klein und meist nur mit grosser Belastung auslösbar. Die Altschneedecke ist recht gut verfestigt."
+    },
+    "tendency" : { },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Es herrschen allgemein günstige Verhältnisse. Die Gefahrenstellen liegen vor allem in Kammlagen der Expositionen Nordwest über Nord bis Nordost oberhalb von rund 2500 m. Triebschneeansammlungen können vereinzelt noch mit grosser Belastung ausgelöst werden. Sonst können Lawinen kaum ausgelöst werden.",
+      "highlights" : "Es liegt in allen Höhenlagen für Schneesport meist zu wenig Schnee. Die Lawinenverhältnisse sind mehrheitlich günstig."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "NE", "NW", "N" ],
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "c542af57-a7a7-4e0f-a318-628585ded1b5",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:28:20Z",
+    "regions" : [ {
+      "name" : "Karwendel",
+      "regionID" : "AT-07-04"
+    }, {
+      "name" : "Westliche Tuxer Alpen",
+      "regionID" : "AT-07-15"
+    }, {
+      "name" : "Östliche Tuxer Alpen",
+      "regionID" : "AT-07-16"
+    }, {
+      "name" : "Westliche Lechtaler Alpen",
+      "regionID" : "AT-07-07"
+    }, {
+      "name" : "Zentrale Lechtaler Alpen",
+      "regionID" : "AT-07-08"
+    }, {
+      "name" : "Grieskogelgruppe",
+      "regionID" : "AT-07-09"
+    }, {
+      "name" : "Westliche Verwallgruppe",
+      "regionID" : "AT-07-10"
+    }, {
+      "name" : "Östliche Verwallgruppe",
+      "regionID" : "AT-07-11"
+    }, {
+      "name" : "Allgäuer Alpen",
+      "regionID" : "AT-07-01"
+    }, {
+      "name" : "Östliche Lechtaler Alpen - Ammergauer Alpen",
+      "regionID" : "AT-07-02"
+    }, {
+      "name" : "Mieminger Gebirge",
+      "regionID" : "AT-07-03"
+    }, {
+      "name" : "Nördliche Ötztaler- und Stubaier Alpen",
+      "regionID" : "AT-07-14"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Es fielen verbreitet oberhalb von rund 2000 m 20 cm Schnee, lokal auch mehr. In den letzten Tagen entstanden vor allem in Kammlagen eher kleine Triebschneeansammlungen. Diese haben sich recht gut mit dem Altschnee verbunden."
+    },
+    "tendency" : {
+      "highlights" : "Kaum Anstieg der Lawinengefahr."
+    },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Die Gefahrenstellen liegen vor allem in Rinnen und Mulden der Expositionen West über Nord bis Ost oberhalb von rund 2400 m. Schon eine kleine Lawine kann Schneesportler mitreissen und zum Absturz bringen. Der Lawinenwarndienst hat derzeit wenig Informationen aus dem Gelände, weshalb die Lawinengefahr vor Ort besonders gründlich überprüft werden sollte.",
+      "highlights" : "Unterhalb von rund 2500 m liegt kaum Schnee."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "W", "NE", "NW", "N", "E" ],
+      "elevation" : {
+        "lowerBound" : "2400"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "ebd290b0-40a7-46fc-99fb-95496aa7771e",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "2400"
+      },
+      "mainValue" : "no_snow",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "2400"
+      },
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:00:00Z",
+    "regions" : [ {
+      "name" : "Grödner Dolomiten",
+      "regionID" : "IT-32-BZ-18"
+    }, {
+      "name" : "Sarntaler Alpen",
+      "regionID" : "IT-32-BZ-08"
+    }, {
+      "name" : "Pragser Dolomiten",
+      "regionID" : "IT-32-BZ-19"
+    }, {
+      "name" : "Westliche Pfunderer Berge",
+      "regionID" : "IT-32-BZ-09"
+    }, {
+      "name" : "Sextner Dolomiten",
+      "regionID" : "IT-32-BZ-20"
+    }, {
+      "name" : "Östliche Pfunderer Berge",
+      "regionID" : "IT-32-BZ-10"
+    }, {
+      "name" : "Rieserfernergruppe",
+      "regionID" : "IT-32-BZ-12"
+    }, {
+      "name" : "Westliche Deferegger Alpen",
+      "regionID" : "IT-32-BZ-13"
+    }, {
+      "name" : "Östliche Nonsberger Alpen",
+      "regionID" : "IT-32-BZ-16"
+    }, {
+      "name" : "Nördliche Fleimstaler Alpen",
+      "regionID" : "IT-32-BZ-17"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Unterhalb von rund 2400 m liegt wenig Schnee. Für Skitouren sind die Verhältnisse ungünstig."
+    },
+    "tendency" : { },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Die Schneedecke bleibt in mittleren Lagen günstig.",
+      "highlights" : "Die Schneedecke bleibt allgemein gut verfestigt."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ ],
+      "elevation" : { },
+      "problemType" : "favourable_situation",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "d6601f56-84e5-4616-b30a-5a0cc0b77700",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "1500"
+      },
+      "mainValue" : "no_snow",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "1500"
+      },
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:00:00Z",
+    "regions" : [ {
+      "name" : "Vallarse",
+      "regionID" : "IT-32-TN-14"
+    }, {
+      "name" : "Folgaria - Lavarone",
+      "regionID" : "IT-32-TN-06"
+    }, {
+      "name" : "Ledrotal",
+      "regionID" : "IT-32-TN-18"
+    }, {
+      "name" : "Marzola - Valsugana",
+      "regionID" : "IT-32-TN-10"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "Die Schneeoberfläche ist nur dünn gefroren und weicht im Tagesverlauf auf."
+    },
+    "tendency" : {
+      "highlights" : "Die Schneedecke ist recht stabil."
+    },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "comment" : "Es herrschen allgemein günstige Verhältnisse. Die Gefahrenstellen liegen vor allem in Kammlagen der Expositionen Nordwest über Nord bis Ost oberhalb von rund 2000 m. Triebschneeansammlungen können vereinzelt mit grosser Belastung ausgelöst werden. Sonst können Lawinen kaum ausgelöst werden.",
+      "highlights" : "Es liegt in allen Höhenlagen für Schneesport meist zu wenig Schnee. Die Lawinenverhältnisse sind mehrheitlich günstig."
+    },
+    "avalancheProblems" : [ {
+      "aspects" : [ "NE", "NW", "N", "E" ],
+      "elevation" : {
+        "lowerBound" : "2000"
+      },
+      "problemType" : "wind_slab",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "98afe585-dfc1-47ff-bd04-2e89ec7062cc",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "elevation" : {
+        "upperBound" : "2000"
+      },
+      "mainValue" : "no_snow",
+      "validTimePeriod" : "all_day"
+    }, {
+      "elevation" : {
+        "lowerBound" : "2000"
+      },
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:28:20Z",
+    "regions" : [ {
+      "name" : "Östliche Deferegger Alpen",
+      "regionID" : "AT-07-27"
+    }, {
+      "name" : "Schobergruppe",
+      "regionID" : "AT-07-28"
+    }, {
+      "name" : "Lienzer Dolomiten",
+      "regionID" : "AT-07-29"
+    } ],
+    "snowpackStructure" : {
+      "comment" : "In den letzten Tagen entstanden vor allem in Kammlagen eher kleine Triebschneeansammlungen. Diese haben sich recht gut mit dem Altschnee verbunden."
+    },
+    "tendency" : {
+      "highlights" : "Kaum Anstieg der Lawinengefahr."
+    },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : {
+      "highlights" : "Es liegt für Schneesport meist zu wenig Schnee."
+    },
+    "avalancheProblems" : [ ],
+    "bulletinID" : "a31211de-5140-4a95-a069-33696b4ea5d8",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "mainValue" : "no_snow",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:28:20Z",
+    "regions" : [ {
+      "name" : "Brandenberger Alpen",
+      "regionID" : "AT-07-05"
+    }, {
+      "name" : "Wilder Kaiser - Waidringer Alpen",
+      "regionID" : "AT-07-06"
+    }, {
+      "name" : "Westliche Kitzbüheler Alpen",
+      "regionID" : "AT-07-17"
+    }, {
+      "name" : "Östliche Kitzbüheler Alpen",
+      "regionID" : "AT-07-18"
+    } ],
+    "snowpackStructure" : { },
+    "tendency" : { },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  }, {
+    "avalancheActivity" : { },
+    "avalancheProblems" : [ {
+      "aspects" : [ ],
+      "elevation" : { },
+      "problemType" : "favourable_situation",
+      "validTimePeriod" : "all_day"
+    } ],
+    "bulletinID" : "cde45228-08e0-422d-bbe8-19b891bd4243",
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2018-12-04"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "dangerRatings" : [ {
+      "mainValue" : "no_snow",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "publicationTime" : "2018-12-03T16:00:00Z",
+    "regions" : [ {
+      "name" : "Prealpi",
+      "regionID" : "IT-32-TN-12"
+    }, {
+      "name" : "Cimberntal",
+      "regionID" : "IT-32-TN-15"
+    }, {
+      "name" : "Bondone und Stivo",
+      "regionID" : "IT-32-TN-03"
+    }, {
+      "name" : "Westliche Nonsberger Alpen",
+      "regionID" : "IT-32-TN-17"
+    }, {
+      "name" : "Paganella",
+      "regionID" : "IT-32-TN-11"
+    } ],
+    "snowpackStructure" : { },
+    "tendency" : { },
+    "travelAdvisory" : { },
+    "validTime" : {
+      "endTime" : "2018-12-04T23:00:00Z",
+      "startTime" : "2018-12-03T23:00:00Z"
+    },
+    "wxSynopsis" : { }
+  } ]
+}
