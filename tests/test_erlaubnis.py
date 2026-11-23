@@ -79,12 +79,15 @@ def test_b31_liegt_vor_nur_mit_beleg():
          "nutzung": {"robots": "erlaubt", "robots_geprueft": "2026-11-23", "nutzungsbedingungen_geprueft": None,
                      "erlaubnis": "liegt_vor"}, "config": {"default_gebiet": gebiete["gebiete"][0]["slug"]}}
     assert any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
-    q["nutzung"]["beleg"] = "docs/erlaubnisse/gibt-es-nicht.md"
+    q["nutzung"]["beleg"] = "irgendwo/beleg.txt"
     assert any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
     q["nutzung"]["beleg"] = "docs/erlaubnisse/tirol-werbung-2026-11-23.md"
     assert not any("nutzung.beleg" in f for f in pruefe({"quellen": [q]}, gebiete))
-    # die echte Konfiguration: jede Zustimmung ist belegt
-    assert not any("nutzung.beleg" in f for f in pruefe(lade_yaml(CONFIG_DIR / "sources.yaml"), gebiete))
+    # die echte Konfiguration: jede Zustimmung ist belegt, und die Belegdatei liegt im Repo
+    sources = lade_yaml(CONFIG_DIR / "sources.yaml")
+    assert not any("nutzung.beleg" in f for f in pruefe(sources, gebiete))
+    belege = [q["nutzung"]["beleg"] for q in sources["quellen"] if (q.get("nutzung") or {}).get("erlaubnis") == "liegt_vor"]
+    assert belege and all((CONFIG_DIR.parent / b).is_file() for b in belege)
 
 
 @pytest.mark.req("B31", ak=2)
