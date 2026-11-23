@@ -55,8 +55,9 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            # P38: Allgaeu ueber Ortsseiten
            "oberstdorf": 14, "wertach": 3, "pfronten": 10, "kleinwalsertal": 19, "fuessen": 3, "isny": 12,
            "hoernerdoerfer": 26}
-# B30: tirol.at-Loipen in den Gebieten von Achensee Tourismus (Achensee 12, Steinberg am Rofan 11, Wiesing 1)
-AUSGEBLENDET = 24
+# B30: ausgeblendete Loipen (config/gebiete.yaml). Bis 23.11.2026 waren es 24 tirol.at-Loipen von Achensee Tourismus;
+# seit E-37 zeigt die Seite sie ueber tirol.at wieder, der Block ausgeblendet ist leer.
+AUSGEBLENDET = 0
 TABELLEN = ["quellen", "regionen", "gebiete", "loipen", "zustaende", "wetter", "parkplaetze"]
 
 

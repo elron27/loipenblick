@@ -15,12 +15,12 @@
 # ausgeblendet (B30 AK 3, E-30): Gebiete und einzelne Loipen, die die Seite in keiner Version zeigt (auch nicht
 # in der Testversion), gleich welche Quelle sie liefert. Zum Rueckgaengigmachen den Eintrag loeschen.
 ausgeblendet:
-  gebiete:
-    achensee: "Achensee Tourismus hat der Übernahme seiner Loipendaten am 20.11.2026 widersprochen; dieselben Loipen kommen auch über tirol.at."
-    steinberg-rofan: "Achenkirch und Steinberg am Rofan gehören zu Achensee Tourismus (Widerspruch vom 20.11.2026)."
-  loipen:
-  # Wiesing gehoert zu Achensee Tourismus; tirol.at ordnet die Loipe nach der Lage dem Alpbachtal zu
-  - {gebiet: alpbachtal, name: "W1 - Loipe Buchbergl", grund: "Loipe in Wiesing, Gebiet von Achensee Tourismus (Widerspruch vom 20.11.2026)."}
+  # Bis 23.11.2026 standen hier die Gebiete achensee und steinberg-rofan sowie die Wiesinger Loipe
+  # "W1 - Loipe Buchbergl" (Widerspruch von Achensee Tourismus vom 20.11.2026). Nach der Freigabe der Tirol Werbung
+  # vom 23.11.2026 hat Stefan entschieden, sie ueber tirol.at wieder zu zeigen (E-37); die Quelle achensee bleibt
+  # abgelehnt. Wieder ausblenden: die Eintraege hier erneut ergaenzen.
+  gebiete: {}
+  loipen: []
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal

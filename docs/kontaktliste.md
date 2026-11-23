@@ -1,6 +1,6 @@
 # Kontaktliste: Stellen, die wir fragen oder informieren müssen
 
-Stand 20.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
+Stand 23.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
 `livegang/vorbereitung/kontaktliste.md` im Projektordner.
 
 **Vorgehen (Stefan, 19.11.2026):** Daten von Quellen ohne Zustimmung dürfen in die **Testversion**. Die Quelle steht dann in
@@ -12,7 +12,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 | Wert | Bedeutung | Öffentliche Seite |
 |---|---|---|
-| `liegt_vor` | Betreiber hat zugestimmt (Datum und Wortlaut in der Notiz unten) | wird gezeigt |
+| `liegt_vor` | Betreiber hat zugestimmt (Datum und Wortlaut in `docs/erlaubnisse/`, Pflicht nach B31) | wird gezeigt |
 | `ausstehend` | angefragt oder Anfrage geplant; Nutzungsbedingungen verbieten die Übernahme nicht ausdrücklich | wird mit Quellenhinweis gezeigt (Regel aus der Livegang-Planung: bei Schweigen bis 11.12. mit Quellenhinweis zeigen) |
 | `nur_test` | Nutzungsbedingungen verbieten Übernahme/Speichern ohne Einwilligung, oder noch nicht geprüft | wird **nicht** gezeigt |
 | `abgelehnt` | Betreiber hat der Übernahme widersprochen (B30) | wird **nie** abgerufen und **nirgends** gezeigt, auch nicht in der Testversion; Gebiete, deren Loipen auch über andere Quellen kommen, stehen in `config/gebiete.yaml` unter `ausgeblendet` |
@@ -21,7 +21,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 | Stelle | Quelle / Region | Wofür | Kontakt | Stand | Notiz |
 |---|---|---|---|---|---|
-| Tirol Werbung GmbH | tirol.at, ganz Tirol | Loipenstatus, Lage, Länge | info@tirol.at | angefragt 19.11.2026 | nachfassen, falls bis 11.12. keine Antwort |
+| Tirol Werbung GmbH | tirol.at, ganz Tirol | Loipenstatus, Lage, Länge | info@tirol.at; geantwortet hat Victoria Schilcher, Projektmanagement digitale Kanäle | angefragt 19.11.2026, **Erlaubnis am 23.11.2026** | Abholung über die Website mit Quellangabe und Link auf tirol.at ist in Ordnung. Seit 23.11. `erlaubnis: liegt_vor` (B31, E-37), Beleg [erlaubnisse/tirol-werbung-2026-11-23.md](erlaubnisse/tirol-werbung-2026-11-23.md). Spätere Option: Open-Data-Datensatz der Österreich Werbung (LTO Freigabetool). Kein Nachfassen mehr nötig. |
 | Tegernseer Tal Tourismus GmbH | tegernsee.com | Loipenstatus, gespurte km | info@tegernsee.com | angefragt 19.11.2026 | |
 | Tourist-Info Bayrischzell | bayrischzell.de | Loipenstatus | tourist-info@bayrischzell.de | angefragt 19.11.2026 | |
 | Gemeinde Fischbachau | fischbachau.de | Loipenstatus | rathaus@fischbachau.de | angefragt 19.11.2026 | |
@@ -29,7 +29,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | Chiemgau GmbH (Chiemgau Tourismus) | tourinfra Loipenmanager Chiemgau (Ruhpolding, Reit im Winkl, Inzell, Achental u. a.) | Loipenstatus, Strecken | Martina Tremel, Digitale Medien, Martina.Tremel@chiemgau.bayern | angefragt, **Antwort 20.11.2026: vorerst keine Freigabe**; Antwort von Stefan verschickt 21.11.2026 | Fragt, ob wir eine tourinfra-Schnittstelle nutzen oder Seiten auslesen; klärt intern und mit dem Systemanbieter (green-solutions). Bitte: Loipenmanager-Daten vorerst nicht übernehmen. Seit 20.11. `nur_test`. Antwortentwurf im Projekt-Thread "Chiemgau-Rückfrage". |
 | TVB Tannheimer Tal | tourinfra Loipenmanager | Loipenstatus, Strecken | info@tannheimertal.com | angefragt 19.11.2026 | |
 | TVB Olympiaregion Seefeld | seefeld.com, tourinfra | Loipenstatus, gespurte km | region@seefeld.com | angefragt 19.11.2026 | deckt beide Seefeld-Quellen ab |
-| TVB Achensee (Achensee Tourismus) | achensee.com; Gebiete Achensee (Maurach, Pertisau, Wiesing) und Steinberg am Rofan (Achenkirch, Steinberg) | Schneebericht | Martina Unterberger, Welcome-CENTER Achensee, info@achensee.com | angefragt 19.11.2026, **abgelehnt am 20.11.2026** | Wortlaut: „Wir stimmen dem automatisierten Abruf und der Übernahme unserer Loipendaten jedoch nicht zu. Bitte sehen Sie daher von einer Verwendung unserer Daten auf Ihrer Website ab.“ Seit 20.11. `erlaubnis: abgelehnt`, Quelle aus (B30, E-30). Die Gebiete `achensee` und `steinberg-rofan` sowie die Wiesinger Loipe „W1 - Loipe Buchbergl“ sind auch für tirol.at-Daten ausgeblendet, bis geklärt ist, ob Tirol Werbung diese Daten weitergeben darf. Rückgängig: Einträge unter `ausgeblendet` in `config/gebiete.yaml` löschen. Antwort- und Nachfrage-Entwurf im Projekt-Thread „Achensee nach Absage abschalten“. |
+| TVB Achensee (Achensee Tourismus) | achensee.com; Gebiete Achensee (Maurach, Pertisau, Wiesing) und Steinberg am Rofan (Achenkirch, Steinberg) | Schneebericht | Martina Unterberger, Welcome-CENTER Achensee, info@achensee.com | angefragt 19.11.2026, **abgelehnt am 20.11.2026** | Wortlaut: „Wir stimmen dem automatisierten Abruf und der Übernahme unserer Loipendaten jedoch nicht zu. Bitte sehen Sie daher von einer Verwendung unserer Daten auf Ihrer Website ab.“ Seit 20.11. `erlaubnis: abgelehnt`, Quelle aus (B30, E-30). Die Gebiete `achensee` und `steinberg-rofan` sowie die Wiesinger Loipe „W1 - Loipe Buchbergl“ waren vom 20. bis 23.11. auch für tirol.at-Daten ausgeblendet. Seit 23.11.2026 (Freigabe der Tirol Werbung) zeigt die Seite sie wieder **nur über tirol.at** (Stefans Entscheidung, E-37); achensee.com bleibt aus. Hinweis: Die Absage bat, „von einer Verwendung unserer Daten auf Ihrer Website abzusehen“; meldet sich Achensee deshalb, die Gebiete wieder unter `ausgeblendet` in `config/gebiete.yaml` eintragen und mit Achensee sprechen. Antwort- und Nachfrage-Entwurf im Projekt-Thread „Achensee nach Absage abschalten“. |
 | TVB Kufsteinerland | kufstein.com | Schneebericht | info@kufstein.com | angefragt 19.11.2026 | |
 | TVB Kaiserwinkl | kaiserwinkl.com | Loipenbericht | info@kaiserwinkl.com | angefragt 19.11.2026, **Antwort 19.11.** (fragt nach Schnittstelle) | Antwortentwurf: livegang/vorbereitung/antwort-schnittstelle.md |
 | Kitzbüheler Alpen | kitzbueheler-alpen.com | Loipenstatus | Adresse fehlt (Impressum) | **nicht angefragt** | Mail lag ohne Adresse bereit |

@@ -65,6 +65,12 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
                 fehler.append(f"Quelle {q['key']}: nutzung.{feld} fehlt")
         if nutzung.get("erlaubnis", ERLAUBNIS_STANDARD) not in ERLAUBNIS:
             fehler.append(f"Quelle {q['key']}: nutzung.erlaubnis muss {', '.join(ERLAUBNIS)} sein")
+        # B31: eine Zustimmung ist belegt (Datei unter docs/erlaubnisse/ mit Datum und Wortlaut). Ob die Datei
+        # existiert, prueft der Test: im Image und auf dem NAS gibt es den Ordner docs/ nicht.
+        if nutzung.get("erlaubnis") == "liegt_vor":
+            beleg = str(nutzung.get("beleg") or "")
+            if not (beleg.startswith("docs/erlaubnisse/") and beleg.endswith(".md")):
+                fehler.append(f"Quelle {q['key']}: erlaubnis liegt_vor braucht nutzung.beleg unter docs/erlaubnisse/")
         if str(nutzung.get("robots", "erlaubt")) != "erlaubt":
             fehler.append(f"Quelle {q['key']}: robots.txt erlaubt den Abruf nicht")
         # P20: eine Ortsseite nur, wenn sie ein Gebiet ohne andere Quelle schliesst
