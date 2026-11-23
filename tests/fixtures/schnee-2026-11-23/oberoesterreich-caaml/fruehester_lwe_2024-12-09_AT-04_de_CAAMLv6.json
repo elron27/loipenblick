@@ -1,0 +1,149 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Am Montag schränken dichte Wolken die Sichtverhältnisse meist ein. Zeitweise schneit es, speziell in den Nordalpen am Vormittag auch öfter. In 1500 m liegen die Temperaturen um -5 Grad, in 2000 m um -7 Grad.\n\nAm Dienstag schränken weiterhin dichte Wolken die Sicht ein. Im Tagesverlauf breitet sich der Schneefall auf die Nordalpen aus. In 1500 m pendeln die Temperaturen um -4 Grad, in 2000 m um -5 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Weiterhin verbreitet geringe, hochgelegen lokal teils mäßige Lawinengefahr!",
+      "comment" : "In den höheren Lagen sind vor allem im Nord- und Ostsektor lokale Gefahrenstellen vorhanden. Diese älteren frisch vom Neuschnee überdeckten, teils noch störanfälligen Triebschneeablagerungen sind zu beachten. In steilen eingewehten Mulden und Rinnen sowie auf eingewehten kammnahen Steilhängen können Schneebrettlawinen im Steilgelände vor allem bei großer, hochalpin teils noch geringer Zusatzbelastung ausgelöst werden. Lawinen können klein bis mittelgroß werden."
+    },
+    "snowpackStructure" : {
+      "comment" : "Durch teils stürmischen Wind und Schneefall sind überdeckte ältere Triebschneeablagerungen vorhanden, die in höheren Lagen teils störanfällig sind. Mit den zwischenzeitlich milderen Temperaturen könnten sich diese aber schon etwas setzen und binden besser. Der Schnee ist sehr unterschiedlich verteilt, Rücken und Grate in höheren Lagen sind oft komplett abgeblasen und nun von etwas Neuschnee frisch überdeckt."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Es gibt nur unergiebigen Schneefall und schwachen Wind. Die Lawinengefahr geht langsam zurück.",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 2,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "NE", "SE", "E", "N" ]
+    } ],
+    "bulletinID" : "be1cc703-7606-442b-8e9e-90dd1a055d6c",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Totes Gebirge",
+      "regionID" : "AT-04-03"
+    }, {
+      "name" : "Phyrgas, Haller Mauern",
+      "regionID" : "AT-04-04"
+    }, {
+      "name" : "Dachstein, Gosaukamm",
+      "regionID" : "AT-04-01"
+    } ]
+  }, {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Am Montag schränken dichte Wolken die Sichtverhältnisse meist ein. Zeitweise schneit es, speziell in den Nordalpen am Vormittag auch öfter. In 1500 m liegen die Temperaturen um -5 Grad, in 2000 m um -7 Grad.\n\nAm Dienstag schränken weiterhin dichte Wolken die Sicht ein. Im Tagesverlauf breitet sich der Schneefall auf die Nordalpen aus. In 1500 m pendeln die Temperaturen um -4 Grad, in 2000 m um -5 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Meist geringe Lawinengefahr!",
+      "comment" : "Nur in den höheren Lagen sind vor allem im Nord- und Ostsektor lokal, ältere nun überdeckte Triebschneeablagerungen als Gefahrenstellen vorhanden. Zu beachten sind steile verfüllte Mulden und Rinnen sowie eingewehte Steilhänge. Schneebrettlawinen können im Steilgelände vor allem bei großer Zusatzbelastung hier ausgelöst werden. Lawinen können klein bis mittelgroß werden."
+    },
+    "snowpackStructure" : {
+      "comment" : "Durch teils stürmischen Wind und Schneefall entstandene ältere nun überdeckte Triebschneeablagerungen sind vorhanden, die in höheren Lagen teils störanfällig sind. Mit den zwischenzeitlich milderen Temperaturen könnten sich diese aber schon etwas setzen und binden besser. Der Schnee ist sehr unterschiedlich verteilt, Rücken und Grate in höheren Lagen sind oft komplett abgeblasen und nun von etwas Neuschnee überdeckt."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Es gibt nur unergiebigen Schneefall und schwachen Wind. Die Lawinengefahr geht langsam zurück.",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "fair",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "NE", "SE", "E", "N" ]
+    } ],
+    "bulletinID" : "b9c5561e-d9ef-41d9-b582-422e2985d35b",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Kasbergblock",
+      "regionID" : "AT-04-07"
+    }, {
+      "name" : "Sengsengebirge",
+      "regionID" : "AT-04-08"
+    }, {
+      "name" : "Zimnitzmassiv, Höllengbirge",
+      "regionID" : "AT-04-05"
+    }, {
+      "name" : "Traunstein, Eibenberg",
+      "regionID" : "AT-04-06"
+    }, {
+      "name" : "Kalmberg, Katergebirge",
+      "regionID" : "AT-04-02"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "Unergiebiger Schneefall, kaum Wind - hochalpin lokale überdeckte Gefahrenstellen!"
+  }
+}

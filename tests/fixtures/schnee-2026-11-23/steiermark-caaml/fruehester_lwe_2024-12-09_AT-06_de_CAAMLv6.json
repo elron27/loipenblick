@@ -1,0 +1,178 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Ausgehend von einem Tief über Oberitalien gelangen aus Südosten kalte und mäßig feuchte Luftmassen in den Ostalpenraum. Am Montag dominiert tiefbasige Bewölkung, das Bergland steckt meist im Nebel und ab und zu kann es unergiebig schneien. Der Wind weht schwach oder mäßig stark aus Nordost bis Südost, die Temperaturen erreichen um die Mittagszeit in 1.500m -5 Grad und in 2.000m -8 Grad. \nDie weiteren Tage bleiben mäßig kalt und unbeständig. Größere Schneemengen sind aber derzeit nicht in Sicht."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Eingeschränkte Sicht - Achtung auf störanfälligen Triebschnee, insbesondere in altschneegefüllten Rinnen und Mulden!",
+      "comment" : "Die Lawinengefahr ist oberhalb von etwa 1.800m mäßig, darunter gering. Mit dem stürmischen Wind aus West bis Nordwest wurden einerseits exponiertere Hangzonen abgeblasen, andererseits Rinnen und Mulden sowie Bereiche hinter Geländekanten frisch eingeweht. Die entstandenen Triebschneepakete sind zum Teil noch recht störanfällig, mögliche Schneebrettlawinen sind klein bis mittelgroß, können aber bereits bei geringer Zusatzbelastung, also durch einen einzelnen Wintersportler ausgelöst werden. Aufgrund der schlechten Sichtbedingungen sind die Gefahrenstellen oft schwer zu erkennen.\nMit der vorübergehenden Erwärmung und Einstrahlung am Samstag hat sich der Neuschnee  zumindest sonnseitig gesetzt, schattseitig hat sich hingegen nur wenig geändert. Je nach Windeinfluss weisen die Gefahrenstellen im Gelände oft nur eine geringe Schneeüberdeckung auf und es überwiegt die Absturzgefahr."
+    },
+    "snowpackStructure" : {
+      "comment" : "Der in der Nacht auf Samstag gefallene Neuschnee  entlang der Nordalpen und an der Tauernnordseite fiel deutlich ergiebiger aus als prognostiziert. So erreichte der Neuschneezuwachs etwa im Toten Gebirge oder im Hochschwabgebiet bis zu knapp einem halben Meter. Der Schnee lagerte sich teils auf aperen Böden, in höheren Lagen am gebundenen Altschnee der letzten Novembertage ab, der sich hier meist kantig umgewandelt hat. Frischer Triebschnee liegt vor allem in Rinnen und Mulden höherer, schattseitiger Lagen. Mit der Winddrehung auf Ost haben Windstärken und damit auch die Schneeverfrachtung deutlich abgenommen."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Der weitere, geringe Schneezuwachs und der schwächer werdende Wind ändern wenig an der Lawinengefahr.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "some",
+      "avalancheSize" : 2,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "SW", "NE", "E", "W", "N" ]
+    } ],
+    "bulletinID" : "06baaaf9-0e5f-477b-a6bd-918398efcdd3",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Totes Gebirge",
+      "regionID" : "AT-06-02"
+    }, {
+      "name" : "Dachsteingebiet",
+      "regionID" : "AT-06-01"
+    }, {
+      "name" : "Mürzsteger Alpen",
+      "regionID" : "AT-06-11"
+    }, {
+      "name" : "Hochschwabgebiet",
+      "regionID" : "AT-06-10"
+    }, {
+      "name" : "Eisenerzer Alpen",
+      "regionID" : "AT-06-09"
+    }, {
+      "name" : "Triebener Tauern",
+      "regionID" : "AT-06-08-01"
+    }, {
+      "name" : "Rottenmanner Tauern",
+      "regionID" : "AT-06-06"
+    }, {
+      "name" : "Nördliche Schladminger Tauern",
+      "regionID" : "AT-06-04-01"
+    }, {
+      "name" : "Nördliche Wölzer Tauern",
+      "regionID" : "AT-06-05"
+    }, {
+      "name" : "Ennstaler Alpen",
+      "regionID" : "AT-06-03"
+    } ]
+  }, {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Ausgehend von einem Tief über Oberitalien gelangen aus Südosten kalte und mäßig feuchte Luftmassen in den Ostalpenraum. Am Montag dominiert tiefbasige Bewölkung, das Bergland steckt meist im Nebel und ab und zu kann es unergiebig schneien. Der Wind weht schwach oder mäßig stark aus Nordost bis Südost, die Temperaturen erreichen um die Mittagszeit in 1.500m -5 Grad und in 2.000m -8 Grad. \nDie weiteren Tage bleiben mäßig kalt und unbeständig. Größere Schneemengen sind aber derzeit nicht in Sicht."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Eingeschränkte Sichtbedingungen - kleinräumige Gefahrenbereiche durch frischen Triebschnee!",
+      "comment" : "Die Gefahrenstellen durch frischen Triebschnee finden sich am ehesten im schattseitigen Gelände, wo dieser auf die Altschneereste der letzten Novembertage fiel. In höheren Lagen ist das gering mächtige Fundament kantig umgewandelt, die Verbindung zum Triebschnee störanfällig. Ein Schneebrett ist meist nur bei größerer Zusatzbelastung auslösbar, die Lawinen bleiben klein. Aufgrund der geringen Schneeüberdeckung überwiegt eher die Absturzgefahr."
+    },
+    "snowpackStructure" : {
+      "comment" : "Alpensüdseitig liegt noch wenig Schnee, die Schneefälle in der Nacht auf Samstag konzentrierten sich auf die Alpennordseite. Auch die Niederschläge des aktuellen Italientiefs betreffen die Alpensüdseite nur randlich , der Neuschneezuwachs bleibt daher gering. Der lebhafte Wind vom Wochenende hat den Schnee im Gelände ungleich verteilt, es wechseln abgeblasene Hangzonen mit eingewehten Mulden und Rinnen."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Abnehmender Wind und nur geringer Neuschneezuwachs ändern wenig an der derzeitigen Lawinensituation.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "fair",
+      "frequency" : "few",
+      "avalancheSize" : 2,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "SW", "NE", "W", "N" ]
+    } ],
+    "bulletinID" : "3910e236-b7ab-45ed-9908-acde2fa5f6b8",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Gaaler Tauern",
+      "regionID" : "AT-06-08-02"
+    }, {
+      "name" : "Südliche Wölzer Tauern",
+      "regionID" : "AT-06-07"
+    }, {
+      "name" : "Gurktaler Alpen",
+      "regionID" : "AT-06-18"
+    }, {
+      "name" : "Seetaler Alpen",
+      "regionID" : "AT-06-17"
+    }, {
+      "name" : "Koralpe",
+      "regionID" : "AT-06-16"
+    }, {
+      "name" : "Stub- und Gleinalpe",
+      "regionID" : "AT-06-15"
+    }, {
+      "name" : "Südliche Schladminger Tauern",
+      "regionID" : "AT-06-04-02"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "Schlechte Sichtbedingungen - Triebschneeproblem oberhalb von ca. 1.800m!"
+  }
+}

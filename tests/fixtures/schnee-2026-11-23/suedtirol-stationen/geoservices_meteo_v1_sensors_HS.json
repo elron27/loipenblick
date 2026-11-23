@@ -1,0 +1,250 @@
+[
+{
+"SCODE":"00390SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":15.6
+},
+{
+"SCODE":"06090SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":24.0
+},
+{
+"SCODE":"50360SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":18.7
+},
+{
+"SCODE":"61690SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":22.7
+},
+{
+"SCODE":"91180SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":14.5
+},
+{
+"SCODE":"24300SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":9.6
+},
+{
+"SCODE":"15000SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":25.3
+},
+{
+"SCODE":"31810SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:20:00CET",
+"VALUE":19.8
+},
+{
+"SCODE":"66100SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":7.1
+},
+{
+"SCODE":"80100SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":14.1
+},
+{
+"SCODE":"45200SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":17.7
+},
+{
+"SCODE":"78480SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":20.2
+},
+{
+"SCODE":"90005SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":7.3
+},
+{
+"SCODE":"53200SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":18.2
+},
+{
+"SCODE":"42830SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm"
+},
+{
+"SCODE":"74200MS",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":22.0
+},
+{
+"SCODE":"15590SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":12.7
+},
+{
+"SCODE":"35205SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":10.1
+},
+{
+"SCODE":"01080SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":38.2
+},
+{
+"SCODE":"20050SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":15.9
+},
+{
+"SCODE":"78110MS",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":12.0
+},
+{
+"SCODE":"62270SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":14.6
+},
+{
+"SCODE":"02700SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:20:00CET",
+"VALUE":40.5
+},
+{
+"SCODE":"54100SF",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":34.1
+},
+{
+"SCODE":"90200MS",
+"TYPE":"HS",
+"DESC_D":"Schneehöhe",
+"DESC_I":"Altezza neve al suolo",
+"DESC_L":"Autëza dla nëif",
+"UNIT":"cm",
+"DATE":"2026-11-23T19:30:00CET",
+"VALUE":8.7
+}
+]

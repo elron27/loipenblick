@@ -1,0 +1,139 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Ein Tief über Oberitalien sorgt für dichte, auf den Bergen für aufliegende Bewölkung und leichte Schneefälle. Der Wind weht lebhaft aus Nord. die Temperaturen in 1500m liegen bei -5 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Frischer Triebschnee!",
+      "comment" : "Die Lawinengefahr ist oberhalb von etwa 1.600m mäßig, darunter gering. Mit dem stürmischen Wind aus Nord werden Rinnen und Mulden sowie Bereiche hinter Geländekanten frisch eingeweht. Die entstandenen Triebschneepakete sind zum Teil störanfällig, mögliche Schneebrettlawinen sind klein bis mittelgroß, können aber bereits bei geringer Zusatzbelastung, also durch einen einzelnen Wintersportler ausgelöst werden. Der Schnee ist kalt und spröde.\nIn den mittleren Lagen ist der Schnee feucht."
+    },
+    "snowpackStructure" : {
+      "comment" : "Von Freitag auf Samstag sind in den Ybbstaler Alpen 30 - 40cm Neuschnee gefallen.  Der Schnee fiel teils auf apere Böden, nur in den Hochlagen lagerte sich der frische Neuschnee auf einer Altschneedecke ab. Mit dem lebhaften Nordwind wird dieser auch verfrachtet. Eine mögliche Schwachschicht ist innerhalb der Triebschneeschicht zu erwarten.\nIn den mittleren Lagen ist der Schnee auf einem warmen Boden gefallen. Der Schnee ist hier feucht."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Ein großräumiges Tief über Mittelitalien sorgt weiterhin für meist dichte, an den Bergen oft aufliegende Bewölkung und neuerliche Schneefälle, die aber meist von relativ geringer Ergiebigkeit bleiben.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "1600"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 2,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NE", "SE", "E", "S" ]
+    } ],
+    "bulletinID" : "88e3a6b9-a940-412f-82f5-c0d8ec82161c",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "1600"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "1600"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Ybbstaler Alpen",
+      "regionID" : "AT-03-01"
+    } ]
+  }, {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Ein Tief über Oberitalien sorgt für dichte, auf den Bergen für aufliegende Bewölkung und leichte Schneefälle. Der Wind weht lebhaft aus Nord. die Temperaturen in 1500m liegen bei -5 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Achtung auf störanfälligen Triebschnee, insbesondere in Rinnen und Mulden!",
+      "comment" : "Die Lawinengefahr wird mit gering beurteilt. Mit dem lebhaften Nordwind entstehen neue, allerdings nur kleinräumige Triebschneepakete im Sektor Ost und Süd.  Rinnen und Mulden sowie Bereiche hinter Geländekanten werden frisch eingeweht. Die entstandenen Triebschneepakete sind zum Teil  störanfällig, mögliche Schneebrettlawinen sind klein. \nIn den mittleren Lagen haben sich kleine Gleitschneerisse aufgetan. Mehr als ein Rutsch wird jedoch nicht erwartet."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es sind von Freitag auf Samstag 15 bis 30 cm Neuschnee gefallen. Der Schnee fiel teils auf apere Böden, frischer Triebschnee lagerte sich in Rinnen und Mulden höherer, schattseitiger  Lagen auf dem Altschnee der letzten Novembertage ab. Mit dem lebhaften Nordwind lagert sich frischer Triebschnee auf den kaltem Neuschnee ab. Eine mögliche Schwachschicht liegt im Triebschneepaket bzw. zwischen Triebschnee- und Neuschneeschicht. In den mittleren Lagen liegt nur wenig Schnee, dieser ist feucht."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Keine wesentliche Änderung der Lawinengefahr wird erwartet.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : { },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NE", "SE", "E", "S" ]
+    } ],
+    "bulletinID" : "2e645687-6e21-470b-9af0-b889a0b8e527",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Gippel - Göllergebiet",
+      "regionID" : "AT-03-06"
+    }, {
+      "name" : "Rax - Schneeberggebiet",
+      "regionID" : "AT-03-04"
+    }, {
+      "name" : "Türnitzer Alpen",
+      "regionID" : "AT-03-02"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "Wenig Änderung der Lawinengefahr!  Triebschnee in den Hochlagen!"
+  }
+}

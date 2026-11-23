@@ -1,0 +1,1862 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "FR-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-02T12:00:00+01:00",
+        "endTime": "2021-12-02T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-01_2021-12-01T16:00:00+01:00_PM",
+      "predecessor_id": "FR-01_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T16:00:00+01:00",
+        "endTime": "2021-12-02T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-01_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-02T12:00:00+01:00",
+        "endTime": "2021-12-02T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-02_2021-12-01T16:00:00+01:00_PM",
+      "predecessor_id": "FR-02_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T16:00:00+01:00",
+        "endTime": "2021-12-02T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-02_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-02T12:00:00+01:00",
+        "endTime": "2021-12-02T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-03_2021-12-01T16:00:00+01:00_PM",
+      "predecessor_id": "FR-03_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-01T16:00:00+01:00",
+        "endTime": "2021-12-02T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-12-01T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es et avalanches de neige fra\u00eeche + plaques.\nD\u00e9clenchements skieurs : plaques friables, +nombreuses/\u00e9paisses en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\n-Situation avalancheuse typique : manteau neigeux instable jusqu'\u00e0 jeudi en pentes raides, surtout au-dessus de 1600/1800 m. \n-D\u00e9parts spontan\u00e9s : en pentes raides pendant les chutes de neige vent\u00e9es mercredi soir et jusqu'en milieu de nuit, pr\u00e9voir quelques coul\u00e9es et avalanches de plaques friables, plus \u00e9paisses en altitude, se rar\u00e9fiant jusqu'\u00e0 jeudi compte tenu du refroidissement et de l'affaiblissement du vent. \n-D\u00e9clenchements par skieur : EN PENTES ASSEZ RAIDES, ATTENTION AUX FORTS RISQUES D'AVALANCHES de plaques friables dans la neige poudreuse et l\u00e9g\u00e8re en surface, surtout \u00e0 plus de 1600/1800 m, et \u00e0 fortiori dans les pentes Est, Nord et Ouest. Ces nombreuses plaques friables seront plus \u00e9paisses et plus larges en prenant de l'altitude, en particulier au-dessus de 2000/2200 m (quelques d\u00e9parts \u00e0 distance possibles, pr\u00e9c\u00e9d\u00e9s parfois de craquements ou bruits sourds sous les skis, en profondeur du manteau neigeux). Plaques friables plus diss\u00e9min\u00e9es en versants Sud, et d'une mani\u00e8re plus g\u00e9n\u00e9rale \u00e0 moins de 1600 m.",
+      "snowpackStructureComment": "-L'enneigement s'am\u00e9liorera nettement en montagne jusqu'\u00e0 jeudi. \nEn fond de vall\u00e9e, il restera encore un peu faible apr\u00e8s tassement et humidification mercredi suite au redoux (puis refroidissement et giboul\u00e9es de neige fra\u00eeche en surface pour jeudi).\n\n-Jeudi, une belle couche de neige fra\u00eeche et l\u00e9g\u00e8re surmontera des couches profondes un peu humide en moyenne montagne, du moins en-dessous de 1600 m environ. Compte tenu des risques d'avalanches, plus forts au-dessus de 1600/1800 m, il faudra \u00e9viter les pentes raides et ne pas trop rester en contrebas.",
+      "bulletinID": "FR-03_2021-12-01T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques petites avalanches.\nD\u00e9clenchements skieurs : rares plaques friables.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites).  NEIGE FRAICHE, NEIGE VENTEE.\nLa Bise souvent mod\u00e9r\u00e9e de Nord \u00e0 NW hier (Lundi), a pu transporter un peu de neige notamment sur les hauts sommets \u00e0 l\u2019Est du massif. La nouvelle couche de neige fra\u00eeche attendue (10-25 cm de neige s\u00e8che au-dessus de 1700 m Mercredi soir) sera accompagn\u00e9e de vent de SW \u00e0 WSW assez fort au-dessus de 1800 m, avec localement quelques rafales plus bas.\nDEPARTS NATURELS : Des coul\u00e9es ou petites avalanches de neige humide, ou parfois en plaque, peuvent encore se produire au soleil en matin\u00e9e\u00a0; elles deviendront plus fr\u00e9quentes, en toutes expositions, sous la pluie et la neige fra\u00eeche humide attendues en dessous de 1700 m. Des avalanches parfois moyennes de plaque superficielle peuvent aussi se produire surtout au-dessus de 1600-1700 m et en pentes froides ou sous le vent (notamment expos\u00e9es au NW \u00e0 NE \u00e0 SE).\nDECLENCHEMENTS ACCIDENTELS : De rares plaques r\u00e9centes (notamment dues \u00e0 la Bise hier) peuvent encore \u00eatre d\u00e9clench\u00e9es par un skieur en matin\u00e9e. Puis ce risque s\u2019accentue, avec les chutes de neige et le vent, de d\u00e9clencher de nouvelles plaques superficielles plus nombreuses surtout au-dessus de 1600-1700 m, un peu plus \u00e9paisses et instables en pentes sous le vent, o\u00f9 elles reposeront sur de la neige plus l\u00e9g\u00e8re.",
+      "snowpackStructureComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). Mesures ponctuelles\u00a0: 3 cm en Combe de Savoie, 30 cm vers 1700 m. En secteurs bien expos\u00e9s au soleil direct, la neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, l\u00e9g\u00e8re ou partiellement densifi\u00e9e par le vent tr\u00e8s passag\u00e8rement assez fort sur les sommets, voire quelques rafales plus bas. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la petite sous-couche irr\u00e9guli\u00e8re qui peut subsister en secteurs peu expos\u00e9s au soleil au-dessus de 1700 m, cro\u00fbt\u00e9e, ou densifi\u00e9e par le vent, ou plus l\u00e9g\u00e8re et anguleuse.",
+      "bulletinID": "FR-04_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches en neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques plaques pr\u00e8s des cr\u00eates.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). NEIGE FRAICHE, NEIGE VENTEE.\nLa Bise assez forte de Nord \u00e0 NW en haute montagne depuis hier (Lundi), sensible localement jusqu\u2019\u00e0 2200 m, a form\u00e9 des plaques superficielles. La nouvelle couche de neige fra\u00eeche attendue (5-20 cm de neige s\u00e8che au-dessus de 1500-1700 m Mercredi soir) sera accompagn\u00e9e de vent d\u2019Ouest \u00e0 SW assez fort en haute montagne (\u00e0 2900 m) et plus bas au Nord du massif (\u00e0 2400 m).\nDEPARTS NATURELS : Des coul\u00e9es et parfois avalanches, de neige r\u00e9cente humide ou parfois en plaque, peuvent encore se produire au soleil en matin\u00e9e\u00a0; elles deviendront ensuite plus fr\u00e9quentes, en toutes expositions, sous la pluie ou la neige fra\u00eeche humide attendues en dessous de 1600-1700 m. Plus haut, des avalanches parfois moyennes de plaque superficielle peuvent se produire surtout au-dessus de 2200-2400 m et en pentes froides ou sous le vent (notamment expos\u00e9es au NW \u00e0 NE \u00e0 SE).\nDECLENCHEMENTS ACCIDENTELS : Des plaques r\u00e9centes (notamment dues \u00e0 la Bise hier) peuvent encore \u00eatre d\u00e9clench\u00e9es par un skieur en matin\u00e9e, surtout au-dessus de 2200-2400 m. Puis ce risque s\u2019accentue, avec les chutes de neige et le vent, de d\u00e9clencher de nouvelles plaques superficielles plus nombreuses, surtout en haute montagne et plus bas au Nord du massif, un peu plus \u00e9paisses et instables en pentes sous le vent, o\u00f9 elles reposeront sur de la neige plus l\u00e9g\u00e8re.",
+      "snowpackStructureComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). Mesures ponctuelles : 30-40 cm \u00e0 1200-1950 m, 60 cm \u00e0 2000-2250 m. En secteurs bien expos\u00e9s au soleil direct, la neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, l\u00e9g\u00e8re ou partiellement densifi\u00e9e par le vent surtout en haute montagne. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la petite sous-couche irr\u00e9guli\u00e8re qui peut subsister en secteurs peu expos\u00e9s au soleil au-dessus de 1700 m, cro\u00fbt\u00e9e, ou densifi\u00e9e par le vent, ou plus l\u00e9g\u00e8re et anguleuse.",
+      "bulletinID": "FR-05_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-06"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : petites avalanches en neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques plaques r\u00e9centes en altitude.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). NEIGE FRAICHE, NEIGE VENTEE.\nLe vent plus ou moins fort de NW \u00e0 Nord ces derniers jours en tr\u00e8s haute montagne, et plus bas au Nord du massif, a form\u00e9 des plaques superficielles. Le fort vent d\u2019Ouest attendu avant et pendant les chutes de neige (moins de 15 cm de neige s\u00e8che au-dessus de 1700-1800 m Mercredi soir) va en former d\u2019autres.\nDEPARTS NATURELS : Des coul\u00e9es et petites avalanches de neige r\u00e9cente humide ou parfois en plaque, peuvent encore se produire au soleil en matin\u00e9e\u00a0; elles deviendront ensuite plus fr\u00e9quentes, en toutes expositions, sous la pluie ou la neige fra\u00eeche humide attendues en dessous de 1700-1800 m. Plus haut, des avalanches parfois moyennes de neige r\u00e9cente meuble ou en plaque peuvent se produire surtout au-dessus de 2500 m et en pentes froides ou sous le vent (notamment expos\u00e9es au NW \u00e0 NE \u00e0 SE).\nDECLENCHEMENTS ACCIDENTELS : Des plaques r\u00e9centes (notamment dues \u00e0 la Bise depuis hier) et les nouvelles attendues demain matin peuvent encore \u00eatre d\u00e9clench\u00e9es par un skieur, surtout au-dessus de 2500 m. Puis ce risque s\u2019accentue un peu, avec les nouvelles chutes de neige, surtout en haute montagne, les nouvelles plaques pouvant \u00eatre un peu plus instables en pentes sous le vent, o\u00f9 elles reposeront sur de la neige plus l\u00e9g\u00e8re.",
+      "snowpackStructureComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). Mesures ponctuelles : 15-30 cm \u00e0 1800-2100 m, 20-55 cm \u00e0 2400-2500 m. En secteurs bien expos\u00e9s au soleil direct, la neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, l\u00e9g\u00e8re ou partiellement densifi\u00e9e par le vent (quand elle n\u2019a pas \u00e9t\u00e9 balay\u00e9e) surtout en haute montagne. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la petite sous-couche irr\u00e9guli\u00e8re qui peut subsister en secteurs peu expos\u00e9s au soleil au-dessus de 2000 m, cro\u00fbt\u00e9e, ou densifi\u00e9e par le vent, ou plus l\u00e9g\u00e8re et anguleuse.",
+      "bulletinID": "FR-06_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-09"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques petites avalanches en neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques plaques r\u00e9centes en altitude.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). NEIGE FRAICHE, NEIGE VENTEE.\nLa Bise parfois forte de Nord \u00e0 NW en haute montagne depuis hier (Lundi), a form\u00e9 des plaques superficielles, surtout \u00e0 l\u2019Est du massif. La nouvelle petite couche de neige fra\u00eeche attendue (souvent moins de 10 cm de neige s\u00e8che au-dessus de 1900 m Mercredi soir) sera accompagn\u00e9e de vent d\u2019Ouest \u00e0 SW parfois assez fort en haute montagne.\nDEPARTS NATURELS : Des coul\u00e9es et petites avalanches de neige r\u00e9cente humide ou parfois en plaque, peuvent encore se produire au soleil en matin\u00e9e\u00a0; elles deviendront ensuite plus fr\u00e9quentes, en toutes expositions, sous la pluie ou la neige fra\u00eeche humide attendues en dessous de 1900 m. Plus haut, des petites avalanches de plaque superficielle peuvent se produire surtout au-dessus de 2400 m et en pentes froides ou sous le vent (notamment expos\u00e9es au NW \u00e0 NE \u00e0 SE).\nDECLENCHEMENTS ACCIDENTELS : Des plaques r\u00e9centes (notamment dues \u00e0 la Bise hier) peuvent encore \u00eatre d\u00e9clench\u00e9es par un skieur en matin\u00e9e, surtout au-dessus de 2400 m. Puis ce risque s\u2019accentue un peu, avec les chutes de neige et le vent, de d\u00e9clencher de nouvelles plaques superficielles, surtout en haute montagne, un peu plus instables en pentes sous le vent, o\u00f9 elles reposeront sur de la neige plus l\u00e9g\u00e8re.",
+      "snowpackStructureComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). Mesures ponctuelles : moins de 10 cm en dessous de 1500 m, 25 cm \u00e0 1800 m, 10-35 cm \u00e0 2400 m, 50 cm \u00e0 1600 m vers la Lauzi\u00e8re. En secteurs bien expos\u00e9s au soleil direct, la neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, l\u00e9g\u00e8re ou partiellement densifi\u00e9e par le vent surtout en haute montagne. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la petite sous-couche irr\u00e9guli\u00e8re qui peut subsister en secteurs peu expos\u00e9s au soleil au-dessus de 1800 m, cro\u00fbt\u00e9e, ou densifi\u00e9e par le vent, ou plus l\u00e9g\u00e8re et anguleuse.",
+      "bulletinID": "FR-09_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-10"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : petites avalanches en neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques plaques r\u00e9centes en altitude.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). NEIGE FRAICHE, NEIGE VENTEE.\nLe vent plus ou moins fort de NW \u00e0 Nord ces derniers jours en tr\u00e8s haute montagne, et plus bas \u00e0 l\u2019Ouest du massif, a form\u00e9 des plaques superficielles. Le fort vent d\u2019Ouest \u00e0 SW attendu avant et pendant les chutes de neige (moins de 15 cm de neige s\u00e8che au-dessus de 1700 m Mercredi soir) va en former d\u2019autres.\nDEPARTS NATURELS : Des coul\u00e9es et petites avalanches de neige r\u00e9cente humide ou parfois en plaque, peuvent encore se produire au soleil en matin\u00e9e\u00a0; elles deviendront ensuite plus fr\u00e9quentes, en toutes expositions, sous la pluie ou la neige fra\u00eeche humide attendues en dessous de 1700 m environ. Plus haut, des avalanches parfois moyennes de neige r\u00e9cente meuble ou en plaque peuvent se produire surtout au-dessus de 2500 m et en pentes froides ou sous le vent (notamment expos\u00e9es au NW \u00e0 NE \u00e0 SE).\nDECLENCHEMENTS ACCIDENTELS : Des plaques r\u00e9centes (notamment dues \u00e0 la Bise depuis hier) peuvent encore \u00eatre d\u00e9clench\u00e9es par un skieur en matin\u00e9e, surtout au-dessus de 2500 m. Puis ce risque s\u2019accentue un peu, avec les chutes de neige et le vent, de d\u00e9clencher de nouvelles plaques superficielles, surtout en haute montagne, un peu plus instables en pentes sous le vent, o\u00f9 elles reposeront sur de la neige plus l\u00e9g\u00e8re.",
+      "snowpackStructureComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites). Mesures ponctuelles\u00a0: 20-30 cm \u00e0 1400-2100 m, 35-45 cm \u00e0 2300-2500 m. En secteurs bien expos\u00e9s au soleil direct, la neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, l\u00e9g\u00e8re ou partiellement densifi\u00e9e par le vent (quand elle n\u2019a pas \u00e9t\u00e9 balay\u00e9e) surtout en haute montagne. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la petite sous-couche irr\u00e9guli\u00e8re qui peut subsister en secteurs peu expos\u00e9s au soleil au-dessus de 1800 m, cro\u00fbt\u00e9e, ou densifi\u00e9e par le vent, ou plus l\u00e9g\u00e8re et anguleuse.",
+      "bulletinID": "FR-10_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-11"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : petites avalanches en neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques plaques r\u00e9centes en altitude.",
+      "avalancheActivityComment": "(r\u00e9dig\u00e9 \u00e0 partir d\u2019informations r\u00e9duites).\nNEIGE FRAICHE, NEIGE VENTEE.\nLe fort vent de NW \u00e0 Nord ces derniers jours en tr\u00e8s haute montagne, a form\u00e9 des plaques superficielles. Le fort vent d\u2019Ouest attendu demain, et les petites chutes de neige (souvent moins de 5 cm) va en former d\u2019autres.\nDEPARTS NATURELS : Des coul\u00e9es et petites avalanches de neige r\u00e9cente ou fra\u00eeche, s\u00e8che ou humide ou en plaque, peuvent encore se produire \u00e0 la faveur surtout du soleil et du vent, rarement une avalanche de plaque plus \u00e9paisse pr\u00e8s de la fronti\u00e8re entre Ambin et Carro.\nDECLENCHEMENTS ACCIDENTELS : Les plaques r\u00e9centes (qui peuvent \u00eatre localement \u00e9paisses pr\u00e8s de la fronti\u00e8re entre Ambin et Carro), et les nouvelles attendues demain, peuvent encore \u00eatre d\u00e9clench\u00e9es par un ou plusieurs skieurs, surtout au-dessus de 2500 m.",
+      "snowpackStructureComment": "Mesures ponctuelles\u00a0: 10-20 cm \u00e0 1700-2000 m, 40 cm \u00e0 2100 m, 60-75 cm \u00e0 2700 m. L\u2019enneigement irr\u00e9gulier reste meilleur en bordure frontali\u00e8re entre Ambin et Carro surtout au-dessus de 2200-2500 m,  mais a \u00e9t\u00e9 bien vent\u00e9 par NW ces derniers jours. En secteurs bien expos\u00e9s au soleil direct, la petite couche de neige r\u00e9cente fond, ou s\u2019humidifie au moins en surface et peut commencer \u00e0 se cro\u00fbter la nuit prochaine\u00a0; ailleurs, elle reste froide, plus ou moins densifi\u00e9e par le vent (quand elle n\u2019a pas \u00e9t\u00e9 balay\u00e9e, surtout en haute montagne) ou encore l\u00e9g\u00e8re. Elle repose sur le sol (et sa base humide peut parfois \u00eatre cro\u00fbt\u00e9e par regel), ou bien sur la sous-couche irr\u00e9guli\u00e8re qui peut subsister \u00e0 partir de 1800 m en secteurs peu expos\u00e9s au soleil.",
+      "bulletinID": "FR-11_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-07"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : accumulations de neige r\u00e9cente\nD\u00e9clenchements skieurs : plaques friables dans la neige r\u00e9cente",
+      "avalancheActivityComment": "Situation typique\u00a0: neige vent\u00e9e, neige fra\u00eeche.\n\nD\u00e9parts spontan\u00e9s\u00a0: rares d\u00e9parts de plaques possibles, en particulier l'apr\u00e8s-midi sous les nouvelles chutes de neige assez lourde.\n\nD\u00e9clenchements skieurs\u00a0: les quelques plaques form\u00e9es r\u00e9cemment , ou en cours de journ\u00e9e de mercredi, sont g\u00e9n\u00e9ralement friables et peuvent \u00eatre facilement d\u00e9clench\u00e9es.",
+      "snowpackStructureComment": "Epaisse couche de neige r\u00e9cente, pos\u00e9e \u00e0 m\u00eame le sol. Attention aux cailloux masqu\u00e9s.\n\nQualit\u00e9 : neige froide tass\u00e9e, localement cartonn\u00e9e, puis d\u00e9p\u00f4t de neige plus humide l'apr\u00e8s-midi.",
+      "bulletinID": "FR-07_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-08"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : accumulations de neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques d\u00e9parts surtout au dessus de 2200 m.",
+      "avalancheActivityComment": "Situation typique\u00a0: neige vent\u00e9e, neige fra\u00eeche.\n\nD\u00e9parts spontan\u00e9s\u00a0: rares d\u00e9parts de plaques possibles, en particulier l'apr\u00e8s-midi sous les nouvelles chutes de neige assez lourde.\n\nD\u00e9clenchements skieurs\u00a0: les quelques plaques form\u00e9es r\u00e9cemment , ou en cours de journ\u00e9e de mercredi, peuvent \u00eatre facilement d\u00e9clench\u00e9es. Ces d\u00e9parts sont plus probables au dessus de 2200 m et autour du secteur Nord.",
+      "snowpackStructureComment": "Enneigement d\u00e9ficitaire malgr\u00e9 la couche tomb\u00e9e ce week-end. Nombreux cailloux masqu\u00e9s par la neige r\u00e9cente.\n\nQualit\u00e9 : poudreuse froide tass\u00e9e, cartonn\u00e9e, d\u00e9p\u00f4t de neige plus humide l'apr\u00e8s-midi.",
+      "bulletinID": "FR-08_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : accumulations de neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques d\u00e9parts surtout au dessus de 2400 m.",
+      "avalancheActivityComment": "Situation typique\u00a0: neige vent\u00e9e, neige fra\u00eeche.\n\nD\u00e9parts spontan\u00e9s\u00a0: rares d\u00e9parts de plaques possibles, en particulier l'apr\u00e8s-midi sous les nouvelles chutes de neige assez lourde.\n\nD\u00e9clenchements skieurs\u00a0: les quelques plaques form\u00e9es r\u00e9cemment , ou en cours de journ\u00e9e de mercredi, peuvent \u00eatre facilement d\u00e9clench\u00e9es. Ces d\u00e9parts sont plus probables au dessus de 2400 m et autour du secteur Nord.",
+      "snowpackStructureComment": "Enneigement d\u00e9ficitaire, m\u00eame si la chute du week-end l'a nettement am\u00e9lior\u00e9. Nombreux cailloux, \u00e0 peine masqu\u00e9s par la neige r\u00e9cente.\n\nQualit\u00e9 : poudreuse froide tass\u00e9e, cartonn\u00e9e, recouverte de neige plus humide durant l'apr\u00e8s-midi.",
+      "bulletinID": "FR-12_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-14"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : accumulations de neige r\u00e9cente\nD\u00e9clenchements skieurs : plaques friables dans la neige r\u00e9cente",
+      "avalancheActivityComment": "Situation typique\u00a0: neige vent\u00e9e, neige fra\u00eeche.\n\nD\u00e9parts spontan\u00e9s\u00a0: rares d\u00e9parts de plaques possibles, en particulier l'apr\u00e8s-midi sous les nouvelles chutes de neige assez lourde.\n\nD\u00e9clenchements skieurs\u00a0: les quelques plaques form\u00e9es r\u00e9cemment , ou en cours de journ\u00e9e de mercredi, sont g\u00e9n\u00e9ralement friables et peuvent \u00eatre facilement d\u00e9clench\u00e9es.",
+      "snowpackStructureComment": "Epaisse couche de neige r\u00e9cente, pos\u00e9e \u00e0 m\u00eame le sol. Attention aux cailloux masqu\u00e9s.\n\nQualit\u00e9 : neige froide tass\u00e9e, localement cartonn\u00e9e, puis d\u00e9p\u00f4t de neige plus humide l'apr\u00e8s-midi.",
+      "bulletinID": "FR-14_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-15"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2500"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : accumulations de neige r\u00e9cente.\nD\u00e9clenchements skieurs : quelques d\u00e9parts surtout au dessus de 2500 m.",
+      "avalancheActivityComment": "Situation typique\u00a0: neige vent\u00e9e, neige fra\u00eeche.\n\nD\u00e9parts spontan\u00e9s\u00a0: rares d\u00e9parts de plaques possibles, en particulier l'apr\u00e8s-midi sous les nouvelles chutes de neige assez lourde.\n\nD\u00e9clenchements skieurs\u00a0: les quelques plaques form\u00e9es r\u00e9cemment , ou en cours de journ\u00e9e de mercredi, peuvent \u00eatre facilement d\u00e9clench\u00e9es. Ces d\u00e9parts sont plus probables au dessus de 2500 m et autour du secteur Nord.",
+      "snowpackStructureComment": "Enneigement en am\u00e9lioration. Nombreux cailloux, \u00e0 peine masqu\u00e9s par la neige r\u00e9cente.\n\nQualit\u00e9 : poudreuse froide tass\u00e9e, cartonn\u00e9e, recouverte de neige plus humide durant l'apr\u00e8s-midi.",
+      "bulletinID": "FR-15_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-13"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche.\nD\u00e9clenchements skieurs : des plaques r\u00e9centes en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nQUELQUES INSTABILIT\u00c9S EN ALTITUDE\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : quelques coul\u00e9es de neige fra\u00eeche de faible ampleur dans les pentes et couloirs raides, surtout mercredi apr\u00e8s-midi avec les surcharges li\u00e9es aux nouvelles faibles chutes vent\u00e9es.\n\nD\u00e9clenchements provoqu\u00e9s : quelques plaques en altitude. Les chutes de neige du week-end dernier ont \u00e9t\u00e9 accompagn\u00e9es et suivies de vent fort, de secteur nord/nord-ouest pr\u00e9dominant, formant de nouvelles instabilit\u00e9s en altitude. Ces nouvelles plaques sont d'\u00e9paisseur tr\u00e8s variable, ponctuellement elles sont \u00e9paisses \u00e0 proximit\u00e9 des cr\u00eates et sommets de haute montagne, elles sont plus fr\u00e9quentes \u00e0 proximit\u00e9 de la Savoie. Le passage d'un seul skieur peut parfois suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "L'enneigement est tr\u00e8s h\u00e9t\u00e9rog\u00e8ne, il est d\u00e9ficitaire pour la saison. Il est meilleur pr\u00e8s de l'Italie avec des pentes skiables au dessus de 2000m environ en versants froids, m\u00eame si les cailloux ne sont jamais tr\u00e8s loin.\n \nPr\u00e8s de la Savoie, l'enneigement s'est un peu am\u00e9lior\u00e9 ces derniers jours, mais il reste souvent trop faible pour \u00eatre skiable, surtout en dessous de 2200/2400m.\n\nOn trouve quasiment partout quelques cm de neige fra\u00eeche, souvent souffl\u00e9e, en surface, avec des cr\u00eates fr\u00e9quemment d\u00e9garnies et des accumulations localement volumineuses en altitude.",
+      "bulletinID": "FR-13_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-16"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques coul\u00e9es de neige fra\u00eeche.\nD\u00e9clenchements skieurs : nouvelles plaques, souvent minces.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nQUELQUES INSTABILIT\u00c9S EN ALTITUDE\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : quelques coul\u00e9es de neige fra\u00eeche de faible ampleur dans les pentes et couloirs raides, surtout mercredi apr\u00e8s-midi avec les surcharges li\u00e9es aux nouvelles faibles chutes vent\u00e9es.\n\nD\u00e9clenchements provoqu\u00e9s : quelques plaques en altitude. Les r\u00e9centes petites chutes de neige ont \u00e9t\u00e9 accompagn\u00e9es et suivies de vent fort, de secteur nord/nord-ouest pr\u00e9dominant, formant de nouvelles instabilit\u00e9s en altitude. Ces nouvelles plaques sont souvent peu \u00e9paisses, mais peuvent \u00eatre d\u00e9clench\u00e9es par le passage d'un seul skieur.",
+      "snowpackStructureComment": "Malgr\u00e9 les r\u00e9centes petites chutes de neige, l'enneigement est d\u00e9ficitaire pour la saison et le manteau neigeux n'est g\u00e9n\u00e9ralement pas suffisamment \u00e9pais pour \u00eatre skiable, il est tr\u00e8s h\u00e9t\u00e9rog\u00e8ne.\n\nOn trouve souvent quelques cm de neige fra\u00eeche en surface, plus dense sur les cr\u00eates et l\u00e9g\u00e8re dans les zones abrit\u00e9es du vent. Elle est souvent pos\u00e9e sur une fine couche de neige r\u00e9cente ou \u00e0 m\u00eame le sol. Tout cela fait illusion puisque les cailloux ne sont jamais tr\u00e8s loin.",
+      "bulletinID": "FR-16_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-17"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : peu probables\nD\u00e9clenchements skieurs : rares plaques en altitude, pouvant encore mobiliser d'importants volumes de neige surtout vers l'Est.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nMANTEAU GLOBALEMENT STABLE, QUELQUES INSTABILIT\u00c9S EN ALTITUDE\nSituation avalancheuse typique : sous-couche fragile persistante \n  \nD\u00e9parts spontan\u00e9s : peu probables\n\nD\u00e9clenchements provoqu\u00e9s : le manteau neigeux est globalement bien stabilis\u00e9 et les r\u00e9centes chutes de neige sont rest\u00e9es peu significatives. On ne peut cependant exclure dans quelques versants froids de haute altitude, la pr\u00e9sence de plaques souvent relativement difficiles \u00e0 d\u00e9clencher, m\u00eame si cela reste localement possible par un seul skieur ou randonneur. Elles ne mobilisent  g\u00e9n\u00e9ralement que de faibles volumes de neige sur l'ouest du massif, tandis que vers le Haut-Guil, ces d\u00e9clenchements peuvent parfois mobiliser d'importants volumes de neige, en particulier au-dessus de 2600/2700m.",
+      "snowpackStructureComment": "L'enneigement est correct voir exc\u00e9dentaire pour la saison sur les secteurs proches de l'Italie gr\u00e2ce au retour d'est de mi-novembre, mais plus d\u00e9ficitaire sur l'ouest du massif. Sur l'Est, on peut chausser les skis vers 2000m environ en versants nord, et plut\u00f4t autour de 2200/2400m en sud. Il faut cependant monter 200/400m plus haut selon l'orientation pour avoir une \u00e9paisseur de neige confortable et \u00e9viter les cailloux.\n\nEn surface on trouve un peu de neige r\u00e9cente rest\u00e9e l\u00e9g\u00e8re dans les secteurs abrit\u00e9s au dessus de 2400m environ, recouvrant une neige souvent cro\u00fbt\u00e9e et compacte.",
+      "bulletinID": "FR-17_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-18"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche en altitude.\nD\u00e9clenchements skieurs : nouvelles plaques en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nFAIBLE ENNEIGEMENT, MAINTIEN D'UNE BONNE STABILIT\u00c9\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche de faible ampleur dans les couloirs raides, surtout mercredi apr\u00e8s-midi avec les surcharges li\u00e9es aux nouvelles  chutes de neige vent\u00e9es.\n\nD\u00e9clenchements provoqu\u00e9s : nouvelles plaques en altitude. M\u00eame si les r\u00e9centes chutes de neige sont rest\u00e9es faibles, elles ont \u00e9t\u00e9 accompagn\u00e9es et suivies d'un vent fort, voire violent, de secteur nord. Des accumulations et quelques plaques \u00e0 vent se sont localement form\u00e9es, notamment dans les combes abrit\u00e9es du vent de nord. Ces plaques sont souvent dures et difficiles \u00e0 solliciter, mais on ne peut exclure un d\u00e9clenchement isol\u00e9 par une seule personne.",
+      "snowpackStructureComment": "Malgr\u00e9 les r\u00e9centes petites chutes de neige, l'enneigement reste d\u00e9ficitaire pour la saison et le manteau neigeux n'est g\u00e9n\u00e9ralement pas suffisamment \u00e9pais pour \u00eatre skiable. \n\nLa neige r\u00e9cente de ce week-end s'est souvent d\u00e9pos\u00e9e \u00e0 m\u00eame le sol, sauf dans les versants froids au dessus de 2200/2400m.\nLes cr\u00eates et hauts sommets ont souvent \u00e9t\u00e9 d\u00e9garnis par le vent violent de secteur nord.",
+      "bulletinID": "FR-18_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-19"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche.\nD\u00e9clenchements skieurs : nouvelles plaques en altitude, souvent minces.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nQUELQUES INSTABILIT\u00c9S EN ALTITUDE\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche de faible ampleur dans les couloirs raides, surtout mercredi apr\u00e8s-midi avec les surcharges li\u00e9es aux nouvelles  chutes de neige vent\u00e9es.\n\nD\u00e9clenchements provoqu\u00e9s : quelques plaques en altitude. Les r\u00e9centes petites chutes de neige ont \u00e9t\u00e9 accompagn\u00e9es et suivies de vent fort, de secteur nord pr\u00e9dominant, formant de nouvelles instabilit\u00e9s en altitude. Ces nouvelles plaques sont souvent peu \u00e9paisses, mais peuvent \u00eatre d\u00e9clench\u00e9es par le passage d'un seul skieur, surtout au dessus de 2400m environ.",
+      "snowpackStructureComment": "Malgr\u00e9 les r\u00e9centes petites chutes de neige, l'enneigement est d\u00e9ficitaire pour la saison et le manteau neigeux n'est g\u00e9n\u00e9ralement pas suffisamment \u00e9pais pour \u00eatre skiable.\n\nOn trouve souvent quelques cm de neige fra\u00eeche en surface, plus dense sur les cr\u00eates et l\u00e9g\u00e8re dans les zones abrit\u00e9es du vent. Elle est souvent pos\u00e9e sur une fine couche de neige r\u00e9cente ou \u00e0 m\u00eame le sol. Tout cela fait illusion puisque les cailloux ne sont jamais tr\u00e8s loin.",
+      "bulletinID": "FR-19_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-20"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : peu probables.\nD\u00e9clenchements skieurs : rares plaques vers les plus hautes sommets, souvent minces.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nFAIBLE ENNEIGEMENT\nSituation avalancheuse typique : pas de situation\n\nD\u00e9parts spontan\u00e9s : peu probables.\n\nD\u00e9clenchements provoqu\u00e9s : rares plaques non exclues en altitude \u00e0 l'approche des plus hauts sommets en versants froids, de faible \u00e9paisseur, et peu \u00e9tendues. Les r\u00e9centes chutes de neige sont rest\u00e9es peu significatives.\nLes faibles chutes de neige attendues mercredi apr\u00e8s-midi ne vont gu\u00e8re changer la situation.",
+      "snowpackStructureComment": "L'enneigement est partout tr\u00e8s d\u00e9ficitaire pour la saison, et le manteau neigeux n'est g\u00e9n\u00e9ralement pas suffisamment \u00e9pais pour \u00eatre skiable.\n\nLes quelques centim\u00e8tres de neige fra\u00eeche tomb\u00e9s ces derniers jours, se sont souvent d\u00e9pos\u00e9s \u00e0 m\u00eame le sol, ils dispairaissent rapidement au soleil.\n\nEn versants ombrag\u00e9s, l'illusion ne dure gu\u00e8re plus longtemps, les cailloux ne sont jamais tr\u00e8s loin. Seules les plus hautes altitudes sont gratifi\u00e9es en versants ombrag\u00e9s d'une fine couche de neige r\u00e9cente reposant sur de la vielle poudreuse.",
+      "bulletinID": "FR-20_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-21"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : peu probables.\nD\u00e9clenchements skieurs : rares plaques en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nMANTEAU GLOBALEMENT STABLE, RARES PLAQUES EN ALTITUDE SURTOUT A l'EST\nSituation avalancheuse typique : sous-couche fragile persistante\n  \nD\u00e9parts spontan\u00e9s : peu probables ou alors seulement de rares coul\u00e9es de neige fra\u00eeche superficielles dans les couloirs raides en fin de journ\u00e9e de mercredi.\n\nD\u00e9clenchements provoqu\u00e9s : de rares plaques subsistent dans les versants froids d'altitude, mais elles sont souvent difficiles \u00e0 solliciter, bien qu'il ne soit pas exclu que le passage d'un seul skieur ou randonneur suffise. Elles ne mobilisent g\u00e9n\u00e9ralement que de faibles volumes de neige, sauf en Haute-Ubaye o\u00f9 d'anciennes plaques plus \u00e9paisses peuvent encore \u00eatre pr\u00e9sentes, form\u00e9es lors du retour d'est de mi-novembre. Les faibles chutes de neige attendues ne vont gu\u00e8re changer la situation.",
+      "snowpackStructureComment": "Except\u00e9 en Haute-Ubaye o\u00f9 le retour d'est de mi-novembre a rendu l'enneigement correct pour la saison, il est tr\u00e8s d\u00e9ficitaire partout ailleurs, le manteau neigeux est souvent trop mince pour \u00eatre skiable.\nLes faibles chutes \u00e9parses de ces derniers jours \u00e0 l'Ouest de l'Ubaye ont \u00e9t\u00e9 travaill\u00e9es par le vent, et se sont pos\u00e9es \u00e0 m\u00eame le sol dans de nombreux versants ensoleill\u00e9s.\nA l'ubac, la neige s'est d\u00e9pos\u00e9e sur une mince couche au dessus de 2000m environ.",
+      "bulletinID": "FR-21_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-22"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige fra\u00eeche\nD\u00e9clenchements skieurs : rares plaques en altitude.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nQUELQUES INSTABILIT\u00c9S EN ALTITUDE\nSituation avalancheuse typique : neige vent\u00e9e, sous couche fragile persistante.\n\nD\u00e9parts spontan\u00e9s : peu probables ou alors seulement de rares coul\u00e9es de neige fra\u00eeche superficielles dans les couloirs raides en fin de journ\u00e9e de mercredi, surtout sur le val d'Allos.\n\nD\u00e9clenchements provoqu\u00e9s : rares plaques encore pr\u00e9sentes en versants froids d'altitude. Elles sont de plus en plus rares, mais certaines instabilit\u00e9s persistent en altitude, surtout dans les versants froids, \u00e0 l'approche des hauts sommets. Ces plaques sont souvent dures et difficiles \u00e0 solliciter, mais on ne peut exclure un d\u00e9clenchement par une seule personne.\nLes faibles chutes de neige attendues mercredi apr\u00e8s-midi sur le nord du massif ne vont gu\u00e8re changer la situation.",
+      "snowpackStructureComment": "L'enneigement est tr\u00e8s h\u00e9t\u00e9rog\u00e8ne, il s'est am\u00e9lior\u00e9 la semaine pass\u00e9e, mais il reste n\u00e9amnoins d\u00e9ficitaire pour la saison, notamment \u00e0 haute altidude. La neige tient encore au sol d\u00e8s 1500/1800m, et on peut souvent chausser les skis vers 2000/2200 environ en versants froids, m\u00eame si les cailloux ne sont jamais tr\u00e8s loin.\n\nOn trouve encore une couche de neige r\u00e9cente en versants froids, mais de plus en plus travaill\u00e9e par le vent pr\u00e8s des cr\u00eates o\u00f9 le manteau neigeux est partiellement d\u00e9garni. En adrets, la neige est peu \u00e9paisse, et souvent cro\u00fbt\u00e9e.",
+      "bulletinID": "FR-22_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-23"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares coul\u00e9es de neige r\u00e9cente.\nD\u00e9clenchements skieurs : plaques en altitude, plus \u00e9paisses \u00e0 l'Est.",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nQUELQUES INSTABILIT\u00c9S EN ALTITUDE, SURTOUT EN ROYA\nSituation avalancheuse typique : neige vent\u00e9e, sous-couche fragile persistante.\n\nD\u00e9parts spontan\u00e9s : peu probables, ou alors seulement de rares coul\u00e9es de surface pr\u00e8s des rochers.\n\nD\u00e9clenchements provoqu\u00e9s : rares plaques possiblement encore pr\u00e9sentes en versants froids d'altitude. Peu nombreuses et de faible \u00e9paisseur sur l'ouest du massif, elles sont plus fr\u00e9quentes et \u00e9paisses \u00e0 l'Est. Souvent dures et difficiles \u00e0 solliciter, elles peuvent parfois \u00eatre d\u00e9clench\u00e9es par un seul skieur ou randonneur. Ponctuellement ces avalanches pourraient mobiliser des volumes de neige importants, en particulier \u00e0 proximit\u00e9 de la Roya o\u00f9 les chutes de neige de la semaine pass\u00e9e ont \u00e9t\u00e9 localement significatives. Les faibles chutes de neige attendues mercredi apr\u00e8s-midi sur le nord du massif ne vont pas changer la stabilit\u00e9.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9, surtout \u00e0 l'Est, grace aux chutes des 24/25 novembre, et il est maintenant globalement correct pour la saison. La neige tient encore au sol d\u00e8s 1400/1800m, mais elle n'est g\u00e9n\u00e9ralement skiable que d\u00e8s 1800/2200m, voire l\u00e9g\u00e8rement plus bas en V\u00e9subie et Roya. \n\nOn trouve une couche de neige encore r\u00e9cente (de 10 \u00e0 20/25 cm d'ouest en est) rest\u00e9e l\u00e9g\u00e8re dans les secteurs abrit\u00e9s d'altitude, mais le sol et les cailloux ne sont jamais bien loin. Cette neige r\u00e9cente continue de se densifier notamment sous l'action du vent de nord \u00e0 ouest soufflant en altitude, et d\u00e9garnissant progressivement les cr\u00eates.",
+      "bulletinID": "FR-23_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-64"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : coul\u00e9es \u00e0 quelques avalanches moyennes.\nD\u00e9clenchements skieurs : par assez faible sollicitation en secteurs d\u00e9vent\u00e9s.",
+      "avalancheActivityComment": "D\u00c9GRADATION NEIGEUSE EN JOURN\u00c9E.\nSituations avalancheuses typiques : neige vent\u00e9e / sous-couche fragile persistante.\nManteau neigeux vent\u00e9 de nord-ouest et instable, mais en cours d'humidification et de tassement. Des structures de plaques, plus ou moins dures, sont en place, reposant souvent sur une neige rest\u00e9e froide et s\u00e8che enfouie, servant de couche fragile, surtout au-dessus de 1600 \u00e0 1700m.\nD\u00e9parts spontan\u00e9s : risque faible . Quelques avalanches de taille moyenne restent possibles, partant des accumulations pr\u00e9sentes en secteurs d\u00e9vent\u00e9s. On attend \u00e9galement des coul\u00e9es de surface sous les quelques \u00e9claircies de la matin\u00e9e et les nouvelles chutes de neige de l'apr\u00e8s-midi.\nD\u00e9clenchements provoqu\u00e9s : risque limit\u00e9 au-dessus de 1600m. Dans les pentes d\u00e9vent\u00e9es, pr\u00e9sence d'accumulations et de plaques \u00e9paisses mais facilement d\u00e9clenchables par le passage d'un skieur ou randonneur. Dans les autres secteurs, les plaques sont dures et sensibles \u00e0 de fortes sollicitations. \nCe bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.",
+      "snowpackStructureComment": "Manteau neigeux encore g\u00e9n\u00e9reux malgr\u00e9 la petite fonte amorc\u00e9e ce mardi, d\u00e9butant vers 700 \u00e0 800m ce mercredi.\nNeige cro\u00fbt\u00e9e et regel\u00e9e au petit matin en dessous de 1600/1700m et dans les pentes sud, rest\u00e9e froide et encore s\u00e8che dans les pentes nord au-dessus de 1600/1700m, mais tr\u00e8s travaill\u00e9e par le vent, cartonn\u00e9e en secteurs nord-ouest, d'aspect encore poudreux dans les autres secteurs. Cr\u00eates et sommets pel\u00e9s et d\u00e9garnis.",
+      "bulletinID": "FR-64_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-65"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes.\nD\u00e9clenchements skieurs : par assez faible sollicitation en secteurs d\u00e9vent\u00e9s.",
+      "avalancheActivityComment": "D\u00c9GRADATION NEIGEUSE EN JOURN\u00c9E.\nSituations avalancheuses typiques : neige vent\u00e9e / sous-couche fragile persistante.\nManteau neigeux vent\u00e9 de nord-ouest et instable, mais en cours d'humidification et de tassement. Des structures de plaques, plus ou moins dures, sont en place, reposant souvent sur une neige rest\u00e9e froide et s\u00e8che enfouie, servant de couche fragile, surtout au-dessus de 1800m.\nD\u00e9parts spontan\u00e9s : risque faible . Quelques avalanches de taille moyenne possibles, partant des accumulations en secteurs d\u00e9vent\u00e9s. On attend \u00e9galement des coul\u00e9es de surface sous les quelques \u00e9claircies de la matin\u00e9e et les nouvelles chutes de neige de l'apr\u00e8s-midi.\nD\u00e9clenchements provoqu\u00e9s : risque marqu\u00e9 au-dessus de 1800m. Dans les pentes d\u00e9vent\u00e9es, pr\u00e9sence d'accumulations et de plaques \u00e9paisses facilement d\u00e9clenchables par le passage d'un skieur ou randonneur. Dans les secteurs directement expos\u00e9s au vent de nord-ouest, les plaques sont dures, plus difficilement d\u00e9clenchables, except\u00e9 aux ruptures de pentes car moins \u00e9paisses et proche de la couche fragile en gobelets et/ou grains anguleux.\nCe bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.",
+      "snowpackStructureComment": "Manteau neigeux encore g\u00e9n\u00e9reux malgr\u00e9 la petite fonte amorc\u00e9e ce mardi, d\u00e9butant vers 700 \u00e0 800m ce mercredi.\nNeige cro\u00fbt\u00e9e et regel\u00e9e au petit matin en dessous de 1600m et dans les pentes sud, rest\u00e9e froide et encore s\u00e8che dans les pentes nord au-dessus de 1600/1700m, mais tr\u00e8s travaill\u00e9e par le vent \u00e0 partir de 1800 \u00e0 2000m, cartonn\u00e9e en secteurs nord-ouest, d'aspect encore poudreux en secteurs abrit\u00e9s du vent. Cr\u00eates et sommets pel\u00e9s et d\u00e9garnis.",
+      "bulletinID": "FR-65_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-66"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques moyennes, rares grandes.\nD\u00e9clenchements skieurs : par assez faible sollicitation en secteurs d\u00e9vent\u00e9s.",
+      "avalancheActivityComment": "D\u00c9GRADATION NEIGEUSE EN JOURN\u00c9E.\nSituations avalancheuses typiques : neige vent\u00e9e / sous-couche fragile persistante.\nManteau neigeux vent\u00e9 de nord-ouest et instable, mais en cours d'humidification et de tassement. Des structures de plaques, plus ou moins dures, sont en place, reposant souvent sur une neige rest\u00e9e froide et s\u00e8che enfouie, servant de couche fragile, surtout au-dessus de 1800m.\nD\u00e9parts spontan\u00e9s : quelques avalanches moyennes ou une rare grande possibles, partant des accumulations en secteurs d\u00e9vent\u00e9s. On attend \u00e9galement des coul\u00e9es de surface sous les \u00e9claircies de la matin\u00e9e et les nouvelles chutes de neige de l'apr\u00e8s-midi.\nD\u00e9clenchements provoqu\u00e9s : risque marqu\u00e9 au-dessus de 1800m. Dans les pentes d\u00e9vent\u00e9es, pr\u00e9sence d'accumulations et de plaques \u00e9paisses facilement d\u00e9clenchables par le passage d'un skieur ou randonneur. Dans les secteurs directement expos\u00e9s au vent de nord-ouest, les plaques sont dures, plus difficilement d\u00e9clenchables, except\u00e9 aux ruptures de pentes car moins \u00e9paisses et proche de la couche fragile en gobelets et/ou grains anguleux.\nCe bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.",
+      "snowpackStructureComment": "Manteau neigeux encore g\u00e9n\u00e9reux malgr\u00e9 la petite fonte amorc\u00e9e ce mardi, d\u00e9butant vers 700 \u00e0 800m ce mercredi.\nNeige cro\u00fbt\u00e9e et regel\u00e9e au petit matin en dessous de 1600m et dans les pentes sud, rest\u00e9e froide et encore s\u00e8che dans les pentes nord au-dessus de 1600/1700m, mais tr\u00e8s travaill\u00e9e par le vent \u00e0 partir de 1800 \u00e0 2000m, cartonn\u00e9e en secteurs nord-ouest, d'aspect encore poudreux en secteurs abrit\u00e9s du vent. Cr\u00eates et sommets pel\u00e9s et d\u00e9garnis.",
+      "bulletinID": "FR-66_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-67"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques moyennes, rares grandes.\nD\u00e9clenchements skieurs : par assez faible sollicitation en secteurs d\u00e9vent\u00e9s.",
+      "avalancheActivityComment": "D\u00c9GRADATION NEIGEUSE EN JOURN\u00c9E.\nSituations avalancheuses typiques : neige vent\u00e9e / sous-couche fragile persistante.\nManteau neigeux vent\u00e9 de nord-ouest et instable, mais en cours d'humidification et de tassement. Des structures de plaques, plus ou moins dures, sont en place, reposant souvent sur une neige rest\u00e9e froide et s\u00e8che enfouie, servant de couche fragile, surtout au-dessus de 1800m.\nD\u00e9parts spontan\u00e9s : quelques avalanches moyennes ou une rare grande possibles, partant des accumulations en secteurs d\u00e9vent\u00e9s. On attend \u00e9galement des coul\u00e9es de surface sous les \u00e9claircies de la matin\u00e9e et les nouvelles chutes de neige de l'apr\u00e8s-midi.\nD\u00e9clenchements provoqu\u00e9s : risque marqu\u00e9 au-dessus de 1800m. Dans les pentes d\u00e9vent\u00e9es, pr\u00e9sence d'accumulations et de plaques \u00e9paisses facilement d\u00e9clenchables par le passage d'un skieur ou randonneur. Dans les secteurs directement expos\u00e9s au vent de nord-ouest, les plaques sont dures, plus difficilement d\u00e9clenchables, except\u00e9 aux ruptures de pentes car moins \u00e9paisses et proche de la couche fragile en gobelets et/ou grains anguleux.\nCe bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.",
+      "snowpackStructureComment": "Manteau neigeux encore g\u00e9n\u00e9reux malgr\u00e9 la petite fonte amorc\u00e9e ce mardi, d\u00e9butant vers 700 \u00e0 800m ce mercredi.\nNeige cro\u00fbt\u00e9e et regel\u00e9e au petit matin en dessous de 1600m et dans les pentes sud, rest\u00e9e froide et encore s\u00e8che dans les pentes nord au-dessus de 1600/1700m, mais tr\u00e8s travaill\u00e9e par le vent \u00e0 partir de 1800 \u00e0 2000m, cartonn\u00e9e en secteurs nord-ouest, d'aspect encore poudreux en secteurs abrit\u00e9s du vent. Cr\u00eates et sommets pel\u00e9s et d\u00e9garnis.",
+      "bulletinID": "FR-67_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-68"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes.\nD\u00e9clenchements skieurs : par assez faible sollicitation en secteurs d\u00e9vent\u00e9s.",
+      "avalancheActivityComment": "D\u00c9GRADATION NEIGEUSE EN JOURN\u00c9E.\nSituations avalancheuses typiques : neige vent\u00e9e / sous-couche fragile persistante.\nManteau neigeux vent\u00e9 de nord-ouest et instable, mais en cours d'humidification et de tassement. Des structures de plaques, plus ou moins dures, sont en place, reposant souvent sur une neige rest\u00e9e froide et s\u00e8che enfouie, servant de couche fragile, surtout au-dessus de 2000m.\nD\u00e9parts spontan\u00e9s : quelques avalanches moyennes possibles, partant des accumulations en secteurs d\u00e9vent\u00e9s. On attend \u00e9galement des coul\u00e9es de surface sous les \u00e9claircies de la matin\u00e9e et les nouvelles chutes de neige de l'apr\u00e8s-midi.\nD\u00e9clenchements provoqu\u00e9s : risque marqu\u00e9 au-dessus de 2000m. Dans les pentes d\u00e9vent\u00e9es, pr\u00e9sence d'accumulations et de plaques \u00e9paisses facilement d\u00e9clenchables par le passage d'un skieur ou randonneur. Dans les secteurs directement expos\u00e9s au vent de nord-ouest, les plaques sont dures et peu \u00e9paisses, plus difficilement d\u00e9clenchables, except\u00e9 aux ruptures de pentes car proche de la couche fragile en gobelets et/ou grains anguleux persistante \u00e0 la base du manteau.\nCe bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.",
+      "snowpackStructureComment": "Manteau neigeux encore g\u00e9n\u00e9reux malgr\u00e9 la petite fonte amorc\u00e9e ce mardi, d\u00e9butant vers 700 \u00e0 800m ce mercredi.\nNeige cro\u00fbt\u00e9e et regel\u00e9e au petit matin en dessous de 1600m et dans les pentes sud, rest\u00e9e froide et encore s\u00e8che dans les pentes nord au-dessus de 1600/1700m, mais tr\u00e8s travaill\u00e9e par le vent \u00e0 partir de 2000m, cartonn\u00e9e en secteurs nord-ouest, d'aspect encore poudreux en secteurs abrit\u00e9s du vent. Cr\u00eates et sommets pel\u00e9s et d\u00e9garnis, combes d\u00e9vent\u00e9es charg\u00e9es.",
+      "bulletinID": "FR-68_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-69"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un iso 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : plaques \u00e0 vent dans les pentes Est, assez nombreuses, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones plus d\u00e9garnies aux abords des cr\u00eates. Au dessus de 2000 m, quelques structures plus fragiles peuvent \u00e9galement subsister dans les versants froids. Attention donc aux ruptures de pentes dans les vallons d'altitude tr\u00e8s peu expos\u00e9 au soleil, o\u00f9 quelques accumulations peuvent avoir pris de la coh\u00e9sion et reposer sur des sous couches fragiles types gobelets.",
+      "snowpackStructureComment": "Enneigement d\u00e8s 1200 m, skiable mais souvent sans couche v\u00e9ritable d\u00e8s 1500 m. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne.\nCro\u00fbte de regel probable en surface dans les versants ensoleill\u00e9s mercredi matin, neige s'alourdissant jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\nNouvelles chutes de neige attendues en fin d'apr\u00e8s-midi et soir\u00e9e.\n\n\n.",
+      "bulletinID": "FR-69_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-70"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un isotherme 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : quelques plaques \u00e0 vent dans les pentes Est, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones plus d\u00e9garnies aux abords des cr\u00eates. Quelques structures fragiles, peu fr\u00e9quentes,  ne sont pas non plus \u00e0 exclure dans les versants froids. Attention donc aux ruptures de pentes dans les vallons d'altitude tr\u00e8s peu expos\u00e9 au soleil, o\u00f9 quelques accumulations peuvent avoir pris de la coh\u00e9sion et reposer sur des sous couches fragiles types gobelets.",
+      "snowpackStructureComment": "Enneigement d\u00e8s 1200 m, skiable mais souvent sans couche v\u00e9ritable d\u00e8s 1500 m. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne.\nCro\u00fbte de regel probable en surface dans les versants ensoleill\u00e9s mercredi matin, neige s'alourdissant jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\nFaibles chutes de neige attendues en fin d'apr\u00e8s-midi et soir\u00e9e.\n\n\n.",
+      "bulletinID": "FR-70_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-72"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un isotherme 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : plaques \u00e0 vent dans les pentes Est, assez nombreuses, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones plus d\u00e9garnies aux abords des cr\u00eates. Quelques structures fragiles, peu fr\u00e9quentes,  ne sont pas non plus \u00e0 exclure dans les versants froids. Attention donc aux ruptures de pentes dans les vallons d'altitude tr\u00e8s peu expos\u00e9 au soleil, o\u00f9 quelques accumulations peuvent avoir pris de la coh\u00e9sion et reposer sur des sous couches fragiles types gobelets.",
+      "snowpackStructureComment": "Enneigement d\u00e8s 1200 m, skiable mais souvent sans couche v\u00e9ritable d\u00e8s 1500 m. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne.\nCro\u00fbte de regel probable en surface dans les versants ensoleill\u00e9s mercredi matin, neige s'alourdissant jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\nFaibles chutes de neige attendues en fin d'apr\u00e8s-midi et soir\u00e9e.\n\n\n.",
+      "bulletinID": "FR-72_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-71"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un isotherme 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : plaques \u00e0 vent dans les pentes Est, assez nombreuses, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones plus d\u00e9garnies aux abords des cr\u00eates. Quelques structures fragiles, peu fr\u00e9quentes,  ne sont pas non plus \u00e0 exclure dans les versants froids. Attention donc aux ruptures de pentes dans les vallons d'altitude tr\u00e8s peu expos\u00e9 au soleil, o\u00f9 quelques accumulations peuvent avoir pris de la coh\u00e9sion et reposer sur des sous couches fragiles types gobelets.",
+      "snowpackStructureComment": "Enneigement skiable vers 1800/1900 m,  mais souvent sans couche v\u00e9ritable  jusqu'\u00e0 2100/2200 m. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne.\nCro\u00fbte de regel probable en surface dans les versants  ensoleill\u00e9s mercredi matin, neige s'alourdissant jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\nFaibles chutes de neige attendues en fin d'apr\u00e8s-midi et soir\u00e9e.\n\n\n.",
+      "bulletinID": "FR-71_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-73"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un isotherme 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : plaques \u00e0 vent dans les pentes Est, assez nombreuses, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones tr\u00e9s d\u00e9garnies aux abords des cr\u00eates. Quelques structures fragiles, peu fr\u00e9quentes,  ne sont pas non plus \u00e0 exclure dans les versants froids. Attention donc aux ruptures de pentes dans les vallons d'altitude tr\u00e8s peu expos\u00e9 au soleil, o\u00f9 quelques accumulations peuvent avoir pris de la coh\u00e9sion et reposer sur des sous couches fragiles types gobelets.",
+      "snowpackStructureComment": "Enneigement  skiable d\u00e8s 1500 m, mais souvent sans couche v\u00e9ritable. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne/\nCro\u00fbte de regel probable en surface dans les versants ensoleill\u00e9s mercredi matin, neige s'alourdissant jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\nFaibles chutes de neige attendues en  soir\u00e9e, dans une atmosph\u00e8re qui se refroidit.\n\n\n.",
+      "bulletinID": "FR-73_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-74"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares avalanches moyennes, en nord < 2000\nD\u00e9clenchements skieurs : plaques versants et couloirs Est essentiellement.",
+      "avalancheActivityComment": "Ce bulletin est r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites. Situation avalancheuse typique: neige vent\u00e9e\nD\u00e9parts spontan\u00e9s : \nQuelques d\u00e9parts en journ\u00e9e de mercredi dans les pentes nord notamment \u00e0 la faveur du ciel plus nuageux et d'un isotherme 0 \u00b0C temporairement plus \u00e9lev\u00e9. Avalanches de taille moyenne pour les plus volumineuses.\n\nD\u00e9clenchements  provoqu\u00e9s : plaques \u00e0 vent dans les pentes Est \u00e0 sud est, dures et compactes, souvent difficiles \u00e0 d\u00e9clencher, ayant acquis une certaine duret\u00e9 ou \u00e9paisseur. Elles c\u00f4toieront des zones tr\u00e9s d\u00e9garnies aux abords des cr\u00eates. Quelques structures fragiles, peu fr\u00e9quentes,  ne sont pas non plus \u00e0 exclure dans les versants froids en haute montagne, prudence en empruntant les pentes raides ou des signes d'accumulations par le vent sont patents.",
+      "snowpackStructureComment": "Enneigement  skiable d\u00e8s 1500 m, mais souvent sans couche v\u00e9ritable. Le vent de la veille a d\u00e9j\u00e0 nettement d\u00e9garni les abords des cr\u00eates et les les sommets, l'enneigement redevient donc classiquement tr\u00e8s h\u00e9t\u00e9rog\u00e8ne en haute montagne.\nCro\u00fbte de regel probable en surface dans les versants ensoleill\u00e9s mercredi matin, neige s'alourdissant en toutes pentes jusqu'\u00e0 2000 m en milieu de journ\u00e9e.\n\n\n\n.",
+      "bulletinID": "FR-74_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-40"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : coul\u00e9es ou avalanches de neige fra\u00eeche\nD\u00e9clenchements skieurs : plaques en altitude",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nPLAQUES EN ALTITUDE.\nSituation avalancheuse typique : neige fra\u00eeche / neige vent\u00e9e\nAu-dessus de 1600m, 15 \u00e0 20cm de neige sont attendus entre demain apr\u00e8s-midi et la fin de nuit. Ces chutes sont accompagn\u00e9es d'un fort vent d'Ouest au dessus de 1800m, cr\u00e9ant de nombreuses nouvelles plaques.\nD\u00c9PARTS SPONTAN\u00c9S : quelques coul\u00e9es de neige r\u00e9cente sont attendues pendant les chutes dans les pentes raides au dessus de 2000m .\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : Plaques \u00e0 vent en place d\u2019aspect poudreux.  Elles se situent principalement au-dessus de 1800m environ, en tout versant. Ces instabilit\u00e9s peuvent \u00eatre facilement d\u00e9clench\u00e9es plut\u00f4t en pentes raides, jusque loin en contrebas des cr\u00eates. Les volumes de neige mobilis\u00e9s peuvent \u00eatre importants, surtout au-dessus de 2000m.",
+      "snowpackStructureComment": "Les chutes de neige des derni\u00e8res 72 h  ont apport\u00e9 des cumuls importants de Les derni\u00e8res chutes de neige  ont apport\u00e9 des cumuls importants de neige fra\u00eeche s\u00e8che et de neige roul\u00e9e. L'enneigement s'est nettement am\u00e9lior\u00e9 et nos massifs ont retrouv\u00e9 un aspect hivernal. Il est maintenant correct pour la saison. La montagne est blanchie parfois d\u00e8s 700/900m, mais le sol et les cailloux ne sont jamais bien loin. Les cr\u00eates au vent sont peu fournies voire d\u00e9garnies alors qu'on trouve de belles accumulations sous le vent avec de la neige l\u00e9g\u00e8re et froide. Ailleurs, cette neige risque d'\u00eatre fortement compact\u00e9e par le vent violent d\u2019Ouest \u00e0 Nord-ouest. Les cr\u00eates et sommets, ont g\u00e9n\u00e9ralement vu la neige dispara\u00eetre, souvent pel\u00e9s ou en glace.",
+      "bulletinID": "FR-40_2021-11-30T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-41"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-11-30T16:00:00+01:00",
+        "endTime": "2021-12-01T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRating": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblem": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2021-11-30T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : coul\u00e9es ou avalanches de neige fra\u00eeche\nD\u00e9clenchements skieurs : plaques en altitude",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nPLAQUES EN ALTITUDE.\nSituation avalancheuse typique : neige fra\u00eeche / neige vent\u00e9e\nAu-dessus de 1600m, 15 \u00e0 20cm de neige sont attendus entre demain apr\u00e8s-midi et la fin de nuit. Ces chutes sont accompagn\u00e9es d'un fort vent d'Ouest au dessus de 1800m, cr\u00e9ant de nombreuses nouvelles plaques.\nD\u00c9PARTS SPONTAN\u00c9S : quelques coul\u00e9es de neige r\u00e9cente sont attendues pendant les chutes dans les pentes raides au dessus de 2000m .\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : Plaques \u00e0 vent en place d\u2019aspect poudreux.  Elles se situent principalement au-dessus de 1800m environ, en tout versant. Ces instabilit\u00e9s peuvent \u00eatre facilement d\u00e9clench\u00e9es plut\u00f4t en pentes raides, jusque loin en contrebas des cr\u00eates. Les volumes de neige mobilis\u00e9s peuvent \u00eatre importants, surtout au-dessus de 2000m.",
+      "snowpackStructureComment": "Les derni\u00e8res chutes de neige  ont apport\u00e9 des cumuls importants de neige fra\u00eeche s\u00e8che et de neige roul\u00e9e. L'enneigement s'est nettement am\u00e9lior\u00e9 et nos massifs ont retrouv\u00e9 un aspect hivernal. Il est maintenant correct pour la saison. La montagne est blanchie parfois d\u00e8s 700/900m, mais le sol et les cailloux ne sont jamais bien loin. Les cr\u00eates au vent sont peu fournies voire d\u00e9garnies alors qu'on trouve de belles accumulations sous le vent avec de la neige l\u00e9g\u00e8re et froide. Ailleurs, cette neige risque d'\u00eatre fortement compact\u00e9e par le vent violent d\u2019Ouest \u00e0 Nord-ouest. Les cr\u00eates et sommets, ont g\u00e9n\u00e9ralement vu la neige dispara\u00eetre, souvent pel\u00e9s ou en glace.",
+      "bulletinID": "FR-41_2021-11-30T16:00:00+01:00"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <observations>
+    <Bulletin gml:id="RID253RGR1">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID253RGR1">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineHi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineLo"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <comment>in shady and high-alpine terrain</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <comment>above treeline</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Snowdrift + Old-snow problem above treeline. Considerable avalanche danger.</avActivityHighlights>
+          <avActivityComment>From the Dachsetin over Schladming and Wölz Tauern to Turrach, considerable avalanche danger prevails above the treeline Freshly generated, trigger-sensitive snowdrift accumulations are found primarly in east and south-facing aspects, weak layers inside the snowpack in northern and eastern aspects. Triggering a slab avalanche is possible even by minimum additional loading. Avalanches can fracture down to deeper layers on shady slopes, and then grow to unusually large size.</avActivityComment>
+          <snowpackStructureComment>The snow depths of cold, loosely-packed fresh snow from Saturday are increasing from 5 to 25 cm, from northern to southern massifs. During a night of clear skies on Sunday, surface hoar can form on wind-protected slopes, subsequently covered by fresh snowdreifts. Older weak layers of faceted crystals and ground-level depth hoar is found in general on shady slopes at higher altitudes.</snowpackStructureComment>
+          <wxSynopsisComment>Following a night of clear skies, cloud cover will move in during the morning hours, and snowfall will set in during the afternoon in the Northern Alps and Niedrere Tauern. Further to the south, only intermittent snow showers will pass through. Brisk W/NW winds will be blowing. Temperatures at midday will reach -11 degrees at 2000 m at midday and -7 degrees at 1500 m.</wxSynopsisComment>
+          <tendencyComment>On Tuesday, higher peaks will be shrouded in fog, snowfall is expected primarily in the Northern Alps, amid low temperatures and, in places, storm-strength winds from northwest to west. The cold snow and fresh snowdrift accumulations wil assure the unfavourable snowdrift situation will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-06-01"/>
+      <locRef xlink:href="AT-06-02"/>
+      <locRef xlink:href="AT-06-03"/>
+      <locRef xlink:href="AT-06-06"/>
+      <locRef xlink:href="AT-06-05"/>
+      <locRef xlink:href="AT-06-04"/>
+      <locRef xlink:href="AT-06-18"/>
+      <locRef xlink:href="AT-06-07"/>
+    </Bulletin>
+    <Bulletin gml:id="RID253RGR2">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID253RGR2">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <comment>in gullies and steep bowls, behind protruberances, near ridgelines</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <comment>on shady and high-alpine slopes</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Snowdrift problem, old-snow problem. Moderate avalanche danger.</avActivityHighlights>
+          <avActivityComment>From Hochschwab over Seckau Alps to the Seetal Alps, Gleinalpe, Stubalpe, Koralpe, moderate avalanche danger persists. Most avalanche prone locations are found on very steep N/E facing slopes. As further snow transport takes place, also south-facing slopes can be covered with drifts of trigger-sensitive snow. Triggering a slab avalanches is possible even by minimum additional loading.</avActivityComment>
+          <snowpackStructureComment>Snow depths of loosely-packed, cold fresh snow from Saturday amounted to 15 cm in the Ennstal Alps, to 30 cm between Hochschwab and the Styrian rimline ranges. During a night of clear skies (Saturday night) the wind-protected areas generated surface hoar which was then covered by freshly generated snowdrift accumulations. Older weak layers of faceted crystals and ground-level depth hoar are found generally on shady slopes at higher altitudes.</snowpackStructureComment>
+          <wxSynopsisComment>Following a night of clear skies, cloud cover is moving in from the west during the morning hours. In the afternoon along the Niedere Tauern, light snowfall will set in. From Seetal Alps to the Koralpe, brief snow showers will pass through. Brisk W/NW winds will be blowing. Temperature at 2000 m at midday: -11 degrees; at 1500 m, -7 degrees.</wxSynopsisComment>
+          <tendencyComment>On Tuesday, occasional sunshine. Amid low temperatures, storm-strength westerly-to-northwesterly winds will be blowing in some places. As a result of the cold fresh snow and freshly generated snowdrifts, an unfavourable snowdrift situation will come about.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-06-10"/>
+      <locRef xlink:href="AT-06-09"/>
+      <locRef xlink:href="AT-06-08"/>
+      <locRef xlink:href="AT-06-17"/>
+      <locRef xlink:href="AT-06-15"/>
+      <locRef xlink:href="AT-06-16"/>
+    </Bulletin>
+    <Bulletin gml:id="RID253RGR3">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID253RGR3">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_TreelineHi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_TreelineLo"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <comment>thin, small snowdrift masses</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <comment>on shady and high-alpine slopes</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Old-snow problem on north and east-facing slopes, fresh snowdrifts on east and south-facing slopes</avActivityHighlights>
+          <avActivityComment>From the Mürzsteg Alps over Stuhleck into the Graz mountains, moderate avalanche danger prevails above the treeline. Danger zones are small, distributed over limited space, mostly in ridgeline terrain, particularly in northern and eastern aspects, as wind-impact continues also on south-facing slopes.</avActivityComment>
+          <snowpackStructureComment>The soft/moist snowpack created by mild temperatures over the last few days has now become melt-freeze encrusted due to lower temperatures and winds. On top if it lies (relatively well bonded) about 15-25 cm of cold, loosely-packed fresh snow. Overnight, surface hoar can form in many places which will be blanketed by fresh snow especially on east to south-facing slopes. Older, still trigger-sensitive snowdrifts lie atop an expansively metamorphosed, weakened snowpack layer only on shady slopes.</snowpackStructureComment>
+          <wxSynopsisComment>On Sunday night, clouds will disperse temporarily, then on Monday cloud cover will move in during the daytime again. Minor snowfall is expected along the Mürzsteg Alps in the northern regions, amid brisk W/NW winds. Temperatures at midday at 2000 m will be -10 degrees, at 1500 m, -7 degrees.</wxSynopsisComment>
+          <tendencyComment>On Tuesday, sunshine will be intermittent. At low temperatures, stormy W/NW winds will be blowing in places. As a result of the cold fresh snow and freshly generated snowdrifts, the unfavourable snowdrift situation is expected to persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-06-12"/>
+      <locRef xlink:href="AT-06-11"/>
+      <locRef xlink:href="AT-06-13"/>
+      <locRef xlink:href="AT-06-14"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>

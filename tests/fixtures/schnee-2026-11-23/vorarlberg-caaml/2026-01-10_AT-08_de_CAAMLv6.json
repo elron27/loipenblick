@@ -1,0 +1,205 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-01-09T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Andreas Pecl"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West"
+    },
+    "avalancheActivity" : {
+      "highlights" : "schwacher Altschnee und frischer Triebschnee sind störanfällig",
+      "comment" : "Neu- und frischer Triebschnee verbinden sich nur schlecht mit der schwachen Altschneedecke. Einzelne Personen können Schneebrettlawinen im Trieb- und Altschnee auslösen. Wenn solche die gesamte Schneedecke mitreissen können sie vor allem in den neuschneereicheren Regionen auch groß werden. Gefahrenstellen sind vor allem an steilen Schattenhängen sowie in eingewehten Rinnen und Mulden aller Expositionen vorhanden. Anzahl und Umfang der Gefahrenstellen nehmen mit der Seehöhe zu. Aktivitäten abseits gesicherter Bereiche erfordern defensives Verhalten."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es gibt verbreitet 15 bis 30 cm, im Verwall und Lechquellengebirge auch bis 50 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegen auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht. Die Altschneedecke ist ungünstig aufgebaut."
+    },
+    "tendency" : [ {
+      "highlights" : "Mit weiterem Neuschnee und Wind steigt die Lawinengefahr auf Sonntag deutlich an.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "S", "SW", "NE", "N", "SE", "E" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2000"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "NE", "N", "E" ]
+    }, {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "NE", "N", "SE", "E" ]
+    } ],
+    "bulletinID" : "4c52d00d-15c6-429e-b8ac-4797da8f2cc5",
+    "dangerRatings" : [ {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "considerable",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Rätikon Ost",
+      "regionID" : "AT-08-05-01"
+    }, {
+      "name" : "Silvretta West",
+      "regionID" : "AT-08-06"
+    }, {
+      "name" : "Rätikon West",
+      "regionID" : "AT-08-05-02"
+    }, {
+      "name" : "Lechquellengebirge",
+      "regionID" : "AT-08-03-02"
+    }, {
+      "name" : "Bregenzerwaldgebirge",
+      "regionID" : "AT-08-01"
+    }, {
+      "name" : "Allgäuer Alpen West",
+      "regionID" : "AT-08-02"
+    }, {
+      "name" : "Lechtaler Alpen Vorarlberg",
+      "regionID" : "AT-08-03-01"
+    }, {
+      "name" : "Verwallgruppe West",
+      "regionID" : "AT-08-04"
+    } ]
+  }, {
+    "publicationTime" : "2026-01-09T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Andreas Pecl"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West"
+    },
+    "avalancheActivity" : {
+      "highlights" : "oberhalb der Waldgrenzen Anstieg der Lawinengefahr",
+      "comment" : "Frischer Triebschnee und schwacher Altschnee sind störanfällig. Einzelne Wintersportler können kleine bis mittlere Schneebrettlawinen auslösen. Gefahrenstellen liegen vor allem oberhalb der Waldgrenzen in eingewehten Rinnen und Mulden sowie im extremen Steilgelände. Nebst der Verschüttungsgefahr sollte vor allem die Mitreiß- und Absturzgefahr beachtet werden."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es gibt verbreitet 15 bis 30 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegt auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht."
+    },
+    "tendency" : [ {
+      "highlights" : "Mit weiterem Neuschnee und Wind auf Sonntag steigt die Lawinengefahr an.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "NE", "N", "SE" ]
+    }, {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "E", "NE", "N", "SE" ]
+    } ],
+    "bulletinID" : "cf7431bf-5f6e-4af5-8de6-44433754b9b2",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Voralpenbereich",
+      "regionID" : "AT-08-07"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "mit Neuschnee und Wind in höheren Lagen oft erhebliche Lawinengefahr"
+    }
+  }
+}

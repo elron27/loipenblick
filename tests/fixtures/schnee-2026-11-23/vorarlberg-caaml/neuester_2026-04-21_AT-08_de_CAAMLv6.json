@@ -1,0 +1,164 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-20T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-20T15:00:00Z",
+      "endTime" : "2026-04-21T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Florian Herla"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Wechselhaft und eher kalt. Sonne und Wolken wechseln sich ab, die Sicht kann immer wieder durch größere Haufenwolken eingeschränkt sein. Auch ein paar Schneeschauer sind einzuplanen, Schneefallgrenze um 1500m. Temperatur in 2000 m: -5 bis -2 Grad, Temperatur in 3000 m: um -8 Grad. Höhenwind: schwach aus Nordwest."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Vorsicht insbesondere im Nordsektor vor Nassschnee und Altschnee",
+      "comment" : "Die Gefahr von nassen Lawinen steigt im Tagesverlauf leicht an. Einzelne Wintersportler können nasse Schneebretter auslösen. Vorsicht an noch nicht entladenen steilen Schattenhängen unterhalb etwa 2500 m. Lawinen können insbesondere dort im schwachen Altschnee anreißen und vereinzelt groß werden. Wummgeräusche sowie das Durchbrechen in den Altschnee können auf die Gefahr hinweisen.\n\nZudem können Wintersportler vereinzelt Lawinen in oberflächennahen Schwachschichten hochgelegener Schattenhänge auslösen. Solche Gefahrenstellen sind kaum zu erkennen. Vorsicht auch vor kleinräumigen, frischen Triebschneeansammlungen."
+    },
+    "snowpackStructure" : {
+      "comment" : "In den letzten Tagen fiel in hohen Lagen bis zu 10 cm Schnee aus lokalen Schauern. Oberhalb 2500 m kühlt die Schneedecke in der Nacht gut aus. Die Durchfeuchtung der Schneedecke ist bis in hohe Lagen weit fortgeschritten, im Nordsektor bis etwa 2500m. Tiefere Lagen sind ausgeapert. Sonnseitig aperte der Boden bis in hohe Lagen zunehmend aus. Im hochgelegenen, schattseitigen Steilgelände befinden sich ungünstige Zwischenschichten im obersten Meter der Schneedecke, die stellenweise gestört werden können. Ein mächtiger Mittelteil aus kompakten Schichten überdeckt eine Basis aus Tiefenreif und kantigen Kristallen."
+    },
+    "tendency" : [ {
+      "highlights" : "In den nächsten Tagen sind die Verhältnisse nach meist klaren Nächten mit guter Abstrahlung am Vormittag recht günstig. Im Tagesverlauf steigt die Gefahr von nassen Lawinen jeweils an.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-21T15:00:00Z",
+        "endTime" : "2026-04-22T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-21"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "2000",
+        "upperBound" : "2500"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "NE", "E", "N" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "NE", "N" ]
+    } ],
+    "bulletinID" : "0a7fb18d-e042-46cd-99f7-12c6b008b96b",
+    "dangerRatings" : [ {
+      "mainValue" : "moderate",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Rätikon Ost",
+      "regionID" : "AT-08-05-01"
+    }, {
+      "name" : "Rätikon West",
+      "regionID" : "AT-08-05-02"
+    }, {
+      "name" : "Silvretta West",
+      "regionID" : "AT-08-06"
+    }, {
+      "name" : "Lechquellengebirge",
+      "regionID" : "AT-08-03-02"
+    }, {
+      "name" : "Lechtaler Alpen Vorarlberg",
+      "regionID" : "AT-08-03-01"
+    }, {
+      "name" : "Verwallgruppe West",
+      "regionID" : "AT-08-04"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-20T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-20T15:00:00Z",
+      "endTime" : "2026-04-21T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Florian Herla"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Wechselhaft und eher kalt. Sonne und Wolken wechseln sich ab, die Sicht kann immer wieder durch größere Haufenwolken eingeschränkt sein. Auch ein paar Schneeschauer sind einzuplanen, Schneefallgrenze um 1500m. Temperatur in 2000 m: -5 bis -2 Grad, Temperatur in 3000 m: um -8 Grad. Höhenwind: schwach aus Nordwest."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Kaum mehr Lawinen zu erwarten",
+      "comment" : "Mit wenig Neuschnee und Wind entstanden in hohen Lagen lokal kleine Triebschneeansammlungen. \n\nNasse Lawinen sind kaum mehr zu erwarten. Falls noch vereinzelte Lawinen in den höheren Lagen abgehen, bleiben sie mittelgroß."
+    },
+    "snowpackStructure" : {
+      "comment" : "Wechselhafte Abstrahlungsverhältnisse unter 2500 m. Tiefere Lagen sind ausgeapert. Sonnseitig apert der Boden bis in hohe Lagen zunehmend aus. Die Schneedecke wurde in den vergangenen Wochen bereits bis in die Gipfellagen durchnässt."
+    },
+    "tendency" : [ {
+      "highlights" : "Die Verhältnisse ändern sich vorerst nicht.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-04-21T15:00:00Z",
+        "endTime" : "2026-04-22T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-21"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "1600"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "N", "NE", "E" ]
+    } ],
+    "bulletinID" : "3dee87c7-b235-4c91-8278-4158788bc214",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Voralpenbereich",
+      "regionID" : "AT-08-07"
+    }, {
+      "name" : "Bregenzerwaldgebirge",
+      "regionID" : "AT-08-01"
+    }, {
+      "name" : "Allgäuer Alpen West",
+      "regionID" : "AT-08-02"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Gute Abstrahlungsverhältnisse über 2500 m"
+    }
+  }
+}

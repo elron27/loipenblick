@@ -1,0 +1,1240 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="0631caf8-7f4f-4337-8903-b1db9abe2742" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="DE-BY-30">
+      <name>Werdenfelser Alpen</name>
+    </region>
+    <region regionID="DE-BY-12">
+      <name>Allgäuer Alpen Mitte</name>
+    </region>
+    <region regionID="DE-BY-11">
+      <name>Allgäuer Voralpen</name>
+    </region>
+    <region regionID="DE-BY-20">
+      <name>Ammergauer Alpen Nord</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Vorsicht, Verschüttungsgefahr!</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze erheblich, unterhalb davon mäßig. Das Problem ist in allen Höhenlagen der Triebschnee. Schneebrettlawinen können in eingewehten Bereichen, besonders an Steilhängen der Expositionen Nordwest über Ost bis Süd und in Rinnen und Mulden mit geringer Zusatzbelastung leicht ausgelöst werden. Gefahrenstellen finden sich auch im Waldübergangsbereich, in Waldschneisen und Lichtungen. Lawinen können vereinzelt auch groß werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Mit stürmischem Westwind und Schneefall wachsen Triebschneeansammlungen weiter an. Frischer und älterer Triebschnee liegt verbreitet auf weichen Schichten oder Oberflächenreif und ist sehr störanfällig. Stellenweise sind im Neuschneepaket schwache Zwischenschichten eingelagert. In den Hochlagen bestehen tieferliegende Schichten oft aus kantigen Kristallen. Die Schneehöhe ist sehr unterschiedlich, abgewehte und triebschneegeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Die Lawinenlage bleibt vorerst kritisch.</highlights>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="4c52d00d-15c6-429e-b8ac-4797da8f2cc5" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-08-05-01">
+      <name>Rätikon Ost</name>
+    </region>
+    <region regionID="AT-08-06">
+      <name>Silvretta West</name>
+    </region>
+    <region regionID="AT-08-05-02">
+      <name>Rätikon West</name>
+    </region>
+    <region regionID="AT-08-03-02">
+      <name>Lechquellengebirge</name>
+    </region>
+    <region regionID="AT-08-01">
+      <name>Bregenzerwaldgebirge</name>
+    </region>
+    <region regionID="AT-08-02">
+      <name>Allgäuer Alpen West</name>
+    </region>
+    <region regionID="AT-08-03-01">
+      <name>Lechtaler Alpen Vorarlberg</name>
+    </region>
+    <region regionID="AT-08-04">
+      <name>Verwallgruppe West</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>2000</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>schwacher Altschnee und frischer Triebschnee sind störanfällig</highlights>
+      <comment>Neu- und frischer Triebschnee verbinden sich nur schlecht mit der schwachen Altschneedecke. Einzelne Personen können Schneebrettlawinen im Trieb- und Altschnee auslösen. Wenn solche die gesamte Schneedecke mitreissen können sie vor allem in den neuschneereicheren Regionen auch groß werden. Gefahrenstellen sind vor allem an steilen Schattenhängen sowie in eingewehten Rinnen und Mulden aller Expositionen vorhanden. Anzahl und Umfang der Gefahrenstellen nehmen mit der Seehöhe zu. Aktivitäten abseits gesicherter Bereiche erfordern defensives Verhalten.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es gibt verbreitet 15 bis 30 cm, im Verwall und Lechquellengebirge auch bis 50 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegen auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht. Die Altschneedecke ist ungünstig aufgebaut.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit weiterem Neuschnee und Wind steigt die Lawinengefahr auf Sonntag deutlich an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="89277aa1-e945-4138-b6c6-9cb76ac3c6a1" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="DE-BY-52">
+      <name>Chiemgauer Alpen Ost</name>
+    </region>
+    <region regionID="DE-BY-41">
+      <name>Bayrische Voralpen West</name>
+    </region>
+    <region regionID="DE-BY-51">
+      <name>Chiemgauer Alpen West</name>
+    </region>
+    <region regionID="DE-BY-60">
+      <name>Berchtesgadener Alpen</name>
+    </region>
+    <region regionID="DE-BY-43">
+      <name>Bayrische Voralpen Ost</name>
+    </region>
+    <region regionID="DE-BY-42">
+      <name>Bayrische Voralpen Mitte</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m"/>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Triebschneeansammlungen meiden!</highlights>
+      <comment>Die Lawinengefahr ist mäßig. Triebschnee kann durch geringe Zusatzbelastung als kleine bis mittlere Schneebrettlawine ausgelöst werden. Gefahrenstellen befinden sich kammnah und kammfern im Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden. Schneebretter können auch im Waldübergangsbereich sowie in Schneisen und Lichtungen ausgelöst werden. Neben der Verschüttungsgefahr ist die Sturz- und Verletzungsgefahr zu beachten.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es bleibt stürmisch. Der frische und ältere Triebschnee liegt störanfällig auf weichen Schichten oder Oberflächenreif. Die Schneedeckenbasis ist in mittleren Lagen häufig verharscht, in den Hochlagen besteht sie verbreitet aus kantigen Kristallen. Die Schneehöhe ist sehr unterschiedlich, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Je nach Neuschneemenge kann die Lawinengefahr ansteigen.</highlights>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="94312945-87f3-49b0-908f-07999d5eb1e2" lang="de">
+    <publicationTime>2026-01-10T07:25:37Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="SI-10">
+      <name>Südliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-7">
+      <name>Zentrale Julische Alpen</name>
+    </region>
+    <region regionID="SI-8">
+      <name>Östliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-6">
+      <name>Westliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-3">
+      <name>Steiner Alpen</name>
+    </region>
+    <region regionID="SI-4">
+      <name>Kamnik-Savinja-Alpen</name>
+    </region>
+    <region regionID="SI-1">
+      <name>Westliche Karawanken</name>
+    </region>
+    <region regionID="SI-2">
+      <name>Zentrale Karawanken</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>SW</aspect>
+      <aspect>S</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>2000</lowerBound>
+      </elevation>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag sind Schneeschauer zu erwarten. Am Samstag ist es überwiegend bewölkt, mit gelegentlichen Wolkenauflockerungen. Einige Schneeschauer sind noch möglich. Es weht zunächst ein schwacher bis mäßiger Nordwind, der am Nachmittag etwas an Stärke gewinnt. Es wird etwas kühler. Die Temperaturen liegen um -4 °C auf 1500 m und -11 °C auf 2500 m.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Orte mit Schneeverwehungen sind gefährlicher</highlights>
+      <comment>Besonders gefährlich sind Verwehungsschneeflächen, da bereits eine schwere Last eine kleine bis mittlere Lawine auslösen kann. Größere Vorsicht ist in Schluchten und Rinnen geboten, wo große Mengen an Flugschnee liegen können.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es liegt relativ wenig Schnee. Die Schneedecke ist durch den Einfluss des Windes uneben. Im Windschatten liegt etwas leichter Schnee, aber die Schneedecke ist meist hart und Harsch. Es ist erhöhte Vorsicht geboten, vor allem dort, wo der Wind Neuschnee gebildet hat.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>In der Nacht zum Samstag und bis in den Vormittag hinein werden Schneeschauer auftreten. Es wird mit 5 bis 20 cm Schneefall gerechnet. Die Höhe der Niederschläge ist noch ungewiss. Die Gefahr von Lawinen wird bei stärkeren Niederschlägen leicht ansteigen. Dies gilt insbesondere für Samstag und Sonntag, wenn ein stärkerer Nordwind Neuschnee heranträgt und neue Verwehungen bildet.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP4</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="3bc80677-c180-4e52-8812-33b3e8db0e7b" lang="de">
+    <publicationTime>2026-01-10T07:25:37Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-05-12">
+      <name>Pongauer Grasberge</name>
+    </region>
+    <region regionID="AT-05-21">
+      <name>Chiemgauer Alpen Süd</name>
+    </region>
+    <region regionID="AT-05-20">
+      <name>Untersbergstock</name>
+    </region>
+    <region regionID="AT-05-19">
+      <name>Osterhorngruppe, Gamsfeldgruppe</name>
+    </region>
+    <region regionID="AT-05-15">
+      <name>Kitzbüheler Alpen Oberpinzgau</name>
+    </region>
+    <region regionID="AT-05-14">
+      <name>Kitzbüheler Alpen Glemmtal</name>
+    </region>
+    <region regionID="AT-05-13">
+      <name>Dientner Grasberge</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Die Nacht auf Samstag ist bewölkt, stellenweise schneit es leicht (Neuschneesumme maximal 5 cm). Am Samstag ist die Sicht häufig durch dichte Wolken eingeschränkt. Dazu kommt im Tagesverlauf immer öfter leichter bis mäßiger Schneefall - tagsüber fallen 5 bis 10 cm. Im Lungau bleibt es tagsüber meist niederschlagsfrei, hier kann sich auch zeitweise die Sonne zeigen. Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 2000 m um -9 Grad.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Kammnahen Triebschnee beachten</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig, darunter gering.
+Kammnaher Triebschnee kann als kleine Schneebrettlawine an einigen Stellen bereits durch geringe Zusatzbelastung ausgelöst werden. Die meisten Gefahrenstellen befinden sich im Nord- und Ostsektor hinter Geländekanten, in Rinnen und Mulden. Die Absturzgefahr überwiegt abseits von Geländefallen die Verschüttungsgefahr. Weiterhin Vorsicht vor Steinen, die nur von wenig Schnee überdeckt sind.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Bis Freitagabend sind 10 bis 20 cm Neuschnee gefallen, bis Samstagabend fallen weitere 5 bis 10 cm. Frischer Triebschnee kommt in der Höhe auf lockerem Neuschnee zu liegen, der eine Schwachschicht darstellt. Unterhalb von 1400 m hat am Freitag Regeneintrag die Schneedecke teilweise angefeuchtet, dort hat sich ein Schmelzharschdeckel ausgebildet. Die Altschneedecke besteht aus Schichten aus kantigen Kristallen, Tiefenreif und Schmelzkrusten und neigt kaum zur Bruchausbreitung.
+Insgesamt liegt wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Der Triebschnee bleibt weiterhin störanfällig. Mit weiterem Schneefall wachsen die Triebschneeansammlungen nochmals etwas an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="cf7431bf-5f6e-4af5-8de6-44433754b9b2" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-08-07">
+      <name>Voralpenbereich</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Aus der Nacht heraus schneit es bereits leicht. Tagsüber werden die Schneefälle stärker. Die Sichten sind durch Wolken und Schnee stark eingeschränkt. Temperatur in 2000 m: um -9 Grad, in 3000 m um -15 Grad; Höhenwind: stark bis stürmisch aus West</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>oberhalb der Waldgrenzen Anstieg der Lawinengefahr</highlights>
+      <comment>Frischer Triebschnee und schwacher Altschnee sind störanfällig. Einzelne Wintersportler können kleine bis mittlere Schneebrettlawinen auslösen. Gefahrenstellen liegen vor allem oberhalb der Waldgrenzen in eingewehten Rinnen und Mulden sowie im extremen Steilgelände. Nebst der Verschüttungsgefahr sollte vor allem die Mitreiß- und Absturzgefahr beachtet werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es gibt verbreitet 15 bis 30 cm Neuschnee. Dieser wird mit zeitweise starkem bis stürmischem Westwind verfrachtet. Der seit Donnerstag gefallene Neu- und Triebschnee liegt auf einer oft lockeren, kantig aufgebauten Altschneeoberfläche oder Oberflächenreif. Die Verbindung ist daher schlecht.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit weiterem Neuschnee und Wind auf Sonntag steigt die Lawinengefahr an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="f57404c8-9269-4c21-b2ba-c5ad9ed49cc7" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-04-07">
+      <name>Kasbergblock</name>
+    </region>
+    <region regionID="AT-04-08">
+      <name>Sengsengebirge</name>
+    </region>
+    <region regionID="AT-04-05">
+      <name>Zimnitzmassiv, Höllengebirge</name>
+    </region>
+    <region regionID="AT-04-06">
+      <name>Traunstein, Eibenberg</name>
+    </region>
+    <region regionID="AT-04-03">
+      <name>Totes Gebirge Nord</name>
+    </region>
+    <region regionID="AT-04-04">
+      <name>Phyrgas, Haller Mauern</name>
+    </region>
+    <region regionID="AT-04-01">
+      <name>Dachstein, Gosaukamm</name>
+    </region>
+    <region regionID="AT-04-02">
+      <name>Kalmberg, Katergebirge</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Am Samstag ist die Sicht häufig durch dichte Wolken eingeschränkt. Dazu kommt im Tagesverlauf immer öfter leichter bis mäßiger Schneefall (in Summe werden 15 - 20cm erwartet). Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 1500 m um -6 Grad, in 2000 m um -10 Grad.
+
+Am Sonntag stecken die Berge dann in Wolken und am Vormittag kann es noch ein wenig schneien. Am Nachmittag bessert sich die Sicht, am Abend klart es auf. Lebhafter Westwind. In 1500 m um -13 Grad, in 2000 m um -15 Grad.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Frischen Triebschnee beachten!</highlights>
+      <comment>Die Lawinengefahr wird ab der Waldgrenze als mäßig eingestuft. Zu beachten sind vor allem vermehrt im Ostsektor und südseitig frisch eingewehte kammnahe Steilhänge sowie verfülle steile Mulden und Rinnen. Hier könnten mittlere Schneebrettlawinen bereits durch geringe Zusatzbelastung ausgelöst werden. Diese Gefahrenstellen sind zu meiden und zu beachten.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Der zuletzt gefallene Neuschnee und weiterer Schneefall wird durch überwiegend starken Wind aus West bis Nordwest verfrachtet und bindet mit der kalten, oberflächig lockeren oder auch vereisten Altschneedecke bzw. auch älterem Triebschnee nur schlecht. Die teils umfangreicheren Triebschneeablagerungen sind sehr störanfällig und ältere können dünne Zwischenschichten wie kantigen Formen enthalten. Die Schneehöhen sind sehr unterschiedlich, abgewehte und mit Triebschnee verfüllte Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Der Triebschnee bleibt störanfällig.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="8df94750-2cae-4168-a93e-9658d8da1e55" lang="de">
+    <publicationTime>2026-01-10T07:25:37Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-05-01">
+      <name>Nockberge</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Die Nacht auf Samstag ist bewölkt, stellenweise schneit es leicht (Neuschneesumme um 5 cm). Tagsüber kann sich im Lungau auch zeitweise die Sonne zeigen, meist bleibt es niederschlagsfrei. Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 2000 m um -9 Grad.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Kleine, kammnahe Triebschneeansammlungen beachten</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig, darunter gering. Kammnaher Triebschnee kann als kleine Schneebrettlawine an einigen Stellen bereits durch geringe Zusatzbelastung ausgelöst werden. Die meisten Gefahrenstellen befinden sich im Nord- und Ostsektor hinter Geländekanten, in Rinnen und Mulden. Die Absturzgefahr überwiegt abseits von Geländefallen die Verschüttungsgefahr. Weiterhin Vorsicht vor Steinen, die nur von wenig Schnee überdeckt sind.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Am Freitag fielen etwa 10 cm Neuschnee, in der Nacht kommen noch einmal um die 5 cm Neuschnee dazu. Lockerer Neuschnee, der von Triebschnee überlagert wird, kann eine oberflächennahe Schwachschicht darstellen. Insgesamt liegt wenig Schnee, innerhalb der Altschneedecke sind keine ausgeprägten Schwachschichten vorhanden.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Der Triebschnee bleibt weiterhin störanfällig.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="16734b68-bc02-4f63-83a5-5518d4e458be" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-03-01">
+      <name>Ybbstaler Alpen</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag fällt kaum mehr Schnee. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt wieder zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 2000 m zwischen -9 und -5 Grad, in 1500 m zwischen -7 und -3 Grad. Es weht starker bis stürmischer Wind mit Böen um 100 km/h aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Triebschneelinsen sind störanfällig!</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig. Frische Triebschneebereiche können durch geringe Zusatzbelastung als kleine bis mittelgroße Schneebrettlawinen ausgelöst werden. Die Gefahrenstellen befinden sich insbesondere im kammnahen Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Seit Donnertag fielen stellenweise bis zu 20 cm Neuschnee, der mit starkem Wind aus westlichen Richtungen als Triebschnee auf eine lockere, mit Graupel durchsetzte Schneeauflage ablagerte. Bis ca. 1400 m hat am Freitag etwas Regen die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. In höheren Lagen bewirkte die Erwärmung teilweise eine Bindung der Auflage. Schwachschichten für Schneebrettlawinen bilden lockere Schneeschichten (Neuschnee, kantige Kristalle) im Übergang zur verharschten Altschneedecke, dessen Fundament stellenweise durch aufbauende Umwandlung zusätzlich geschwächt wird. Die Schneehöhe ist sehr unterschiedlich. Harte, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit Intensivierung der Schneefälle bei starkem Nordwestwind steigt die Lawinengefahr langsam an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="d1ea9da9-e27b-42b0-aa5d-1ffebb2a7f3c" lang="de">
+    <publicationTime>2026-01-10T07:25:37Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-05-18">
+      <name>Loferer und Leoganger Steinberge</name>
+    </region>
+    <region regionID="AT-05-17">
+      <name>Steinernes Meer, Hochkönig, Hagengebirge, Göllstock</name>
+    </region>
+    <region regionID="AT-05-16">
+      <name>Tennengebirge, Gosaukamm</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Die Nacht auf Samstag ist bewölkt, stellenweise schneit es leicht (Neuschneesumme maximal 5 cm). Am Samstag ist die Sicht häufig durch dichte Wolken eingeschränkt. Dazu kommt im Tagesverlauf immer öfter leichter bis mäßiger Schneefall - tagsüber fallen 5 bis 10 cm. Im Lungau bleibt es tagsüber meist niederschlagsfrei, hier kann sich auch zeitweise die Sonne zeigen. Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 2000 m um -9 Grad, in 3000 m um -17 Grad.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Frischer, störanfälliger Triebschnee</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig, darunter gering.
+Kammnaher Triebschnee kann an einigen Stellen bereits durch geringe Zusatzbelastung ausgelöst werden. Schneebrettlawinen können mittlere Größe erreichen, die Triebschneeansammlungen wachsen im Tagesverlauf an. Die meisten Gefahrenstellen befinden sich in Nordwest über Nord bis Südost ausgerichteten Hängen, hinter Geländekanten, in Rinnen und Mulden. Risse beim Betreten der Schneedecke weisen auf die Gefahr hin. Neben der Verschüttungsgefahr ist auf die Mitreiß- und Absturzgefahr zu achten. Außerdem lauern weiterhin viele Steine.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Bis Freitagabend sind 10 bis 20 cm Neuschnee gefallen, bis Samstagabend fallen weitere 5 bis 10 cm. Wind und Schneefall bilden in der Höhe stetig frischen Triebschnee. Als Schwachschicht können sowohl der zuletzt gefallene Schnee, Oberflächenreif als auch kantige Kristalle über/unter der obersten Kruste dienen. Die weitere Altschneedecke besteht aus Schichten aus kantigen Kristallen, Tiefenreif und Schmelzkrusten und neigt kaum zur Bruchausbreitung.
+Unterhalb von 1400 m hat Regeneintrag die Schneedecke am Freitag angefeuchtet, dort hat sich ein Schmelzharschdeckel ausgebildet auf dem der Neuschnee zu liegen kommt.
+Die Schneemenge ist deutlich unterdurchschnittlich.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Der Triebschnee bleibt weiterhin störanfällig. Mit weiterem Schneefall wachsen die Triebschneeansammlungen nochmals etwas an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="a0d33e3f-1a0f-4eb2-b6e0-e350182b1826" lang="de">
+    <publicationTime>2026-01-09T17:43:10Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-06-09">
+      <name>Eisenerzer Alpen</name>
+    </region>
+    <region regionID="AT-06-07">
+      <name>Wölzer Tauern Süd</name>
+    </region>
+    <region regionID="AT-06-18">
+      <name>Murberge, Gurktaler Alpen</name>
+    </region>
+    <region regionID="AT-06-06">
+      <name>Rottenmanner Tauern</name>
+    </region>
+    <region regionID="AT-06-17">
+      <name>Seetaler Alpen</name>
+    </region>
+    <region regionID="AT-06-05">
+      <name>Wölzer Tauern Nord</name>
+    </region>
+    <region regionID="AT-06-16">
+      <name>Koralpe Ost</name>
+    </region>
+    <region regionID="AT-06-15">
+      <name>Stub- und Gleinalpe</name>
+    </region>
+    <region regionID="AT-06-03">
+      <name>Ennstaler Alpen</name>
+    </region>
+    <region regionID="AT-06-02">
+      <name>Totes Gebirge Süd</name>
+    </region>
+    <region regionID="AT-06-01">
+      <name>Dachsteingebiet</name>
+    </region>
+    <region regionID="AT-06-10">
+      <name>Hochschwabgebiet</name>
+    </region>
+    <region regionID="AT-06-08-02">
+      <name>Gaaler Alpen</name>
+    </region>
+    <region regionID="AT-06-08-01">
+      <name>Triebener Tauern</name>
+    </region>
+    <region regionID="AT-06-04-01">
+      <name>Schladminger Tauern Nord</name>
+    </region>
+    <region regionID="AT-06-04-02">
+      <name>Schladminger Tauern Süd</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht auf Samstag schneit es von den Niederen Tauern bis zur Koralpe, hier werden noch bis zu 10 cm Neuschnee erwartet. 
+Tagsüber lockern die Wolken südlich des Alpenhauptkammes auf und es kann sich auch mal die Sonne zeigen. Nördlich des Alpenhauptkammes kommen Auflockerungen selten vor und im Laufe des Nachmittags setzen erneut Schneefälle ein. 
+Der Nordwestwind weht lebhaft, teilweise auch kräftig. Die Temperatur sinkt wieder auf -6 bis -9 Grad in 2000 m Seehöhe.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Mäßige Lawinengefahr oberhalb der Waldgrenze durch frischen Triebschnee!</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig. Frische Triebschneeansammlungen, vorwiegend in den Sektoren Nord über Ost bis Süd, können an einigen Stellen hinter Kämmen, Geländekanten und in Rinnen und Mulden durch geringe Zusatzbelastung als mittlere Schneebrettlawinen ausgelöst werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Seit Donnerstag wird bis zu 30 cm Neuschnee, teilweise mit Graupel durchsetzt, vorallem in den Nordalpen durch kräftigen West- bis Nordwestwind in die östlichen Sektoren verfrachtet und bildet dort gebundenen Triebschnee. In windarmen Regionen und Geländeformen bleibt der Neuschnee auch locker und pulvrig. Der frische Triebschnee kann Schwachschichten enthalten und liegt zusätzlich oft auf einer instabilen Schicht aus kantigen Kristallen oder Oberflächenreif. Im Fundament der Schneedecke schwächt aufbauende Umwandlung (Schwimmschnee) die Stabilität.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>In der Nacht auf Sonntag kommt in den Nordstauregionen noch etwas Neuschnee hinzu und die Lawinengefahr steigt weiterhin langsam an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="0142beb3-3974-4e50-aaf7-7db2be4a954a" lang="de">
+    <publicationTime>2026-01-10T07:25:37Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-05-11">
+      <name>Venedigergruppe Nord</name>
+    </region>
+    <region regionID="AT-05-10">
+      <name>Glocknergruppe Nord</name>
+    </region>
+    <region regionID="AT-05-09">
+      <name>Goldberggruppe Nord</name>
+    </region>
+    <region regionID="AT-05-08">
+      <name>Niedere Tauern Nord</name>
+    </region>
+    <region regionID="AT-05-07">
+      <name>Venedigergruppe Mitte</name>
+    </region>
+    <region regionID="AT-05-06">
+      <name>Glocknergruppe Mitte</name>
+    </region>
+    <region regionID="AT-05-05">
+      <name>Goldberggruppe Mitte</name>
+    </region>
+    <region regionID="AT-05-04">
+      <name>Niedere Tauern Alpenhauptkamm</name>
+    </region>
+    <region regionID="AT-05-03">
+      <name>Weisseck, Muhrtal</name>
+    </region>
+    <region regionID="AT-05-02">
+      <name>Niedere Tauern Süd</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>SW</aspect>
+      <aspect>W</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Die Nacht auf Samstag ist bewölkt, stellenweise schneit es leicht (Neuschneesumme maximal 5 cm). Am Samstag ist die Sicht häufig durch dichte Wolken eingeschränkt. Dazu kommt im Tagesverlauf immer öfter leichter bis mäßiger Schneefall - tagsüber fallen 5 bis 10 cm. Im Lungau bleibt es tagsüber meist niederschlagsfrei, hier kann sich auch zeitweise die Sonne zeigen. Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 2000 m um -9 Grad, in 3000 m um -17 Grad.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Frische und ältere Triebschneeansammlungen sind störanfällig</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig, darunter gering.
+Schneebrettlawinen können an einigen Stellen schon durch geringe Zusatzbelastung ausgelöst werden. Lawinen können mittlere Größe erreichen, die frischen Triebschneeansammlungen wachsen im Tagesverlauf an. Gefahrenstellen befinden sich in allen Expositionen, kammnah und kammfern, hinter Geländekanten, in Rinnen und Mulden. Risse beim Betreten der Schneedecke weisen auf die Gefahr hin. Neben der Verschüttungsgefahr ist auf die Mitreiß- und Absturzgefahr zu achten. Außerdem lauern weiterhin viele Steine.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Bis Freitagabend sind 10 bis 20 cm Neuschnee gefallen, bis Samstagabend fallen weitere 5 bis 10 cm, lokal auch mehr. Wind und Schneefall bilden in der Höhe stetig frischen Triebschnee. Als Schwachschicht können sowohl der zuletzt gefallene lockere Schnee, Oberflächenreif als auch kantige Kristalle über/unter der obersten Kruste dienen. Die weitere Altschneedecke besteht aus Schichten aus kantigen Kristallen, Tiefenreif und Schmelzkrusten, dort neigt sie kaum zur Bruchausbreitung.
+Die Schneemenge ist deutlich unterdurchschnittlich.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Der Triebschnee bleibt weiterhin störanfällig. Mit weiterem Schneefall wachsen die Triebschneeansammlungen nochmals etwas an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="07efe5b6-19f8-47ca-9fe4-8396721ac543" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-03-06">
+      <name>Gippel - Göllergebiet</name>
+    </region>
+    <region regionID="AT-03-04">
+      <name>Rax - Schneeberggebiet</name>
+    </region>
+    <region regionID="AT-03-05">
+      <name>Semmering - Wechselgebiet</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag ist es weitgehend niederschlagsfrei. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 2000 m zwischen -10 und -6 Grad, in 1500 m zwischen -6 und -2 Grad. Es weht starker bis stürmischer Wind mit Böen um 100 km/h aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Triebschneelinsen sind stellenweise störanfällig!</highlights>
+      <comment>Die Lawinengefahr ist gering. Trotzdem können frische Triebschneebereiche durch eine einzelne Person als kleine Schneebrettlawinen ausgelöst werden. Die Gefahrenstellen befinden sich insbesondere im kammnahen Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden. Weiterhin überwiegt die Mitreiß- und Absturzgefahr gegenüber der Verschüttungsgefahr.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Ewas Neuschnee wurde durch starken Wind aus westlichen Richtungen in die Leebereiche als Triebschnee auf eine lockere, mit Graupel durchsetzte Schneeauflage abgelagert. Bis ca. 1400 m hat am Freitag etwas Regen die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. Schwachschichten für Schneebrettlawinen bilden lockere Schneeschichten (Neuschnee, kantige Kristalle) im Übergang zur verharschten Altschneedecke, dessen Fundament vereinzelt durch aufbauende Umwandlung geschwächt wird. Die Schneehöhe ist sehr unterschiedlich. Harte, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit etwas Schneefall bei starkem Nordwestwind steigt die Lawinengefahr leicht an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="7c6e6e26-0e2c-47e0-8f4d-b60c4236e665" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-03-02">
+      <name>Türnitzer Alpen</name>
+    </region>
+    <region regionID="AT-03-03">
+      <name>Gutensteiner Alpen</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag ist es weitgehend niederschlagsfrei. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 1500 m zwischen -7 und -2 Grad, in 1000 m zwischen -1 und -6 Grad. Es weht starker bis stürmischer Wind aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Vereinzelte Triebschneelinsen beachten</highlights>
+      <comment>Die Lawinengefahr ist gering. Nur vereinzelt existieren frische Triebschneelinsen in eingewehten Rinnen und Mulden sowie hinter exponierten Rücken und Kämmen. Diese können als kleine Schneebrettlawinen ausgelöst werden. Die Absturzgefahr überwiegt die Verschüttungsgefahr.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Frische Triebschneelinsen liegen in höheren Lagen oft auf lockeren Schneeschichten, die als Schwachschicht wirken können. Zudem hat etwas Regen und kurzzeitige Erwärmung die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. Generell liegt wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Nur wenig Änderung der Lawinengefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="f91a7591-ebcd-49e1-af55-e96c9831e079" lang="de">
+    <publicationTime>2026-01-09T17:43:10Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-06-13">
+      <name>Fischbacher Alpen Ost, Wechselgebiet</name>
+    </region>
+    <region regionID="AT-06-12">
+      <name>Mürztaler Alpen</name>
+    </region>
+    <region regionID="AT-06-11">
+      <name>Mürzsteger Alpen</name>
+    </region>
+    <region regionID="AT-06-14">
+      <name>Fischbacher Alpen West, Grazer Bergland</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht auf Samstag lässt der Schneefall in den östlichen Gebirgsgruppen der Steiermark nach, nur Samstagnachmittag können noch ein paar wenige Zentimeter Neuschnee dazukommen. Südlich des Alpenhauptkammes kann sich auch mal die Sonne zeigen. 
+Der Nordwestwind weht stark und die Temperatur sinkt wieder auf -6 bis -8 Grad in 2000 m Seehöhe.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Geringe Lawinengefahr, aber frischen Triebschnee beachten!</highlights>
+      <comment>Die Lawinengefahr ist gering. Frische Triebschneelinsen in eingewehten Rinnen und Mulden sowie hinter Rücken und Kämmen oberhalb der Waldgrenze sind aber störanfällig und können durch einzelne Personen als kleine Schneebrettlawinen ausgelöst werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Frische Triebschneelinsen liegen oft auf kantigen Kristallen oder Oberflächenreif, die als Schwachschicht wirken können. Abgesehen davon ist die Altschneeoberfläche nur von wenigen Zentimetern Neuschnee überdeckt. Generell schwächt aufbauende Umwandlung das geringmächtige Schneedeckenfundament. Windexponiertes Gelände ist meist abgeblasen und nahezu schneefrei.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>In der Nacht auf Sonntag kommt in den Nordstauregionen ein wenig Neuschnee hinzu und die Lawinengefahr steigt dort leicht an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <customData>
+    <ALBINA>
+      <generalHeadline>Kritische Verhältnisse! Triebschnee verbreitet sehr störanfällig</generalHeadline>
+    </ALBINA>
+  </customData>
+</bulletins>

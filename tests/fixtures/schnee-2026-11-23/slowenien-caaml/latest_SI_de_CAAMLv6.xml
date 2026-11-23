@@ -1,0 +1,87 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="614c6bd6-eb9f-416c-a597-32fd98223d50" lang="de">
+    <publicationTime>2026-05-03T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-03T15:00:00Z</startTime>
+      <endTime>2026-05-04T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>ARSO</name>
+      </person>
+    </source>
+    <region regionID="SI-10">
+      <name>Südliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-7">
+      <name>Zentrale Julische Alpen</name>
+    </region>
+    <region regionID="SI-8">
+      <name>Östliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-6">
+      <name>Westliche Julische Alpen</name>
+    </region>
+    <region regionID="SI-3">
+      <name>Steiner Alpen</name>
+    </region>
+    <region regionID="SI-4">
+      <name>Kamnik-Savinja-Alpen</name>
+    </region>
+    <region regionID="SI-1">
+      <name>Westliche Karawanken</name>
+    </region>
+    <region regionID="SI-2">
+      <name>Zentrale Karawanken</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m"/>
+      <aspect>NW</aspect>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>W</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>NE</aspect>
+      <aspect>E</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>Es wird einige Wolken am Himmel geben, mit einer schwachen bis mäßigen Brise aus Südwest. Die Temperaturen liegen bei 12 °C auf 1500 m und 4 °C auf 2500 m.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Geringe Gefahr von Lawinen</highlights>
+      <comment>Die Altschneedecke ist stabil und gut vernetzt. Tagsüber sind an den Sonnseitigen Hängen einige kleine Lawinen oder Nassschneeabbrüche möglich.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Die Altschneedecke ist gut umgewandelt, zusammenhängend und stabil. Der Schneefall ist für diese Jahreszeit relativ gering, und selbst im Hochgebirge ist der Schnee schon ziemlich geschmolzen. Durch die Erwärmung bleibt die Schneedecke über Nacht weich und schmilzt tagsüber, auch im Hochgebirge.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Die Gefahr von Lawinen im Hochgebirge bleibt ähnlich hoch. Am Dienstag ist es in den Bergen wechselnd bis stark bewölkt. Örtlich kann es zu leichten Niederschlägen mit einigen Strahlungen kommen.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-04T15:00:00Z</startTime>
+        <endTime>2026-05-05T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-04</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+</bulletins>

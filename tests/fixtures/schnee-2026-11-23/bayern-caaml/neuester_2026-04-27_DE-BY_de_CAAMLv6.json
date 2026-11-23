@@ -1,0 +1,74 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-26T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-26T15:00:00Z",
+      "endTime" : "2026-04-27T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Bayern"
+      }
+    },
+    "avalancheActivity" : {
+      "highlights" : "Im Schatten bleibt die Schneeoberfläche hart: Absturzgefahr beachten!",
+      "comment" : "Die Lawinengefahr ist gering. Sie steigt im Tagesverlauf etwas an. Wo noch Schnee liegt, kann mit der tageszeitlichen Erwärmung vor allem in der Sonne Nassschnee problematisch werden. An Steilhängen mit glattem Untergrund, wie z.B. auf Wiesenhängen oder Felsplatten, können vereinzelt nasse Gleitschneelawinen abgehen. In extrem steilem Gelände können sich nasse Lockerschneelawinen von selbst lösen. Lawinen bleiben meist klein."
+    },
+    "snowpackStructure" : {
+      "comment" : "Mit der Abstrahlung über Nacht gefriert die Schneeoberfläche tragfähig durch. Im Tagesverlauf weicht sie in der Sonne rasch wieder auf, im Schatten bleibt sie in höheren Lagen hart. Bis in die Hochlagen hinauf besteht die Schneedecke überwiegend aus Schmelzformen. In nordexponierten Hängen höherer Lagen sind an schneereichen Stellen tief in der Schneedecke noch trockene Schichten aus kantig abgerundeten Kristallen vorhanden. Unterhalb von 1500 m liegt nur noch wenig Schnee. Die Südseiten sind bis in die Hochlagen hinauf aper."
+    },
+    "tendency" : [ {
+      "highlights" : "Weiterhin geringe Lawinengefahr.",
+      "validTime" : {
+        "startTime" : "2026-04-27T15:00:00Z",
+        "endTime" : "2026-04-28T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-27"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "1500"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "W", "N", "NE", "E" ]
+    } ],
+    "bulletinID" : "1f032e9c-68f4-47dd-b1e3-0d5145e37159",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Werdenfelser Alpen",
+      "regionID" : "DE-BY-30"
+    }, {
+      "name" : "Berchtesgadener Alpen",
+      "regionID" : "DE-BY-60"
+    }, {
+      "name" : "Allgäuer Alpen Mitte",
+      "regionID" : "DE-BY-12"
+    }, {
+      "name" : "Ammergauer Alpen Nord",
+      "regionID" : "DE-BY-20"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Der letzte Lawinenlagebericht dieser Saison:"
+    }
+  }
+}

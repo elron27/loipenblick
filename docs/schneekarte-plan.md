@@ -1,4 +1,4 @@
-# Schneekarte: Umsetzungsplan (zur Freigabe)
+# Schneekarte: Umsetzungsplan (freigegeben 23.11.2026)
 
 Stand 23.11.2026. Grundlage: Blindspots und Business-Case vom 22.11.2026, Anforderungen in `spec/` (Paket *Schneekarte*: N-41 bis N-44, E-31 bis E-36, S1 bis S25). Filter: `schneekarte-sammeln` (schnee0, sofort), `schneekarte-v1` (schnee1), `spaeter`.
 
@@ -11,6 +11,8 @@ Stand 23.11.2026. Grundlage: Blindspots und Business-Case vom 22.11.2026, Anford
 - Warnregionen als Gebietszuschnitt (E-35). Gesammelt wird ab sofort für Bayern, Österreich, Südtirol und Trentino, gezeigt werden in Version 1 Bayern, Tirol, Salzburg und Südtirol.
 
 ## Schritte
+
+Stand 23.11.2026: Schritte 1 bis 4 umgesetzt (Quellen und Lizenzen in [schneekarte-quellen.md](schneekarte-quellen.md), Datenmodell und Sammel-Job in [schneekarte-datenmodell.md](schneekarte-datenmodell.md)). Reihenfolge der Regionen laut Stefan: Bayern, Tirol, Salzburg, Südtirol, dann der übrige Alpenraum.
 
 | # | Schritt | Anforderungen | Ergebnis |
 |---|---|---|---|

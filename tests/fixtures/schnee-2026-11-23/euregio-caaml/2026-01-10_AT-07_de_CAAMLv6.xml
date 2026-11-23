@@ -1,0 +1,681 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="c43b96ba-ca39-402e-9433-3304ea3e2c11" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-07-19">
+      <name>Glockturmgruppe</name>
+    </region>
+    <region regionID="AT-07-14-02">
+      <name>Kühtai - Geigenkamm</name>
+    </region>
+    <region regionID="AT-07-14-03">
+      <name>Sellrain - Alpeiner Berge</name>
+    </region>
+    <region regionID="AT-07-02-01">
+      <name>Ammergauer Alpen Süd</name>
+    </region>
+    <region regionID="AT-07-14-01">
+      <name>Kaunergrat</name>
+    </region>
+    <region regionID="AT-07-20">
+      <name>Weißkugelgruppe</name>
+    </region>
+    <region regionID="AT-07-13">
+      <name>Samnaungruppe</name>
+    </region>
+    <region regionID="AT-07-03">
+      <name>Mieminger Gebirge</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>very_poor</snowpackStability>
+      <frequency>many</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Schwacher Altschnee ist die Hauptgefahr.</highlights>
+      <comment>Schwachschichten im oberen Teil der Schneedecke können verbreitet von einzelnen Wintersportlern leicht ausgelöst werden. Die Gefahrenstellen liegen an allen Expositionen oberhalb der Waldgrenze. Solche Gefahrenstellen sind zahlreich aber schwer zu erkennen. Lawinen sind meist mittelgroß. &lt;br/> &lt;br/> Vorsicht und Zurückhaltung sind nötig. Wummgeräusche und Risse beim Betreten der Schneedecke sowie frische Lawinen sind Alarmzeichen und weisen auf die Gefahr hin.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es fallen bis zu 10 cm Schnee. Der Wind bläst stark bis stürmisch. &lt;br/> &lt;br/> Die Altschneedecke ist kantig aufgebaut. Neu- und Triebschnee liegen verbreitet auf einer schwachen Altschneedecke. Die verschiedenen Triebschneeansammlungen sind schlecht miteinander und mit dem Altschnee verbunden.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit Neuschnee und Wind verbreitet heikle Lawinensituation.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP6</dangerPatterns>
+        <dangerPatterns>DP5</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="35d692a9-8a94-4cc6-842e-f2537ebf44f3" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-07-07">
+      <name>Lechtaler Alpen West</name>
+    </region>
+    <region regionID="AT-07-08">
+      <name>Lechtaler Alpen Mitte</name>
+    </region>
+    <region regionID="AT-07-02-02">
+      <name>Lechtaler Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-10">
+      <name>Verwallgruppe Mitte</name>
+    </region>
+    <region regionID="AT-07-11">
+      <name>Verwallgruppe Ost</name>
+    </region>
+    <region regionID="AT-07-01">
+      <name>Allgäuer Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-12">
+      <name>Silvretta Ost</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>very_poor</snowpackStability>
+      <frequency>many</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Abseits gesicherter Pisten verbreitet heikle Lawinensituation.</highlights>
+      <comment>Schwachschichten im oberen Teil der Schneedecke können vor allem oberhalb der Waldgrenze verbreitet von einzelnen Wintersportlern leicht ausgelöst werden. Vorsicht vor allem an Triebschneehängen sowie in Kammlagen, Rinnen und Mulden. Die Gefahrenstellen sind zahlreich und auch für Geübte kaum zu erkennen. Lawinen sind meist mittelgroß. Vereinzelt können Lawinen auch in tiefe Schichten durchreißen. &lt;br/> &lt;br/> Mit dem teils stürmischen Wind sind einzelne spontane Lawinen möglich. &lt;br/> &lt;br/> Vorsicht und Zurückhaltung sind nötig. Wummgeräusche und Risse beim Betreten der Schneedecke sowie frische Lawinen sind Alarmzeichen und weisen auf die Gefahr hin.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es fallen 10 bis 20 cm Schnee. Der Wind bläst stark bis stürmisch. &lt;br/> &lt;br/> Die Altschneedecke ist kantig aufgebaut. Neu- und Triebschnee liegen verbreitet auf einer schwachen Altschneedecke. Die verschiedenen Triebschneeansammlungen sind schlecht miteinander und mit dem Altschnee verbunden.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Weiterer Anstieg der Lawinengefahr mit dem Schneefall. Mit der Intensivierung der Niederschläge sind vermehrt spontane Lawinen zu erwarten.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP5</dangerPatterns>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="8b56ec9b-868b-4c9b-b49c-dc2166e66683" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-07-16">
+      <name>Tuxer Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-05">
+      <name>Brandenberger Alpen</name>
+    </region>
+    <region regionID="AT-07-06">
+      <name>Kaisergebirge - Waidringer Alpen</name>
+    </region>
+    <region regionID="AT-07-18">
+      <name>Kitzbüheler Alpen Wildseeloder</name>
+    </region>
+    <region regionID="AT-07-04-02">
+      <name>Karwendel Ost</name>
+    </region>
+    <region regionID="AT-07-17-02">
+      <name>Kitzbüheler Alpen Wildschönau</name>
+    </region>
+    <region regionID="AT-07-17-01">
+      <name>Kitzbüheler Alpen Brixental</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>some</frequency>
+      <avalancheSize>1</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Die frischen Triebschneeansammlungen bilden die Hauptgefahr.</highlights>
+      <comment>Die frischen und älteren Triebschneeansammlungen können von einzelnen Wintersportlern ausgelöst werden. Die Gefahrenstellen liegen vor allem an steilen Nordwest-, Nord- und Westhängen oberhalb der Waldgrenze, vereinzelt auch im Bereich der Waldgrenze. Vorsicht vor allem in Rinnen, Mulden und hinter Geländekanten sowie in Kammlagen. Solche Gefahrenstellen sind gut zu erkennen. Lawinen sind meist klein. &lt;br/> &lt;br/> Nebst der Verschüttungsgefahr sollte auch die Mitreiß- und Absturzgefahr beachtet werden. Risse beim Betreten der Schneedecke sind Alarmzeichen und weisen auf die Gefahr hin.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>In den letzten Tagen fielen bis zu 15 cm Schnee. Der Wind bläst gebietsweise stark. &lt;br/> &lt;br/> Frische und ältere Triebschneeansammlungen überlagern eine schwache Altschneedecke. Die Altschneedecke ist kantig aufgebaut, mit einer kaum tragfähigen Kruste an der Oberfläche. &lt;br/> &lt;br/> Die Schneedecke ist allgemein kleinräumig sehr unterschiedlich. Es liegt in allen Höhenlagen wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Anstieg der Lawinengefahr mit Neuschnee und Wind.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="214e9bc9-9d87-428c-9dd8-bfad11e8acf1" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-02-02">
+      <name>Schobergruppe Ost</name>
+    </region>
+    <region regionID="AT-07-23-02">
+      <name>Zillertaler Alpen Nordost</name>
+    </region>
+    <region regionID="AT-07-23-01">
+      <name>Zillertaler Alpen Nordwest</name>
+    </region>
+    <region regionID="AT-07-21">
+      <name>Gurgler Gruppe</name>
+    </region>
+    <region regionID="AT-07-22">
+      <name>Stubaier Alpen Mitte</name>
+    </region>
+    <region regionID="AT-07-24">
+      <name>Venedigergruppe Süd</name>
+    </region>
+    <region regionID="AT-07-25">
+      <name>Lasörlinggruppe</name>
+    </region>
+    <region regionID="AT-07-27">
+      <name>Deferegger Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-28">
+      <name>Schobergruppe West</name>
+    </region>
+    <region regionID="AT-07-26-02">
+      <name>Goldried</name>
+    </region>
+    <region regionID="IT-32-BZ-05-03">
+      <name>Hinteres Ahrntal</name>
+    </region>
+    <region regionID="IT-32-BZ-05-02">
+      <name>Zillertaler Alpen Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-05-01">
+      <name>Pfitsch</name>
+    </region>
+    <region regionID="IT-32-BZ-01-02">
+      <name>Sesvenna Gruppe Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-03">
+      <name>Schnalser Kamm</name>
+    </region>
+    <region regionID="IT-32-BZ-01-01">
+      <name>Sesvenna Gruppe Nord</name>
+    </region>
+    <region regionID="IT-32-BZ-06">
+      <name>Saldurn-Mastaun Kamm</name>
+    </region>
+    <region regionID="IT-32-BZ-04-02">
+      <name>Ratschings</name>
+    </region>
+    <region regionID="IT-32-BZ-11">
+      <name>Durreckgruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-02-01">
+      <name>Langtaufers</name>
+    </region>
+    <region regionID="IT-32-BZ-12">
+      <name>Rieserfernergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-04-01">
+      <name>Stubaier Alpen Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-14">
+      <name>Ortlergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-15">
+      <name>Ultental</name>
+    </region>
+    <region regionID="IT-32-BZ-02-02">
+      <name>Planeilerberge</name>
+    </region>
+    <region regionID="IT-32-BZ-07-01">
+      <name>Hinteres Passeiertal</name>
+    </region>
+    <region regionID="IT-32-BZ-07-02">
+      <name>Texelgruppe</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>2200</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>2200</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>2200</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>some</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Anstieg der Lawinengefahr mit Neuschnee und starkem Wind. Triebschneeansammlungen bilden die Hauptgefahr.</highlights>
+      <comment>Mit Neuschnee und starkem Wind wachsen die Triebschneeansammlungen weiter an. Die frischen Triebschneeansammlungen können von einzelnen Wintersportlern leicht ausgelöst werden. Die Gefahrenstellen liegen vor allem an den Expositionen Südwest über Nord bis Südost oberhalb von rund 2200 m sowie an steilen Südhängen oberhalb von rund 2400 m. Lawinen können vor allem in schattigen, windgeschützten Lagen den schwachen Altschnee mitreißen und mittlere Größe erreichen. Vorsicht vor allem an Felswandfüßen und hinter Geländekanten sowie in Rinnen und Mulden. In den Hauptniederschlagsgebieten sind die Gefahrenstellen häufiger und größer. &lt;br/> &lt;br/> Nebst der Verschüttungsgefahr sollte auch die Mitreiß- und Absturzgefahr beachtet werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es fielen 5 bis 15 cm Schnee, lokal auch mehr. Es fallen 5 bis 10 cm Schnee. Der starke Wind verfrachtet den Neuschnee intensiv. &lt;br/> &lt;br/> Die verschiedenen Triebschneeansammlungen sind teilweise schlecht verbunden. Die Triebschneeansammlungen überlagern eine schwache Altschneedecke. Die Altschneedecke ist kantig aufgebaut, mit einer kaum tragfähigen Kruste an der Oberfläche. &lt;br/> &lt;br/> Die Schneedecke ist allgemein kleinräumig sehr unterschiedlich. Es liegt in allen Höhenlagen für die Jahreszeit wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Triebschnee kritisch beurteilen.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="ffefbde3-339e-41e3-b105-bacae304ee75" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-07-15">
+      <name>Tuxer Alpen West</name>
+    </region>
+    <region regionID="AT-07-14-04">
+      <name>Kalkkögel</name>
+    </region>
+    <region regionID="AT-07-14-05">
+      <name>Serleskamm</name>
+    </region>
+    <region regionID="AT-07-09">
+      <name>Grieskogelgruppe</name>
+    </region>
+    <region regionID="AT-07-04-01">
+      <name>Karwendel West</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>very_poor</snowpackStability>
+      <frequency>many</frequency>
+      <avalancheSize>1</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Schwachen Altschnee beachten.</highlights>
+      <comment>Ausgeprägte Schwachschichten im oberen Teil der Schneedecke können sehr leicht ausgelöst werden. Die Gefahrenstellen liegen an allen Expositionen oberhalb der Waldgrenze. Vorsicht vor allem in Kammlagen sowie in Rinnen, Mulden und hinter Geländekanten. Solche Gefahrenstellen sind weit verbreitet aber kaum zu erkennen. Lawinen sind meist klein. &lt;br/> &lt;br/> Risse beim Betreten der Schneedecke sind Alarmzeichen und weisen auf die Gefahr hin.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>In den letzten zwei Tagen fielen 10 bis 15 cm Schnee. Der Wind bläst stark. &lt;br/> &lt;br/> Neu- und Triebschnee liegen verbreitet auf einer schwachen Altschneedecke. &lt;br/> Steile Nordhänge: Die Altschneedecke ist sehr schwach, mit einer lockeren Oberfläche aus Oberflächenreif und kantig aufgebauten Kristallen. &lt;br/> Steile Ost-, Süd- und Westhänge: Die Altschneedecke ist kantig aufgebaut, mit einer kaum tragfähigen Kruste an der Oberfläche.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Anstieg der Lawinengefahr mit Neuschnee und Wind.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP5</dangerPatterns>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="72d5aef0-dae2-4e18-8e8c-8664db66d0b3_1" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-07-26-01">
+      <name>Glocknergruppe Süd</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>2200</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>2200</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>2200</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>SW</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>some</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Anstieg der Lawinengefahr mit Neuschnee und starkem Wind. Triebschneeansammlungen bilden die Hauptgefahr.</highlights>
+      <comment>Mit Neuschnee und starkem Wind wachsen die Triebschneeansammlungen weiter an. Die teils überschneiten Triebschneeansammlungen können von einzelnen Wintersportlern leicht ausgelöst werden. Die Gefahrenstellen liegen vor allem an den Expositionen Südwest über Nord bis Südost oberhalb von rund 2200 m sowie an steilen Südhängen oberhalb von rund 2400 m. Lawinen können vor allem in schattigen, windgeschützten Lagen den schwachen Altschnee mitreißen und mittlere Größe erreichen. Vorsicht vor allem an Felswandfüßen und hinter Geländekanten sowie in Rinnen und Mulden. &lt;br/> &lt;br/></comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es fielen 5 bis 15 cm Schnee. Der starke Wind hat den Neuschnee intensiv verfrachtet. In der Nacht fallen 5 bis 15 cm Schnee, lokal auch mehr. &lt;br/> &lt;br/> Die verschiedenen Triebschneeansammlungen sind teilweise schlecht verbunden. Die Triebschneeansammlungen überlagern eine schwache Altschneedecke. Die Altschneedecke ist kantig aufgebaut. &lt;br/> &lt;br/> Die Schneedecke ist allgemein kleinräumig sehr unterschiedlich. Es liegt in allen Höhenlagen für die Jahreszeit wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Triebschnee kritisch beurteilen. Der Wetterbericht und damit auch die Entwicklung der Lawinengefahr sind unsicher.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="7db1b868-ac54-484d-a658-147df4ae8b7a" lang="de">
+    <publicationTime>2026-01-10T07:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>true</unscheduled>
+    <region regionID="AT-02-14">
+      <name>Karnische Alpen Lesachtal</name>
+    </region>
+    <region regionID="AT-02-10">
+      <name>Gailtaler Alpen West</name>
+    </region>
+    <region regionID="AT-07-29-02">
+      <name>Lienzer Dolomiten</name>
+    </region>
+    <region regionID="AT-07-29-03">
+      <name>Kreuzeckgruppe Osttirol</name>
+    </region>
+    <region regionID="AT-07-29-01">
+      <name>Karnische Alpen Osttirol</name>
+    </region>
+    <region regionID="IT-32-BZ-18-02">
+      <name>Grödner Dolomiten</name>
+    </region>
+    <region regionID="IT-32-BZ-18-01">
+      <name>Lüsner Berge</name>
+    </region>
+    <region regionID="IT-32-BZ-20">
+      <name>Sextner Dolomiten</name>
+    </region>
+    <region regionID="IT-32-BZ-10">
+      <name>Pfunderer Berge Ost</name>
+    </region>
+    <region regionID="IT-32-BZ-13">
+      <name>Deferegger Alpen West</name>
+    </region>
+    <region regionID="IT-32-BZ-16">
+      <name>Nonsberger Alpen Ost</name>
+    </region>
+    <region regionID="IT-32-BZ-17">
+      <name>Fleimstaler Alpen Nord</name>
+    </region>
+    <region regionID="IT-32-BZ-19">
+      <name>Pragser Dolomiten</name>
+    </region>
+    <region regionID="IT-32-BZ-08-01">
+      <name>Hirzergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-09">
+      <name>Pfunderer Berge West</name>
+    </region>
+    <region regionID="IT-32-BZ-08-02">
+      <name>Jakobspitzegruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-08-03">
+      <name>Sarntaler Alpen Süd</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>2200</lowerBound>
+      </elevation>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>N</aspect>
+      <aspect>NE</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>few</frequency>
+      <avalancheSize>1</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Die frischen Triebschneeansammlungen sind meist nur klein aber störanfällig.</highlights>
+      <comment>Die frischen Triebschneeansammlungen können besonders an sehr steilen Schattenhängen oberhalb von rund 2200 m von einzelnen Wintersportlern leicht ausgelöst werden. Vorsicht in Rinnen, Mulden und hinter Geländekanten. Lawinen sind meist nur klein. Nebst der Verschüttungsgefahr sollte vor allem die Mitreiß- und Absturzgefahr beachtet werden. &lt;br/> &lt;br/></comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es fiel etwas Schnee. Der Wind bläst stark. &lt;br/> Die Triebschneeansammlungen liegen in der Höhe auf ungünstigen Schichten. &lt;br/> &lt;br/> Die Altschneedecke ist aufbauend umgewandelt. Die Schneedecke ist allgemein kleinräumig sehr unterschiedlich. Es liegt in allen Höhenlagen wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Triebschnee ist die Hauptgefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP6</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+</bulletins>

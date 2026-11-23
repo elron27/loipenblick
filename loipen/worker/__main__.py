@@ -3,6 +3,8 @@
     python -m loipen.worker          Zeitplan starten (Standard im Container, B3)
     python -m loipen.worker sicherung  Datenbank sofort sichern (B14)
     python -m loipen.worker lauf     einmal alle Quellen abrufen und die Seite erzeugen
+    python -m loipen.worker schnee   einmal alle Schneequellen abrufen (Schneekarte, S1)
+    python -m loipen.worker schnee-archiv <quelle> [von] [bis]   fruehere Winter nachladen (S5)
 """
 
 import logging
@@ -228,6 +230,15 @@ def tick() -> None:
     lauf(nur_faellige=datetime.now(ZoneInfo(get_settings().timezone)))
 
 
+def schnee_tick() -> None:
+    """S1: Schneekarte stuendlich um :20, jede Quelle zu ihren Uhrzeiten. Getrennt vom Loipen-Lauf (E-34)."""
+    from loipen.schnee import job
+    try:
+        job.lauf(nur_faellige=True, sender=ntfy_sender(get_settings().ntfy_url))
+    except Exception:
+        log.exception("Schneekarte: Sammel-Lauf fehlgeschlagen")
+
+
 def main(argv: list[str]) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
     if argv[:1] == ["lauf"]:
@@ -236,10 +247,19 @@ def main(argv: list[str]) -> None:
     if argv[:1] == ["sicherung"]:
         sicherung()
         return
+    if argv[:1] == ["schnee"]:
+        from loipen.schnee import job
+        job.lauf()
+        return
+    if argv[:1] == ["schnee-archiv"] and len(argv) >= 2:
+        from loipen.schnee import job
+        log.info("Archiv: %s", job.nachladen(*argv[1:4]))
+        return
     log.info("Loipenblick Version %s startet", get_settings().version)
     lauf()  # beim Start einmal, damit die Vorschau sofort etwas zeigt
     scheduler = BlockingScheduler(timezone=get_settings().timezone)
     scheduler.add_job(tick, "cron", minute=0)
+    scheduler.add_job(schnee_tick, "cron", minute=20, max_instances=1, coalesce=True)  # Schneekarte (S1)
     scheduler.add_job(sicherung, "cron", hour=3, minute=30)  # taeglich, B14
     scheduler.start()
 

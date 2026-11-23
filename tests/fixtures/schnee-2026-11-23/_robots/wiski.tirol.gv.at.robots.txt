@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="wf-robotocondensed-n4-active wf-active" lang="de" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Portal Tirol - Ein Dienst des Landes Tirol">
+<meta name="author" content="DVT - Daten-Verarbeitung-Tirol GmbH">
+
+<title>Ressource nicht gefunden</title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b10f1e">
+    <meta name="msapplication-TileColor" content="#586d84">
+    <meta name="theme-color" content="#ffffff">
+	<script type="text/javascript">
+              WebFontConfig = {
+                  custom:{ families: ['Roboto', 'Roboto Condensed'],
+                  urls:['//static.tirol.gv.at/design/7.0/fonts/fonts-35.css']},
+                  active: function() {
+                      if (typeof(jQuery) == "undefined" || typeof(jQuery(window).lightwave) == "undefined") {return;}
+                      jQuery(window).lightwave('handleHamburgerMenu');
+                  }
+               };
+          </script>
+	<script src="//static.tirol.gv.at/design/7.0/js/webfont.js"></script>
+	<link rel="stylesheet" type="text/css" href="//static.tirol.gv.at/design/7.0/css/lightwave3/lightwave-35.css">
+	<link rel="stylesheet" type="text/css" href="https://static.tirol.gv.at/primefaces/8.0.3/components.css">
+	<script type="text/javascript" src="https://static.tirol.gv.at/primefaces/8.0.3/jquery/jquery.js"></script>
+	<script type="text/javascript" src="https://static.tirol.gv.at/primefaces/8.0.3/jquery/jquery-plugins.js"></script>
+	<script type="text/javascript" src="https://static.tirol.gv.at/primefaces/8.0.3/core.js"></script>
+	<script type="text/javascript" src="https://static.tirol.gv.at/primefaces/8.0.3/components.js"></script>
+    <script type="text/javascript" src="https://static.tirol.gv.at/primefaces/8.0.3/touch/touchswipe.js"></script>
+	<script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='de';PrimeFaces.settings.projectStage='Development';}</script>
+
+	<script src="//static.tirol.gv.at/design/7.0/js/dvt/lightwave35.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		if (typeof WebUI == "undefined") WebUI = {};
+		WebUI.config = {
+			contextPath: "/",
+			applicationPath: "/",
+			layoutUrl: "//static.tirol.gv.at/design/7.0/",
+			applicationURL: "/",
+			stage: "P",
+			cid: 0,
+			token: 0,
+			pollingErrorCount: 0
+		};
+		$(function() {
+			$(window).resize(function() { jQuery().lightwave('handleResize') });
+			jQuery().lightwave("init");
+		});
+		//$(window).bind('beforeunload', function(e) { Spinner.start(); });
+	</script>
+
+</head>
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+<body class="lw w1 leftcontent-none stage-p fixed no-touch nomainmenu page-error lightwave35" onclick="">
+	<script type="text/javascript">
+	//<![CDATA[
+		jQuery(window).lightwave('initBodyClasses');
+	//]]>
+	</script>
+	<div class="printonly printheader clearfix">
+		<h1 class="title">
+			Druckansicht
+		</h1>
+		<h2 class="subtitle">Ausgedruckt von</h2>
+	</div>
+
+	<div id="accessibilitymenu">
+      <a accesskey="1" href="#contenthead" onclick=
+      "setTimeout(function() { $('#contenthead a, #contenthead input, #contenthead textarea, #contenthead select, #contenthead button').first().focus() }, 0)" tabindex=
+      "1">Kurztaste 1 - Inhaltskopf</a><br>
+      <a accesskey="2" href="#contentwrapper" onclick=
+      "setTimeout(function() { $('#contentwrapper a, #contentwrapper input, #contentwrapper textarea, #contentwrapper select, #contentwrapper button').first().focus() }, 0)"
+      tabindex="1">Kurztaste 2 - Inhalt</a><br>
+      <a accesskey="3" href="#mainmenu" onclick="setTimeout(function() { $('#mainmenu a:first').focus() }, 0);" tabindex="1">Kurztaste 3 - Hauptmenu</a><br>
+      <a accesskey="4" href="#submenu" onclick=
+      "setTimeout(function() { (document.body.className.indexOf('leftcontent-collapsed') &gt; -1) ? jQuery(document.getElementById('leftcolumn-content-opener')).click() : true; $('#submenu a:first').focus(); }, 0)"
+      tabindex="1">Kurztaste 4 - Unternavigation</a><br>
+      <a accesskey="5" href="#contentnavigation" onclick="setTimeout(function() { $('#contentnavigation a:first').focus() }, 0)" tabindex="1">Kurztaste 5 -
+      Inhaltsnavigation</a><br>
+      <a accesskey="6" href="#quickSearchForm" onclick="setTimeout(function() { $('#quickSearchForm input:first').focus() }, 0)" tabindex="1">Kurztaste 6 - Schnellsuche</a><br>
+      <a accesskey="7" href="#hilfe" onclick="setTimeout(function() { $('#hilfe a:first').focus() }, 0)" tabindex="1">Kurztaste 7 - Hilfe</a><br>
+      <a accesskey="0" href="#accessibilitymenu" onclick="setTimeout(function() { $('#accessibilitymenu a:first').focus() }, 0)" tabindex="1">Kurztaste 0 - Anfang der Seite</a>
+	</div>
+    <div id="touch-target" onclick="return true;">
+      <div id="globalspinner" style="display: none;" class="globalspinner noprint">
+        <div class="spinnerbox">
+          <div class="spinnercontent i2">
+            <div class="spinnericon icon icon-spinner"></div>
+					<div class="spinnertext">Bitte warten...</div>
+            </div>
+          </div>
+          <div class="spinnercancel">
+            <p>
+              Dauer der aktuellen Aktion: <span id="spinnertimer"></span>
+            </p>
+			<button type="button" onclick="Spinner.stop();" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only dvt-button dvt-button-autodisable">
+				<span class="ui-button-text ui-c">Abbrechen</span>
+			</button>
+          </div>
+        </div>
+      </div>
+    	<div id="pagegrid">
+	  	<div id="lwfmsg">
+          <script type="text/javascript">
+            $('body').removeClass('globalmessage-visible');
+          </script>
+        </div>
+		<div id="menubar" class="appbar">
+          <header id="apptitle" class="appbar text-white">
+            <div class="stage-indicator"></div>
+            <div class="apptitle-logo">
+              <img src="//static.tirol.gv.at/design/7.0/img/base/pot-p/apple-touch-icon.png" class="printonly" alt=" ">
+            </div>
+
+					<div class="apptitle-text">
+						<div class="apptitle-portal">Land Tirol</div>
+						<div class="apptitle-title">Fehler</div>
+					</div>
+				</header>
+
+          <div id="spacebar"></div>
+          <div id="mainmenuwidget"></div>
+          <div id="iconbar">
+
+          </div>
+
+          <div class="flex-break"></div>
+        </div>
+
+			<div id="menuandcontent">
+
+				<article id="contentpane" >
+
+	            	<div id="contentnavigation"></div>
+
+					<div id="contentfooterwrapper">
+						<div id="contentwrapper" class="contentblock">
+			                <div id="pageMessages">
+			                    <div class="messages"></div>
+				                <div id="pageMessages_ac" role="alert" aria-live="assertive" class="ui-helper-hidden-accessible"></div>
+			                </div>
+			                <div id="precontent"></div>
+			                <div id="content">
+			                	<div class="httperrorstatus condensed">HTTP 404</div>
+			                	<div class="httperrortext condensed">Ressource nicht gefunden</div>
+
+
+
+
+
+
+
+
+
+<div class="box error">
+    <span class="icon icon-error"></span>
+    <h2>Fehlerdetails</h2>
+    <p>Die angeforderte Ressource konnte nicht gefunden werden:
+    </p>
+    <pre>/robots.txt</pre>
+    <p></p>
+</div>
+
+
+	<p>
+        Die Seite konnte nicht gefunden werden. &Uuml;berpr&uuml;fen Sie die verwendete URL.
+	</p>
+	<p>
+	    Sofern Sie den URL manuell eingegeben haben, &uuml;berprüfen Sie bitte die Schreibweise und versuchen Sie es erneut.
+	</p>
+
+  <hr id="contentseparator"/>
+
+								    <h2>Weitere Schritte - Unterstützung anfordern</h2>
+
+								    <h3><span class="icon icon-usersupport"></span> Supportanforderung erstellen</h3>
+									<p>
+										
+												Sollten Sie Unterstützung benötigen oder ein Problem melden wollen, wenden Sie sich bitte an den
+												<a href="mailto:servicedesk@tirol.gv.at">DVT Servicedesk</a> um eine Supportanforderung zu erstellen.
+										
+									</p>
+
+
+									<h4><span class="icon icon-info"></span> Informationen für den Administrator</h4>
+									<p>Diese Informationen helfen Ihrem Administrator, den Fehler besser zu lokalisieren.</p>
+									<table class="content hover stretch ui-datatable">
+										<thead>
+											<tr>
+												<th>Schlüssel</th>
+												<th>Wert</th>
+											</tr>
+										</thead>
+										<tbody class="ui-datatable-data">
+											<tr class="ui-datatable-even">
+												<td>Fehlermeldung</td>
+												<td>Ressource nicht gefunden</td>
+											</tr>
+											<tr class="ui-datatable-odd">
+												<td>Fehlercode</td>
+												<td>404</td>
+											</tr>
+											<tr class="ui-datatable-even">
+												<td>Uhrzeit</td>
+												<td> Mon Nov 23 19:35:18 2026</td>
+											</tr>
+											<tr class="ui-datatable-odd">
+												<td>Serveradresse</td>
+												<td>wiski.tirol.gv.at</td>
+											</tr>
+											<tr class="ui-datatable-even">
+												<td>Client</td>
+												<td>93.217.254.195</td>
+											</tr>
+											<tr class="ui-datatable-odd">
+												<td>Aufruf</td>
+												<td>/robots.txt</td>
+											</tr>
+											<tr class="ui-datatable-even">
+												<td>User Agent</td>
+												<td>Loipenblick/0.1 (+https://loipen-blick.de)</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>
+									 <p><span class="icon icon-help"></span> Falls Sie einen Screenshot senden, beachten Sie bitte, dass das gesamte Browserfenster sichtbar ist!</p>
+
+									</p>
+
+									<h3><span class="icon icon-office icon-organisation"></span> Betreiber</h3>
+								<p>
+									
+										Betrieben von <a href="https://www.dvt.at">DVT - Daten-Verarbeitung-Tirol GmbH</a>
+										im Auftrag des <a href="https://www.tirol.gv.at/">Landes Tirol</a>
+									
+								</p>
+
+			                </div>
+			                <div id="content2"></div>
+			                <div id="content3"></div>
+			                <div id="content4"></div>
+			                <div id="content5"></div>
+	           			</div>
+              <footer id="footerbar">
+	  		<div class="appinfo">
+	  			<div id="appinfo">
+				                    <span class="footerblock">
+									<strong>Anbieter</strong> <a href="http://www.tirol.gv.at" rel="external" target="_blank">Land Tirol</a> und <a
+				                        href="http://www.dvt.at" rel="external" target="_blank">DVT</a>
+				                    </span>
+				                </div>
+				            </div>
+			            </footer>
+	           		</div>
+	        	</article>
+	        </div>
+
+
+	        </div>
+    <div style="position: absolute; top: 0px; left: 0px; visibility: hidden;" id="textarea_simulator"></div>
+    </body>
+</html>

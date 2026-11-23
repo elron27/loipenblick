@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <observations>
+    <Bulletin gml:id="RID256RGR1">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID256RGR1">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment></comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment></comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Erhebliche Lawinengefahr, teils im oberen Bereich der Gefahrenstufe</avActivityHighlights>
+          <avActivityComment>Der in den letzten Tagen gefallene Schnee und die umfangreichen und großen Triebschneeablagerungen sind sehr störanfällig. In allen Expositionen ist eine Lawinenauslösung durch einen einzelnen Wintersportler leicht möglich. Mit spontanen Lawinen ist noch immer zu rechnen. In tiefen und mittleren Lagen ist weiterhin mit Gleitschneelawinen zu rechnen. Vorsicht!!! Zurückhaltung!!</avActivityComment>
+          <snowpackStructureComment>Sehr viel Schnee ist in den vergangenen Tagen gefallen. Dieser wurde vom starkem Wind teilweise massiv verfrachtet. Die Altschneedecke ist oberflächennahe von aufbauend umgewandelten Schichten durchzogen. Im Schneedeckenfundament befindet sich auch Schwimmschnee.</snowpackStructureComment>
+          <wxSynopsisComment>Im Bereich eines großräumigen Tiefdrucktroges über Mitteleuropa bleibt der Wetterablauf unbeständig und winterlich kalt. Aus Westen ziehen neuerlich recht dichte Wolken durch. Nur vereinzelt kann es auch unergiebige Schneeschauer geben. Zwischendurch kann der Nordföhn die Wolken auch etwas aufreißen. Bei mäßigem Wind aus Nordwest bleibt es winterlich kalt mit Temperaturen in 2000 m um -10 Grad.</wxSynopsisComment>
+          <tendencyComment>Mit lebhafter Nordwestströmung ziehen am Dienstag einige Wolken durch welche sich, abgesehen entlang des Tauernhauptkammes, aber bald auflockern und dann zeigt sich oft die Sonne. Es bleibt winterlich kalt. Weiterhin Triebschneesituation auf einer geschwächten Altschneedecke.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-02-10"/>
+      <locRef xlink:href="AT-02-14"/>
+      <locRef xlink:href="AT-02-11"/>
+      <locRef xlink:href="AT-02-15"/>
+      <locRef xlink:href="AT-02-17"/>
+      <locRef xlink:href="AT-02-18"/>
+      <locRef xlink:href="AT-02-16"/>
+      <locRef xlink:href="AT-02-09"/>
+    </Bulletin>
+    <Bulletin gml:id="RID256RGR2">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID256RGR2">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <comment></comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment></comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Neuschnee und Triebschnee bilden die Hauptgefahr</avActivityHighlights>
+          <avActivityComment>Eine Auslösung der frischen Triebschneeansammlungen ist durch eine geringe Zusatzbelastung sehr leicht möglich und kann auch die Schwachschichten in der Altschneedecke betreffen. Mit spontanen Lawinen ist noch immer zu rechnen. In tiefen und mittleren Lagen ist weiterhin mit Gleitschneelawinen zu rechnen. Zurückhaltung!!</avActivityComment>
+          <snowpackStructureComment>Der in den vergangenen Tagen gefallene Schnee wurde durch den starken Wind umfangreich verfrachtet. Die Altschneedecke ist oberflächennahe von aufbauend umgewandelten Schichten durchzogen. Im Schneedeckenfundament befindet sich auch Schwimmschnee.</snowpackStructureComment>
+          <wxSynopsisComment>Im Bereich eines großräumigen Tiefdrucktroges über Mitteleuropa bleibt der Wetterablauf unbeständig und winterlich kalt. Aus Westen ziehen neuerlich recht dichte Wolken durch und über dem Tauernhauptkamm schwappen unergiebige Schneeschauer über. Bei noch immer mäßigem Wind aus nordwestlicher Richtung liegen die Temperaturen in 2000 m um -10 Grad.</wxSynopsisComment>
+          <tendencyComment>Mit lebhafter Nordwestströmung ziehen am Dienstag einige Wolken durch welche sich, abgesehen entlang des Tauernhauptkammes, aber bald auflockern und dann zeigt sich oft die Sonne. Es bleibt winterlich kalt. Weiterhin Triebschneesituation auf einer geschwächten Altschneedecke.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-02-02"/>
+      <locRef xlink:href="AT-02-01"/>
+      <locRef xlink:href="AT-02-03"/>
+      <locRef xlink:href="AT-02-04"/>
+      <locRef xlink:href="AT-02-12"/>
+      <locRef xlink:href="AT-02-13"/>
+    </Bulletin>
+    <Bulletin gml:id="RID256RGR3">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID256RGR3">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineHi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineLo"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <comment></comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <comment></comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Trieb- und Altschneeproblem sind das Hauptproblem</avActivityHighlights>
+          <avActivityComment>Oberhalb der Waldgrenze wird die Lawinengefahr mit Erheblich beurteilt. Eine Lawinenauslösung der immer wieder gebildeten frischen Triebschneeablagerungen ist bereits durch eine geringe Zusatzbelastung möglich und kann auch bis in die Schwachschichten der Altschneedecke durchschlagen. Der Regeneintrag hat die Altschneedecke weiter geschwächt und destabilisiert.</avActivityComment>
+          <snowpackStructureComment>Einige Zentimeter Neuschnee sind in der Region wieder gefallen. Am meisten davon im Südosten. Der in höheren Lagen nach wie vor mäßig wehende Wind hat dabei teilweise für größere Triebschneeablagerungen gesorgt. Die Altschneedecke ist oberflächennahe von aufbauend umgewandelten Schichten durchzogen. Im Schneedeckenfundament befindet sich auch Schwimmschnee.</snowpackStructureComment>
+          <wxSynopsisComment>Im Bereich eines großräumigen Tiefdrucktroges über Mitteleuropa bleibt der Wetterablauf unbeständig und winterlich kalt. Dichte Wolken liegen über der Region. Zeitweilig kann der Nordföhn die Wolken etwas aufreißen, viel Sonne dürfte es aber nicht geben. Bei noch immer mäßigem Wind aus nordwestlicher bis westlicher Richtung liegen die Temperaturen in 2000 m um -10 Grad.</wxSynopsisComment>
+          <tendencyComment>Mit lebhafter Nordwestströmung ziehen am Dienstag einige Wolken durch welche sich, abgesehen entlang des Tauernhauptkammes, aber bald auflockern und dann zeigt sich oft die Sonne. Es bleibt winterlich kalt. Weiterhin Triebschneesituation auf einer geschwächten Altschneedecke.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-02-05"/>
+      <locRef xlink:href="AT-02-19"/>
+    </Bulletin>
+    <Bulletin gml:id="RID256RGR4">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID256RGR4">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <comment></comment>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <comment></comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Mäßige Lawinengefahr durch Trieb- und Altschneeproblem</avActivityHighlights>
+          <avActivityComment>Frische Triebschneeablagerungen, welche auf einer geringen aber geschwächten Altschneedecke abgelagert werden, können teilweise bereits durch eine geringe Zusatzbelastung gestört werden.</avActivityComment>
+          <snowpackStructureComment>Einige Zentimeter Neuschnee hat es in der Region wieder geschneit. Bei anhaltend mäßigem Wind aus nordwestlicher Richtung ist dieser auch wieder verfrachtet worden. Die frischen Triebschneeablagerungen liegen auf einer durch oberflächennahe kantig aufbauend umgewandelten und bodennahe durch Schwimmschnee geschwächten Altschneedecke.</snowpackStructureComment>
+          <wxSynopsisComment>Im Bereich eines großräumigen Tiefdrucktroges über Mitteleuropa bleibt der Wetterablauf unbeständig und winterlich kalt. Nach einem wahrscheinlich klaren Morgen ziehen rasch dichte hohe Wolken auf. Bei noch immer mäßigem Wind aus nordwestlicher Richtung liegen die Temperaturen in 1500 m um -6 Grad.</wxSynopsisComment>
+          <tendencyComment>Mit lebhafter Nordwestströmung ziehen am Dienstag einige Wolken durch welche sich, abgesehen entlang des Tauernhauptkammes, aber bald auflockern und dann zeigt sich oft die Sonne. Es bleibt winterlich kalt. Weiterhin Triebschneesituation auf einer geschwächten Altschneedecke.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-02-06"/>
+      <locRef xlink:href="AT-02-07"/>
+      <locRef xlink:href="AT-02-08"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>

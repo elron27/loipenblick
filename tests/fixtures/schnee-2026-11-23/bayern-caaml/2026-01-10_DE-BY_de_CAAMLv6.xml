@@ -1,0 +1,173 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="0631caf8-7f4f-4337-8903-b1db9abe2742" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Bayern</name>
+      </person>
+    </source>
+    <region regionID="DE-BY-30">
+      <name>Werdenfelser Alpen</name>
+    </region>
+    <region regionID="DE-BY-12">
+      <name>Allgäuer Alpen Mitte</name>
+    </region>
+    <region regionID="DE-BY-11">
+      <name>Allgäuer Voralpen</name>
+    </region>
+    <region regionID="DE-BY-20">
+      <name>Ammergauer Alpen Nord</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>considerable</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Vorsicht, Verschüttungsgefahr!</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze erheblich, unterhalb davon mäßig. Das Problem ist in allen Höhenlagen der Triebschnee. Schneebrettlawinen können in eingewehten Bereichen, besonders an Steilhängen der Expositionen Nordwest über Ost bis Süd und in Rinnen und Mulden mit geringer Zusatzbelastung leicht ausgelöst werden. Gefahrenstellen finden sich auch im Waldübergangsbereich, in Waldschneisen und Lichtungen. Lawinen können vereinzelt auch groß werden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Mit stürmischem Westwind und Schneefall wachsen Triebschneeansammlungen weiter an. Frischer und älterer Triebschnee liegt verbreitet auf weichen Schichten oder Oberflächenreif und ist sehr störanfällig. Stellenweise sind im Neuschneepaket schwache Zwischenschichten eingelagert. In den Hochlagen bestehen tieferliegende Schichten oft aus kantigen Kristallen. Die Schneehöhe ist sehr unterschiedlich, abgewehte und triebschneegeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Die Lawinenlage bleibt vorerst kritisch.</highlights>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="89277aa1-e945-4138-b6c6-9cb76ac3c6a1" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Bayern</name>
+      </person>
+    </source>
+    <region regionID="DE-BY-52">
+      <name>Chiemgauer Alpen Ost</name>
+    </region>
+    <region regionID="DE-BY-41">
+      <name>Bayrische Voralpen West</name>
+    </region>
+    <region regionID="DE-BY-51">
+      <name>Chiemgauer Alpen West</name>
+    </region>
+    <region regionID="DE-BY-60">
+      <name>Berchtesgadener Alpen</name>
+    </region>
+    <region regionID="DE-BY-43">
+      <name>Bayrische Voralpen Ost</name>
+    </region>
+    <region regionID="DE-BY-42">
+      <name>Bayrische Voralpen Mitte</name>
+    </region>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m"/>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Triebschneeansammlungen meiden!</highlights>
+      <comment>Die Lawinengefahr ist mäßig. Triebschnee kann durch geringe Zusatzbelastung als kleine bis mittlere Schneebrettlawine ausgelöst werden. Gefahrenstellen befinden sich kammnah und kammfern im Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden. Schneebretter können auch im Waldübergangsbereich sowie in Schneisen und Lichtungen ausgelöst werden. Neben der Verschüttungsgefahr ist die Sturz- und Verletzungsgefahr zu beachten.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Es bleibt stürmisch. Der frische und ältere Triebschnee liegt störanfällig auf weichen Schichten oder Oberflächenreif. Die Schneedeckenbasis ist in mittleren Lagen häufig verharscht, in den Hochlagen besteht sie verbreitet aus kantigen Kristallen. Die Schneehöhe ist sehr unterschiedlich, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Je nach Neuschneemenge kann die Lawinengefahr ansteigen.</highlights>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <customData>
+    <ALBINA>
+      <generalHeadline>Kritische Verhältnisse! Triebschnee verbreitet sehr störanfällig</generalHeadline>
+    </ALBINA>
+  </customData>
+</bulletins>

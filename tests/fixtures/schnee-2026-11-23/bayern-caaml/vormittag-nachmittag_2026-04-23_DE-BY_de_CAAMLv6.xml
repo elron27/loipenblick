@@ -1,0 +1,187 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="2edacf94-c5b7-458e-9e47-18717d4aa70a" lang="de">
+    <publicationTime>2026-04-22T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-04-22T15:00:00Z</startTime>
+      <endTime>2026-04-23T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Bayern</name>
+      </person>
+    </source>
+    <region regionID="DE-BY-30">
+      <name>Werdenfelser Alpen</name>
+    </region>
+    <region regionID="DE-BY-60">
+      <name>Berchtesgadener Alpen</name>
+    </region>
+    <region regionID="DE-BY-12">
+      <name>Allgäuer Alpen Mitte</name>
+    </region>
+    <region regionID="DE-BY-20">
+      <name>Ammergauer Alpen Nord</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>earlier</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>1600</upperBound>
+      </elevation>
+      <validTimePeriod>later</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>1600</lowerBound>
+      </elevation>
+      <validTimePeriod>later</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>gliding_snow</problemType>
+      <elevation uom="m"/>
+      <aspect>NW</aspect>
+      <aspect>W</aspect>
+      <aspect>N</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>earlier</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>glide</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m">
+        <lowerBound>1600</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <validTimePeriod>later</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>loose</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m">
+        <upperBound>1600</upperBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>E</aspect>
+      <aspect>W</aspect>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <validTimePeriod>later</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>loose</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Absturzgefahr auf hartgefrorenen Schneeoberflächen am Morgen und ganztags im Schatten.</highlights>
+      <comment>Die Lawinengefahr steigt im Tagesverlauf oberhalb von 1600 m auf mäßig an, ansonsten ist sie gering. Nassschnee ist das Problem. Auf wenigen Steilhängen mit glattem Untergrund, wie auf Wiesenhängen oder Felsplatten, können Gleitschneelawinen abgehen. Zudem können sich mit dem Aufweichen der Schneedecke nasse Lockerschnee- oder Schneebrettlawinen in extrem steilem Gelände von selbst lösen oder in sehr steilem Gelände von einzelnen Personen ausgelöst werden. Die Lawinen erreichen mittlere Größe. Der Schwerpunkt der Lawinenaktivität liegt in den Mittagsstunden und am Nachmittag.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Mit der Abstrahlung über Nacht bildet sich ein tragfähiger Harschdeckel, der mit Erwärmung und Sonne im Tagesverlauf wieder aufweicht. Ansonsten ist die Schneedecke bis in die Hochlagen durchfeuchtet und besteht überwiegend aus Schmelzformen. Nur in nordexponierten Hängen der Hochlagen können tief in der Schneedecke vereinzelt noch Schichten aus kantigen Kristallen vorhanden sein. Nordseitig unterhalb von 1600 m und in den kompletten Südseiten liegt kaum noch Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Keine Änderung.</highlights>
+      <validTime>
+        <startTime>2026-04-23T15:00:00Z</startTime>
+        <endTime>2026-04-24T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-04-23</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="9271310a-808d-4501-a3e4-a52d307a330a" lang="de">
+    <publicationTime>2026-04-22T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-04-22T15:00:00Z</startTime>
+      <endTime>2026-04-23T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Bayern</name>
+      </person>
+    </source>
+    <region regionID="DE-BY-52">
+      <name>Chiemgauer Alpen Ost</name>
+    </region>
+    <region regionID="DE-BY-41">
+      <name>Bayrische Voralpen West</name>
+    </region>
+    <region regionID="DE-BY-51">
+      <name>Chiemgauer Alpen West</name>
+    </region>
+    <region regionID="DE-BY-11">
+      <name>Allgäuer Voralpen</name>
+    </region>
+    <region regionID="DE-BY-43">
+      <name>Bayrische Voralpen Ost</name>
+    </region>
+    <region regionID="DE-BY-42">
+      <name>Bayrische Voralpen Mitte</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m"/>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>loose</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Die Schneereste sind morgens und ganztags im Schatten hart und eisig. Vorsicht Absturzgefahr!</highlights>
+      <comment>Die Lawinengefahr ist gering. Nassschnee kann in seltenen Fällen und am ehesten ab dem späten Vormittag problematisch sein. Vereinzelt können sich an sehr steilen Hängen mit ausreichend Schnee nasse Lockerschnee- oder auf glattem Untergrund nasse Gleitschneelawinen von selbst lösen. Lawinen bleiben meist klein.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Nachts bildet sich ein tragfähiger Harschdeckel, der tagsüber in der Sonne wieder aufweicht. Ansonsten ist die verbliebene Schneedecke lückig, durchnässt und besteht vollständig aus Schmelzformen. Die Südseiten sind bis auf einzelne Schneefelder in Gipfel- und Kammlagen weitestgehend schneefrei.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Keine Änderung der Lawinengefahr.</highlights>
+      <validTime>
+        <startTime>2026-04-23T15:00:00Z</startTime>
+        <endTime>2026-04-24T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-04-23</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <customData>
+    <ALBINA>
+      <generalHeadline>Klassische Frühjahrsverhältnisse: Anstieg der Lawinengefahr im Tagesverlauf.</generalHeadline>
+    </ALBINA>
+  </customData>
+</bulletins>

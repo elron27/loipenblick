@@ -1,0 +1,194 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="16734b68-bc02-4f63-83a5-5518d4e458be" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Niederösterreich</name>
+      </person>
+    </source>
+    <region regionID="AT-03-01">
+      <name>Ybbstaler Alpen</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>treeline</upperBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag fällt kaum mehr Schnee. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt wieder zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 2000 m zwischen -9 und -5 Grad, in 1500 m zwischen -7 und -3 Grad. Es weht starker bis stürmischer Wind mit Böen um 100 km/h aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Triebschneelinsen sind störanfällig!</highlights>
+      <comment>Die Lawinengefahr ist oberhalb der Waldgrenze mäßig. Frische Triebschneebereiche können durch geringe Zusatzbelastung als kleine bis mittelgroße Schneebrettlawinen ausgelöst werden. Die Gefahrenstellen befinden sich insbesondere im kammnahen Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Seit Donnertag fielen stellenweise bis zu 20 cm Neuschnee, der mit starkem Wind aus westlichen Richtungen als Triebschnee auf eine lockere, mit Graupel durchsetzte Schneeauflage ablagerte. Bis ca. 1400 m hat am Freitag etwas Regen die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. In höheren Lagen bewirkte die Erwärmung teilweise eine Bindung der Auflage. Schwachschichten für Schneebrettlawinen bilden lockere Schneeschichten (Neuschnee, kantige Kristalle) im Übergang zur verharschten Altschneedecke, dessen Fundament stellenweise durch aufbauende Umwandlung zusätzlich geschwächt wird. Die Schneehöhe ist sehr unterschiedlich. Harte, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit Intensivierung der Schneefälle bei starkem Nordwestwind steigt die Lawinengefahr langsam an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="07efe5b6-19f8-47ca-9fe4-8396721ac543" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Niederösterreich</name>
+      </person>
+    </source>
+    <region regionID="AT-03-06">
+      <name>Gippel - Göllergebiet</name>
+    </region>
+    <region regionID="AT-03-04">
+      <name>Rax - Schneeberggebiet</name>
+    </region>
+    <region regionID="AT-03-05">
+      <name>Semmering - Wechselgebiet</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wind_slab</problemType>
+      <elevation uom="m">
+        <lowerBound>treeline</lowerBound>
+      </elevation>
+      <aspect>NW</aspect>
+      <aspect>N</aspect>
+      <aspect>SE</aspect>
+      <aspect>S</aspect>
+      <aspect>E</aspect>
+      <aspect>NE</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag ist es weitgehend niederschlagsfrei. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 2000 m zwischen -10 und -6 Grad, in 1500 m zwischen -6 und -2 Grad. Es weht starker bis stürmischer Wind mit Böen um 100 km/h aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Triebschneelinsen sind stellenweise störanfällig!</highlights>
+      <comment>Die Lawinengefahr ist gering. Trotzdem können frische Triebschneebereiche durch eine einzelne Person als kleine Schneebrettlawinen ausgelöst werden. Die Gefahrenstellen befinden sich insbesondere im kammnahen Steilgelände der Expositionen Nordwest über Ost bis Süd sowie in eingewehten Rinnen und Mulden. Weiterhin überwiegt die Mitreiß- und Absturzgefahr gegenüber der Verschüttungsgefahr.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Ewas Neuschnee wurde durch starken Wind aus westlichen Richtungen in die Leebereiche als Triebschnee auf eine lockere, mit Graupel durchsetzte Schneeauflage abgelagert. Bis ca. 1400 m hat am Freitag etwas Regen die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. Schwachschichten für Schneebrettlawinen bilden lockere Schneeschichten (Neuschnee, kantige Kristalle) im Übergang zur verharschten Altschneedecke, dessen Fundament vereinzelt durch aufbauende Umwandlung geschwächt wird. Die Schneehöhe ist sehr unterschiedlich. Harte, abgewehte und triebschneebeladene Bereiche wechseln sich ab.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Mit etwas Schneefall bei starkem Nordwestwind steigt die Lawinengefahr leicht an.</highlights>
+      <tendencyType>increasing</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="7c6e6e26-0e2c-47e0-8f4d-b60c4236e665" lang="de">
+    <publicationTime>2026-01-09T16:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-01-09T16:00:00Z</startTime>
+      <endTime>2026-01-10T16:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <source>
+      <person>
+        <name>Lawinenwarndienst Niederösterreich</name>
+      </person>
+    </source>
+    <region regionID="AT-03-02">
+      <name>Türnitzer Alpen</name>
+    </region>
+    <region regionID="AT-03-03">
+      <name>Gutensteiner Alpen</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <weatherForecast>
+      <comment>In der Nacht zum Samstag ist es weitgehend niederschlagsfrei. Tagsüber halten sich meist dichte Wolken. Vor allem am Nachmittag und Abend setzt zeitweise Schneefall ein. Der Wind weht in der Höhe mäßig bis lebhaft aus West. In allen Höhen kühlt es wieder deutlich ab. Die Temperatur liegt in 1500 m zwischen -7 und -2 Grad, in 1000 m zwischen -1 und -6 Grad. Es weht starker bis stürmischer Wind aus Nordwest.</comment>
+    </weatherForecast>
+    <avalancheActivity>
+      <highlights>Vereinzelte Triebschneelinsen beachten</highlights>
+      <comment>Die Lawinengefahr ist gering. Nur vereinzelt existieren frische Triebschneelinsen in eingewehten Rinnen und Mulden sowie hinter exponierten Rücken und Kämmen. Diese können als kleine Schneebrettlawinen ausgelöst werden. Die Absturzgefahr überwiegt die Verschüttungsgefahr.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Frische Triebschneelinsen liegen in höheren Lagen oft auf lockeren Schneeschichten, die als Schwachschicht wirken können. Zudem hat etwas Regen und kurzzeitige Erwärmung die Schneedecke teilweise angefeuchtet, dort bildet sich mit erneuter Abkühlung ein Schmelzharschdeckel. Generell liegt wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Nur wenig Änderung der Lawinengefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-01-10T16:00:00Z</startTime>
+        <endTime>2026-01-11T16:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-01-10</mainDate>
+      </ALBINA>
+      <LWD_Tyrol/>
+    </customData>
+  </bulletin>
+  <customData>
+    <ALBINA>
+      <generalHeadline>Stellenweise leichter Anstieg der Lawinengefahr!</generalHeadline>
+    </ALBINA>
+  </customData>
+</bulletins>

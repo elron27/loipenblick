@@ -1,0 +1,110 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-22T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-22T15:00:00Z",
+      "endTime" : "2026-04-23T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Steiermark"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Die Nacht auf Donnerstag verläuft sternenklar. Am Donnerstag ziehen von Norden einige Wolken durch, welche die Sonne vor allem vormittags verdecken können. Die Gipfel bleiben meist frei und es ist mit keinem Niederschlag zu rechnen. Im Tagesverlauf setzt sich von Nordwesten ausgehend immer mehr die Sonne durch. Der Nachmittag verläuft verbreitet sonnig mit Temperaturen in 2000m um +1 Grad. Durch den lebhaften, in Kammlagen auch starken bis stürmischen Wind aus nordwestlicher Richtung mit Windspitzen zwischen 50 und 80 km/h ist die gefühlte Temperatur deutlich niedriger."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Anstieg der Lawinengefahr im Tagesverlauf",
+      "comment" : "Die Lawinengefahr ist in den Morgenstunden gering und steigt im Tagesverlauf auf mäßig an. Aus noch nicht entladenem Gelände besteht mit zunehmender Durchfeuchtung durch Einstrahlung und Erwärmung die Gefahr von nassen Lockerschnee- und Schneebrettlawinen. Diese können sich von selbst lösen oder durch geringe Zusatzbelastung von Personen ausgelöst werden und sind meist klein bis mittelgroß. Lawinen können bis in bereits ausgeaperte Bereiche vorstoßen."
+    },
+    "snowpackStructure" : {
+      "comment" : "In der klaren Nacht kann sich die Schneedecke verfestigen. An der Oberfläche bildet sich eine Harschkruste. Mit Sonneneinstrahlung und Erwärmung weicht sie aber rasch wieder auf. In schattigen, höher gelegenen Bereichen befinden sich mancherorts im unteren Schneedeckenaufbau große Kristalle, die als mögliche Schwachschicht wirken. Die Ausaperung schreitet rasch voran."
+    },
+    "tendency" : [ {
+      "highlights" : "Hochdruckeinfluss führt am Freitag und Samstag zu strahlend sonnigem Bergwetter. Die Temperaturen steigen in 2000 m Höhe von -1 Grad am Freitagmorgen auf +6 Grad am Samstagnachmittag an. Mit der zunehmenden Erwärmung und Sonneneinstrahlung steigt die Aktivität von Nassschneelawinen wieder an.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-04-23T15:00:00Z",
+        "endTime" : "2026-04-24T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-04-23"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "SE", "S", "N", "E", "SW", "W", "NE" ]
+    }, {
+      "problemType" : "wet_snow",
+      "elevation" : { },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "SE", "S", "N", "E", "SW", "W", "NE" ]
+    } ],
+    "bulletinID" : "564023d5-dc6e-4645-af6a-0a1bcad53aff",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "earlier"
+    }, {
+      "mainValue" : "moderate",
+      "validTimePeriod" : "later"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Totes Gebirge Süd",
+      "regionID" : "AT-06-02"
+    }, {
+      "name" : "Dachsteingebiet",
+      "regionID" : "AT-06-01"
+    }, {
+      "name" : "Hochschwabgebiet",
+      "regionID" : "AT-06-10"
+    }, {
+      "name" : "Eisenerzer Alpen",
+      "regionID" : "AT-06-09"
+    }, {
+      "name" : "Triebener Tauern",
+      "regionID" : "AT-06-08-01"
+    }, {
+      "name" : "Wölzer Tauern Süd",
+      "regionID" : "AT-06-07"
+    }, {
+      "name" : "Rottenmanner Tauern",
+      "regionID" : "AT-06-06"
+    }, {
+      "name" : "Schladminger Tauern Nord",
+      "regionID" : "AT-06-04-01"
+    }, {
+      "name" : "Wölzer Tauern Nord",
+      "regionID" : "AT-06-05"
+    }, {
+      "name" : "Ennstaler Alpen",
+      "regionID" : "AT-06-03"
+    }, {
+      "name" : "Schladminger Tauern Süd",
+      "regionID" : "AT-06-04-02"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Anstieg der Lawinengefahr im Tagesverlauf"
+    }
+  }
+}

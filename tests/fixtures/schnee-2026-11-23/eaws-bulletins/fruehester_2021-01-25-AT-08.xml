@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?><caaml:Bulletin xmlns:caaml="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xml:lang="en" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS          http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd" gml:id="DibosBulletinDeID5873">
+  <caaml:metaDataProperty>
+    <caaml:MetaData>
+      <caaml:dateTimeReport>2021-01-25T07:30:00+01:00</caaml:dateTimeReport>
+      <caaml:srcRef xlink:href="OpIDLwdVorarlberg"/>
+      <caaml:comment>en;Jeffrey McCabe</caaml:comment>
+    </caaml:MetaData>
+  </caaml:metaDataProperty>
+  <caaml:validTime>
+    <caaml:TimeInstant>
+      <caaml:timePosition>2021-01-25T07:30:00+01:00</caaml:timePosition>
+    </caaml:TimeInstant>
+  </caaml:validTime>
+  <caaml:bulletinResultsOf>
+    <caaml:BulletinMeasurements>
+      <caaml:extFiles>
+        <caaml:ExtFile gml:id="Tendency">
+          <caaml:fileReferenceURI>https://warnung.vorarlberg.at/vtgdb/lawine/bilder_mail/EAWS/tendenz_gleichbleibend.png</caaml:fileReferenceURI>
+          <caaml:description>constant</caaml:description>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="Pdf">
+          <caaml:fileReferenceURI>https://warnung.vorarlberg.at/lwd_en/archiv/Winter_2018-2019/210125_0730_avalanche_bulletin.pdf</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+      </caaml:extFiles>
+      <caaml:comment>On Monday night, widespread snowfall is expected. Tuesday will be wintery cold accompanied by light snowfall. Intermittently strong winds will generate fresh snowdrifts. Avalanche danger could increase somewhat, within the limits of one danger level.&#13;
+Andreas Pecl&#13;
+Translated by Jeffrey McCabe</caaml:comment>
+      <caaml:highlights>Daytime increase in avalanche danger due to fresh snow and snowdrifts</caaml:highlights>
+      <caaml:dangerRatings>
+        <!--Today-->
+        <caaml:DangerRating>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:terrainFeature/>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Bregenzerwaldgebirge-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R1"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Allgäuer Alpen/Hochtannberg-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R2"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Lechquellengebirge / Arlberg / Lechtaler Alpen-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2000</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2000</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Verwall-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2000</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2000</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Rätikon-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2000</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2000</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <!--Silvretta-->
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2000</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT8R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>2021-01-25T07:30:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>2021-01-26T07:30:00+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2000</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+      </caaml:dangerRatings>
+      <caaml:avProblems>
+        <caaml:AvProblem>
+          <caaml:type>drifting snow</caaml:type>
+          <caaml:validAspect xlink:href="AspectRange_N"/>
+          <caaml:validAspect xlink:href="AspectRange_NO"/>
+          <caaml:validAspect xlink:href="AspectRange_O"/>
+          <caaml:validAspect xlink:href="AspectRange_SO"/>
+          <caaml:validAspect xlink:href="AspectRange_NW"/>
+          <caaml:validElevation xlink:href="ElevationRange_TreelineHi"/>
+          <caaml:comment>increasing in ridgeline terrain, gullies, bow</caaml:comment>
+        </caaml:AvProblem>
+        <caaml:AvProblem>
+          <caaml:type>old snow</caaml:type>
+          <caaml:validAspect xlink:href="AspectRange_N"/>
+          <caaml:validAspect xlink:href="AspectRange_NO"/>
+          <caaml:validAspect xlink:href="AspectRange_O"/>
+          <caaml:validAspect xlink:href="AspectRange_W"/>
+          <caaml:validAspect xlink:href="AspectRange_NW"/>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2000</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+        </caaml:AvProblem>
+      </caaml:avProblems>
+      <caaml:wxSynopsisHighlights>Alpine weather forecast (ZAMG-Weather Service Innsbruck)</caaml:wxSynopsisHighlights>
+      <caaml:wxSynopsisComment>Light to moderate snowfall ushers in the daytime hours. Layers of cloud cover fill the sky, visibility is generally poor. Snow showers will pause at midday, then intensify during the afternoon. Temperature at 2000 m: -11 degrees. Moderate to strong W/NW winds at high altitude.</caaml:wxSynopsisComment>
+      <caaml:snowpackStructureHighlights>Snow cover / General info</caaml:snowpackStructureHighlights>
+      <caaml:snowpackStructureComment>Fresh drifts have been generated in high-altitude ridgeline terrain. Bonding to the most recent (often loosely-packed) fresh snow is generally good, but deteriorates with ascending altitude. Combs, ridges, high altitude plateaus are often windblown, bare of snow, while gullies and bowls are filled to the brim with drifts; these have become quite compact due to higher temperatures. Where drifts are shallower and cover soft layers, they are triggerable. With ascending altitude, layers of surface hoar or faceted crystals inside the snowpack constitute a weak, i.e. triggerable layer. As temperatures dropped, the moist snowpack has consolidated and stabilized at lower and intermediate altitudes.</caaml:snowpackStructureComment>
+      <caaml:travelAdvisoryHighlights>Avalanche danger assessment</caaml:travelAdvisoryHighlights>
+      <caaml:travelAdvisoryComment>Considerable avalanche danger prevails at high altitudes. The main danger stems from both fresh and covered snowdrift accumulations. Fresh drifts are prone to triggering and can be triggered by one single skier. Avalanche prone locations are found in wind-impacted steep terrain, behind protruberances and in wind-loaded gullies and bowls. These will increase during the course of the day as fresh snow arrives and winds increase. In older drifts and deeper layers of the old snowpack, triggerings are generally possible only by large additional loading, e.g. bunched skiers, explosives. Such avalanches can grow to medium-to-large size. Activities in outlying terrain demand experience in assessing avalanche risks on-site and knowledge of local terrain.</caaml:travelAdvisoryComment>
+    </caaml:BulletinMeasurements>
+  </caaml:bulletinResultsOf>
+  <caaml:locRef xlink:href="AT8"/>
+</caaml:Bulletin>

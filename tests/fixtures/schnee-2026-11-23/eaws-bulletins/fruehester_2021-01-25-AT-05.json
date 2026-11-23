@@ -1,0 +1,244 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "AT-05-19"
+        },
+        {
+          "regionID": "AT-05-20"
+        },
+        {
+          "regionID": "AT-05-21"
+        },
+        {
+          "regionID": "AT-05-12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-24T17:00:00+00:00",
+        "endTime": "2021-01-25T17:00:00+00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "persistent_weak_layers",
+          "comment": "above treeline, triggerable in transitions from shallow to deeper snow, avoid very steep slopes"
+        }
+      ],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Tuesday and Wednesday, noticeable rise in avalanche danger levels due to wind, cold fresh snow and instable snowdrift accumulations. Danger will rise to CONSIDERABLE (snowdrifts combined with old-snow problem above forest edges)."
+      },
+      "bulletinID": "RID254RGR1",
+      "publicationTime": "2021-01-24T17:00:00+00:00",
+      "avalancheActivityHighlights": "AVOID very steep slopes. Concealed old-snow problem.",
+      "wxSynopsisComment": "On Monday, cloud cover will descend rapidly. At high altitudes, fog will create limited visibility. In the course of the afternoon, light or moderate snowall will set in. By evening, about 5 cm of fresh fallen snow is expected in the Osterhorn Massif, in Pongau, in Heutal about 10 cm. Above the timberline, westerly winds will be blowing at about 30 km/hr. Temperature at 2000 m, -11 degrees.\r\nOn Monday night, heavy snowfall is expected (15-20 cm by Wednesday morning).",
+      "avalancheActivityComment": "Thin fresh snow from Saturday is not avalanche-relevant. The concealed, persistent weak layers inside the snowpack constitute an old-snow problem. Here. triggering slab avalanches on isolated very steep slopes above the treeline is possible, particularly by large additional loading (single person on foot, groups, falls, etc.) Potential danger points are found increasingly in NW-NE-SE aspects, in isolated cases also in the other aspects. Transitions from shallow to deeper snow are treacherous, also shallow-snow zones. Potential slabs could grow to large size.",
+      "snowpackStructureComment": "The 10 cm of fresh snow from Saturday is cold and loosely-packed. Beneath it the snow base is highly varied. On south-facing slopes there is melt-freeze snow, on north-facing slopes there is snow which has nothing beneath it. Dominant in the current situation and for the approaching round of fresh snow: the soft weak layer of faceted granular crystals inside the not-very-deep snowpack."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT-05-16"
+        },
+        {
+          "regionID": "AT-05-18"
+        },
+        {
+          "regionID": "AT-05-14"
+        },
+        {
+          "regionID": "AT-05-13"
+        },
+        {
+          "regionID": "AT-05-17"
+        },
+        {
+          "regionID": "AT-05-15"
+        },
+        {
+          "regionID": "AT-05-11"
+        },
+        {
+          "regionID": "AT-05-10"
+        },
+        {
+          "regionID": "AT-05-09"
+        },
+        {
+          "regionID": "AT-05-08"
+        },
+        {
+          "regionID": "AT-05-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-24T17:00:00+00:00",
+        "endTime": "2021-01-25T17:00:00+00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "Treeline"
+          },
+          "customData": [],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "upperBound": "Treeline"
+          },
+          "customData": [],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "persistent_weak_layers",
+          "comment": "above treeline, triggerable in transitions from shallow to deep snow and in zones where snow is shallow, avoid very steep zones, settling noises persist"
+        },
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S"
+            ]
+          },
+          "problemType": "wind_drifted_snow",
+          "comment": "ridgeline snowdrift accumulations above 2000 m are easily triggerable, triggered avalanches can sometimes fracture down to more deeply embedded layers"
+        }
+      ],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Tuesday and Wednesday&nbsp;avalanche danger levels will increase measurably&nbsp;due to wind, cold fresh snow and instable snowdrifts. CONSIDERABLE avalanche danger widespread, and on Wednesday probably at the upper notch of that danger level (snowdrifts combined with old-snow problem above the timberline)."
+      },
+      "bulletinID": "RID254RGR2",
+      "publicationTime": "2021-01-24T17:00:00+00:00",
+      "avalancheActivityHighlights": "Old-snow problem demands restraint and experience",
+      "wxSynopsisComment": "On Monday, lower cloud cover borderline will descend rapidly; at higher altitudes, fog will create poor visibility, light-to-moderate snowfall is expected to set in during the afternoon. By evening, about 10 cm of fresh snow is expected in the western regions, further east about 5 cm. Above the treeline, westerly winds will be blowing at 30 km/hr. Temperature at 2000 m, -11 degrees; at 3000 m, -18 degrees.\r\nOn Monday night, heavy snowfall is expected, bringing 15-20 cm of fresh snow by Wednesday morning.",
+      "avalancheActivityComment": "Triggering a slab avalanche is possible on numerous steep slopes above the timberline. Even the impulse of one single skier is sufficient to release an avalanche. Potential danger zones are found increasingly on NW-NE-SE facing slopes, in isolated cases also in other aspects. Ridgeline steep slopes are delicate (recognizable snowdrift problem), transitions from shallow to deep snow and shallow-snow zones (concealed snowdrift problem) are treacherous. Triggered slab avalanches can grow to medium, in isolated cases also to large size.",
+      "snowpackStructureComment": "The cold fresh snow (10-20 cm) is poorly bonded to the snow base, but the amounts are not relevant. On south-facing slopes the melt-freeze crust is breaking beneath the powder layer on top of it; on wind-exposed slopes the base is hard; on shady slopes there is often nothing beneath the fresh snow. Dominating the current situation (crucial for the fresh snow forecast for next week)&nbsp;are the soft weak layers of faceted granular snow inside the not very thick snowpack."
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT-05-01"
+        },
+        {
+          "regionID": "AT-05-04"
+        },
+        {
+          "regionID": "AT-05-03"
+        },
+        {
+          "regionID": "AT-05-05"
+        },
+        {
+          "regionID": "AT-05-06"
+        },
+        {
+          "regionID": "AT-05-07"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-01-24T17:00:00+00:00",
+        "endTime": "2021-01-25T17:00:00+00:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "NW"
+            ]
+          },
+          "problemType": "wind_drifted_snow",
+          "comment": "near ridgelines, in gullies, steep bowls, also forest edges on north-facgin slopes and distant from ridgeline behind protruberances, small snowdrift avalanches can fracture down to deeper layers."
+        },
+        {
+          "dangerRating": {
+            "elevation": {},
+            "customData": [],
+            "aspect": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          },
+          "problemType": "persistent_weak_layers",
+          "comment": "above treeline, triggerable in transitions from shallow to deep snow, in shallow-snow zones, avoid very steep slopes"
+        }
+      ],
+      "tendency": {
+        "validTime": {},
+        "tendencyComment": "On Tuesday and Wednesday, noticeable increase in avalanche danger levels due to wind, cold fresh snow and instable snowdrifts. CONSIDERABLE avalanche danger is expected widespread. On Wednesday at latest, the uppermost notch of this danger level is expected (snowdrift combined with old-snow problem above the forest edges)."
+      },
+      "bulletinID": "RID254RGR3",
+      "publicationTime": "2021-01-24T17:00:00+00:00",
+      "avalancheActivityHighlights": "Snowdrift problem and beneath that, an enduring old-snow problem",
+      "wxSynopsisComment": "On Monday, lower cloud cover will rapidly descend, at higher altitudes the fog will provide poor visibility. During the afternoon, light to moderate snowfall will set in. By evening, 10 cm is expected in Hohe Tauern; in Lungau and Niedere Tauern up to 5 cm. Above the treeline, westerly winds will be blowing at 30 km/hr. Temperature at 2000 m, -11 degrees; at 3000 m, -18 degrees.On Monday night, heavy snowfall (15-20 cm possible by Wednesday morning).",
+      "avalancheActivityComment": "Avalanche prone locations are still numerous, not easy to recognize. The very steep slopes should be avoided. Most danger zones are found in extended N-E-S aspects in steep ridgeline terrain. Caution in northern aspects behind protruberances (snowdrift problem). Second risk syndrome: apart form cold snowdrifts in rimline areas of shallow-snow zones, i.e. entries into wind-loaded ridges and steep rocky terrain (old snow problem). There, a single skier can trigger a concealed weak layer. Superficial avalanches can then fracture down to more deeply embedded layers in the snowpack and grow to larger size. Isolated naturally triggered avalanche cannot be ruled out on very steep and heavily wind-loaded slopes on N-E-SE facing slopes.",
+      "snowpackStructureComment": "The cold fresh snow/drifts (20-30 cm) are not bonding well with the snow base. Fresh drifts have been deposited atop the cold fresh snow in a relatively instable way. The base beneath it is highly varied. Wind-exposed zones are hard, south-facing slopes beneath the melt-freeze crusts break beneath the powder, on shady slopes the shallow-snow zones have nothing beneath them. Dominating the current situation (especially for the fresh snowfall forecast for&nbsp;this week)&nbsp;are the soft weak layers of faceted granular snow inside the snowpack."
+    }
+  ]
+}

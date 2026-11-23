@@ -1,0 +1,99 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-01-09T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Oberösterreich"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "Am Samstag ist die Sicht häufig durch dichte Wolken eingeschränkt. Dazu kommt im Tagesverlauf immer öfter leichter bis mäßiger Schneefall (in Summe werden 15 - 20cm erwartet). Es weht lebhafter bis starker Wind aus westlichen Richtungen, die Spitzen liegen in exponierten Hochlagen um 70 km/h. Temperaturen in 1500 m um -6 Grad, in 2000 m um -10 Grad.\n\nAm Sonntag stecken die Berge dann in Wolken und am Vormittag kann es noch ein wenig schneien. Am Nachmittag bessert sich die Sicht, am Abend klart es auf. Lebhafter Westwind. In 1500 m um -13 Grad, in 2000 m um -15 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Frischen Triebschnee beachten!",
+      "comment" : "Die Lawinengefahr wird ab der Waldgrenze als mäßig eingestuft. Zu beachten sind vor allem vermehrt im Ostsektor und südseitig frisch eingewehte kammnahe Steilhänge sowie verfülle steile Mulden und Rinnen. Hier könnten mittlere Schneebrettlawinen bereits durch geringe Zusatzbelastung ausgelöst werden. Diese Gefahrenstellen sind zu meiden und zu beachten."
+    },
+    "snowpackStructure" : {
+      "comment" : "Der zuletzt gefallene Neuschnee und weiterer Schneefall wird durch überwiegend starken Wind aus West bis Nordwest verfrachtet und bindet mit der kalten, oberflächig lockeren oder auch vereisten Altschneedecke bzw. auch älterem Triebschnee nur schlecht. Die teils umfangreicheren Triebschneeablagerungen sind sehr störanfällig und ältere können dünne Zwischenschichten wie kantigen Formen enthalten. Die Schneehöhen sind sehr unterschiedlich, abgewehte und mit Triebschnee verfüllte Bereiche wechseln sich ab."
+    },
+    "tendency" : [ {
+      "highlights" : "Der Triebschnee bleibt störanfällig.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "N", "SE", "S", "E", "NE" ]
+    } ],
+    "bulletinID" : "f57404c8-9269-4c21-b2ba-c5ad9ed49cc7",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Kasbergblock",
+      "regionID" : "AT-04-07"
+    }, {
+      "name" : "Sengsengebirge",
+      "regionID" : "AT-04-08"
+    }, {
+      "name" : "Zimnitzmassiv, Höllengebirge",
+      "regionID" : "AT-04-05"
+    }, {
+      "name" : "Traunstein, Eibenberg",
+      "regionID" : "AT-04-06"
+    }, {
+      "name" : "Totes Gebirge Nord",
+      "regionID" : "AT-04-03"
+    }, {
+      "name" : "Phyrgas, Haller Mauern",
+      "regionID" : "AT-04-04"
+    }, {
+      "name" : "Dachstein, Gosaukamm",
+      "regionID" : "AT-04-01"
+    }, {
+      "name" : "Kalmberg, Katergebirge",
+      "regionID" : "AT-04-02"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Durch Schneefall und Wind - mäßige Schneebrettgefahr - teils schon ab der Waldgrenze!"
+    }
+  }
+}

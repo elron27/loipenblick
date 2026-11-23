@@ -1,0 +1,541 @@
+<bulletins xmlns="http://caaml.org/Schemas/V6.0/Profiles/BulletinEAWS">
+  <bulletin bulletinID="2ef5fbb7-eabd-4720-983e-73f6f63952db" lang="de">
+    <publicationTime>2026-05-02T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-02T15:00:00Z</startTime>
+      <endTime>2026-05-03T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="IT-32-TN-13">
+      <name>Primiero - Pale di S. Martino</name>
+    </region>
+    <region regionID="IT-32-TN-02">
+      <name>Adamello Süd</name>
+    </region>
+    <region regionID="IT-32-TN-01">
+      <name>Adamello - Presanella</name>
+    </region>
+    <region regionID="IT-32-TN-04">
+      <name>Brenta Nord - Peller</name>
+    </region>
+    <region regionID="IT-32-TN-16">
+      <name>Fassatal</name>
+    </region>
+    <region regionID="IT-32-TN-05">
+      <name>Brenta Süd</name>
+    </region>
+    <region regionID="IT-32-TN-19">
+      <name>Sole, Pejo und Rabbi</name>
+    </region>
+    <region regionID="IT-32-TN-08">
+      <name>Lagorai Süd</name>
+    </region>
+    <region regionID="IT-32-TN-07">
+      <name>Lagorai Nord</name>
+    </region>
+    <region regionID="IT-32-TN-09">
+      <name>Latemar</name>
+    </region>
+    <region regionID="IT-32-TN-20">
+      <name>Maddalene</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>earlier</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <elevation uom="m">
+        <upperBound>2600</upperBound>
+      </elevation>
+      <validTimePeriod>later</validTimePeriod>
+    </dangerRating>
+    <dangerRating>
+      <mainValue>moderate</mainValue>
+      <elevation uom="m">
+        <lowerBound>2600</lowerBound>
+      </elevation>
+      <validTimePeriod>later</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>2800</lowerBound>
+      </elevation>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>earlier</validTimePeriod>
+      <snowpackStability>fair</snowpackStability>
+      <frequency>none</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m">
+        <lowerBound>2600</lowerBound>
+      </elevation>
+      <aspect>NE</aspect>
+      <aspect>S</aspect>
+      <aspect>W</aspect>
+      <aspect>E</aspect>
+      <aspect>N</aspect>
+      <aspect>NW</aspect>
+      <aspect>SE</aspect>
+      <aspect>SW</aspect>
+      <validTimePeriod>later</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>few</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>loose</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheProblem>
+      <problemType>persistent_weak_layers</problemType>
+      <elevation uom="m">
+        <lowerBound>2800</lowerBound>
+      </elevation>
+      <aspect>NE</aspect>
+      <aspect>N</aspect>
+      <aspect>NW</aspect>
+      <validTimePeriod>later</validTimePeriod>
+      <snowpackStability>poor</snowpackStability>
+      <frequency>none</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Schwachschichten im Altschnee erfordern Vorsicht. Nassschnee kritisch beurteilen.</highlights>
+      <comment>Mit der Erwärmung steigt die Lawinengefahr im Tagesverlauf allmählich an. Die feuchten Lawinen können an sehr steilen Hängen spontan abgehen und vereinzelt mittlere Größe erreichen. &lt;br/> Mit Wind entstanden am Freitag in hohen Lagen Triebschneeansammlungen. Einzelne Gefahrenstellen liegen an sehr steilen Schattenhängen oberhalb von rund 2600 m. &lt;br/> Lawinen können mit meist großer Belastung ausgelöst werden und mittlere Größe erreichen.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Unterhalb von rund 2500 m liegt wenig Schnee. Die frühlingshaften Wetterbedingungen führen zu einer raschen Anfeuchtung der Schneedecke. Die Schneeoberfläche gefriert nur in hohen Lagen tragfähig und weicht rasch auf. &lt;br/> Steile Nordwest-, Nord- und Nordosthänge oberhalb von rund 2500 m: Im unteren Teil der Altschneedecke sind kantig aufgebaute Schwachschichten vorhanden.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Am Morgen herrschen allgemein günstige Verhältnisse. Anstieg der Gefahr von nassen Lawinen mit der tageszeitlichen Erwärmung und der Sonneneinstrahlung.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-03T15:00:00Z</startTime>
+        <endTime>2026-05-04T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-03</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="b5d8aade-41ef-40d6-a2dc-3b753c009979" lang="de">
+    <publicationTime>2026-05-02T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-02T15:00:00Z</startTime>
+      <endTime>2026-05-03T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="IT-32-BZ-08-03">
+      <name>Sarntaler Alpen Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-16">
+      <name>Nonsberger Alpen Ost</name>
+    </region>
+    <region regionID="IT-32-BZ-17">
+      <name>Fleimstaler Alpen Nord</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheActivity>
+      <highlights>Es liegt nur wenig Schnee.</highlights>
+      <comment>Es sind kaum noch nasse Lawinen möglich. Vorsicht an extrem steilen Schattenhängen. Lawinen sind nur klein. &lt;br/> &lt;br/> Dies ist die letzte Gefahrenkarte des Winters 2025/26. Aktuelle Informationen und Mitteilungen werden in unserem Blog veröffentlicht. Wir wünschen allen NutzerInnen des Euregio-Lawinenreports eine unfallfreie Sommersaison.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Die Schneeoberfläche ist tragfähig gefroren und weicht rasch auf. &lt;br/> Es liegt nur noch wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Geringe Lawinengefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-03T15:00:00Z</startTime>
+        <endTime>2026-05-04T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-03</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="f8bf23c4-55f1-4e2b-9f5c-b49e7d8ee38b" lang="de">
+    <publicationTime>2026-05-02T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-02T15:00:00Z</startTime>
+      <endTime>2026-05-03T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-07-05">
+      <name>Brandenberger Alpen</name>
+    </region>
+    <region regionID="AT-07-06">
+      <name>Kaisergebirge - Waidringer Alpen</name>
+    </region>
+    <region regionID="AT-07-18">
+      <name>Kitzbüheler Alpen Wildseeloder</name>
+    </region>
+    <region regionID="AT-07-02-01">
+      <name>Ammergauer Alpen Süd</name>
+    </region>
+    <region regionID="AT-07-17-02">
+      <name>Kitzbüheler Alpen Brixental</name>
+    </region>
+    <region regionID="AT-07-17-01">
+      <name>Kitzbüheler Alpen Wildschönau</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheActivity>
+      <highlights>Leichter Anstieg der Gefahr von nassen Rutschen im Tagesverlauf.</highlights>
+      <comment>Mit der tageszeitlichen Erwärmung und der Sonneneinstrahlung steigt die Auslösebereitschaft von nassen Rutschen etwas an. Einzelne Gefahrenstellen liegen an extrem steilen Hängen in hohen Lagen. &lt;br/> &lt;br/> Dies ist die letzte Gefahrenkarte des Winters 2025/26. Aktuelle Informationen und Mitteilungen werden in unserem Blog veröffentlicht. Wir wünschen allen NutzerInnen des Euregio-Lawinenreports eine unfallfreie Sommersaison.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Die nächtliche Abstrahlung ist verbreitet gut. Die Schneeoberfläche gefriert tragfähig und weicht im Tagesverlauf auf. In tiefen und mittleren Lagen liegt kaum Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Geringe Lawinengefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-03T15:00:00Z</startTime>
+        <endTime>2026-05-04T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-03</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="5dc0e225-e322-42c1-895f-f6808e9a4c0e" lang="de">
+    <publicationTime>2026-05-02T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-02T15:00:00Z</startTime>
+      <endTime>2026-05-03T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="AT-07-14-01">
+      <name>Kaunergrat</name>
+    </region>
+    <region regionID="AT-07-10">
+      <name>Verwallgruppe Mitte</name>
+    </region>
+    <region regionID="AT-07-11">
+      <name>Verwallgruppe Ost</name>
+    </region>
+    <region regionID="AT-07-12">
+      <name>Silvretta Ost</name>
+    </region>
+    <region regionID="AT-07-13">
+      <name>Samnaungruppe</name>
+    </region>
+    <region regionID="AT-07-15">
+      <name>Tuxer Alpen West</name>
+    </region>
+    <region regionID="AT-07-16">
+      <name>Tuxer Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-19">
+      <name>Glockturmgruppe</name>
+    </region>
+    <region regionID="AT-07-04-02">
+      <name>Karwendel Ost</name>
+    </region>
+    <region regionID="AT-07-04-01">
+      <name>Karwendel West</name>
+    </region>
+    <region regionID="AT-07-29-02">
+      <name>Lienzer Dolomiten</name>
+    </region>
+    <region regionID="AT-07-29-03">
+      <name>Kreuzeckgruppe Osttirol</name>
+    </region>
+    <region regionID="AT-07-29-01">
+      <name>Karnische Alpen Osttirol</name>
+    </region>
+    <region regionID="AT-07-23-02">
+      <name>Zillertaler Alpen Nordwest</name>
+    </region>
+    <region regionID="AT-07-23-01">
+      <name>Zillertaler Alpen Nordost</name>
+    </region>
+    <region regionID="AT-07-02-02">
+      <name>Lechtaler Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-20">
+      <name>Weißkugelgruppe</name>
+    </region>
+    <region regionID="AT-07-21">
+      <name>Gurgler Gruppe</name>
+    </region>
+    <region regionID="AT-07-22">
+      <name>Stubaier Alpen Mitte</name>
+    </region>
+    <region regionID="AT-07-01">
+      <name>Allgäuer Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-24">
+      <name>Venedigergruppe Süd</name>
+    </region>
+    <region regionID="AT-07-03">
+      <name>Mieminger Gebirge</name>
+    </region>
+    <region regionID="AT-07-25">
+      <name>Lasörlinggruppe</name>
+    </region>
+    <region regionID="AT-07-27">
+      <name>Deferegger Alpen Ost</name>
+    </region>
+    <region regionID="AT-07-28">
+      <name>Schobergruppe West</name>
+    </region>
+    <region regionID="AT-07-07">
+      <name>Lechtaler Alpen West</name>
+    </region>
+    <region regionID="AT-07-08">
+      <name>Lechtaler Alpen Mitte</name>
+    </region>
+    <region regionID="AT-07-14-04">
+      <name>Kalkkögel</name>
+    </region>
+    <region regionID="AT-07-09">
+      <name>Grieskogelgruppe</name>
+    </region>
+    <region regionID="AT-07-14-05">
+      <name>Serleskamm</name>
+    </region>
+    <region regionID="AT-07-14-02">
+      <name>Kühtai - Geigenkamm</name>
+    </region>
+    <region regionID="AT-07-14-03">
+      <name>Sellrain - Alpeiner Berge</name>
+    </region>
+    <region regionID="AT-07-26-02">
+      <name>Goldried</name>
+    </region>
+    <region regionID="AT-07-26-01">
+      <name>Glocknergruppe Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-20">
+      <name>Sextner Dolomiten</name>
+    </region>
+    <region regionID="IT-32-BZ-04-02">
+      <name>Ratschings</name>
+    </region>
+    <region regionID="IT-32-BZ-04-01">
+      <name>Stubaier Alpen Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-07-01">
+      <name>Hinteres Passeiertal</name>
+    </region>
+    <region regionID="IT-32-BZ-07-02">
+      <name>Texelgruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-18-02">
+      <name>Grödner Dolomiten</name>
+    </region>
+    <region regionID="IT-32-BZ-18-01">
+      <name>Lüsner Berge</name>
+    </region>
+    <region regionID="IT-32-BZ-05-03">
+      <name>Hinteres Ahrntal</name>
+    </region>
+    <region regionID="IT-32-BZ-05-02">
+      <name>Zillertaler Alpen Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-05-01">
+      <name>Pfitsch</name>
+    </region>
+    <region regionID="IT-32-BZ-01-02">
+      <name>Sesvenna Gruppe Süd</name>
+    </region>
+    <region regionID="IT-32-BZ-03">
+      <name>Schnalser Kamm</name>
+    </region>
+    <region regionID="IT-32-BZ-01-01">
+      <name>Sesvenna Gruppe Nord</name>
+    </region>
+    <region regionID="IT-32-BZ-06">
+      <name>Saldurn-Mastaun Kamm</name>
+    </region>
+    <region regionID="IT-32-BZ-08-01">
+      <name>Hirzergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-09">
+      <name>Pfunderer Berge West</name>
+    </region>
+    <region regionID="IT-32-BZ-08-02">
+      <name>Jakobspitzegruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-10">
+      <name>Pfunderer Berge Ost</name>
+    </region>
+    <region regionID="IT-32-BZ-11">
+      <name>Durreckgruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-02-01">
+      <name>Langtaufers</name>
+    </region>
+    <region regionID="IT-32-BZ-12">
+      <name>Rieserfernergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-13">
+      <name>Deferegger Alpen West</name>
+    </region>
+    <region regionID="IT-32-BZ-14">
+      <name>Ortlergruppe</name>
+    </region>
+    <region regionID="IT-32-BZ-15">
+      <name>Ultental</name>
+    </region>
+    <region regionID="IT-32-BZ-02-02">
+      <name>Planeilerberge</name>
+    </region>
+    <region regionID="IT-32-BZ-19">
+      <name>Pragser Dolomiten</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheProblem>
+      <problemType>wet_snow</problemType>
+      <elevation uom="m">
+        <lowerBound>2500</lowerBound>
+      </elevation>
+      <aspect>S</aspect>
+      <aspect>W</aspect>
+      <aspect>E</aspect>
+      <aspect>SE</aspect>
+      <aspect>SW</aspect>
+      <validTimePeriod>all_day</validTimePeriod>
+      <snowpackStability>fair</snowpackStability>
+      <frequency>few</frequency>
+      <avalancheSize>2</avalancheSize>
+      <customData>
+        <ALBINA>
+          <avalancheType>slab</avalancheType>
+        </ALBINA>
+      </customData>
+    </avalancheProblem>
+    <avalancheActivity>
+      <highlights>Leichter Anstieg der Gefahr von nassen Lawinen im Tagesverlauf.</highlights>
+      <comment>Mit der tageszeitlichen Erwärmung und der Sonneneinstrahlung steigt die Gefahr von nassen Lawinen im Tagesverlauf etwas an. Nasse Lawinen können vereinzelt durch Personen ausgelöst werden, besonders an sehr steilen Sonnenhängen oberhalb von rund 2500 m, dies auch an sehr steilen Schattenhängen unterhalb von rund 2500 m in Rinnen und Mulden. Lawinen sind vereinzelt mittelgroß. &lt;br/> &lt;br/> Schwachschichten im Altschnee können vor allem an sehr steilen Schattenhängen vereinzelt und meist mit großer Zusatzbelastung ausgelöst werden, vor allem oberhalb von rund 2500 m. &lt;br/> &lt;br/> Auf der harten Schneeoberfläche besteht im Steilgelände Absturzgefahr. &lt;br/> &lt;br/> Dies ist die letzte Gefahrenkarte des Winters 2025/26. Aktuelle Informationen und Mitteilungen werden in unserem Blog veröffentlicht. Wir wünschen allen NutzerInnen des Euregio-Lawinenreports eine unfallfreie Sommersaison.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Die nächtliche Abstrahlung ist verbreitet gut. Die Schneeoberfläche gefriert tragfähig und weicht im Tagesverlauf auf. &lt;br/> &lt;br/> Schattenhänge oberhalb von rund 2500 m: Im unteren Teil der Altschneedecke sind in der Höhe kantig aufgebaute Schwachschichten vorhanden. &lt;br/> &lt;br/> Unterhalb von rund 2000 m liegt kein Schnee. Zwischen etwa 2000 und 2500 m liegt nur noch wenig Schnee.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Am Morgen herrschen allgemein günstige Verhältnisse. Leichter Anstieg der Gefahr von nassen Lawinen mit der tageszeitlichen Erwärmung und der Sonneneinstrahlung.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-03T15:00:00Z</startTime>
+        <endTime>2026-05-04T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-03</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+        <dangerPatterns>DP1</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+  <bulletin bulletinID="8a0f1fe2-570d-480d-8016-d33ef99e34c4" lang="de">
+    <publicationTime>2026-05-02T15:00:00Z</publicationTime>
+    <validTime>
+      <startTime>2026-05-02T15:00:00Z</startTime>
+      <endTime>2026-05-03T15:00:00Z</endTime>
+    </validTime>
+    <unscheduled>false</unscheduled>
+    <region regionID="IT-32-TN-12">
+      <name>Prealpi</name>
+    </region>
+    <region regionID="IT-32-TN-15">
+      <name>Cimberntal</name>
+    </region>
+    <region regionID="IT-32-TN-03">
+      <name>Bondone und Stivo</name>
+    </region>
+    <region regionID="IT-32-TN-14">
+      <name>Vallarse</name>
+    </region>
+    <region regionID="IT-32-TN-17">
+      <name>Nonsberger Alpen West</name>
+    </region>
+    <region regionID="IT-32-TN-06">
+      <name>Folgaria - Lavarone</name>
+    </region>
+    <region regionID="IT-32-TN-18">
+      <name>Ledrotal</name>
+    </region>
+    <region regionID="IT-32-TN-11">
+      <name>Paganella</name>
+    </region>
+    <region regionID="IT-32-TN-10">
+      <name>Marzola - Valsugana</name>
+    </region>
+    <region regionID="IT-32-TN-21">
+      <name>Pine' - Fersental</name>
+    </region>
+    <dangerRating>
+      <mainValue>low</mainValue>
+      <validTimePeriod>all_day</validTimePeriod>
+    </dangerRating>
+    <avalancheActivity>
+      <highlights>Geringe Lawinengefahr.</highlights>
+      <comment>Die Gefahr von feuchten und nassen Lawinen besteht schon am Morgen. Aus noch nicht entladenen Einzugsgebieten sind einzelne nasse Lawinen möglich, aber meist nur kleine. &lt;br/> Vorsicht an extrem steilen Schattenhängen.</comment>
+    </avalancheActivity>
+    <snowpackStructure>
+      <comment>Oberhalb von rund 2000 m liegt erst wenig Schnee. Dies in Rinnen und Mulden an Schattenhängen. Die nächtliche Abstrahlung ist verbreitet kaum vorhanden. Die Schneeoberfläche weicht rasch auf.</comment>
+    </snowpackStructure>
+    <tendency>
+      <highlights>Geringe Lawinengefahr.</highlights>
+      <tendencyType>steady</tendencyType>
+      <validTime>
+        <startTime>2026-05-03T15:00:00Z</startTime>
+        <endTime>2026-05-04T15:00:00Z</endTime>
+      </validTime>
+    </tendency>
+    <customData>
+      <ALBINA>
+        <mainDate>2026-05-03</mainDate>
+      </ALBINA>
+      <LWD_Tyrol>
+        <dangerPatterns>DP10</dangerPatterns>
+      </LWD_Tyrol>
+    </customData>
+  </bulletin>
+</bulletins>
