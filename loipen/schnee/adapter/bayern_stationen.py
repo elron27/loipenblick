@@ -4,6 +4,8 @@ Liste: /public/weatherstations/all/, Werte je Station: /public/weatherWeb/{stati
 letzten rund 2,7 Tage). Die Hoehe steht als Text im Feld altitudeSnowheight ("Herzogstand (1575 m)").
 Bedingungen: Das Impressum verlangt fuer eine Weiterverwendung die Einwilligung des LWD (Stand 23.11.2026), daher
 in config/schnee.yaml einnahmen: nein, erlaubnis: nur_test. Gesammelt wird fuer die Historie (E-24, E-34).
+In die Datenbank kommt nur der Wert zur vollen Stunde; die Rohdatei behaelt alle 10-Minuten-Werte (Stefan,
+23.11.2026: 10-Minuten-Takt bringt fuer die Historie nichts).
 Zeitangaben (TS) ohne Zone; angenommen wird UTC (letzter Wert 17:30 bei Abruf 18:37 UTC am 23.11.2026).
 """
 
@@ -49,5 +51,7 @@ def verarbeite(antwort, q) -> Ergebnis:
         if not z.get("TS") or not z.get("ID"):
             continue
         zeit = datetime.fromisoformat(z["TS"]).replace(tzinfo=UTC)
+        if zeit.minute:
+            continue
         erg.messwerte += werte(str(z["ID"]), zeit, {g: (z.get(f), e) for g, (f, e) in GROESSEN.items()}, "stunde")
     return erg

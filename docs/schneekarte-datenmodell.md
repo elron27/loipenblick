@@ -62,7 +62,7 @@ bei der Quelle (ab 1900, 1775, 1961) und können jederzeit nachgeholt werden.
 | | pro Tag | pro Jahr |
 |---|---|---|
 | Rohdateien gepackt | ca. 1 MB | ca. 0,4 GB |
-| Datenbank (rund 20.000 neue Messwerte am Tag, vor allem 10-Minuten-Werte aus Bayern) | ca. 3 MB | ca. 1,1 GB |
+| Datenbank (rund 5.000 neue Messwerte am Tag; Bayern nur ein Wert je Stunde, die 10-Minuten-Werte bleiben in der Rohdatei) | ca. 1 MB | ca. 0,4 GB |
 
 Ziel aus S9: unter 2 GB pro Winter. Rohdateien gehen nie auf den Webspace.
 

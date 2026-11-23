@@ -188,7 +188,7 @@ def test_s3_euregio_stationen_mit_hoehe_und_region():
 
 
 @pytest.mark.req("S3", ak=[1, 2])
-def test_s3_bayern_hoehe_aus_text_und_zehnminutenwerte():
+def test_s3_bayern_hoehe_aus_text_und_nur_stundenwerte():
     q = QUELLEN["bayern-stationen"]
     kat = bayern_stationen.verarbeite(antwort("bayern-stationen/api-la-dok_weatherstations_all.json", "katalog"), q)
     assert len(kat.stationen) == 20
@@ -196,7 +196,9 @@ def test_s3_bayern_hoehe_aus_text_und_zehnminutenwerte():
     assert herzog.hoehe_m == 1575 and herzog.name == "Herzogstand"
     werte = bayern_stationen.verarbeite(antwort("bayern-stationen/weatherWeb_3_Zugspitze.json"), q).messwerte
     hs = [m for m in werte if m.groesse == "hs"]
-    assert len(hs) == 234 and hs[0].wert == 41 and hs[0].station == "3"
+    # 234 Zehn-Minuten-Werte in der Rohdatei, davon 38 zur vollen Stunde
+    assert len(hs) == 38 and hs[0].station == "3"
+    assert all(m.zeitpunkt.minute == 0 for m in hs)
 
 
 @pytest.mark.req("S3", ak=[1, 2])
@@ -293,5 +295,5 @@ def test_s1_katalog_und_werte_einer_quelle_im_lauf(session, tmp_path):
     lauf = sammle_quelle(session, q, f, tmp_path, datetime(2026, 11, 23, 18, tzinfo=timezone.utc))
     # 19 Stationen liefern im Fixture-Fetcher 404: die Quelle meldet den Fehler, die Zugspitze ist gespeichert
     assert session.scalar(select(func.count()).select_from(SchneeStation)) == 20
-    assert session.scalar(select(func.count()).select_from(SchneeMesswert)) > 200
+    assert session.scalar(select(func.count()).select_from(SchneeMesswert)) == 114  # 38 Stundenwerte x 3 Groessen
     assert lauf.fehler is not None
