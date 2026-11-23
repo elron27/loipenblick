@@ -1,0 +1,1528 @@
+{
+  "bulletins": [
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral",
+              "coreZoneText": "Gefahrenstufe \"gross\" (4=) an allen Expositionen \u00fcber 2200m."
+            }
+          },
+          "problemType": "new_snow",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Viel Neuschnee und Triebschnee sind vielerorts schlecht mit dem Altschnee verbunden. Es sind grosse und vereinzelt sehr grosse spontane Lawinen zu erwarten. Diese k\u00f6nnen in den typischen Lawinenz\u00fcgen bis in die T\u00e4ler vorstossen und exponierte Verkehrswege teilweise gef\u00e4hrden. F\u00fcr Touren und Variantenabfahrten abseits gesicherter Pisten sind die Verh\u00e4ltnisse sehr kritisch.",
+          "dangerRatingValue": "high",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "688a7ebc-eed9-4389-b2af-db7cc73611e1",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "new_snow"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "high",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-1225",
+          "name": "Iffigen"
+        },
+        {
+          "regionID": "CH-4121",
+          "name": "Montana"
+        },
+        {
+          "regionID": "CH-1312",
+          "name": "Monthey - Val d'Illiez"
+        },
+        {
+          "regionID": "CH-4114",
+          "name": "Conthey - Fully"
+        },
+        {
+          "regionID": "CH-4215",
+          "name": "Leuk"
+        },
+        {
+          "regionID": "CH-1223",
+          "name": "Wildhorn"
+        },
+        {
+          "regionID": "CH-1114",
+          "name": "Bex - Villars"
+        },
+        {
+          "regionID": "CH-4213",
+          "name": "Konkordia Gebiet"
+        },
+        {
+          "regionID": "CH-4211",
+          "name": "Leukerbad - L\u00f6tschental"
+        },
+        {
+          "regionID": "CH-4111",
+          "name": "Emosson"
+        },
+        {
+          "regionID": "CH-4112",
+          "name": "G\u00e9n\u00e9pi"
+        },
+        {
+          "regionID": "CH-4113",
+          "name": "Val d'Entremont - Val Ferret"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus",
+              "coreZoneText": "Gefahrenstufe \"gross\" (4-) an allen Expositionen \u00fcber 2200m."
+            }
+          },
+          "problemType": "new_snow",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Viel Neuschnee und Triebschnee sind vielerorts schlecht mit dem Altschnee verbunden. Fernausl\u00f6sungen und spontane Lawinen sind zu erwarten. Es sind mittlere und grosse Lawinen zu erwarten. Die Gef\u00e4hrdung bezieht sich haupts\u00e4chlich auf alpines Schneesportgel\u00e4nde. Lawinen, die bis in Tallagen vorstossen und exponierte Verkehrswege gef\u00e4hrden sind kaum zu erwarten. F\u00fcr Touren und Variantenabfahrten abseits gesicherter Pisten sind die Verh\u00e4ltnisse sehr kritisch.",
+          "dangerRatingValue": "high",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "a6445278-0e7c-4ed5-8e3c-fba1deb5fe58",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "new_snow"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "high",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "minus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-1246",
+          "name": "Gadmertal"
+        },
+        {
+          "regionID": "CH-2223",
+          "name": "N\u00f6rdliche Urseren"
+        },
+        {
+          "regionID": "CH-1247",
+          "name": "Grimselpass"
+        },
+        {
+          "regionID": "CH-1243",
+          "name": "Schreckhorn"
+        },
+        {
+          "regionID": "CH-1245",
+          "name": "Guttannen"
+        },
+        {
+          "regionID": "CH-1227",
+          "name": "Engstligen"
+        },
+        {
+          "regionID": "CH-4243",
+          "name": "N\u00f6rdliches Obergoms"
+        },
+        {
+          "regionID": "CH-1232",
+          "name": "Bl\u00fcemlisalp"
+        },
+        {
+          "regionID": "CH-1234",
+          "name": "Jungfrau - Schilthorn"
+        },
+        {
+          "regionID": "CH-2221",
+          "name": "Meiental"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus",
+              "coreZoneText": "Gefahrenstufe \"gross\" (4-) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2400m."
+            }
+          },
+          "problemType": "new_snow",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Schwachschichten im Altschnee k\u00f6nnen verbreitet von einzelnen Wintersportlern leicht ausgel\u00f6st werden. Fernausl\u00f6sungen und spontane Lawinen sind zu erwarten. Lawinen sind oft gross. <br/> Die Gef\u00e4hrdung bezieht sich haupts\u00e4chlich auf alpines Schneesportgel\u00e4nde. Lawinen, die bis in Tallagen vorstossen und exponierte Verkehrswege gef\u00e4hrden sind kaum zu erwarten. F\u00fcr Touren und Variantenabfahrten abseits gesicherter Pisten sind die Verh\u00e4ltnisse sehr kritisch.",
+          "dangerRatingValue": "high",
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus",
+              "coreZoneText": "Gefahrenstufe \"gross\" (4-) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2400m."
+            }
+          },
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Schwachschichten im Altschnee k\u00f6nnen verbreitet von einzelnen Wintersportlern leicht ausgel\u00f6st werden. Fernausl\u00f6sungen und spontane Lawinen sind zu erwarten. Lawinen sind oft gross. <br/> Die Gef\u00e4hrdung bezieht sich haupts\u00e4chlich auf alpines Schneesportgel\u00e4nde. Lawinen, die bis in Tallagen vorstossen und exponierte Verkehrswege gef\u00e4hrden sind kaum zu erwarten. F\u00fcr Touren und Variantenabfahrten abseits gesicherter Pisten sind die Verh\u00e4ltnisse sehr kritisch.",
+          "dangerRatingValue": "high",
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "ba3a22e4-a731-489a-afc2-27a124dcc2a7",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "new_snow",
+                "persistent_weak_layers"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "high",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "minus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-4244",
+          "name": "S\u00fcdliches Obergoms"
+        },
+        {
+          "regionID": "CH-4242",
+          "name": "Binntal"
+        },
+        {
+          "regionID": "CH-4222",
+          "name": "Zermatt"
+        },
+        {
+          "regionID": "CH-4241",
+          "name": "Reckingen"
+        },
+        {
+          "regionID": "CH-4214",
+          "name": "Riederalp"
+        },
+        {
+          "regionID": "CH-4122",
+          "name": "Val d'H\u00e9rens"
+        },
+        {
+          "regionID": "CH-4221",
+          "name": "Untere Vispert\u00e4ler"
+        },
+        {
+          "regionID": "CH-4123",
+          "name": "Arolla"
+        },
+        {
+          "regionID": "CH-4115",
+          "name": "Martigny - Verbier"
+        },
+        {
+          "regionID": "CH-4212",
+          "name": "Turtmanntal"
+        },
+        {
+          "regionID": "CH-4124",
+          "name": "Val d'Anniviers"
+        },
+        {
+          "regionID": "CH-4125",
+          "name": "Mountet"
+        },
+        {
+          "regionID": "CH-4116",
+          "name": "Haut Val de Bagnes"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "plus",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3+) an allen Expositionen \u00fcber 1800m."
+            }
+          },
+          "problemType": "new_snow",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Mit Neuschnee und starkem Westwind entstanden verbreitet st\u00f6ranf\u00e4llige Triebschneeansammlungen. Am Samstag wachsen diese weiter an. Zudem k\u00f6nnen vereinzelt Lawinen auch im Altschnee anbrechen. Dies besonders an West-, Nord- und Osth\u00e4ngen oberhalb von rund 2400 m. Lawinen k\u00f6nnen teilweise gross werden. Lawinen k\u00f6nnen an vielen Stellen schon von einzelnen Wintersportlern ausgel\u00f6st werden oder spontan abgehen. Fernausl\u00f6sungen sind m\u00f6glich. <br/> Touren und Variantenabfahrten erfordern Erfahrung in der Beurteilung der Lawinengefahr und Vorsicht.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "48f963a2-cbb1-4613-b67b-9614ad421b00",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "new_snow"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "plus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-1311",
+          "name": "Vouvry"
+        },
+        {
+          "regionID": "CH-1222",
+          "name": "Gstaad"
+        },
+        {
+          "regionID": "CH-2211",
+          "name": "Sch\u00e4chental"
+        },
+        {
+          "regionID": "CH-2134",
+          "name": "Bisistal"
+        },
+        {
+          "regionID": "CH-3113",
+          "name": "Glarus S\u00fcd-Sernftal"
+        },
+        {
+          "regionID": "CH-2122",
+          "name": "Engelberg"
+        },
+        {
+          "regionID": "CH-1224",
+          "name": "Lenk"
+        },
+        {
+          "regionID": "CH-1221",
+          "name": "Niedersimmental"
+        },
+        {
+          "regionID": "CH-1121",
+          "name": "Jaun"
+        },
+        {
+          "regionID": "CH-3112",
+          "name": "Glarus S\u00fcd-Grosstal"
+        },
+        {
+          "regionID": "CH-2222",
+          "name": "Maderanertal"
+        },
+        {
+          "regionID": "CH-1111",
+          "name": "Waadtl\u00e4nder Voralpen"
+        },
+        {
+          "regionID": "CH-1228",
+          "name": "Obersimmental"
+        },
+        {
+          "regionID": "CH-3114",
+          "name": "Glarus Mitte"
+        },
+        {
+          "regionID": "CH-1226",
+          "name": "Adelboden"
+        },
+        {
+          "regionID": "CH-1113",
+          "name": "Aigle - Leysin"
+        },
+        {
+          "regionID": "CH-2212",
+          "name": "Uri Rotstock"
+        },
+        {
+          "regionID": "CH-1112",
+          "name": "Pays d'Enhaut"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "plus",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3+) an allen Expositionen \u00fcber 2200m."
+            }
+          },
+          "problemType": "wind_slab",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen vielerorts im Altschnee ausgel\u00f6st werden und vereinzelt gross werden. Wummger\u00e4usche und Risse beim Betreten der Schneedecke weisen auf die Gefahr hin. Fernausl\u00f6sungen und spontane Lawinen sind m\u00f6glich. <br/> Touren und Variantenabfahrten erfordern Erfahrung in der Beurteilung der Lawinengefahr und Zur\u00fcckhaltung.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "plus",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3+) an allen Expositionen \u00fcber 2200m."
+            }
+          },
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen vielerorts im Altschnee ausgel\u00f6st werden und vereinzelt gross werden. Wummger\u00e4usche und Risse beim Betreten der Schneedecke weisen auf die Gefahr hin. Fernausl\u00f6sungen und spontane Lawinen sind m\u00f6glich. <br/> Touren und Variantenabfahrten erfordern Erfahrung in der Beurteilung der Lawinengefahr und Zur\u00fcckhaltung.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "bf275db0-8cf6-4ad7-af19-5dc0c795edd9",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "wind_slab",
+                "persistent_weak_layers"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "plus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-6112",
+          "name": "Obere Leventina"
+        },
+        {
+          "regionID": "CH-4231",
+          "name": "N\u00f6rdliches Simplon Gebiet"
+        },
+        {
+          "regionID": "CH-5112",
+          "name": "S\u00fcdliches Pr\u00e4ttigau"
+        },
+        {
+          "regionID": "CH-4223",
+          "name": "Saas Fee"
+        },
+        {
+          "regionID": "CH-5124",
+          "name": "Flims"
+        },
+        {
+          "regionID": "CH-5111",
+          "name": "N\u00f6rdliches Pr\u00e4ttigau"
+        },
+        {
+          "regionID": "CH-4224",
+          "name": "Monte Rosa"
+        },
+        {
+          "regionID": "CH-3224",
+          "name": "Sarganserland"
+        },
+        {
+          "regionID": "CH-5212",
+          "name": "S\u00fcdliches Tavetsch"
+        },
+        {
+          "regionID": "CH-4225",
+          "name": "Mattmark"
+        },
+        {
+          "regionID": "CH-4232",
+          "name": "S\u00fcdliches Simplon Gebiet"
+        },
+        {
+          "regionID": "CH-5113",
+          "name": "Westliche Silvretta"
+        },
+        {
+          "regionID": "CH-5121",
+          "name": "Calanda"
+        },
+        {
+          "regionID": "CH-5211",
+          "name": "N\u00f6rdliches Tavetsch"
+        },
+        {
+          "regionID": "CH-6111",
+          "name": "Bedrettotal"
+        },
+        {
+          "regionID": "CH-2224",
+          "name": "S\u00fcdliche Urseren"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3=) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 1800m."
+            }
+          },
+          "problemType": "new_snow",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Mit Neuschnee und starkem Westwind entstanden verbreitet st\u00f6ranf\u00e4llige Triebschneeansammlungen. Am Samstag wachsen diese weiter an. Lawinen sind meist mittelgross. Sie k\u00f6nnen an vielen Stellen schon von einzelnen Wintersportlern ausgel\u00f6st werden. Es sind einzelne spontane Lawinen m\u00f6glich. <br/> Touren und Variantenabfahrten erfordern Erfahrung und Zur\u00fcckhaltung.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "02289a74-ab94-4a87-bd98-794d0cb72d12",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "new_snow"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-1213",
+          "name": "Hohgant"
+        },
+        {
+          "regionID": "CH-3111",
+          "name": "Glarus Nord"
+        },
+        {
+          "regionID": "CH-2132",
+          "name": "Ybrig"
+        },
+        {
+          "regionID": "CH-1231",
+          "name": "Kandersteg"
+        },
+        {
+          "regionID": "CH-3222",
+          "name": "Alpstein - Alvier"
+        },
+        {
+          "regionID": "CH-2111",
+          "name": "Pilatus"
+        },
+        {
+          "regionID": "CH-2121",
+          "name": "Glaubenberg"
+        },
+        {
+          "regionID": "CH-2123",
+          "name": "Melchtal"
+        },
+        {
+          "regionID": "CH-1244",
+          "name": "Hasliberg - Rosenlaui"
+        },
+        {
+          "regionID": "CH-2133",
+          "name": "Stoos"
+        },
+        {
+          "regionID": "CH-2124",
+          "name": "Gersau"
+        },
+        {
+          "regionID": "CH-3223",
+          "name": "Flumserberg"
+        },
+        {
+          "regionID": "CH-1241",
+          "name": "Brienz - Interlaken"
+        },
+        {
+          "regionID": "CH-1242",
+          "name": "Grindelwald"
+        },
+        {
+          "regionID": "CH-1233",
+          "name": "Lauterbrunnen"
+        },
+        {
+          "regionID": "CH-3311",
+          "name": "Liechtenstein"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3=) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "wind_slab",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen an vielen Stellen von einzelnen Wintersportlern ausgel\u00f6st werden und mittlere Gr\u00f6sse erreichen. Fernausl\u00f6sungen sind m\u00f6glich. <br/> Touren erfordern Erfahrung in der Beurteilung der Lawinengefahr.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral",
+              "coreZoneText": "Gefahrenstufe \"erheblich\" (3=) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Neu- und Triebschnee \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen an vielen Stellen von einzelnen Wintersportlern ausgel\u00f6st werden und mittlere Gr\u00f6sse erreichen. Fernausl\u00f6sungen sind m\u00f6glich. <br/> Touren erfordern Erfahrung in der Beurteilung der Lawinengefahr.",
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "990b4370-66e3-4e33-9522-d63d13ab8378",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "wind_slab",
+                "persistent_weak_layers"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-7113",
+          "name": "Zuoz"
+        },
+        {
+          "regionID": "CH-5215",
+          "name": "Val Sumvitg"
+        },
+        {
+          "regionID": "CH-7123",
+          "name": "Sur Tasna"
+        },
+        {
+          "regionID": "CH-5222",
+          "name": "Schams"
+        },
+        {
+          "regionID": "CH-5216",
+          "name": "Zervreila"
+        },
+        {
+          "regionID": "CH-7122",
+          "name": "\u00d6stliche Silvretta"
+        },
+        {
+          "regionID": "CH-7124",
+          "name": "Val Suot"
+        },
+        {
+          "regionID": "CH-5214",
+          "name": "Obersaxen - Safiental"
+        },
+        {
+          "regionID": "CH-5231",
+          "name": "Albulatal"
+        },
+        {
+          "regionID": "CH-5122",
+          "name": "Schanfigg"
+        },
+        {
+          "regionID": "CH-5221",
+          "name": "Domleschg - Lenzerheide"
+        },
+        {
+          "regionID": "CH-7121",
+          "name": "Samnaun"
+        },
+        {
+          "regionID": "CH-5123",
+          "name": "Davos"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "plus",
+              "coreZoneText": "Gefahrenstufe \"m\u00e4ssig\" (2+) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "wind_slab",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Etwas Neuschnee und die meist kleinen Triebschneeansammlungen \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen durch Personen ausgel\u00f6st werden. Es sind kleine und vereinzelt mittlere Lawinen m\u00f6glich. <br/> Die Triebschneeansammlungen im steilen Gel\u00e4nde sollten m\u00f6glichst umgangen werden.",
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "plus",
+              "coreZoneText": "Gefahrenstufe \"m\u00e4ssig\" (2+) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Etwas Neuschnee und die meist kleinen Triebschneeansammlungen \u00fcberlagern eine schwache Altschneedecke. Lawinen k\u00f6nnen durch Personen ausgel\u00f6st werden. Es sind kleine und vereinzelt mittlere Lawinen m\u00f6glich. <br/> Die Triebschneeansammlungen im steilen Gel\u00e4nde sollten m\u00f6glichst umgangen werden.",
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "6e46d659-c866-4134-a05c-e3f500ae7c29",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "wind_slab",
+                "persistent_weak_layers"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "plus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-7222",
+          "name": "Unteres Puschlav"
+        },
+        {
+          "regionID": "CH-7231",
+          "name": "M\u00fcnstertal"
+        },
+        {
+          "regionID": "CH-7126",
+          "name": "Val S-charl"
+        },
+        {
+          "regionID": "CH-5234",
+          "name": "Bivio"
+        },
+        {
+          "regionID": "CH-7125",
+          "name": "Val dal Sp\u00f6l"
+        },
+        {
+          "regionID": "CH-7111",
+          "name": "Corvatsch"
+        },
+        {
+          "regionID": "CH-7115",
+          "name": "Val Chamuera"
+        },
+        {
+          "regionID": "CH-6211",
+          "name": "Alto Moesano"
+        },
+        {
+          "regionID": "CH-7211",
+          "name": "Bergell"
+        },
+        {
+          "regionID": "CH-5233",
+          "name": "Avers"
+        },
+        {
+          "regionID": "CH-5232",
+          "name": "Savognin"
+        },
+        {
+          "regionID": "CH-7221",
+          "name": "Oberes Puschlav"
+        },
+        {
+          "regionID": "CH-7114",
+          "name": "St. Moritz"
+        },
+        {
+          "regionID": "CH-6115",
+          "name": "Untere Leventina"
+        },
+        {
+          "regionID": "CH-6113",
+          "name": "Bleniotal"
+        },
+        {
+          "regionID": "CH-5223",
+          "name": "Rheinwald"
+        },
+        {
+          "regionID": "CH-7112",
+          "name": "Bernina"
+        },
+        {
+          "regionID": "CH-6114",
+          "name": "Obere Maggiat\u00e4ler"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral",
+              "coreZoneText": "Gefahrenstufe \"m\u00e4ssig\" (2=) an Nordwest- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 1400m."
+            }
+          },
+          "problemType": "wind_slab",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "comment": "Mit Neuschnee und starkem Westwind entstehen kleine Triebschneeansammlungen. Diese sollten im sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Nebst der Versch\u00fcttungsgefahr sollte vor allem die Mitreiss- und Absturzgefahr beachtet werden.",
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "1400"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "a048c80b-6e0b-4a93-839b-5436d3ef6baa",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "wind_slab"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-8114",
+          "name": "Val de Travers"
+        },
+        {
+          "regionID": "CH-8221",
+          "name": "La Chaux-de-Fonds - Le Locle"
+        },
+        {
+          "regionID": "CH-8112",
+          "name": "Vall\u00e9e de Joux"
+        },
+        {
+          "regionID": "CH-8213",
+          "name": "Vallon de Saint-Imier"
+        },
+        {
+          "regionID": "CH-2112",
+          "name": "Schwarzenberg"
+        },
+        {
+          "regionID": "CH-1212",
+          "name": "\u00d6stliche Berner Voralpen"
+        },
+        {
+          "regionID": "CH-8113",
+          "name": "Yverdon - Bevaix"
+        },
+        {
+          "regionID": "CH-3221",
+          "name": "Toggenburg"
+        },
+        {
+          "regionID": "CH-3211",
+          "name": "Appenzeller Alpen"
+        },
+        {
+          "regionID": "CH-1122",
+          "name": "Gruy\u00e8re"
+        },
+        {
+          "regionID": "CH-8111",
+          "name": "Saint-Cergue"
+        },
+        {
+          "regionID": "CH-2131",
+          "name": "Rothenthurm"
+        },
+        {
+          "regionID": "CH-1211",
+          "name": "Westliche Berner Voralpen"
+        },
+        {
+          "regionID": "CH-8211",
+          "name": "Val de Ruz - Colombier"
+        },
+        {
+          "regionID": "CH-8212",
+          "name": "Biel - Neuenburg"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus",
+              "coreZoneText": "Gefahrenstufe \"m\u00e4ssig\" (2-) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "wind_slab",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Frische und \u00e4ltere Triebschneeansammlungen sind meist klein aber teilweise st\u00f6ranf\u00e4llig. Sie sollten im sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. <br/> Zudem k\u00f6nnen sehr vereinzelt Lawinen auch im schwachen Altschnee ausgel\u00f6st werden. Lawinen k\u00f6nnen vereinzelt mittlere Gr\u00f6sse erreichen. Eine vorsichtige Routenwahl ist empfohlen.",
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus",
+              "coreZoneText": "Gefahrenstufe \"m\u00e4ssig\" (2-) an West- \u00fcber Nordost- bis S\u00fcdosth\u00e4ngen \u00fcber 2200m."
+            }
+          },
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "W",
+            "NW"
+          ],
+          "comment": "Frische und \u00e4ltere Triebschneeansammlungen sind meist klein aber teilweise st\u00f6ranf\u00e4llig. Sie sollten im sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. <br/> Zudem k\u00f6nnen sehr vereinzelt Lawinen auch im schwachen Altschnee ausgel\u00f6st werden. Lawinen k\u00f6nnen vereinzelt mittlere Gr\u00f6sse erreichen. Eine vorsichtige Routenwahl ist empfohlen.",
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "25d04fae-84c7-467a-9c83-d983703699c4",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "validTimePeriod": "all_day",
+              "problemTypes": [
+                "wind_slab",
+                "persistent_weak_layers"
+              ]
+            }
+          ]
+        },
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day",
+          "customData": {
+            "CH": {
+              "subdivision": "minus"
+            }
+          }
+        }
+      ],
+      "lang": "de",
+      "nextUpdate": "2026-01-10T16:00:00+00:00",
+      "publicationTime": "2026-01-10T06:34:27+00:00",
+      "regions": [
+        {
+          "regionID": "CH-6212",
+          "name": "Basso Moesano"
+        },
+        {
+          "regionID": "CH-6131",
+          "name": "Luganese"
+        },
+        {
+          "regionID": "CH-6122",
+          "name": "Riviera"
+        },
+        {
+          "regionID": "CH-6121",
+          "name": "Untere Maggiat\u00e4ler"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Schneedecke</h1><p>Neu- und Triebschnee liegen besonders an windgesch\u00fctzten Schattenh\u00e4ngen auf einer verbreitet kantig aufgebauten Altschneeoberfl\u00e4che, teilweise auch auf Oberfl\u00e4chenreif. Die Verbindung zur alten Schneeoberfl\u00e4che ist vielerorts schlecht. Tiefere Schichten der Schneedecke sind im westlichsten Unterwallis und am Alpennordhang relativ gut verfestigt. S\u00fcdlich einer Linie Rhone-Rhein ist oft die gesamte Schneedecke aufbauend umgewandelt und locker. Dort, wo Neu- und Triebschnee auf diese schwache Schneedecke abgelagert wird, k\u00f6nnen Lawinen tiefer in der Schneedecke anbrechen. </p>"
+      },
+      "source": {
+        "provider": {
+          "name": "SLF",
+          "website": "https://whiterisk.ch/de/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Tendenz bis Montag</h1><p>In der Nacht auf Sonntag intensiviert sich der Schneefall im Norden nochmals. Zwischen Samstagnachmittag und Sonntagmorgen kann am Alpennordhang nochmals 20 bis 40 cm Schnee fallen. Am Sonntag ist es im Norden teils sonnig, im S\u00fcden meist sonnig. Am Montag ist es im Norden meist bedeckt, es f\u00e4llt aber nur noch wenig Schnee. Ganz im S\u00fcden ist es am Montag teils sonnig.</p><p>Die Lawinengefahr steigt in der Nacht auf Sonntag am Alpennordhang an. Spontane Lawinen sind dort zu erwarten. Am Sonntag und Montag nimmt die Lawinengefahr im Norden langsam ab. Besonders in den Gebieten s\u00fcdlich einer Linie Rh\u00f4ne-Rhein geschieht dies aufgrund der schwachen Altschneedecke nur sehr langsam. </p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-10T07:00:00+00:00",
+        "endTime": "2026-01-10T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Wetter Prognose bis Samstag</h1><p>Im Norden ist es meist stark bew\u00f6lkt mit Schneefall bis in tiefe Lagen. Im S\u00fcden ist es wechselnd bew\u00f6lkt mit Aufhellungen im Tagesverlauf.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Freitagnachmittag bis Samstagnachmittag oberhalb von rund 1200 m: </p><ul><li>westlicher Jura, westlichstes Unterwallis, n\u00f6rdlicher Alpenkamm: 20 bis 40 cm</li><li>\u00f6stlicher Jura, \u00fcbriges Wallis westlich des Mattertals, \u00fcbrige Gebiete des Alpennordhangs, n\u00f6rdliches Pr\u00e4ttigau: 15 bis 30 cm</li><li>Vispert\u00e4ler, Simplongebiet, s\u00fcdliches Goms, s\u00fcdliches Gotthardgebiet, \u00fcbriges Nordb\u00fcnden, n\u00f6rdliches Unterengadin: 5 bis 15 cm</li><li>weiter s\u00fcdlich wenige Zentimeter oder trocken</li></ul><h2 contenteditable=\"false\">Temperatur</h2><p>am Mittag auf 2000 m bei -10 \u00b0C im Norden und -7 \u00b0C im S\u00fcden</p><h2>Wind</h2><p>starker West- bis Nordwestwind, besonders im Westen und Norden</p>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Wetter R\u00fcckblick auf Freitag</h1><p>Vor allem in Graub\u00fcnden gab es Aufhellungen, sonst war es meist stark bew\u00f6lkt. Im Westen und Norden schneite es in der Nacht teils intensiv. Tags\u00fcber gab es Schneeschauer aber auch Niederschlagspausen.</p><h2 contenteditable=\"false\">Neuschnee</h2><p>Von Donnerstag- bis Freitagnachmittag fielen im Wallis und am n\u00f6rdlichen Alpenkamm 20 bis 40 cm, im westlichsten Unterwallis bis 60 cm. Somit fielen seit Niederschlagsbeginn am Mittwochabend oberhalb von etwa 1500 m folgende Schneemengen:</p><ul><li>N\u00f6rdlicher Alpenkamm von der Diablerets bis ins Aletschgebiet, westlichstes Unterwallis, Walliser Alpenhauptkamm vom Val Ferret bis zur Monte Rosa: 40 bis 60 cm, lokal bis 80 cm</li><li>\u00fcbriger Alpennordhang ohne Voralpen, \u00fcbriges Wallis, Gotthardgebiet, Nordb\u00fcnden, Samnaun: 20 bis 40 cm</li><li>Jura, Voralpen, Mittelb\u00fcnden, Engadin ohne Samnaun: 10 bis 20 cm</li><li> sonst weniger oder trocken</li></ul><h2>Temperatur</h2><p>am Mittag auf 2000 m bei -5 \u00b0C </p><h2>Wind</h2><p>Westwind</p><ul><li>im Westen und Norden m\u00e4ssig bis stark</li><li>im S\u00fcden und in Graub\u00fcnden meist schwach bis m\u00e4ssig</li></ul>"
+      }
+    }
+  ],
+  "customData": {
+    "CH": {
+      "base": "9151e4e1-2e08-41e3-9511-53b9bfdf649d:67"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-01-09T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "source" : {
+      "person" : {
+        "name" : "ARSO"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht zum Samstag sind Schneeschauer zu erwarten. Am Samstag ist es überwiegend bewölkt, mit gelegentlichen Wolkenauflockerungen. Einige Schneeschauer sind noch möglich. Es weht zunächst ein schwacher bis mäßiger Nordwind, der am Nachmittag etwas an Stärke gewinnt. Es wird etwas kühler. Die Temperaturen liegen um -4 °C auf 1500 m und -11 °C auf 2500 m."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Orte mit Schneeverwehungen sind gefährlicher",
+      "comment" : "Besonders gefährlich sind Verwehungsschneeflächen, da bereits eine schwere Last eine kleine bis mittlere Lawine auslösen kann. Größere Vorsicht ist in Schluchten und Rinnen geboten, wo große Mengen an Flugschnee liegen können."
+    },
+    "snowpackStructure" : {
+      "comment" : "Es liegt relativ wenig Schnee. Die Schneedecke ist durch den Einfluss des Windes uneben. Im Windschatten liegt etwas leichter Schnee, aber die Schneedecke ist meist hart und Harsch. Es ist erhöhte Vorsicht geboten, vor allem dort, wo der Wind Neuschnee gebildet hat."
+    },
+    "tendency" : [ {
+      "highlights" : "In der Nacht zum Samstag und bis in den Vormittag hinein werden Schneeschauer auftreten. Es wird mit 5 bis 20 cm Schneefall gerechnet. Die Höhe der Niederschläge ist noch ungewiss. Die Gefahr von Lawinen wird bei stärkeren Niederschlägen leicht ansteigen. Dies gilt insbesondere für Samstag und Sonntag, wenn ein stärkerer Nordwind Neuschnee heranträgt und neue Verwehungen bildet.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ "DP4" ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "SW", "S" ]
+    }, {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2000"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NE", "NW", "N", "W", "E" ]
+    } ],
+    "bulletinID" : "94312945-87f3-49b0-908f-07999d5eb1e2",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Südliche Julische Alpen",
+      "regionID" : "SI-10"
+    }, {
+      "name" : "Zentrale Julische Alpen",
+      "regionID" : "SI-7"
+    }, {
+      "name" : "Östliche Julische Alpen",
+      "regionID" : "SI-8"
+    }, {
+      "name" : "Westliche Julische Alpen",
+      "regionID" : "SI-6"
+    }, {
+      "name" : "Steiner Alpen",
+      "regionID" : "SI-3"
+    }, {
+      "name" : "Kamnik-Savinja-Alpen",
+      "regionID" : "SI-4"
+    }, {
+      "name" : "Westliche Karawanken",
+      "regionID" : "SI-1"
+    }, {
+      "name" : "Zentrale Karawanken",
+      "regionID" : "SI-2"
+    } ]
+  } ]
+}

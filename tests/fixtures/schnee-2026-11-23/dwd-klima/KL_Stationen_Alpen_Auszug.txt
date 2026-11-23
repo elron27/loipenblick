@@ -1,0 +1,38 @@
+Stations_id von_datum bis_datum Stationshoehe geoBreite geoLaenge Stationsname Bundesland Abgabe
+----------- --------- --------- ------------- --------- --------- ----------------------------------------- ---------- ------
+00321 19790101 19951031            789     47.6797   12.0017 Bayrischzell                             Bayern                                   Frei
+00361 19480101 19981231            550     47.6344   13.0109 Berchtesgaden (KKst)                     Bayern                                   Frei
+01372 19920101 20021031            757     47.4608   10.2696 Fischen                                  Bayern                                   Frei
+01550 19360101 20261122            719     47.4830   11.0621 Garmisch-Partenkirchen                   Bayern                                   Frei
+02221 19800101 19991031           1053     47.5408   10.4371 Hindelang-Unterjoch                      Bayern
+02423 19470101 20050701            712     47.6894   10.0416 Isny                                     Baden-Württemberg                        Frei
+02559 19520101 20261122            705     47.7233   10.3348 Kempten                                  Bayern                                   Frei
+02708 19910801 20261122            742     47.6652   11.0805 Kohlgrub, Bad (Rosshof)                  Bayern                                   Frei
+02738 19710201 19980201            776     47.6448   11.7438 Kreuth                                   Bayern                                   Frei
+03307 19370101 20261122            983     47.4814   11.2649 Mittenwald-Buckelwiesen                  Bayern                                   Frei
+03679 19470101 20261122            518     47.6187   12.1665 Kiefersfelden-Gach                       Bayern                                   Frei
+03727 19831001 20010930            800     47.5619   10.0313 Oberstaufen-Kalzhofen                    Bayern
+03730 19100101 20261122            806     47.3984   10.2759 Oberstdorf                               Bayern                                   Frei
+03856 19490101 19930630           1010     47.6383   10.4313 Oy-Mittelberg                            Bayern                                   Frei
+03857 19931001 20261122            886     47.6362   10.3892 Oy-Mittelberg-Petersthal                 Bayern                                   Frei
+04091 19620701 19980630           1640     47.7327   12.6827 Rauschberg bei Ruhpolding                Bayern                                   Frei
+04125 18970101 20061130            470     47.7238   12.8740 Reichenhall, Bad                         Bayern                                   Frei
+04293 19580101 20051130            747     47.6819   11.7714 Rottach-Egern                            Bayern                                   Frei
+04318 19710601 20061231            692     47.7310   12.6610 Ruhpolding                               Bayern                                   Frei
+04471 19790101 19850731            780     47.7358   11.8505 Schliersee (A)                           Bayern                                   Frei
+04597 19450101 20101231            792     47.5769   10.7181 Schwangau-Horn                           Bayern                                   Frei
+04996 19360101 19991031            837     47.7099   11.7639 Tegernsee                                Bayern                                   Frei
+05063 19360101 20070531            724     47.7566   11.5819 Tölz, Bad                                Bayern                                   Frei
+05377 19480101 19530930           1923     47.5714   12.9337 Watzmannhaus                             Bayern                                   Frei
+05467 19510101 20120921           1832     47.7035   12.0119 Wendelstein                              Bayern                                   Frei
+05792 19000801 20261122           2956     47.4210   10.9848 Zugspitze                                Bayern                                   Frei
+05890 19510101 19910731            850     47.6777   11.0473 Kohlgrub, Bad (A)                        Bayern                                   Frei
+05941 19450101 20250331            680     47.6721   12.4756 Reit im Winkl-Groißenbach                Bayern                                   Frei
+06103 20000606 20261122            923     47.4287   11.2616 Mittenwald/Obb.                          Bayern                                   Frei
+07325 20110901 20170116           2650     47.4165   10.9795 Schneefernerhaus                         Bayern                                   Frei
+07403 20070401 20261122            672     47.7955   10.0325 Leutkirch-Herlazhofen                    Baden-Württemberg                        Frei
+07424 20061201 20261122            457     47.7724   12.9073 Piding                                   Bayern                                   Frei
+15214 20131101 20261122            808     47.6248   10.8075 Halblech-Bayerniederhofen                Bayern                                   Frei
+19856 20240801 20261122            625     47.6134   12.9819 Schönau am Königssee                     Bayern                                   Frei
+19912 20260715 20261122            630     47.7147   11.4166 Bichl                                    Bayern                                   Frei
+20278 20260201 20261122           2956     47.4210   10.9848 Zugspitze_Plattform                      Bayern                                   Frei

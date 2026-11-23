@@ -333,3 +333,168 @@ class PushTag(Base):
     tag: Mapped[date] = mapped_column(Date, primary_key=True)
     anzahl: Mapped[int] = mapped_column(Integer, default=0)
     grenze_gemeldet: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+# --------------------------------------------------------------------------------------------- Schneekarte
+# Eigene Tabellen (S9, E-31), die Loipen-Tabellen bleiben unveraendert. Grundsatz E-34: jeder Rohwert wird
+# unveraendert gespeichert, die Antwort der Quelle zusaetzlich als gepackte Datei (SchneeRohdatei).
+
+
+class Messart(StrEnum):
+    """S2 AK 3: Wie ein Wert entstanden ist."""
+
+    AUTOMATISCH = "automatisch"
+    HAND = "hand"
+    MODELL = "modell"
+
+
+class SchneeRohdatei(Base):
+    """Eine Antwort einer Schneequelle, gepackt im Rohdatei-Ordner (S1 AK 2). Gleicher Inhalt = eine Zeile."""
+
+    __tablename__ = "schnee_rohdateien"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    quelle: Mapped[str] = mapped_column(String(64), index=True)
+    url: Mapped[str] = mapped_column(String(1000))
+    sha256: Mapped[str] = mapped_column(String(64), unique=True)
+    pfad: Mapped[str] = mapped_column(String(500))  # relativ zum Rohdatei-Ordner
+    groesse: Mapped[int] = mapped_column(Integer)
+    content_type: Mapped[str | None] = mapped_column(String(100))
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class SchneeStation(Base):
+    """Messstation mit Hoehe (S2). Verschwundene Stationen werden inaktiv, nie geloescht (S2 AK 4)."""
+
+    __tablename__ = "schnee_stationen"
+    __table_args__ = (UniqueConstraint("quelle", "kennung"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    quelle: Mapped[str] = mapped_column(String(64))
+    kennung: Mapped[str] = mapped_column(String(64))  # ID der Station bei der Quelle
+    name: Mapped[str] = mapped_column(String(200))
+    lat: Mapped[float] = mapped_column(Float)
+    lon: Mapped[float] = mapped_column(Float)
+    hoehe_m: Mapped[int] = mapped_column(Integer)
+    betreiber: Mapped[str | None] = mapped_column(String(200))
+    land: Mapped[str | None] = mapped_column(String(8))
+    warnregion: Mapped[str | None] = mapped_column(String(32), index=True)  # EAWS-Mikroregion, z. B. AT-07-04-01
+    messart: Mapped[str] = mapped_column(String(16), default=Messart.AUTOMATISCH)
+    messgroessen: Mapped[list] = mapped_column(JSON, default=list)
+    aktiv: Mapped[bool] = mapped_column(Boolean, default=True)
+    erstmals_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    zuletzt_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class SchneeMesswert(Base):
+    """Ein Rohwert einer Station (S1, S3). Aendert die Quelle einen Wert, entsteht eine neue Fassung (S1 AK 3).
+    Ein fehlender Wert wird gar nicht gespeichert, nie als 0 (D11). verdacht nennt die Regel aus S7."""
+
+    __tablename__ = "schnee_messwerte"
+    __table_args__ = (UniqueConstraint("station_id", "zeitpunkt", "groesse", "fassung"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    station_id: Mapped[int] = mapped_column(ForeignKey("schnee_stationen.id"), index=True)
+    zeitpunkt: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    # hs (Schneehoehe), hn24 (Neuschnee 24 h), ta (Lufttemperatur), ta_min, ta_max, rr (Niederschlag), ff (Wind)
+    groesse: Mapped[str] = mapped_column(String(16))
+    wert: Mapped[float] = mapped_column(Float)
+    einheit: Mapped[str] = mapped_column(String(8))
+    # tag = Tageswert der Quelle, stunde = Einzelwert; Tageswerte aus Stundenwerten bildet erst die Auswertung
+    takt: Mapped[str] = mapped_column(String(8), default="tag")
+    fassung: Mapped[int] = mapped_column(Integer, default=1)
+    verdacht: Mapped[str | None] = mapped_column(String(32))
+    rohdatei_id: Mapped[int | None] = mapped_column(ForeignKey("schnee_rohdateien.id"))
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class SchneeModellwert(Base):
+    """Modellierte Schneehoehe (SNOWGRID) als Mittel je Warnregion und 500-m-Hoehenband (S10)."""
+
+    __tablename__ = "schnee_modellwerte"
+    __table_args__ = (UniqueConstraint("quelle", "warnregion", "hoehe_von", "datum", "groesse"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    quelle: Mapped[str] = mapped_column(String(64))
+    warnregion: Mapped[str] = mapped_column(String(32), index=True)
+    hoehe_von: Mapped[int] = mapped_column(Integer)  # Band hoehe_von bis hoehe_von + 500 m
+    datum: Mapped[date] = mapped_column(Date, index=True)
+    groesse: Mapped[str] = mapped_column(String(16))
+    mittel: Mapped[float] = mapped_column(Float)
+    minimum: Mapped[float] = mapped_column(Float)
+    maximum: Mapped[float] = mapped_column(Float)
+    zellen: Mapped[int] = mapped_column(Integer)
+    rohdatei_id: Mapped[int | None] = mapped_column(ForeignKey("schnee_rohdateien.id"))
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class Warnregion(Base):
+    """EAWS-Mikroregion (E-35) mit Umriss als GeoJSON."""
+
+    __tablename__ = "warnregionen"
+
+    id: Mapped[str] = mapped_column(String(32), primary_key=True)  # z. B. AT-07-04-01
+    name: Mapped[str | None] = mapped_column(String(200))
+    land: Mapped[str] = mapped_column(String(8))
+    dienst: Mapped[str] = mapped_column(String(64))
+    geometrie: Mapped[dict | None] = mapped_column(JSON)
+    aktualisiert_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class LageberichtFassung(Base):
+    """Eine veroeffentlichte Fassung eines Lawinenlageberichts (S4). Abendbericht und Morgen-Aktualisierung
+    sind zwei Fassungen mit eigener Ausgabezeit. Die Rohdatei bleibt die Quelle der Wahrheit (S4 AK 4)."""
+
+    __tablename__ = "lagebericht_fassungen"
+    __table_args__ = (UniqueConstraint("dienst", "bulletin_id", "ausgabe_at"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    dienst: Mapped[str] = mapped_column(String(64), index=True)  # Quelle aus schnee.yaml
+    bulletin_id: Mapped[str] = mapped_column(String(100))
+    ausgabe_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    gueltig_von: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    gueltig_bis: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    sprache: Mapped[str | None] = mapped_column(String(8))
+    link: Mapped[str | None] = mapped_column(String(500))
+    tendenz: Mapped[str | None] = mapped_column(String(16))
+    nachgeladen: Mapped[bool] = mapped_column(Boolean, default=False)  # S5 AK 3
+    rohdatei_id: Mapped[int | None] = mapped_column(ForeignKey("schnee_rohdateien.id"))
+    abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+    regionen: Mapped[list["LageberichtRegion"]] = relationship(
+        back_populates="fassung", cascade="all, delete-orphan")
+
+
+class LageberichtRegion(Base):
+    """Was eine Fassung fuer eine Warnregion sagt, genau wie veroeffentlicht (E-32):
+    stufen = [{"stufe": "considerable", "zahl": 3, "tageszeit": "vormittag"|"nachmittag"|"ganztags",
+               "hoehe_unten": 2000 | "treeline" | None, "hoehe_oben": ..., "expositionen": []}, ...]
+    probleme = [{"art": "wind_slab", "expositionen": ["N", "NE"], "hoehe_unten": 2000, "hoehe_oben": None,
+                 "tageszeit": "ganztags"}, ...]"""
+
+    __tablename__ = "lagebericht_regionen"
+    __table_args__ = (UniqueConstraint("fassung_id", "warnregion"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    fassung_id: Mapped[int] = mapped_column(ForeignKey("lagebericht_fassungen.id", ondelete="CASCADE"), index=True)
+    warnregion: Mapped[str] = mapped_column(String(32), index=True)
+    stufen: Mapped[list] = mapped_column(JSON, default=list)
+    probleme: Mapped[list] = mapped_column(JSON, default=list)
+
+    fassung: Mapped[LageberichtFassung] = relationship(back_populates="regionen")
+
+
+class SchneeAbruf(Base):
+    """Ein Abruf einer Schneequelle (S8): Grundlage fuer Luecken-Alarm und Statusuebersicht."""
+
+    __tablename__ = "schnee_abrufe"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    quelle: Mapped[str] = mapped_column(String(64), index=True)
+    zeit: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    tag: Mapped[date] = mapped_column(Date, index=True)
+    werte: Mapped[int] = mapped_column(Integer, default=0)  # gelesene Messwerte, Berichtsregionen oder Modellwerte
+    neu: Mapped[int] = mapped_column(Integer, default=0)  # davon neu gespeichert (ohne Wiederholungen)
+    stationen: Mapped[int] = mapped_column(Integer, default=0)
+    fehler: Mapped[str | None] = mapped_column(Text)
+    dauer_s: Mapped[float | None] = mapped_column(Float)

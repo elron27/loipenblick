@@ -1,0 +1,189 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-04-30T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-30T15:00:00Z",
+      "endTime" : "2026-05-01T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Die Nacht ist klar. Am Freitag scheint die Sonne vom meist wolkenlosen Himmel. In der sehr trockenen Luft ist die Sicht ausgezeichnet. Schwacher Wind aus Nord bis Ost. In 2000 m -1 bis +7 Grad, in 3000 m -6 bis -1 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Leichter Tagesgang der Nassschneelawinen.",
+      "comment" : "Die Lawinengefahr steigt im Tagesverlauf über 2500 m von gering auf mäßig an.\nAn wenigen Stellen im Gelände können nasse Lawinen spontan abgehen oder durch Wintersport ausgelöst werden. Lawinen bleiben meist klein, können jedoch vereinzelt im nassen Schnee bis auf den Boden durchreißen und mittlere Größe erreichen.\nOberhalb von etwa 2500 m gibt es im erweiterten Nordsektor vereinzelt Gefahrenstellen an denen mittelgroße Schneebrettlawinen im Altschnee ausgelöst werden können. Vorsicht an den steilen Übergängen von wenig auf mehr Schnee."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die Schneedecke kann über Nacht gut abstrahlen. Es bildet sich ein tragfähiger Harschdeckel, der tagsüber langsam aufweicht. Die Schneedecke darunter besteht aus kompaktem und bis in hohe Lagen von Regen geprägtem Schnee. An schattigen Hängen oberhalb von etwa 2500 Meter befinden sich weiterhin Schwachschichten aus kantigen Formen und Tiefenreif in der bodennahen Altschneedecke.\nInsgesamt liegt nur noch wenig Schnee."
+    },
+    "tendency" : [ {
+      "highlights" : "In der Früh herrschen nach klarer Nacht günstige Verhältnisse. Tagsüber nimmt die Gefahr von nassen Lawinen mit der Sonneneinstrahlung und der Erwärmung zu.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2026-05-01T15:00:00Z",
+        "endTime" : "2026-05-02T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-05-01"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "validTimePeriod" : "earlier",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "loose"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "SE", "W", "N", "E", "NE" ]
+    }, {
+      "problemType" : "wet_snow",
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "validTimePeriod" : "later",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "S", "SW", "SE", "W", "N", "E", "NE" ]
+    } ],
+    "bulletinID" : "46820b23-7728-4e8e-a5e1-5ef9342ae2df",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "earlier"
+    }, {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "2500"
+      },
+      "validTimePeriod" : "later"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "2500"
+      },
+      "validTimePeriod" : "later"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Venedigergruppe Nord",
+      "regionID" : "AT-05-11"
+    }, {
+      "name" : "Glocknergruppe Nord",
+      "regionID" : "AT-05-10"
+    }, {
+      "name" : "Venedigergruppe Mitte",
+      "regionID" : "AT-05-07"
+    }, {
+      "name" : "Glocknergruppe Mitte",
+      "regionID" : "AT-05-06"
+    }, {
+      "name" : "Goldberggruppe Mitte",
+      "regionID" : "AT-05-05"
+    }, {
+      "name" : "Weisseck, Muhrtal",
+      "regionID" : "AT-05-03"
+    } ]
+  }, {
+    "publicationTime" : "2026-04-30T15:00:00Z",
+    "validTime" : {
+      "startTime" : "2026-04-30T15:00:00Z",
+      "endTime" : "2026-05-01T15:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : {
+      "comment" : "Die Nacht ist klar. Am Freitag scheint die Sonne vom meist wolkenlosen Himmel. In der sehr trockenen Luft ist die Sicht ausgezeichnet. Schwacher Wind aus Nord bis Ost. In 2000 m -1 bis +7 Grad, in 3000 m -6 bis -1 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Nur noch wenig Schnee.",
+      "comment" : "Die Lawinengefahr ist gering. Mit der Sonneneinstrahlung steigt die Auslösebereitschaft nasser Lawinen leicht an. Dies insbesondere dort wo noch flächig Schnee liegt, also im Wesentlichen an sehr steilen Schattenhängen der Hochlagen und teilweise an Ost- und Westhängen. Die Lawinen bleiben meist klein, können im nassen Schnee jedoch bis auf den Boden durchreißen und vereinzelt mittlere Größe erreichen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Die Schneedecke kann über Nacht gut abstrahlen. Es bildet sich ein tragfähiger Harschdeckel, der tagsüber langsam aufweicht. Die Schneedecke darunter besteht aus kompaktem und von Regen geprägtem Schnee. An schattigen Hängen ab etwa 2500 Meter gibt es Schwachschichten aus Tiefenreif in der bodennahen Altschneedecke. Die Schneedecke ist, so überhaupt noch vorhanden, bis in hohe Lagen feucht bis nass."
+    },
+    "tendency" : [ {
+      "highlights" : "Mit der voranschreitenden Ausaperung nimmt die Lawinengefahr weiter ab.",
+      "tendencyType" : "decreasing",
+      "validTime" : {
+        "startTime" : "2026-05-01T15:00:00Z",
+        "endTime" : "2026-05-02T15:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-05-01"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ ],
+    "bulletinID" : "2b2b4999-a750-42bf-a5b5-5b9fc7f85945",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Goldberggruppe Nord",
+      "regionID" : "AT-05-09"
+    }, {
+      "name" : "Niedere Tauern Nord",
+      "regionID" : "AT-05-08"
+    }, {
+      "name" : "Osterhorngruppe, Gamsfeldgruppe",
+      "regionID" : "AT-05-19"
+    }, {
+      "name" : "Loferer und Leoganger Steinberge",
+      "regionID" : "AT-05-18"
+    }, {
+      "name" : "Steinernes Meer, Hochkönig, Hagengebirge, Göllstock",
+      "regionID" : "AT-05-17"
+    }, {
+      "name" : "Tennengebirge, Gosaukamm",
+      "regionID" : "AT-05-16"
+    }, {
+      "name" : "Niedere Tauern Alpenhauptkamm",
+      "regionID" : "AT-05-04"
+    }, {
+      "name" : "Kitzbüheler Alpen Oberpinzgau",
+      "regionID" : "AT-05-15"
+    }, {
+      "name" : "Kitzbüheler Alpen Glemmtal",
+      "regionID" : "AT-05-14"
+    }, {
+      "name" : "Niedere Tauern Süd",
+      "regionID" : "AT-05-02"
+    }, {
+      "name" : "Dientner Grasberge",
+      "regionID" : "AT-05-13"
+    }, {
+      "name" : "Nockberge",
+      "regionID" : "AT-05-01"
+    }, {
+      "name" : "Pongauer Grasberge",
+      "regionID" : "AT-05-12"
+    }, {
+      "name" : "Chiemgauer Alpen Süd",
+      "regionID" : "AT-05-21"
+    }, {
+      "name" : "Untersbergstock",
+      "regionID" : "AT-05-20"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Letzter Bericht der Saison 2025/26."
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <observations>
+    <Bulletin gml:id="RID252RGR1">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID252RGR1">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineHi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_ForestlineLo"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>in Rinnen und steile Mulden</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <comment>dünne und kleinräumige Triebschneepakete</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Mäßige Lawinengefahr über der Waldgrenze – Altschnee-und Triebschneeproblem!</avActivityHighlights>
+          <avActivityComment>In den Ybbstaler Alpen sowie vom Göller bis zum Wechsel wird die Lawinengefahr über der Waldgrenze mit mäßig, ansonsten mit gering bewertet. In den Schattseiten existiert weiterhin ein Altschneeproblem, im erweiterten Ostsektor hat sich kammnah frischer Triebschnee abgelagert. Es kann überwiegend durch große Zusatzbelastung zu Schneebrettauslösungen kommen. </avActivityComment>
+          <snowpackStructureComment>Die Schneedecke konnte sich in der letzten Woche in allen Höhenlagen zuerst mit den warmen Temperaturen setzen bzw. wurde feucht und dann am Wochenende mit der Abkühlung wieder verfestigen. Die Oberfläche ist verharscht und es fielen 15 bis 20 cm Neuschnee darauf, die mit dem starken Westwind in nordost- bis südostseitige Hänge eingefrachtet wurden. In den Schattseiten ist die Altschneedecke weiterhin durch weiche Schichten kantiger Kristalle geschwächt. </snowpackStructureComment>
+          <wxSynopsisComment>Am Montag sind die Niederösterreichischen Berge überwiegend in dichte Wolken gehüllt, nur im Osten kann es zwischenzeitlich auflockern. Am Nachmittag setzt vor allem in den Ybbstaler Alpen wieder Schneefall ein, nach Osten hin sind es eher nur einzelne Schneeschauer. Der Höhenwind weht mäßig bis lebhaft aus Nordwest und die Temperaturen bleiben frostig. In 1500m sind zu Mittag um -8 Grad zu erwarten.</wxSynopsisComment>
+          <tendencyComment>Am Dienstag legt der Nordwestwind deutlich zu und es staut sich besonders tiefe Bewölkung an die Berge. Es gibt immer wieder Schneeschauer, die teils auch recht kräftig ausfallen können. Es bleibt frostig. Die Triebschneegefahr nimmt zu. </tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-03-01"/>
+      <locRef xlink:href="AT-03-06"/>
+      <locRef xlink:href="AT-03-04"/>
+      <locRef xlink:href="AT-03-05"/>
+    </Bulletin>
+    <Bulletin gml:id="RID252RGR2">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-01-24T17:00:00+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID252RGR2">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-01-24T17:00:00+00:00</beginPosition>
+          <endPosition>2021-01-25T17:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>favourable situation</type>
+              <comment></comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>Geringe Lawinengefahr bei günstiger Situation.</avActivityHighlights>
+          <avActivityComment>Die Lawinengefahr ist gering und es herrscht überwiegend eine günstige Situation. Die Schneedecke ist großteils gut verfestigt. Aus extrem steilen Wiesen bzw. Waldböschungen sind mitunter noch kleine Gleitschneerutsche möglich.</avActivityComment>
+          <snowpackStructureComment>Die Schneedecke hat sich in der letzten Woche zuerst mit den warmen Temperaturen gesetzt bzw. wurde nass und dann am Wochenende mit der Abkühlung wieder verfestigt. Die Oberfläche ist verharscht und es liegen in den Ostsektoren wenige Zentimeter frischer Triebschnee darüber. Bei noch bestehenden bodennahen Gleitschichten kann die Schneedecke auf extrem steilen Böschungen abgleiten. </snowpackStructureComment>
+          <wxSynopsisComment>Am Montag sind die Niederösterreichischen Berge überwiegend in dichte Wolken gehüllt, nur im Osten kann es zwischenzeitlich auflockern. Am Nachmittag setzt wieder etwas Schneefall ein, nach Osten hin sind es eher nur einzelne Schneeschauer. Der Höhenwind weht mäßig bis lebhaft aus Nordwest und die Temperaturen bleiben frostig. In 1500m sind zu Mittag um -8 Grad zu erwarten.</wxSynopsisComment>
+          <tendencyComment>Am Dienstag legt der Nordwestwind deutlich zu und es staut sich besonders tiefe Bewölkung an die Berge. Es gibt immer wieder leichte Schneeschauer und es bleibt frostig. Die Lawinengefahr ändert sich nicht wesentlich. </tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-03-02"/>
+      <locRef xlink:href="AT-03-03"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>

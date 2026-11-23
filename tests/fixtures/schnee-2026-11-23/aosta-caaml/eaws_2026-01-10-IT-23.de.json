@@ -1,0 +1,311 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "Die aktuelle Lawinensituation erfordert Vorsicht und Zur\u00fcckhaltung. Vor allem entlang der Grenze zu Frankreich und entlang der Grenze zur Schweiz sind mittlere und vereinzelt gro\u00dfe Lawinen m\u00f6glich. <br/> Der viele Neuschnee und die teils m\u00e4chtigen Triebschneeansammlungen k\u00f6nnen an allen Expositionen oberhalb von rund 2000 m leicht ausgel\u00f6st werden. Dies bereits mit kleiner Belastung. Triebschneeansammlungen sind bei der schlechten Sicht kaum erkennbar. Fernausl\u00f6sungen und spontane Lawinen sind m\u00f6glich. <br/> Die Lawinen k\u00f6nnen stellenweise im schwachen Altschnee anrei\u00dfen und bis in Tallagen vorsto\u00dfen. Dies vor allem aus sehr steilen schattseitigen und Einzugsgebieten oberhalb der Waldgrenze. <br/> Wummger\u00e4usche und Risse beim Betreten der Schneedecke k\u00f6nnen auf die Gefahr hinweisen. <br/> <br/> <br/>",
+        "highlights": "Der Neuschnee und die Triebschneeansammlungen sind st\u00f6ranf\u00e4llig."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "many",
+          "snowpackStability": "very_poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "new_snow",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 3,
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "bb59e690-ff88-446c-a3c5-4a4057d9ae2a",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "high",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-23-AO-20",
+          "name": "D - CERVINIA E ALTA VALPELLINE"
+        },
+        {
+          "regionID": "IT-23-AO-22",
+          "name": "D - VAL VENY"
+        },
+        {
+          "regionID": "IT-23-AO-16",
+          "name": "D - VALGRISENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-17",
+          "name": "D - LA SALLE MORGEX"
+        },
+        {
+          "regionID": "IT-23-AO-14",
+          "name": "D - VAL FERRET"
+        },
+        {
+          "regionID": "IT-23-AO-15",
+          "name": "D - VALLE DI LA THUILE"
+        },
+        {
+          "regionID": "IT-23-AO-18",
+          "name": "D - GRAN SAN BERNARDO OLLOMONT"
+        },
+        {
+          "regionID": "IT-23-AO-19",
+          "name": "D - BASSA E MEDIA VALPELLINE"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Seit Donnerstag fielen entlang der Grenze zu Frankreich, entlang der Grenze zwischen dem Wallis und Italien oberhalb von rund 1800 m 40 bis 70 cm Schnee. Bis Samstag fallen oberhalb von rund 1800 m bis zu 40 cm Schnee, lokal auch weniger. <br/> Der starke Wind verfrachtet den Neuschnee intensiv. Die frischen Triebschneeansammlungen \u00fcberlagern besonders an sehr steilen Schattenh\u00e4ngen eine schwache Altschneedecke."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Valle d'Aosta",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Die Lawinenaktivit\u00e4t nimmt langsam ab.",
+          "tendencyType": "decreasing",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Die aktuelle Lawinensituation erfordert Erfahrung in der Beurteilung der Lawinengefahr. Mit Neuschnee und Wind wuchsen die Triebschneeansammlungen weiter an. An allen Expositionen und an Triebschneeh\u00e4ngen sind mittlere Lawinen m\u00f6glich. Dies bereits mit kleiner Belastung. <br/> Besonders ung\u00fcnstig sind Stellen, wo Schwachstellen im Altschnee vorhanden sind. Die Lawinen k\u00f6nnen v.a. dort in tiefen Schichten ausgel\u00f6st werden und bis in Tallagen vorsto\u00dfen. Dies vor allem aus sehr steilen schattseitigen und Einzugsgebieten oberhalb der Waldgrenze. <br/> Wummger\u00e4usche und Risse beim Betreten der Schneedecke k\u00f6nnen auf die Gefahr hinweisen. <br/> Auf der harten Schneeoberfl\u00e4che besteht im Steilgel\u00e4nde Absturzgefahr. <br/> <br/>",
+        "highlights": "V.a. in den an die Gefahrenstufe 4, \"gro\u00df\" angrenzenden Gebieten sind die Gefahrenstellen weiter verbreitet und die Gefahr \"erheblich\", Stufe 3."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "frequency": "some",
+          "snowpackStability": "very_poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "W",
+            "NE",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "some",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "0f31ab4a-6f00-4c84-beca-d70c07b190d3",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "upperBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "considerable",
+          "elevation": {
+            "lowerBound": "2300"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-23-AO-23",
+          "name": "A - TESTATA SAINT-BARTHELEMY"
+        },
+        {
+          "regionID": "IT-23-AO-12",
+          "name": "C - VAL DI COGNE AYMAVILLES"
+        },
+        {
+          "regionID": "IT-23-AO-01",
+          "name": "A - SAINT-PIERRE SAINT-NICHOLAS"
+        },
+        {
+          "regionID": "IT-23-AO-24",
+          "name": "A - VALTOURNENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-13",
+          "name": "C - VALSAVARENCHE"
+        },
+        {
+          "regionID": "IT-23-AO-02",
+          "name": "A - INTROD ARVIER"
+        },
+        {
+          "regionID": "IT-23-AO-21",
+          "name": "C - VAL DI RHEMES"
+        },
+        {
+          "regionID": "IT-23-AO-10",
+          "name": "B - CHAMPDEPRAZ MONTE AVIC"
+        },
+        {
+          "regionID": "IT-23-AO-11",
+          "name": "B - VALLE DI CHAMPORCHER"
+        },
+        {
+          "regionID": "IT-23-AO-05",
+          "name": "A - BASSA VALTOURNENCHE CHATILLON"
+        },
+        {
+          "regionID": "IT-23-AO-06",
+          "name": "B - ALTA VALLE DI GRESSONEY"
+        },
+        {
+          "regionID": "IT-23-AO-25",
+          "name": "B - TESTATA VAL D'AYAS SAINT-JACQUES"
+        },
+        {
+          "regionID": "IT-23-AO-03",
+          "name": "A - QUART NUS"
+        },
+        {
+          "regionID": "IT-23-AO-26",
+          "name": "A - PONTEY"
+        },
+        {
+          "regionID": "IT-23-AO-04",
+          "name": "A - POLLEIN SAINT MARCEL"
+        },
+        {
+          "regionID": "IT-23-AO-09",
+          "name": "B - VALLI DI GRESSONEY, AYAS, CHAMPORCHER"
+        },
+        {
+          "regionID": "IT-23-AO-07",
+          "name": "B - MEDIA VAL D'AYAS BRUSSON"
+        },
+        {
+          "regionID": "IT-23-AO-08",
+          "name": "B - MEDIA VALLE DEL LYS"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Seit Donnerstag fielen in den an die Gefahrenstufe 4, \"gro\u00df\" angrenzenden Gebieten oberhalb von rund 1800 m 20 bis 40 cm Schnee. Bis Samstag fallen oberhalb von rund 1800 m bis zu 20 cm Schnee. <br/> Der starke Wind verfrachtet den Neuschnee intensiv. Die frischen Triebschneeansammlungen \u00fcberlagern besonders an sehr steilen Schattenh\u00e4ngen eine schwache Altschneedecke."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Valle d'Aosta",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "Die Lawinenaktivit\u00e4t nimmt langsam ab.",
+          "tendencyType": "decreasing",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : { },
+    "avalancheActivity" : {
+      "highlights" : "Triebschnee meiden.",
+      "comment" : "Die Lawinengefahr ist oberhalb 1800 m mäßig, darunter ist sie gering. Triebschnee bildet das Hauptproblem. Dieser kann stellenweise mit geringer Zusatzbelastung als meist kleine Schneebrettlawine ausgelöst werden. Gefahrenstellen befinden sich vor allem im kammnahen Steilgelände der Hangrichtungen Süd über Nord bis Ost sowie in eingewehten Rinnen und Mulden. Die Häufigkeit der Gefahrenstellen nimmt mit der Höhe zu."
+    },
+    "snowpackStructure" : {
+      "comment" : "Wind aus Nordost verfrachtet am Montag den Schnee kleinräumig. Frischer, störanfälliger Triebschnee entsteht. Auch im älteren, durch Westwind entstandenen Triebschnee können noch einzelne störanfällige Schichten vorhanden sein. Der ältere Triebschnee ist überschneit und schwer zu erkennen. In den Hochlagen der Allgäuer Alpen gibt es zudem unter einem Harschdeckel in der Altschneedecke eine Schicht aus kantig aufgebauten Kristallen. Die Altschneedecke in den höheren Lagen wurde stark vom Wind geprägt, die Schneehöhen sind sehr unterschiedlich. Insgesamt liegt noch wenig Schnee."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Rückgang der Lawinengefahr.",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "some",
+      "avalancheSize" : 2,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "SW", "NE", "E", "W", "N", "S" ]
+    } ],
+    "bulletinID" : "a8e2a8f7-f9b2-45ef-8564-1955974bdd6e",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "1800"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Werdenfelser Alpen",
+      "regionID" : "DE-BY-30"
+    }, {
+      "name" : "Westliche Bayrische Voralpen",
+      "regionID" : "DE-BY-41"
+    }, {
+      "name" : "Berchtesgadener Alpen",
+      "regionID" : "DE-BY-60"
+    }, {
+      "name" : "Allgäuer Alpen",
+      "regionID" : "DE-BY-12"
+    }, {
+      "name" : "Ammergauer Alpen",
+      "regionID" : "DE-BY-20"
+    } ]
+  }, {
+    "publicationTime" : "2024-12-08T16:00:00Z",
+    "validTime" : {
+      "startTime" : "2024-12-08T16:00:00Z",
+      "endTime" : "2024-12-09T16:00:00Z"
+    },
+    "unscheduled" : false,
+    "weatherForecast" : { },
+    "avalancheActivity" : {
+      "highlights" : "Kleinräumig frischer Triebschnee",
+      "comment" : "Die Lawinengefahr ist gering. Kleinräumiger Triebschnee kann oberhalb der Waldgrenze teilweise mit geringer Zusatzbelastung als kleine Schneebrettlawine ausgelöst werden. Gefahrenstellen befinden sich vor allem im kammnahen Steilgelände der Süd- und Westexpositionen sowie in eingewehten Rinnen und Mulden. Die Absturzgefahr ist größer als die Verschüttungsgefahr."
+    },
+    "snowpackStructure" : {
+      "comment" : "Wind aus Nordost verfrachtet am Montag den Schnee kleinräumig. Frischer, störanfälliger Triebschnee entsteht. Älterer, durch Westwind entstandener Triebschnee hat sich meist gut verbunden und ist kaum noch zu stören. Die Altschneedecke in den höheren Lagen wurde stark vom Wind geprägt, die Schneehöhen sind sehr unterschiedlich. Insgesamt liegt noch wenig Schnee."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Das Triebschneeproblem geht mit der Wetterberuhigung rasch zurück.",
+      "validTime" : {
+        "startTime" : "2024-12-09T16:00:00Z",
+        "endTime" : "2024-12-10T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-09"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "SW", "W", "S" ]
+    } ],
+    "bulletinID" : "33a70509-4065-479d-93b1-61c099c91809",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Östliche Chiemgauer Alpen",
+      "regionID" : "DE-BY-52"
+    }, {
+      "name" : "Westliche Chiemgauer Alpen",
+      "regionID" : "DE-BY-51"
+    }, {
+      "name" : "Allgäuer Voralpen",
+      "regionID" : "DE-BY-11"
+    }, {
+      "name" : "Östliche Bayrische Voralpen",
+      "regionID" : "DE-BY-43"
+    }, {
+      "name" : "Zentrale Bayrische Voralpen",
+      "regionID" : "DE-BY-42"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "Wind aus Nordost lässt kleinräumig frischen Triebschnee entstehen."
+  }
+}

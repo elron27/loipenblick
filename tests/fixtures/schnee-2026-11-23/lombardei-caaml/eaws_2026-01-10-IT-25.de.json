@@ -1,0 +1,306 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "Mit Neuschnee und starkem Wind wachsen die zuvor kleinen Triebschneeansammlungen im Tagesverlauf an. Neu- und Triebschnee liegen auf grobk\u00f6rnigem Altschnee. Vorsicht an Triebschneeh\u00e4ngen in Kammlagen, Rinnen und Mulden. <br/> Die Lawinen sind teilweise mittelgro\u00df und schon von einzelnen Wintersportlern ausl\u00f6sbar.",
+        "highlights": "Frische und schon etwas \u00e4ltere Triebschneeansammlungen bilden die Hauptgefahr. Kleine und mittlere trockene Lawinen sind m\u00f6glich."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "few",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "W",
+            "SE",
+            "NW",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "frequency": "few",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "E",
+            "NE",
+            "W",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "frequency": "few",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "85fc0109-7867-47bd-8d30-51717a520ecf",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6",
+            "DP1"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        },
+        {
+          "mainValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-25-SO-03",
+          "name": "RETICHE ORIENTALI"
+        },
+        {
+          "regionID": "IT-25-SO-04",
+          "name": "IT-25-SO-04"
+        },
+        {
+          "regionID": "IT-25-SO-01",
+          "name": "RETICHE OCCIDENTALI"
+        },
+        {
+          "regionID": "IT-25-SO-02",
+          "name": "RETICHE CENTRALI"
+        },
+        {
+          "regionID": "IT-25-BS-01",
+          "name": "ADAMELLO"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Es fielen gebietsweise 5 cm Schnee. Der starke Wind verfrachtet den Neuschnee intensiv. Die st\u00f6ranf\u00e4lligen Triebschneeansammlungen liegen vor allem an windgesch\u00fctzten Schattenh\u00e4ngen oberhalb von rund 2500 m auf schwachen Schichten. Lawinen k\u00f6nnen mit geringer Belastung ausgel\u00f6st werden. <br/> Die Schneedecke ist allgemein kleinr\u00e4umig sehr unterschiedlich. In tiefen und mittleren Lagen liegt f\u00fcr Schneesport zu wenig Schnee. <br/>"
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Lombardia",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "tendencyType": "increasing",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In der Schneedecke sind besonders an Schattenh\u00e4ngen keine ausgepr\u00e4gten Schwachschichten vorhanden. Die Lawinen sind meist klein.",
+        "highlights": "Schwacher Altschnee ist die Hauptgefahr. In der Schneedecke sind besonders an Schattenh\u00e4ngen keine ausgepr\u00e4gten Schwachschichten vorhanden."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "NE",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "frequency": "few",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "aa11204b-4116-4714-9d4e-54cdc0796ea6",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP1"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-25-CO-01",
+          "name": "IT-25-CO-01"
+        },
+        {
+          "regionID": "IT-25-BG-01",
+          "name": "OROBIE CENTRALI"
+        },
+        {
+          "regionID": "IT-25-BS-02",
+          "name": "PREALPI BRESCIANE"
+        },
+        {
+          "regionID": "IT-25-LC-01",
+          "name": "OROBIE OCCIDENTALI"
+        },
+        {
+          "regionID": "IT-25-BG-02",
+          "name": "PREALPI BERGAMASCHE"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Einzelne Gefahrenstellen liegen in schattigen, windgesch\u00fctzten Lagen. Es liegt f\u00fcr Schneesport meist zu wenig Schnee."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Lombardia",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "tendencyType": "steady",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Es sind kaum noch Lawinen zu erwarten.",
+        "highlights": "Schwacher Altschnee ist die Hauptgefahr."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers",
+          "aspects": [
+            "NE",
+            "NW",
+            "N"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "frequency": "few",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "4f7ddfc1-f16d-4fa1-bd2b-3c4503a28be9",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-01-10"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP1"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "de",
+      "publicationTime": "2026-01-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-25-PV-01",
+          "name": "IT-25-PV-01"
+        },
+        {
+          "regionID": "IT-25-VA-01",
+          "name": "PREALPI OCCIDENTALI"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "In der Schneedecke sind besonders an Schattenh\u00e4ngen vereinzelt st\u00f6ranf\u00e4llige Schwachschichten vorhanden."
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA Lombardia",
+          "website": "https://bollettini-de.aineva.it"
+        }
+      },
+      "tendency": [
+        {
+          "tendencyType": "steady",
+          "validTime": {
+            "startTime": "2026-01-10T23:00:00+00:00",
+            "endTime": "2026-01-11T23:00:00+00:00"
+          }
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "startTime": "2026-01-09T23:00:00+00:00",
+        "endTime": "2026-01-10T23:00:00+00:00"
+      }
+    }
+  ]
+}

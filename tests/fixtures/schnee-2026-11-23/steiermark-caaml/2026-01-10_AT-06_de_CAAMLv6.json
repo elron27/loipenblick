@@ -1,0 +1,193 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2026-01-09T17:43:10Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Steiermark"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht auf Samstag schneit es von den Niederen Tauern bis zur Koralpe, hier werden noch bis zu 10 cm Neuschnee erwartet. \nTagsüber lockern die Wolken südlich des Alpenhauptkammes auf und es kann sich auch mal die Sonne zeigen. Nördlich des Alpenhauptkammes kommen Auflockerungen selten vor und im Laufe des Nachmittags setzen erneut Schneefälle ein. \nDer Nordwestwind weht lebhaft, teilweise auch kräftig. Die Temperatur sinkt wieder auf -6 bis -9 Grad in 2000 m Seehöhe."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Mäßige Lawinengefahr oberhalb der Waldgrenze durch frischen Triebschnee!",
+      "comment" : "Die Lawinengefahr ist oberhalb der Waldgrenze mäßig. Frische Triebschneeansammlungen, vorwiegend in den Sektoren Nord über Ost bis Süd, können an einigen Stellen hinter Kämmen, Geländekanten und in Rinnen und Mulden durch geringe Zusatzbelastung als mittlere Schneebrettlawinen ausgelöst werden."
+    },
+    "snowpackStructure" : {
+      "comment" : "Seit Donnerstag wird bis zu 30 cm Neuschnee, teilweise mit Graupel durchsetzt, vorallem in den Nordalpen durch kräftigen West- bis Nordwestwind in die östlichen Sektoren verfrachtet und bildet dort gebundenen Triebschnee. In windarmen Regionen und Geländeformen bleibt der Neuschnee auch locker und pulvrig. Der frische Triebschnee kann Schwachschichten enthalten und liegt zusätzlich oft auf einer instabilen Schicht aus kantigen Kristallen oder Oberflächenreif. Im Fundament der Schneedecke schwächt aufbauende Umwandlung (Schwimmschnee) die Stabilität."
+    },
+    "tendency" : [ {
+      "highlights" : "In der Nacht auf Sonntag kommt in den Nordstauregionen noch etwas Neuschnee hinzu und die Lawinengefahr steigt weiterhin langsam an.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "N", "SE", "S", "E", "NE" ]
+    } ],
+    "bulletinID" : "a0d33e3f-1a0f-4eb2-b6e0-e350182b1826",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "elevation" : {
+        "upperBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    }, {
+      "mainValue" : "moderate",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Eisenerzer Alpen",
+      "regionID" : "AT-06-09"
+    }, {
+      "name" : "Wölzer Tauern Süd",
+      "regionID" : "AT-06-07"
+    }, {
+      "name" : "Murberge, Gurktaler Alpen",
+      "regionID" : "AT-06-18"
+    }, {
+      "name" : "Rottenmanner Tauern",
+      "regionID" : "AT-06-06"
+    }, {
+      "name" : "Seetaler Alpen",
+      "regionID" : "AT-06-17"
+    }, {
+      "name" : "Wölzer Tauern Nord",
+      "regionID" : "AT-06-05"
+    }, {
+      "name" : "Koralpe Ost",
+      "regionID" : "AT-06-16"
+    }, {
+      "name" : "Stub- und Gleinalpe",
+      "regionID" : "AT-06-15"
+    }, {
+      "name" : "Ennstaler Alpen",
+      "regionID" : "AT-06-03"
+    }, {
+      "name" : "Totes Gebirge Süd",
+      "regionID" : "AT-06-02"
+    }, {
+      "name" : "Dachsteingebiet",
+      "regionID" : "AT-06-01"
+    }, {
+      "name" : "Hochschwabgebiet",
+      "regionID" : "AT-06-10"
+    }, {
+      "name" : "Gaaler Alpen",
+      "regionID" : "AT-06-08-02"
+    }, {
+      "name" : "Triebener Tauern",
+      "regionID" : "AT-06-08-01"
+    }, {
+      "name" : "Schladminger Tauern Nord",
+      "regionID" : "AT-06-04-01"
+    }, {
+      "name" : "Schladminger Tauern Süd",
+      "regionID" : "AT-06-04-02"
+    } ]
+  }, {
+    "publicationTime" : "2026-01-09T17:43:10Z",
+    "validTime" : {
+      "startTime" : "2026-01-09T16:00:00Z",
+      "endTime" : "2026-01-10T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "source" : {
+      "person" : {
+        "name" : "Lawinenwarndienst Steiermark"
+      }
+    },
+    "weatherForecast" : {
+      "comment" : "In der Nacht auf Samstag lässt der Schneefall in den östlichen Gebirgsgruppen der Steiermark nach, nur Samstagnachmittag können noch ein paar wenige Zentimeter Neuschnee dazukommen. Südlich des Alpenhauptkammes kann sich auch mal die Sonne zeigen. \nDer Nordwestwind weht stark und die Temperatur sinkt wieder auf -6 bis -8 Grad in 2000 m Seehöhe."
+    },
+    "avalancheActivity" : {
+      "highlights" : "Geringe Lawinengefahr, aber frischen Triebschnee beachten!",
+      "comment" : "Die Lawinengefahr ist gering. Frische Triebschneelinsen in eingewehten Rinnen und Mulden sowie hinter Rücken und Kämmen oberhalb der Waldgrenze sind aber störanfällig und können durch einzelne Personen als kleine Schneebrettlawinen ausgelöst werden."
+    },
+    "snowpackStructure" : {
+      "comment" : "Frische Triebschneelinsen liegen oft auf kantigen Kristallen oder Oberflächenreif, die als Schwachschicht wirken können. Abgesehen davon ist die Altschneeoberfläche nur von wenigen Zentimetern Neuschnee überdeckt. Generell schwächt aufbauende Umwandlung das geringmächtige Schneedeckenfundament. Windexponiertes Gelände ist meist abgeblasen und nahezu schneefrei."
+    },
+    "tendency" : [ {
+      "highlights" : "In der Nacht auf Sonntag kommt in den Nordstauregionen ein wenig Neuschnee hinzu und die Lawinengefahr steigt dort leicht an.",
+      "tendencyType" : "increasing",
+      "validTime" : {
+        "startTime" : "2026-01-10T16:00:00Z",
+        "endTime" : "2026-01-11T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2026-01-10"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "wind_slab",
+      "elevation" : {
+        "lowerBound" : "treeline"
+      },
+      "validTimePeriod" : "all_day",
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "N", "SE", "S", "E", "NE" ]
+    } ],
+    "bulletinID" : "f91a7591-ebcd-49e1-af55-e96c9831e079",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Fischbacher Alpen Ost, Wechselgebiet",
+      "regionID" : "AT-06-13"
+    }, {
+      "name" : "Mürztaler Alpen",
+      "regionID" : "AT-06-12"
+    }, {
+      "name" : "Mürzsteger Alpen",
+      "regionID" : "AT-06-11"
+    }, {
+      "name" : "Fischbacher Alpen West, Grazer Bergland",
+      "regionID" : "AT-06-14"
+    } ]
+  } ],
+  "customData" : {
+    "ALBINA" : {
+      "generalHeadline" : "Neuschnee und Wind sorgen für mäßige Lawinengefahr oberhalb der Waldgrenze!"
+    }
+  }
+}

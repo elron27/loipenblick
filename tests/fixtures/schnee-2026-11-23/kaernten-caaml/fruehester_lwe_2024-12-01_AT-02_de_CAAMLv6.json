@@ -1,0 +1,78 @@
+{
+  "bulletins" : [ {
+    "publicationTime" : "2024-11-30T16:05:38Z",
+    "validTime" : {
+      "startTime" : "2024-11-30T16:00:00Z",
+      "endTime" : "2024-12-01T16:00:00Z"
+    },
+    "unscheduled" : true,
+    "weatherForecast" : {
+      "comment" : "Der Sonntag bringt strahlenden Sonnenschein. Unterhalb von rund 1300 m könnte sich aber teils zäher Hochnebel halten. Der Wind schwächt sich im Vergleich zu den Vortagen deutlich ab und kommt nur schwach aus südöstlicher Richtung. In 2000 m hat es zu Mittag +1 Grad."
+    },
+    "avalancheActivity" : {
+      "highlights" : "In Rinnen und Mulden sind vereinzelt Lawinen möglich.",
+      "comment" : "Rinnen und Mulden oberhalb von rund 2600 m: Lawinen können vereinzelt vor allem mit großer Belastung ausgelöst werden, sind aber meist klein. Dies vor allem in schattigen, windgeschützten Lagen entlang der Grenze zu Salzburg. Schon eine kleine Lawine kann Personen mitreißen und zum Absturz bringen."
+    },
+    "snowpackStructure" : {
+      "comment" : "Rinnen und Mulden in schattigen, windgeschützten Lagen: Frische und schon etwas ältere Triebschneeansammlungen überlagern oberhalb von rund 2600 m eine schwache Altschneedecke. Mit tiefen Temperaturen und geringer Luftfeuchtigkeit wurde die Schneedecke in den letzten Tagen aufbauend umgewandelt und verlor damit an Festigkeit. Der obere Teil der Schneedecke ist weich. Der mittlere Teil der Schneedecke ist kantig aufgebaut. Der untere Teil der Schneedecke ist hart. Es liegt erst wenig Schnee."
+    },
+    "travelAdvisory" : { },
+    "tendency" : [ {
+      "highlights" : "Kaum Änderung der Lawinengefahr.",
+      "tendencyType" : "steady",
+      "validTime" : {
+        "startTime" : "2024-12-01T16:00:00Z",
+        "endTime" : "2024-12-02T16:00:00Z"
+      }
+    } ],
+    "customData" : {
+      "ALBINA" : {
+        "mainDate" : "2024-12-01"
+      },
+      "LWD_Tyrol" : {
+        "dangerPatterns" : [ ]
+      }
+    },
+    "avalancheProblems" : [ {
+      "problemType" : "persistent_weak_layers",
+      "elevation" : {
+        "lowerBound" : "2600"
+      },
+      "validTimePeriod" : "all_day",
+      "snowpackStability" : "poor",
+      "frequency" : "few",
+      "avalancheSize" : 1,
+      "customData" : {
+        "ALBINA" : {
+          "avalancheType" : "slab"
+        }
+      },
+      "aspects" : [ "NW", "W", "NE", "N", "E" ]
+    } ],
+    "bulletinID" : "847477d6-0d23-4837-812e-41d05c749d90",
+    "dangerRatings" : [ {
+      "mainValue" : "low",
+      "validTimePeriod" : "all_day"
+    } ],
+    "lang" : "de",
+    "regions" : [ {
+      "name" : "Ankogel Group",
+      "regionID" : "AT-02-03-01"
+    }, {
+      "name" : "Hafner Group",
+      "regionID" : "AT-02-03-02"
+    }, {
+      "name" : "Goldberg Group",
+      "regionID" : "AT-02-01-02"
+    }, {
+      "name" : "Glockner Group",
+      "regionID" : "AT-02-01-01"
+    }, {
+      "name" : "Schober Group",
+      "regionID" : "AT-02-02"
+    } ]
+  } ],
+  "customData" : {
+    "generalHeadline" : "In Rinnen und Mulden sind vereinzelt Lawinen möglich."
+  }
+}

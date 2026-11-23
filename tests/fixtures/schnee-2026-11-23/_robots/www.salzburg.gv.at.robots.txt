@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /typo3/
+Disallow: /typo3_src/
+Allow: /typo3/sysext/frontend/Resources/Public/*
+Sitemap: https://service.salzburg.gv.at/lkorrj/sitemap.xml

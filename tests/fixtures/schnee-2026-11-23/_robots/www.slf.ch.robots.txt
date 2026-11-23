@@ -1,0 +1,4 @@
+Allow: /                                      # Allow bot to enter
+Disallow: /typo3/                             # Nothing to see here
+Disallow: /*?id=*                             # Disable non-realurl
+Disallow: /*&L=*                              # Disable non-realurl

@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<caaml:Bulletin xmlns:caaml="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd" gml:id="BulletinDeID3559" xml:lang="de">
+  <caaml:metaDataProperty>
+    <caaml:MetaData>
+      <caaml:dateTimeReport>1993-12-13T07:30:00+01:00</caaml:dateTimeReport>
+      <caaml:srcRef xlink:href="OpIDLwdTirol"/>
+      <caaml:comment>Rudi Mair</caaml:comment>
+    </caaml:MetaData>
+  </caaml:metaDataProperty>
+  <caaml:validTime>
+    <caaml:TimeInstant>
+      <caaml:timePosition>1993-12-13+01:00</caaml:timePosition>
+    </caaml:TimeInstant>
+  </caaml:validTime>
+  <caaml:bulletinResultsOf>
+    <caaml:BulletinMeasurements>
+      <caaml:extFiles>
+        <caaml:ExtFile gml:id="DangerRatingMapColour">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/resources/colour/svg/de</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="DangerRatingMapDetail">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/resources/detail/svg/de</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="BulletinPhoto">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/resources/bulletinphoto/jpg</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="Generallevel">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/resources/generallevel/svg</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="Tendency">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/resources/tendency/svg</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+        <caaml:ExtFile gml:id="Pdf">
+          <caaml:fileReferenceURI>https://lawine.tirol.gv.at/rest/bulletin/1993-12-13_073000/pdf/de</caaml:fileReferenceURI>
+        </caaml:ExtFile>
+      </caaml:extFiles>
+      <caaml:comment>-</caaml:comment>
+      <caaml:highlights>Lagebericht vom Montag, den 13. Dezember 1993</caaml:highlights>
+      <caaml:dangerRatings>
+        <caaml:DangerRating>
+          <caaml:validTime>
+            <caaml:TimeInstant>
+              <caaml:timePosition>1993-12-13+01:00</caaml:timePosition>
+            </caaml:TimeInstant>
+          </caaml:validTime>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:validTime>
+            <caaml:TimeInstant>
+              <caaml:timePosition>1993-12-14+01:00</caaml:timePosition>
+            </caaml:TimeInstant>
+          </caaml:validTime>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R1"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R1"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R1"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R1"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R2"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R2"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R2"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R2"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R3"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R4"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R5"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R6"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R7"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R7"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R7"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R7"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R8"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R8"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R8"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R8"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R9"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R9"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R9"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R9"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R10"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R10"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R10"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R10"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R11"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R11"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R11"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>4</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R11"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>3</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R12"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R12"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T00:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T11:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R12"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:beginPosition>2200</caaml:beginPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+        <caaml:DangerRating>
+          <caaml:locRef xlink:href="AT7R12"/>
+          <caaml:validTime>
+            <caaml:TimePeriod>
+              <caaml:beginPosition>1993-12-13T12:00:00+01:00</caaml:beginPosition>
+              <caaml:endPosition>1993-12-13T23:59:59+01:00</caaml:endPosition>
+            </caaml:TimePeriod>
+          </caaml:validTime>
+          <caaml:validElevation>
+            <caaml:ElevationRange uom="m">
+              <caaml:endPosition>2200</caaml:endPosition>
+            </caaml:ElevationRange>
+          </caaml:validElevation>
+          <caaml:mainValue>2</caaml:mainValue>
+        </caaml:DangerRating>
+      </caaml:dangerRatings>
+      <caaml:wxSynopsisHighlights>Alpinwetterbericht der ZAMG-Wetterdienststelle Innsbruck</caaml:wxSynopsisHighlights>
+      <caaml:wxSynopsisComment>Eine Warmfront streift heute die Alpennordseite und führt im Außerfern und Unterland zeitweise zu leichten Niederschlägen. Bei lebhaften bis stürmischen Höhenwinden aus Südwest bis Nordwest steigen die Temperaturen in 2000m von -2 auf +1 Grad, in 3000m von -8 auf -3 Grad.</caaml:wxSynopsisComment>
+      <caaml:avActivityHighlights></caaml:avActivityHighlights>
+      <caaml:avActivityComment></caaml:avActivityComment>
+      <caaml:snowpackStructureHighlights>Schneedeckenaufbau</caaml:snowpackStructureHighlights>
+      <caaml:snowpackStructureComment>In den vergangenen 24 Stunden gab es in Tirols Bergen nochmals 10cm Neuschneezuwachs. </caaml:snowpackStructureComment>
+      <caaml:travelAdvisoryHighlights>Beurteilung der Lawinengefahr</caaml:travelAdvisoryHighlights>
+      <caaml:travelAdvisoryComment>In den Tiroler Tourengebieten herrschen derzeit großteils ungünstige Verhältnisse.&#xd;
+Auf der Unterlage der schwach bis mäßig verfestigten Novemberschneedecke bildeten die Neuschneefälle, die mit stürmischen nordwestlichen Höhenwinden verbunden waren, zahlreiche neue Schneebretter. Dabei sind neben kammnahen Windschattenhängen besonders Rinnen und Mulden zu beachten, in denen gefährliche Triebschneeablagerungen liegen. Hier besteht eine erhebliche (Stufe 3), oberhalb von etwa 2200m auch große (Stufe 4) Schneebrettgefahr.&#xd;
+Regionale Abweichungen:	&#xd;
+Mäßige Schneebrettgefahr im südlichen Osttirol.&#xd;
+Verkehrswege:	&#xd;
+Es ist nur für exponierte Verkehrswege inneralpiner Seitentäler mit einzelnen Selbstauslösungen mittlerer Lawinen zu rechnen.&#xd;
+</caaml:travelAdvisoryComment>
+    </caaml:BulletinMeasurements>
+  </caaml:bulletinResultsOf>
+  <caaml:locRef xlink:href="AT7"/>
+</caaml:Bulletin>

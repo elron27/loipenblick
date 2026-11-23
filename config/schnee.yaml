@@ -1,0 +1,297 @@
+# Quellen der Schneekarte (S6, E-33, E-35). Stand der Pruefung: 23.11.2026, Schnappschuesse und Lizenzseiten in
+# tests/fixtures/schnee-2026-11-23/ (quellen.md, lizenzen/), Uebersicht in docs/schneekarte-quellen.md.
+#
+# Pflicht je Quelle: key, name, adapter, lizenz, namensnennung, einnahmen (ja | nein | unklar), geprueft_am.
+# erlaubnis wie B27 (liegt_vor | ausstehend | nur_test). Eine Quelle mit einnahmen nein oder unklar wird gesammelt,
+# aber spaeter nur in der Testversion gezeigt (S6 AK 4). Open-Meteo ist nicht erlaubt (E-33).
+# uhrzeiten: volle Stunden (Europe/Berlin), zu denen der Worker die Quelle abruft. Lageberichte dreimal am Tag,
+# damit Abendbericht (17 Uhr) und Morgen-Aktualisierung (ca. 8 Uhr) als eigene Fassungen vorliegen (S4 AK 1).
+# archiv_ab: frueheste gefundene Daten (Stichproben), Grundlage fuer das Nachladen (S5).
+# Reihenfolge der Gebiete (Stefan, 23.11.2026): Bayern, Tirol, Salzburg, Suedtirol, dann der Rest des Alpenraums.
+
+quellen:
+  # ------------------------------------------------------------------------------------------- Lageberichte
+  - key: lawinen-warnung-eu
+    name: Lageberichte Bayern, Salzburg und weitere österreichische Länder (lawinen-warnung.eu)
+    adapter: caaml_url
+    laender: [DE, AT, SI]
+    lizenz: nicht angegeben; LWD Bayern verlangt Einwilligung, LWD Salzburg behält alle Rechte vor
+    lizenz_url: https://lawinenwarndienst.bayern.de/impressum/
+    namensnennung: "Lawinenwarndienst Bayern, Lawinenwarndienst Salzburg und die jeweiligen Landeswarndienste"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2024-12-01
+    uhrzeiten: [8, 12, 18]
+    regionen: [DE-BY, AT-05, AT-08, AT-06, AT-04, AT-03, SI]
+    url_neu: https://static.lawinen-warnung.eu/bulletins/latest/{region}_{sprache}_CAAMLv6.json
+    url_tag: https://static.lawinen-warnung.eu/bulletins/{datum}/{datum}_{region}_{sprache}_CAAMLv6.json
+    link: https://lawinen-warnung.eu/bulletin/{datum}
+
+  - key: euregio
+    name: Lageberichte Tirol, Südtirol und Trentino (Euregio, avalanche.report)
+    adapter: caaml_url
+    laender: [AT, IT]
+    lizenz: nicht angegeben (Open-Data-Seite ist eine JavaScript-Anwendung); Tiroler OGD sonst CC BY 4.0
+    lizenz_url: https://avalanche.report/more/open-data
+    namensnennung: "Lawinenwarndienst Tirol, Südtirol und Trentino (Euregio), avalanche.report"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2018-12-04
+    uhrzeiten: [8, 12, 18]
+    regionen: [EUREGIO]
+    nur_regionen: [AT-07, IT-32-BZ, IT-32-TN]
+    url_neu: https://static.avalanche.report/bulletins/latest/{region}_{sprache}_CAAMLv6.json
+    url_tag: https://static.avalanche.report/bulletins/{datum}/{datum}_{region}_{sprache}_CAAMLv6.json
+    link: https://avalanche.report/bulletin/{datum}
+
+  - key: kaernten
+    name: Lagebericht Kärnten (Lawinenwarndienst Kärnten)
+    adapter: caaml_url
+    laender: [AT]
+    lizenz: CC BY 4.0
+    lizenz_url: https://lawinenwarndienst.ktn.gv.at/info/opendata
+    namensnennung: "Daten bereitgestellt vom Lawinenwarndienst Kärnten, Amt der Kärntner Landesregierung"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    archiv_ab: 2021-01-25
+    uhrzeiten: [8, 12, 18]
+    regionen: [AT-02]
+    url_neu: https://static.avalanche.report/bulletins/latest/{region}_{sprache}_CAAMLv6.json
+    url_tag: https://static.avalanche.report/bulletins/{datum}/{datum}_{region}_{sprache}_CAAMLv6.json
+    link: https://lawinenwarndienst.ktn.gv.at/
+
+  - key: slf
+    name: Lawinenbulletin Schweiz (SLF)
+    adapter: caaml_url
+    laender: [CH]
+    lizenz: CC BY 4.0
+    lizenz_url: https://www.slf.ch/en/services-and-products/slf-data-service
+    namensnennung: "WSL-Institut für Schnee- und Lawinenforschung SLF, www.slf.ch"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    archiv_ab: 2023-11-15
+    uhrzeiten: [9, 12, 18]
+    regionen: [CH]
+    # activeAt liefert den gerade gueltigen Bericht ohne Umrisse (ca. 60 KB statt 2 MB)
+    url_neu: https://aws.slf.ch/api/bulletin/caaml/{sprache}/json?activeAt={jetzt}
+    url_tag: https://aws.slf.ch/api/bulletin/caaml/{sprache}/json?activeAt={datum}T12:00:00.000Z
+    tage: [0]
+    link: https://www.slf.ch/de/lawinenbulletin-und-schneesituation/
+
+  - key: aineva
+    name: Lageberichte italienische Alpen (AINEVA)
+    adapter: caaml_url
+    laender: [IT]
+    lizenz: nicht angegeben ("© Copyright Associazione interregionale")
+    lizenz_url: https://www.aineva.it/
+    namensnennung: "AINEVA und die regionalen Lawinenwarndienste"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2021-12-15
+    uhrzeiten: [8, 12, 18]
+    regionen: [IT-21, IT-23, IT-25, IT-34, IT-36, IT-57]
+    url_neu: https://bollettini.aineva.it/albina_files/latest/{region}_{sprache}_CAAMLv6.json
+    url_tag: https://bollettini.aineva.it/albina_files/{datum}/{datum}_{region}_{sprache}_CAAMLv6.json
+    link: https://bollettini.aineva.it/
+
+  - key: eaws-frankreich
+    name: Lageberichte Frankreich (Météo-France, über die EAWS-Sammlung)
+    adapter: caaml_url
+    laender: [FR]
+    lizenz: nicht gefunden (Météo-France)
+    lizenz_url: https://meteofrance.com/
+    namensnennung: "Météo-France, über avalanche.report"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2021-12-01
+    uhrzeiten: [8, 18]
+    regionen: [FR]
+    url_tag: https://static.avalanche.report/eaws_bulletins/{datum}/{datum}-{region}.json
+    tage: [0, 1]
+    link: https://meteofrance.com/meteo-montagne
+
+  # Fuer das Nachladen frueherer Winter (S5): umgewandelte CAAML-v6-Dateien aller Dienste ab 2021.
+  - key: eaws-archiv
+    name: EAWS-Sammlung früherer Lageberichte (avalanche.report)
+    adapter: caaml_url
+    enabled: false  # nur fuer `python -m loipen.worker schnee-archiv`, nicht im taeglichen Lauf
+    laender: [DE, AT, IT, SI, CH, FR]
+    lizenz: wie der jeweilige Warndienst
+    lizenz_url: https://static.avalanche.report/eaws_bulletins/
+    namensnennung: "die jeweiligen Lawinenwarndienste, über avalanche.report"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2021-01-25
+    regionen: [DE-BY, AT-05, AT-08, AT-06, AT-04, AT-03, AT-02, SI]
+    url_tag: https://static.avalanche.report/eaws_bulletins/{datum}/{datum}-{region}.json
+
+  - key: eaws-regionen
+    name: Warnregionen der Lawinenwarndienste (EAWS)
+    adapter: eaws_regionen
+    laender: [DE, AT, IT, SI, CH, FR]
+    lizenz: CC0 1.0
+    lizenz_url: https://gitlab.com/eaws/eaws-regions/-/raw/master/LICENSE
+    namensnennung: "EAWS micro-regions (CC0)"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    uhrzeiten: [5]
+    wochentage: [0]  # montags
+    regionen: [DE-BY, AT-07, AT-05, IT-32-BZ, IT-32-TN, AT-02, AT-03, AT-04, AT-06, AT-08, SI, CH, IT-21, IT-23,
+               IT-25, IT-34, IT-36, FR]
+    url: https://regions.avalanches.org/micro-regions/{region}_micro-regions.geojson.json
+
+  # ------------------------------------------------------------------------------------------- Messstationen
+  - key: bayern-stationen
+    name: Messstationen Lawinenwarndienst Bayern
+    adapter: bayern_stationen
+    laender: [DE]
+    lizenz: "Weiterverwendung nur mit Einwilligung (Impressum)"
+    lizenz_url: https://lawinenwarndienst.bayern.de/impressum/
+    namensnennung: "Lawinenwarndienst Bayern"
+    einnahmen: nein
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    # weatherWeb liefert nur rund 2,7 Tage: zweimal am Tag holen, damit keine Luecke entsteht
+    uhrzeiten: [7, 19]
+    url_liste: https://api-la-dok.bayern.de/public/weatherstations/all/
+    url_werte: https://api-la-dok.bayern.de/public/weatherWeb/{id}
+
+  - key: dwd-klima
+    name: DWD Tageswerte Bayerische Alpen
+    adapter: dwd_klima
+    laender: [DE]
+    lizenz: CC BY 4.0
+    lizenz_url: https://opendata.dwd.de/climate_environment/CDC/Nutzungsbedingungen_German.txt
+    namensnennung: "Deutscher Wetterdienst"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    archiv_ab: 1900-08-01
+    uhrzeiten: [11]
+    tage: 14
+    # KL: Zugspitze Plattform, Garmisch, Mittenwald (2), Oberstdorf, Kiefersfelden, Schoenau am Koenigssee,
+    # Bad Kohlgrub, Halblech, Oy-Mittelberg (Auszug in tests/fixtures/schnee-2026-11-23/dwd-klima/)
+    kl: [20278, 1550, 3307, 6103, 3730, 3679, 19856, 2708, 15214, 3857]
+    # RR mit Neuschnee (NSH_TAG): Berchtesgaden, Berchtesgaden/Jenner
+    rr: [6190, 7287]
+    url_kl: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/recent/tageswerte_KL_{id}_akt.zip
+    url_rr: https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/more_precip/recent/tageswerte_RR_{id}_akt.zip
+
+  - key: euregio-stationen
+    name: Wetterstationen Tirol, Südtirol und Trentino (avalanche.report)
+    adapter: euregio_stationen
+    laender: [AT, IT]
+    lizenz: "Tiroler Daten CC BY 4.0 (data.tirol.gv.at); für den Gesamtdatensatz nicht angegeben"
+    lizenz_url: https://www.tirol.gv.at/data/nutzungsbedingungen
+    namensnennung: "Datenquelle: Land Tirol - data.tirol.gv.at; Lawinenwarndienste Südtirol und Trentino"
+    einnahmen: unklar
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    archiv_ab: 2026-11-17
+    uhrzeiten: [7, 12, 18]
+    url: https://static.avalanche.report/weather_stations/stations.geojson
+    url_archiv: https://static.avalanche.report/weather_stations/{datum}_{stunde}-00_stations.geojson
+    archiv_stunden: [6, 18]
+
+  - key: salzburg-stationen
+    name: Messstationen Lawinenwarndienst Salzburg
+    adapter: salzburg_stationen
+    laender: [AT]
+    lizenz: "Copyright Land Salzburg, sämtliche Rechte vorbehalten"
+    lizenz_url: https://lawine.salzburg.at/impressum
+    namensnennung: "Lawinenwarndienst Salzburg"
+    einnahmen: nein
+    erlaubnis: nur_test
+    geprueft_am: 2026-11-23
+    # nur aktuelle Werte, keine Zeitreihe: dreimal am Tag sichern
+    uhrzeiten: [7, 12, 18]
+    url: https://www.salzburg.gv.at/lawine/Station.js
+
+  - key: suedtirol-stationen
+    name: Wetterstationen Südtirol (Wetterdienst der Provinz Bozen)
+    adapter: suedtirol_stationen
+    laender: [IT]
+    lizenz: CC0 1.0
+    lizenz_url: https://data.civis.bz.it/de/dataset/misure-meteo-e-idrografiche
+    namensnennung: "Wetterdienst Südtirol, Autonome Provinz Bozen (CC0)"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    uhrzeiten: [7, 12, 18]
+    sensoren: [HS, LT, N]
+    url_stationen: https://geoservices.buergernetz.bz.it/services/meteo/v1/stations
+    url_sensor: https://geoservices.buergernetz.bz.it/services/meteo/v1/sensors?sensor_code={sensor}
+
+  - key: geosphere-klima
+    name: GeoSphere Austria Klima-Tageswerte (Stationen ab 700 m)
+    adapter: geosphere_klima
+    laender: [AT]
+    lizenz: CC BY 4.0
+    lizenz_url: https://dataset.api.hub.geosphere.at/v1/docs/user-guide/license.html
+    namensnennung: "GeoSphere Austria (CC BY 4.0)"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    archiv_ab: 1775-01-01
+    uhrzeiten: [10]
+    min_hoehe: 700
+    tage: 7
+    paket: 50
+    url_meta: https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d/metadata
+    url_daten: https://dataset.api.hub.geosphere.at/v1/station/historical/klima-v2-1d?parameters={parameter}&station_ids={ids}&start={von}T00:00&end={bis}T00:00&output_format=csv
+
+  - key: geosphere-snowgrid
+    name: GeoSphere SNOWGRID, modellierte Schneehöhe an den Loipengebieten in Österreich
+    adapter: geosphere_snowgrid
+    laender: [AT]
+    lizenz: CC BY 4.0
+    lizenz_url: https://data.hub.geosphere.at/dataset/snowgrid_cl-v2-1d-1km
+    namensnennung: "GeoSphere Austria, SNOWGRID-CL (CC BY 4.0)"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    archiv_ab: 1961-01-01
+    uhrzeiten: [10]
+    tage: 3
+    paket: 40
+    url: https://dataset.api.hub.geosphere.at/v1/timeseries/historical/snowgrid_cl-v2-1d-1km?parameters=snow_depth&start={von}T00:00&end={bis}T00:00&{lat_lon}&output_format=geojson
+
+  - key: era5-land
+    name: ERA5-Land (Copernicus), Schneefall und Schneehöhe je Warnregion für den ganzen Alpenraum
+    adapter: era5_land
+    laender: [DE, AT, IT, CH, FR, SI, LI]
+    lizenz: CC BY 4.0
+    lizenz_url: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview
+    namensnennung: "Generated using Copernicus Climate Change Service information [Jahr]. Muñoz Sabater, J. (2019): ERA5-Land hourly data from 1950 to present. C3S Climate Data Store, DOI 10.24381/cds.e2161bac"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz; Nutzungsbedingungen einmal auf der Datensatzseite annehmen
+    geprueft_am: 2026-11-23
+    archiv_ab: 1950-01-01
+    uhrzeiten: [9]
+    verzug_tage: 5
+    fenster_tage: 7
+    flaeche: [48.5, 4.5, 43.0, 17.5]  # Nord, West, Süd, Ost
+    groessen: [sf, hs]
+
+  - key: slf-stationen
+    name: IMIS-Stationen Schweiz (SLF)
+    adapter: slf_stationen
+    laender: [CH]
+    lizenz: CC BY 4.0
+    lizenz_url: https://www.slf.ch/en/services-and-products/slf-data-service
+    namensnennung: "WSL-Institut für Schnee- und Lawinenforschung SLF, www.slf.ch"
+    einnahmen: ja
+    erlaubnis: liegt_vor  # offene Lizenz
+    geprueft_am: 2026-11-23
+    uhrzeiten: [9]
+    tage: 3
+    url_stationen: https://measurement-api.slf.ch/public/api/imis/stations
+    url_tage: https://measurement-api.slf.ch/public/api/imis/daily-snow?period_in_days={tage}
