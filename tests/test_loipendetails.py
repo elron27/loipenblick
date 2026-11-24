@@ -310,3 +310,58 @@ def test_p43_stammdaten_bleiben_ohne_detailseite(session):
     for l in mit:
         session.refresh(l)
         assert (l.hoechster_punkt_m, l.herkunft["hoechster_punkt_m"]["herkunft"]) == vorher[l.id]
+
+
+@pytest.mark.req("U49")
+def test_u49_bestandsaufnahme_zaehlt_zusatzangaben(tmp_path):
+    from loipen.bestandsaufnahme import als_markdown, lies_seite
+
+    (tmp_path / "daten").mkdir()
+    (tmp_path / "daten.json").write_text(json.dumps({"erzeugt": "2026-11-24", "regionen": [
+        {"name": "Testtal", "datei": "daten/testtal.json", "strecken": "strecken/testtal.json"}]}), encoding="utf-8")
+    loipe = {"quelle": {"name": "Q"}, "lat": 47.6, "lon": 12.0, "laenge_km": 5}
+    gebiete = [
+        {"name": "A", "land": "DE", "parkplaetze": [], "loipengebuehr": {"text": "5 €"}, "haltestellen": [{"name": "H"}],
+         "webcams": [{"name": "W", "url": "https://x"}], "verleih": [],
+         "loipen": [dict(loipe, id=1, hinweis="Spur neu", details={"hoehenmeter": 40, "merkmale": ["einkehr"]}),
+                    dict(loipe, id=2, details={"dauer_min": 90})]},
+        {"name": "B", "land": "AT", "parkplaetze": [], "verleih": [{"name": "V"}], "loipen": [dict(loipe, id=3)]}]
+    (tmp_path / "daten" / "testtal.json").write_text(json.dumps({"gebiete": gebiete}), encoding="utf-8")
+    b = lies_seite(tmp_path)
+    g = b.gesamt
+    assert (g.loipen, g.hoehe, g.dauer, g.merkmale, g.hinweis) == (3, 1, 1, 1, 1)
+    md = als_markdown(b)
+    assert "| mit Merkmalen | 1 | 1 (33 %) |" in md
+    assert "| mit Webcam | 1 | 1 (50 %) |" in md and "| mit Skiverleih | 1 | 1 (50 %) |" in md
+    assert "| mit Loipengebühr | 1 | 1 (50 %) |" in md
+
+
+@pytest.mark.req("B32", ak=[1, 2])
+def test_b32_saisonpruefung_listet_handangaben_und_markiert_befunde():
+    from datetime import date
+
+    from loipen import saison
+    from loipen.konfig import CONFIG_DIR
+
+    heute = date(2026, 11, 24)
+    assert saison.winter(heute) == "2026/27" and saison.winter(date(2027, 3, 28)) == "2026/27"
+    assert saison.betraege("Tageskarte 7 € · Woche € 25,- · 7,50 EUR") == {7.0, 25.0, 7.5}
+    angaben = saison.lade(CONFIG_DIR)
+    bay = [a for a in angaben if a.art == "Loipengebühr" and a.url == "https://www.bayrischzell.de/langlaufen"]
+    assert bay and bay[0].eur == 7.0
+    a = bay[0]
+    a.geprueft_am = "2026-11-09"
+    assert saison.pruefe(a, 200, "Loipengebühr 7 € pro Tag", heute) == []
+    assert saison.pruefe(a, 200, "Loipengebühr 9 € pro Tag", heute) == [
+        "Betrag 7 € nicht mehr auf der Seite gefunden, Gebühr prüfen"]
+    assert saison.pruefe(a, 404, None, heute) == ["Seite nicht erreichbar (404)"]
+    a.geprueft_am = "2025-12-01"
+    assert "Prüfdatum 2025-12-01 aus Winter 2025/26" in saison.pruefe(a, 200, "7 €", heute)
+    for x in angaben:
+        x.befund = saison.pruefe(x, 200, None, heute)
+    md = saison.bericht(angaben, heute)
+    assert md.startswith("# Saisonprüfung der Handangaben, Winter 2026/27")
+    assert "| Gebiet | Art | Angabe | Prüfdatum | Befund | Quelle |" in md
+    assert len(md.splitlines()) == len(angaben) + 6
+    wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "saisonpruefung.yml").read_text(encoding="utf-8")
+    assert "cron: \"0 6 3 11 *\"" in wf and "cron: \"0 6 28 3 *\"" in wf and "gh issue create" in wf

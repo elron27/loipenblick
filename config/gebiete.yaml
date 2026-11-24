@@ -409,6 +409,14 @@ gebiete:
     eur: 7.0
     text: 7 € pro Tag inklusive Parken, mit Gästekarte frei
     url: https://www.bayrischzell.de/langlaufen
+  # U49/B32: Webcams nur als Link (feratel, Seite am 24.11.2026 geprueft)
+  webcams:
+  - name: Sudelfeld Bergstation Kitzlahner
+    url: https://www.feratel.com/en/webcams/germany/bavaria/bayrischzell-sudelfeld-bergstation-kitzlahner-3185
+    geprueft_am: 2026-11-24
+  - name: Wendelstein
+    url: https://www.feratel.com/en/webcams/germany/bavaria/bayrischzell-wendelstein-3195
+    geprueft_am: 2026-11-24
   parkplaetze:
   - name: Parkplatz Stocker
     lat: 47.638704239463

@@ -43,14 +43,22 @@ from loipen.osmauszug import (  # noqa: E402
     starts_je_gebiet,
 )
 
-GEOFABRIK = [
-    "europe/germany/bayern-latest.osm.pbf",
-    "europe/germany/baden-wuerttemberg-latest.osm.pbf",
-    "europe/austria-latest.osm.pbf",
-    "europe/switzerland-latest.osm.pbf",
-    "europe/liechtenstein-latest.osm.pbf",
-    "europe/italy/nord-est-latest.osm.pbf",
-]
+# Je Gebiet die Auszuege: zuerst Geofabrik, sonst der Spiegel von openstreetmap.fr (Geofabrik war am 24.11.2026
+# vom GitHub-Runner aus nicht erreichbar). Suedtirol/Cortina: Trentino-Suedtirol und Venetien.
+AUSZUEGE = {
+    "bayern": ["https://download.geofabrik.de/europe/germany/bayern-latest.osm.pbf",
+               "https://download.openstreetmap.fr/extracts/europe/germany/bayern-latest.osm.pbf"],
+    "baden-wuerttemberg": ["https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf",
+                           "https://download.openstreetmap.fr/extracts/europe/germany/baden_wurttemberg-latest.osm.pbf"],
+    "austria": ["https://download.geofabrik.de/europe/austria-latest.osm.pbf",
+                "https://download.openstreetmap.fr/extracts/europe/austria-latest.osm.pbf"],
+    "switzerland": ["https://download.geofabrik.de/europe/switzerland-latest.osm.pbf",
+                    "https://download.openstreetmap.fr/extracts/europe/switzerland-latest.osm.pbf"],
+    "liechtenstein": ["https://download.geofabrik.de/europe/liechtenstein-latest.osm.pbf",
+                      "https://download.openstreetmap.fr/extracts/europe/liechtenstein-latest.osm.pbf"],
+    "italien-nordost": ["https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf",
+                        "https://download.openstreetmap.fr/extracts/europe/italy/trentino_alto_adige-latest.osm.pbf"],
+}
 OSRM_BILD = "ghcr.io/project-osrm/osrm-backend:v5.27.1"
 FILTER = ["nwr/highway=bus_stop", "nwr/railway=station,halt", "nwr/public_transport=platform,stop_position,station",
           "nwr/amenity=parking", "nwr/shop=ski", "nwr/rental=ski", "nwr/service:ski:rental=yes"]
@@ -68,10 +76,17 @@ def lade_auszuege(ordner: Path) -> Path:
     if gemischt.exists():
         return gemischt
     dateien = []
-    for pfad in GEOFABRIK:
-        datei = ordner / pfad.rsplit("/", 1)[-1]
+    for name, urls in AUSZUEGE.items():
+        datei = ordner / f"{name}.osm.pbf"
+        for url in urls if not datei.exists() else []:
+            try:
+                sh("curl", "-sSfL", "--retry", "3", "--connect-timeout", "30", "-o", str(datei), url)
+                break
+            except subprocess.CalledProcessError:
+                log.warning("Auszug %s nicht erreichbar: %s", name, url)
+                datei.unlink(missing_ok=True)
         if not datei.exists():
-            sh("curl", "-sSfL", "--retry", "3", "-o", str(datei), f"https://download.geofabrik.de/{pfad}")
+            raise RuntimeError(f"Auszug {name} von keinem Server erhaeltlich")
         dateien.append(str(datei))
     sh("osmium", "merge", "--overwrite", "-o", str(gemischt), *dateien)
     return gemischt

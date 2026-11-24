@@ -52,6 +52,7 @@ jobs:
           fi
       - name: Auftraege aus scripts/stammdaten.txt
         run: |
+          set -o pipefail
           grep -vE '^\s*(#|$)' scripts/stammdaten.txt | while read -r auftrag argumente; do
             echo "::group::$auftrag $argumente"
             case "$auftrag" in
@@ -64,9 +65,13 @@ jobs:
           done 2>&1 | tee .stammdaten.log
           tail -5 .stammdaten.log >> "$GITHUB_STEP_SUMMARY"
       - name: Ergebnis auf den Branch legen
+        # auch nach einem fehlgeschlagenen Auftrag: was die anderen gesammelt haben, bleibt erhalten
+        if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A config/stammdaten config/osm 2>/dev/null || true
+          for ordner in config/stammdaten config/osm; do
+            if [ -d "$ordner" ]; then git add -A "$ordner"; fi
+          done
           git diff --cached --quiet || git commit -m "Stammdaten gesammelt ($(date -u +%F))"
           git pull --no-rebase --no-edit origin "${GITHUB_REF_NAME}" && git push

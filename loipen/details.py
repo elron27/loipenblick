@@ -68,7 +68,10 @@ BEGRIFFE = {
 IGNORIERT = {"highlight tour", "top tour", "ausgewiesene loipe", "geführte tour", "rundtour",
              "streckentour", "kulturell / historisch", "botanische highlights", "faunistische highlights",
              "geologische highlights", "aussichtsreich", "kulturell/historisch", "loipengütesiegel",
-             "tiroler langlaufspezialisten"}
+             "tiroler langlaufspezialisten",
+             # tourinfra-Abzeichen ohne eigenes Merkmal (Sammellauf 24.11.2026)
+             "marathonloipe", "senioren geeignet", "tourtipp", "umziehmöglichkeit", "überwiegend sonnig",
+             "überwiegend schattig", "laufrichtungsempfehlung beachten", "schweiz mobil loipen"}
 
 
 def normiere_merkmal(text: str) -> str | None:

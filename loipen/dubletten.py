@@ -20,6 +20,7 @@ import math
 import re
 from dataclasses import dataclass
 from difflib import SequenceMatcher
+from functools import lru_cache
 
 from loipen.adapters.normalisierung import slugify
 
@@ -55,16 +56,19 @@ def _ohne_loipe(t: str) -> str:
     return t
 
 
-def woerter(name: str, gebiet_name: str = "") -> list[str]:
+@lru_cache(maxsize=None)
+def woerter(name: str, gebiet_name: str = "") -> tuple[str, ...]:
     ort = set(slugify(gebiet_name).split("-")) if gebiet_name else set()
-    return [_ohne_loipe(t) for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort
-            and not NUMMER.fullmatch(t) and not KENNUNG.fullmatch(t)]
+    return tuple(_ohne_loipe(t) for t in slugify(name).split("-") if t and t not in FUELLWOERTER and t not in ort
+                 and not NUMMER.fullmatch(t) and not KENNUNG.fullmatch(t))
 
 
+@lru_cache(maxsize=None)
 def kennungen(name: str) -> set[str]:
-    return {t for t in slugify(name).split("-") if KENNUNG.fullmatch(t) and not NUMMER.fullmatch(t)}
+    return frozenset(t for t in slugify(name).split("-") if KENNUNG.fullmatch(t) and not NUMMER.fullmatch(t))
 
 
+@lru_cache(maxsize=None)
 def nummern(name: str) -> set[str]:
     """Loipennummern im Namen: '01 Toblacher Stadionrunde' -> {'1'}, 'Loipe Biathlonzentrum 1B' -> {'1b'}.
 
@@ -72,9 +76,10 @@ def nummern(name: str) -> set[str]:
     ohne_laenge = re.sub(r"\d+(?:[.,]\d+)?\s*(?:km|m)\b", " ", name, flags=re.I)
     # "11 B Val Fonda Runde" = "11B Toblach: Val Fonda Runde"
     t = slugify(re.sub(r"\b(\d+)\s+([A-Za-z])\b", r"\1\2", ohne_laenge)).split("-")
-    return {re.sub(r"^(nr)?0*(?=\d)", "", x) for x in t if NUMMER.fullmatch(x)}
+    return frozenset(re.sub(r"^(nr)?0*(?=\d)", "", x) for x in t if NUMMER.fullmatch(x))
 
 
+@lru_cache(maxsize=None)
 def schluessel(name: str, gebiet_name: str = "") -> str:
     return "".join(woerter(name, gebiet_name))
 
@@ -95,8 +100,9 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
         # P32: der Name besteht nur aus dem Ortsnamen ("Loipe Hinterriss" im Gebiet Hinterriß); gleicher Name im
         # gleichen Gebiet ist dieselbe Loipe
         return a.gebiet == b.gebiet and kurzname(a.name).lower() == kurzname(b.name).lower()
-    aehnlich = SequenceMatcher(None, ka, kb).ratio()
     abstand = _km(a, b)
+    if abstand is not None and abstand >= max(NAH_KM, GLEICH_NAH_KM):
+        return False  # zu weit weg, egal wie aehnlich (spart den teuren Namensvergleich)
     if abstand is None:
         # D18: Gebietsgrenzen setzen die Quellen verschieden (Seefeld/Leutasch), die Region ist dieselbe
         selbe = a.gebiet == b.gebiet or (a.region and a.region == b.region)
@@ -120,7 +126,8 @@ def gleich(a: Eintrag, b: Eintrag) -> bool:
         klein, gross = sorted((wa, wb), key=len)
         # ein einzelnes gemeinsames Wort reicht nicht ("Waldloipe" ist nicht "Waldloipe Alpenbad")
         return ka == kb or (len(klein) >= 2 and klein <= gross)
-    return (aehnlich >= AEHNLICH and abstand < NAH_KM) or (ka == kb and abstand < GLEICH_NAH_KM)
+    return ((abstand < NAH_KM and SequenceMatcher(None, ka, kb).ratio() >= AEHNLICH)
+            or (ka == kb and abstand < GLEICH_NAH_KM))
 
 
 def _naehe(b: Eintrag, e: Eintrag) -> tuple:
@@ -148,5 +155,6 @@ def finde_dubletten(eintraege: list[Eintrag]) -> dict[int, int]:
     return fuehrend
 
 
+@lru_cache(maxsize=None)
 def kurzname(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip()

@@ -1,0 +1,33 @@
+name: Saisonpruefung
+
+# B32: Anfang November und Ende Maerz alle Handangaben (Gebuehren, Parkplaetze, Webcams, Verleih) mit Quell-URL
+# und Pruefdatum auflisten, die Quellseiten abrufen und dafuer ein GitHub-Issue oeffnen.
+on:
+  schedule:
+    - cron: "0 6 3 11 *"
+    - cron: "0 6 28 3 *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      LOIPEN_USER_AGENT: ${{ vars.LOIPEN_USER_AGENT || 'LoipenBot/0.1 (+https://github.com/elron27/loipenblick)' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python scripts/saisonpruefung.py --ausgabe saisonpruefung.md
+      - name: Issue oeffnen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          titel="$(head -1 saisonpruefung.md | sed 's/^# //')"
+          gh issue create --repo "${GITHUB_REPOSITORY}" --title "$titel" --body-file saisonpruefung.md
