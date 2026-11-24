@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sonnenloipe Ost - Ramsau am Dachstein</title>
+    <meta name="description" content="" />
+
+            <link href="/_global/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/_global/css/mdb.min.css" rel="stylesheet">
+        <link href="/_global/css/greensolutionsfonts/style.css" rel="stylesheet">
+    <link href="/ramsau/css/style.php" rel="stylesheet">
+        <link rel='stylesheet' href='/_global/css/leaflet/leaflet.css'/>
+    <link rel="stylesheet" href="/_global/css/leaflet/MarkerCluster.css"/>
+    <link rel="stylesheet" href="/_global/css/leaflet/leaflet.label.css"/>
+    <link rel="stylesheet" href="/_global/css/leaflet/easy-button.css"/>
+    <link rel="stylesheet" href="/_global/js/sidebar-v2-master/css/leaflet-sidebar.css"/>
+
+            <meta property="og:title" content="Sonnenloipe Ost" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="http://module.tourinfra.com/ramsau/details.php?id=31499" />
+        <meta property="og:image" content="https://image.tourinfra.com/crop?stripmeta=true&type=webp&width=1220&height=610&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg" />
+
+        <script type="text/javascript" src="/_global/js/jquery-3.3.1.min.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.2.1/dist/maplibre-gl.css" rel='stylesheet' />
+
+    <link rel="stylesheet" href="/_global/js/leaflet/Leaflet.Gesture-Handling/leaflet-gesture-handling.min.css" type="text/css">
+    <link rel="stylesheet" href="/_global/css/leaflet/MarkerCluster.Default_POI.css"/>
+    <link rel='stylesheet' href='/_global/css/leaflet/leaflet.fullscreen.css'/>
+    <!--<link rel='stylesheet' href='/_global/css/leaflet/leaflet.elevation-0.0.4.css'/>-->
+    <link rel='stylesheet' href='/_global/css/leaflet/leaflet-elevation.css'/>
+    <link rel="stylesheet" href="/_global/js/leaflet/leaflet-routing-machine-3.2.12/leaflet-routing-machine.css"/>
+    <link rel="stylesheet" href="/_global/js/leaflet/leaflet-control-geocoder-1.6.0/Control.Geocoder.css"/>
+    <link rel="stylesheet" href="/_global/js/shariff-3.0.1/shariff.complete.css"/>
+    <link rel="stylesheet" href="/_global/js/yt-consent/yt-consent.css"/>
+    
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+              crossorigin="anonymous">
+        <script type="text/javascript">
+        const docRoot = "/ramsau/";
+        const docGlobal = "/_global/";
+        const TrackingMatomo = "10";
+        const google_anal = "";
+        const google_anal_tag = "";
+        const Tracking_Matomo_noDisclaimer = false;
+    </script>
+
+            <link type="text/css" rel="stylesheet" href="/_global/js/gdpr/gdpr-cookie.css"/>
+
+        <script type="application/javascript" src="/_global/js/gdpr/gdpr-cookie.js"></script>
+        <script type="application/javascript" src="/_global/js/gdpr/tracker-loaders.js"></script>
+
+        <div class="gdpr-cookie" style="display:none;">
+            <div class="gdpr-cookie__dialog"><h3 class="gdpr-cookie__header">
+                    Datenschutzeinstellungen
+                </h3>
+                <p class="gdpr-cookie__row gdpr-cookie__summary">
+                    Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während andere uns helfen, diese
+                    Website und Ihre Erfahrung zu verbessern.
+                </p>
+                <div class="gdpr-cookie__row">
+                    <button class="gdpr-cookie__button gdpr-cookie__button--allow"><span>Ich akzeptiere</span></button>
+                </div>
+                <div class="gdpr-cookie__row">
+                    <button class="gdpr-cookie__button gdpr-cookie__button--deny">
+                        Keine Cookies zulassen
+                    </button>
+                </div>
+                <div class="gdpr-cookie__row"><span class="gdpr-cookie__details-link">
+                Cookie Details anzeigen
+            </span>
+                    <div class="gdpr-cookie__details"><h4 class="gdpr-cookie__details-header">
+                            Hier finden Sie eine Übersicht über alle verwendeten Cookies
+                        </h4>
+                        <ul class="gdpr-cookie__list">
+                            <li>Google Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gdpr-cookie__row gdpr-cookie__links"><a class="gdpr-cookie__link" href="/ramsau/datenschutz.php">Datenschutzerklärung</a><span
+                            class="gdpr-cookie__link-separator gdpr-cookie__link"></span><a class="gdpr-cookie__link" href="/ramsau/impressum.php">Impressum</a>
+                </div>
+            </div>
+        </div>
+
+
+        </head>
+
+
+
+<body class="mdb-skin-custom" data-spy="scroll" data-target="#scrollspy" data-offset="15">
+<script type="text/javascript">
+    var cat = 'Langlauf';
+    var tid =31499;
+    var geolat = 47.423932;
+    var geolong = 13.69971;
+    var tourlength =4.6;
+    var neighbortourssearchdist = 5;
+    var neighbortours = true;
+    var tourMarkerWidth = 80;
+    var tourMarkerHeigth = 57;
+    var baseMaps = new Array();
+    var defaultmap = null;
+
+    var poimarker = new Array();
+    var poiinfos = new Array();
+    poiinfos['tourpois'] = new Array();
+    var poicount = new Array();
+    var poidist = new Array();
+
+    var CombinedSurface = {};
+    var showBelag = false;
+    var etappentour = null;
+
+        var haspoidefault = false;
+    var defaultpois = [];
+    
+    var constantpoi = "";
+    var constantpoiimg = "";
+    var poiicon = null;
+
+    var defneighbortours = "neighbor";
+
+    var preloadntours =false;
+    var preloadvarianten =true;
+    var preloadkms =false;
+    
+    var hideprofil =false;
+
+    function getBanner(zoneid, idType, idVal) {
+        var m3_u = (location.protocol == 'https:' ? 'https://services.freizeitalpin.at/revive/www/delivery/ajs.php' : 'http://services.freizeitalpin.at/revive/www/delivery/ajs.php');
+        var m3_r = Math.floor(Math.random() * 99999999999);
+        if (!document.MAX_used) document.MAX_used = ',';
+        document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+        document.write("?zoneid=" + zoneid);
+        document.write("&amp;" + idType + "=" + idVal);
+        document.write('&amp;cb=' + m3_r);
+        if (document.MAX_used != ',') document.write("&amp;exclude=" + document.MAX_used);
+        document.write(document.charset ? '&amp;charset=' + document.charset : (document.characterSet ? '&amp;charset=' + document.characterSet : ''));
+        document.write("&amp;loc=" + escape(window.location));
+        if (document.referrer) document.write("&amp;referer=" + escape(document.referrer));
+        if (document.context) document.write("&context=" + escape(document.context));
+        if (document.mmm_fo) document.write("&amp;mmm_fo=1");
+        document.write("'><\/scr" + "ipt>");
+    }
+
+    function initImageMarker() {
+            }
+
+    function drawEinstiege() {
+                L.marker([47.42381,13.69775], {icon: einstiegIcon}).bindTooltip("Einstieg: Ramsau am Dachstein/Alte Mühle").addTo(map);
+            }
+
+    function drawUmleitungen() {
+        var i = 0;
+            }
+
+    function drawVarianten() {
+        var i = 0;
+                var polyline = L.polyline([[47.425205,13.666781],[47.425097,13.667254],[47.425009,13.668193],[47.424695,13.669866],[47.424589,13.670228],[47.424391,13.670558],[47.4243,13.670963],[47.424408,13.671234],[47.42443,13.671423],[47.424582,13.673401],[47.424883,13.675027],[47.425269,13.676409],[47.425373,13.677014],[47.425394,13.677407]], {color: 'purple',weight: 4,  dashArray: '5, 5',opacity:0.6,TourID: 150049});//.bindTooltip("Variante: Zubringer 60: Gruberhof-Feisterer");
+        var infowindow = L.popup({minWidth: 200});
+        polyline.bindPopup(infowindow);
+        polyline.on('click', function (e) {
+            var popup = e.target.getPopup();
+            if (!(e.target.options.TourID in infowindowelements)) {
+
+                $.getJSON(docRoot + "inc/ajax.php", {
+                    ajaxtype: 'gettour',
+                    id: e.target.options.TourID
+                }, function (data) {
+                    var tid = data[0];
+                    var infowindowstr = data[1];
+
+                    infowindowelements[tid] = infowindowstr;
+
+                    popup.setContent("<div class='infobox'>" + infowindowstr + "<br style='clear: both;' /></div>");
+                });
+            } else {
+                popup.setContent("<div class='infobox'>" + infowindowelements[e.target.options.TourID] + "<br style='clear: both;' /></div>");
+            }
+        });
+
+        map.on('popupclose', function (e) {
+            setTimeout(function () {
+                preview.eachLayer(function (layer) {
+                    layer.setStyle({opacity: 0});
+                });
+            }, 100);
+        });
+        varianten[i++] = polyline;
+                var polyline = L.polyline([[47.42715,13.677572],[47.426892,13.677373],[47.426607,13.677067],[47.426343,13.676998],[47.425997,13.677014],[47.425717,13.676907],[47.425531,13.676792],[47.425303,13.676555],[47.425246,13.676425],[47.425081,13.676379],[47.424807,13.676394],[47.424357,13.676616],[47.423244,13.677419]], {color: 'purple',weight: 4,  dashArray: '5, 5',opacity:0.6,TourID: 150050});//.bindTooltip("Variante: Zubringer 61: Strasser-Feisterer");
+        var infowindow = L.popup({minWidth: 200});
+        polyline.bindPopup(infowindow);
+        polyline.on('click', function (e) {
+            var popup = e.target.getPopup();
+            if (!(e.target.options.TourID in infowindowelements)) {
+
+                $.getJSON(docRoot + "inc/ajax.php", {
+                    ajaxtype: 'gettour',
+                    id: e.target.options.TourID
+                }, function (data) {
+                    var tid = data[0];
+                    var infowindowstr = data[1];
+
+                    infowindowelements[tid] = infowindowstr;
+
+                    popup.setContent("<div class='infobox'>" + infowindowstr + "<br style='clear: both;' /></div>");
+                });
+            } else {
+                popup.setContent("<div class='infobox'>" + infowindowelements[e.target.options.TourID] + "<br style='clear: both;' /></div>");
+            }
+        });
+
+        map.on('popupclose', function (e) {
+            setTimeout(function () {
+                preview.eachLayer(function (layer) {
+                    layer.setStyle({opacity: 0});
+                });
+            }, 100);
+        });
+        varianten[i++] = polyline;
+                var polyline = L.polyline([[47.424519726189,13.681910634041],[47.424236635702,13.681760430336],[47.423884585152,13.681545853615],[47.423674079574,13.681417107582],[47.423452684869,13.681384921074],[47.423383725672,13.681508302689],[47.423332913575,13.681787252426],[47.423194994777,13.682168126106],[47.423038928333,13.682237863541],[47.42287560249,13.68218421936],[47.42271590562,13.682098388672],[47.422458211921,13.682173490524],[47.422185998898,13.682098388672],[47.421975486528,13.681840896606],[47.421605273078,13.681433200836],[47.421434683651,13.681079149246],[47.421351203517,13.680735826492],[47.420937430465,13.679158687592],[47.420639802223,13.678632974625],[47.420247801485,13.677946329117],[47.420051800021,13.677302598953],[47.419924,13.677099],[47.419630757372,13.676884174347],[47.419311343461,13.676240444183],[47.419097189867,13.675682544708]], {color: 'purple',weight: 4,  dashArray: '5, 5',opacity:0.6,TourID: 150051});//.bindTooltip("Variante: Rupmoos - Simonbauer (C-E)");
+        var infowindow = L.popup({minWidth: 200});
+        polyline.bindPopup(infowindow);
+        polyline.on('click', function (e) {
+            var popup = e.target.getPopup();
+            if (!(e.target.options.TourID in infowindowelements)) {
+
+                $.getJSON(docRoot + "inc/ajax.php", {
+                    ajaxtype: 'gettour',
+                    id: e.target.options.TourID
+                }, function (data) {
+                    var tid = data[0];
+                    var infowindowstr = data[1];
+
+                    infowindowelements[tid] = infowindowstr;
+
+                    popup.setContent("<div class='infobox'>" + infowindowstr + "<br style='clear: both;' /></div>");
+                });
+            } else {
+                popup.setContent("<div class='infobox'>" + infowindowelements[e.target.options.TourID] + "<br style='clear: both;' /></div>");
+            }
+        });
+
+        map.on('popupclose', function (e) {
+            setTimeout(function () {
+                preview.eachLayer(function (layer) {
+                    layer.setStyle({opacity: 0});
+                });
+            }, 100);
+        });
+        varianten[i++] = polyline;
+                if (typeof (preloadvarianten) !== "undefined" && preloadvarianten==true) {
+            $("#varianten").click();
+        }
+    }
+    function hideVarianten() {
+        for(var i=0;i<varianten.length;i++){
+            map.removeLayer(varianten[i]);
+        }
+    }
+    function showVarianten() {
+        for(var i=0;i<varianten.length;i++){
+           varianten[i].addTo(map);
+        }
+    }
+
+    function initKarten() {
+        let constanttag = constantpoi !== '' ? '&tags=' + constantpoi : '';
+        defaultmap = L.maplibreGL({
+                                                style: 'https://vector.tourinfra.com/styles/main/styles/winter-nur-pisten.json',
+				attribution: "Powered by <a href='https://tourinfra.com/' target='_blank'>tourinfra &reg;</a> | Map data by &copy; <a href='http://www.green-solutions.info/' target='_blank'>green-solutions</a>, <a href='http://www.openstreetmap.org/copyright' target='_blank'>OSM &amp; Contributors</a>"
+                                            });
+baseMaps = {
+	"Vektor Sommer" : L.maplibreGL({
+                                                style: 'https://vector.tourinfra.com/styles/main/styles/sommer.json',
+				attribution: "Powered by <a href='https://tourinfra.com/' target='_blank'>tourinfra &reg;</a> | Map data by &copy; <a href='http://www.green-solutions.info/' target='_blank'>green-solutions</a>, <a href='http://www.openstreetmap.org/copyright' target='_blank'>OSM &amp; Contributors</a>"
+                                            }),
+	"Vektor Sommer Schwarz" : L.maplibreGL({
+                                                style: 'https://vector.tourinfra.com/styles/main/styles/sommer-schwarz.json',
+				attribution: "Powered by <a href='https://tourinfra.com/' target='_blank'>tourinfra &reg;</a> | Map data by &copy; <a href='http://www.green-solutions.info/' target='_blank'>green-solutions</a>, <a href='http://www.openstreetmap.org/copyright' target='_blank'>OSM &amp; Contributors</a>"
+                                            }),
+	"Vektor Winter" : defaultmap,
+	"Basemap Luftbild" : new L.tileLayer('http://{s}.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpeg', {
+		subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+		attribution: "&copy; <a href='http://basemap.at'>Basemap.at</a>"
+	}),
+	"Basemap" : new L.tileLayer('http://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png', {
+		subdomains : ['maps', 'maps1', 'maps2', 'maps3', 'maps4'],
+		attribution: "&copy; <a href='http://basemap.at'>Basemap.at</a>"
+	})};
+    }
+
+    function getPunkteAlongTour(tid) {
+        let spinner = '<div class="preloader-wrapper small active" style="display: inline-block">' +
+            '                <div class="spinner-layer spinner-blue-only">' +
+            '                    <div class="circle-clipper left">' +
+            '                        <div class="circle"></div>' +
+            '                    </div>' +
+            '                    <div class="gap-patch">' +
+            '                        <div class="circle"></div>' +
+            '                    </div>' +
+            '                    <div class="circle-clipper right">' +
+            '                        <div class="circle"></div>' +
+            '                    </div>' +
+            '                </div>' +
+            '            </div>';
+        $("#PunkteAlongTour").html('<hr class="mt-4 mb-4"/><h3 class="mb-0" style="float: left;">Knotenpunkte: ' + spinner + '</h3>');
+        $.post("routing/getdata.php", {
+            cat: 'getPunkteAlongTour',
+            id: tid,
+            seq: 50,
+            rad: 51
+        }, function (data) {
+            let obj = $.parseJSON(data);
+            PunkteAlongTour = obj;
+            let html = "<hr class='mt-4 mb-4'/><h3 class=\"mb-0\" style='float: left;'>Knotenpunkte:</h3>";
+            let count = 0;
+            $.each(obj, function (key, value) {
+                let img = docRoot + "_custom/img/fietseknotenpunkte/" + value["nr"] + "_aktiv.svg";
+                html += "<span style='float: left;text-align: center;padding:5px;'><img src='" + img + "' style='height: 30px;'/><br><span class=\"badge badge-light\">" + value["km"] + " km</span></span>";
+                count++;
+            })
+            if (count) {
+                $("#PunkteAlongTour").html(html + "<br style='clear: both;margin-top: 100px;'>");
+            } else {
+                $("#PunkteAlongTour").html('');
+            }
+        });
+    }
+</script>
+
+
+    <header >
+                        <nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar" style="
+">
+
+            <div class="float-left">
+            </div>
+
+            <div class="mr-auto">
+                <span class="d-none d-md-inline-block">
+                                        <div class="btn-group btn-group-sm ml-4" role="group" title="Zurück">
+                        <button type="button" class="btn btn-primary" id="backbutton"><i class="fa fa-arrow-left" aria-hidden="true"></i> Zurück</button>
+                    </div>                                 
+                                        <span id="dynamicContentWrapper-mainNavbar2"></span>
+                </span>
+            </div>
+
+            <ul class="nav navbar-nav">
+    <li>
+        <div class="btn-group btn-group-sm" data-toggle="buttons">
+            <button type="button" class="btn btn-primary" id="merkliste" ><i class="fa fa-heart" aria-hidden="true"></i>
+                <span class="hidesmall">Merkzettel (<span id="merkzettelcount">0</span>)</span></button>
+        </div>
+    </li>
+</ul>
+<script>
+    $('#merkliste').on('click', function (e) {
+        location.href = "/ramsau/merkliste.php";
+    });
+</script>
+<!--
+<ul class="nav navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="icon-globe"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" titleledby="navbarDropdownMenuLinkLang">
+            <a class="dropdown-item" href="/ramsau/impressum.php">Deutsch</a>
+            <a class="dropdown-item" href="/ramsau/datenschutz.php">Englisch</a>
+        </div>
+    </li>
+</ul>
+-->
+<ul class="nav navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuContent" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="icon-home" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" titleledby="navbarDropdownMenuContent">
+                                                                                                                    </div>
+    </li>
+</ul>
+<ul class="nav navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="icon-Info" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" titleledby="navbarDropdownMenuInfo">
+            <a class="dropdown-item" href="/ramsau/impressum.php">Impressum</a>
+            <a class="dropdown-item" href="/ramsau/datenschutz.php">Datenschutzerklärung</a>
+        </div>
+    </li>
+</ul>
+
+        </nav>
+        <script>
+            $('#backbutton').on('click', function (e) {
+                window.history.back();
+            });
+        </script>
+            </header>
+<main>
+
+    <div class="main-wrapper">
+        <div class="container-fluid" style="margin-top: 70px;">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <section>
+
+                        <div class="">
+
+                            <section class="section" style="margin-top: 60px;">
+
+                                <div class="row"  >
+                                    <div class="col-md-12">
+
+    <div class="card card-cascade wider my-4">
+
+        <div class="view view-cascade overlay">
+                        <div class="row row-eq-height three-sections">
+                <div class="gflexcol align-self-stretch tile-outer col-12 col-md-8" style="padding:0;">
+
+                    <div class="gtilehead" style="margin-right: 1px; position: relative;">
+                        <div id="ImageGallery" class="carousel slide" data-ride="carousel">
+                                                        <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active"><div class="carousel-blur" style="background-image: url('https://image.tourinfra.com/crop?stripmeta=true&type=jpeg&width=1220&height=610&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg');"></div><img class="d-block img-fluid carousel-image-no-scale-aside" src="https://image.tourinfra.com/crop?stripmeta=true&type=jpeg&width=1220&height=610&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg" style="z-index:3;"/>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <p>&copy; </p>
+                </div>
+            </div>                            </div>
+                            
+                        </div>
+                        
+            <!-- Award-Bilder Overlay -->
+                                </div>
+
+                </div>
+
+                <div class="gflexcol align-self-stretch tile-outer col-0 col-md-4" style="padding:0;">
+
+                    <a class="gtilehead" style="height:100%; margin-bottom:1px;background-position: center;background-size: cover; background-image: url(https://smap.tourinfra.com/v1/map/tour/31499/template/default/style/static-map-winter-no-winter-elemente/width/430/height/480/ratio/1.webp)"
+                        href="#mapanchor" >
+
+                        <div class="padding">
+
+                        </div>
+                    </a>
+
+                                    </div>
+            </div>
+        </div>
+
+        
+
+        <div class="card-body card-body-cascade text-center">
+
+            <h1 class="card-title">
+                 <img src='/_global/img/loipen/v1/zustand_k4.svg' style='width: 1.3em;' alt='Klassisch: Geschlossen'>                 <strong>Sonnenloipe Ost   </strong>
+            </h1>
+
+            <h5>
+                                 <img src='/_global/img/pins/langlauf_3_klassisch.svg' style='width: 1.3em;'>                 <span class="font-weight-bold pb-1">Langlauf</span>
+                <!-- | <i class="fa fa-play-circle-o playbutton" aria-hidden="true"></i>-->
+            </h5>
+
+                            <p class="card-text" style="background: #eee;padding: 15px;">
+                    <strong>Aktuelle Bedingung: </strong> Letzte Änderung: 17.11.2026 / 09:53<br><strong>Präparierung: </strong>Klassisch	0 / 4.6 km<br><strong>Status: </strong>Klassisch: Geschlossen                </p>
+
+                        <div class="row text-left">
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                <span class="detPadLine" title="- profiliertes Gel&auml;nde
+- rasante Abfahrten
+- steilere Steigungen">
+                    <span class="badge badgeS3">mittel</span></span>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                    <span class="detPadLine"><i class="icon-dauer"></i> Dauer 00:45 h</span>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                    <span class="detPadLine"><i class="icon-Strecke1"></i> Länge 4,6 km</span>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                    <span class="detPadLine"><i class="icon-hoehenmeter"></i> Höhenmeter 150 hm</span>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                    <span class="detPadLine"><i class="icon-Tiefpunkt1"></i> Tiefpunkt 1036 m</span>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+                    <span class="detPadLine"><i class="icon-Hochpunkt1"></i> Hochpunkt 1176 m</span>
+                </div>
+                <br>
+                
+                
+                <div class="col-6 col-md-3 col-lg-4 detPad">
+    <span class="detPadLine"><i class="icon-anlagenart" title="Anlagen Art"></i> Ausgewiesene Loipe</span>
+</div>
+<div class="col-6 col-md-3 col-lg-4 detPad">
+    <span class="detPadLine"><i class="icon-Loipenart" title="Loipen Art"></i> Klassisch</span>
+</div>
+            </div>
+            <span class="detPadLine" style="text-align: left;"><i class="icon-location"></i> Hauptstartort: Ramsau am Dachstein / <a href="#toTabs" id="ausgangspunkt">Langlaufstadion Ramsau Ort</a></span>
+                            <span class="detPadLine" style="text-align: left;"><i class="icon-location-plus"></i> Weitere Einstiegspunkte: Ramsau am Dachstein/Alte Mühle </span>
+                
+            <script>
+                $(document).ready(function () {
+                    $("#ausgangspunkt").click(function (e) {
+                        $('.nav-tabs a[href="#tAnfahrt"]').click();
+                    });
+                    $("#3dlink").click(function (e) {
+                        $('.nav-tabs a[href="#FlugContent"]').click();
+                    });
+                });
+            </script>
+
+            <span class='badge badge-light mr-1'>Einkehrmöglichkeit</span><span class='badge badge-light mr-1'>Familientauglich</span><span class='badge badge-light mr-1'></span>
+                            <hr/>
+                <h6 class="font-weight-bold py-2">Lawinensituation: <a href="http://www.lawine-steiermark.at/" target="_blank">Hier klicken</a></h6>
+
+                                        <hr/>
+            <h6 class="font-weight-bold py-2">Beste Jahreszeit</h6>
+
+            <div class="row">
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarGreen"
+                     title="Geeignet">Jan
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarGreen"
+                     title="Geeignet">Feb
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarGreen"
+                     title="Geeignet">Mär
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Apr
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Mai
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Jun
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Jul
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Aug
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Sept
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarRed"
+                     title="Ungeeignet">Okt
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarOrange"
+                     title="Witterungsbedingt">Nov
+                </div>
+                <div class="col-6 col-md-3 col-lg-1 p-2 brdrwhite white-text calendarGreen"
+                     title="Geeignet">Dez
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>                                </div>
+                                    <div class="row" style="margin-left: 4%; margin-right: 4%;">
+    <div class="col-md-12">
+    <h4>Tourbeschreibung:</h4>
+    <p>Stadion- Kreitseiler - Helpferer - Rittisberg - Walcherhof - Grahstadl - Knoll - Simonbauer - Mühle - Rupmoos - Billa - Walschenke - Stadion</p>        <div id="PunkteAlongTour">
+
+        </div>
+    </div>
+</div>
+
+                                <hr class="mt-4 mb-4" id="mapanchor"/>
+                                                                        <div class="col-md-12">
+    <div class="d-none d-md-block" id="Kartenelemente">
+        <div class="well well-sm">
+
+            <div class="btn-group">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">Bilder</button>
+                    <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="javascript:;" class="mapinfo" id="webcam"><span class="icon-uncheck"></span> Webcams</a>
+                            </li>                                                <li><a href="javascript:;" class="mapinfo" id="tourbilder"><span class="icon-uncheck"></span> Tourbilder</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">Streckeninfos</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;" class="mapinfo" id="ntours"><span class="icon-uncheck"></span> Touren</a></li>
+                        <li><a href="javascript:;" class="mapinfo" id="kms"><span class="icon-uncheck"></span> Kilometer</a></li>
+                        
+                                                    <li><a href="javascript:;" class="mapinfo" id="varianten"><span class="icon-uncheck"></span> Varianten</a></li>
+                                            </ul>
+                </div>
+
+                                <div class="dropdown" id="overlays">
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">Zusatzinfos</span></button>
+                    <ul class="dropdown-menu" role="menu" id="karteninfo">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="geocMap" class="mapwithoutinfo"></div>
+        <div id="elevation-div" style=""></div> 
+        <div id="routeCoords" class="hidden"></div>
+
+
+    <div id="ajaxLoader" class="hidden"><img src="/_global/images/gleichbleibend/ajax/ajaxloadersmall.gif" width="16" height="16"/></div>
+    <div id="hashlink" class="hidden"></div>
+    <div id="routeId" class="hidden">31499</div>
+    <div id="overlayinfos" class="hidden"></div>
+
+</div>
+
+
+
+                                                                    <style>
+    .nav-justified .nav-item {
+        width: inherit !important;
+        margin-bottom: -1px;
+    }
+</style>
+
+<a id="toTabs"></a>
+
+<hr class="between-sections mt-4 mb-4">
+<ul class="nav nav-tabs nav-justified navkeepmobile">
+            <li class="nav-item"><a class="nav-link active" href="#tVarianten" data-toggle="tab"><span class="fa fa-list-ol"></span> <span class="d-none d-lg-inline">Varianten</span></a></li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tHoehe" role="tab"><span class="icon-hoehenprofil_generieren"></span> <span
+                            class="d-none d-lg-inline">Höhenprofil</span></span></a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tDownloads" role="tab"><i class="fa fa-download"></i> <span class="d-none d-lg-inline">Download</span></a>
+            </li>
+                    <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tAnfahrt" onclick="initAnfahrtsmap();" role="tab"><i class="fa fa-car"></i> <span
+                            class="d-none d-lg-inline">Anfahrt</span></a>
+            </li>
+                    </ul>
+
+<div class="tab-content card">
+
+            <div class="tab-pane in show active" id="tVarianten">
+            <div class="row" style="margin-top:7px; padding-top:7px; border-top:1px dotted #cccccc;">
+
+    <div class="col-sm-2">
+        <a href="/ramsau/details.php?id=150049"><img src="https://image.tourinfra.com/crop?stripmeta=true&type=webp&width=600&height=400&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg" border="0" style="width: 100%;" /></a>
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+
+    <div class="col-sm-6">
+        <i class="fas fa-search" onclick="document.location+='#mapanchor';map.fitBounds(varianten[0].getBounds());"></i> 
+        <a href="/ramsau/details.php?id=150049"><strong>Zubringer 60: Gruberhof-Feisterer</strong></a><br />
+        Startort: Ramsau am Dachstein<br />
+                
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+    
+    <div class="col-sm-4">
+        <div class="row">    
+
+            <div class="col">
+                <p><i class="icon-Strecke1 pr-1"></i> 1 km</p>
+                <p><i class="icon-dauer pr-1"></i> 00:10 h</p>
+                <p><span class="badge badgeS3">Mittel</span></p>
+            </div>
+        
+            <div class="col">
+                <p><i class="icon-hoehenmeter pr-1"></i> 18 hm</p>
+                <p><i class="icon-Hochpunkt1 pr-1"></i> 1148 m</p>
+                <p><i class="icon-Tiefpunkt1 pr-1"></i> 1126 m</p>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="row" style="margin-top:7px; padding-top:7px; border-top:1px dotted #cccccc;">
+
+    <div class="col-sm-2">
+        <a href="/ramsau/details.php?id=150050"><img src="https://image.tourinfra.com/crop?stripmeta=true&type=webp&width=600&height=400&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg" border="0" style="width: 100%;" /></a>
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+
+    <div class="col-sm-6">
+        <i class="fas fa-search" onclick="document.location+='#mapanchor';map.fitBounds(varianten[1].getBounds());"></i> 
+        <a href="/ramsau/details.php?id=150050"><strong>Zubringer 61: Strasser-Feisterer</strong></a><br />
+        Startort: Ramsau am Dachstein<br />
+                
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+    
+    <div class="col-sm-4">
+        <div class="row">    
+
+            <div class="col">
+                <p><i class="icon-Strecke1 pr-1"></i> 1 km</p>
+                <p><i class="icon-dauer pr-1"></i> 00:00 h</p>
+                <p><span class="badge badgeS3">Mittel</span></p>
+            </div>
+        
+            <div class="col">
+                <p><i class="icon-hoehenmeter pr-1"></i> 1 hm</p>
+                <p><i class="icon-Hochpunkt1 pr-1"></i> 1146 m</p>
+                <p><i class="icon-Tiefpunkt1 pr-1"></i> 1105 m</p>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="row" style="margin-top:7px; padding-top:7px; border-top:1px dotted #cccccc;">
+
+    <div class="col-sm-2">
+        <a href="/ramsau/details.php?id=150051"><img src="https://image.tourinfra.com/crop?stripmeta=true&type=webp&width=600&height=400&url=https://www.tourinfra.com/extern-geo-rss-feed/img/img_Langlauf.jpg" border="0" style="width: 100%;" /></a>
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+
+    <div class="col-sm-6">
+        <i class="fas fa-search" onclick="document.location+='#mapanchor';map.fitBounds(varianten[2].getBounds());"></i> 
+        <a href="/ramsau/details.php?id=150051"><strong>Rupmoos - Simonbauer (C-E)</strong></a><br />
+        Startort: Ramsau am Dachstein<br />
+                
+    </div>
+    
+    <div style="height:10px;" class="hidden-lg hidden-md hidden-sm"></div>
+    
+    <div class="col-sm-4">
+        <div class="row">    
+
+            <div class="col">
+                <p><i class="icon-Strecke1 pr-1"></i> 1 km</p>
+                <p><i class="icon-dauer pr-1"></i> 00:00 h</p>
+                <p><span class="badge badgeS3">Mittel</span></p>
+            </div>
+        
+            <div class="col">
+                <p><i class="icon-hoehenmeter pr-1"></i> 10 hm</p>
+                <p><i class="icon-Hochpunkt1 pr-1"></i> 1085 m</p>
+                <p><i class="icon-Tiefpunkt1 pr-1"></i> 1070 m</p>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+        </div>
+                <div class="tab-pane fade" id="tHoehe" role="tabpanel">
+                <br>
+<img src="https://img.tourinfra.com/tourinfra/tours/31499/profiles/profil_31499.svg" style="max-width:800px;width:100%;" border="0" id="hp"/>            </div>
+                    <div class="tab-pane fade" id="tDownloads" role="tabpanel">
+                <!-- Nav tabs -->
+<div class="row">
+    <div class="col-md-3">
+        <ul class="nav md-pills pills-custom flex-column" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#panelgps" role="tab"><i class="fas fa-download ml-2"></i> GPS-Daten
+
+                </a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panelfold" role="tab"><span class="icon-falt-pdf"></span> Faltplan
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panelsingle" role="tab"><span class="icon-single-pdf"></span> Single PDF
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panelmulti" role="tab"><span class="icon-multi-pdf"></span> Multi PDF
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <!-- Tab panels -->
+        <div class="tab-content vertical">
+            <!-- Panel 1 -->
+            <div class="tab-pane fade in show active" id="panelgps" role="tabpanel">
+                <p>Alle Angaben wurden mit größter Sorgfalt erhoben. Die Angaben erfolgen ohne Gewähr und erheben nicht den Anspruch auf Vollständigkeit. Die Verwendung der Daten
+                    hat eigenverantwortlich zu erfolgen. Informieren Sie sich vor Beginn der Tour über die Wetterverhältnisse. Bitte beachten Sie darüber hinaus die Informationen
+                    oder Beschilderung vor Ort und berücksichtigen Sie, dass die Benutzung von Privatstraßen, insbesondere Forststraßen, landwirtschaftlichen Güterwegen und
+                    Wanderwegen rechtlichen Beschränkungen unterliegen kann.</p>
+
+                <p>Die Daten dürfen zum privaten Gebrauch verwendet und weitergegeben werden. Die Daten sind Teil des Tourennetzwerk geo-coaching und durch Urheberrechte von
+                    green-solutions und Partnern urheberrechtlich belegt. Es ist nicht gestattet, die Daten auf kommerziell betriebenen Webseiten oder Tauschplattformen anzubieten
+                    oder daraus kommerzielle Produkte zu entwickeln.</p>
+
+                <input id="showDownload" name="DownloadFreigabe" type="checkbox" value="1" class="form-check-input"/>
+                <label for="showDownload" style="font-weight: bold;font-size: 1.4em;">Hier geht es zu den GPS-Daten. Ich akzeptiere die Bedingungen.</label>
+                <div id="downloads" class="hidden">
+                    <hr/>
+                    <a onclick="getDownload('kml');return false;" href="#"><i class="fa fa-download" aria-hidden="true"></i> KML</a><br/>
+                    <a onclick="getDownload('gpx_active');return false;" href="#"><i class="fa fa-download" aria-hidden="true"></i>
+                        GPX</a><br/>
+
+                    <hr/>
+
+                    <p>Sie müssen Cookies akzeptieren im Browser einstellen um GPS-Daten herunterladen zu können. Andernfalls erscheint die Meldung Download expired. Ebenfalls wird die Verwendung von Chrome oder Edge empfohlen da andere Browser(Safari) den Downlad blockieren können.</p>
+                    <p>Haftungsausschluss: Die Verwendung der Daten hat eigenverantwortlich zu erfolgen.
+                        Vor dem Start der Tour sind die örtlichen Gegebenheiten wie Pistensperrungen, Lawinensituation, Wetter und weitere Faktoren zu beachten.
+                        Den Anweisungen von Personal vor Ort ist unbedingt Folge zu leisten.</p>
+                </div>
+            </div>
+            <script>
+                function getDownload(mode){
+                    var baseurl="/ramsau/inc/download.php?routing&t=";
+                    var url=baseurl+mode+"&d="+tid;
+                    window.open(url, '_blank');
+                }
+            </script>
+            <!-- Panel 1 -->
+            <!-- Panel 2 -->
+            <div class="tab-pane fade" id="panelroadbook" role="tabpanel">
+                <p><span style='font-size: 2em;position:relative;top:5px;' class="icon-PDF"></span> <a href="" target="_blank"
+                                                                                                       style="font-weight: bold;font-size: 1.4em;">Download
+                        Roadbook</a></p>
+            </div>
+            <!-- Panel 2 -->
+            <!-- Panel 3 -->
+                       <div class="tab-pane fade" id="panelfold" role="tabpanel">
+                <p>Alle Angaben wurden mit größter Sorgfalt erhoben. Die Angaben erfolgen ohne Gewähr und erheben nicht den Anspruch auf Vollständigkeit.</p>
+
+                <p>Das Falt-PDF eignet sich für kürzere Touren und ist besonders durch die Faltung sehr platzsparend in der Hosentasche oder Trikot unterzubringen.</p>
+
+                <input id="pdfemailchkfold" name="pdfemailchkfold" type="checkbox" value="1" class="form-check-input"/>
+                <label for="pdfemailchkfold" ><input type="text" id="pdfemailtextfold" name="pdfemailtextfold" placeholder="An diese E-Mail verschicken" disabled></label>
+                <br>
+                <a onclick="getPDF('fold');return false;" href="#"  type="button" id="pdfbuttonfold" class="btn btn-primary"><i
+                            class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen</a>
+            </div>
+            <!-- Panel 3 -->
+            <!-- Panel 3 -->
+            <div class="tab-pane fade" id="panelsingle" role="tabpanel">
+                <p>Alle Angaben wurden mit größter Sorgfalt erhoben. Die Angaben erfolgen ohne Gewähr und erheben nicht den Anspruch auf Vollständigkeit.</p>
+
+                <p>Das Single-PDF eignet sich für kürzere Touren und ist im Vergleich zum Falt-PDF in einer klassischem Aufbau gehalten.</p>
+
+                <input id="showExternalLinksSingle" name="showExternalLinksSingle" type="checkbox" value="1" class="form-check-input"/>
+                <label for="showExternalLinksSingle" >externe Inhalte anzeigen</label><br>
+                <input id="showPoisSingle" name="showPoisSingle" type="checkbox" value="1" class="form-check-input" checked/>
+                <label for="showPoisSingle" >Punktdaten anzeigen</label><br>
+                <input id="pdfemailchksingle" name="pdfemailchksingle" type="checkbox" value="1" class="form-check-input"/>
+                <label for="pdfemailchksingle" ><input type="text" id="pdfemailtextsingle" name="pdfemailtextsingle" placeholder="An diese E-Mail verschicken" disabled></label>
+                <br>
+                <a onclick="getPDF('single');return false;" href="#"  type="button" id="pdfbuttonsingle" class="btn btn-primary"><i
+                            class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen</a>
+            </div>
+            <!-- Panel 3 -->
+            <!-- Panel 3 -->
+            <div class="tab-pane fade" id="panelmulti" role="tabpanel">
+                <p>Alle Angaben wurden mit größter Sorgfalt erhoben. Die Angaben erfolgen ohne Gewähr und erheben nicht den Anspruch auf Vollständigkeit.</p>
+
+                <p>Das Multi-PDF eignet sich für längere Touren. Der Aufbau erlaubt eine Abbildung längerer Tourenbeschreibungen und eine görßere Kartendarstellung.</p>
+                                <input id="pdfimages" name="pdfimages" type="checkbox" value="1" class="form-check-input"/>
+                <label for="pdfimages" >Mit Streckenbildern</label><br>
+                                <input id="pdfresolution" name="pdfresolution" type="checkbox" value="1" class="form-check-input"/>
+                <label for="pdfresolution" >Maßstab</label><br>
+                <input id="showExternalLinksMulti" name="showExternalLinksMulti" type="checkbox" value="1" class="form-check-input"/>
+                <label for="showExternalLinksMulti" >externe Inhalte anzeigen</label><br>
+                <input id="showPoisMulti" name="showPoisMulti" type="checkbox" value="1" class="form-check-input" checked/>
+                <label for="showPoisMulti" >Punktdaten anzeigen</label><br>
+                <div style="display: none;" class="btn-group btn-group-toggle" data-toggle="buttons" id="resolutions">
+                </div>
+                <input id="pdfemailchkmulti" name="pdfemailchkmulti" type="checkbox" value="1" class="form-check-input"/>
+                <label for="pdfemailchkmulti" ><input type="text" id="pdfemailtextmulti" name="pdfemailtextmulti" placeholder="An diese E-Mail verschicken" disabled></label>
+                <br>
+                <a onclick="getPDF('multi');return false;" href="#"  type="button" id="pdfbuttonmulti"
+                   class="btn btn-primary"><i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen</a>
+            </div>
+            <!-- Panel 3 -->
+        </div>
+    </div>
+</div>
+<!-- Nav tabs -->
+
+<script>
+
+        $("#pdfresolution").change(function() {
+            if($(this).is(":checked")) {
+                $.getJSON(docRoot + "inc/ajax.php",
+                    {ajaxtype: 'getresolutions', id: 31499},
+                    function (data) {
+                        info="";
+                        var first=true;
+                        for (j = 0; j < data.length; j++) {
+                            var id=data[j]["id"];
+                            var name=data[j]["name"];
+                            var anz=data[j]["anz"];
+
+                            info+='<label class="btn btn-primary';
+                            if(first){
+                                info+= ' active ';
+                            }
+                            info+='"><input type="radio" name="resolution" id="resolution'+id+'" value="'+id+'"';
+
+                            if(first){
+                                info+= ' checked ';
+                                first=false;
+                            }
+
+                            info+='><strong>1:'+name+'</strong><br>'+anz+' Seite';
+                            if(anz>1){
+                                info+= "n";
+                            }
+                            info+='</label>';
+                        }
+                        info+='<br><br>';
+                        $("#resolutions").css('display', 'block');;
+                        $("#resolutions").html(info);
+                });
+            }else{
+                $("#resolutions").hide();
+            }
+        });
+        $("#pdfemailchkmulti").change(function() {
+            if($(this).is(":checked")) {
+                $("#pdfemailtextmulti").prop('disabled', false);
+                $("#pdfbuttonmulti").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und versenden');
+            }else{
+                $("#pdfemailtextmulti").prop('disabled', true);
+                $("#pdfemailtextmulti").val("");
+                $("#pdfbuttonmulti").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen');
+            }
+        });
+
+        $("#pdfemailchksingle").change(function() {
+            if($(this).is(":checked")) {
+                $("#pdfemailtextsingle").prop('disabled', false);
+                $("#pdfbuttonsingle").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und versenden');
+            }else{
+                $("#pdfemailtextsingle").prop('disabled', true);
+                $("#pdfemailtextsingle").val("");
+                $("#pdfbuttonsingle").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen');
+            }
+        });
+
+        $("#pdfemailchkfold").change(function() {
+            if($(this).is(":checked")) {
+                $("#pdfemailtextfold").prop('disabled', false);
+                $("#pdfbuttonfold").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und versenden');
+            }else{
+                $("#pdfemailtextfold").prop('disabled', true);
+                $("#pdfemailtextfold").val("");
+                $("#pdfbuttonfold").html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen');
+            }
+        });
+
+
+    function getPDF(mode){
+        var baseurl="https://print.tourinfra.com/pdf/create/tour/31499/";
+        var suffix="?vid_key=36660e59856b4de58a219bcf4e27eba3_leaflet&type=pdfreactor&map=js";
+        var zusatz="";
+        var mail="";
+
+
+
+         if(mode==="multi"){
+            if($('#pdfimages').is(":checked")){
+                zusatz+="&showImages=true";
+            }
+            if($('#showExternalLinksMulti').is(":checked")){
+                zusatz+="&showExternalLinks=true";
+            }
+            if($('#pdfresolution').is(":checked")){
+                let val=$("input[name='resolution']:checked").val();
+                if(val) {
+                    zusatz += "&resolution=" + val;
+                }
+            }
+        }
+        if(mode==="single"){
+            if($('#showExternalLinksSingle').is(":checked")){
+                zusatz+="&showExternalLinks=true";
+            }
+        }
+
+        // Punktdaten (POIs) auf der Karte, je Reiter abschaltbar (tourinfra#600)
+        if(!$('#showPois'+mode.charAt(0).toUpperCase()+mode.slice(1)).is(":checked")){
+            zusatz+="&hidePois=true";
+        }
+
+        if($('#pdfemailchk'+mode).is(":checked")){
+            var adresse=$.trim($("#pdfemailtext"+mode).val());
+            if(adresse===""){
+                $('#panel' + mode).append("<p class='failure'>Bitte eine E-Mail-Adresse eingeben.</p>");
+                $("#pdfemailtext" + mode).focus();
+                return;
+            }
+            mail="&email="+encodeURIComponent(adresse);
+        }
+
+        var url=baseurl+mode+suffix+zusatz+mail;
+        if(mail==""){
+            window.open(url, '_blank');
+        }else{
+            $.getJSON(url,  function(data) {
+                if(data["status"]=="ok") {
+                    $('#pdfemailchk' + mode).prop("checked", false);
+                    $('#panel' + mode).append("<p class='success'>PDF wurde verschickt.</p>");
+                    $("#pdfemailtext" + mode).prop('disabled', true);
+                    $("#pdfemailtext" + mode).val("");
+                    $("#pdfbutton" + mode).html('<i class="fas fa-download ml-2" aria-hidden="true"></i> PDF generieren und herunterladen');
+                }else{
+                    $('#pdfemailchk' + mode).prop("checked", false);
+                    $('#panel' + mode).append("<p class='failure'>Fehler beim verschicken der PDF.</p>");
+                }
+
+            }).fail(function() {
+                $('#pdfemailchk' + mode).prop("checked", false);
+                $('#panel' + mode).append("<p class='failure'>Fehler beim verschicken der PDF.</p>");
+            });
+        }
+
+    }
+
+</script>            </div>
+                    <div class="tab-pane fade" id="tAnfahrt" role="tabpanel">
+                <div>
+        </div>
+<script>
+    var dirmap = null;
+    var routingicon = null;
+
+    function initAnfahrtsmap() {
+
+        if (dirmap == null) {
+            dirmap = L.map('dirmap', {
+                center: [47.423932, 13.69971],
+                zoom: 10
+            });
+
+            L.maplibreGL({
+                style: 'https://vector.tourinfra.com/styles/main/styles/sommer.json',
+                attribution: "Powered by <a href='https://tourinfra.com/' target='_blank'>tourinfra &reg;</a> | Map data by &copy; <a href='http://www.green-solutions.info/' target='_blank'>green-solutions</a>, <a href='http://www.openstreetmap.org/copyright' target='_blank'>OSM &amp; Contributors</a>"
+            }).addTo(dirmap);
+/*            L.tileLayer('https://map.tourinfra.com/tiles/gs_sommer_red/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: "Powered by <a href='https://tourinfra.com/' target='_blank'>tourinfra &reg;</a> | Map data by &copy; <a href='http://www.green-solutions.info/' target='_blank'>green-solutions</a>, <a href='http://www.openstreetmap.org/copyright' target='_blank'>OSM &amp; Contributors</a>"
+            }).addTo(dirmap);*/
+
+            routingicon = L.icon({
+                iconUrl: docRoot + '/images/icons/pin.svg',
+                iconAnchor: [14, 27],
+                iconSize: [24, 27]
+            });
+
+            L.marker(47.423932, 13.69971, {icon: routingicon});
+
+            L.Routing.control({
+                waypoints: [
+                    null,
+                    L.latLng(47.423932, 13.69971)
+                ],
+                createMarker: function (i, wp) {
+                    return L.marker(wp.latLng, {
+                        draggable: true,
+                        icon: routingicon
+                    });
+                },
+                routeWhileDragging: true,
+                geocoder: L.Control.Geocoder.nominatim(),
+                language: 'de'
+            }).addTo(dirmap);
+            setTimeout(function () {
+                dirmap.invalidateSize(true);
+            }, 500);
+
+
+        }
+
+
+    }
+</script>
+
+<div id="dirmap" style="position:relative;width: 100%; height: 580px;"></div>
+            </div>
+                    
+    
+
+
+</div>
+
+<hr class="between-sections mt-4 mb-4">
+
+
+                                <!--<h2 class="h1-responsive font-weight-bold text-center my-5">Touren in der Nähe</h2>-->
+
+                                                                <ul class="nav nav-tabs nav-justified">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tntours" role="tab">Touren in der Nähe</a>
+                                    </li>
+                                    <li class="nav-item" id="lstours">
+                                        <a class="nav-link" data-toggle="tab" href="#tstours" role="tab">Ähnliche Touren</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content card">
+                                    <div class="tab-pane fade in show active" id="tntours" role="tabpanel">
+
+                                        <div class="card-group" id="cntours">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tstours" role="tabpanel">
+                                        <div class="card-group" id="cstours">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <hr class="between-sections mt-4 mb-4">
+                                
+                                <div class="panel panel-default" id="poilisttourpois" style="display:none">
+<div class="panel-heading">Highlights entlang der Tour</div>
+<div class="panel-body">
+</div>
+</div>
+
+
+                                
+                                    <h4 class="font-weight-bold text-center my-2">Auftraggeber dieser Tour</h4>
+
+    <div class="row justify-content-md-center">
+        <div class="col col-md-3"><a target="_blank" href="https://www.ramsau.com"><img style="width: 100%;"
+                                                                                                        src="https://img.tourinfra.com/tourinfra/kunden/189/profile/avatar/Ex4QChtNeTtTaAcmshcNXCUA8IZWuHFALvJrkNFQ.png"
+                                                                                                        title="Tourismusverband Ramsau am Dachstein"></a></div>
+    </div>
+
+
+
+                                <!--<h4 class="font-weight-bold text-center my-2">Auftraggeber dieser Tour</h4>
+
+                                <p class="text-center">Max Mustermann 2000</p>-->
+
+                            </section>
+
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    function notifyParentIframeResize() {
+        if (!window.parent) return;
+        if (!window.parent.postMessage) return;
+
+        try {
+            var h;
+            if ($.browser.msie) {
+                h = document.body.scrollHeight;
+            } else {
+                h = $('html').outerHeight(true);
+            }
+            parent.postMessage('frameworkextern.iframeresize?height=' + h, '*');
+        } catch (e) {
+        }
+    }
+    $(document).ready(function () {
+        notifyParentIframeResize();
+    });
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/_global/js/jquery/jquery-ui-1.8.20.custom.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+<script src="/_global/js/leaflet/leaflet.js"></script>
+<!--<script src="/_global/js/leaflet/google.js"></script>-->
+<script src="/_global/js/leaflet/leaflet.geometryutil.js"></script>
+<script src="/_global/js/leaflet/Marker.Rotate.js"></script>
+<script src="/_global/js/leaflet/Leaflet.label.js"></script>
+<script src="/_global/js/leaflet/easy-button.js"></script>
+<script src="/_global/js/leaflet/leaflet.markercluster-src_poi.js"></script>
+<script src="/_global/js/leaflet/leaflet-routing-machine-3.2.12/leaflet-routing-machine.js"></script>
+<script src="/_global/js/leaflet/leaflet-control-geocoder-1.6.0/Control.Geocoder.js"></script>
+<script src='/_global/js/leaflet/Leaflet.fullscreen.min.js'></script>
+<script src='/_global/js/leaflet/Leaflet.PolylineDecorator-master/dist/leaflet.polylineDecorator.js'></script>
+<script src='/_global/js/leaflet/Leaflet.Gesture-Handling/leaflet-gesture-handling.min.js'></script>
+<script src='/_global/js/yt-consent/yt-consent.js'></script>
+
+<!--<script src='/_global/js/leaflet/leaflet.elevation-0.0.4.src.js'></script>-->
+<!--<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src='/_global/js/leaflet/leaflet-elevation.js'></script>
+
+<script type="text/javascript" src="/_global/js/jquery.places-search.js"></script>
+
+<script type="text/javascript" src="/_global/js/shariff-3.0.1/shariff.min.js"></script>
+
+<script type="text/javascript" src="/_global/js/popper.min.js"></script>
+<script type="text/javascript" src="/_global/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/_global/js/mdb.min.js"></script>
+<script type="text/javascript" src="/_global/js/equalheights.js"></script>
+<script src="https://unpkg.com/maplibre-gl@2.2.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.20/leaflet-maplibre-gl.js"></script>
+
+<script type="text/javascript" src="/_global/js/javascriptDetail.js"></script>
+<script type="text/javascript" src="/_global/js/leaflet/detailkarte.js"></script>
+<script>
+        $(document).ready(function () {
+        initKarten();
+        initDetailseite();
+            });
+</script>
+</body>
+</html>
