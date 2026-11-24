@@ -1,6 +1,6 @@
 # Kontaktliste: Stellen, die wir fragen oder informieren müssen
 
-Stand 23.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
+Stand 24.11.2026. Wird bei jeder neuen Quelle ergänzt. Gepflegt im Repo, Kopie für Stefan unter
 `livegang/vorbereitung/kontaktliste.md` im Projektordner.
 
 **Vorgehen (Stefan, 19.11.2026):** Daten von Quellen ohne Zustimmung dürfen in die **Testversion**. Die Quelle steht dann in
@@ -31,7 +31,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | TVB Olympiaregion Seefeld | seefeld.com, tourinfra | Loipenstatus, gespurte km | region@seefeld.com | angefragt 19.11.2026 | deckt beide Seefeld-Quellen ab |
 | TVB Achensee (Achensee Tourismus) | achensee.com; Gebiete Achensee (Maurach, Pertisau, Wiesing) und Steinberg am Rofan (Achenkirch, Steinberg) | Schneebericht | Martina Unterberger, Welcome-CENTER Achensee, info@achensee.com | angefragt 19.11.2026, **abgelehnt am 20.11.2026** | Wortlaut: „Wir stimmen dem automatisierten Abruf und der Übernahme unserer Loipendaten jedoch nicht zu. Bitte sehen Sie daher von einer Verwendung unserer Daten auf Ihrer Website ab.“ Seit 20.11. `erlaubnis: abgelehnt`, Quelle aus (B30, E-30). Die Gebiete `achensee` und `steinberg-rofan` sowie die Wiesinger Loipe „W1 - Loipe Buchbergl“ waren vom 20. bis 23.11. auch für tirol.at-Daten ausgeblendet. Seit 23.11.2026 (Freigabe der Tirol Werbung) zeigt die Seite sie wieder **nur über tirol.at** (Stefans Entscheidung, E-37); achensee.com bleibt aus. Hinweis: Die Absage bat, „von einer Verwendung unserer Daten auf Ihrer Website abzusehen“; meldet sich Achensee deshalb, die Gebiete wieder unter `ausgeblendet` in `config/gebiete.yaml` eintragen und mit Achensee sprechen. Antwort- und Nachfrage-Entwurf im Projekt-Thread „Achensee nach Absage abschalten“. |
 | TVB Kufsteinerland | kufstein.com | Schneebericht | info@kufstein.com | angefragt 19.11.2026 | |
-| TVB Kaiserwinkl | kaiserwinkl.com | Loipenbericht | info@kaiserwinkl.com | angefragt 19.11.2026, **Antwort 19.11.** (fragt nach Schnittstelle) | Antwortentwurf: livegang/vorbereitung/antwort-schnittstelle.md |
+| TVB Kaiserwinkl | kaiserwinkl.com | Loipenbericht | info@kaiserwinkl.com | angefragt 19.11.2026, Rückfrage nach Schnittstelle 19.11. beantwortet, **Erlaubnis am 24.11.2026** | Umsetzung wie angefragt (Quellangabe und Link) ist erlaubt. Seit 24.11. `erlaubnis: liegt_vor` (B31, E-41), Beleg [erlaubnisse/kaiserwinkl-2026-11-24.md](erlaubnisse/kaiserwinkl-2026-11-24.md). **Vorbehalt:** gilt bis zur Klärung, ob die Agentur ein Widget für externe Seiten baut; der Verband meldet sich dann wieder. Eine Schnittstelle ist nicht geplant. Kein Nachfassen nötig. |
 | Kitzbüheler Alpen | kitzbueheler-alpen.com | Loipenstatus | Adresse fehlt (Impressum) | **nicht angefragt** | Mail lag ohne Adresse bereit |
 | Tourismusbüro Faistenau | langlaufdorf.at | Loipenstatus | faistenau@salzkammergut.at | angefragt 19.11.2026 | |
 | Zweckverband Bergerlebnis Berchtesgaden | berchtesgaden.de | Lage, Länge | info@berchtesgaden.de | angefragt 19.11.2026 | |

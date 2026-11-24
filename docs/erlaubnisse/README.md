@@ -9,4 +9,5 @@ bleibt in Stefans Postfach.
 | Quelle | Beleg | Bedingung |
 |---|---|---|
 | `tirol` (Tirol Werbung, tirol.at) | [tirol-werbung-2026-11-23.md](tirol-werbung-2026-11-23.md) | Quellangabe und Link auf tirol.at |
+| `kaiserwinkl` (Tourismusverband Kaiserwinkl, kaiserwinkl.com) | [kaiserwinkl-2026-11-24.md](kaiserwinkl-2026-11-24.md) | Quellangabe und Link auf kaiserwinkl.com; gilt bis zur Klärung eines Widgets, der Verband meldet sich |
 | `opendatahub` (Open Data Hub Südtirol) | [opendatahub-cc0.md](opendatahub-cc0.md) | keine (CC0) |

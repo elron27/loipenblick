@@ -117,3 +117,35 @@ def test_b31_tirol_loipen_oeffentlich_mit_quellangabe_und_link(session, tmp_path
     assert all(l["quelle"]["url"].startswith("https://www.tirol.at/") for l in tirol)
     hinweise = (tmp_path / "hinweise.html").read_text(encoding="utf-8")
     assert "Tirol Werbung (tirol.at)" in hinweise and 'href="https://www.tirol.at"' in hinweise
+
+
+@pytest.mark.req("B31", ak=2)
+def test_b31_kaiserwinkl_freigegeben_mit_beleg_und_vorbehalt():
+    """Tourismusverband Kaiserwinkl 24.11.2026: Umsetzung wie angefragt erlaubt, bis ein Widget geklaert ist (E-41)."""
+    sources = lade_yaml(CONFIG_DIR / "sources.yaml")
+    kw = next(q for q in sources["quellen"] if q["key"] == "kaiserwinkl")
+    assert kw["nutzung"]["erlaubnis"] == "liegt_vor"
+    assert "kaiserwinkl.com" in kw["nutzung"]["bedingung"]
+    beleg = (CONFIG_DIR.parent / kw["nutzung"]["beleg"]).read_text(encoding="utf-8")
+    assert "24.11.2026" in beleg and "Bis dahin können Sie gerne das wie von Ihnen gewünscht umsetzen" in beleg
+    assert "Widget" in beleg and "meldet sich" in beleg
+    assert not re.search(r"\+\d{2}[\d ]{6,}", beleg), "keine Telefonnummern im Beleg"
+    assert "Hamberger" not in beleg, "kein Personenname im Beleg"
+    assert "kaiserwinkl" not in nur_test_quellen(sources)
+    kontakte = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8")
+    zeile = next(z for z in kontakte.splitlines() if z.startswith("| TVB Kaiserwinkl"))
+    assert "Erlaubnis am 24.11.2026" in zeile and "Widget" in zeile
+
+
+@pytest.mark.req("B31", ak=5)
+def test_b31_kaiserwinkl_loipen_oeffentlich_mit_quellangabe_und_link(session, tmp_path):
+    lade_alle_fixtures(session, JETZT_FIXTURES)
+    generator.erzeuge(session, tmp_path, JETZT_FIXTURES, oeffentlich=True, rechtliches=RECHT)
+    index = json.loads((tmp_path / "daten.json").read_text(encoding="utf-8"))
+    kw = [l for r in index["regionen"]
+          for g in json.loads((tmp_path / r["datei"]).read_text(encoding="utf-8"))["gebiete"]
+          for l in g["loipen"] if l["quelle"]["name"] == "Tourismusverband Kaiserwinkl (Loipenbericht)"]
+    assert kw, "Kaiserwinkl-Loipen fehlen auf der oeffentlichen Seite"
+    assert all(l["quelle"]["url"].startswith("https://www.kaiserwinkl.com/") for l in kw)
+    hinweise = (tmp_path / "hinweise.html").read_text(encoding="utf-8")
+    assert "Tourismusverband Kaiserwinkl (Loipenbericht)" in hinweise and 'href="https://www.kaiserwinkl.com"' in hinweise
