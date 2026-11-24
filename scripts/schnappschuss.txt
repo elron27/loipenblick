@@ -10,3 +10,10 @@ tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.
 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
 tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123
+# Runde 27 (24.11.2026): tourinfra-Detailseiten und robots.txt fuer die Einmal-Recherche Loipendaten (Issue #46)
+tests/fixtures/recherche-2026-11-24/tourinfra/robots.txt https://module.tourinfra.com/robots.txt
+tests/fixtures/recherche-2026-11-24/tourinfra/chiemgau-details-45988.html https://module.tourinfra.com/chiemgau/details.php?id=45988
+tests/fixtures/recherche-2026-11-24/tourinfra/tannheimer-details-155767.html https://module.tourinfra.com/tannheimer/details.php?id=155767
+tests/fixtures/recherche-2026-11-24/tourinfra/engadin-details-210056.html https://module.tourinfra.com/engadin/details.php?id=210056
+tests/fixtures/recherche-2026-11-24/tourinfra/ramsau-details-31499.html https://module.tourinfra.com/ramsau/details.php?id=31499
+tests/fixtures/recherche-2026-11-24/tourinfra/chiemgau-loipenmanager.json https://module.tourinfra.com/chiemgau/inc/ajax.php?ajaxtype=getLoipenmanager
