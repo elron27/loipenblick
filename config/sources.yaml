@@ -291,7 +291,12 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Der Loipenbericht Kaiserwinkl nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    # Freigabe des Tourismusverbands Kaiserwinkl vom 24.11.2026 (B31, E-41): Umsetzung wie angefragt (Quellangabe und
+    # Link) erlaubt, bis der Verband die Frage eines Widgets fuer externe Seiten geklaert hat und sich wieder meldet.
+    # Beleg: docs/erlaubnisse/kaiserwinkl-2026-11-24.md
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-24, erlaubnis: liegt_vor,
+              beleg: docs/erlaubnisse/kaiserwinkl-2026-11-24.md, bedingung: "Quellangabe und Link auf kaiserwinkl.com",
+              hinweis: "Erlaubnis bis zur Klaerung eines Widgets fuer externe Seiten; der Verband meldet sich wieder"}
     config:
       pfad: /de/langlaufen-tirol/geoeffnete-loipen.html
       default_gebiet: koessen
