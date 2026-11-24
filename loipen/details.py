@@ -45,6 +45,7 @@ BEGRIFFE = {
     "mit einkehrmöglichkeit": "einkehr",
     "familientauglich": "familientauglich",
     "familienfreundlich": "familientauglich",
+    "für familien geeignet": "familientauglich",
     "für kinder geeignet": "familientauglich",
     "höhenloipe": "hoehenloipe",
     "mit bergbahn/lift erreichbar": "bergbahn",
@@ -66,7 +67,8 @@ BEGRIFFE = {
 # Merkmale der Quellen, die bewusst nicht uebernommen werden (Werbeetiketten ohne Nutzen fuer die Wahl)
 IGNORIERT = {"highlight tour", "top tour", "ausgewiesene loipe", "geführte tour", "rundtour",
              "streckentour", "kulturell / historisch", "botanische highlights", "faunistische highlights",
-             "geologische highlights", "aussichtsreich", "kulturell/historisch", "einkehrmöglichkeit vorhanden"}
+             "geologische highlights", "aussichtsreich", "kulturell/historisch", "loipengütesiegel",
+             "tiroler langlaufspezialisten"}
 
 
 def normiere_merkmal(text: str) -> str | None:

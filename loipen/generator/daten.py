@@ -10,9 +10,10 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
+from loipen.details import MERKMALE
 from loipen.dubletten import Eintrag, finde_dubletten
 from loipen.konfig import ausgeblendet, lade_yaml
-from loipen import osm, plausibel
+from loipen import osm, osmauszug, plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
 from loipen.wetter import gebiet_position, schnee_uebersicht
@@ -75,7 +76,33 @@ def _loipe(loipe: Loipe, zustaende: list[Zustand], quelle: Quelle, jetzt: dateti
         "sonder": sonderloipe(loipe.name),  # Snowfarming, Opening, Gletscher, nur fuer Gruppen
         # U43 AK 4: ein Loipennetz, fuer das die Quelle nur "x von y Loipen offen" meldet (P28)
         "netz": _netz(z.rohtext) if z else None,
+        # P41: Hinweis und Sperrgrund des Betreibers, Schneehoehe am Berg
+        "hinweis": z.hinweis if z and not zu_alt else None,
+        "sperrgrund": z.sperrgrund if z and not zu_alt else None,
+        "schneehoehe_berg_cm": z.schneehoehe_berg_cm if z and not zu_alt else None,
+        # U49, D21: Stammdaten mit Herkunft
+        "details": _details(loipe),
     }
+
+
+def _details(loipe: Loipe) -> dict | None:
+    """U49: Zusatzangaben einer Loipe, nur gesetzte Felder; je Feld Herkunft und Pruefdatum (D21 AK 1)."""
+    d = {f: getattr(loipe, f) for f in ("hoehenmeter", "hoechster_punkt_m", "tiefster_punkt_m", "dauer_min",
+                                         "kondition", "technik_note", "loipengebiet", "einstiege", "webcams")
+         if getattr(loipe, f) not in (None, [], "")}
+    merkmale = list(loipe.merkmale or [])
+    for feld, merkmal in (("nachtloipe", "nachtloipe"), ("hund_erlaubt", "hundeloipe"), ("kunstschnee", "kunstschnee")):
+        if getattr(loipe, feld) and merkmal not in merkmale:
+            merkmale.append(merkmal)
+    if merkmale:
+        d["merkmale"] = [m for m in MERKMALE if m in merkmale]  # feste Reihenfolge
+    if loipe.hund_erlaubt is False:
+        d["hund_erlaubt"] = False
+    if not d:
+        return None
+    if loipe.herkunft:
+        d["herkunft"] = {k: v for k, v in loipe.herkunft.items() if k in d}
+    return d
 
 
 def _netz(rohtext: str | None) -> dict | None:
@@ -116,6 +143,19 @@ def _parken(d: dict, punkte: list | None, gebiet: Gebiet, osm_parkplaetze: list[
     if hand:
         return [p for _, p in sorted(hand, key=lambda x: x[0])]
     return osm.parkplaetze_bei(start, osm_parkplaetze) if start else []
+
+
+WEBCAMS_JE_GEBIET = 4
+
+
+def _webcams(gebiet: Gebiet, loipen: list[dict]) -> list[dict]:
+    """D9: Webcams von Hand (gebiete.yaml) zuerst, dann die der Loipen (tourinfra, P42), ohne Doppelte."""
+    liste, urls = [], set()
+    for w in (gebiet.webcams or []) + [w for l in loipen for w in ((l.get("details") or {}).get("webcams") or [])]:
+        if w.get("url") and w["url"] not in urls:
+            urls.add(w["url"])
+            liste.append({"name": w.get("name") or "Webcam", "url": w["url"]})
+    return liste[:WEBCAMS_JE_GEBIET]
 
 
 def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:
@@ -231,6 +271,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     gesamt = 0
     unplausibel: list[int] = []
     osm_daten = osm.lade(session)
+    osm_auszug = osmauszug.lade(config_dir)
     # D16: nach Land (Deutschland zuerst), Bundesland und Region geordnet
     for region in sorted(session.scalars(select(Region)),
                          key=lambda r: (LAND_REIHENFOLGE.get(r.land, 9), r.bundesland or "", r.name)):
@@ -239,6 +280,11 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
         gebiete = []
         verlaeufe: dict[str, list] = {}
         osm_region = osm_daten.get(region.slug) or {}
+        if not osm_region.get("parkplaetze"):
+            # D22: ohne Overpass-Stand die Parkplaetze aus dem OSM-Auszug (config/osm/)
+            osm_region = {**osm_region, "parkplaetze": [p for g in region.gebiete
+                                                        for p in (osm_auszug.get(g.slug) or {}).get("parkplaetze") or []
+                                                        if p.get("id")]}
         for g in sorted(region.gebiete, key=lambda x: x.name):
             if g.slug in gebiete_aus:
                 continue
@@ -318,6 +364,11 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     for p in sorted(g.parkplaetze, key=lambda x: x.name)
                 ],
                 "haltestellen": g.haltestellen or [],
+                # D9, D10, U49: Webcams (von Hand, sonst aus den Loipen des Gebiets) und Skiverleih, nur als Link
+                "webcams": _webcams(g, loipen),
+                "verleih": g.verleih or [],
+                # B32 AK 3: Pruefdatum der Handangaben; aelter als eine Saison zeigt die Seite "Stand Winter ..."
+                "hand_geprueft_am": g.hand_geprueft_am.isoformat() if g.hand_geprueft_am else None,
                 "schnee": {**schnee, "messtag": schnee["messtag"].isoformat() if schnee["messtag"] else None},
                 "vorhersage": vorhersage,
                 "loipen": loipen,

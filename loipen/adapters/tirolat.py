@@ -33,6 +33,7 @@ import math
 import re
 import time
 
+from loipen.details import merkmale_aus
 from loipen.adapters.base import AdapterErgebnis, Fetcher, LoipenDaten
 from loipen.fetcher import HttpFehler
 from loipen.adapters.normalisierung import normiere_schwierigkeit, normiere_zustand, parse_zahl, slugify
@@ -152,6 +153,13 @@ def parse_detail(seite: str) -> dict:
     for block in re.findall(r'<section class="factsCheckmarks">([\s\S]*?)</section>', seite):
         merkmale += [_text(x) for x in re.findall(r'<li class="listItem">([\s\S]*?)</li>', block)]
     d["merkmale"] = merkmale
+    # P43: hoechster Punkt, Kondition und Technik (1 bis 6), Einkehr
+    if m := re.search(r'<span class="label">Höchster Punkt</span><span class="data">([\d.]+)\s*m<', seite):
+        d["hoechster_punkt_m"] = int(m.group(1).replace(".", ""))
+    for feld, kopf in (("kondition", "Kondition"), ("technik_note", "Technik")):
+        if m := re.search(rf'<span class="label">{kopf}\s*</span><span class="data">(\d)\s*/\s*6<', seite):
+            d[feld] = int(m.group(1))
+    d["einkehr"] = "Einkehrmöglichkeiten" in seite
     if m := re.search(r"Quelle: ([^<]*)<", seite):
         d["verband"] = _text(m.group(1))
     if m := re.search(r'<script type="application/ld\+json">([\s\S]*?)</script>', seite):
@@ -335,4 +343,10 @@ class TirolAtAdapter:
         if f.get("url"):
             d.source_url = f["url"]
         d.rohtext = json.dumps({k: f.get(k) for k in ("status", "verband", "merkmale")}, ensure_ascii=False)
+        # P43: Stammdaten bleiben an der Loipe, auch wenn spaetere Laeufe die Detailseite nicht lesen
+        merkmale, unbekannt = merkmale_aus(f["merkmale"] + (["Einkehrmöglichkeit"] if f.get("einkehr") else []))
+        d.unbekannte_begriffe += [("merkmal", u) for u in unbekannt]
+        d.stammdaten = {k: f[k] for k in ("hoechster_punkt_m", "kondition", "technik_note") if f.get(k) is not None}
+        if merkmale:
+            d.stammdaten["merkmale"] = merkmale
         return True

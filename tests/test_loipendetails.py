@@ -266,3 +266,47 @@ def test_p42_skript_haelt_abstand_und_holt_nur_neue(monkeypatch, tmp_path):
 
 
 import sys  # noqa: E402
+
+
+# --- P43: tirol.at-Stammdaten ----------------------------------------------------------------------------------
+
+from loipen.adapters.tirolat import TirolAtAdapter, parse_detail  # noqa: E402
+from tests import test_adapter_tirol as tirol  # noqa: E402
+
+TIROL = Path(__file__).parent / "fixtures" / "tirol" / "2026-11-12"
+
+
+@pytest.mark.req("P43", ak=[1, 3])
+def test_p43_hoechster_punkt_kondition_technik():
+    f = parse_detail((TIROL / "dorfloipe-ellmau.html").read_text(encoding="utf-8"))
+    assert (f["hoechster_punkt_m"], f["kondition"], f["technik_note"], f["einkehr"]) == (803, 1, 1, True)
+    erg, _ = tirol.lauf()
+    mit = [l for l in erg.loipen if l.stammdaten]
+    assert mit, "der erste Lauf liest Detailseiten"
+    assert all(set(l.stammdaten) <= {"hoechster_punkt_m", "kondition", "technik_note", "merkmale"} for l in mit)
+    for l in mit:
+        assert "Beschreibung" not in json.dumps(l.stammdaten, ensure_ascii=False)
+
+
+@pytest.mark.req("P43", ak=2)
+def test_p43_merkmale_auf_feste_liste():
+    gefunden, unbekannt = merkmale_aus(["Beleuchtet", "Beschneit", "Für Familien geeignet", "Loipengütesiegel",
+                                        "Rundtour", "Tiroler Langlaufspezialisten"])
+    assert gefunden == ["nachtloipe", "kunstschnee", "familientauglich"] and unbekannt == []
+
+
+@pytest.mark.req("P43", ak=1)
+def test_p43_stammdaten_bleiben_ohne_detailseite(session):
+    lade_und_abgleichen(session)
+    quelle = session.scalar(select(Quelle).where(Quelle.key == "tirol"))
+    quelle.config = tirol.konfig()
+    rufe_quelle_ab(session, quelle, tirol.fetcher(), jetzt=datetime(2026, 11, 24, 6, tzinfo=BERLIN))
+    mit = session.scalars(select(Loipe).where(Loipe.quelle_id == quelle.id, Loipe.hoechster_punkt_m.is_not(None))).all()
+    assert mit
+    vorher = {l.id: (l.hoechster_punkt_m, l.herkunft["hoechster_punkt_m"]["herkunft"]) for l in mit}
+    assert {h for _, h in vorher.values()} == {"quelle"}
+    # Ein spaeterer Lauf liest andere Detailseiten; die gespeicherten Werte bleiben
+    rufe_quelle_ab(session, quelle, tirol.fetcher(), jetzt=datetime(2026, 11, 24, 9, tzinfo=BERLIN))
+    for l in mit:
+        session.refresh(l)
+        assert (l.hoechster_punkt_m, l.herkunft["hoechster_punkt_m"]["herkunft"]) == vorher[l.id]

@@ -417,10 +417,11 @@ function seiteGebiet(slug) {
     (ohneZustand ? '<p class="hinweis glass">Die Quelle für dieses Gebiet meldet keinen Loipenzustand, nur Lage und Länge. Den aktuellen Zustand kennt die Touristeninformation.</p>' : "") +
     '<h2 class="sec">Anreise</h2><ul class="plain">' +
     (g.grenzinfo ? '<li class="glass vignette"><span>Vignette</span><b>' + esc(g.grenzinfo) + "</b></li>" : "") +
-    '<li class="glass"><span>Loipengebühr</span><b>' + (gebuehr.text ? esc(gebuehr.text) : gebuehr.eur != null ? zahl(gebuehr.eur, 2) + " €" : "unbekannt") + "</b></li>" +
+    '<li class="glass"><span>Loipengebühr</span><b>' + (gebuehr.text ? esc(gebuehr.text) : gebuehr.eur != null ? zahl(gebuehr.eur, 2) + " €" : "Gebühr unbekannt") + "</b></li>" +
     (g.parkplaetze.length ? g.parkplaetze.map(function (p) { return '<li class="glass"><span><b>' + esc(p.name) + "</b><br><span class=\"fine\">Gebühr: " + esc(p.gebuehr_text || (p.gebuehr_eur_tag != null ? zahl(p.gebuehr_eur_tag, 2) + " € pro Tag" : "unbekannt")) + (p.geschaetzt ? " · Lage ungefähr (Loipenstart)" : "") + '</span></span><a class="btn" href="' + esc(navLink(p.lat, p.lon)) + '" rel="noopener">Navigation</a></li>'; }).join("") : (g.loipen.some(function (l) { return l.parken && l.parken.length; }) ? '<li class="glass"><span>Parkplätze</span><b>bei den einzelnen Loipen</b></li>' : '<li class="glass"><span>Parkplätze</span><b>noch nicht erfasst</b></li>')) +
-    (g.haltestellen.length ? g.haltestellen.map(function (s) { return '<li class="glass"><span><b>' + esc(s.name) + '</b><br><span class="fine">Haltestelle (' + esc(s.art || "ÖPNV") + ')</span></span><a class="btn" href="' + esc(oevLink(s.lat, s.lon)) + '" rel="noopener">Fahrplan</a></li>'; }).join("") : '<li class="glass"><span>Haltestelle</span><b>keine bekannt</b></li>') +
-    '</ul><h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
+    (g.haltestellen.length ? g.haltestellen.map(haltestelleHtml).join("") : '<li class="glass"><span>Haltestelle</span><b>keine bekannt</b></li>') +
+    ((g.verleih || []).length ? g.verleih.map(verleihHtml).join("") : '<li class="glass"><span>Skiverleih</span><b>keiner bekannt</b></li>') +
+    "</ul>" + standHand(g) + webcamsHtml(g) + '<h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
     (S.idx.abo || S.idx.push ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("g:" + g.slug, "eine Loipe im Gebiet " + g.name) + pushBlock([], g) : "");
   view.innerHTML = h;
 }
@@ -490,6 +491,66 @@ function streckeHerkunft(l) {
   if (l.strecke_von) return '<p class="fine" id="strecke-von">Streckenverlauf laut ' + esc(l.strecke_von) + ".</p>";
   return "";
 }
+/* U49: Zusatzangaben einer Loipe (D21): Hoehe, Dauer, Merkmale als Text-Etiketten, Einstiege, Herkunft */
+var MERKMAL = {einkehr: "Einkehr", familientauglich: "familientauglich", hoehenloipe: "Höhenloipe", bergbahn: "mit Bergbahn erreichbar",
+  schneesicher: "schneesicher", hundeloipe: "Hunde erlaubt", kunstschnee: "Kunstschnee", nachtloipe: "Nachtloipe", kostenlos: "kostenlos"};
+var HERKUNFT = {quelle: "laut Quelle", hand: "von Hand recherchiert", osm: "laut OpenStreetMap", berechnet: "aus dem Höhenmodell berechnet"};
+function dauerText(min) { return min >= 60 ? Math.floor(min / 60) + " h " + (min % 60 ? (min % 60) + " min" : "") : min + " min"; }
+function herkunftText(d, felder) {
+  var gesehen = {}, teile = [];
+  felder.forEach(function (f) {
+    var h = (d.herkunft || {})[f];
+    if (!h) return;
+    var k = (HERKUNFT[h.herkunft] || h.herkunft) + (h.geprueft_am ? ", Stand " + datum(h.geprueft_am) : "");
+    if (!gesehen[k]) { gesehen[k] = 1; teile.push(h.url ? '<a href="' + esc(safeUrl(h.url)) + '" rel="noopener">' + esc(k) + "</a>" : esc(k)); }
+  });
+  return teile.length ? '<p class="fine" id="details-herkunft">Angaben ' + teile.join("; ") + ".</p>" : "";
+}
+function detailsHtml(l) {
+  var d = l.details || {}, kv = [];
+  if (d.hoehenmeter != null) kv.push(["Höhenmeter", zahl(d.hoehenmeter) + " m"]);
+  if (d.hoechster_punkt_m != null) kv.push(["Höchster Punkt", zahl(d.hoechster_punkt_m) + " m"]);
+  if (d.tiefster_punkt_m != null) kv.push(["Tiefster Punkt", zahl(d.tiefster_punkt_m) + " m"]);
+  if (d.dauer_min) kv.push(["Dauer", dauerText(d.dauer_min)]);
+  if (d.kondition) kv.push(["Kondition", d.kondition + " von 6"]);
+  if (d.technik_note) kv.push(["Technik", d.technik_note + " von 6"]);
+  var m = d.merkmale || [];
+  if (!kv.length && !m.length && !(d.einstiege || []).length && !d.loipengebiet) return "";
+  var h = '<h2 class="sec">Strecke und Merkmale</h2>';
+  if (kv.length) h += '<div class="kv" id="details">' + kv.map(function (x) { return '<div class="glass"><small>' + esc(x[0]) + "</small><b>" + esc(x[1]) + "</b></div>"; }).join("") + "</div>";
+  if (m.length || d.hund_erlaubt === false) h += '<p class="merkmale" id="merkmale">' + m.map(function (x) { return '<span class="tag">' + esc(MERKMAL[x] || x) + "</span>"; }).join("") +
+    (d.hund_erlaubt === false ? '<span class="tag tag-nein">keine Hunde</span>' : "") + "</p>";
+  if (d.loipengebiet) h += '<p class="fine">Loipengebiet: ' + esc(d.loipengebiet) + "</p>";
+  if ((d.einstiege || []).length) h += '<ul class="plain" id="einstiege">' + d.einstiege.map(function (e) {
+    return '<li class="glass"><span><b>Weiterer Einstieg</b><br><span class="fine">' + esc([e.ort, e.detail].filter(Boolean).join(", ")) + "</span></span>" + (e.lat != null ? '<a class="btn" href="' + esc(navLink(e.lat, e.lon)) + '" rel="noopener">Navigation</a>' : "") + "</li>"; }).join("") + "</ul>";
+  return h + herkunftText(d, ["hoehenmeter", "hoechster_punkt_m", "tiefster_punkt_m", "dauer_min", "kondition", "technik_note", "merkmale"]);
+}
+/* U49, D24: Haltestellen mit Fussweg, Skiverleih mit Fahrzeit, Webcams nur als Link */
+function haltestelleHtml(s) {
+  return '<li class="glass"><span><b>' + esc(s.name) + '</b><br><span class="fine">Haltestelle (' + esc(s.art || "ÖPNV") + ")" + (s.fuss_min != null ? " · " + s.fuss_min + " min zu Fuß zur Loipe" : "") + (s.herkunft === "osm" ? " · laut OpenStreetMap" : "") + '</span></span><a class="btn" href="' + esc(oevLink(s.lat, s.lon)) + '" rel="noopener">Fahrplan</a></li>';
+}
+function verleihHtml(v) {
+  var teile = [];
+  if (v.fuss_min != null) teile.push(v.fuss_min + " min zu Fuß");
+  if (v.auto_min != null) teile.push(v.auto_min + " min mit dem Auto");
+  if (v.verleih_bestaetigt === false) teile.push("Skigeschäft, Verleih nicht bestätigt");
+  if (v.herkunft === "osm") teile.push("laut OpenStreetMap");
+  return '<li class="glass"><span><b>' + esc(v.name) + '</b><br><span class="fine">Skiverleih' + (teile.length ? " · " + esc(teile.join(" · ")) : "") + "</span></span>" +
+    (v.url ? '<a class="btn" href="' + esc(safeUrl(v.url)) + '" rel="noopener">Website</a>' : v.lat != null ? '<a class="btn" href="' + esc(navLink(v.lat, v.lon)) + '" rel="noopener">Navigation</a>' : "") + "</li>";
+}
+function webcamsHtml(g) {
+  if (!(g.webcams || []).length) return "";
+  return '<h2 class="sec">Webcams</h2><ul class="plain" id="webcams">' + g.webcams.map(function (w) {
+    return '<li class="glass"><span>' + esc(w.name) + '</span><a class="btn" href="' + esc(safeUrl(w.url)) + '" rel="noopener">Ansehen</a></li>'; }).join("") + "</ul>";
+}
+function standHand(g) {
+  /* B32 AK 3: Handangaben, die laenger als eine Saison nicht geprueft sind, zeigen ihren Stand */
+  if (!g.hand_geprueft_am) return "";
+  var d = new Date(g.hand_geprueft_am), jetzt = new Date();
+  var saison = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1;
+  var aktuell = jetzt.getMonth() >= 6 ? jetzt.getFullYear() : jetzt.getFullYear() - 1;
+  return saison < aktuell ? '<p class="fine">Gebühr, Parkplätze und Webcams: Stand Winter ' + saison + "/" + String(saison + 1).slice(2) + ".</p>" : "";
+}
 /* P39: Parkplaetze an der Loipe; ohne Parkplatz die Navigation zum Startpunkt */
 function anreiseHtml(l) {
   var p = l.parken || [], h = '<h2 class="sec">Anreise</h2><ul class="plain" id="anreise">';
@@ -503,7 +564,11 @@ function anreiseHtml(l) {
   if (!p.length) h += '<li class="glass"><span>Parkplatz</span><b>noch keiner bekannt</b></li>' +
     (l.lat != null ? '<li class="glass"><span><b>Start der Loipe</b></span><a class="btn" href="' + esc(navLink(l.lat, l.lon)) + '" rel="noopener">Navigation</a></li>' : "");
   if (l.gebiet.grenzinfo) h += '<li class="glass vignette"><span>Vignette</span><b>' + esc(l.gebiet.grenzinfo) + "</b></li>";
-  return h + "</ul>";
+  var gebuehr = l.gebiet.loipengebuehr || {};
+  h += '<li class="glass" id="gebuehr"><span>Loipengebühr</span><b>' + (gebuehr.text ? esc(gebuehr.text) : gebuehr.eur != null ? zahl(gebuehr.eur, 2) + " €" : "Gebühr unbekannt") + "</b></li>";
+  h += (l.gebiet.haltestellen || []).slice(0, 2).map(haltestelleHtml).join("");
+  h += (l.gebiet.verleih || []).slice(0, 2).map(verleihHtml).join("");
+  return h + "</ul>" + standHand(l.gebiet);
 }
 function seiteLoipe(id) {
   var l = S.loipen.filter(function (x) { return String(x.id) === id; })[0];
@@ -526,7 +591,8 @@ function zeichneLoipe(l) {
       (l.unplausibel ? '<p class="hinweis glass" id="unplausibel"><b>' + esc(l.quelle.name) + " meldet diese Loipe " + esc(WORT[l.status_laut_quelle].toLowerCase()) + ", das ist aber unplausibel.</b> " + esc(l.unplausibel.join(". ")) + ". Wir zeigen sie deshalb geschlossen, bis die Quelle es belegt.</p>" : "") +
       (l.sonder ? '<p class="hinweis glass" id="sonder"><b>Sonderloipe: ' + esc(l.sonder.kurz) + ".</b> " + esc(l.sonder.text) + (offenGemeldet(l) ? " Sie zählt deshalb nicht zu den befahrbaren Loipen des Gebiets." : "") + "</p>" : "") +
       '<div class="kv"><div class="glass"><small>Länge</small><b>' + km(l.laenge_km) + "</b>" + (l.laenge_von ? '<span class="fine">laut ' + esc(l.laenge_von) + "</span>" : "") + '</div><div class="glass"><small>Gespurt</small><b>' + (l.gespurt_km == null ? "unbekannt" : zahl(l.gespurt_km) + " km") + '</b></div><div class="glass"><small>Klassisch</small><b>' + (l.status_klassisch ? WORT[l.status_klassisch] : "keine Angabe") + '</b></div><div class="glass"><small>Skating</small><b>' + (l.status_skating ? WORT[l.status_skating] : "keine Angabe") + '</b></div><div class="glass"><small>Schwierigkeit</small><b>' + esc(l.schwierigkeit) + '</b></div><div class="glass"><small>Technik</small><b>' + esc(l.technik) + '</b></div><div class="glass"><small>Rundkurs</small><b>' + (l.rundkurs == null ? "unbekannt" : l.rundkurs ? "ja" : "nein") + '</b></div><div class="glass"><small>Flutlicht</small><b>' + (l.nachtloipe == null ? "unbekannt" : l.nachtloipe ? "ja" : "nein") + "</b></div></div>" +
-      miniKarte(l) + anreiseHtml(l) + '<h2 class="sec">Saisonstatistik</h2><div id="saison"><p class="fine">Lädt …</p></div><h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
+      ((l.hinweis || l.sperrgrund) ? '<p class="hinweis glass" id="betreiber-hinweis"><b>Hinweis des Betreibers:</b> ' + esc([l.sperrgrund ? "gesperrt wegen " + l.sperrgrund : "", l.hinweis || ""].filter(Boolean).join(". ")) + "</p>" : "") +
+      detailsHtml(l) + miniKarte(l) + anreiseHtml(l) + webcamsHtml(l.gebiet) + '<h2 class="sec">Saisonstatistik</h2><div id="saison"><p class="fine">Lädt …</p></div><h2 class="sec">Letzte 14 Tage</h2><div class="hist" role="img" aria-label="Status der letzten 14 Tage">' + hist + "</div>" +
       '<h2 class="sec">Quelle und Stand</h2><ul class="plain"><li class="glass"><span>Quelle</span><a href="' + esc(safeUrl(l.quelle.url)) + '" rel="noopener">' + esc(l.quelle.name) + "</a></li><li class=\"glass\"><span>Stand laut Quelle</span><b>" + esc(l.ohne_zustand ? "Quelle meldet keinen Zustand" : l.quelle_stand ? datum(l.quelle_stand) : l.ohne_datum ? "Quelle nennt nur den Status, kein Präparierdatum" : "nicht angegeben") + '</b></li><li class="glass"><span>Zuletzt von uns geprüft</span><b>' + esc(l.abgerufen ? datum(l.abgerufen) + " (" + alter(l.abgerufen) + ")" : "noch nie") + "</b></li>" +
       (l.auch_bei && l.auch_bei.length ? '<li class="glass"><span>Auch gemeldet von</span><span>' + l.auch_bei.map(function (a) {
         /* D18: weicht die verdeckte Quelle ab, steht ihr Status dabei; es zaehlt die oben gezeigte, genauere Quelle */

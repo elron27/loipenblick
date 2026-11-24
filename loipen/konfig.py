@@ -10,6 +10,7 @@ import yaml
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from loipen import osmauszug
 from loipen.models import Gebiet, Herkunft, Parkplatz, Quelle, Region
 
 # Erlaubnis des Betreibers (Stefan, 19.11.2026; docs/kontaktliste.md): nur_test = Daten nur in der Testversion,
@@ -101,12 +102,13 @@ def _get_or_new(session: Session, model, **key):
     return obj
 
 
-def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
+def abgleichen(session: Session, sources: dict, gebiete: dict, config_dir: Path = CONFIG_DIR) -> None:
     """Legt Regionen, Gebiete, Parkplaetze und Quellen an oder aktualisiert sie."""
     fehler = pruefe(sources, gebiete)
     if fehler:
         raise ValueError("Konfiguration fehlerhaft:\n" + "\n".join(fehler))
 
+    osm_auszug = osmauszug.lade(config_dir)
     regionen: dict[str, Region] = {}
     for r in gebiete.get("regionen", []):
         region = _get_or_new(session, Region, slug=r["slug"])
@@ -127,7 +129,9 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         gebiet.loipengebuehr_eur = gebuehr.get("eur")
         gebiet.loipengebuehr_text = gebuehr.get("text")
         gebiet.loipengebuehr_url = gebuehr.get("url")
-        gebiet.haltestellen = g.get("haltestellen", [])
+        # U26, D22: Haltestellen von Hand zuerst, dann aus dem OSM-Auszug mit Fussweg in Minuten (D24)
+        aus_osm = osm_auszug.get(g["slug"]) or {}
+        gebiet.haltestellen = osmauszug.zusammen(g.get("haltestellen", []), aus_osm.get("haltestellen"))
         station = g.get("wetterstation") or {}
         gebiet.hoehe_m = g.get("hoehe_m")
         gebiet.wetterstation_id = station.get("id")
@@ -137,7 +141,7 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         gebiet.grenzinfo = g.get("grenzinfo")
         # D9, D10, B32: Webcams und Verleih nur als Link, Pruefdatum der Handangaben
         gebiet.webcams = g.get("webcams") or None
-        gebiet.verleih = g.get("verleih") or None
+        gebiet.verleih = osmauszug.zusammen(g.get("verleih"), aus_osm.get("verleih")) or None
         gebiet.hand_geprueft_am = g.get("geprueft_am")
         alle[g["slug"]] = gebiet
     session.flush()
@@ -190,6 +194,7 @@ def lade_und_abgleichen(session: Session, config_dir: Path = CONFIG_DIR) -> None
         session,
         lade_yaml(config_dir / "sources.yaml"),
         lade_yaml(config_dir / "gebiete.yaml"),
+        config_dir,
     )
     # D21: gepflegte Stammdaten der Loipen (Detailseiten, Handrecherche, Hoehenmodell)
     from loipen.details import lade_stammdaten
