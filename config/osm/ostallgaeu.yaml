@@ -1,0 +1,86 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  fuessen:
+    haltestellen:
+    - name: Kemptener-/Birkstraße Realschule
+      art: Bus
+      lat: 47.568294
+      lon: 10.684206
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Kemptener Str./ Festplatz
+      art: Bus
+      lat: 47.56834
+      lon: 10.676119
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: FlixBus
+      art: Bus
+      lat: 47.568098
+      lon: 10.675496
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Festplatz
+      lat: 47.567674
+      lon: 10.675579
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Eissportzentrum
+      lat: 47.568051
+      lon: 10.68874
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  pfronten:
+    haltestellen:
+    - name: Pfronten-Ried, Fachklinik Allgäu
+      art: Bus
+      lat: 47.582522
+      lon: 10.548384
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Pfronten-Kreuzegg
+      art: Bus
+      lat: 47.596307
+      lon: 10.564352
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Röfleuten, Im Lus
+      art: Bus
+      lat: 47.589439
+      lon: 10.545415
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Röfleuten Wanderparkplatz
+      lat: 47.590957
+      lon: 10.54553
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Steinach Skizentrum P3
+      lat: 47.56563
+      lon: 10.564404
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

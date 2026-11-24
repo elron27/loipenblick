@@ -1,0 +1,69 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  sachrang:
+    haltestellen:
+    - name: Neuhäusl
+      art: Bus
+      lat: 47.731775
+      lon: 12.302245
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Sachrang, Ort
+      art: Bus
+      lat: 47.690984
+      lon: 12.263955
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Hainbach
+      art: Bus
+      lat: 47.736605
+      lon: 12.305464
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Hainbach
+      lat: 47.734028
+      lon: 12.304038
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Geigelstein
+      lat: 47.69265
+      lon: 12.267679
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skischule Sachrang
+      lat: 47.686285
+      lon: 12.259714
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686276
+      lon: 12.259694
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm

@@ -1,0 +1,45 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  weissensee-techendorf:
+    haltestellen:
+    - name: Strandbad, Doga
+      art: Bus
+      lat: 46.713688
+      lon: 13.296018
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Weissensee Haus
+      art: Bus
+      lat: 46.714353
+      lon: 13.294362
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Techendorf - Brücke
+      art: Bus
+      lat: 46.715535
+      lon: 13.294609
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: P Weissenseehaus
+      lat: 46.71361
+      lon: 13.29417
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.713892
+      lon: 13.293449
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

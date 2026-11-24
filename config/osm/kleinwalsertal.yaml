@@ -1,0 +1,70 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  kleinwalsertal:
+    haltestellen:
+    - name: Hirschegg Walserhaus
+      art: Bus
+      lat: 47.342675
+      lon: 10.16757
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Hirschegg Schlössleweg
+      art: Bus
+      lat: 47.339615
+      lon: 10.166381
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Hirschegg Adler
+      art: Bus
+      lat: 47.345061
+      lon: 10.167929
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.340885
+      lon: 10.168388
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.342641
+      lon: 10.169978
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sporthaus Edelweiß
+      lat: 47.343055
+      lon: 10.16667
+      url: http://www.sporthaus-edelweiss.de/
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 6
+    - name: Ifen Sport
+      lat: 47.348931
+      lon: 10.171264
+      url: null
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Ski Fritz
+      lat: 47.347698
+      lon: 10.170752
+      url: null
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: false
+      herkunft: osm

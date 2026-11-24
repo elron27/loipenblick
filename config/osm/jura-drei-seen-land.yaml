@@ -1,0 +1,192 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  la-chaux-de-fonds:
+    haltestellen:
+    - name: Espacité
+      art: Bus
+      lat: 47.102667
+      lon: 6.829502
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Théâtre
+      art: Bus
+      lat: 47.102027
+      lon: 6.828811
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Conservatoire
+      art: Bus
+      lat: 47.102096
+      lon: 6.827868
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.102566
+      lon: 6.829361
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.102101
+      lon: 6.829041
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 47.072975
+      lon: 6.8699
+      url: null
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+  les-breuleux:
+    haltestellen:
+    - name: Les Breuleux Gare
+      art: Bus
+      lat: 47.210595
+      lon: 7.005515
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Les Breuleux
+      art: Bahn
+      lat: 47.210667
+      lon: 7.005562
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Les Breuleux Est
+      art: Bus
+      lat: 47.209143
+      lon: 7.011425
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.210671
+      lon: 7.00728
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.210466
+      lon: 7.00527
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  les-genevez:
+    haltestellen:
+    - name: Bellevue
+      art: Bus
+      lat: 47.255102
+      lon: 6.998962
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Route de France
+      art: Bus
+      lat: 47.256165
+      lon: 6.995214
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Saignelégier
+      art: Bahn
+      lat: 47.254557
+      lon: 6.994184
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.254118
+      lon: 6.997648
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.254176
+      lon: 6.998405
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.255981
+      lon: 6.997775
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  saignelegier:
+    haltestellen:
+    - name: Bellevue
+      art: Bus
+      lat: 47.255102
+      lon: 6.998962
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Route de France
+      art: Bus
+      lat: 47.256165
+      lon: 6.995214
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Saignelégier
+      art: Bahn
+      lat: 47.254557
+      lon: 6.994184
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.254118
+      lon: 6.997648
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.254176
+      lon: 6.998405
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.255981
+      lon: 6.997775
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

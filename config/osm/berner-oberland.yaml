@@ -1,0 +1,798 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  adelboden:
+    haltestellen:
+    - name: Adelboden, Post
+      art: Bus
+      lat: 46.493676
+      lon: 7.559822
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Adelboden, Dorf Sillerenbahn
+      art: Bus
+      lat: 46.490247
+      lon: 7.555687
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Adelboden, Tannermatte
+      art: Bus
+      lat: 46.49307
+      lon: 7.563313
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.492308
+      lon: 7.560296
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.492334
+      lon: 7.561331
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  aeschi-aeschiried:
+    haltestellen:
+    - name: Aeschi, Post
+      art: Bus
+      lat: 46.658897
+      lon: 7.696281
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Niederdorf
+      art: Bus
+      lat: 46.660696
+      lon: 7.693622
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: PostAuto-Betriebshof
+      art: Bus
+      lat: 46.658963
+      lon: 7.69798
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.658469
+      lon: 7.695993
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.659399
+      lon: 7.693682
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  brienz-axalp:
+    haltestellen:
+    - name: Sportbahnen
+      art: Bus
+      lat: 46.718799
+      lon: 8.037702
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bellevue
+      art: Bus
+      lat: 46.724008
+      lon: 8.037627
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    - name: Totzweg
+      art: Bus
+      lat: 46.723753
+      lon: 8.043402
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Oberer Parkplatz
+      lat: 46.718896
+      lon: 8.037415
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  bumbach-schangnau:
+    haltestellen:
+    - name: Alpenrose
+      art: Bus
+      lat: 46.813868
+      lon: 7.900912
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bumbach Skilift
+      art: Bus
+      lat: 46.814122
+      lon: 7.894271
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Bödeli
+      art: Bus
+      lat: 46.812463
+      lon: 7.911533
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.812948
+      lon: 7.910264
+      url: null
+      fuss_min: 10
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  elsigen-metsch:
+    haltestellen:
+    - name: Elsigbach
+      art: Bus
+      lat: 46.529197
+      lon: 7.606395
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.52908
+      lon: 7.606145
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  engstligenalp:
+    haltestellen:
+    - name: Adelboden, Unter dem Birg
+      art: Bus
+      lat: 46.45933
+      lon: 7.5664
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Adelboden, Chäli
+      art: Bus
+      lat: 46.460869
+      lon: 7.562458
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Raufmatte
+      art: Bus
+      lat: 46.470368
+      lon: 7.562072
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.459032
+      lon: 7.566995
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.459141
+      lon: 7.565577
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  eriz:
+    haltestellen:
+    - name: Eriz, Linden
+      art: Bus
+      lat: 46.788281
+      lon: 7.778412
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Eriz, Bieten Schulhaus
+      art: Bus
+      lat: 46.787252
+      lon: 7.782944
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Eriz, Schwand
+      art: Bus
+      lat: 46.788366
+      lon: 7.766645
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.790346
+      lon: 7.780863
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gadmen:
+    haltestellen:
+    - name: Meiringen
+      art: Bahn
+      lat: 46.727278
+      lon: 8.184227
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Meiringen Bahnhof
+      art: Bus
+      lat: 46.727418
+      lon: 8.185059
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Casinoplatz
+      art: Bus
+      lat: 46.727305
+      lon: 8.187026
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.727983
+      lon: 8.184198
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gantrisch-riffenmatt:
+    haltestellen:
+    - name: Kreuzung
+      art: Bus
+      lat: 46.76732
+      lon: 7.352125
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Schwendi
+      art: Bus
+      lat: 46.770905
+      lon: 7.353921
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Giebel
+      art: Bus
+      lat: 46.765683
+      lon: 7.340923
+      url: null
+      fuss_min: 14
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.765303
+      lon: 7.353311
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.759542
+      lon: 7.350978
+      url: null
+      fuss_min: 10
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  grindelwald:
+    haltestellen:
+    - name: Grindelwald, Bahnhof
+      art: Bus
+      lat: 46.624067
+      lon: 8.034355
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Grindelwald Bahnhof B
+      art: Bus
+      lat: 46.624146
+      lon: 8.034403
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Grindelwald Bahnhof D
+      art: Bus
+      lat: 46.624118
+      lon: 8.034291
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkhaus Sportzentrum
+      lat: 46.622866
+      lon: 8.035329
+      url: null
+      fuss_min: 0
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.623473
+      lon: 8.032747
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gstaad:
+    haltestellen:
+    - name: Eggli Talstation
+      art: Bus
+      lat: 46.467696
+      lon: 7.283093
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Eggli
+      art: Bus
+      lat: 46.468318
+      lon: 7.285673
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Rütti Schulhaus
+      art: Bus
+      lat: 46.469494
+      lon: 7.2852
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.467551
+      lon: 7.283381
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.471072
+      lon: 7.282387
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  habkern:
+    haltestellen:
+    - name: Ringgenberg
+      art: Bahn
+      lat: 46.703808
+      lon: 7.899933
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Moosrain
+      art: Bus
+      lat: 46.70478
+      lon: 7.899842
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Posr
+      art: Bus
+      lat: 46.702134
+      lon: 7.895657
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.702175
+      lon: 7.895603
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  heimenschwand:
+    haltestellen:
+    - name: Rohrimoos Bad
+      art: Bus
+      lat: 46.814699
+      lon: 7.708256
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Kuhstelle
+      art: Bus
+      lat: 46.812839
+      lon: 7.692379
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: Höh
+      art: Bus
+      lat: 46.81929
+      lon: 7.692118
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  jaunpass-boltigen:
+    haltestellen:
+    - name: Jaunpass, Restaurant
+      art: Bus
+      lat: 46.591473
+      lon: 7.337317
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Schüpfen
+      art: Bus
+      lat: 46.592433
+      lon: 7.347492
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.591778
+      lon: 7.338298
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.591707
+      lon: 7.336111
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  kandersteg:
+    haltestellen:
+    - name: Kandersteg, Kirche
+      art: Bus
+      lat: 46.494335
+      lon: 7.674253
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Victoria
+      art: Bus
+      lat: 46.495244
+      lon: 7.674414
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Hüttentürli
+      art: Bus
+      lat: 46.491281
+      lon: 7.671242
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.494045
+      lon: 7.6733
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.495024
+      lon: 7.674213
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kiental-ramslauenen:
+    haltestellen:
+    - name: Ramslauenen
+      art: Bus
+      lat: 46.586591
+      lon: 7.72466
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kiental Dorf
+      art: Bus
+      lat: 46.589457
+      lon: 7.723082
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Loosplattenalp
+      art: Bus
+      lat: 46.579763
+      lon: 7.729319
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.586074
+      lon: 7.723629
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.586469
+      lon: 7.724866
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  lauterbrunnen:
+    haltestellen:
+    - name: Bahnhof
+      art: Bus
+      lat: 46.598994
+      lon: 7.907523
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Dorf
+      art: Bus
+      lat: 46.595432
+      lon: 7.907419
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Lauterbrunnen
+      art: Bahn
+      lat: 46.598424
+      lon: 7.907955
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.596678
+      lon: 7.907748
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkhaus Lauterbrunnen
+      lat: 46.598278
+      lon: 7.908802
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  lenk-im-simmental:
+    haltestellen:
+    - name: Talstation Betelberg
+      art: Bus
+      lat: 46.452595
+      lon: 7.437765
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Krummenbach
+      art: Bus
+      lat: 46.451783
+      lon: 7.439168
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Badgässli
+      art: Bus
+      lat: 46.454877
+      lon: 7.439621
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.452803
+      lon: 7.437538
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schweizer Ski- und Snowboard Schule Lenk
+      lat: 46.457147
+      lon: 7.442398
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 9
+    - name: Bergstation Leiterli
+      lat: 46.428841
+      lon: 7.408801
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+  meiringen-hasliberg:
+    haltestellen:
+    - name: Twing
+      art: Bus
+      lat: 46.745049
+      lon: 8.195723
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gletscherblick
+      art: Bus
+      lat: 46.743599
+      lon: 8.197871
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Wasserwendi Dorf
+      art: Bus
+      lat: 46.746609
+      lon: 8.197192
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Gondelbahn Hasliberg
+      lat: 46.745196
+      lon: 8.195183
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.743783
+      lon: 8.196967
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Glatthard Sport
+      lat: 46.733355
+      lon: 8.208364
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Glatthard Sport
+      lat: 46.744289
+      lon: 8.219402
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: true
+      herkunft: osm
+  sigriswil:
+    haltestellen:
+    - name: Schwanden Säge
+      art: Bus
+      lat: 46.740228
+      lon: 7.729002
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Schwanden, Schulhaus
+      art: Bus
+      lat: 46.737175
+      lon: 7.719921
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Schwanden (Sigriswil), Dorf
+      art: Bus
+      lat: 46.735433
+      lon: 7.715527
+      url: null
+      fuss_min: 14
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.735711
+      lon: 7.730527
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.740139
+      lon: 7.729156
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  zweisimmen-sparenmoos:
+    haltestellen:
+    - name: Zweisimmen
+      art: Bahn
+      lat: 46.553485
+      lon: 7.37475
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Zweisimmen, Bahnhof
+      art: Bus
+      lat: 46.553762
+      lon: 7.374944
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.552735
+      lon: 7.372478
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.552358
+      lon: 7.371731
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

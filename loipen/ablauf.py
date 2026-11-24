@@ -4,6 +4,7 @@ import logging
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -12,6 +13,7 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
 from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Status, Technik, utcnow
 from loipen.ereignisse import Ereignis, ereignis_fuer
+from loipen.details import uebernimm_stammdaten, wende_gepflegte_an
 from loipen.waechter import Meldung, pruefe
 from loipen.zustand import letzter_zustand, speichere_zustand
 
@@ -20,6 +22,7 @@ log = logging.getLogger("loipen.ablauf")
 # B29: Eine Loipe, die ihre Quelle in vollstaendigen Laeufen so lange nicht mehr meldet, wird ausgeblendet
 # (active = False). Meldet die Quelle sie wieder, ist sie sofort wieder da.
 VERSCHWUNDEN_STUNDEN = 48
+STAMMDATEN_DIR = Path(__file__).resolve().parent.parent / "config" / "stammdaten"  # D21, wie loipen/konfig.py
 
 
 @dataclass
@@ -41,10 +44,13 @@ def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
     """Uebernimmt, was die Quelle liefert. Ein leerer Wert ueberschreibt nie einen bekannten."""
     loipe.name = d.name
     loipe.source_url = d.source_url
-    for feld in ("laenge_km", "lat", "lon", "nachtloipe", "rundkurs"):
+    for feld in ("laenge_km", "lat", "lon", "nachtloipe", "rundkurs", "hund_erlaubt", "kunstschnee",
+                 "loipengebiet", "einstiege"):
         wert = getattr(d, feld)
         if wert is not None:
             setattr(loipe, feld, wert)
+    if d.stammdaten:
+        uebernimm_stammdaten(loipe, d.stammdaten, herkunft="quelle", url=d.source_url)
     if d.technik != Technik.UNBEKANNT:
         loipe.technik = d.technik.value
     if d.schwierigkeit != Schwierigkeit.UNBEKANNT:
@@ -99,6 +105,7 @@ def rufe_quelle_ab(
         loipe.gebiet = gebiet
         _stammdaten(loipe, d)
         session.flush()
+        wende_gepflegte_an(loipe, quelle.key, STAMMDATEN_DIR)  # D21: auch fuer neue Loipen
 
         for feld, roh in d.unbekannte_begriffe:
             log.warning(
@@ -120,6 +127,9 @@ def rufe_quelle_ab(
                 "gespurt_skating_km": d.gespurt_skating_km,
                 "gespurt_gesamt_km": d.gespurt_gesamt_km,
                 "schneehoehe_cm": d.schneehoehe_cm,
+                "schneehoehe_berg_cm": d.schneehoehe_berg_cm,
+                "hinweis": d.hinweis,
+                "sperrgrund": d.sperrgrund,
                 "quelle_aktualisiert_at": d.quelle_aktualisiert_at,
                 "rohtext": d.rohtext or d.status_rohtext,
             },

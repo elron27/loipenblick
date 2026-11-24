@@ -1,0 +1,455 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  andermatt-sedrun:
+    haltestellen:
+    - name: Gemsstockbahn 1
+      art: Bus
+      lat: 46.632124
+      lon: 8.592243
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gemsstockbahn
+      art: Bus
+      lat: 46.632152
+      lon: 8.592462
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gemsstockbahn 2
+      art: Bus
+      lat: 46.63195
+      lon: 8.591713
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Gemsstockbahn
+      lat: 46.632243
+      lon: 8.591797
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Meyer's
+      lat: 46.637304
+      lon: 8.594964
+      url: https://meyers-sporthaus.ch/shops-rentals/rental-point-bahnhof
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+  einsiedeln:
+    haltestellen:
+    - name: Grotzenmühlestrasse
+      art: Bus
+      lat: 47.125855
+      lon: 8.738482
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Allmeindstrasse
+      art: Bus
+      lat: 47.124004
+      lon: 8.739745
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Altersheim Langrüti
+      art: Bus
+      lat: 47.122263
+      lon: 8.741933
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.123606
+      lon: 8.739974
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.121777
+      lon: 8.734691
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  engelberg:
+    haltestellen:
+    - name: Engelberg Dorf
+      art: Bus
+      lat: 46.820431
+      lon: 8.405985
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Kurpark
+      art: Bus
+      lat: 46.820841
+      lon: 8.403588
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kloster
+      art: Bus
+      lat: 46.819706
+      lon: 8.408135
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.820437
+      lon: 8.405739
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kuessnacht-seebodenalp:
+    haltestellen:
+    - name: Küssnacht Seilbahn
+      art: Bus
+      lat: 47.076149
+      lon: 8.439532
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Honegg
+      art: Bus
+      lat: 47.073906
+      lon: 8.438757
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Räbmatt
+      art: Bus
+      lat: 47.07906
+      lon: 8.441268
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.076081
+      lon: 8.439919
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.073957
+      lon: 8.43893
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  langis-glaubenberg:
+    haltestellen:
+    - name: Langis
+      art: Bus
+      lat: 46.893049
+      lon: 8.12652
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Glaubenberg Passhöhe
+      art: Bus
+      lat: 46.892732
+      lon: 8.107738
+      url: null
+      fuss_min: 20
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.892581
+      lon: 8.125961
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.893088
+      lon: 8.126181
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  melchsee-frutt:
+    haltestellen:
+    - name: Stöckalp
+      art: Bus
+      lat: 46.802257
+      lon: 8.279362
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Sportcamp
+      art: Bus
+      lat: 46.811094
+      lon: 8.281707
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: Sportcamp Nord
+      art: Bus
+      lat: 46.813533
+      lon: 8.282779
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.80235
+      lon: 8.279653
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.803985
+      lon: 8.278788
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  mythenregion:
+    haltestellen:
+    - name: Rotenfluebahn
+      art: Bus
+      lat: 47.014644
+      lon: 8.669217
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bol
+      art: Bus
+      lat: 47.013207
+      lon: 8.672286
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Rickenbach Dorf
+      art: Bus
+      lat: 47.015853
+      lon: 8.666467
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.014513
+      lon: 8.669113
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  moerlialp-giswil:
+    haltestellen:
+    - name: Mörlialp
+      art: Bus
+      lat: 46.825775
+      lon: 8.113715
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.825476
+      lon: 8.110108
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.826942
+      lon: 8.110646
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  rigi:
+    haltestellen:
+    - name: Vitznau
+      art: Bahn
+      lat: 47.009545
+      lon: 8.482996
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Vitznau Station
+      art: Bus
+      lat: 47.00964
+      lon: 8.483373
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Unteraltdorf
+      art: Bus
+      lat: 47.006305
+      lon: 8.484606
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Dorfplatz
+      lat: 47.010595
+      lon: 8.48385
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.009372
+      lon: 8.483163
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  rothenthurm:
+    haltestellen:
+    - name: Rothenthurm Dorf
+      art: Bus
+      lat: 47.103991
+      lon: 8.675684
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Schoosstrasse
+      art: Bus
+      lat: 47.102011
+      lon: 8.674652
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Rothenthurm Bahnhof
+      art: Bus
+      lat: 47.10527
+      lon: 8.674572
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.104605
+      lon: 8.676268
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  stoos:
+    haltestellen:
+    - name: Stoos (Stoosbahn)
+      art: Bahn
+      lat: 46.978222
+      lon: 8.667787
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  studen-sz:
+    haltestellen:
+    - name: Studen Dörfli
+      art: Bus
+      lat: 47.074404
+      lon: 8.836351
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Adelmatt
+      art: Bus
+      lat: 47.071475
+      lon: 8.84194
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.07358
+      lon: 8.835405
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.073947
+      lon: 8.834138
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  soerenberg:
+    haltestellen:
+    - name: Sörenberg Post
+      art: Bus
+      lat: 46.82183
+      lon: 8.034566
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Sörenberg Schulhaus
+      art: Bus
+      lat: 46.823508
+      lon: 8.030634
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Höchistrasse
+      art: Bus
+      lat: 46.819433
+      lon: 8.037384
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.821339
+      lon: 8.033147
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.822477
+      lon: 8.033529
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

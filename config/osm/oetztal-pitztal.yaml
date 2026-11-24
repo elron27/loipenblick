@@ -1,0 +1,301 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  imst:
+    haltestellen:
+    - name: Nassereith Kapelle
+      art: Bus
+      lat: 47.308313
+      lon: 10.839968
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Imst, Hochimst
+      art: Bus
+      lat: 47.241507
+      lon: 10.722966
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Hochimst
+      art: Bus
+      lat: 47.24149
+      lon: 10.722985
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Haus im Leben
+      lat: 47.318445
+      lon: 10.833095
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Postplatz
+      lat: 47.314774
+      lon: 10.838014
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  obergurgl:
+    haltestellen:
+    - name: Obergurgl Hotel Mühle
+      art: Bus
+      lat: 46.884908
+      lon: 11.037644
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Obergurgl Hochgurglbahn Talstation
+      art: Bus
+      lat: 46.898035
+      lon: 11.04032
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Obergurgl Hotel Hochfirst
+      art: Bus
+      lat: 46.873829
+      lon: 11.030594
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Hochgurglbahn
+      lat: 46.897873
+      lon: 11.03966
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkplatz Hochgurglbahn
+      lat: 46.897644
+      lon: 11.040808
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  pitztal:
+    haltestellen:
+    - name: Fließ Naturparkhaus
+      art: Bus
+      lat: 47.116553
+      lon: 10.668204
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: St. Leonhard im Pitztal Hairlach
+      art: Bus
+      lat: 47.099843
+      lon: 10.81981
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Stillebach
+      art: Bus
+      lat: 47.047015
+      lon: 10.861014
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Stillebach
+      lat: 47.045741
+      lon: 10.861848
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Scheibe
+      lat: 47.059859
+      lon: 10.851606
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.116387
+      lon: 10.668219
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schiverleih Kirschner
+      lat: 47.055775
+      lon: 10.854939
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+  pitztaler-gletscher:
+    haltestellen:
+    - name: Mittelberg Wendestelle
+      art: Bus
+      lat: 46.958394
+      lon: 10.876391
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Mandarfen Rifflseebahn
+      art: Bus
+      lat: 46.968516
+      lon: 10.870793
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Rifflseebahn
+      art: Bus
+      lat: 46.968582
+      lon: 10.870783
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.963612
+      lon: 10.87065
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.957961
+      lon: 10.876134
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schiverleih Kirschner
+      lat: 47.055775
+      lon: 10.854939
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: true
+      herkunft: osm
+  soelden:
+    haltestellen:
+    - name: Zwieselstein Grüne
+      art: Bus
+      lat: 46.93602
+      lon: 11.026304
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Zwieselstein Gh Neue Post
+      art: Bus
+      lat: 46.939444
+      lon: 11.02747
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: P1
+      lat: 46.9343
+      lon: 11.018839
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  vent:
+    haltestellen:
+    - name: Vent Hotel Kleon
+      art: Bus
+      lat: 46.861841
+      lon: 10.915784
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Vent Hotel Post
+      art: Bus
+      lat: 46.861023
+      lon: 10.914765
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Vent Hotel Similaun
+      art: Bus
+      lat: 46.857908
+      lon: 10.913234
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.863352
+      lon: 10.916947
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.862838
+      lon: 10.916458
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  oetztal:
+    haltestellen:
+    - name: Gries Parkplatz
+      art: Bus
+      lat: 47.06947
+      lon: 11.026527
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Niederthai Langlaufzentrum
+      art: Bus
+      lat: 47.12069
+      lon: 10.964568
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Niederthai Informationsbüro
+      art: Bus
+      lat: 47.128287
+      lon: 10.967685
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.120565
+      lon: 10.964466
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.069555
+      lon: 11.027515
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

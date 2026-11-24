@@ -1,0 +1,127 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  leutasch:
+    haltestellen:
+    - name: Leutasch Obern
+      art: Bus
+      lat: 47.356633
+      lon: 11.123337
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Leutasch Weidach Alpenbad (Brücke)
+      art: Bus
+      lat: 47.372865
+      lon: 11.151129
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Leutasch Weidach Alpenbad (Parkplatz)
+      art: Bus
+      lat: 47.371912
+      lon: 11.152318
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.372857
+      lon: 11.1528
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.382265
+      lon: 11.172268
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  mieming:
+    haltestellen:
+    - name: Obsteig Gemeindeamt
+      art: Bus
+      lat: 47.299818
+      lon: 10.92115
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Mieming Gh Post
+      art: Bus
+      lat: 47.304425
+      lon: 10.985216
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Obsteig Holzleiten
+      art: Bus
+      lat: 47.308587
+      lon: 10.884733
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.314543
+      lon: 11.000756
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.300183
+      lon: 10.921628
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  seefeld:
+    haltestellen:
+    - name: Leutasch Moos Rödlach Parkplatz
+      art: Bus
+      lat: 47.346866
+      lon: 11.128988
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Leutasch Obern
+      art: Bus
+      lat: 47.356885
+      lon: 11.123364
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Mösern Lifte Seewaldalm
+      art: Bus
+      lat: 47.313473
+      lon: 11.161322
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Moos Rödlach
+      lat: 47.346587
+      lon: 11.12824
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Fußballplatz Scharnitz
+      lat: 47.383265
+      lon: 11.243325
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

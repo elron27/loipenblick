@@ -1,0 +1,86 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  goms-muenster:
+    haltestellen:
+    - name: Gluringen
+      art: Bahn
+      lat: 46.462759
+      lon: 8.233958
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Blitzingen
+      art: Bahn
+      lat: 46.444688
+      lon: 8.204977
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Biel
+      art: Bahn
+      lat: 46.455142
+      lon: 8.219734
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.443904
+      lon: 8.206197
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 46.398316
+      lon: 8.144969
+      url: null
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  obergoms:
+    haltestellen:
+    - name: Oberwald Dorf
+      art: Bus
+      lat: 46.534315
+      lon: 8.348249
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Oberwald, Schulhaus
+      art: Bus
+      lat: 46.533626
+      lon: 8.350902
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Obergesteln
+      art: Bahn
+      lat: 46.513388
+      lon: 8.326208
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.512876
+      lon: 8.326491
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.50337
+      lon: 8.318347
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

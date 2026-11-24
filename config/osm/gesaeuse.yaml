@@ -1,0 +1,127 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  admont:
+    haltestellen:
+    - name: Admont Kasteneck
+      art: Bus
+      lat: 47.573315
+      lon: 14.461165
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Admont Dr.-Genger-Platz
+      art: Bus
+      lat: 47.577808
+      lon: 14.460402
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Admont Stiftsparkplatz
+      art: Bus
+      lat: 47.573979
+      lon: 14.463407
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.57407
+      lon: 14.461462
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.574463
+      lon: 14.461115
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  ardning:
+    haltestellen:
+    - name: Ardning Dorfplatz
+      art: Bus
+      lat: 47.590992
+      lon: 14.363773
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ardning Rüsthaus
+      art: Bus
+      lat: 47.590813
+      lon: 14.366569
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Ardning
+      art: Bahn
+      lat: 47.590619
+      lon: 14.35895
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.59111
+      lon: 14.363862
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.591104
+      lon: 14.363171
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  liezen:
+    haltestellen:
+    - name: Liezen Busbahnhof
+      art: Bus
+      lat: 47.566911
+      lon: 14.240171
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Liezen Busbahnhof A-D
+      art: Bus
+      lat: 47.567007
+      lon: 14.240217
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Liezen Friedau
+      art: Bus
+      lat: 47.564293
+      lon: 14.236042
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.566723
+      lon: 14.240613
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.567062
+      lon: 14.241262
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

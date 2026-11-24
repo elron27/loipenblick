@@ -1,0 +1,201 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  ellmau:
+    haltestellen:
+    - name: Ellmau Kaiserbad
+      art: Bus
+      lat: 47.5222
+      lon: 12.296735
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Ellmau Hartkaiserbahn Talstation
+      art: Bus
+      lat: 47.50792
+      lon: 12.293509
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Ellmau Steinerner Tisch
+      art: Bus
+      lat: 47.518572
+      lon: 12.291011
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Kaiserbad P1
+      lat: 47.52307
+      lon: 12.297176
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Kaiserbad P2
+      lat: 47.522359
+      lon: 12.294426
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schischule Schwaiger
+      lat: 47.51301
+      lon: 12.326465
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiverleih Sport Mayr
+      lat: 47.50482
+      lon: 12.193848
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Stailerai
+      lat: 47.496181
+      lon: 12.395299
+      url: https://www.stailerai.at
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  going:
+    haltestellen:
+    - name: Going Badesee
+      art: Bus
+      lat: 47.520564
+      lon: 12.347003
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Oberndorf i. T. Gh Reinache
+      art: Bus
+      lat: 47.503834
+      lon: 12.35967
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Thurnbichlkreizung
+      art: Bus
+      lat: 47.515769
+      lon: 12.324062
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Goinger Badesee
+      lat: 47.520306
+      lon: 12.34749
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.514449
+      lon: 12.327577
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schischule Schwaiger
+      lat: 47.51301
+      lon: 12.326465
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 8
+    - name: Stailerai
+      lat: 47.496181
+      lon: 12.395299
+      url: https://www.stailerai.at
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiverleih Sport Mayr
+      lat: 47.50482
+      lon: 12.193848
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+  soell:
+    haltestellen:
+    - name: Spar
+      art: Bus
+      lat: 47.501261
+      lon: 12.189078
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Söll Kreisverkehr
+      art: Bus
+      lat: 47.502236
+      lon: 12.193554
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Söll Ahornsee
+      art: Bus
+      lat: 47.502499
+      lon: 12.197965
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.502721
+      lon: 12.197366
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.502665
+      lon: 12.198196
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skiverleih Sport Mayr
+      lat: 47.50482
+      lon: 12.193848
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Skischule Kurz
+      lat: 47.446538
+      lon: 12.161894
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schischule Schwaiger
+      lat: 47.51301
+      lon: 12.326465
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm

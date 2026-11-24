@@ -1,0 +1,102 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  davos:
+    haltestellen:
+    - name: Davos Wolfgang
+      art: Bus
+      lat: 46.8324
+      lon: 9.853547
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Stilli
+      art: Bus
+      lat: 46.810911
+      lon: 9.853221
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gadenstatt
+      art: Bus
+      lat: 46.769801
+      lon: 9.800612
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.832479
+      lon: 9.853431
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Färich
+      lat: 46.810834
+      lon: 9.854069
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Langlaufzentrum Dario Cologna
+      lat: 46.798593
+      lon: 9.83464
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: swissrent Paarsenn Sports
+      lat: 46.792105
+      lon: 9.821329
+      url: https://www.swissrent.com/
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: false
+      herkunft: osm
+  klosters:
+    haltestellen:
+    - name: Aeuja Brücke
+      art: Bus
+      lat: 46.863079
+      lon: 9.902482
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Klosters, Aeuja Alte Post
+      art: Bus
+      lat: 46.861295
+      lon: 9.900908
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Klosters, Sportzentrum
+      art: Bus
+      lat: 46.864738
+      lon: 9.886607
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.862467
+      lon: 9.90237
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.863006
+      lon: 9.902707
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

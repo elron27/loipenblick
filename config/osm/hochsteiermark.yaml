@@ -1,0 +1,71 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  rettenegg:
+    haltestellen:
+    - name: Rettenegg Abzw Feistritzwald
+      art: Bus
+      lat: 47.526135
+      lon: 15.780807
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Rettenegg Ort
+      art: Bus
+      lat: 47.523888
+      lon: 15.777287
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: Rettenegg Wasserstatt
+      art: Bus
+      lat: 47.518752
+      lon: 15.7719
+      url: null
+      fuss_min: 20
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.526641
+      lon: 15.781174
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  wildalpen:
+    haltestellen:
+    - name: Wildalpen Poschenhöhe
+      art: Bus
+      lat: 47.654508
+      lon: 14.980955
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Wildalpen Kollerbrücke
+      art: Bus
+      lat: 47.66162
+      lon: 14.988659
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.655282
+      lon: 14.984101
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Winterhöh Schilift
+      lat: 47.652813
+      lon: 14.984626
+      url: null
+      fuss_min: 9
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

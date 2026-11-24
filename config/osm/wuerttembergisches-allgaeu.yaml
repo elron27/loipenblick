@@ -1,0 +1,53 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  isny:
+    haltestellen:
+    - name: Friedhof
+      art: Bus
+      lat: 47.690284
+      lon: 10.043082
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: isny Wilhelmstraße
+      art: Bus
+      lat: 47.6892
+      lon: 10.039172
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Isny Karl-Wilhelm-Heck-Straße
+      art: Bus
+      lat: 47.690763
+      lon: 10.035986
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.691396
+      lon: 10.041737
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.690172
+      lon: 10.038802
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.690936
+      lon: 10.038979
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

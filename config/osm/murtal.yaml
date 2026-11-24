@@ -1,0 +1,45 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  hohentauern:
+    haltestellen:
+    - name: Hohentauern Ortsmitte
+      art: Bus
+      lat: 47.433685
+      lon: 14.482681
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Hohentauern Steinkogler
+      art: Bus
+      lat: 47.429023
+      lon: 14.465951
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: Hohentauern Moscher
+      art: Bus
+      lat: 47.42657
+      lon: 14.463665
+      url: null
+      fuss_min: 19
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.433776
+      lon: 14.480795
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.432894
+      lon: 14.477565
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

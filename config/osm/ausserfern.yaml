@@ -1,0 +1,473 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  berwang:
+    haltestellen:
+    - name: Bichlbach Almkopfbahn
+      art: Bahn
+      lat: 47.427764
+      lon: 10.776815
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Almkopfbahn Bahnhof
+      art: Bus
+      lat: 47.427405
+      lon: 10.777303
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Berwang, Thanellerkarbahn
+      art: Bus
+      lat: 47.408286
+      lon: 10.738414
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.407854
+      lon: 10.746955
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Thanellerkarlift
+      lat: 47.409404
+      lon: 10.73833
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sport 2000
+      lat: 47.40104
+      lon: 10.883777
+      url: null
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiverleih
+      lat: 47.401874
+      lon: 10.880453
+      url: null
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiverleih
+      lat: 47.401647
+      lon: 10.879816
+      url: http://www.sport2000rent.at/de/rent/o210
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+  jungholz:
+    haltestellen:
+    - name: Tennisplatz
+      art: Bus
+      lat: 47.543759
+      lon: 10.420717
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Jungholz, Jagdhof (AT)
+      art: Bus
+      lat: 47.57483
+      lon: 10.444649
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Jungholz, Habsbichl (A)
+      art: Bus
+      lat: 47.57713
+      lon: 10.433888
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.572547
+      lon: 10.459367
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.575347
+      lon: 10.440438
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  namlos:
+    haltestellen:
+    - name: Boden Dorf
+      art: Bus
+      lat: 47.28372
+      lon: 10.605926
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Pfafflar Ort
+      art: Bus
+      lat: 47.282935
+      lon: 10.62135
+      url: null
+      fuss_min: 19
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.368782
+      lon: 10.686775
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.283339
+      lon: 10.606536
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  lechtal:
+    haltestellen:
+    - name: Elbigenalp, Hotel Alpenrose
+      art: Bus
+      lat: 47.287625
+      lon: 10.430562
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Elbigenalp, Grünauerbrücke
+      art: Bus
+      lat: 47.281417
+      lon: 10.420722
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gh Schwarzer Adler
+      art: Bus
+      lat: 47.247472
+      lon: 10.305226
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.247242
+      lon: 10.305124
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.287061
+      lon: 10.429708
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  reutte:
+    haltestellen:
+    - name: Höfen Schollenwiesenlift
+      art: Bus
+      lat: 47.470949
+      lon: 10.681256
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Raintal
+      art: Bus
+      lat: 47.529748
+      lon: 10.67439
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gemeindeamt
+      art: Bus
+      lat: 47.5407
+      lon: 10.680269
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.472092
+      lon: 10.718787
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.517273
+      lon: 10.689131
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Schollenwiesenlift
+      lat: 47.470405
+      lon: 10.680859
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  tannheimer-tal:
+    haltestellen:
+    - name: Gemeindeamt
+      art: Bus
+      lat: 47.498542
+      lon: 10.554012
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Neu Kienzen
+      art: Bus
+      lat: 47.499971
+      lon: 10.506865
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Lumberg/Campingplatz
+      art: Bus
+      lat: 47.509969
+      lon: 10.556076
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.501293
+      lon: 10.517003
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.505874
+      lon: 10.473794
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  zugspitz-arena:
+    haltestellen:
+    - name: Lermoos, Camping Hofherr
+      art: Bus
+      lat: 47.402028
+      lon: 10.888916
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Biberwier Camping Biberhof
+      art: Bus
+      lat: 47.383397
+      lon: 10.902397
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Camping Hofherr
+      art: Bus
+      lat: 47.402012
+      lon: 10.888998
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.406351
+      lon: 10.903558
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.381139
+      lon: 10.894348
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Leitner Sport
+      lat: 47.401208
+      lon: 10.919256
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 2
+    - name: Sport 2000
+      lat: 47.40104
+      lon: 10.883777
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Skiverleih
+      lat: 47.401874
+      lon: 10.880453
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+  stanzach:
+    haltestellen:
+    - name: Vorderhornbach, Gemeindeamt
+      art: Bus
+      lat: 47.371028
+      lon: 10.540714
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gemeindeamt
+      art: Bus
+      lat: 47.371089
+      lon: 10.540771
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Gh Kreuz
+      art: Bus
+      lat: 47.369348
+      lon: 10.539801
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.357689
+      lon: 10.453926
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.3352
+      lon: 10.535916
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.379517
+      lon: 10.559471
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  warth:
+    haltestellen:
+    - name: Hochkrumbach Saloberlifte
+      art: Bus
+      lat: 47.268319
+      lon: 10.127598
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Warth Jägeralpe
+      art: Bus
+      lat: 47.267404
+      lon: 10.14952
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Hochkrumbach Gasthaus Adler
+      art: Bus
+      lat: 47.270619
+      lon: 10.13411
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Saloberjet
+      lat: 47.268211
+      lon: 10.128332
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Jägeralpe
+      lat: 47.267385
+      lon: 10.149138
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  weissenbach:
+    haltestellen:
+    - name: Forchach, Oberdorf
+      art: Bus
+      lat: 47.415281
+      lon: 10.582911
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Oberdorf
+      art: Bus
+      lat: 47.415273
+      lon: 10.582961
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Weißenbach, Doktorhaus
+      art: Bus
+      lat: 47.442247
+      lon: 10.645703
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Cafe Zur Alten Mühle
+      lat: 47.41323
+      lon: 10.582742
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.446717
+      lon: 10.636563
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

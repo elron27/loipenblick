@@ -1,0 +1,79 @@
+name: Stammdaten
+
+# P42, D22, D23, D24: Stammdaten der Loipen einmalig auf einem GitHub-Runner sammeln (die Cloud-Umgebung
+# erreicht die Quellen nicht) und als gepflegte Daten unter config/stammdaten/ bzw. config/osm/ auf denselben
+# Branch legen. Laeuft, wenn sich scripts/stammdaten.txt auf einem claude/-Branch aendert, oder von Hand.
+# Jede Zeile in scripts/stammdaten.txt ist ein Auftrag: "tourinfra", "tourinfra --alle", ...
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["scripts/stammdaten.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sammeln:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: loipen
+          POSTGRES_PASSWORD: loipen
+          POSTGRES_DB: loipen_stamm
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U loipen" --health-interval 5s --health-retries 10
+    env:
+      LOIPEN_DATABASE_URL: postgresql+psycopg://loipen:loipen@localhost:5432/loipen_stamm
+      LOIPEN_USER_AGENT: ${{ vars.LOIPEN_USER_AGENT || 'LoipenBot/0.1 (+https://github.com/elron27/loipenblick)' }}
+      LOIPEN_REQUEST_DELAY_S: "5"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: Seite aus den Schnappschuessen (Loipenstarts fuer den Auftrag osm)
+        if: ${{ hashFiles('scripts/stammdaten.txt') != '' }}
+        run: |
+          if grep -qE '^\s*(osm|hoehe)' scripts/stammdaten.txt; then
+            pip install rasterio
+            sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+            alembic upgrade head
+            python -m tests.stack.attrappe --port 18081 &
+            sleep 3
+            LOIPEN_UMLEITUNG=http://localhost:18081 LOIPEN_REQUEST_DELAY_S=0 \
+              python scripts/live_pruefung.py --ausgabe .stamm --ohne-wetter --ohne-osm --erlaube-umleitung || true
+            test -f .stamm/site/daten.json
+          fi
+      - name: Auftraege aus scripts/stammdaten.txt
+        run: |
+          set -o pipefail
+          grep -vE '^\s*(#|$)' scripts/stammdaten.txt | while read -r auftrag argumente; do
+            echo "::group::$auftrag $argumente"
+            # ein fehlgeschlagener Auftrag haelt die folgenden nicht auf; der Schritt schlaegt am Ende fehl
+            case "$auftrag" in
+              tourinfra) python scripts/tourinfra_details.py $argumente ;;
+              osm) python scripts/osm_auszug.py --seite .stamm/site $argumente ;;
+              hoehe) python scripts/hoehe_dem.py --seite .stamm/site $argumente ;;
+              *) echo "unbekannter Auftrag $auftrag"; false ;;
+            esac || { echo "FEHLER im Auftrag $auftrag"; touch .stammdaten-fehler; }
+            echo "::endgroup::"
+          done 2>&1 | tee .stammdaten.log
+          tail -5 .stammdaten.log >> "$GITHUB_STEP_SUMMARY"
+          test ! -f .stammdaten-fehler
+      - name: Ergebnis auf den Branch legen
+        # auch nach einem fehlgeschlagenen Auftrag: was die anderen gesammelt haben, bleibt erhalten
+        if: ${{ always() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for ordner in config/stammdaten config/osm; do
+            if [ -d "$ordner" ]; then git add -A "$ordner"; fi
+          done
+          git diff --cached --quiet || git commit -m "Stammdaten gesammelt ($(date -u +%F))"
+          git pull --no-rebase --no-edit origin "${GITHUB_REF_NAME}" && git push

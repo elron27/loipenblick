@@ -1,0 +1,266 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  zillertal-fuegen:
+    haltestellen:
+    - name: Hochfügen Hauptkassa
+      art: Bus
+      lat: 47.269597
+      lon: 11.775287
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ried i. Z., Zum Grian Bam
+      art: Bus
+      lat: 47.302654
+      lon: 11.87275
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Zum Grian Bam
+      art: Bus
+      lat: 47.302655
+      lon: 11.872625
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.270868
+      lon: 11.775926
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.302852
+      lon: 11.87301
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schischule und Schiverleih Kostenzer
+      lat: 47.340537
+      lon: 11.844372
+      url: null
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Ski Sport Hartl
+      lat: 47.301638
+      lon: 11.871334
+      url: https://www.skisporthartl.at/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 1
+  mayrhofen:
+    haltestellen:
+    - name: Mayrhofen, Stillupklamm
+      art: Bus
+      lat: 47.15892
+      lon: 11.847835
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Naturparkhaus
+      art: Bus
+      lat: 47.100408
+      lon: 11.809802
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ginzling, Naturparkhaus
+      art: Bus
+      lat: 47.100514
+      lon: 11.809873
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.170291
+      lon: 11.86554
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.175277
+      lon: 11.862362
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.158765
+      lon: 11.846137
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Snowsports Mayrhofen
+      lat: 47.161814
+      lon: 11.858691
+      url: https://www.skischulemayrhofen.com/
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Bernhard Sport & Mode
+      lat: 47.153707
+      lon: 11.725288
+      url: https://www.bernhard-sport-mode.at/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Bernhard Sport & Mode
+      lat: 47.153697
+      lon: 11.725277
+      url: https://www.bernhard-sport-mode.at/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+  tux:
+    haltestellen:
+    - name: Juns, Tuxer Mühle
+      art: Bus
+      lat: 47.135032
+      lon: 11.703791
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Juns, Klausboden
+      art: Bus
+      lat: 47.143055
+      lon: 11.718281
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Vorderlanersbach, Forelle
+      art: Bus
+      lat: 47.162433
+      lon: 11.742693
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.109459
+      lon: 11.603153
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.161325
+      lon: 11.743889
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Bernhard Sport & Mode
+      lat: 47.153707
+      lon: 11.725288
+      url: https://www.bernhard-sport-mode.at/
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Bernhard Sport & Mode
+      lat: 47.153697
+      lon: 11.725277
+      url: https://www.bernhard-sport-mode.at/
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Snowsports Mayrhofen
+      lat: 47.161814
+      lon: 11.858691
+      url: https://www.skischulemayrhofen.com/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+  zell-gerlos:
+    haltestellen:
+    - name: Aschau im Zillertal
+      art: Bahn
+      lat: 47.263462
+      lon: 11.897108
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Zell am Ziller Stöcklerhof
+      art: Bus
+      lat: 47.233845
+      lon: 11.890021
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Aschau i. Z. Zentrum
+      art: Bus
+      lat: 47.26195
+      lon: 11.896131
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.223763
+      lon: 12.057834
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.231284
+      lon: 11.879495
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Snowsports Mayrhofen
+      lat: 47.161814
+      lon: 11.858691
+      url: https://www.skischulemayrhofen.com/
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schischule und Schiverleih Kostenzer
+      lat: 47.340537
+      lon: 11.844372
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Ski Sport Hartl
+      lat: 47.301638
+      lon: 11.871334
+      url: https://www.skisporthartl.at/
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: false
+      herkunft: osm

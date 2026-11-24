@@ -1,0 +1,192 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  balderschwang:
+    haltestellen:
+    - name: Ifenblick
+      art: Bus
+      lat: 47.464204
+      lon: 10.093563
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Balderschwang, Lift Gschwend 1
+      art: Bus
+      lat: 47.465417
+      lon: 10.098478
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: Balderschwang, Kirche
+      art: Bus
+      lat: 47.465759
+      lon: 10.105348
+      url: null
+      fuss_min: 19
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  hoernerdoerfer:
+    haltestellen:
+    - name: Fischen
+      art: Bahn
+      lat: 47.455958
+      lon: 10.271657
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Busbahnhof Fischen
+      art: Bus
+      lat: 47.456571
+      lon: 10.270915
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Flixbus
+      art: Bus
+      lat: 47.456752
+      lon: 10.27075
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.456789
+      lon: 10.271411
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.457824
+      lon: 10.27225
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Alpin Skischule Oberstdorf
+      lat: 47.41057
+      lon: 10.276757
+      url: https://www.alpin-skischule-oberstdorf.de/
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Alpin Skischule Oberstdorf
+      lat: 47.410561
+      lon: 10.276743
+      url: https://www.alpin-skischule-oberstdorf.de/
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Ski und Board Service Horn
+      lat: 47.485368
+      lon: 10.283707
+      url: https://www.skiundboardservice.com/partnerseiten/ski-horn
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: false
+      herkunft: osm
+  oberstdorf:
+    haltestellen:
+    - name: Therme/Prinzenstraße
+      art: Bus
+      lat: 47.404979
+      lon: 10.278021
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Oberstdorfer Marktbähnle
+      art: Bus
+      lat: 47.40682
+      lon: 10.277608
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Feuerwehrhaus
+      art: Bus
+      lat: 47.40834
+      lon: 10.280721
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Sachsenweg
+      lat: 47.405412
+      lon: 10.279265
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.407445
+      lon: 10.27743
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Alpin Skischule Oberstdorf
+      lat: 47.41057
+      lon: 10.276757
+      url: https://www.alpin-skischule-oberstdorf.de/
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Alpin Skischule Oberstdorf
+      lat: 47.410561
+      lon: 10.276743
+      url: https://www.alpin-skischule-oberstdorf.de/
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+  wertach:
+    haltestellen:
+    - name: Rathaus
+      art: Bus
+      lat: 47.602713
+      lon: 10.412383
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Wertach, Rathaus
+      art: Bus
+      lat: 47.602773
+      lon: 10.412614
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Wertach, Feuerwehrhaus
+      art: Bus
+      lat: 47.602483
+      lon: 10.415323
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.602517
+      lon: 10.411953
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.60193
+      lon: 10.410061
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

@@ -24,6 +24,11 @@ class Zaehler:
     parken: int = 0            # mindestens ein Parkplatz an der Loipe
     parken_hand: int = 0       # von Hand recherchiert (config/gebiete.yaml)
     parken_osm: int = 0
+    # U49: Zusatzangaben aus Stammdaten (D21)
+    hoehe: int = 0             # Hoehenmeter oder hoechster Punkt
+    dauer: int = 0
+    merkmale: int = 0          # mindestens ein Merkmal
+    hinweis: int = 0           # Hinweis des Betreibers (P41)
 
     def zaehle(self, l: dict, punkte: list | None) -> None:
         self.loipen += 1
@@ -42,6 +47,11 @@ class Zaehler:
         self.parken += bool(parken)
         self.parken_hand += any(p.get("quelle") != OSM for p in parken)
         self.parken_osm += any(p.get("quelle") == OSM for p in parken)
+        d = l.get("details") or {}
+        self.hoehe += d.get("hoehenmeter") is not None or d.get("hoechster_punkt_m") is not None
+        self.dauer += d.get("dauer_min") is not None
+        self.merkmale += bool(d.get("merkmale"))
+        self.hinweis += bool(l.get("hinweis"))
 
 
 @dataclass
@@ -54,6 +64,8 @@ class Gebietszeile:
     parkplaetze_hand: int = 0
     gebuehr: bool = False
     haltestellen: int = 0
+    webcams: int = 0
+    verleih: int = 0
 
 
 @dataclass
@@ -79,7 +91,8 @@ def lies_seite(site: Path) -> Bestand:
                                  parkplaetze_hand=sum(1 for p in g["parkplaetze"] if not p.get("geschaetzt")),
                                  gebuehr=bool((g.get("loipengebuehr") or {}).get("text")
                                               or (g.get("loipengebuehr") or {}).get("eur") is not None),
-                                 haltestellen=len(g.get("haltestellen") or []))
+                                 haltestellen=len(g.get("haltestellen") or []),
+                                 webcams=len(g.get("webcams") or []), verleih=len(g.get("verleih") or []))
             for l in g["loipen"]:
                 punkte = strecken.get(str(l["id"]))
                 for z in (gesamt, quellen.setdefault(l["quelle"]["name"], Zaehler()), zeile.z):
@@ -109,6 +122,20 @@ def als_markdown(b: Bestand, titel: str = "Bestandsaufnahme Strecken und Parkinf
          f"| mit Parkplatz | {g.parken} | {_anteil(g.parken, g.loipen)} |",
          f"| davon von Hand recherchiert | {g.parken_hand} | |",
          f"| davon aus OpenStreetMap | {g.parken_osm} | |",
+         f"| mit Höhenangabe | {g.hoehe} | {_anteil(g.hoehe, g.loipen)} |",
+         f"| mit Gehzeit | {g.dauer} | {_anteil(g.dauer, g.loipen)} |",
+         f"| mit Merkmalen | {g.merkmale} | {_anteil(g.merkmale, g.loipen)} |",
+         f"| mit Hinweis des Betreibers | {g.hinweis} | {_anteil(g.hinweis, g.loipen)} |",
+         "", "| Gebiete | Anzahl | Anteil |", "| --- | ---: | ---: |",
+         f"| Gebiete mit Loipen | {len(b.gebiete)} | |",
+         f"| mit Loipengebühr | {sum(r.gebuehr for r in b.gebiete)} | "
+         f"{_anteil(sum(r.gebuehr for r in b.gebiete), len(b.gebiete))} |",
+         f"| mit Haltestelle | {sum(r.haltestellen > 0 for r in b.gebiete)} | "
+         f"{_anteil(sum(r.haltestellen > 0 for r in b.gebiete), len(b.gebiete))} |",
+         f"| mit Webcam | {sum(r.webcams > 0 for r in b.gebiete)} | "
+         f"{_anteil(sum(r.webcams > 0 for r in b.gebiete), len(b.gebiete))} |",
+         f"| mit Skiverleih | {sum(r.verleih > 0 for r in b.gebiete)} | "
+         f"{_anteil(sum(r.verleih > 0 for r in b.gebiete), len(b.gebiete))} |",
          "", "## Je Quelle", "",
          "| Quelle | Loipen | Strecke | davon OSM | Lage | Länge | Parkplatz | davon OSM |",
          "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]

@@ -1036,3 +1036,23 @@ FEHLER The read operation timed out https://overpass.kumi.systems/api/interprete
 404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
 404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
 404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123
+# Lauf 2026-11-24 07:22 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+404 https://slopes.waymarkedtrails.org/robots.txt
+200    10008 tests/fixtures/recherche-2026-11-20/osm/wmt-tegernsee-limit500.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1293500,6040000,1324700,6069700&limit=500
+200    10783 tests/fixtures/recherche-2026-11-20/osm/wmt-seefeld.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1230080,5982976,1257910,6010900&limit=100
+200    11515 tests/fixtures/recherche-2026-11-20/osm/wmt-engadin.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1079799,5844683,1118761,5877027&limit=100
+200     9736 tests/fixtures/recherche-2026-11-20/osm/wmt-leitzachtal.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1324702,6043868,1341400,6065364&limit=100
+200    11755 tests/fixtures/recherche-2026-11-20/osm/wmt-toblach.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1346966,5889997,1374796,5909490&limit=100
+200     9102 tests/fixtures/recherche-2026-11-20/osm/wmt-achensee.json https://slopes.waymarkedtrails.org/api/v1/list/by_area?bbox=1296872,6007610,1313570,6032315&limit=100
+200     3337 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-6850122.json https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/geojson
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-geojson-1391438.json https://slopes.waymarkedtrails.org/api/v1/details/relation/1391438/geometry/geojson
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-gpx-6850122.gpx https://slopes.waymarkedtrails.org/api/v1/details/relation/6850122/geometry/gpx
+404       26 tests/fixtures/recherche-2026-11-20/osm/wmt-detail-way.json https://slopes.waymarkedtrails.org/api/v1/details/way/123
+200 https://module.tourinfra.com/robots.txt
+200       59 tests/fixtures/recherche-2026-11-24/tourinfra/robots.txt https://module.tourinfra.com/robots.txt
+200    66292 tests/fixtures/recherche-2026-11-24/tourinfra/chiemgau-details-45988.html https://module.tourinfra.com/chiemgau/details.php?id=45988
+200    57515 tests/fixtures/recherche-2026-11-24/tourinfra/tannheimer-details-155767.html https://module.tourinfra.com/tannheimer/details.php?id=155767
+200    60205 tests/fixtures/recherche-2026-11-24/tourinfra/engadin-details-210056.html https://module.tourinfra.com/engadin/details.php?id=210056
+200    61582 tests/fixtures/recherche-2026-11-24/tourinfra/ramsau-details-31499.html https://module.tourinfra.com/ramsau/details.php?id=31499
+200   365839 tests/fixtures/recherche-2026-11-24/tourinfra/chiemgau-loipenmanager.json https://module.tourinfra.com/chiemgau/inc/ajax.php?ajaxtype=getLoipenmanager

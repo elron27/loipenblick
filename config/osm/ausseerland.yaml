@@ -1,0 +1,184 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  altaussee:
+    haltestellen:
+    - name: Altaussee Zentrum
+      art: Bus
+      lat: 47.639007
+      lon: 13.763047
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Altaussee Kesselgrube
+      art: Bus
+      lat: 47.635227
+      lon: 13.761904
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Altaussee Kurhaus
+      art: Bus
+      lat: 47.64042
+      lon: 13.765556
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.639585
+      lon: 13.763443
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.640555
+      lon: 13.766126
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Sportartikel Haim
+      lat: 47.662467
+      lon: 13.742899
+      url: https://www.sportartikel-haim.at
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+  bad-aussee:
+    haltestellen:
+    - name: Bad Aussee Postamt
+      art: Bus
+      lat: 47.609369
+      lon: 13.783365
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: REHA Zentrum der PVA
+      art: Bus
+      lat: 47.610474
+      lon: 13.781288
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Bad Aussee Meranplatz
+      art: Bus
+      lat: 47.611285
+      lon: 13.786252
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Oppauer Platz
+      lat: 47.608569
+      lon: 13.783439
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Vorplatz Post
+      lat: 47.609353
+      lon: 13.782979
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Sportartikel Haim
+      lat: 47.662467
+      lon: 13.742899
+      url: https://www.sportartikel-haim.at
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  bad-mitterndorf:
+    haltestellen:
+    - name: Bad Mitterndorf Apotheke
+      art: Bus
+      lat: 47.554673
+      lon: 13.935815
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Bad Mitterndorf Zentrum
+      art: Bus
+      lat: 47.555231
+      lon: 13.933408
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Bad Mitterndorf Grimminghalle
+      art: Bus
+      lat: 47.552817
+      lon: 13.93438
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.555162
+      lon: 13.935643
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.555164
+      lon: 13.934538
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  grundlsee:
+    haltestellen:
+    - name: Grundlsee Ort
+      art: Bus
+      lat: 47.626129
+      lon: 13.837312
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Pavillon
+      art: Bus
+      lat: 47.625662
+      lon: 13.837227
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Grundlsee Bräuhof
+      art: Bus
+      lat: 47.628552
+      lon: 13.842608
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.627421
+      lon: 13.836685
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.625946
+      lon: 13.83653
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

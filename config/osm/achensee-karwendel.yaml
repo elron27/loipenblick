@@ -1,0 +1,193 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  achensee:
+    haltestellen:
+    - name: Maurach Mitte
+      art: Bahn
+      lat: 47.423028
+      lon: 11.747827
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Huber-Hochland
+      art: Bus
+      lat: 47.419946
+      lon: 11.755449
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Eben, Huber-Hochland
+      art: Bus
+      lat: 47.419926
+      lon: 11.755411
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Raiffeisenbank
+      lat: 47.423339
+      lon: 11.748252
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.423601
+      lon: 11.747112
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Busslehner Sports
+      lat: 47.511731
+      lon: 11.69743
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: false
+      herkunft: osm
+  hinterriss:
+    haltestellen:
+    - name: Hinterriß, Mautstelle
+      art: Bus
+      lat: 47.466998
+      lon: 11.485293
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Einstieg Johannestal
+      art: Bus
+      lat: 47.463256
+      lon: 11.501482
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    - name: Hinterriß, Gh. Post
+      art: Bus
+      lat: 47.472687
+      lon: 11.466799
+      url: null
+      fuss_min: 20
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.467202
+      lon: 11.485231
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.466938
+      lon: 11.486086
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  silberregion-karwendel:
+    haltestellen:
+    - name: Weerberg Sennhof
+      art: Bus
+      lat: 47.306398
+      lon: 11.682339
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Weerberg Auersäge
+      art: Bus
+      lat: 47.305184
+      lon: 11.703541
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Pillberg, Hotel Frieden
+      art: Bus
+      lat: 47.318874
+      lon: 11.720325
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.301821
+      lon: 11.704243
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Grafenast
+      lat: 47.32253
+      lon: 11.721164
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  steinberg-rofan:
+    haltestellen:
+    - name: Achenkirch, Abzw. Christlumlifte
+      art: Bus
+      lat: 47.510024
+      lon: 11.70317
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Abzw.Christlumlifte
+      art: Bus
+      lat: 47.510044
+      lon: 11.703228
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Achenkirch, Sport Bußlehner
+      art: Bus
+      lat: 47.5103
+      lon: 11.704197
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.509991
+      lon: 11.702902
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.518275
+      lon: 11.786169
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.514655
+      lon: 11.696045
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Busslehner Sports
+      lat: 47.511731
+      lon: 11.69743
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 6

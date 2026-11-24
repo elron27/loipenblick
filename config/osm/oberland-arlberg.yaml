@@ -1,0 +1,302 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  paznaun:
+    haltestellen:
+    - name: Bielerhöhe Gh Piz Buin
+      art: Bus
+      lat: 46.918243
+      lon: 10.097322
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Galtür Hotel Balunspitze
+      art: Bus
+      lat: 46.967526
+      lon: 10.18169
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Ischgl Silvrettabahn
+      art: Bus
+      lat: 47.010296
+      lon: 10.287551
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.984162
+      lon: 10.235788
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.952517
+      lon: 10.15025
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.918045
+      lon: 10.096045
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schi- und Snowboardschule Silvretta Galtür - Center Wirl
+      lat: 46.965498
+      lon: 10.162505
+      url: https://www.schischule-galtuer.at/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 4
+    - name: Schi- und Snowboardschule Silvretta Galtür - Center Wirl
+      lat: 46.965515
+      lon: 10.162471
+      url: https://www.schischule-galtuer.at/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 4
+    - name: Tom's Sporthütte
+      lat: 47.061295
+      lon: 10.368614
+      url: https://www.sport2000rent.com/skiverleih/haendler/toms-sporthuette
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  kaunertal:
+    haltestellen:
+    - name: Kaunertal Hallenbad
+      art: Bus
+      lat: 47.031548
+      lon: 10.747712
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Kaunertal Gemeindeamt
+      art: Bus
+      lat: 47.02967
+      lon: 10.747475
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Kaunertal Unterhäuser
+      art: Bus
+      lat: 47.03617
+      lon: 10.749457
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.031788
+      lon: 10.747835
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  landeck:
+    haltestellen:
+    - name: Fließ Naturparkhaus
+      art: Bus
+      lat: 47.116553
+      lon: 10.668204
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Imsterberg
+      art: Bahn
+      lat: 47.211211
+      lon: 10.705897
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Imsterberg Bahnhof
+      art: Bus
+      lat: 47.211171
+      lon: 10.706433
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.116387
+      lon: 10.668219
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.115831
+      lon: 10.669039
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  tiroler-oberland:
+    haltestellen:
+    - name: Nauders Norbertshöhe
+      art: Bus
+      lat: 46.894996
+      lon: 10.484979
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Nauders Bergkastelbahn
+      art: Bus
+      lat: 46.875346
+      lon: 10.508639
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Nauders Mühle
+      art: Bus
+      lat: 46.887976
+      lon: 10.501091
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Norbertshöhe / Loipenstart
+      lat: 46.894918
+      lon: 10.484606
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.883611
+      lon: 10.506407
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  serfaus-fiss-ladis:
+    haltestellen:
+    - name: Serfaus Dorfbrunnen
+      art: Bus
+      lat: 47.037237
+      lon: 10.607857
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Bushaltestelle Schwarzer Adler
+      art: Bus
+      lat: 47.037301
+      lon: 10.607722
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Hotel Adler
+      art: Bus
+      lat: 47.037206
+      lon: 10.607877
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.038108
+      lon: 10.608687
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.057939
+      lon: 10.616147
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Patscheider Take Off Snow & Fun Center
+      lat: 47.040517
+      lon: 10.562647
+      url: null
+      osm: null
+      auto_min: 0
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Patscheider Take Off Snow & Fun Center
+      lat: 47.040038
+      lon: 10.562728
+      url: null
+      osm: null
+      auto_min: 0
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Sport Loisl
+      lat: 47.071391
+      lon: 10.646337
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: true
+      herkunft: osm
+  st-anton:
+    haltestellen:
+    - name: St. Jakob Tirolerhof
+      art: Bus
+      lat: 47.142386
+      lon: 10.302569
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Pettneu Wellness Park
+      art: Bus
+      lat: 47.145127
+      lon: 10.338808
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: St. Jakob Tirolerhof (Landauerweg)
+      art: Bus
+      lat: 47.142093
+      lon: 10.301695
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.145335
+      lon: 10.338768
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.144771
+      lon: 10.338384
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

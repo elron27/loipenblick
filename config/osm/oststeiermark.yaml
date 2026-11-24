@@ -1,0 +1,49 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  st-jakob-im-walde:
+    haltestellen:
+    - name: Sankt Jakob im Walde Ortsmitte
+      art: Bus
+      lat: 47.466409
+      lon: 15.788058
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: Sankt Jakob im Walde Wiedenbauerweg
+      art: Bus
+      lat: 47.465887
+      lon: 15.784684
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.467245
+      lon: 15.789046
+      url: null
+      fuss_min: 10
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  teichalm:
+    haltestellen:
+    - name: Teichalm Teichwirt
+      art: Bus
+      lat: 47.352026
+      lon: 15.462293
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Heulantsch
+      lat: 47.355729
+      lon: 15.470287
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

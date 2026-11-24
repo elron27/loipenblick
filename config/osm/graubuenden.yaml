@@ -1,0 +1,572 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  arosa-lenzerheide:
+    haltestellen:
+    - name: Arosa
+      art: Bahn
+      lat: 46.783927
+      lon: 9.679327
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Arosa, Bahnhof
+      art: Bus
+      lat: 46.783765
+      lon: 9.67957
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Arosa, Weisshornbahn/Skischule
+      art: Bus
+      lat: 46.782156
+      lon: 9.679819
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.782834
+      lon: 9.681394
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.781213
+      lon: 9.68034
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Obersee
+      lat: 46.7858
+      lon: 9.680244
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  berguen-filisur:
+    haltestellen:
+    - name: Bergün/Bravuogn
+      art: Bahn
+      lat: 46.631284
+      lon: 9.746672
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bergün/Bravuogn, staziun
+      art: Bus
+      lat: 46.631432
+      lon: 9.746219
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Bergün/Bravuogn, posta
+      art: Bus
+      lat: 46.628789
+      lon: 9.746799
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: P+R PhB Bergün
+      lat: 46.631688
+      lon: 9.746078
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.630875
+      lon: 9.74629
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  brigels:
+    haltestellen:
+    - name: Breil/Brigels, Plaun Rueun
+      art: Bus
+      lat: 46.770123
+      lon: 9.067023
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Breil/Brigels, Cuort
+      art: Bus
+      lat: 46.771906
+      lon: 9.061478
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Breil/Brigels, Pundual
+      art: Bus
+      lat: 46.769622
+      lon: 9.06137
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.770833
+      lon: 9.067346
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.772923
+      lon: 9.062129
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Intersport Pradas
+      lat: 46.770298
+      lon: 9.06756
+      url: https://www.pradassport.ch/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 2
+  disentis:
+    haltestellen:
+    - name: Disentis/Mustér, Pendicularas
+      art: Bus
+      lat: 46.700509
+      lon: 8.841079
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Acla da Fontauna, center sport
+      art: Bus
+      lat: 46.700152
+      lon: 8.844453
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Disentis/Mustér, Acletta
+      art: Bus
+      lat: 46.699524
+      lon: 8.837353
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.700211
+      lon: 8.843783
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.700249
+      lon: 8.844832
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gruesch-danusa:
+    haltestellen:
+    - name: Grüsch, Danusa
+      art: Bus
+      lat: 46.972854
+      lon: 9.642724
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Grüsch, Häri
+      art: Bus
+      lat: 46.972438
+      lon: 9.631481
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Grüsch, Salätschis
+      art: Bus
+      lat: 46.975661
+      lon: 9.639791
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.973185
+      lon: 9.644867
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.97324
+      lon: 9.644051
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  laax:
+    haltestellen:
+    - name: Laax GR, Bergbahnen
+      art: Bus
+      lat: 46.819493
+      lon: 9.265324
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Laax GR, Acla
+      art: Bus
+      lat: 46.822763
+      lon: 9.263256
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Laax GR, Rancho
+      art: Bus
+      lat: 46.815945
+      lon: 9.266552
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.823125
+      lon: 9.261577
+      url: null
+      fuss_min: 8
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  samnaun:
+    haltestellen:
+    - name: Bergbahnen
+      art: Bus
+      lat: 46.951157
+      lon: 10.374506
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Ravaisch Abzweigung
+      art: Bus
+      lat: 46.950855
+      lon: 10.371677
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Sportanlagen
+      art: Bus
+      lat: 46.949101
+      lon: 10.369004
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.951435
+      lon: 10.375106
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.950148
+      lon: 10.37108
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  san-bernardino:
+    haltestellen:
+    - name: S. Bernardino, Chiesa Rotonda
+      art: Bus
+      lat: 46.462801
+      lon: 9.19182
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: S. Bernardino, Centro
+      art: Bus
+      lat: 46.461253
+      lon: 9.192773
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: S. Bernardino, Villaggio
+      art: Bus
+      lat: 46.461762
+      lon: 9.19001
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.462431
+      lon: 9.190843
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.462971
+      lon: 9.190575
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  savognin:
+    haltestellen:
+    - name: Savognin, Posta
+      art: Bus
+      lat: 46.595491
+      lon: 9.600889
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Savognin, Danilo
+      art: Bus
+      lat: 46.597275
+      lon: 9.596317
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Savognin, Sur Ual
+      art: Bus
+      lat: 46.597076
+      lon: 9.60273
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.595461
+      lon: 9.601164
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.595245
+      lon: 9.596649
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Wasescha Sport
+      lat: 46.596004
+      lon: 9.592031
+      url: null
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 8
+  scuol:
+    haltestellen:
+    - name: Scuol-Tarasp, staziun
+      art: Bus
+      lat: 46.794057
+      lon: 10.287478
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Scuol-Tarasp
+      art: Bahn
+      lat: 46.793787
+      lon: 10.286768
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Stradun/Buorcha
+      art: Bus
+      lat: 46.794753
+      lon: 10.293444
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.794344
+      lon: 10.2885
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Bahnhofplatz
+      lat: 46.793869
+      lon: 10.287563
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  spluegen:
+    haltestellen:
+    - name: Splügen, Dorf
+      art: Bus
+      lat: 46.552216
+      lon: 9.319451
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Splügen, Bergbahnen
+      art: Bus
+      lat: 46.550247
+      lon: 9.32112
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Splügen, Hüscherenbach
+      art: Bus
+      lat: 46.547547
+      lon: 9.32271
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.549421
+      lon: 9.314321
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  tschiertschen:
+    haltestellen:
+    - name: Tschiertschen
+      art: Bus
+      lat: 46.81829
+      lon: 9.606749
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Zinsli-Kurve
+      art: Bus
+      lat: 46.815285
+      lon: 9.598957
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Messmermatte
+      art: Bus
+      lat: 46.816265
+      lon: 9.616328
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.819909
+      lon: 9.603028
+      url: null
+      fuss_min: 10
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  val-muestair:
+    haltestellen:
+    - name: Biosfera
+      art: Bus
+      lat: 46.626814
+      lon: 10.335206
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Tschierv Plaz
+      art: Bus
+      lat: 46.625314
+      lon: 10.340017
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Orasom
+      art: Bus
+      lat: 46.622809
+      lon: 10.345567
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.626231
+      lon: 10.336648
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  vals:
+    haltestellen:
+    - name: Vals, Post
+      art: Bus
+      lat: 46.618948
+      lon: 9.180596
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Skibus
+      art: Bus
+      lat: 46.615957
+      lon: 9.179671
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Vals, Therme
+      art: Bus
+      lat: 46.622689
+      lon: 9.182462
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Bidem
+      lat: 46.617881
+      lon: 9.181443
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.616655
+      lon: 9.178754
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

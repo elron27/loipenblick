@@ -1,0 +1,213 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  amden-arvenbueel:
+    haltestellen:
+    - name: Amden Dorf
+      art: Bus
+      lat: 47.148983
+      lon: 9.141231
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Amden Vorderdorf
+      art: Bus
+      lat: 47.148634
+      lon: 9.148381
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Brugg
+      art: Bus
+      lat: 47.149592
+      lon: 9.138625
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkhaus Ruestel
+      lat: 47.149406
+      lon: 9.143571
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.149194
+      lon: 9.142222
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  braunwald:
+    haltestellen:
+    - name: Braunwald
+      art: Bahn
+      lat: 46.938789
+      lon: 8.998565
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  degersheim:
+    haltestellen:
+    - name: Hintertschwil
+      art: Bus
+      lat: 47.381129
+      lon: 9.207381
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Ifang
+      art: Bus
+      lat: 47.383883
+      lon: 9.202469
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Degersheim
+      art: Bahn
+      lat: 47.372357
+      lon: 9.200152
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.380153
+      lon: 9.207126
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  elm:
+    haltestellen:
+    - name: Elm, Sportbahnen
+      art: Bus
+      lat: 46.913187
+      lon: 9.162233
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Elm, Obmoos
+      art: Bus
+      lat: 46.914522
+      lon: 9.165366
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Elm, Altersheim
+      art: Bus
+      lat: 46.91611
+      lon: 9.168258
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Sportbahnen
+      lat: 46.913161
+      lon: 9.162598
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.912193
+      lon: 9.161239
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Vreni Schneider Sportshop
+      lat: 46.913096
+      lon: 9.161944
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 2
+  flumserberg:
+    haltestellen:
+    - name: Tannenboden
+      art: Bus
+      lat: 47.092511
+      lon: 9.280379
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Tannenboden Dorf
+      art: Bus
+      lat: 47.09366
+      lon: 9.284246
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Tannenbodenwiese
+      art: Bus
+      lat: 47.092326
+      lon: 9.287712
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.092889
+      lon: 9.281096
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.093501
+      lon: 9.282112
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  toggenburg:
+    haltestellen:
+    - name: Unterwasser (Iltiosbahn)
+      art: Bahn
+      lat: 47.194697
+      lon: 9.309245
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Chäserrugg Bahn
+      art: Bus
+      lat: 47.195055
+      lon: 9.309263
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Unterwasser Dorf
+      art: Bus
+      lat: 47.196947
+      lon: 9.308982
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.19433
+      lon: 9.308622
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

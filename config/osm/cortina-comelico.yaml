@@ -1,0 +1,70 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  cortina:
+    haltestellen:
+    - name: Istituto Putti
+      art: Bus
+      lat: 46.557785
+      lon: 12.133837
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Eliporto Codivilla
+      art: Bus
+      lat: 46.556099
+      lon: 12.133359
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    - name: Ospedale Codivilla
+      art: Bus
+      lat: 46.554296
+      lon: 12.132088
+      url: null
+      fuss_min: 20
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  comelico:
+    haltestellen:
+    - name: Padola Sport Hotel
+      art: Bus
+      lat: 46.605509
+      lon: 12.479929
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Padola Bivio Valgrande
+      art: Bus
+      lat: 46.607185
+      lon: 12.48031
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Padola Piazza
+      art: Bus
+      lat: 46.601804
+      lon: 12.478676
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.604523
+      lon: 12.477655
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.606486
+      lon: 12.479352
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

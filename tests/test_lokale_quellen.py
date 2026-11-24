@@ -53,8 +53,8 @@ def test_p21_tannheimer_tal_aus_dem_loipenbericht_des_verbands():
     # Streckenverlauf fuer die Karte (U36), ausgeduennt
     assert vils.verlauf and 2 < len(vils.verlauf) <= 120
     assert vils.lat == pytest.approx(47.5, abs=0.01)
-    # geschlossen: kein Praeparierdatum ("---"), also Status ohne Datum
-    assert all(d.quelle_aktualisiert_at is None for d in r.loipen)
+    # geschlossen: kein Praeparierdatum ("---"); nur eine Loipe nennt eine letzte Aenderung (P41 AK 1)
+    assert sum(1 for d in r.loipen if d.quelle_aktualisiert_at) == 1
 
 
 @pytest.mark.req("P21", ak=1)

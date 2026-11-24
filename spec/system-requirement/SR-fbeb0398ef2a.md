@@ -5,7 +5,7 @@ status: draft
 title: Webcams pro Gebiet
 kennung: D9
 prio: soll
-umfang: spaeter
+umfang: details
 rationale: Aus der Bedarfsrunde mit Stefan am 08.11.2026. Die Werte, die nicht in den Quellen stehen, werden einmal per Recherche ermittelt und in der Konfiguration gepflegt.
 requirement-type: functional
 acceptance-criteria:
