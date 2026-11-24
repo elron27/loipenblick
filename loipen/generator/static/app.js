@@ -508,9 +508,9 @@ function herkunftText(d, felder) {
 }
 function detailsHtml(l) {
   var d = l.details || {}, kv = [];
-  if (d.hoehenmeter != null) kv.push(["Höhenmeter", zahl(d.hoehenmeter) + " m"]);
-  if (d.hoechster_punkt_m != null) kv.push(["Höchster Punkt", zahl(d.hoechster_punkt_m) + " m"]);
-  if (d.tiefster_punkt_m != null) kv.push(["Tiefster Punkt", zahl(d.tiefster_punkt_m) + " m"]);
+  if (d.hoehenmeter != null) kv.push(["Höhenmeter", zahl(d.hoehenmeter, 0) + " m"]);
+  if (d.hoechster_punkt_m != null) kv.push(["Höchster Punkt", zahl(d.hoechster_punkt_m, 0) + " m"]);
+  if (d.tiefster_punkt_m != null) kv.push(["Tiefster Punkt", zahl(d.tiefster_punkt_m, 0) + " m"]);
   if (d.dauer_min) kv.push(["Dauer", dauerText(d.dauer_min)]);
   if (d.kondition) kv.push(["Kondition", d.kondition + " von 6"]);
   if (d.technik_note) kv.push(["Technik", d.technik_note + " von 6"]);
