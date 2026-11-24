@@ -1,0 +1,200 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  alta-badia:
+    haltestellen:
+    - name: Sciaré
+      art: Bus
+      lat: 46.553292
+      lon: 11.96804
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Corvara, Pré Surega
+      art: Bus
+      lat: 46.551116
+      lon: 11.86624
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Corvara, Boé
+      art: Bus
+      lat: 46.548272
+      lon: 11.872008
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.553984
+      lon: 11.967096
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.553984
+      lon: 11.967096
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.553373
+      lon: 11.968448
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  groeden:
+    haltestellen:
+    - name: Mont de Pana - Monte Pana
+      art: Bus
+      lat: 46.550385
+      lon: 11.715136
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Val - Langental - Vallunga
+      art: Bus
+      lat: 46.55877
+      lon: 11.767105
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Col
+      art: Bus
+      lat: 46.559916
+      lon: 11.762459
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Val - Langental - Vallunga
+      lat: 46.564113
+      lon: 11.772915
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Val - Langental - Vallunga
+      lat: 46.564109
+      lon: 11.772913
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.564104
+      lon: 11.771587
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  seiser-alm:
+    haltestellen:
+    - name: Ritsch
+      art: Bus
+      lat: 46.540509
+      lon: 11.645656
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Compatsch
+      art: Bus
+      lat: 46.540121
+      lon: 11.617958
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Saltria
+      art: Bus
+      lat: 46.531511
+      lon: 11.669467
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.542951
+      lon: 11.61766
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.543045
+      lon: 11.617644
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.5408
+      lon: 11.616107
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  villnoess:
+    haltestellen:
+    - name: Abzweigung Afers - Bivio Eores
+      art: Bus
+      lat: 46.660052
+      lon: 11.752043
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Zanser Alm - Malga Zannes
+      art: Bus
+      lat: 46.63578
+      lon: 11.765667
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Sportzone - Zona Sportiva
+      art: Bus
+      lat: 46.732897
+      lon: 11.782298
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.660231
+      lon: 11.752042
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.635725
+      lon: 11.765514
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Zanserhütte - Rifugio Zannes
+      lat: 46.635403
+      lon: 11.764563
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

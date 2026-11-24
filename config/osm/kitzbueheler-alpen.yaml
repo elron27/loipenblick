@@ -1,0 +1,389 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  brixental:
+    haltestellen:
+    - name: Westendorf in Tirol Hotel Schermer
+      art: Bus
+      lat: 47.431223
+      lon: 12.213323
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Westendorf in Tirol Gondelbahn
+      art: Bus
+      lat: 47.427651
+      lon: 12.213557
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Westendorf in Tirol Sennerei
+      art: Bus
+      lat: 47.432909
+      lon: 12.214091
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.431983
+      lon: 12.218438
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.431983
+      lon: 12.218438
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.432834
+      lon: 12.216371
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Snowsports
+      lat: 47.4323
+      lon: 12.21847
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 1
+    - name: Snowsports
+      lat: 47.4323
+      lon: 12.21847
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 1
+    - name: Skischule Kurz
+      lat: 47.446538
+      lon: 12.161894
+      url: null
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+  hohe-salve:
+    haltestellen:
+    - name: Angerberg Baumgarten
+      art: Bus
+      lat: 47.508903
+      lon: 12.047548
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Angerberg Unholzen
+      art: Bus
+      lat: 47.5082
+      lon: 12.050972
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Angerberg Sportzentrum
+      art: Bus
+      lat: 47.508851
+      lon: 12.047657
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.519089
+      lon: 12.033847
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Schneerosental
+      lat: 47.518158
+      lon: 12.03558
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.519111
+      lon: 12.033784
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  jochberg:
+    haltestellen:
+    - name: Pass Thurn Tauernblick
+      art: Bus
+      lat: 47.299967
+      lon: 12.416502
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Pass Thurn Panoramabahn Mittelstation
+      art: Bus
+      lat: 47.300518
+      lon: 12.409771
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Pass Thurn Passhöhe
+      art: Bus
+      lat: 47.308414
+      lon: 12.408606
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.300067
+      lon: 12.415631
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.300067
+      lon: 12.415631
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.300389
+      lon: 12.411345
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schiladl - Gwandladl
+      lat: 47.378126
+      lon: 12.418754
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  kitzbuehel:
+    haltestellen:
+    - name: Reith bei Kitzbühel Tischlerwirt
+      art: Bus
+      lat: 47.472928
+      lon: 12.3444
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Kitzbühel Hahnenkamm
+      art: Bahn
+      lat: 47.443327
+      lon: 12.389989
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Hahnenkamm Bahnhof
+      art: Bus
+      lat: 47.443816
+      lon: 12.389874
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.476794
+      lon: 12.345128
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.476873
+      lon: 12.345125
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.47556
+      lon: 12.340927
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Stailerai
+      lat: 47.496181
+      lon: 12.395299
+      url: https://www.stailerai.at
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schischule Schwaiger
+      lat: 47.51301
+      lon: 12.326465
+      url: null
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schiladl - Gwandladl
+      lat: 47.378126
+      lon: 12.418754
+      url: null
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  pillerseetal:
+    haltestellen:
+    - name: Hochfilzen Gemeindeamt
+      art: Bus
+      lat: 47.469673
+      lon: 12.618354
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Waidring Strub Ort
+      art: Bus
+      lat: 47.582962
+      lon: 12.627226
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Hochfilzen Bergbahnen
+      art: Bus
+      lat: 47.478312
+      lon: 12.612827
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.582878
+      lon: 12.627365
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.584724
+      lon: 12.574802
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.584816
+      lon: 12.574648
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Koglersport
+      lat: 47.467708
+      lon: 12.550834
+      url: https://www.koglersport.at/
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 6
+  st-johann-in-tirol:
+    haltestellen:
+    - name: Kirchdorf i. T. Vorderjager (C)
+      art: Bus
+      lat: 47.558579
+      lon: 12.419035
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kirchdorf i. T. Vorderjager (B)
+      art: Bus
+      lat: 47.559356
+      lon: 12.419069
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kirchdorf i. T. Vorderjager (A)
+      art: Bus
+      lat: 47.559584
+      lon: 12.418539
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Koasastadion
+      lat: 47.525942
+      lon: 12.422751
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.499361
+      lon: 12.386324
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.499272
+      lon: 12.386269
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Stailerai
+      lat: 47.496181
+      lon: 12.395299
+      url: https://www.stailerai.at
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schischule Schwaiger
+      lat: 47.51301
+      lon: 12.326465
+      url: null
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Koglersport
+      lat: 47.467708
+      lon: 12.550834
+      url: https://www.koglersport.at/
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm

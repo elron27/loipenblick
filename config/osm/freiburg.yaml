@@ -1,0 +1,201 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  charmey:
+    haltestellen:
+    - name: Charmey Télécabine
+      art: Bus
+      lat: 46.6182
+      lon: 7.167447
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Charmey Village
+      art: Bus
+      lat: 46.618535
+      lon: 7.165563
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Charmey (Gruyère), Le Chêne
+      art: Bus
+      lat: 46.614559
+      lon: 7.169065
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.61828
+      lon: 7.168303
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.61828
+      lon: 7.168303
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.619231
+      lon: 7.165068
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  jaun-dorf:
+    haltestellen:
+    - name: Jaun, Dorf
+      art: Bus
+      lat: 46.610795
+      lon: 7.275684
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Jaun, Bergbahnen
+      art: Bus
+      lat: 46.610226
+      lon: 7.287459
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.61074
+      lon: 7.275591
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.610701
+      lon: 7.275287
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.610951
+      lon: 7.275064
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  les-paccots-la-veveyse:
+    haltestellen:
+    - name: Châtel-St-Denis, centre
+      art: Bus
+      lat: 46.52546
+      lon: 6.897885
+      url: null
+      fuss_min: 14
+      herkunft: osm
+    - name: Châtel-St-Denis Gare
+      art: Bus
+      lat: 46.527934
+      lon: 6.8958
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: Châtel-Saint-Denis
+      art: Bahn
+      lat: 46.527751
+      lon: 6.895749
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: PSS supérieur
+      lat: 46.528877
+      lon: 6.902967
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: PSS supérieur
+      lat: 46.528859
+      lon: 6.902959
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: PSS inférieur
+      lat: 46.528073
+      lon: 6.903492
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: La Boit'à semelles
+      lat: 46.463506
+      lon: 6.896068
+      url: https://laboitasemelles.ch/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: false
+      herkunft: osm
+  nordic-region-gibloux:
+    haltestellen:
+    - name: Riaz Centre
+      art: Bus
+      lat: 46.641254
+      lon: 7.062275
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Riaz Poste
+      art: Bus
+      lat: 46.640245
+      lon: 7.062789
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Riaz Hôpital
+      art: Bus
+      lat: 46.64154
+      lon: 7.059419
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.641784
+      lon: 7.061308
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.640219
+      lon: 7.062167
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.642596
+      lon: 7.062897
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

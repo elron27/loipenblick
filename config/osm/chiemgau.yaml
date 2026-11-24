@@ -1,0 +1,526 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  bergen:
+    haltestellen:
+    - name: Bergen Hochfellnbahn
+      art: Bus
+      lat: 47.798434
+      lon: 12.589777
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Bergen Stocka
+      art: Bus
+      lat: 47.812258
+      lon: 12.591284
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Bergen Mitterfeld
+      art: Bus
+      lat: 47.803006
+      lon: 12.590406
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.814839
+      lon: 12.587409
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.814835
+      lon: 12.587401
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.798143
+      lon: 12.59043
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski- und Snowboardschule Ruhpolding
+      lat: 47.764035
+      lon: 12.639465
+      url: https://skischule-ruhpolding.com/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  chieming:
+    haltestellen:
+    - name: Grilling, Abzw.
+      art: Bus
+      lat: 47.936884
+      lon: 12.55371
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Chieming, Schule
+      art: Bus
+      lat: 47.8991
+      lon: 12.538869
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Knesing
+      art: Bus
+      lat: 47.94326
+      lon: 12.548629
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.936459
+      lon: 12.553181
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.936459
+      lon: 12.553181
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.899505
+      lon: 12.535952
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  inzell:
+    haltestellen:
+    - name: Inzell Sterr
+      art: Bus
+      lat: 47.769522
+      lon: 12.768422
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Dorflinie
+      art: Bus
+      lat: 47.769482
+      lon: 12.768553
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Inzell Badepark
+      art: Bus
+      lat: 47.766106
+      lon: 12.750536
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: P 2
+      lat: 47.765306
+      lon: 12.748426
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: P 2
+      lat: 47.765306
+      lon: 12.748426
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.76002
+      lon: 12.736258
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski- und Snowboardschule Ruhpolding
+      lat: 47.764035
+      lon: 12.639465
+      url: https://skischule-ruhpolding.com/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  marquartstein-grassau:
+    haltestellen:
+    - name: Kucheln
+      art: Bus
+      lat: 47.778112
+      lon: 12.44369
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Grassau, Kirchplatz
+      art: Bus
+      lat: 47.778888
+      lon: 12.449558
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Grassau Rathaus
+      art: Bus
+      lat: 47.779508
+      lon: 12.452008
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.755441
+      lon: 12.446522
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.755448
+      lon: 12.44643
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.764786
+      lon: 12.442439
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Nordic Center
+      lat: 47.669543
+      lon: 12.397149
+      url: null
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  reit-im-winkl:
+    haltestellen:
+    - name: Seegatterl (Winklmoosalmbahn)
+      art: Bus
+      lat: 47.657945
+      lon: 12.539428
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Benz-Eck-Parkplatz
+      art: Bus
+      lat: 47.665836
+      lon: 12.467155
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Reit im Winkl, Festsaal
+      art: Bus
+      lat: 47.675804
+      lon: 12.466008
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Langlaufstadion und Fußballplatz
+      lat: 47.675414
+      lon: 12.466428
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkplatz Fußballplatz
+      lat: 47.674905
+      lon: 12.467468
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Langlaufstadion und Fußballplatz
+      lat: 47.675419
+      lon: 12.466424
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Hausberg Skischule
+      lat: 47.676798
+      lon: 12.468493
+      url: https://www.hausberg-skischule.de
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 5
+    - name: Nordic Center
+      lat: 47.669543
+      lon: 12.397149
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  ruhpolding:
+    haltestellen:
+    - name: Grashof
+      art: Bus
+      lat: 47.75049
+      lon: 12.66209
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Seehaus
+      art: Bus
+      lat: 47.710453
+      lon: 12.621827
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Biathlon Zentrum / Chiemgau Arena
+      art: Bus
+      lat: 47.715383
+      lon: 12.641348
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Mittersee
+      lat: 47.687122
+      lon: 12.584678
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.710769
+      lon: 12.621715
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.711397
+      lon: 12.62231
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski- und Snowboardschule Ruhpolding
+      lat: 47.764035
+      lon: 12.639465
+      url: https://skischule-ruhpolding.com/
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Hausberg Skischule
+      lat: 47.676798
+      lon: 12.468493
+      url: https://www.hausberg-skischule.de
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  schleching:
+    haltestellen:
+    - name: Schleching Schule
+      art: Bus
+      lat: 47.718806
+      lon: 12.394115
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Abzw. Mühlau
+      art: Bus
+      lat: 47.725857
+      lon: 12.407971
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Mettenham
+      art: Bus
+      lat: 47.728549
+      lon: 12.411053
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz am Baumgarten
+      lat: 47.725737
+      lon: 12.408152
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkplatz am Baumgarten
+      lat: 47.725715
+      lon: 12.408134
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.719004
+      lon: 12.393746
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Nordic Center
+      lat: 47.669543
+      lon: 12.397149
+      url: null
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+  siegsdorf:
+    haltestellen:
+    - name: Eisenärzt Abzw Hörgering
+      art: Bus
+      lat: 47.800617
+      lon: 12.643257
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Hachau
+      art: Bus
+      lat: 47.807
+      lon: 12.693128
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Eisenärzt Bahnhof
+      art: Bus
+      lat: 47.796333
+      lon: 12.638105
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.801273
+      lon: 12.644057
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.801273
+      lon: 12.644057
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.797957
+      lon: 12.644091
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski- und Snowboardschule Ruhpolding
+      lat: 47.764035
+      lon: 12.639465
+      url: https://skischule-ruhpolding.com/
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: true
+      herkunft: osm
+  unterwoessen:
+    haltestellen:
+    - name: Oberwössen, Kirche/ Alte Schule
+      art: Bus
+      lat: 47.709323
+      lon: 12.480945
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Oberwössen, Touristeninfo
+      art: Bus
+      lat: 47.706981
+      lon: 12.480687
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Unterwössen Schule
+      art: Bus
+      lat: 47.736664
+      lon: 12.453871
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.708925
+      lon: 12.472757
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.7089
+      lon: 12.472733
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.730351
+      lon: 12.453746
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Hausberg Skischule
+      lat: 47.676798
+      lon: 12.468493
+      url: https://www.hausberg-skischule.de
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: true
+      herkunft: osm

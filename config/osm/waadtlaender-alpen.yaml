@@ -1,0 +1,352 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  glacier-3000:
+    haltestellen:
+    - name: Col-du-Pillon/Glacier 3000
+      art: Bus
+      lat: 46.353814
+      lon: 7.205466
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Pillon / Glacier
+      art: Bus
+      lat: 46.353642
+      lon: 7.205514
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.353722
+      lon: 7.205072
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.353715
+      lon: 7.205009
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.353074
+      lon: 7.203679
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  les-mosses-la-lecherette:
+    haltestellen:
+    - name: Col des Mosses
+      art: Bus
+      lat: 46.396591
+      lon: 7.101675
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Les Mosses village
+      art: Bus
+      lat: 46.394494
+      lon: 7.100328
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Les Mosses église
+      art: Bus
+      lat: 46.39104
+      lon: 7.095414
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.396943
+      lon: 7.102023
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.396917
+      lon: 7.102004
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.395703
+      lon: 7.101873
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Blatti Sports
+      lat: 46.395602
+      lon: 7.103005
+      url: http://www.blattisports.ch/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 3
+  les-pleiades:
+    haltestellen:
+    - name: Blonay Village
+      art: Bus
+      lat: 46.464254
+      lon: 6.894202
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Blonay
+      art: Bahn
+      lat: 46.46571
+      lon: 6.895778
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Blonay BC
+      art: Bahn
+      lat: 46.465198
+      lon: 6.896204
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.465534
+      lon: 6.895549
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.464151
+      lon: 6.895488
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.464175
+      lon: 6.895436
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: La Boit'à semelles
+      lat: 46.463506
+      lon: 6.896068
+      url: https://laboitasemelles.ch/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 3
+  leysin:
+    haltestellen:
+    - name: Télécabine Berneuse
+      art: Bus
+      lat: 46.346468
+      lon: 7.017026
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Place du Marché
+      art: Bus
+      lat: 46.343856
+      lon: 7.013673
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Place de la Tour d'Aï
+      art: Bus
+      lat: 46.342202
+      lon: 7.014069
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.346655
+      lon: 7.016937
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.346655
+      lon: 7.016937
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.346589
+      lon: 7.01769
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Blatti Sports
+      lat: 46.395602
+      lon: 7.103005
+      url: http://www.blattisports.ch/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: false
+      herkunft: osm
+  rougemont-videmanette:
+    haltestellen:
+    - name: Rougemont
+      art: Bahn
+      lat: 46.488391
+      lon: 7.208906
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.486159
+      lon: 7.209288
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.486159
+      lon: 7.209288
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.488769
+      lon: 7.209578
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  sainte-croix-les-rasses:
+    haltestellen:
+    - name: Sainte-Croix Poste
+      art: Bus
+      lat: 46.822645
+      lon: 6.501381
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Place du Pont
+      art: Bus
+      lat: 46.823765
+      lon: 6.501097
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: La Charmille
+      art: Bus
+      lat: 46.821566
+      lon: 6.503391
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.822284
+      lon: 6.500435
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.822264
+      lon: 6.50042
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.822956
+      lon: 6.500709
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  st-cergue:
+    haltestellen:
+    - name: St-Cergue
+      art: Bahn
+      lat: 46.448486
+      lon: 6.160171
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Les Cheseaux
+      art: Bahn
+      lat: 46.446986
+      lon: 6.147193
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: St-Cergue Les Cheseaux
+      art: Bahn
+      lat: 46.446846
+      lon: 6.147292
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.446397
+      lon: 6.157071
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.446412
+      lon: 6.156977
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.446868
+      lon: 6.15651
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

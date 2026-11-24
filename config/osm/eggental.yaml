@@ -1,0 +1,120 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  lavaze:
+    haltestellen:
+    - name: Varena, Malga Varena (Passo Oclini)
+      art: Bus
+      lat: 46.352254
+      lon: 11.484393
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Schmieder Alm
+      art: Bus
+      lat: 46.375388
+      lon: 11.395535
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Passo Lavazè - Lavazèjoch
+      art: Bus
+      lat: 46.354428
+      lon: 11.492105
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.351826
+      lon: 11.484413
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Schmieder Alm - Malga Schmieder
+      lat: 46.375224
+      lon: 11.395445
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.351819
+      lon: 11.48441
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Noleggio rent bike & ski
+      lat: 46.354306
+      lon: 11.492236
+      url: https://www.rentandgo.it/deu/skiverleih-skimiete/varena-passo-lavaze-jochgrimm/vuerich-shop-lavaze
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 3
+    - name: Skiverleih
+      lat: 46.346634
+      lon: 11.452985
+      url: https://www.fiemme.ski/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 3
+  deutschnofen-welschnofen:
+    haltestellen:
+    - name: Deutschnofen, Altes Kreuz - Nova Ponente, Croce Vecchia
+      art: Bus
+      lat: 46.410171
+      lon: 11.436215
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Deutschnofen, Bar Luise - Nova Ponente, Bar Luise
+      art: Bus
+      lat: 46.410467
+      lon: 11.4347
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Pfösl
+      art: Bus
+      lat: 46.408202
+      lon: 11.443716
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.410685
+      lon: 11.435633
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.410693
+      lon: 11.435624
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.412517
+      lon: 11.435393
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

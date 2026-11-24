@@ -1,0 +1,355 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  antholz:
+    haltestellen:
+    - name: Niederrasen, Kreisverkehr - Rasun di Sotto, Rotatoria
+      art: Bus
+      lat: 46.776883
+      lon: 12.045458
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Antholz Mittertal - Anterselva di Mezzo
+      art: Bus
+      lat: 46.85926
+      lon: 12.099707
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Antholzer See - Lago di Anterselva
+      art: Bus
+      lat: 46.883688
+      lon: 12.152446
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.829539
+      lon: 12.088884
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.883583
+      lon: 12.154426
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.858145
+      lon: 12.100924
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Ski Rent Sebatum
+      lat: 46.782272
+      lon: 11.904801
+      url: https://sebatum.net
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  gsies:
+    haltestellen:
+    - name: Talschluß - Fine Valle
+      art: Bus
+      lat: 46.841582
+      lon: 12.247848
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Taisten, Abzweigung Sportzone - Tesido, Bivio Zona Sportiva
+      art: Bus
+      lat: 46.769592
+      lon: 12.117246
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Welsberg, Schwimmbad - Monguelfo, Piscina
+      art: Bus
+      lat: 46.758991
+      lon: 12.106066
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.8428
+      lon: 12.247768
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.842735
+      lon: 12.247764
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.75788
+      lon: 12.104497
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  innichen:
+    haltestellen:
+    - name: Hotel Sonnenparadies - Hotel Sole Paradiso
+      art: Bus
+      lat: 46.727104
+      lon: 12.283414
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Innichen, Außerkirchl - San Candido, San Sepolcro
+      art: Bus
+      lat: 46.734432
+      lon: 12.278799
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Innichen, Haunold - San Candido, Baranci
+      art: Bus
+      lat: 46.730516
+      lon: 12.278193
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Mantigger
+      lat: 46.734595
+      lon: 12.278569
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.733148
+      lon: 12.286129
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.730567
+      lon: 12.278072
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  niederdorf:
+    haltestellen:
+    - name: Niederdorf West - Villabassa Ovest
+      art: Bus
+      lat: 46.73814
+      lon: 12.16167
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Niederdorf-Prags - Villabassa-Braies
+      art: Bahn
+      lat: 46.736501
+      lon: 12.167061
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Niederdorf, Von-Kurz-Platz - Villabassa, Piazza Von Kurz
+      art: Bus
+      lat: 46.738246
+      lon: 12.168823
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.739322
+      lon: 12.161849
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.739347
+      lon: 12.16167
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.739324
+      lon: 12.161838
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  prags:
+    haltestellen:
+    - name: Säge - Segheria
+      art: Bus
+      lat: 46.72103
+      lon: 12.138589
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Shuttle P1 to Lago di Braies
+      art: Bus
+      lat: 46.718077
+      lon: 12.137478
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Plätzwiese - Prato Piazza
+      art: Bus
+      lat: 46.656285
+      lon: 12.176175
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.721013
+      lon: 12.139534
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.72102
+      lon: 12.13928
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: P1
+      lat: 46.717426
+      lon: 12.137991
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  sexten:
+    haltestellen:
+    - name: Fischleintalboden - Pian di Val Fiscalina
+      art: Bus
+      lat: 46.666329
+      lon: 12.353938
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Sankt Veit, Oberhaus - San Vito, Oberhaus
+      art: Bus
+      lat: 46.711917
+      lon: 12.097317
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kabinenbahn Rotwand - Cabinovia Croda Rossa
+      art: Bus
+      lat: 46.681921
+      lon: 12.363712
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.667129
+      lon: 12.353351
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.696701
+      lon: 12.356506
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.665293
+      lon: 12.354665
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  toblach:
+    haltestellen:
+    - name: Nordic Arena
+      art: Bus
+      lat: 46.718822
+      lon: 12.222316
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Abzweigung Rienz - Bivio Rienza
+      art: Bus
+      lat: 46.730435
+      lon: 12.210674
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Sportzone Toblach - Zona Sportiva di Dobbiaco
+      art: Bus
+      lat: 46.735369
+      lon: 12.218197
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Nordic Arena
+      lat: 46.718836
+      lon: 12.222845
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Nordic Arena
+      lat: 46.718832
+      lon: 12.222832
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.620932
+      lon: 12.211869
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

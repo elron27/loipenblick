@@ -1,0 +1,102 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  bayrischzell:
+    haltestellen:
+    - name: Bayrischzell, Tiroler Straße 19 (Altes Rathaus)
+      art: Bus
+      lat: 47.671684
+      lon: 12.014497
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ursprungtal / Zipflwirt
+      art: Bus
+      lat: 47.634802
+      lon: 12.01263
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ursprungtal/ Stockerparkplatz
+      art: Bus
+      lat: 47.639854
+      lon: 12.012298
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.671048
+      lon: 12.015101
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.671083
+      lon: 12.015064
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.6871
+      lon: 11.959522
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  fischbachau:
+    haltestellen:
+    - name: Hundham, Marktplatz
+      art: Bus
+      lat: 47.755871
+      lon: 11.943679
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Wörnsmühl
+      art: Bus
+      lat: 47.768842
+      lon: 11.91167
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Hundham, Marienplatz
+      art: Bus
+      lat: 47.758152
+      lon: 11.940143
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.723903
+      lon: 11.948655
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Drachenthal
+      lat: 47.767442
+      lon: 11.908895
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.723911
+      lon: 11.948649
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

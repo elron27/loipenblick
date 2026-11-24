@@ -1,0 +1,8 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  hebalm:
+    haltestellen: []
+    parkplaetze: []
+    verleih: []

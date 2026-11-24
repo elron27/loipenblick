@@ -1,0 +1,293 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  defereggental:
+    haltestellen:
+    - name: St. Jakob i. D. Mittelschule
+      art: Bus
+      lat: 46.915228
+      lon: 12.330677
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Prägraten a. G. Ströden
+      art: Bus
+      lat: 47.016228
+      lon: 12.320522
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Staller Sattel Infohaus, Mast 2
+      art: Bus
+      lat: 46.897425
+      lon: 12.218363
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.898111
+      lon: 12.219545
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Ströden
+      lat: 47.016695
+      lon: 12.319563
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Hinterbichl
+      lat: 47.018162
+      lon: 12.339886
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kals:
+    haltestellen:
+    - name: Kals a. G. Taurer
+      art: Bus
+      lat: 47.025268
+      lon: 12.634025
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Hopfgarten i. D. Zwenewaldbrücke
+      art: Bus
+      lat: 46.91889
+      lon: 12.510806
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kals a. G. Unterburg
+      art: Bus
+      lat: 47.007785
+      lon: 12.643946
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.006253
+      lon: 12.644517
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkplatz Zwenewald
+      lat: 46.918451
+      lon: 12.508279
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.006443
+      lon: 12.639486
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  osttirol-lienz:
+    haltestellen:
+    - name: Nikolsdorf Lengberg
+      art: Bus
+      lat: 46.795339
+      lon: 12.888271
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Dölsach
+      art: Bahn
+      lat: 46.814747
+      lon: 12.833542
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Dölsach Bahnhof (Vorplatz)
+      art: Bus
+      lat: 46.815189
+      lon: 12.833344
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.812439
+      lon: 12.831175
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.812439
+      lon: 12.831175
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.812455
+      lon: 12.833151
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  matrei:
+    haltestellen:
+    - name: Tauernhaus
+      art: Bus
+      lat: 47.119042
+      lon: 12.497418
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Matreier Tauernhaus
+      lat: 47.11826
+      lon: 12.498338
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Matreier Tauernhaus
+      lat: 47.118281
+      lon: 12.49833
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  obertilliach:
+    haltestellen:
+    - name: Kartitsch Rauchenbach
+      art: Bus
+      lat: 46.719662
+      lon: 12.525975
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Obertilliach Biathlonzentrum
+      art: Bus
+      lat: 46.710516
+      lon: 12.593151
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Obertilliach Bergen
+      art: Bus
+      lat: 46.703938
+      lon: 12.64192
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.719764
+      lon: 12.525989
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.719764
+      lon: 12.525989
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.709971
+      lon: 12.592218
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sport Sunny 2000
+      lat: 46.750646
+      lon: 12.433088
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  hochpustertal:
+    haltestellen:
+    - name: Strassen B100/Abzw Ort
+      art: Bus
+      lat: 46.749335
+      lon: 12.487973
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Heinfels
+      art: Bahn
+      lat: 46.745898
+      lon: 12.444446
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Tassenbach
+      art: Bahn
+      lat: 46.746822
+      lon: 12.465724
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.745702
+      lon: 12.443728
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.74572
+      lon: 12.443706
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.746903
+      lon: 12.467061
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sport Sunny 2000
+      lat: 46.750646
+      lon: 12.433088
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 6

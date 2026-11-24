@@ -1,0 +1,240 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  kronplatz:
+    haltestellen:
+    - name: Abzweigung Pfalzen Dorf - Bivio Falzes Paese
+      art: Bus
+      lat: 46.809702
+      lon: 11.882896
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Pfalzen, Rathaus - Falzes, Municipio
+      art: Bus
+      lat: 46.811659
+      lon: 11.882821
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Pfalzen, Grundschule - Falzes, Scuola Elementare
+      art: Bus
+      lat: 46.813339
+      lon: 11.880568
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.807668
+      lon: 11.88164
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.807532
+      lon: 11.881558
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.808159
+      lon: 11.882773
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Ski Rent Sebatum
+      lat: 46.782272
+      lon: 11.904801
+      url: https://sebatum.net
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: true
+      herkunft: osm
+  gitschberg-jochtal:
+    haltestellen:
+    - name: Rodenecker Alm, Zumis - Alpe di Rodengo, Zumis
+      art: Bus
+      lat: 46.777059
+      lon: 11.727805
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Terenten, Wiesenweg - Terento, Via Wiesen
+      art: Bus
+      lat: 46.830242
+      lon: 11.781592
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Terenten, Dorf - Terento, Paese
+      art: Bus
+      lat: 46.829696
+      lon: 11.77607
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Zumis
+      lat: 46.774977
+      lon: 11.727371
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.829854
+      lon: 11.779343
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Zumis
+      lat: 46.774932
+      lon: 11.727348
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  st-vigil:
+    haltestellen:
+    - name: Jü de Börz - Würzjoch - Passo delle Erbe
+      art: Bus
+      lat: 46.675011
+      lon: 11.814512
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Al Plan de Mareo, Ghedl - Sankt Vigil, Ghedl - San Vigilio, Ghedl
+      art: Bus
+      lat: 46.697602
+      lon: 11.934654
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Al Plan de Mareo, Dlieja - Sankt Vigil, Kirche - San Vigilio, Chiesa
+      art: Bus
+      lat: 46.698849
+      lon: 11.930174
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.674837
+      lon: 11.813935
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.674834
+      lon: 11.813849
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.697353
+      lon: 11.93286
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skidepot und Verleih - Noleggio
+      lat: 46.700982
+      lon: 11.927846
+      url: https://www.noleggiosci.com/
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+  ahrntal:
+    haltestellen:
+    - name: Kasern - Casere
+      art: Bus
+      lat: 47.050074
+      lon: 12.12633
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Weißenbach, Innerhof - Rio Bianco, Innerhof
+      art: Bus
+      lat: 46.946382
+      lon: 11.859742
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Weißenbach, Reichegg - Rio Bianco, Reichegg
+      art: Bus
+      lat: 46.946984
+      lon: 11.864546
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.946679
+      lon: 11.858225
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.946681
+      lon: 11.858038
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.051415
+      lon: 12.129461
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Sportrent Speikboden
+      lat: 46.932875
+      lon: 11.937779
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Skicenter St. Johann
+      lat: 46.967417
+      lon: 11.925031
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Skiverleih
+      lat: 46.933374
+      lon: 11.936421
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: false
+      herkunft: osm

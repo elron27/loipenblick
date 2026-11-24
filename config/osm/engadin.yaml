@@ -1,0 +1,424 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  oberengadin-seen:
+    haltestellen:
+    - name: Capolago
+      art: Bus
+      lat: 46.407958
+      lon: 9.701221
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Crasta (Pferdeomnibus)
+      art: Bus
+      lat: 46.41357
+      lon: 9.765084
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Fex Curtins (Pferdeomnibus)
+      art: Bus
+      lat: 46.398831
+      lon: 9.777017
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.435949
+      lon: 9.756622
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.406408
+      lon: 9.704338
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.435938
+      lon: 9.756598
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Giacometti
+      lat: 46.400147
+      lon: 9.695926
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 4
+    - name: Skiservice
+      lat: 46.48342
+      lon: 9.832357
+      url: https://www.skiservice-corvatsch.com/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 9
+    - name: Top Sport
+      lat: 46.535563
+      lon: 9.872186
+      url: https://sites.google.com/view/topsportsamedan/startseite
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  pontresina:
+    haltestellen:
+    - name: Morteratsch
+      art: Bahn
+      lat: 46.450736
+      lon: 9.940432
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Punt Muragl (Talstation)
+      art: Bahn
+      lat: 46.509055
+      lon: 9.882846
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Surovas
+      art: Bahn
+      lat: 46.485534
+      lon: 9.906074
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.490913
+      lon: 9.897947
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.508779
+      lon: 9.882485
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.509008
+      lon: 9.882373
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Top Sport
+      lat: 46.535563
+      lon: 9.872186
+      url: https://sites.google.com/view/topsportsamedan/startseite
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiservice
+      lat: 46.48342
+      lon: 9.832357
+      url: https://www.skiservice-corvatsch.com/
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Willy Sport (Rent Station)
+      lat: 46.597984
+      lon: 9.95561
+      url: https://www.willy-sport.ch
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  samedan-bever:
+    haltestellen:
+    - name: Golf
+      art: Bus
+      lat: 46.530527
+      lon: 9.871338
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Samedan
+      art: Bahn
+      lat: 46.534105
+      lon: 9.874106
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Quadratscha
+      art: Bus
+      lat: 46.536573
+      lon: 9.874193
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.551505
+      lon: 9.902504
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.535985
+      lon: 9.877034
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.542467
+      lon: 9.89239
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Top Sport
+      lat: 46.535563
+      lon: 9.872186
+      url: https://sites.google.com/view/topsportsamedan/startseite
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+    - name: Skiservice
+      lat: 46.48342
+      lon: 9.832357
+      url: https://www.skiservice-corvatsch.com/
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Willy Sport (Rent Station)
+      lat: 46.597984
+      lon: 9.95561
+      url: https://www.willy-sport.ch
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+  st-moritz:
+    haltestellen:
+    - name: Sonne
+      art: Bus
+      lat: 46.486518
+      lon: 9.840015
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Via San Gian
+      art: Bus
+      lat: 46.483692
+      lon: 9.8341
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Signalbahn
+      art: Bus
+      lat: 46.483551
+      lon: 9.832239
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.476046
+      lon: 9.823045
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: San Gian
+      lat: 46.512544
+      lon: 9.869196
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.475875
+      lon: 9.822262
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skiservice
+      lat: 46.48342
+      lon: 9.832357
+      url: https://www.skiservice-corvatsch.com/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 3
+    - name: Top Sport
+      lat: 46.535563
+      lon: 9.872186
+      url: https://sites.google.com/view/topsportsamedan/startseite
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Willy Sport (Rent Station)
+      lat: 46.597984
+      lon: 9.95561
+      url: https://www.willy-sport.ch
+      osm: null
+      auto_min: 14
+      verleih_bestaetigt: true
+      herkunft: osm
+  zernez:
+    haltestellen:
+    - name: Plaz
+      art: Bus
+      lat: 46.749199
+      lon: 10.078983
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Center Parc Naziunal
+      art: Bus
+      lat: 46.69826
+      lon: 10.096949
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Zernez Scoula
+      art: Bus
+      lat: 46.699552
+      lon: 10.094352
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.696084
+      lon: 10.101826
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.749253
+      lon: 10.078942
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.696064
+      lon: 10.10175
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  zuoz-s-chanf:
+    haltestellen:
+    - name: La Punt Krone
+      art: Bus
+      lat: 46.578577
+      lon: 9.926352
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Cinuos-chel-Brail
+      art: Bahn
+      lat: 46.637815
+      lon: 10.021706
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Cinuos-chel-Brail Staziun
+      art: Bus
+      lat: 46.638124
+      lon: 10.021397
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.596102
+      lon: 9.963285
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.578312
+      lon: 9.927462
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.59608
+      lon: 9.96306
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Willy Sport (Rent Station)
+      lat: 46.597984
+      lon: 9.95561
+      url: https://www.willy-sport.ch
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 9
+    - name: Top Sport
+      lat: 46.535563
+      lon: 9.872186
+      url: https://sites.google.com/view/topsportsamedan/startseite
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Willy Sport
+      lat: 46.602452
+      lon: 9.959749
+      url: https://www.willy-sport.ch
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 9

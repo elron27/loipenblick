@@ -1,0 +1,46 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  prebersee:
+    haltestellen:
+    - name: Prebersee Ludlalm
+      art: Bus
+      lat: 47.18613
+      lon: 13.853903
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Prebersee Ort
+      art: Bus
+      lat: 47.186936
+      lon: 13.860152
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.185293
+      lon: 13.853649
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.185293
+      lon: 13.853649
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.183529
+      lon: 13.851878
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

@@ -1,0 +1,150 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  alpbachtal:
+    haltestellen:
+    - name: Brandenberg Kirche
+      art: Bus
+      lat: 47.490236
+      lon: 11.89385
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Münster Reha-Zentrum
+      art: Bus
+      lat: 47.419754
+      lon: 11.837473
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kramsach Moosen
+      art: Bus
+      lat: 47.465172
+      lon: 11.906319
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.39589
+      lon: 11.821355
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.419998
+      lon: 11.837564
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.490112
+      lon: 11.893558
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schischule und Schiverleih Kostenzer
+      lat: 47.340537
+      lon: 11.844372
+      url: null
+      osm: null
+      auto_min: 11
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Schi -& Sportshop Alpbachtal
+      lat: 47.396166
+      lon: 11.925456
+      url: https://www.sportshop-alpbachtal.at/
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Schi -& Sportshop Alpbachtal
+      lat: 47.396157
+      lon: 11.925452
+      url: https://www.sportshop-alpbachtal.at/
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+  wildschoenau:
+    haltestellen:
+    - name: Kelchsau Hofstattbahn
+      art: Bus
+      lat: 47.393186
+      lon: 12.134655
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Mühltal Haflingerhof
+      art: Bus
+      lat: 47.423339
+      lon: 12.030798
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Oberau Kellerwirt
+      art: Bus
+      lat: 47.444323
+      lon: 12.048715
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.448128
+      lon: 12.066389
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.443322
+      lon: 12.049654
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parken Hofstattlift
+      lat: 47.392851
+      lon: 12.134364
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skischule Kurz
+      lat: 47.446538
+      lon: 12.161894
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Snowsports
+      lat: 47.4323
+      lon: 12.21847
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Snowsports
+      lat: 47.4323
+      lon: 12.21847
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm

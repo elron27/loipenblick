@@ -1,0 +1,79 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  gastein:
+    haltestellen:
+    - name: Bad Gastein Wasserfall
+      art: Bus
+      lat: 47.114303
+      lon: 13.136061
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bad Hofgastein Kurgartenstraße
+      art: Bus
+      lat: 47.170553
+      lon: 13.101785
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Bad Hofgastein Busbahnhof/Schloßalmbahn
+      art: Bus
+      lat: 47.168797
+      lon: 13.098745
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.09042
+      lon: 13.115771
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.09042
+      lon: 13.115771
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.169366
+      lon: 13.10299
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 47.168308
+      lon: 13.108323
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 5
+    - name: Ski Rent & Service
+      lat: 47.168881
+      lon: 13.110244
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 8
+    - name: Sport Egger
+      lat: 47.244123
+      lon: 13.109381
+      url: https://www.sport-egger.com/de.html
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm

@@ -1,0 +1,258 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  bad-wiessee:
+    haltestellen:
+    - name: Bad Wiessee, Hotel Bussi Baby
+      art: Bus
+      lat: 47.706179
+      lon: 11.729576
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bad Wiessee, Söllbach
+      art: Bus
+      lat: 47.701811
+      lon: 11.727668
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Krinner Hof
+      art: Bus
+      lat: 47.70255
+      lon: 11.73225
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.724858
+      lon: 11.710326
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.724606
+      lon: 11.712305
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.744818
+      lon: 11.701955
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gmund:
+    haltestellen:
+    - name: Finsterwald
+      art: Bus
+      lat: 47.753193
+      lon: 11.719041
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Ostin
+      art: Bus
+      lat: 47.745842
+      lon: 11.76054
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Ostin Oedberg
+      art: Bus
+      lat: 47.744579
+      lon: 11.773248
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.743128
+      lon: 11.764668
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.743138
+      lon: 11.764664
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.751497
+      lon: 11.720239
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kreuth:
+    haltestellen:
+    - name: Kreuth, Oberhof/Naturkäserei
+      art: Bus
+      lat: 47.677465
+      lon: 11.758628
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kreuth, Riedlerbrücke
+      art: Bus
+      lat: 47.644005
+      lon: 11.745336
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Brunnbichl
+      art: Bus
+      lat: 47.653002
+      lon: 11.747558
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Wildbad Kreuth
+      lat: 47.626191
+      lon: 11.746736
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.621963
+      lon: 11.713809
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.621823
+      lon: 11.712012
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  rottach-egern:
+    haltestellen:
+    - name: Rottach-Egern, Kutschenmuseum
+      art: Bus
+      lat: 47.684128
+      lon: 11.782224
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Rottach-Egern, Waldendorff
+      art: Bus
+      lat: 47.680384
+      lon: 11.775984
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Rottach-Egern, Sonnenmoosstraße
+      art: Bus
+      lat: 47.682295
+      lon: 11.779053
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.651635
+      lon: 11.836208
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.684232
+      lon: 11.781484
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.651635
+      lon: 11.836208
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 47.655483
+      lon: 11.832824
+      url: null
+      osm: null
+      auto_min: 2
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 7
+  tegernsee:
+    haltestellen:
+    - name: Tegernsee, Steinmetz
+      art: Bus
+      lat: 47.710025
+      lon: 11.757404
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Tegernsee, Bahnhof
+      art: Bus
+      lat: 47.713819
+      lon: 11.757656
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Tegernsee
+      art: Bahn
+      lat: 47.714103
+      lon: 11.757054
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: P6-Sommerkeller
+      lat: 47.709709
+      lon: 11.75632
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.709802
+      lon: 11.758219
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: P6-Sommerkeller
+      lat: 47.709705
+      lon: 11.75624
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

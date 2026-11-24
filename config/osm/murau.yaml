@@ -1,0 +1,219 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  krakau:
+    haltestellen:
+    - name: Krakaudorf Abzweigung Schöder
+      art: Bus
+      lat: 47.179474
+      lon: 14.023735
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    - name: Krakaudorf Abzweigung Lessenberg
+      art: Bus
+      lat: 47.169118
+      lon: 14.038211
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: Krakaudorf Ort
+      art: Bus
+      lat: 47.181655
+      lon: 14.020964
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  lachtal:
+    haltestellen: []
+    parkplaetze: []
+    verleih: []
+  murau-stadt:
+    haltestellen:
+    - name: Murau Schillerplatz
+      art: Bus
+      lat: 47.110536
+      lon: 14.171204
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Murau St. Leonhard
+      art: Bahn
+      lat: 47.108834
+      lon: 14.166353
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Murau
+      art: Bahn
+      lat: 47.108989
+      lon: 14.173557
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.108288
+      lon: 14.169607
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.108866
+      lon: 14.169016
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.108288
+      lon: 14.169607
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  muehlen:
+    haltestellen:
+    - name: Mühlen Gemeindeamt
+      art: Bus
+      lat: 47.031616
+      lon: 14.507536
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Mühlen St.Helen
+      art: Bus
+      lat: 47.033798
+      lon: 14.50001
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Hitzmannsdorf Abzw
+      art: Bus
+      lat: 47.035112
+      lon: 14.496125
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.031764
+      lon: 14.507799
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.031099
+      lon: 14.508106
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.031055
+      lon: 14.507896
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kreischberg:
+    haltestellen:
+    - name: Sankt Georgen ob Murau Ort
+      art: Bus
+      lat: 47.104244
+      lon: 14.099134
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: St. Lorenzen ob Murau
+      art: Bahn
+      lat: 47.101728
+      lon: 14.090505
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: Sankt Lorenzen ob Murau Bahnhof
+      art: Bus
+      lat: 47.10152
+      lon: 14.090316
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.103886
+      lon: 14.099297
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.103891
+      lon: 14.099217
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.10277
+      lon: 14.09542
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  st-peter-am-kammersberg:
+    haltestellen: []
+    parkplaetze: []
+    verleih: []
+  turracher-hoehe:
+    haltestellen:
+    - name: Turracher Höhe Panoramabahn
+      art: Bus
+      lat: 46.915353
+      lon: 13.874141
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.914703
+      lon: 13.875641
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.9147
+      lon: 13.875608
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.914547
+      lon: 13.874857
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

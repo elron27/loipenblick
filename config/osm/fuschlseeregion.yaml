@@ -1,0 +1,57 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  faistenau:
+    haltestellen:
+    - name: Faistenau Schmiedhäusl
+      art: Bus
+      lat: 47.77234
+      lon: 13.241815
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Faistenau Schule
+      art: Bus
+      lat: 47.777389
+      lon: 13.232471
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Faistenau Hinteregg
+      art: Bus
+      lat: 47.770763
+      lon: 13.248133
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.776329
+      lon: 13.233684
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.776329
+      lon: 13.233684
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.77662
+      lon: 13.232346
+      url: null
+      fuss_min: 8
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  hintersee:
+    haltestellen: []
+    parkplaetze: []
+    verleih: []

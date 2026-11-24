@@ -1,0 +1,309 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  hall-wattens:
+    haltestellen:
+    - name: Rinn Wiesenweg/Lift
+      art: Bus
+      lat: 47.248354
+      lon: 11.496635
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Rinn Kirchplatz
+      art: Bus
+      lat: 47.24885
+      lon: 11.501316
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Rinn Camping Judenstein
+      art: Bus
+      lat: 47.259748
+      lon: 11.504464
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.248089
+      lon: 11.496894
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.248097
+      lon: 11.496893
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.248334
+      lon: 11.498402
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  innsbruck:
+    haltestellen:
+    - name: Tirolerhof
+      art: Bus
+      lat: 47.149517
+      lon: 11.346618
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Ortsmitte/Hypo
+      art: Bus
+      lat: 47.152028
+      lon: 11.348087
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Fulpmes Brücke
+      art: Bus
+      lat: 47.149756
+      lon: 11.351178
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.237019
+      lon: 11.367786
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.15082
+      lon: 11.347126
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.151096
+      lon: 11.34735
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  kuehtai:
+    haltestellen:
+    - name: Kühtai Jagdschloss
+      art: Bus
+      lat: 47.212299
+      lon: 11.014836
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Ochsengarten Gh Burkert
+      art: Bus
+      lat: 47.228076
+      lon: 10.936139
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Kühtai Busterminal
+      art: Bus
+      lat: 47.212247
+      lon: 11.017509
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.211319
+      lon: 11.014339
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.211299
+      lon: 11.014242
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.211682
+      lon: 11.014801
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  sellraintal:
+    haltestellen:
+    - name: Oberperfuss Totengassl
+      art: Bus
+      lat: 47.249832
+      lon: 11.241704
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Praxmar Wendestelle
+      art: Bus
+      lat: 47.149415
+      lon: 11.133402
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: St. Sigmund Gleirschtal
+      art: Bus
+      lat: 47.201484
+      lon: 11.102576
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.20086
+      lon: 11.101079
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.194268
+      lon: 11.154291
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.200855
+      lon: 11.101076
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  stubaier-gletscher:
+    haltestellen:
+    - name: Eisjoch Schlepplift
+      art: Bus
+      lat: 46.986555
+      lon: 11.113994
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  stubai:
+    haltestellen:
+    - name: Freizeitzentrum
+      art: Bus
+      lat: 47.107306
+      lon: 11.304105
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Krößbach Lift
+      art: Bus
+      lat: 47.07765
+      lon: 11.263247
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Neustift i. St. Kindergarten
+      art: Bus
+      lat: 47.108715
+      lon: 11.304728
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.050374
+      lon: 11.369577
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.044355
+      lon: 11.351241
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.044389
+      lon: 11.3516
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  wipptal:
+    haltestellen:
+    - name: Schmirn Toldern
+      art: Bus
+      lat: 47.087138
+      lon: 11.579782
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Vals Touristenrast
+      art: Bus
+      lat: 47.040173
+      lon: 11.576601
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Schmirn Kirchplatz
+      art: Bus
+      lat: 47.078821
+      lon: 11.563472
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.037553
+      lon: 11.578575
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.037553
+      lon: 11.578575
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.077695
+      lon: 11.413685
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []

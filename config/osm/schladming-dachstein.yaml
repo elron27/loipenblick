@@ -1,0 +1,298 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  grimming-donnersbachtal:
+    haltestellen:
+    - name: Donnersbachwald Perweinweg
+      art: Bus
+      lat: 47.402738
+      lon: 14.125098
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    - name: Donnersbachwald Holzmannweg
+      art: Bus
+      lat: 47.39923
+      lon: 14.125278
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.403277
+      lon: 14.132105
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  groebminger-land:
+    haltestellen:
+    - name: Gröbming Kindergarten
+      art: Bus
+      lat: 47.444483
+      lon: 13.900562
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Gröbming Busbahnhof
+      art: Bus
+      lat: 47.442775
+      lon: 13.901986
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Gröbming Volksschule
+      art: Bus
+      lat: 47.443411
+      lon: 13.900799
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.444087
+      lon: 13.901113
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.44333
+      lon: 13.902614
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.44409
+      lon: 13.901112
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  haus-im-ennstal:
+    haltestellen:
+    - name: Haus Ort
+      art: Bus
+      lat: 47.410608
+      lon: 13.766784
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Haus Schlossplatz
+      art: Bus
+      lat: 47.410229
+      lon: 13.768659
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Haus West
+      art: Bus
+      lat: 47.409746
+      lon: 13.763541
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.409116
+      lon: 13.766906
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.409338
+      lon: 13.766712
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.409116
+      lon: 13.766906
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Ski-Lenz
+      lat: 47.383365
+      lon: 13.669139
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Tritscher
+      lat: 47.383469
+      lon: 13.669582
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Sport 2000
+      lat: 47.375896
+      lon: 13.654317
+      url: https://www.skilenz.at/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  ramsau-am-dachstein:
+    haltestellen:
+    - name: Ramsau Vorberg Stocker
+      art: Bus
+      lat: 47.404322
+      lon: 13.65224
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Birnberg
+      art: Bus
+      lat: 47.411912
+      lon: 13.730826
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Weißenbach bei Haus Sonnenschein
+      art: Bus
+      lat: 47.425928
+      lon: 13.786922
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.425657
+      lon: 13.625612
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.423285
+      lon: 13.624604
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.406425
+      lon: 13.626196
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sportshop Heinz Pitzer
+      lat: 47.425595
+      lon: 13.650241
+      url: null
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Ski-Lenz
+      lat: 47.383365
+      lon: 13.669139
+      url: null
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Tritscher
+      lat: 47.383469
+      lon: 13.669582
+      url: null
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+  schladming:
+    haltestellen:
+    - name: Roseggerstraße
+      art: Bus
+      lat: 47.393761
+      lon: 13.686774
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Schladming Ramsauer Brücke
+      art: Bus
+      lat: 47.39424
+      lon: 13.684255
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Zentrum
+      art: Bus
+      lat: 47.392242
+      lon: 13.688244
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.394089
+      lon: 13.687869
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.394089
+      lon: 13.687869
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.393791
+      lon: 13.684719
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Ski-Lenz
+      lat: 47.383365
+      lon: 13.669139
+      url: null
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Tritscher
+      lat: 47.383469
+      lon: 13.669582
+      url: null
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Sport 2000
+      lat: 47.375896
+      lon: 13.654317
+      url: https://www.skilenz.at/
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm

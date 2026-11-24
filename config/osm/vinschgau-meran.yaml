@@ -1,0 +1,303 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  martell:
+    haltestellen:
+    - name: Martell, Biathlonzentrum - Martello, Centro Biathlon
+      art: Bus
+      lat: 46.516764
+      lon: 10.726359
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Martell, St. Maria in der Schmelz - Martello, S. Maria alla Fonderia
+      art: Bus
+      lat: 46.534
+      lon: 10.75066
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Sulden, Hotel Cristallo - Solda, Hotel Cristallo
+      art: Bus
+      lat: 46.526758
+      lon: 10.590192
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.524562
+      lon: 10.589505
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.524556
+      lon: 10.589502
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Schmelz 2
+      lat: 46.53239
+      lon: 10.748333
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Sport Sepp
+      lat: 46.525755
+      lon: 10.591725
+      url: https://www.sulden-ski.com
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 5
+    - name: Sport Thöni
+      lat: 46.519905
+      lon: 10.596296
+      url: https://www.sportthoeni.com
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+  obervinschgau:
+    haltestellen:
+    - name: St. Valentin, Rauten - San Valentino, Rauten
+      art: Bus
+      lat: 46.767968
+      lon: 10.532789
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Schlinig - Slingia
+      art: Bus
+      lat: 46.704113
+      lon: 10.474809
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: St. Valentin, Feuerwehrhalle - San Valentino, Caserma Vigili del Fuoco
+      art: Bus
+      lat: 46.764565
+      lon: 10.533553
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.767336
+      lon: 10.53548
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.767331
+      lon: 10.53538
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.706264
+      lon: 10.472756
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  passeier:
+    haltestellen:
+    - name: Moos, Innerhütt - Moso, Innerhütt
+      art: Bus
+      lat: 46.81057
+      lon: 11.129915
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Falzeben
+      art: Bus
+      lat: 46.665296
+      lon: 11.240393
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Pfelders - Plan
+      art: Bus
+      lat: 46.795643
+      lon: 11.090487
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.665903
+      lon: 11.240227
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.66586
+      lon: 11.240211
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.810643
+      lon: 11.129906
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skiverleih Gufler
+      lat: 46.79712
+      lon: 11.092151
+      url: null
+      osm: null
+      auto_min: 3
+      verleih_bestaetigt: true
+      herkunft: osm
+  reschen:
+    haltestellen:
+    - name: Melag - Melago
+      art: Bus
+      lat: 46.836663
+      lon: 10.655475
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Weisskugel
+      art: Bus
+      lat: 46.837565
+      lon: 10.650814
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Reschen, Nord - Resia, Nord
+      art: Bus
+      lat: 46.830891
+      lon: 10.513877
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.836848
+      lon: 10.655237
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.83684
+      lon: 10.65523
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.829794
+      lon: 10.513394
+      url: null
+      fuss_min: 6
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Alpenfriede
+      lat: 46.834792
+      lon: 10.623344
+      url: null
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Alpenfriede
+      lat: 46.834773
+      lon: 10.623337
+      url: null
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+  schnals:
+    haltestellen: []
+    parkplaetze: []
+    verleih: []
+  ulten:
+    haltestellen:
+    - name: Pension St. Nikolaus
+      art: Bus
+      lat: 46.513694
+      lon: 10.933523
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kuppelwies, Kabinenbahn - Pracupola, Cabinovia
+      art: Bus
+      lat: 46.52783
+      lon: 10.956526
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Kuppelwies, Dorf - Pracupola, Paese
+      art: Bus
+      lat: 46.529786
+      lon: 10.958275
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.513913
+      lon: 10.933515
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.513913
+      lon: 10.933515
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.529995
+      lon: 10.958361
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: albl
+      lat: 46.513838
+      lon: 10.933818
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 1

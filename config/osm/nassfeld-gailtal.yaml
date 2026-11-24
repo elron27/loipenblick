@@ -1,0 +1,218 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  dellach-gailtal:
+    haltestellen:
+    - name: Dellach im Gailtal B111
+      art: Bus
+      lat: 46.662094
+      lon: 13.078361
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Dellach im Gailtal Bundesstraße
+      art: Bus
+      lat: 46.662226
+      lon: 13.07833
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Dellach im Gailtal
+      art: Bahn
+      lat: 46.658118
+      lon: 13.081273
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.662331
+      lon: 13.07854
+      url: null
+      fuss_min: 10
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.662152
+      lon: 13.078712
+      url: null
+      fuss_min: 10
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.662336
+      lon: 13.078528
+      url: null
+      fuss_min: 10
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  gitschtal:
+    haltestellen:
+    - name: Weißbriach Golz/Langwiesen
+      art: Bus
+      lat: 46.674461
+      lon: 13.26995
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    - name: Weißbriach Regitt
+      art: Bus
+      lat: 46.67688
+      lon: 13.263823
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    parkplaetze: []
+    verleih: []
+  hermagor:
+    haltestellen:
+    - name: Hermagor Volksschule
+      art: Bus
+      lat: 46.626185
+      lon: 13.36744
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Hermagor Postamt
+      art: Bus
+      lat: 46.627432
+      lon: 13.364004
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Hermagor Gasserplatz
+      art: Bus
+      lat: 46.627516
+      lon: 13.371198
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.626859
+      lon: 13.367261
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.626544
+      lon: 13.367099
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.626856
+      lon: 13.367259
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  kirchbach:
+    haltestellen:
+    - name: Kirchbach im Gailtal Volksschule
+      art: Bus
+      lat: 46.641412
+      lon: 13.190918
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kirchbach im Gailtal Ortsmitte
+      art: Bus
+      lat: 46.641657
+      lon: 13.185074
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Treßdorf im Gailtal Ort
+      art: Bus
+      lat: 46.639892
+      lon: 13.198272
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.641156
+      lon: 13.190774
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.641123
+      lon: 13.19077
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.641708
+      lon: 13.190757
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  koetschach-mauthen:
+    haltestellen:
+    - name: Mauthen Gasthaus Guggenberger
+      art: Bus
+      lat: 46.666961
+      lon: 12.998391
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Kötschach Volksschule
+      art: Bus
+      lat: 46.671764
+      lon: 13.001243
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Kötschach-Mauthen Alter Bahnhof
+      art: Bus
+      lat: 46.671052
+      lon: 13.001985
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.668541
+      lon: 12.998486
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.668518
+      lon: 12.998485
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.667063
+      lon: 12.998587
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

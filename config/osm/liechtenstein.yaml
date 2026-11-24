@@ -1,0 +1,53 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  malbun-steg:
+    haltestellen:
+    - name: Malbun Bergbahnen
+      art: Bus
+      lat: 47.105401
+      lon: 9.604974
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Malbun Jöraboda
+      art: Bus
+      lat: 47.103219
+      lon: 9.607679
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Jöraboda
+      art: Bus
+      lat: 47.103206
+      lon: 9.607856
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.104814
+      lon: 9.605907
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.104824
+      lon: 9.605892
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: P 2
+      lat: 47.104401
+      lon: 9.606576
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

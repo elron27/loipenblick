@@ -1,0 +1,224 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  koessen:
+    haltestellen:
+    - name: Kössen Landbrücke Kreisverkehr (Steig B)
+      art: Bus
+      lat: 47.660063
+      lon: 12.404567
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kössen Landbrücke Kreisverkehr (Steig D)
+      art: Bus
+      lat: 47.660624
+      lon: 12.40371
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kössen Landbrücke Kreisverkehr (Steig A)
+      art: Bus
+      lat: 47.660192
+      lon: 12.40456
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.655789
+      lon: 12.313903
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Mooslenz
+      lat: 47.659151
+      lon: 12.383612
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.656361
+      lon: 12.313933
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Nordic Center
+      lat: 47.669543
+      lon: 12.397149
+      url: null
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: true
+      herkunft: osm
+      fuss_min: 2
+    - name: Hausberg Skischule
+      lat: 47.676798
+      lon: 12.468493
+      url: https://www.hausberg-skischule.de
+      osm: null
+      auto_min: 4
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+  schwendt:
+    haltestellen:
+    - name: Schwendt Dorf
+      art: Bus
+      lat: 47.631922
+      lon: 12.391336
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bichlach
+      art: Bus
+      lat: 47.652165
+      lon: 12.37103
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Walchsee Dorfplatz
+      art: Bus
+      lat: 47.651247
+      lon: 12.317644
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.655789
+      lon: 12.313903
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.656361
+      lon: 12.313933
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.631547
+      lon: 12.391279
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Nordic Center
+      lat: 47.669543
+      lon: 12.397149
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Hausberg Skischule
+      lat: 47.676798
+      lon: 12.468493
+      url: https://www.hausberg-skischule.de
+      osm: null
+      auto_min: 10
+      verleih_bestaetigt: true
+      herkunft: osm
+  walchsee:
+    haltestellen:
+    - name: Walchsee Dorfplatz
+      art: Bus
+      lat: 47.651247
+      lon: 12.317644
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    - name: Walchsee Johannesstraße
+      art: Bus
+      lat: 47.650942
+      lon: 12.321483
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    - name: Walchsee Kaufhaus Erharter
+      art: Bus
+      lat: 47.649066
+      lon: 12.311281
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.655789
+      lon: 12.313903
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.656361
+      lon: 12.313933
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.656361
+      lon: 12.313933
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686285
+      lon: 12.259714
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686276
+      lon: 12.259694
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm

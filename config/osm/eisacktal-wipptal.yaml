@@ -1,0 +1,249 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  gossensass:
+    haltestellen:
+    - name: Sankt Anton - San Antonio
+      art: Bus
+      lat: 46.964145
+      lon: 11.347678
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Pflersch, Erl - Fleres, Erl
+      art: Bus
+      lat: 46.965328
+      lon: 11.339564
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Atzwanger
+      art: Bus
+      lat: 46.961763
+      lon: 11.3549
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz St. Anton - Parcheggio Sant'Antonio
+      lat: 46.964359
+      lon: 11.34687
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz St. Anton - Parcheggio Sant'Antonio
+      lat: 46.964343
+      lon: 11.346862
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.963579
+      lon: 11.342265
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  ratschings:
+    haltestellen:
+    - name: Maiern
+      art: Bus
+      lat: 46.922604
+      lon: 11.281484
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Oberauer
+      art: Bus
+      lat: 46.92001
+      lon: 11.285552
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Walten, Jägerhof - Valtina, Jägerhof
+      art: Bus
+      lat: 46.827245
+      lon: 11.303544
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.82648
+      lon: 11.307161
+      url: null
+      fuss_min: 8
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.826572
+      lon: 11.307292
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.82648
+      lon: 11.307161
+      url: null
+      fuss_min: 8
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 46.904279
+      lon: 11.311224
+      url: null
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Skiverleih
+      lat: 46.904288
+      lon: 11.311216
+      url: null
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: false
+      herkunft: osm
+  ritten-villanders:
+    haltestellen:
+    - name: Villanderer Alm - Alpe di Villandro
+      art: Bus
+      lat: 46.641306
+      lon: 11.490058
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Kaser
+      art: Bus
+      lat: 46.641144
+      lon: 11.482151
+      url: null
+      fuss_min: 14
+      herkunft: osm
+    - name: Speckboden
+      art: Bus
+      lat: 46.635499
+      lon: 11.500333
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Saltnerstein
+      lat: 46.641284
+      lon: 11.489717
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Saltnerstein
+      lat: 46.641281
+      lon: 11.489716
+      url: null
+      fuss_min: 7
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  sarntal:
+    haltestellen:
+    - name: Asten - Laste
+      art: Bus
+      lat: 46.79232
+      lon: 11.43972
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Weißenbach - Rio Bianco
+      art: Bus
+      lat: 46.771089
+      lon: 11.367939
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Sack
+      art: Bus
+      lat: 46.787029
+      lon: 11.434743
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.791132
+      lon: 11.438838
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.791018
+      lon: 11.43874
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.766415
+      lon: 11.370936
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  pfitsch:
+    haltestellen:
+    - name: Grube - Fosse
+      art: Bus
+      lat: 46.961953
+      lon: 11.55536
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    - name: Rain - Riva
+      art: Bus
+      lat: 46.963218
+      lon: 11.566877
+      url: null
+      fuss_min: 16
+      herkunft: osm
+    - name: Gorgler
+      art: Bus
+      lat: 46.963487
+      lon: 11.561528
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.957374
+      lon: 11.559101
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.957374
+      lon: 11.559101
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

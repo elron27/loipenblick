@@ -1,0 +1,219 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  berchtesgaden:
+    haltestellen:
+    - name: Scharitzkehl
+      art: Bus
+      lat: 47.603681
+      lon: 13.025923
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Abzweig Obersalzberg
+      art: Bus
+      lat: 47.651364
+      lon: 13.058205
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Schusterhäusl
+      art: Bus
+      lat: 47.651691
+      lon: 13.061712
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Scharitzkehlalm
+      lat: 47.604
+      lon: 13.030388
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Scharitzkehlalm
+      lat: 47.604
+      lon: 13.030388
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.604738
+      lon: 13.027601
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  bischofswiesen:
+    haltestellen:
+    - name: Reittoffen
+      art: Bus
+      lat: 47.633959
+      lon: 12.978785
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    - name: Glückauf
+      art: Bus
+      lat: 47.644172
+      lon: 13.000732
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    - name: Umgehungsbrücke
+      art: Bus
+      lat: 47.640934
+      lon: 12.972041
+      url: null
+      fuss_min: 19
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Aschauerweiher
+      lat: 47.643261
+      lon: 12.98453
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Aschauerweiher
+      lat: 47.643257
+      lon: 12.984522
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.641083
+      lon: 12.982542
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  marktschellenberg:
+    haltestellen:
+    - name: Bad Dürrnberg Zillstraße
+      art: Bus
+      lat: 47.676532
+      lon: 13.082919
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.675169
+      lon: 13.066548
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.675169
+      lon: 13.066548
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.674722
+      lon: 13.066578
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  ramsau:
+    haltestellen:
+    - name: Taubensee Mordau Abzw.
+      art: Bus
+      lat: 47.630455
+      lon: 12.871032
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Taubensee
+      art: Bus
+      lat: 47.628447
+      lon: 12.875454
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Kaltbachlehen
+      art: Bus
+      lat: 47.624089
+      lon: 12.879563
+      url: null
+      fuss_min: 12
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.630868
+      lon: 12.870588
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.630538
+      lon: 12.870763
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.630867
+      lon: 12.870576
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  schoenau-am-koenigssee:
+    haltestellen:
+    - name: Bodnerlehen
+      art: Bus
+      lat: 47.610414
+      lon: 12.977889
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Wahlbaum
+      art: Bus
+      lat: 47.610428
+      lon: 12.974356
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Kohlhiasl
+      art: Bus
+      lat: 47.614686
+      lon: 12.981583
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.613811
+      lon: 12.981139
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []

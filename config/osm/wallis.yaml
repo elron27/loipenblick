@@ -1,0 +1,1067 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  aletsch-arena:
+    haltestellen:
+    - name: Gondelbahn Bettmerhorn
+      art: Bus
+      lat: 46.392554
+      lon: 8.064459
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Alpfrieden
+      art: Bus
+      lat: 46.391008
+      lon: 8.06355
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Tennisplatz
+      art: Bus
+      lat: 46.392408
+      lon: 8.065912
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze: []
+    verleih:
+    - name: Bürcher Alpin
+      lat: 46.380457
+      lon: 8.038523
+      url: null
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: false
+      herkunft: osm
+  anzere:
+    haltestellen:
+    - name: Anzère, télécabine
+      art: Bus
+      lat: 46.294678
+      lon: 7.394808
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Anzère, centre
+      art: Bus
+      lat: 46.295801
+      lon: 7.396437
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Anzère, village sud
+      art: Bus
+      lat: 46.296516
+      lon: 7.399878
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Place de la Télécabine
+      lat: 46.294889
+      lon: 7.394512
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Place de la Télécabine
+      lat: 46.29492
+      lon: 7.39446
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Place de la Télécabine
+      lat: 46.294729
+      lon: 7.39509
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  blatten-belalp:
+    haltestellen:
+    - name: Luftseilbahn
+      art: Bus
+      lat: 46.358862
+      lon: 7.984383
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Blatten Luftseilbahn
+      art: Bus
+      lat: 46.359199
+      lon: 7.983874
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Massa
+      art: Bus
+      lat: 46.359459
+      lon: 7.985275
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.359284
+      lon: 7.984251
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.359291
+      lon: 7.98425
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.357933
+      lon: 7.982388
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  champex-lac:
+    haltestellen:
+    - name: Champex, télé
+      art: Bahn
+      lat: 46.031701
+      lon: 7.106717
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Champex, d'en-Haut
+      art: Bus
+      lat: 46.035737
+      lon: 7.102818
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Champex, Lac
+      art: Bus
+      lat: 46.030213
+      lon: 7.116374
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.032257
+      lon: 7.106657
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.03226
+      lon: 7.106652
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.032138
+      lon: 7.105581
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  crans-montana:
+    haltestellen:
+    - name: Crans-Montana, poste
+      art: Bus
+      lat: 46.312388
+      lon: 7.485394
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Crans-Montana Gare
+      art: Bahn
+      lat: 46.31288
+      lon: 7.489286
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Crans-Montana, gare
+      art: Bus
+      lat: 46.313111
+      lon: 7.489559
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.312776
+      lon: 7.485912
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.312776
+      lon: 7.485912
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.312806
+      lon: 7.485373
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski Service Le Signal
+      lat: 46.312961
+      lon: 7.479411
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 9
+  grimentz-zinal-anniviers:
+    haltestellen:
+    - name: Télécabine
+      art: Bus
+      lat: 46.176344
+      lon: 7.574113
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Grimentz, Télécabine
+      art: Bus
+      lat: 46.175323
+      lon: 7.574101
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Pont Imm. L'Alou
+      art: Bus
+      lat: 46.177937
+      lon: 7.573656
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.176539
+      lon: 7.574232
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.176493
+      lon: 7.575325
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.176022
+      lon: 7.574977
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  graechen:
+    haltestellen:
+    - name: Grächen, Zentrum
+      art: Bus
+      lat: 46.196391
+      lon: 7.839851
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Matten
+      art: Bus
+      lat: 46.198649
+      lon: 7.841266
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Schmidji
+      art: Bus
+      lat: 46.201352
+      lon: 7.842411
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parkplatz Hannig
+      lat: 46.196391
+      lon: 7.841655
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Parkplatz Hannig
+      lat: 46.196387
+      lon: 7.841653
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.19698
+      lon: 7.841547
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  la-fouly:
+    haltestellen:
+    - name: La Fouly VS
+      art: Bus
+      lat: 45.933417
+      lon: 7.098682
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Le Clou/Les Granges
+      art: Bus
+      lat: 45.922939
+      lon: 7.100076
+      url: null
+      fuss_min: 15
+      herkunft: osm
+    - name: La Seiloz, L'Amônaz
+      art: Bus
+      lat: 45.94399
+      lon: 7.100525
+      url: null
+      fuss_min: 17
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 45.932207
+      lon: 7.098406
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 45.931772
+      lon: 7.098334
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 45.931772
+      lon: 7.098334
+      url: null
+      fuss_min: 2
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  lauchernalp-loetschental:
+    haltestellen:
+    - name: Wiler, Seilbahn
+      art: Bus
+      lat: 46.401836
+      lon: 7.777967
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Kippel, Altersheim
+      art: Bus
+      lat: 46.399628
+      lon: 7.773021
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Wiler, Dorf
+      art: Bus
+      lat: 46.402428
+      lon: 7.783139
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.401452
+      lon: 7.777184
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.401473
+      lon: 7.777169
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.401908
+      lon: 7.781604
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  leukerbad:
+    haltestellen:
+    - name: Leukerbad, Busterminal
+      art: Bus
+      lat: 46.37972
+      lon: 7.626345
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Leukerbad, City
+      art: Bus
+      lat: 46.380104
+      lon: 7.628101
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Therme/Rehazentrum
+      art: Bus
+      lat: 46.377902
+      lon: 7.626087
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Rathaus
+      lat: 46.37984
+      lon: 7.626415
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.377583
+      lon: 7.627276
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.380491
+      lon: 7.628055
+      url: null
+      fuss_min: 4
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  moosalpregion-buerchen-toerbel:
+    haltestellen:
+    - name: Bürchen, Ibri
+      art: Bus
+      lat: 46.281362
+      lon: 7.820125
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Bürchen, Schigarten
+      art: Bus
+      lat: 46.279238
+      lon: 7.817296
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Bürchen, Zenhäusern
+      art: Bus
+      lat: 46.280293
+      lon: 7.822167
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.282078
+      lon: 7.816526
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.282065
+      lon: 7.816515
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.28264
+      lon: 7.816968
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  nax-mont-noble:
+    haltestellen:
+    - name: Nax, centre
+      art: Bus
+      lat: 46.228298
+      lon: 7.428423
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Nax, La Crettaz
+      art: Bus
+      lat: 46.22676
+      lon: 7.424936
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    - name: Nax, Espace Mont-Noble
+      art: Bus
+      lat: 46.228761
+      lon: 7.434614
+      url: null
+      fuss_min: 13
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.230871
+      lon: 7.430305
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.230849
+      lon: 7.430258
+      url: null
+      fuss_min: 5
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.230811
+      lon: 7.430385
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Stars'ski
+      lat: 46.225274
+      lon: 7.461922
+      url: http://www.ess-nax.ch/
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Stars'ski
+      lat: 46.225283
+      lon: 7.461899
+      url: http://www.ess-nax.ch/
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: false
+      herkunft: osm
+  nendaz-4-vallees:
+    haltestellen:
+    - name: Télécabine Stop 1
+      art: Bus
+      lat: 46.180389
+      lon: 7.291686
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Télécabine Stop 2
+      art: Bus
+      lat: 46.180037
+      lon: 7.290075
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Haute-Nendaz, bif.Le Déserteur
+      art: Bus
+      lat: 46.180699
+      lon: 7.294753
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Parking de la Télécabine
+      lat: 46.180586
+      lon: 7.292019
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.180964
+      lon: 7.292038
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.181256
+      lon: 7.292172
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Gaby Sports
+      lat: 46.134599
+      lon: 7.31638
+      url: null
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: false
+      herkunft: osm
+  ovronnaz:
+    haltestellen:
+    - name: Ovronnaz (télésiège)
+      art: Bus
+      lat: 46.20451
+      lon: 7.160985
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Lui Teise
+      art: Bus
+      lat: 46.204846
+      lon: 7.163439
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    - name: Ovronnaz, croisée du centre
+      art: Bus
+      lat: 46.204273
+      lon: 7.165975
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.204373
+      lon: 7.161077
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.204373
+      lon: 7.161077
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.20306
+      lon: 7.159953
+      url: null
+      fuss_min: 5
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skiverleih
+      lat: 46.203782
+      lon: 7.141641
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+    - name: Skiverleih
+      lat: 46.203782
+      lon: 7.141641
+      url: null
+      osm: null
+      auto_min: 6
+      verleih_bestaetigt: false
+      herkunft: osm
+  saas-almagell:
+    haltestellen:
+    - name: Saas-Almagell, Sportplatz
+      art: Bus
+      lat: 46.090483
+      lon: 7.956863
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Saas-Almagell, Dorfplatz
+      art: Bus
+      lat: 46.09423
+      lon: 7.957455
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Saas-Almagell, Lehn
+      art: Bus
+      lat: 46.0981
+      lon: 7.95631
+      url: null
+      fuss_min: 9
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.091034
+      lon: 7.956721
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.091034
+      lon: 7.956709
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.09104
+      lon: 7.957494
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  saas-fee:
+    haltestellen:
+    - name: Saas-Fee, AlpinExpress
+      art: Bus
+      lat: 46.105675
+      lon: 7.927575
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Alpin Express, Shuttlebus
+      art: Bus
+      lat: 46.105655
+      lon: 7.927662
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Saas-Fee, Gletscherbrücke
+      art: Bus
+      lat: 46.104407
+      lon: 7.925174
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.109871
+      lon: 7.930884
+      url: null
+      fuss_min: 8
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.110435
+      lon: 7.931421
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.110366
+      lon: 7.931317
+      url: null
+      fuss_min: 9
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  saas-grund:
+    haltestellen:
+    - name: Parkplatz Bergbahn
+      art: Bus
+      lat: 46.128052
+      lon: 7.938422
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Bergbahnen
+      art: Bus
+      lat: 46.127598
+      lon: 7.937172
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Unter dem Berg
+      art: Bus
+      lat: 46.130032
+      lon: 7.936407
+      url: null
+      fuss_min: 5
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.128048
+      lon: 7.938109
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.128128
+      lon: 7.938117
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.128503
+      lon: 7.938513
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  simplon:
+    haltestellen:
+    - name: Simplon Hospiz
+      art: Bus
+      lat: 46.246744
+      lon: 8.029112
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Monte Leone
+      art: Bus
+      lat: 46.245753
+      lon: 8.024902
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Simplon Pass, Simplonblick
+      art: Bus
+      lat: 46.249921
+      lon: 8.031248
+      url: null
+      fuss_min: 8
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.245798
+      lon: 8.024844
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.245803
+      lon: 8.024821
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.246158
+      lon: 8.024987
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []
+  thyon-4-vallees:
+    haltestellen:
+    - name: Veysonnaz, Station
+      art: Bus
+      lat: 46.195109
+      lon: 7.340986
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Veysonnaz, La Fantanette
+      art: Bus
+      lat: 46.195815
+      lon: 7.338293
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Veysonnaz, bif. Clèbes
+      art: Bus
+      lat: 46.194475
+      lon: 7.334975
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.195786
+      lon: 7.338408
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.195782
+      lon: 7.338387
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 46.19489
+      lon: 7.340588
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    verleih: []
+  verbier:
+    haltestellen:
+    - name: Médran
+      art: Bus
+      lat: 46.093659
+      lon: 7.233108
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Verbier, station poste
+      art: Bus
+      lat: 46.096549
+      lon: 7.228467
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Mondzeu
+      art: Bus
+      lat: 46.096303
+      lon: 7.228301
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 46.096563
+      lon: 7.227913
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Ermitage
+      lat: 46.095787
+      lon: 7.227393
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Ermitage
+      lat: 46.095771
+      lon: 7.227389
+      url: null
+      fuss_min: 8
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Ski Service Les Ruinettes
+      lat: 46.090705
+      lon: 7.252921
+      url: https://www.skiservice.com/en/ski-service-les-ruinettes
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: false
+      herkunft: osm
+  vicheres-bavon:
+    haltestellen:
+    - name: Liddes
+      art: Bus
+      lat: 45.993175
+      lon: 7.183924
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Liddes, Chapelle
+      art: Bus
+      lat: 45.986754
+      lon: 7.189486
+      url: null
+      fuss_min: 11
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 45.993006
+      lon: 7.183815
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 45.993006
+      lon: 7.183815
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 45.994314
+      lon: 7.182683
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih: []

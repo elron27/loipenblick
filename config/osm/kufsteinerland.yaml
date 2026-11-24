@@ -1,0 +1,444 @@
+# D22/D24: erzeugt von scripts/osm_auszug.py, nicht von Hand aendern (Handangaben in gebiete.yaml)
+quelle: © OpenStreetMap-Mitwirkende, ODbL 1.0
+stand: '2026-11-24'
+gebiete:
+  bad-haering:
+    haltestellen:
+    - name: Bad Häring Feuerwehr
+      art: Bus
+      lat: 47.509553
+      lon: 12.114908
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Itter Dorf
+      art: Bus
+      lat: 47.470191
+      lon: 12.143278
+      url: null
+      fuss_min: 2
+      herkunft: osm
+    - name: Itter Sporthotel Tirol
+      art: Bus
+      lat: 47.471589
+      lon: 12.144214
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.509428
+      lon: 12.11442
+      url: null
+      fuss_min: 0
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.509428
+      lon: 12.11442
+      url: null
+      fuss_min: 0
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.47004
+      lon: 12.143275
+      url: null
+      fuss_min: 2
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Skischule Kurz
+      lat: 47.446538
+      lon: 12.161894
+      url: null
+      osm: null
+      auto_min: 5
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skiverleih Sport Mayr
+      lat: 47.50482
+      lon: 12.193848
+      url: null
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Snowsports
+      lat: 47.4323
+      lon: 12.21847
+      url: null
+      osm: null
+      auto_min: 12
+      verleih_bestaetigt: true
+      herkunft: osm
+  ebbs:
+    haltestellen:
+    - name: Ebbs Oberndorf
+      art: Bus
+      lat: 47.616964
+      lon: 12.21112
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    - name: Ebbs Freizeitzentrum
+      art: Bus
+      lat: 47.623144
+      lon: 12.212864
+      url: null
+      fuss_min: 10
+      herkunft: osm
+    - name: Ebbs Schulzentrum
+      art: Bus
+      lat: 47.629377
+      lon: 12.214437
+      url: null
+      fuss_min: 18
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.617414
+      lon: 12.211274
+      url: null
+      fuss_min: 6
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Sattlerwirt
+      lat: 47.616909
+      lon: 12.21156
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Parkplatz Sattlerwirt
+      lat: 47.616935
+      lon: 12.211546
+      url: null
+      fuss_min: 7
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686285
+      lon: 12.259714
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686276
+      lon: 12.259694
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 15
+      verleih_bestaetigt: true
+      herkunft: osm
+  kufstein:
+    haltestellen:
+    - name: Kufstein, Wagingerstraße
+      art: Bus
+      lat: 47.572828
+      lon: 12.15313
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kufstein, Schopperweg
+      art: Bus
+      lat: 47.57349
+      lon: 12.160645
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    - name: Kufstein, Krankenhaus
+      art: Bus
+      lat: 47.57137
+      lon: 12.151714
+      url: null
+      fuss_min: 3
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.573043
+      lon: 12.15103
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.573227
+      lon: 12.150774
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.573051
+      lon: 12.151002
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schuler Sports
+      lat: 47.540132
+      lon: 12.140205
+      url: https://www.schuler-sports.at/
+      osm: null
+      auto_min: 8
+      verleih_bestaetigt: false
+      herkunft: osm
+  langkampfen:
+    haltestellen:
+    - name: Angerberg Franzlerbrücke
+      art: Bus
+      lat: 47.518893
+      lon: 12.038893
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Niederbreitenbach MPreis
+      art: Bus
+      lat: 47.534287
+      lon: 12.091643
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Niederbreitenbach Hansinger
+      art: Bus
+      lat: 47.536392
+      lon: 12.08833
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Schneerosental
+      lat: 47.518158
+      lon: 12.03558
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: Schneerosental
+      lat: 47.518158
+      lon: 12.03558
+      url: null
+      fuss_min: 1
+      gebuehr_text: null
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.519089
+      lon: 12.033847
+      url: null
+      fuss_min: 3
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Schuler Sports
+      lat: 47.540132
+      lon: 12.140205
+      url: https://www.schuler-sports.at/
+      osm: null
+      auto_min: 13
+      verleih_bestaetigt: false
+      herkunft: osm
+  niederndorf:
+    haltestellen:
+    - name: Ebbs Sportplatz
+      art: Bus
+      lat: 47.640067
+      lon: 12.21319
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Niederndorf Feldgasse
+      art: Bus
+      lat: 47.645412
+      lon: 12.214093
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Niederndorf, Postamt
+      art: Bus
+      lat: 47.649706
+      lon: 12.213798
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Forstmeile
+      lat: 47.642108
+      lon: 12.213567
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Forstmeile
+      lat: 47.642015
+      lon: 12.213518
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Gasthof Gradl
+      lat: 47.650114
+      lon: 12.215896
+      url: null
+      fuss_min: 4
+      gebuehr_text: null
+      herkunft: osm
+    verleih:
+    - name: Brandauer Skiverleih
+      lat: 47.638116
+      lon: 12.289461
+      url: null
+      osm: null
+      auto_min: 7
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686285
+      lon: 12.259714
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: true
+      herkunft: osm
+    - name: Skischule Sachrang
+      lat: 47.686276
+      lon: 12.259694
+      url: https://www.skischule-sachrang.de/
+      osm: null
+      auto_min: 9
+      verleih_bestaetigt: true
+      herkunft: osm
+  schwoich:
+    haltestellen:
+    - name: Schwoich Dorf
+      art: Bus
+      lat: 47.545078
+      lon: 12.140508
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Schwoich Schuster
+      art: Bus
+      lat: 47.54177
+      lon: 12.143762
+      url: null
+      fuss_min: 6
+      herkunft: osm
+    - name: Schwoich Sonnenhof
+      art: Bus
+      lat: 47.536954
+      lon: 12.142103
+      url: null
+      fuss_min: 7
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: null
+      lat: 47.541767
+      lon: 12.140765
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.541755
+      lon: 12.140751
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.542851
+      lon: 12.141161
+      url: null
+      fuss_min: 3
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    verleih:
+    - name: Schuler Sports
+      lat: 47.540132
+      lon: 12.140205
+      url: https://www.schuler-sports.at/
+      osm: null
+      auto_min: 1
+      verleih_bestaetigt: false
+      herkunft: osm
+      fuss_min: 2
+  thiersee:
+    haltestellen:
+    - name: Hinterthiersee, Dorf
+      art: Bus
+      lat: 47.584196
+      lon: 12.064454
+      url: null
+      fuss_min: 1
+      herkunft: osm
+    - name: Thiersee, GH Weißes Rössl
+      art: Bus
+      lat: 47.593515
+      lon: 12.117781
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    - name: Pfarrwirt Mitterland
+      art: Bus
+      lat: 47.588862
+      lon: 12.095039
+      url: null
+      fuss_min: 4
+      herkunft: osm
+    parkplaetze:
+    - id: null
+      name: Sportplatz
+      lat: 47.591756
+      lon: 12.115229
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: null
+      lat: 47.588205
+      lon: 12.092666
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenlos laut OpenStreetMap
+      herkunft: osm
+    - id: null
+      name: Sportplatz
+      lat: 47.591756
+      lon: 12.115229
+      url: null
+      fuss_min: 1
+      gebuehr_text: kostenpflichtig laut OpenStreetMap
+      herkunft: osm
+    verleih: []
