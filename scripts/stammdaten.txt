@@ -1,0 +1,3 @@
+# Auftraege fuer den Workflow "Stammdaten" (.github/workflows/stammdaten.yml). Eine Aenderung an dieser Datei auf
+# einem claude/-Branch startet den Lauf. Lauf 1 (24.11.2026): Detailseiten aller tourinfra-Loipen (P42).
+tourinfra

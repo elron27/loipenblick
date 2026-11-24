@@ -135,6 +135,10 @@ def abgleichen(session: Session, sources: dict, gebiete: dict) -> None:
         gebiet.wetterdienst = station.get("dienst")
         gebiet.namen = g.get("namen") or None
         gebiet.grenzinfo = g.get("grenzinfo")
+        # D9, D10, B32: Webcams und Verleih nur als Link, Pruefdatum der Handangaben
+        gebiet.webcams = g.get("webcams") or None
+        gebiet.verleih = g.get("verleih") or None
+        gebiet.hand_geprueft_am = g.get("geprueft_am")
         alle[g["slug"]] = gebiet
     session.flush()
 
@@ -187,6 +191,9 @@ def lade_und_abgleichen(session: Session, config_dir: Path = CONFIG_DIR) -> None
         lade_yaml(config_dir / "sources.yaml"),
         lade_yaml(config_dir / "gebiete.yaml"),
     )
+    # D21: gepflegte Stammdaten der Loipen (Detailseiten, Handrecherche, Hoehenmodell)
+    from loipen.details import lade_stammdaten
+    lade_stammdaten(session, config_dir / "stammdaten")
 
 
 def abgelehnte_quellen(sources: dict) -> list[str]:

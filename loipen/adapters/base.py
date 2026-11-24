@@ -28,6 +28,17 @@ class LoipenDaten:
     gespurt_skating_km: float | None = None
     gespurt_gesamt_km: float | None = None
     schneehoehe_cm: int | None = None
+    # P41: Schneehoehe am Berg, Hinweis und Sperrgrund des Betreibers (je Abruf)
+    schneehoehe_berg_cm: int | None = None
+    hinweis: str | None = None
+    sperrgrund: str | None = None
+    # P41: Stammdaten laut Quelle
+    hund_erlaubt: bool | None = None
+    kunstschnee: bool | None = None
+    loipengebiet: str | None = None
+    einstiege: list[dict] | None = None
+    # D21/P43: Stammdaten aus Detailseiten, z. B. {"hoechster_punkt_m": 803, "merkmale": [...]}
+    stammdaten: dict = field(default_factory=dict)
     quelle_aktualisiert_at: datetime | None = None
     lat: float | None = None
     lon: float | None = None

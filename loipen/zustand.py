@@ -17,6 +17,9 @@ VERGLEICHSFELDER = (
     "gespurt_skating_km",
     "gespurt_gesamt_km",
     "schneehoehe_cm",
+    "schneehoehe_berg_cm",
+    "hinweis",
+    "sperrgrund",
     "quelle_aktualisiert_at",
     "rohtext",
 )

@@ -12,6 +12,7 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
 from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Status, Technik, utcnow
 from loipen.ereignisse import Ereignis, ereignis_fuer
+from loipen.details import uebernimm_stammdaten
 from loipen.waechter import Meldung, pruefe
 from loipen.zustand import letzter_zustand, speichere_zustand
 
@@ -41,10 +42,13 @@ def _stammdaten(loipe: Loipe, d: LoipenDaten) -> None:
     """Uebernimmt, was die Quelle liefert. Ein leerer Wert ueberschreibt nie einen bekannten."""
     loipe.name = d.name
     loipe.source_url = d.source_url
-    for feld in ("laenge_km", "lat", "lon", "nachtloipe", "rundkurs"):
+    for feld in ("laenge_km", "lat", "lon", "nachtloipe", "rundkurs", "hund_erlaubt", "kunstschnee",
+                 "loipengebiet", "einstiege"):
         wert = getattr(d, feld)
         if wert is not None:
             setattr(loipe, feld, wert)
+    if d.stammdaten:
+        uebernimm_stammdaten(loipe, d.stammdaten, herkunft="quelle", url=d.source_url)
     if d.technik != Technik.UNBEKANNT:
         loipe.technik = d.technik.value
     if d.schwierigkeit != Schwierigkeit.UNBEKANNT:
@@ -120,6 +124,9 @@ def rufe_quelle_ab(
                 "gespurt_skating_km": d.gespurt_skating_km,
                 "gespurt_gesamt_km": d.gespurt_gesamt_km,
                 "schneehoehe_cm": d.schneehoehe_cm,
+                "schneehoehe_berg_cm": d.schneehoehe_berg_cm,
+                "hinweis": d.hinweis,
+                "sperrgrund": d.sperrgrund,
                 "quelle_aktualisiert_at": d.quelle_aktualisiert_at,
                 "rohtext": d.rohtext or d.status_rohtext,
             },

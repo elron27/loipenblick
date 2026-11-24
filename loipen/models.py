@@ -163,6 +163,12 @@ class Gebiet(Base):
     namen: Mapped[dict | None] = mapped_column(JSON)
     # U31: Hinweis fuer die Anfahrt ueber die Grenze (Vignette), von Hand gepflegt
     grenzinfo: Mapped[str | None] = mapped_column(String(300))
+    # D9: Webcams [{name, url, herkunft, geprueft_am}], nur als Link (U49)
+    webcams: Mapped[list | None] = mapped_column(JSON)
+    # D10/D22/D24: Skiverleihe [{name, lat, lon, url, herkunft, auto_min, fuss_min}]
+    verleih: Mapped[list | None] = mapped_column(JSON)
+    # B32: Pruefdatum der Handangaben des Gebiets (Gebuehr, Parkplaetze, Webcams, Verleih)
+    hand_geprueft_am: Mapped[date | None] = mapped_column(Date)
 
     region: Mapped[Region] = relationship(back_populates="gebiete")
     loipen: Mapped[list["Loipe"]] = relationship(back_populates="gebiet")
@@ -197,6 +203,21 @@ class Loipe(Base):
     verlauf: Mapped[dict | None] = mapped_column(JSON)
     gebuehr_text: Mapped[str | None] = mapped_column(String(300))
     hund_erlaubt: Mapped[bool | None] = mapped_column(Boolean)
+    # P41: Kunstschnee, Loipengebiet und weitere Einstiege [{ort, detail}] laut Quelle
+    kunstschnee: Mapped[bool | None] = mapped_column(Boolean)
+    loipengebiet: Mapped[str | None] = mapped_column(String(200))
+    einstiege: Mapped[list | None] = mapped_column(JSON)
+    # D21: Stammdaten aus Detailseiten, Handrecherche oder Hoehenmodell
+    hoehenmeter: Mapped[int | None] = mapped_column(Integer)
+    hoechster_punkt_m: Mapped[int | None] = mapped_column(Integer)
+    tiefster_punkt_m: Mapped[int | None] = mapped_column(Integer)
+    dauer_min: Mapped[int | None] = mapped_column(Integer)
+    kondition: Mapped[int | None] = mapped_column(Integer)  # 1 bis 6 (tirol.at)
+    technik_note: Mapped[int | None] = mapped_column(Integer)  # 1 bis 6 (tirol.at)
+    merkmale: Mapped[list | None] = mapped_column(JSON)  # feste Liste, D21 AK 2
+    webcams: Mapped[list | None] = mapped_column(JSON)  # [{name, url}] (P42)
+    # D21 AK 1: je Feld {herkunft: quelle|osm|hand|berechnet, url, geprueft_am}
+    herkunft: Mapped[dict | None] = mapped_column(JSON)
     source_url: Mapped[str] = mapped_column(String(500))
     active: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
@@ -227,6 +248,10 @@ class Zustand(Base):
     gespurt_skating_km: Mapped[float | None] = mapped_column(Float)
     gespurt_gesamt_km: Mapped[float | None] = mapped_column(Float)
     schneehoehe_cm: Mapped[int | None] = mapped_column(Integer)
+    # P41: Schneehoehe am Berg (schneehoehe_cm = Tal), Hinweis und Sperrgrund des Betreibers
+    schneehoehe_berg_cm: Mapped[int | None] = mapped_column(Integer)
+    hinweis: Mapped[str | None] = mapped_column(Text)
+    sperrgrund: Mapped[str | None] = mapped_column(String(100))
     # Zeiten getrennt: Praeparierung bzw. Aenderung laut Quelle, erster und letzter Abruf
     quelle_aktualisiert_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     abgerufen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
