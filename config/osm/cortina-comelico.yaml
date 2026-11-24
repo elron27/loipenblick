@@ -61,14 +61,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.604523
-      lon: 12.477655
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.606486
       lon: 12.479352
       url: null

@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.574007
-      lon: 14.461245
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   ardning:
     haltestellen:
@@ -79,14 +71,6 @@ gebiete:
       name: null
       lat: 47.59111
       lon: 14.363862
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.591124
-      lon: 14.363858
       url: null
       fuss_min: 2
       gebuehr_text: null
@@ -128,14 +112,6 @@ gebiete:
       name: null
       lat: 47.566723
       lon: 14.240613
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.566714
-      lon: 14.240609
       url: null
       fuss_min: 1
       gebuehr_text: null

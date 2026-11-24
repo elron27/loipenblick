@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.553984
-      lon: 11.967096
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.553373
       lon: 11.968448
       url: null
@@ -79,14 +71,6 @@ gebiete:
       name: Val - Langental - Vallunga
       lat: 46.564113
       lon: 11.772915
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Val - Langental - Vallunga
-      lat: 46.564109
-      lon: 11.772913
       url: null
       fuss_min: 3
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -128,14 +112,6 @@ gebiete:
       name: null
       lat: 46.542951
       lon: 11.61766
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.543045
-      lon: 11.617644
       url: null
       fuss_min: 2
       gebuehr_text: null

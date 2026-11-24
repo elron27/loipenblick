@@ -24,7 +24,8 @@ PARKPLATZ_MAX_MIN = 10
 VERLEIH_AUTO_MAX_MIN = 15
 VERLEIH_FUSS_MIN = 10
 HOECHSTENS = 3
-START_ABSTAND_KM = 0.1  # Loipenstarts naeher beieinander gelten als ein Start
+START_ABSTAND_KM = 0.1
+PARKPLATZ_GLEICH_KM = 0.05  # Loipenstarts naeher beieinander gelten als ein Start
 
 
 def km(a: tuple[float, float], b: tuple[float, float]) -> float:
@@ -124,6 +125,9 @@ def pois_aus_geojson(text: str) -> list[dict]:
         if art is None or lage is None:
             continue
         osm_id = str(f.get("id") or tags.get("@id") or "")
+        # osmium export --add-unique-id=type_id liefert "n123", "w123", "r123"
+        if osm_id[:1] in "nwr" and osm_id[1:].isdigit():
+            osm_id = {"n": "node", "w": "way", "r": "relation"}[osm_id[0]] + "/" + osm_id[1:]
         url = None
         if "/" in osm_id:
             url = f"https://www.openstreetmap.org/{osm_id}"
@@ -179,6 +183,7 @@ def gebiet_ergebnis(k: dict[str, list[dict]], zeiten: dict[str, list[list]]) -> 
                            "lon": round(p["lage"][1], 6), "url": p["url"], "fuss_min": m, "gebuehr_text": gebuehr,
                            "herkunft": "osm"})
     parken.sort(key=lambda x: x["fuss_min"])
+    parken = ohne_doppelte_parkplaetze(parken)
 
     verleih = []
     auto = zeiten.get("auto_verleih") or []
@@ -197,6 +202,15 @@ def gebiet_ergebnis(k: dict[str, list[dict]], zeiten: dict[str, list[list]]) -> 
     verleih.sort(key=lambda v: (not v["verleih_bestaetigt"], v["auto_min"]))
     return {"haltestellen": haltestellen[:HOECHSTENS], "parkplaetze": parken[:HOECHSTENS],
             "verleih": verleih[:HOECHSTENS]}
+
+
+def ohne_doppelte_parkplaetze(parken: list[dict]) -> list[dict]:
+    """Ein Parkplatz steht in OSM oft als Flaeche und als Punkt: naeher als 50 m gilt als derselbe (der erste bleibt)."""
+    liste: list[dict] = []
+    for p in parken:
+        if not any(km((p["lat"], p["lon"]), (q["lat"], q["lon"])) < PARKPLATZ_GLEICH_KM for q in liste):
+            liste.append(p)
+    return liste
 
 
 # ---------- Einlesen (Worker, loipen/konfig.py und Generator) ----------

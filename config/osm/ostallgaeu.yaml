@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: Festplatz
-      lat: 47.56752
-      lon: 10.675431
-      url: null
-      fuss_min: 7
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: Eissportzentrum
       lat: 47.568051
       lon: 10.68874
@@ -87,14 +79,6 @@ gebiete:
       name: Steinach Skizentrum P3
       lat: 47.56563
       lon: 10.564404
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Röfleuten Wanderparkplatz
-      lat: 47.590904
-      lon: 10.545519
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

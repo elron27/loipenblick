@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.492312
-      lon: 7.560292
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.492334
       lon: 7.561331
       url: null
@@ -79,14 +71,6 @@ gebiete:
       name: null
       lat: 46.658469
       lon: 7.695993
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.658462
-      lon: 7.695956
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -132,22 +116,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Oberer Parkplatz
-      lat: 46.718926
-      lon: 8.037373
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.719151
-      lon: 8.037955
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   bumbach-schangnau:
     haltestellen:
@@ -181,14 +149,6 @@ gebiete:
       fuss_min: 10
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.812941
-      lon: 7.91026
-      url: null
-      fuss_min: 10
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   elsigen-metsch:
     haltestellen:
@@ -204,14 +164,6 @@ gebiete:
       name: null
       lat: 46.52908
       lon: 7.606145
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.529041
-      lon: 7.606123
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -257,14 +209,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.459217
-      lon: 7.565536
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   eriz:
     haltestellen:
@@ -290,14 +234,6 @@ gebiete:
       fuss_min: 12
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.790346
-      lon: 7.780863
-      url: null
-      fuss_min: 5
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 46.790346
@@ -339,22 +275,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.727956
-      lon: 8.184177
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.727733
-      lon: 8.18454
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   gantrisch-riffenmatt:
     haltestellen:
@@ -384,14 +304,6 @@ gebiete:
       name: null
       lat: 46.765303
       lon: 7.353311
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.765308
-      lon: 7.35331
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -445,14 +357,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.623441
-      lon: 8.032729
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   gstaad:
     haltestellen:
@@ -482,14 +386,6 @@ gebiete:
       name: null
       lat: 46.467551
       lon: 7.283381
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.467615
-      lon: 7.283363
       url: null
       fuss_min: 2
       gebuehr_text: null
@@ -531,22 +427,6 @@ gebiete:
       name: null
       lat: 46.702175
       lon: 7.895603
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.702175
-      lon: 7.895603
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.702297
-      lon: 7.895695
       url: null
       fuss_min: 5
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -604,14 +484,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.591764
-      lon: 7.338265
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.591707
       lon: 7.336111
       url: null
@@ -643,14 +515,6 @@ gebiete:
       fuss_min: 4
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.494045
-      lon: 7.6733
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 46.494045
@@ -702,14 +566,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.586074
-      lon: 7.723629
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.586469
       lon: 7.724866
       url: null
@@ -745,14 +601,6 @@ gebiete:
       name: null
       lat: 46.596678
       lon: 7.907748
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.596658
-      lon: 7.907747
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -796,22 +644,6 @@ gebiete:
       lon: 7.437538
       url: null
       fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.452803
-      lon: 7.437538
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.452765
-      lon: 7.437963
-      url: null
-      fuss_min: 2
       gebuehr_text: null
       herkunft: osm
     verleih:
@@ -872,14 +704,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.743858
-      lon: 8.196941
-      url: null
-      fuss_min: 4
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Glatthard Sport
       lat: 46.733355
@@ -931,14 +755,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.735711
-      lon: 7.730527
-      url: null
-      fuss_min: 4
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.740139
       lon: 7.729156
       url: null
@@ -963,14 +779,6 @@ gebiete:
       fuss_min: 5
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.552735
-      lon: 7.372478
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 46.552735

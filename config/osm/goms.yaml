@@ -34,22 +34,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.443964
-      lon: 8.205592
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.443904
-      lon: 8.206197
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Skiverleih
       lat: 46.398316
@@ -95,14 +79,6 @@ gebiete:
       name: null
       lat: 46.50337
       lon: 8.318347
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.512876
-      lon: 8.326491
       url: null
       fuss_min: 1
       gebuehr_text: null

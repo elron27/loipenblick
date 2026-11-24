@@ -84,3 +84,14 @@ def test_starts_je_gebiet_fasst_nahe_starts_zusammen():
                                                                   {"lat": None, "lon": None}]},
                {"slug": "b", "lat": 47.5, "lon": 12.5, "loipen": []}, {"slug": "c", "lat": None, "lon": None, "loipen": []}]
     assert oa.starts_je_gebiet(gebiete) == {"a": [(47.1, 12.1)], "b": [(47.5, 12.5)]}
+
+
+@pytest.mark.req("D22")
+def test_d22_parkplatz_als_flaeche_und_punkt_zaehlt_einmal_und_ids_werden_links():
+    from loipen.osmauszug import ohne_doppelte_parkplaetze, pois_aus_geojson
+
+    p = [{"lat": 47.671048, "lon": 12.015101, "fuss_min": 1}, {"lat": 47.671083, "lon": 12.015064, "fuss_min": 1},
+         {"lat": 47.6871, "lon": 11.959522, "fuss_min": 2}]
+    assert len(ohne_doppelte_parkplaetze(p)) == 2
+    zeile = '{"type":"Feature","id":"w42","geometry":{"type":"Point","coordinates":[12.0,47.6]},"properties":{"amenity":"parking"}}'
+    assert pois_aus_geojson(zeile)[0]["url"] == "https://www.openstreetmap.org/way/42"

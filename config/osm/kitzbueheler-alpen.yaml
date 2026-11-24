@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.431983
-      lon: 12.218438
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.432834
       lon: 12.216371
       url: null
@@ -117,14 +109,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.519111
-      lon: 12.033784
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   jochberg:
     haltestellen:
@@ -150,14 +134,6 @@ gebiete:
       fuss_min: 17
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.300067
-      lon: 12.415631
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 47.300067
@@ -211,14 +187,6 @@ gebiete:
       name: null
       lat: 47.476794
       lon: 12.345128
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.476873
-      lon: 12.345125
       url: null
       fuss_min: 4
       gebuehr_text: null
@@ -296,14 +264,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.584816
-      lon: 12.574648
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Koglersport
       lat: 47.467708
@@ -350,14 +310,6 @@ gebiete:
       name: null
       lat: 47.499361
       lon: 12.386324
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.499272
-      lon: 12.386269
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap

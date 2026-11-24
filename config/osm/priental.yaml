@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Hainbach
-      lat: 47.734042
-      lon: 12.304032
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Skischule Sachrang
       lat: 47.686285

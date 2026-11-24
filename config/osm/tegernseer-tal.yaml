@@ -85,14 +85,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.743138
-      lon: 11.764664
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.751497
       lon: 11.720239
       url: null
@@ -189,14 +181,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.651635
-      lon: 11.836208
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Skiverleih
       lat: 47.655483
@@ -246,13 +230,5 @@ gebiete:
       url: null
       fuss_min: 3
       gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: P6-Sommerkeller
-      lat: 47.709705
-      lon: 11.75624
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     verleih: []

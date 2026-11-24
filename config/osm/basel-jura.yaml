@@ -34,12 +34,4 @@ gebiete:
       fuss_min: 7
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.39409
-      lon: 7.69351
-      url: null
-      fuss_min: 7
-      gebuehr_text: null
-      herkunft: osm
     verleih: []

@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.102554
-      lon: 6.82934
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Skiverleih
       lat: 47.072975
@@ -83,14 +75,6 @@ gebiete:
       fuss_min: 6
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.210671
-      lon: 7.00728
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.210671

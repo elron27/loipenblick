@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.351819
-      lon: 11.48441
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Noleggio rent bike & ski
       lat: 46.354306
@@ -97,14 +89,6 @@ gebiete:
       name: null
       lat: 46.410685
       lon: 11.435633
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.410693
-      lon: 11.435624
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap

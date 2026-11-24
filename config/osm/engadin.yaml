@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.435938
-      lon: 9.756598
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Giacometti
       lat: 46.400147
@@ -116,14 +108,6 @@ gebiete:
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.509008
-      lon: 9.882373
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
       herkunft: osm
     verleih:
     - name: Top Sport
@@ -338,14 +322,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.696064
-      lon: 10.10175
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   zuoz-s-chanf:
     haltestellen:
@@ -386,14 +362,6 @@ gebiete:
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.59608
-      lon: 9.96306
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
       herkunft: osm
     verleih:
     - name: Willy Sport (Rent Station)

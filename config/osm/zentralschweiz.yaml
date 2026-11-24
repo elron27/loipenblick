@@ -34,22 +34,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Gotthard Camping Andermatt
-      lat: 46.632317
-      lon: 8.591245
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Gemsstockbahn
-      lat: 46.632254
-      lon: 8.591652
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Meyer's
       lat: 46.637304
@@ -87,14 +71,6 @@ gebiete:
       name: null
       lat: 47.123606
       lon: 8.739974
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.123595
-      lon: 8.739956
       url: null
       fuss_min: 4
       gebuehr_text: null
@@ -140,22 +116,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.820437
-      lon: 8.405739
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.820558
-      lon: 8.40542
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   kuessnacht-seebodenalp:
     haltestellen:
@@ -185,14 +145,6 @@ gebiete:
       name: null
       lat: 47.076081
       lon: 8.439919
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.076021
-      lon: 8.43987
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -233,14 +185,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.892549
-      lon: 8.125893
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.893088
       lon: 8.126181
       url: null
@@ -272,14 +216,6 @@ gebiete:
       fuss_min: 16
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.80235
-      lon: 8.279653
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 46.80235
@@ -329,22 +265,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.014513
-      lon: 8.669113
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.014751
-      lon: 8.668624
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   moerlialp-giswil:
     haltestellen:
@@ -360,14 +280,6 @@ gebiete:
       name: null
       lat: 46.825476
       lon: 8.110108
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.82548
-      lon: 8.110072
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -414,14 +326,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: Dorfplatz
-      lat: 47.010584
-      lon: 8.483845
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: null
       lat: 47.009372
       lon: 8.483163
@@ -462,22 +366,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.104605
-      lon: 8.676268
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.104786
-      lon: 8.676449
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   stoos:
     haltestellen:
@@ -511,14 +399,6 @@ gebiete:
       name: null
       lat: 47.07358
       lon: 8.835405
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.073565
-      lon: 8.835373
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -560,14 +440,6 @@ gebiete:
       name: null
       lat: 46.821339
       lon: 8.033147
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.821334
-      lon: 8.033144
       url: null
       fuss_min: 2
       gebuehr_text: kostenlos laut OpenStreetMap

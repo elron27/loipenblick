@@ -61,14 +61,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.456756
-      lon: 10.271409
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.457824
       lon: 10.27225
       url: null
@@ -128,14 +120,6 @@ gebiete:
       name: Sachsenweg
       lat: 47.405412
       lon: 10.279265
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Sachsenweg
-      lat: 47.405418
-      lon: 10.279224
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -201,14 +185,6 @@ gebiete:
       name: null
       lat: 47.60193
       lon: 10.410061
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.601923
-      lon: 10.410053
       url: null
       fuss_min: 3
       gebuehr_text: null

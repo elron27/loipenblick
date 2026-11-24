@@ -34,22 +34,6 @@ gebiete:
       fuss_min: 10
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.662152
-      lon: 13.078712
-      url: null
-      fuss_min: 10
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.662336
-      lon: 13.078528
-      url: null
-      fuss_min: 10
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   gitschtal:
     haltestellen:
@@ -101,22 +85,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.626544
-      lon: 13.367099
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.626856
-      lon: 13.367259
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   kirchbach:
     haltestellen:
@@ -146,14 +114,6 @@ gebiete:
       name: null
       lat: 46.641156
       lon: 13.190774
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.641123
-      lon: 13.19077
       url: null
       fuss_min: 3
       gebuehr_text: null
@@ -195,14 +155,6 @@ gebiete:
       name: null
       lat: 46.668541
       lon: 12.998486
-      url: null
-      fuss_min: 4
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.668518
-      lon: 12.998485
       url: null
       fuss_min: 4
       gebuehr_text: kostenlos laut OpenStreetMap

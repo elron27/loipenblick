@@ -84,14 +84,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: P+R PhB Bergün
-      lat: 46.631739
-      lon: 9.74605
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: null
       lat: 46.630875
       lon: 9.74629
@@ -128,14 +120,6 @@ gebiete:
       name: null
       lat: 46.770833
       lon: 9.067346
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.770955
-      lon: 9.06731
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -198,14 +182,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.700211
-      lon: 8.843783
-      url: null
-      fuss_min: 4
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   gruesch-danusa:
     haltestellen:
@@ -243,14 +219,6 @@ gebiete:
       name: null
       lat: 46.97324
       lon: 9.644051
-      url: null
-      fuss_min: 5
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.973172
-      lon: 9.644865
       url: null
       fuss_min: 5
       gebuehr_text: null
@@ -323,14 +291,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.951417
-      lon: 10.375071
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.950148
       lon: 10.37108
       url: null
@@ -372,14 +332,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.462413
-      lon: 9.190833
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.462971
       lon: 9.190575
       url: null
@@ -415,14 +367,6 @@ gebiete:
       name: null
       lat: 46.595461
       lon: 9.601164
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.595446
-      lon: 9.60115
       url: null
       fuss_min: 3
       gebuehr_text: null
@@ -478,14 +422,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: null
-      lat: 46.794348
-      lon: 10.288498
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: Bahnhofplatz
       lat: 46.793869
       lon: 10.287563
@@ -526,22 +462,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.549443
-      lon: 9.314143
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.549424
-      lon: 9.314317
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   tschiertschen:
     haltestellen:
@@ -571,14 +491,6 @@ gebiete:
       name: null
       lat: 46.819909
       lon: 9.603028
-      url: null
-      fuss_min: 10
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.819937
-      lon: 9.602938
       url: null
       fuss_min: 10
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -616,22 +528,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.626213
-      lon: 10.336636
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.626375
-      lon: 10.336752
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   vals:
     haltestellen:
@@ -657,14 +553,6 @@ gebiete:
       fuss_min: 8
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: Parkplatz Bidem
-      lat: 46.617881
-      lon: 9.181443
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: Parkplatz Bidem
       lat: 46.617881

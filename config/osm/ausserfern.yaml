@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: null
-      lat: 47.407854
-      lon: 10.746955
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: Thanellerkarlift
       lat: 47.409404
       lon: 10.73833
@@ -115,14 +107,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.572513
-      lon: 10.45936
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   namlos:
     haltestellen:
@@ -157,14 +141,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.283307
-      lon: 10.606534
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   lechtal:
     haltestellen:
@@ -190,14 +166,6 @@ gebiete:
       fuss_min: 1
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.247242
-      lon: 10.305124
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.247242
@@ -304,14 +272,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.501275
-      lon: 10.516999
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   zugspitz-arena:
     haltestellen:
@@ -341,14 +301,6 @@ gebiete:
       name: null
       lat: 47.406351
       lon: 10.903558
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.40631
-      lon: 10.903501
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -470,14 +422,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: Parkplatz Saloberjet
-      lat: 47.268211
-      lon: 10.128332
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: Jägeralpe
       lat: 47.267385
       lon: 10.149138
@@ -514,14 +458,6 @@ gebiete:
       name: Cafe Zur Alten Mühle
       lat: 47.41323
       lon: 10.582742
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: Cafe Zur Alten Mühle
-      lat: 47.413251
-      lon: 10.582709
       url: null
       fuss_min: 1
       gebuehr_text: null

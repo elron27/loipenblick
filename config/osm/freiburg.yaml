@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.61828
-      lon: 7.168303
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.619231
       lon: 7.165068
       url: null
@@ -72,22 +64,6 @@ gebiete:
       name: null
       lat: 46.61074
       lon: 7.275591
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.610701
-      lon: 7.275287
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.610951
-      lon: 7.275064
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -121,14 +97,6 @@ gebiete:
       name: PSS supérieur
       lat: 46.528877
       lon: 6.902967
-      url: null
-      fuss_min: 7
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: PSS supérieur
-      lat: 46.528859
-      lon: 6.902959
       url: null
       fuss_min: 7
       gebuehr_text: kostenpflichtig laut OpenStreetMap

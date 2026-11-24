@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.639614
-      lon: 13.763408
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.640555
       lon: 13.766126
       url: null
@@ -99,14 +91,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.608895
-      lon: 13.783002
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Sportartikel Haim
       lat: 47.662467
@@ -156,14 +140,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.555035
-      lon: 13.934831
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   grundlsee:
     haltestellen:
@@ -189,14 +165,6 @@ gebiete:
       fuss_min: 11
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.627421
-      lon: 13.836685
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.627421

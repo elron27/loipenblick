@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.248097
-      lon: 11.496893
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.248334
       lon: 11.498402
       url: null
@@ -91,14 +83,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.151096
-      lon: 11.34735
-      url: null
-      fuss_min: 4
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   kuehtai:
     haltestellen:
@@ -128,14 +112,6 @@ gebiete:
       name: null
       lat: 47.211319
       lon: 11.014339
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.211299
-      lon: 11.014242
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -189,14 +165,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.200855
-      lon: 11.101076
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   stubaier-gletscher:
     haltestellen:
@@ -249,14 +217,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.044389
-      lon: 11.3516
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   wipptal:
     haltestellen:
@@ -282,14 +242,6 @@ gebiete:
       fuss_min: 5
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.037553
-      lon: 11.578575
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.037553

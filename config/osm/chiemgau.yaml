@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.814835
-      lon: 12.587401
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.798143
       lon: 12.59043
       url: null
@@ -93,14 +85,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.936459
-      lon: 12.553181
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.899505
       lon: 12.535952
       url: null
@@ -132,14 +116,6 @@ gebiete:
       fuss_min: 2
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: P 2
-      lat: 47.765306
-      lon: 12.748426
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: P 2
       lat: 47.765306
@@ -193,14 +169,6 @@ gebiete:
       name: null
       lat: 47.755441
       lon: 12.446522
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.755448
-      lon: 12.44643
       url: null
       fuss_min: 2
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -261,14 +229,6 @@ gebiete:
       url: null
       fuss_min: 1
       gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: Parkplatz Langlaufstadion und Fußballplatz
-      lat: 47.675419
-      lon: 12.466424
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     verleih:
     - name: Hausberg Skischule
@@ -386,14 +346,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: Parkplatz am Baumgarten
-      lat: 47.725715
-      lon: 12.408134
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: null
       lat: 47.719004
       lon: 12.393746
@@ -434,14 +386,6 @@ gebiete:
       fuss_min: 10
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.801273
-      lon: 12.644057
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 47.801273
@@ -495,14 +439,6 @@ gebiete:
       name: null
       lat: 47.708925
       lon: 12.472757
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.7089
-      lon: 12.472733
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap

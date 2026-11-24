@@ -29,14 +29,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.185293
-      lon: 13.853649
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.183529
       lon: 13.851878
       url: null

@@ -68,14 +68,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.44409
-      lon: 13.901112
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   haus-im-ennstal:
     haltestellen:
@@ -101,22 +93,6 @@ gebiete:
       fuss_min: 4
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.409116
-      lon: 13.766906
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.409338
-      lon: 13.766712
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.409116
@@ -247,14 +223,6 @@ gebiete:
       fuss_min: 5
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.394089
-      lon: 13.687869
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.394089

@@ -15,6 +15,8 @@ Regeln (D21):
 from datetime import date
 from pathlib import Path
 
+from functools import lru_cache
+
 import yaml
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -124,26 +126,44 @@ def uebernimm_stammdaten(loipe: Loipe, werte: dict, herkunft: str, url: str | No
     return gesetzt
 
 
-def lade_stammdaten(session: Session, verzeichnis: Path) -> int:
-    """Uebernimmt config/stammdaten/*.yaml in die Datenbank. Gibt die Zahl der geaenderten Loipen zurueck."""
-    if not verzeichnis.is_dir():
-        return 0
-    quellen = {q.key: q.id for q in session.scalars(select(Quelle))}
-    anzahl = 0
-    for pfad in sorted(verzeichnis.glob("*.yaml")):
-        inhalt = yaml.safe_load(pfad.read_text(encoding="utf-8")) or {}
+def gepflegte_stammdaten(verzeichnis: Path) -> dict[tuple[str, str], list[tuple[str, dict]]]:
+    """config/stammdaten/*.yaml -> {(quelle_key, source_key): [(herkunft, werte), ...]}, je Dateistand nur einmal gelesen."""
+    if not Path(verzeichnis).is_dir():
+        return {}
+    dateien = tuple((str(p), p.stat().st_mtime) for p in sorted(Path(verzeichnis).glob("*.yaml")))
+    return _lies_stammdaten(dateien)
+
+
+@lru_cache(maxsize=4)
+def _lies_stammdaten(dateien: tuple) -> dict:
+    index: dict[tuple[str, str], list[tuple[str, dict]]] = {}
+    for pfad, _ in dateien:
+        inhalt = yaml.safe_load(Path(pfad).read_text(encoding="utf-8")) or {}
         herkunft = inhalt.get("herkunft", "quelle")
         for quelle_key, loipen in (inhalt.get("quellen") or {}).items():
-            qid = quellen.get(quelle_key)
-            if qid is None or not loipen:
-                continue
-            bestand = {l.source_key: l for l in session.scalars(select(Loipe).where(Loipe.quelle_id == qid))}
-            for source_key, werte in loipen.items():
-                loipe = bestand.get(str(source_key))
-                if loipe is None or not werte:
-                    continue
-                h = werte.get("herkunft", herkunft)
-                if uebernimm_stammdaten(loipe, werte, h, werte.get("url"), werte.get("geprueft_am")):
-                    anzahl += 1
+            for source_key, werte in (loipen or {}).items():
+                if werte:
+                    index.setdefault((quelle_key, str(source_key)), []).append((werte.get("herkunft", herkunft), werte))
+    return index
+
+
+def wende_gepflegte_an(loipe: Loipe, quelle_key: str, verzeichnis: Path) -> bool:
+    """D21: gepflegte Stammdaten einer Loipe uebernehmen; auch fuer Loipen, die erst beim Abruf neu entstehen."""
+    geaendert = False
+    for herkunft, werte in gepflegte_stammdaten(verzeichnis).get((quelle_key, str(loipe.source_key)), []):
+        geaendert |= bool(uebernimm_stammdaten(loipe, werte, herkunft, werte.get("url"), werte.get("geprueft_am")))
+    return geaendert
+
+
+def lade_stammdaten(session: Session, verzeichnis: Path) -> int:
+    """Uebernimmt config/stammdaten/*.yaml fuer alle vorhandenen Loipen. Gibt die Zahl der geaenderten Loipen zurueck."""
+    index = gepflegte_stammdaten(verzeichnis)
+    if not index:
+        return 0
+    quellen = {q.id: q.key for q in session.scalars(select(Quelle))}
+    anzahl = 0
+    for loipe in session.scalars(select(Loipe)):
+        if (quellen.get(loipe.quelle_id), str(loipe.source_key)) in index:
+            anzahl += wende_gepflegte_an(loipe, quellen[loipe.quelle_id], verzeichnis)
     session.flush()
     return anzahl

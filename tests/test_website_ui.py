@@ -301,7 +301,10 @@ def test_u5_detailseite_mit_minikarte_verlauf_quelle_navigation(seite):
     assert seite.locator(".hist span").count() == 14
     assert seite.locator("#minimap.leaflet-container").count() == 1
     assert seite.locator("#minimap .mk").count() == 1  # Start der Loipe
-    assert seite.get_by_role("link", name=re.compile("Navigation")).get_attribute("href").startswith("https://www.google.com/maps/dir/")
+    # seit D22 kann die Anreise mehrere Parkplaetze mit Navigation zeigen (Hand und OpenStreetMap)
+    navi = seite.get_by_role("link", name=re.compile("Navigation"))
+    assert navi.count() >= 1
+    assert all(navi.nth(i).get_attribute("href").startswith("https://www.google.com/maps/dir/") for i in range(navi.count()))
     quelle = seite.locator("a[rel=noopener]", has_text="Tegernseer").first
     assert quelle.get_attribute("href").startswith("https://www.tegernsee.com")
     for wort in ("Länge", "Gespurt", "Klassisch", "Skating", "Schwierigkeit", "Rundkurs", "Quelle und Stand", "Zuletzt von uns geprüft"):

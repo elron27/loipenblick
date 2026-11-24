@@ -67,22 +67,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Place de la Télécabine
-      lat: 46.29492
-      lon: 7.39446
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Place de la Télécabine
-      lat: 46.294729
-      lon: 7.39509
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   blatten-belalp:
     haltestellen:
@@ -112,14 +96,6 @@ gebiete:
       name: null
       lat: 46.359284
       lon: 7.984251
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.359291
-      lon: 7.98425
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -167,14 +143,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.03226
-      lon: 7.106652
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.032138
       lon: 7.105581
       url: null
@@ -212,22 +180,6 @@ gebiete:
       lon: 7.485912
       url: null
       fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.312776
-      lon: 7.485912
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.312806
-      lon: 7.485373
-      url: null
-      fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     verleih:
@@ -322,14 +274,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: Parkplatz Hannig
-      lat: 46.196387
-      lon: 7.841653
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: null
       lat: 46.19698
       lon: 7.841547
@@ -370,22 +314,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 45.931772
-      lon: 7.098334
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 45.931772
-      lon: 7.098334
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   lauchernalp-loetschental:
     haltestellen:
@@ -415,14 +343,6 @@ gebiete:
       name: null
       lat: 46.401452
       lon: 7.777184
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.401473
-      lon: 7.777169
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -519,14 +439,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.282065
-      lon: 7.816515
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.28264
       lon: 7.816968
       url: null
@@ -564,22 +476,6 @@ gebiete:
       lon: 7.430305
       url: null
       fuss_min: 5
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.230849
-      lon: 7.430258
-      url: null
-      fuss_min: 5
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.230811
-      lon: 7.430385
-      url: null
-      fuss_min: 6
       gebuehr_text: null
       herkunft: osm
     verleih:
@@ -633,14 +529,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.180964
-      lon: 7.292038
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.181256
       lon: 7.292172
       url: null
@@ -680,14 +568,6 @@ gebiete:
       fuss_min: 7
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.204373
-      lon: 7.161077
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 46.204373
@@ -755,14 +635,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.091034
-      lon: 7.956709
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.09104
       lon: 7.957494
       url: null
@@ -810,14 +682,6 @@ gebiete:
       fuss_min: 9
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.110366
-      lon: 7.931317
-      url: null
-      fuss_min: 9
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   saas-grund:
     haltestellen:
@@ -847,14 +711,6 @@ gebiete:
       name: null
       lat: 46.128048
       lon: 7.938109
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.128128
-      lon: 7.938117
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -900,22 +756,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.245803
-      lon: 8.024821
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.246158
-      lon: 8.024987
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   thyon-4-vallees:
     haltestellen:
@@ -945,14 +785,6 @@ gebiete:
       name: null
       lat: 46.195786
       lon: 7.338408
-      url: null
-      fuss_min: 6
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.195782
-      lon: 7.338387
       url: null
       fuss_min: 6
       gebuehr_text: null
@@ -1006,14 +838,6 @@ gebiete:
       fuss_min: 8
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Ermitage
-      lat: 46.095771
-      lon: 7.227389
-      url: null
-      fuss_min: 8
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Ski Service Les Ruinettes
       lat: 46.090705
@@ -1040,14 +864,6 @@ gebiete:
       fuss_min: 11
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 45.993006
-      lon: 7.183815
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 45.993006

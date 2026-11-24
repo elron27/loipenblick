@@ -4,6 +4,7 @@ import logging
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -12,7 +13,7 @@ from loipen.adapters import ADAPTERS
 from loipen.adapters.base import Fetcher, LoipenDaten
 from loipen.models import Gebiet, Loipe, Quelle, Schwierigkeit, Status, Technik, utcnow
 from loipen.ereignisse import Ereignis, ereignis_fuer
-from loipen.details import uebernimm_stammdaten
+from loipen.details import uebernimm_stammdaten, wende_gepflegte_an
 from loipen.waechter import Meldung, pruefe
 from loipen.zustand import letzter_zustand, speichere_zustand
 
@@ -21,6 +22,7 @@ log = logging.getLogger("loipen.ablauf")
 # B29: Eine Loipe, die ihre Quelle in vollstaendigen Laeufen so lange nicht mehr meldet, wird ausgeblendet
 # (active = False). Meldet die Quelle sie wieder, ist sie sofort wieder da.
 VERSCHWUNDEN_STUNDEN = 48
+STAMMDATEN_DIR = Path(__file__).resolve().parent.parent / "config" / "stammdaten"  # D21, wie loipen/konfig.py
 
 
 @dataclass
@@ -103,6 +105,7 @@ def rufe_quelle_ab(
         loipe.gebiet = gebiet
         _stammdaten(loipe, d)
         session.flush()
+        wende_gepflegte_an(loipe, quelle.key, STAMMDATEN_DIR)  # D21: auch fuer neue Loipen
 
         for feld, roh in d.unbekannte_begriffe:
             log.warning(

@@ -27,14 +27,6 @@ gebiete:
       fuss_min: 10
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.467243
-      lon: 15.789006
-      url: null
-      fuss_min: 10
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   teichalm:
     haltestellen:
@@ -50,22 +42,6 @@ gebiete:
       name: Heulantsch
       lat: 47.355729
       lon: 15.470287
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Heulantsch
-      lat: 47.355799
-      lon: 15.470149
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Heulantsch
-      lat: 47.35563
-      lon: 15.470201
       url: null
       fuss_min: 5
       gebuehr_text: kostenlos laut OpenStreetMap

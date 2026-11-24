@@ -34,14 +34,6 @@ gebiete:
       fuss_min: 7
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.526463
-      lon: 15.780941
-      url: null
-      fuss_min: 7
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   wildalpen:
     haltestellen:
@@ -60,14 +52,6 @@ gebiete:
       fuss_min: 15
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.655282
-      lon: 14.984101
-      url: null
-      fuss_min: 5
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.655282

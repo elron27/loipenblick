@@ -93,14 +93,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.842735
-      lon: 12.247764
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.75788
       lon: 12.104497
       url: null
@@ -189,22 +181,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.739347
-      lon: 12.16167
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.739324
-      lon: 12.161838
-      url: null
-      fuss_min: 3
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   prags:
     haltestellen:
@@ -234,14 +210,6 @@ gebiete:
       name: null
       lat: 46.721013
       lon: 12.139534
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.72102
-      lon: 12.13928
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -332,14 +300,6 @@ gebiete:
       name: Nordic Arena
       lat: 46.718836
       lon: 12.222845
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Nordic Arena
-      lat: 46.718832
-      lon: 12.222832
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

@@ -93,14 +93,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.862467
-      lon: 9.90237
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.863006
       lon: 9.902707
       url: null

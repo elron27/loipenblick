@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.270868
-      lon: 11.775926
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.302852
       lon: 11.87301
       url: null
@@ -182,14 +174,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.161325
-      lon: 11.743889
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Bernhard Sport & Mode
       lat: 47.153707
@@ -239,14 +223,6 @@ gebiete:
       fuss_min: 2
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.223763
-      lon: 12.057834
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.223763

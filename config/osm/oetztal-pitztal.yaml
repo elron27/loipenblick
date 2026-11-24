@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: null
       herkunft: osm
     - id: null
-      name: Parkplatz Haus im Leben
-      lat: 47.318445
-      lon: 10.833095
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
       name: Postplatz
       lat: 47.314774
       lon: 10.838014
@@ -79,14 +71,6 @@ gebiete:
       name: Parkplatz Hochgurglbahn
       lat: 46.897873
       lon: 11.03966
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Parkplatz Hochgurglbahn
-      lat: 46.897915
-      lon: 11.039644
       url: null
       fuss_min: 3
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -198,14 +182,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.957948
-      lon: 10.876122
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Schiverleih Kirschner
       lat: 47.055775
@@ -236,22 +212,6 @@ gebiete:
       name: P1
       lat: 46.9343
       lon: 11.018839
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.934416
-      lon: 11.019152
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.934416
-      lon: 11.019152
       url: null
       fuss_min: 2
       gebuehr_text: null
@@ -297,14 +257,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.862801
-      lon: 10.916437
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   oetztal:
     haltestellen:
@@ -334,14 +286,6 @@ gebiete:
       name: null
       lat: 47.120565
       lon: 10.964466
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.120547
-      lon: 10.964464
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

@@ -71,14 +71,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.108288
-      lon: 14.169607
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   muehlen:
     haltestellen:
@@ -120,14 +112,6 @@ gebiete:
       fuss_min: 5
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.031055
-      lon: 14.507896
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   kreischberg:
     haltestellen:
@@ -163,14 +147,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.103891
-      lon: 14.099217
-      url: null
-      fuss_min: 6
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.10277
       lon: 14.09542
       url: null
@@ -196,14 +172,6 @@ gebiete:
       name: null
       lat: 46.914703
       lon: 13.875641
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.9147
-      lon: 13.875608
       url: null
       fuss_min: 1
       gebuehr_text: null

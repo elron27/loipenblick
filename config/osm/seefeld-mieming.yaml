@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.372847
-      lon: 11.15277
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.382265
       lon: 11.172268
       url: null
@@ -85,14 +77,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.314538
-      lon: 11.000751
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.300183
       lon: 10.921628
       url: null
@@ -128,14 +112,6 @@ gebiete:
       name: Parkplatz Moos Rödlach
       lat: 47.346587
       lon: 11.12824
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Parkplatz Moos Rödlach
-      lat: 47.346553
-      lon: 11.128214
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

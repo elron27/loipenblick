@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: P Weissenseehaus
-      lat: 46.713576
-      lon: 13.294162
-      url: null
-      fuss_min: 5
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: null
       lat: 46.713892
       lon: 13.293449

@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: null
       herkunft: osm
     - id: null
-      name: Parkplatz St. Anton - Parcheggio Sant'Antonio
-      lat: 46.964343
-      lon: 11.346862
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
       name: null
       lat: 46.963579
       lon: 11.342265
@@ -75,22 +67,6 @@ gebiete:
       fuss_min: 8
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.82648
-      lon: 11.307161
-      url: null
-      fuss_min: 8
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.826572
-      lon: 11.307292
-      url: null
-      fuss_min: 8
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 46.82648
@@ -148,14 +124,6 @@ gebiete:
       fuss_min: 7
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Saltnerstein
-      lat: 46.641281
-      lon: 11.489716
-      url: null
-      fuss_min: 7
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   sarntal:
     haltestellen:
@@ -185,14 +153,6 @@ gebiete:
       name: null
       lat: 46.791132
       lon: 11.438838
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.791018
-      lon: 11.43874
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -230,14 +190,6 @@ gebiete:
       fuss_min: 17
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.957374
-      lon: 11.559101
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 46.957374

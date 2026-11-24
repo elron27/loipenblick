@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 4
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.342681
-      lon: 10.170141
-      url: null
-      fuss_min: 4
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Sporthaus Edelweiß
       lat: 47.343055

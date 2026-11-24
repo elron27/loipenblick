@@ -29,14 +29,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.353715
-      lon: 7.205009
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.353074
       lon: 7.203679
       url: null
@@ -72,14 +64,6 @@ gebiete:
       name: null
       lat: 46.396943
       lon: 7.102023
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.396917
-      lon: 7.102004
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -142,14 +126,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 46.464175
-      lon: 6.895436
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: La Boit'à semelles
       lat: 46.463506
@@ -194,14 +170,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.346655
-      lon: 7.016937
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.346589
       lon: 7.01769
       url: null
@@ -227,14 +195,6 @@ gebiete:
       fuss_min: 8
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.486159
-      lon: 7.209288
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 46.486159
@@ -286,14 +246,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.822264
-      lon: 6.50042
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.822956
       lon: 6.500709
       url: null
@@ -329,14 +281,6 @@ gebiete:
       name: null
       lat: 46.446397
       lon: 6.157071
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.446412
-      lon: 6.156977
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

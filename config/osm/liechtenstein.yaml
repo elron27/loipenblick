@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: null
-      lat: 47.104824
-      lon: 9.605892
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: P 2
       lat: 47.104401
       lon: 9.606576

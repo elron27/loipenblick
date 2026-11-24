@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.671083
-      lon: 12.015064
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.6871
       lon: 11.959522
       url: null
@@ -87,14 +79,6 @@ gebiete:
       name: Drachenthal
       lat: 47.767442
       lon: 11.908895
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.723911
-      lon: 11.948649
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap

@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.807532
-      lon: 11.881558
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.808159
       lon: 11.882773
       url: null
@@ -99,14 +91,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: Zumis
-      lat: 46.774932
-      lon: 11.727348
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   st-vigil:
     haltestellen:
@@ -138,14 +122,6 @@ gebiete:
       lon: 11.813935
       url: null
       fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.674834
-      lon: 11.813849
-      url: null
-      fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     - id: null
@@ -193,14 +169,6 @@ gebiete:
       name: null
       lat: 46.946679
       lon: 11.858225
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.946681
-      lon: 11.858038
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap

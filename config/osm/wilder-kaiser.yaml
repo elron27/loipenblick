@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: null
       herkunft: osm
     - id: null
-      name: Kaiserbad P1
-      lat: 47.523061
-      lon: 12.297173
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
       name: Kaiserbad P2
       lat: 47.522359
       lon: 12.294426
@@ -115,14 +107,6 @@ gebiete:
       fuss_min: 6
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.514449
-      lon: 12.327577
-      url: null
-      fuss_min: 6
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Schischule Schwaiger
       lat: 47.51301
@@ -185,14 +169,6 @@ gebiete:
       name: null
       lat: 47.502665
       lon: 12.198196
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.502721
-      lon: 12.197366
       url: null
       fuss_min: 2
       gebuehr_text: kostenlos laut OpenStreetMap

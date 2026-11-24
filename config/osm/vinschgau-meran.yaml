@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
     - id: null
-      name: null
-      lat: 46.524556
-      lon: 10.589502
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
       name: Schmelz 2
       lat: 46.53239
       lon: 10.748333
@@ -102,14 +94,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 46.767331
-      lon: 10.53538
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
       lat: 46.706264
       lon: 10.472756
       url: null
@@ -145,14 +129,6 @@ gebiete:
       name: null
       lat: 46.665903
       lon: 11.240227
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.66586
-      lon: 11.240211
       url: null
       fuss_min: 1
       gebuehr_text: null
@@ -202,14 +178,6 @@ gebiete:
       name: null
       lat: 46.836848
       lon: 10.655237
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 46.83684
-      lon: 10.65523
       url: null
       fuss_min: 2
       gebuehr_text: kostenpflichtig laut OpenStreetMap
@@ -267,14 +235,6 @@ gebiete:
       fuss_min: 3
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 46.513913
-      lon: 10.933515
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 46.513913

@@ -365,3 +365,22 @@ def test_b32_saisonpruefung_listet_handangaben_und_markiert_befunde():
     assert len(md.splitlines()) == len(angaben) + 6
     wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "saisonpruefung.yml").read_text(encoding="utf-8")
     assert "cron: \"0 6 3 11 *\"" in wf and "cron: \"0 6 28 3 *\"" in wf and "gh issue create" in wf
+
+
+@pytest.mark.req("D21", ak=1)
+def test_d21_gepflegte_stammdaten_auch_fuer_neue_loipen(tmp_path):
+    """Lauf 5: beim ersten Abruf entstehen die Loipen erst nach dem Laden der Konfiguration; die Stammdaten
+    muessen trotzdem ankommen (vorher: 1 von 378 tourinfra-Loipen mit Hoehe auf der Seite)."""
+    from loipen import ablauf
+    from loipen.details import wende_gepflegte_an
+    from loipen.models import Loipe
+
+    (tmp_path / "tourinfra.yaml").write_text(yaml.safe_dump({"herkunft": "quelle", "quellen": {"chiemgau": {
+        "101089": {"hoehenmeter": 24, "merkmale": ["familientauglich"], "url": "https://x", "geprueft_am": "2026-11-24"}}}}),
+        encoding="utf-8")
+    loipe = Loipe(source_key="101089", name="Neu")
+    assert wende_gepflegte_an(loipe, "chiemgau", tmp_path)
+    assert loipe.hoehenmeter == 24 and loipe.merkmale == ["familientauglich"]
+    assert not wende_gepflegte_an(Loipe(source_key="1"), "chiemgau", tmp_path)
+    src = Path(ablauf.__file__).read_text(encoding="utf-8")
+    assert "wende_gepflegte_an(loipe, quelle.key, STAMMDATEN_DIR)" in src

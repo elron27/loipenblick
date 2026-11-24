@@ -42,14 +42,6 @@ gebiete:
       fuss_min: 3
       gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.149194
-      lon: 9.142222
-      url: null
-      fuss_min: 3
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
     verleih: []
   braunwald:
     haltestellen:
@@ -94,22 +86,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.379971
-      lon: 9.207161
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.380153
-      lon: 9.207126
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   elm:
     haltestellen:
@@ -139,14 +115,6 @@ gebiete:
       name: Sportbahnen
       lat: 46.913161
       lon: 9.162598
-      url: null
-      fuss_min: 2
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Sportbahnen
-      lat: 46.913142
-      lon: 9.162586
       url: null
       fuss_min: 2
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -203,14 +171,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.092886
-      lon: 9.28106
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.093501
       lon: 9.282112
       url: null
@@ -246,22 +206,6 @@ gebiete:
       name: null
       lat: 47.19433
       lon: 9.308622
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.194717
-      lon: 9.308562
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.194342
-      lon: 9.308514
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

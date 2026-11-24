@@ -109,22 +109,6 @@ gebiete:
       fuss_min: 2
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.031916
-      lon: 10.74817
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.031758
-      lon: 10.7478
-      url: null
-      fuss_min: 2
-      gebuehr_text: null
-      herkunft: osm
     verleih: []
   landeck:
     haltestellen:
@@ -154,14 +138,6 @@ gebiete:
       name: null
       lat: 47.116387
       lon: 10.668219
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.116414
-      lon: 10.668197
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -215,14 +191,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: Parkplatz Norbertshöhe / Loipenstart
-      lat: 46.894918
-      lon: 10.484606
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih: []
   serfaus-fiss-ladis:
     haltestellen:
@@ -248,14 +216,6 @@ gebiete:
       fuss_min: 5
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.038108
-      lon: 10.608687
-      url: null
-      fuss_min: 6
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: null
       lat: 47.038108
@@ -338,13 +298,5 @@ gebiete:
       url: null
       fuss_min: 1
       gebuehr_text: null
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.145338
-      lon: 10.338729
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
     verleih: []

@@ -162,7 +162,8 @@ def region_auswerten(ordner: Path, alle: Path, region: str, gebiete: list[dict],
     gefiltert = ordner / f"{region}-pois.osm.pbf"
     sh("osmium", "tags-filter", "--overwrite", "-o", str(gefiltert), str(ausschnitt), *FILTER)
     geojson = ordner / f"{region}-pois.geojson"
-    sh("osmium", "export", "--overwrite", "-f", "geojsonseq", "-o", str(geojson), str(gefiltert))
+    sh("osmium", "export", "--overwrite", "--add-unique-id=type_id", "-f", "geojsonseq", "-o", str(geojson),
+       str(gefiltert))
     pois = pois_aus_geojson(geojson.read_text(encoding="utf-8"))
     fuss = Osrm(ordner, ausschnitt, "foot", port)
     auto = Osrm(ordner, ausschnitt, "car", port + 1)

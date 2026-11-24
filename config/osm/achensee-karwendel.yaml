@@ -35,14 +35,6 @@ gebiete:
       gebuehr_text: null
       herkunft: osm
     - id: null
-      name: Raiffeisenbank
-      lat: 47.423331
-      lon: 11.748245
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
-    - id: null
       name: null
       lat: 47.423601
       lon: 11.747112
@@ -83,14 +75,6 @@ gebiete:
       fuss_min: 20
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: null
-      lat: 47.467202
-      lon: 11.485231
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     - id: null
       name: null
       lat: 47.467202
@@ -144,14 +128,6 @@ gebiete:
       name: Parkplatz Grafenast
       lat: 47.32253
       lon: 11.721164
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Parkplatz Grafenast
-      lat: 47.322496
-      lon: 11.721121
       url: null
       fuss_min: 1
       gebuehr_text: kostenpflichtig laut OpenStreetMap

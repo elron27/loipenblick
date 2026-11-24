@@ -36,14 +36,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.509428
-      lon: 12.11442
-      url: null
-      fuss_min: 0
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.47004
       lon: 12.143275
       url: null
@@ -115,14 +107,6 @@ gebiete:
       fuss_min: 7
       gebuehr_text: null
       herkunft: osm
-    - id: null
-      name: Parkplatz Sattlerwirt
-      lat: 47.616935
-      lon: 12.211546
-      url: null
-      fuss_min: 7
-      gebuehr_text: null
-      herkunft: osm
     verleih:
     - name: Brandauer Skiverleih
       lat: 47.638116
@@ -180,22 +164,6 @@ gebiete:
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
       herkunft: osm
-    - id: null
-      name: null
-      lat: 47.573227
-      lon: 12.150774
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
-      lat: 47.573051
-      lon: 12.151002
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
     verleih:
     - name: Schuler Sports
       lat: 47.540132
@@ -229,14 +197,6 @@ gebiete:
       fuss_min: 4
       herkunft: osm
     parkplaetze:
-    - id: null
-      name: Schneerosental
-      lat: 47.518158
-      lon: 12.03558
-      url: null
-      fuss_min: 1
-      gebuehr_text: null
-      herkunft: osm
     - id: null
       name: Schneerosental
       lat: 47.518158
@@ -290,14 +250,6 @@ gebiete:
       name: Forstmeile
       lat: 47.642108
       lon: 12.213567
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Forstmeile
-      lat: 47.642015
-      lon: 12.213518
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
@@ -369,14 +321,6 @@ gebiete:
       herkunft: osm
     - id: null
       name: null
-      lat: 47.541755
-      lon: 12.140751
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: null
       lat: 47.542851
       lon: 12.141161
       url: null
@@ -432,13 +376,5 @@ gebiete:
       url: null
       fuss_min: 1
       gebuehr_text: kostenlos laut OpenStreetMap
-      herkunft: osm
-    - id: null
-      name: Sportplatz
-      lat: 47.591756
-      lon: 12.115229
-      url: null
-      fuss_min: 1
-      gebuehr_text: kostenpflichtig laut OpenStreetMap
       herkunft: osm
     verleih: []
