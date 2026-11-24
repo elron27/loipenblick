@@ -1,0 +1,13 @@
+reqseq-filter: 1
+name: loipendetails
+description: "Mehr Daten je Loipe: tourinfra-Zusatzfelder, Stammdaten, Haltestellen und Verleih per Route, Webcams, Saisonpruefung (Plan vom 24.11.2026, Issue #46)"
+where:
+  all:
+    - property: umfang
+      op: eq
+      value: details
+    - type: [system-requirement]
+    - status: [draft, approved]
+sort:
+  - by: kennung
+    order: asc
