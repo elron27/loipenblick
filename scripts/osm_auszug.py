@@ -45,20 +45,34 @@ from loipen.osmauszug import (  # noqa: E402
 
 # Je Gebiet die Auszuege: zuerst Geofabrik, sonst der Spiegel von openstreetmap.fr (Geofabrik war am 24.11.2026
 # vom GitHub-Runner aus nicht erreichbar). Suedtirol/Cortina: Trentino-Suedtirol und Venetien.
+# Spiegel: (Verzeichnis, Dateiname beginnt mit); der genaue Name steht im Verzeichnis, er wird dort gesucht.
 AUSZUEGE = {
     "bayern": ["https://download.geofabrik.de/europe/germany/bayern-latest.osm.pbf",
-               "https://download.openstreetmap.fr/extracts/europe/germany/bayern-latest.osm.pbf"],
+               ("https://download.openstreetmap.fr/extracts/europe/germany/", "bayern")],
     "baden-wuerttemberg": ["https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf",
-                           "https://download.openstreetmap.fr/extracts/europe/germany/baden_wurttemberg-latest.osm.pbf"],
+                           ("https://download.openstreetmap.fr/extracts/europe/germany/", "baden")],
     "austria": ["https://download.geofabrik.de/europe/austria-latest.osm.pbf",
-                "https://download.openstreetmap.fr/extracts/europe/austria-latest.osm.pbf"],
+                ("https://download.openstreetmap.fr/extracts/europe/", "austria")],
     "switzerland": ["https://download.geofabrik.de/europe/switzerland-latest.osm.pbf",
-                    "https://download.openstreetmap.fr/extracts/europe/switzerland-latest.osm.pbf"],
+                    ("https://download.openstreetmap.fr/extracts/europe/", "switzerland")],
     "liechtenstein": ["https://download.geofabrik.de/europe/liechtenstein-latest.osm.pbf",
-                      "https://download.openstreetmap.fr/extracts/europe/liechtenstein-latest.osm.pbf"],
+                      ("https://download.openstreetmap.fr/extracts/europe/", "liechtenstein")],
     "italien-nordost": ["https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf",
-                        "https://download.openstreetmap.fr/extracts/europe/italy/trentino_alto_adige-latest.osm.pbf"],
+                        ("https://download.openstreetmap.fr/extracts/europe/italy/", "trentino")],
 }
+
+
+def _aus_verzeichnis(verzeichnis: str, anfang: str) -> str | None:
+    """Sucht im Verzeichnis-Listing des Spiegels die .osm.pbf-Datei, deren Name mit `anfang` beginnt."""
+    import re
+    try:
+        with urllib.request.urlopen(verzeichnis, timeout=60) as r:
+            html = r.read().decode("utf-8", "replace")
+    except Exception as e:  # noqa: BLE001
+        log.warning("Verzeichnis %s nicht lesbar: %s", verzeichnis, e)
+        return None
+    namen = sorted(set(re.findall(r'href="(' + re.escape(anfang) + r'[^"/]*\.osm\.pbf)"', html)), key=len)
+    return verzeichnis + namen[0] if namen else None
 OSRM_BILD = "ghcr.io/project-osrm/osrm-backend:v5.27.1"
 FILTER = ["nwr/highway=bus_stop", "nwr/railway=station,halt", "nwr/public_transport=platform,stop_position,station",
           "nwr/amenity=parking", "nwr/shop=ski", "nwr/rental=ski", "nwr/service:ski:rental=yes"]
@@ -79,8 +93,13 @@ def lade_auszuege(ordner: Path) -> Path:
     for name, urls in AUSZUEGE.items():
         datei = ordner / f"{name}.osm.pbf"
         for url in urls if not datei.exists() else []:
+            if isinstance(url, tuple):
+                url = _aus_verzeichnis(*url)
+                if not url:
+                    continue
             try:
-                sh("curl", "-sSfL", "--retry", "3", "--connect-timeout", "30", "-o", str(datei), url)
+                # -4: Geofabrik war vom Runner aus nicht erreichbar (24.11.2026), womoeglich nur ueber IPv6
+                sh("curl", "-4", "-sSfL", "--retry", "3", "--connect-timeout", "30", "-o", str(datei), url)
                 break
             except subprocess.CalledProcessError:
                 log.warning("Auszug %s nicht erreichbar: %s", name, url)

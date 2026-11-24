@@ -55,15 +55,17 @@ jobs:
           set -o pipefail
           grep -vE '^\s*(#|$)' scripts/stammdaten.txt | while read -r auftrag argumente; do
             echo "::group::$auftrag $argumente"
+            # ein fehlgeschlagener Auftrag haelt die folgenden nicht auf; der Schritt schlaegt am Ende fehl
             case "$auftrag" in
               tourinfra) python scripts/tourinfra_details.py $argumente ;;
               osm) python scripts/osm_auszug.py --seite .stamm/site $argumente ;;
               hoehe) python scripts/hoehe_dem.py --seite .stamm/site $argumente ;;
-              *) echo "unbekannter Auftrag $auftrag" ;;
-            esac
+              *) echo "unbekannter Auftrag $auftrag"; false ;;
+            esac || { echo "FEHLER im Auftrag $auftrag"; touch .stammdaten-fehler; }
             echo "::endgroup::"
           done 2>&1 | tee .stammdaten.log
           tail -5 .stammdaten.log >> "$GITHUB_STEP_SUMMARY"
+          test ! -f .stammdaten-fehler
       - name: Ergebnis auf den Branch legen
         # auch nach einem fehlgeschlagenen Auftrag: was die anderen gesammelt haben, bleibt erhalten
         if: ${{ always() }}
