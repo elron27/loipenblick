@@ -2,7 +2,8 @@
 # einem claude/-Branch startet den Lauf.
 # Lauf 1/2 (24.11.2026): 378 Detailseiten gelesen, aber nicht gespeichert (git add brach ohne config/osm ab);
 # Geofabrik vom Runner aus nicht erreichbar.
-# Lauf 3 (24.11.2026): alles in einem Lauf, Hoehe nach den tourinfra-Hoehenmetern (D23 AK 2).
+# Lauf 3 brach beim Seitenaufbau ab (Datum in gebiete.yaml nicht JSON-tauglich, behoben).
+# Lauf 4 (24.11.2026): alles in einem Lauf, Hoehe nach den tourinfra-Hoehenmetern (D23 AK 2).
 tourinfra
 osm
 hoehe
