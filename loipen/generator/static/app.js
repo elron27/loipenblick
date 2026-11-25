@@ -1044,6 +1044,22 @@ function spendenZeigen() {
   p.append("Loipenblick ist kostenlos und ohne Werbung. Wer mag, kann es ", a, ".");
   p.hidden = false;
 }
+/* B13: Seitenaufruf an den Besucherzaehler melden, ohne Cookie und ohne etwas zu speichern. Nur wenn der
+   Webspace zaehlt (daten.json "zaehler"), nicht in der Beispielansicht, nicht fuer automatische Browser und
+   nicht in Browsern, die die Auswertung ausgenommen hat. Filter und Sortierung zaehlen nicht als neuer Aufruf. */
+var gezaehlt = null;
+function zaehlen(p) {
+  if (!S.idx || !S.idx.zaehler || S.demo || p === gezaehlt || navigator.webdriver || !navigator.sendBeacon) return;
+  gezaehlt = p;
+  try { if (localStorage.getItem("loipen_nicht_zaehlen") === "1") return; } catch (e) {}
+  var seite = p === "/" ? "heute" : p.indexOf("/gebiet/") === 0 ? "gebiet" : p.indexOf("/loipe/") === 0 ? "loipe" : p.replace(/^\//, "");
+  if (["heute", "karte", "loipen", "gebiet", "loipe", "statistik", "abdeckung", "meine"].indexOf(seite) < 0) seite = "sonst";
+  var d = new FormData();
+  d.append("s", seite);
+  if (seite === "gebiet") d.append("g", decodeURIComponent(p.slice(8)));
+  if (seite === "loipe") d.append("l", decodeURIComponent(p.slice(7)));
+  try { navigator.sendBeacon("zaehler/z.php", d); } catch (e) {}
+}
 function route() {
   var q = parseQuery(location.hash), p = pfad(location.hash) || "/";
   var tab = p.indexOf("/karte") === 0 ? "karte" : p === "/statistik" ? "statistik" : p.indexOf("/loipen") === 0 || p === "/meine" || p.indexOf("/loipe/") === 0 || p.indexOf("/gebiet/") === 0 ? "loipen" : "heute";
@@ -1063,6 +1079,7 @@ function route() {
   } catch (e) { ansichtFehler(e); }
   if (p === "/" && (installAngebot || istIos()) && !alsApp()) { var ih = installHinweis(false); if (ih) view.insertAdjacentHTML("afterbegin", ih); }
   if (p.indexOf("/loipe/") !== 0 && p !== "/karte") window.scrollTo(0, 0);
+  zaehlen(p);
 }
 
 function start() {

@@ -28,6 +28,7 @@ Reihenfolge und Zieltermine. Hintergrund und Quellen stehen in [livegang.md](liv
 14. **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen (die Seite sperrt automatische Abrufe), Ergebnis in den Thread schreiben.
 
 14a. **Spendenlink (wenn gewünscht).** Unter [paypal.com/paypalme](https://www.paypal.com/paypalme) mit dem eigenen PayPal-Konto einen Link anlegen (z. B. `paypal.me/Loipenblick`), dann in die NAS-`.env` die Zeile `LOIPEN_SPENDEN_URL=https://paypal.me/<Name>` eintragen und den Container neu erstellen. Auf der Testadresse prüfen: Fußzeile, „Hinweise und Betreiber“, Datenschutz. Hintergrund und Vergleich mit Buy Me a Coffee in [livegang.md](livegang.md), Abschnitt „Spendenlink“. Bei eigenem Datenschutztext den Baustein für PayPal ergänzen.
+14b. **Besucherzähler.** In die NAS-`.env` die Zeile `LOIPEN_ZAEHLER_PASSWORT=` mit einem eigenen Passwort (mindestens 12 Zeichen, nur in der .env, nicht im Chat) eintragen und den Container neu erstellen. Nach dem nächsten Lauf `https://test.loipen-blick.de/zaehler/auswertung.php` öffnen und anmelden: Ab dann zählt dieser Browser nicht mehr mit. Am Handy einmal ebenfalls anmelden. Hintergrund in README.md, Abschnitt „Besucherzähler“.
 
 ## Bis Freitag, 11.12.
 

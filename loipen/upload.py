@@ -70,6 +70,11 @@ def freigegeben(rel: str) -> bool:
     # E-18: PHP nur fuer das E-Mail-Abo im Ordner abo/, nie dessen Daten (die erzeugt der Webspace selbst)
     if rel.startswith("abo/") and name.endswith(".php"):
         return not rel.startswith("abo/daten/")
+    # B13/E-42: PHP des Besucherzaehlers im Ordner zaehler/, nie dessen Daten
+    if rel.startswith("zaehler/daten/"):
+        return False
+    if rel.startswith("zaehler/") and name.endswith(".php"):
+        return True
     return posixpath.splitext(name)[1].lower() in FREIGABE
 
 

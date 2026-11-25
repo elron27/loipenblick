@@ -51,6 +51,10 @@ class Settings(BaseSettings):
     abo_meldungen_an: str | None = None  # Meldungen falscher Angaben (N9); leer = impressum_email
     abo_datenordner: str = ""  # leer = abo/daten auf dem Webspace; besser ausserhalb des Web-Ordners
     seitenname: str = "Loipenblick"
+    # B13/E-42: Besucherzaehler ohne Cookies (PHP im Ordner zaehler/). Leer = aus. Mindestens 12 Zeichen.
+    # Auf dem Webspace liegt nur ein PBKDF2-Wert; das Passwort oeffnet zaehler/auswertung.php.
+    zaehler_passwort: str | None = None
+    zaehler_datenordner: str = ""  # leer = zaehler/daten im Web-Ordner (gesperrt)
     smtp_host: str | None = None
     smtp_port: int = 465
     smtp_benutzer: str | None = None
