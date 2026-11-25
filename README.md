@@ -151,6 +151,15 @@ Spendenlink (U46, E-28): `LOIPEN_SPENDEN_URL=https://paypal.me/DeinName` (oder e
 in die `.env`, Container neu starten. Dann zeigen die Fußzeile und die Seite „Hinweise und Betreiber“ einen
 dezenten Link, die Datenschutzerklärung bekommt einen Abschnitt dazu. Leer = kein Link.
 
+### Besucherzähler ohne Cookies (B13, E-42)
+
+`LOIPEN_ZAEHLER_PASSWORT=<mindestens 12 Zeichen>` in die `.env`, Container neu erstellen. Dann lädt das NAS
+den Ordner `zaehler/` mit hoch, die App meldet jeden Ansichtswechsel, und unter `<Seite>/zaehler/auswertung.php`
+siehst du mit dem Passwort Besucher, Aufrufe, Gebiete und Loipen je Monat. Gespeichert werden nur Summen je Tag
+in `zaehler/daten/` (gesperrt); die IP-Adresse wird nie gespeichert, keine Cookies, kein Banner. Wer sich auf der
+Auswertung anmeldet, zählt in diesem Browser nicht mehr mit; Bots und automatische Browser zählen nie.
+Test- und Release-Seite zählen getrennt. Die Datenschutzerklärung bekommt automatisch einen Abschnitt.
+
 ### E-Mail-Abo und Fehlermeldungen (E-18)
 
 Besucher können sich bei jeder Loipe und jedem Gebiet per E-Mail benachrichtigen lassen und bei jeder

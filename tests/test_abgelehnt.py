@@ -6,7 +6,7 @@ auch nicht in der Testversion. Dieselben Loipen kommen ueber tirol.at; bis 23.11
 Achensee Tourismus deshalb ganz ausgeblendet. Seit der Freigabe der Tirol Werbung (23.11.2026) zeigt die Seite sie
 ueber tirol.at wieder (Stefans Entscheidung, E-37); der Block ausgeblendet in config/gebiete.yaml ist leer.
 Am 25.11.2026 hat Achensee Tourismus die Darstellung endgueltig abgelehnt. Seitdem zeigt nur die Testversion
-(LOIPEN_OEFFENTLICH=false) die Gebiete, mit sichtbarem Hinweis; die oeffentliche Seite laesst sie weg (B30 AK 5, E-42)."""
+(LOIPEN_OEFFENTLICH=false) die Gebiete, mit sichtbarem Hinweis; die oeffentliche Seite laesst sie weg (B30 AK 5, E-43)."""
 
 import json
 from datetime import timedelta
@@ -90,7 +90,7 @@ def test_b30_abgelehnte_quelle_fehlt_in_beiden_versionen(session, oeffentlich):
 @pytest.mark.req("B31", ak=4)
 @pytest.mark.req("B30", ak=5)
 def test_b30_achensee_nur_in_der_testversion():
-    """In keiner Version ausgeblendet ist nichts mehr; Achensee fehlt nur auf der oeffentlichen Seite (E-42)."""
+    """In keiner Version ausgeblendet ist nichts mehr; Achensee fehlt nur auf der oeffentlichen Seite (E-43)."""
     assert GEBIETE["ausgeblendet"] == {"gebiete": {}, "loipen": []}
     gebiete, loipen = ausgeblendet(GEBIETE, oeffentlich=False)
     assert gebiete == {} and loipen == set()

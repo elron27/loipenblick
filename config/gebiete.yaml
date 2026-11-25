@@ -21,7 +21,7 @@ ausgeblendet:
   # abgelehnt. Wieder ausblenden: die Eintraege hier erneut ergaenzen.
   gebiete: {}
   loipen: []
-# nur_test (B30 AK 5, E-42): Gebiete und einzelne Loipen, die nur die Testversion zeigt (LOIPEN_OEFFENTLICH=false,
+# nur_test (B30 AK 5, E-43): Gebiete und einzelne Loipen, die nur die Testversion zeigt (LOIPEN_OEFFENTLICH=false,
 # Hinweis "nur Test, nicht oeffentlich" auf der Seite). Auf der oeffentlichen Seite fehlen sie wie unter
 # ausgeblendet, ebenso in Abo-Zielen, Push- und Abo-Meldungen (die gehen nach aussen, deshalb in beiden Versionen).
 # Achensee Tourismus hat am 25.11.2026 endgueltig abgelehnt; Stefan will die Loipen auf der Testseite selbst

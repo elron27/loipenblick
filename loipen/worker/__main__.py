@@ -27,6 +27,7 @@ from loipen.ereignisse import (
 )
 from loipen.fetcher import HoeflicherFetcher
 from loipen.generator import abo as abo_vorlage
+from loipen.generator import zaehler as zaehler_vorlage
 from loipen.mailabo import AboKonfig, lauf_abo, smtp_versand
 from loipen.konfig import ausgeblendet, lade_und_abgleichen, lade_yaml
 from loipen.models import Quelle, utcnow
@@ -97,7 +98,8 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
         generator.erzeuge(session, settings.site_dir, config_dir=settings.config_dir, stale_days=settings.stale_days,
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
                           abo_dateien=abo_dateien(session, settings), version=settings.version,
-                          unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite())
+                          unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite(),
+                          zaehler_dateien=zaehler_dateien(session, settings))
         ereignisse = ohne_unplausible(ereignisse, unplausibel)
         ereignisse = ohne_ausgeblendete(ereignisse, Path(settings.config_dir))
         # N11: Wiederholungen zurueckhalten, fuer alle Kanaele. Eingetragen wird vor dem Versand: Ein
@@ -134,6 +136,14 @@ def abo_dateien(session, settings) -> dict[str, bytes]:
     return abo_vorlage.dateien(session, AboKonfig.aus_settings(settings),
                                meldungen_an=settings.abo_meldungen_an or settings.impressum_email,
                                datenordner=settings.abo_datenordner)
+
+
+def zaehler_dateien(session, settings) -> dict[str, bytes]:
+    """B13/E-42: Ordner zaehler/ nur mit LOIPEN_ZAEHLER_PASSWORT. Test- und Release-Seite liegen in
+    getrennten Web-Ordnern und zaehlen darum getrennt; die Auswertung der Testseite traegt das Zeichen."""
+    return zaehler_vorlage.dateien(session, settings.zaehler_passwort, oeffentlich=settings.oeffentlich,
+                                   seite=settings.oeffentliche_url or "", datenordner=settings.zaehler_datenordner,
+                                   config_dir=Path(settings.config_dir))
 
 
 def rechtliches(settings) -> dict:
