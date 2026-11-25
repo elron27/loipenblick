@@ -132,7 +132,7 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     kz = index["kennzahlen"]
     # Dubletten (D15) zaehlen einmal: die Hauswies-Runde steht bei Bayrischzell und Fischbachau
     # B30: Loipen abgelehnter Quellen und ausgeblendeter Gebiete zaehlen nicht mit
-    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(CONFIG_DIR / "gebiete.yaml"))
+    gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(CONFIG_DIR / "gebiete.yaml"), oeffentlich=False)
     gezeigt = [l for l in session.scalars(select(Loipe)) if l.quelle.enabled
                and l.gebiet.slug not in gebiete_aus and (l.gebiet.slug, l.name) not in loipen_aus]
     assert kz["loipen"] + index["dubletten"] == len(gezeigt)

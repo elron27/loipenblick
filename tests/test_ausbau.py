@@ -42,7 +42,7 @@ def gebiete_yaml() -> dict:
 
 def ausgeblendete(session) -> int:
     """B30: Loipen eingeschalteter Quellen in ausgeblendeten Gebieten zaehlen bei der Quelle, fehlen aber auf der Seite."""
-    gebiete_aus, loipen_aus = ausgeblendet(gebiete_yaml())
+    gebiete_aus, loipen_aus = ausgeblendet(gebiete_yaml(), oeffentlich=False)
     return sum(1 for l in session.scalars(select(Loipe).where(Loipe.active)) if l.quelle.enabled
                and (l.gebiet.slug in gebiete_aus or (l.gebiet.slug, l.name) in loipen_aus))
 

@@ -12,7 +12,7 @@ from sqlalchemy.orm import Session
 from loipen.adapters.stammdaten import KEIN_ZUSTAND
 from loipen.details import MERKMALE
 from loipen.dubletten import Eintrag, finde_dubletten
-from loipen.konfig import ausgeblendet, lade_yaml
+from loipen.konfig import ausgeblendet, lade_yaml, nur_test_gebiete
 from loipen import osm, osmauszug, plausibel
 from loipen.models import Gebiet, Loipe, Quelle, Region, Status, Wetter, WetterArt, Zustand
 from loipen.sonderloipen import sonderloipe
@@ -197,8 +197,10 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
     # D15: Dubletten ueber Quellen hinweg einmal zeigen, bei der fuehrenden Quelle
     # B16 AK 2: eine abgeschaltete Quelle verschwindet von der Seite
     # B30 AK 3: ausgeblendete Gebiete und Loipen fehlen in beiden Versionen, gleich von welcher Quelle
-    gebiete_aus, loipen_aus = ausgeblendet(
-        lade_yaml(config_dir / "gebiete.yaml") if (config_dir / "gebiete.yaml").exists() else {})
+    # B30 AK 5: Gebiete und Loipen unter nur_test fehlen nur auf der oeffentlichen Seite
+    gebiete_yaml = lade_yaml(config_dir / "gebiete.yaml") if (config_dir / "gebiete.yaml").exists() else {}
+    gebiete_aus, loipen_aus = ausgeblendet(gebiete_yaml, oeffentlich=oeffentlich)
+    test_gebiete, test_loipen = ({}, {}) if oeffentlich else nur_test_gebiete(gebiete_yaml)
 
     def gezeigt(l: Loipe) -> bool:
         return (sichtbar(l.quelle, oeffentlich) and l.gebiet.slug not in gebiete_aus
@@ -298,6 +300,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                     continue
                 d = _loipe(l, zustaende.get(l.id, []), l.quelle, jetzt, stale_days)
                 d["auch_bei"] = auch_bei.get(l.id, [])
+                # B30 AK 5: nur in der Testversion sichtbar, mit Grund
+                d["nur_test"] = test_gebiete.get(g.slug) or test_loipen.get((g.slug, l.name))
                 b = bericht.get(l.gebiet_id)
                 d["nicht_im_bericht"] = None
                 # Nur ueberregionale Quellen (Rang ab 3, z. B. tirol.at) werden so zurueckgestuft; zwei oertliche
@@ -356,6 +360,7 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 "lon": pos[1] if pos else None,
                 "hoehe_m": g.hoehe_m,
                 "tourist_url": g.tourist_url,
+                "nur_test": test_gebiete.get(g.slug),  # B30 AK 5: Grund, nur in der Testversion gesetzt
                 "nachbarn": sorted(n.slug for n in g.nachbarn if n.slug not in gebiete_aus),
                 "loipengebuehr": {"eur": g.loipengebuehr_eur, "text": g.loipengebuehr_text, "url": g.loipengebuehr_url},
                 "parkplaetze": [
@@ -413,6 +418,8 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
             q.key for q in session.scalars(select(Quelle).where(Quelle.enabled))
             if (q.config or {}).get("erlaubnis") == "nur_test"),
         "dubletten": len(verdeckt),
+        # B30 AK 5: die Testversion traegt einen sichtbaren Hinweis "nur Test, nicht oeffentlich"
+        "testversion": not oeffentlich,
         "kennzahlen": {"loipen": gesamt, "gebiete": sum(len(r["gebiete"]) for r in regionen.values()),
                        "veraltet": veraltet, "unplausibel": len(unplausibel), **kennzahl},
     }

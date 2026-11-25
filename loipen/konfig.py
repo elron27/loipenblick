@@ -50,16 +50,17 @@ def pruefe(sources: dict, gebiete: dict) -> list[str]:
         for p in g.get("parkplaetze", []):
             if p.get("lat") is None or p.get("lon") is None or not p.get("name"):
                 fehler.append(f"Gebiet {g['slug']}: Parkplatz ohne Name oder Koordinaten")
-    # B30 AK 3: ausgeblendete Gebiete und Loipen nennen ein bekanntes Gebiet und einen Grund
-    aus = gebiete.get("ausgeblendet") or {}
-    for slug, grund in (aus.get("gebiete") or {}).items():
-        if slug not in slugs:
-            fehler.append(f"ausgeblendet: unbekanntes Gebiet {slug}")
-        if not str(grund or "").strip():
-            fehler.append(f"ausgeblendet: Gebiet {slug} ohne Grund")
-    for l in aus.get("loipen") or []:
-        if l.get("gebiet") not in slugs or not l.get("name") or not str(l.get("grund") or "").strip():
-            fehler.append(f"ausgeblendet: Loipe {l.get('name')} braucht bekanntes Gebiet, Name und Grund")
+    # B30 AK 3 und AK 5: ausgeblendete und nur_test-Gebiete und -Loipen nennen ein bekanntes Gebiet und einen Grund
+    for block in ("ausgeblendet", "nur_test"):
+        aus = gebiete.get(block) or {}
+        for slug, grund in (aus.get("gebiete") or {}).items():
+            if slug not in slugs:
+                fehler.append(f"{block}: unbekanntes Gebiet {slug}")
+            if not str(grund or "").strip():
+                fehler.append(f"{block}: Gebiet {slug} ohne Grund")
+        for l in aus.get("loipen") or []:
+            if l.get("gebiet") not in slugs or not l.get("name") or not str(l.get("grund") or "").strip():
+                fehler.append(f"{block}: Loipe {l.get('name')} braucht bekanntes Gebiet, Name und Grund")
     keys = [q["key"] for q in sources.get("quellen", [])]
     if len(keys) != len(set(keys)):
         fehler.append("sources.yaml: ein Quellen-Key kommt doppelt vor")
@@ -212,12 +213,26 @@ def abgelehnte_quellen(sources: dict) -> list[str]:
     return [q["key"] for q in sources.get("quellen", []) if (q.get("nutzung") or {}).get("erlaubnis") == "abgelehnt"]
 
 
-def ausgeblendet(gebiete: dict) -> tuple[dict[str, str], set[tuple[str, str]]]:
+def ausgeblendet(gebiete: dict, oeffentlich: bool = True) -> tuple[dict[str, str], set[tuple[str, str]]]:
     """B30 AK 3: Gebiete (slug -> Grund) und einzelne Loipen ((gebiet, name)), die die Seite in keiner Version
-    zeigt, z. B. weil der oertliche Verband widersprochen hat und dieselben Daten auch ueber tirol.at kommen."""
-    aus = gebiete.get("ausgeblendet") or {}
+    zeigt, z. B. weil der oertliche Verband widersprochen hat und dieselben Daten auch ueber tirol.at kommen.
+    B30 AK 5: Mit oeffentlich (Standard, also die sichere Seite) kommen die Eintraege unter nur_test dazu; nur die
+    Testversion (oeffentlich=False) zeigt sie."""
+    bloecke = ("ausgeblendet", "nur_test") if oeffentlich else ("ausgeblendet",)
+    gebiete_aus: dict[str, str] = {}
+    loipen_aus: set[tuple[str, str]] = set()
+    for block in bloecke:
+        aus = gebiete.get(block) or {}
+        gebiete_aus.update(aus.get("gebiete") or {})
+        loipen_aus |= {(l["gebiet"], l["name"]) for l in aus.get("loipen") or []}
+    return gebiete_aus, loipen_aus
+
+
+def nur_test_gebiete(gebiete: dict) -> tuple[dict[str, str], dict[tuple[str, str], str]]:
+    """B30 AK 5: Gebiete (slug -> Grund) und Loipen ((gebiet, name) -> Grund), die nur die Testversion zeigt."""
+    aus = gebiete.get("nur_test") or {}
     return (dict(aus.get("gebiete") or {}),
-            {(l["gebiet"], l["name"]) for l in aus.get("loipen") or []})
+            {(l["gebiet"], l["name"]): l.get("grund") for l in aus.get("loipen") or []})
 
 
 def nur_test_quellen(sources: dict) -> list[str]:

@@ -21,6 +21,18 @@ ausgeblendet:
   # abgelehnt. Wieder ausblenden: die Eintraege hier erneut ergaenzen.
   gebiete: {}
   loipen: []
+# nur_test (B30 AK 5, E-43): Gebiete und einzelne Loipen, die nur die Testversion zeigt (LOIPEN_OEFFENTLICH=false,
+# Hinweis "nur Test, nicht oeffentlich" auf der Seite). Auf der oeffentlichen Seite fehlen sie wie unter
+# ausgeblendet, ebenso in Abo-Zielen, Push- und Abo-Meldungen (die gehen nach aussen, deshalb in beiden Versionen).
+# Achensee Tourismus hat am 25.11.2026 endgueltig abgelehnt; Stefan will die Loipen auf der Testseite selbst
+# ansehen, die breite Masse nicht. Die Quelle achensee bleibt abgelehnt, die Daten kommen ueber tirol.at.
+nur_test:
+  gebiete:
+    achensee: "Achensee Tourismus hat die Darstellung des Loipenstatus am 25.11.2026 endgültig abgelehnt; nur Stefans Testseite zeigt die Loipen über tirol.at."
+    steinberg-rofan: "Achenkirch und Steinberg am Rofan gehören zu Achensee Tourismus (Ablehnung vom 25.11.2026)."
+  loipen:
+  # Wiesing gehoert zu Achensee Tourismus; tirol.at ordnet die Loipe nach der Lage dem Alpbachtal zu
+  - {gebiet: alpbachtal, name: "W1 - Loipe Buchbergl", grund: "Loipe in Wiesing, Gebiet von Achensee Tourismus (Ablehnung vom 25.11.2026)."}
 regionen:
 - slug: tegernseer-tal
   name: Tegernseer Tal
