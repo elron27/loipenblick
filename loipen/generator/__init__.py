@@ -111,12 +111,14 @@ def erzeuge(
     version: str | None = None,
     unplausibel: set[int] | None = None,
     push: dict | None = None,
+    zaehler_dateien: dict[str, bytes] | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
     log_tage, datenschutz_html, spenden_url. kacheln: url, attribution, fremd (B23).
     abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py.
     unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5).
-    push: server und praefix der oeffentlichen ntfy-Themen (N10), sonst kein Push-Hinweis auf der Seite."""
+    push: server und praefix der oeffentlichen ntfy-Themen (N10), sonst kein Push-Hinweis auf der Seite.
+    zaehler_dateien: Ordner zaehler/ fuer den Besucherzaehler (B13, E-42), siehe generator/zaehler.py."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days, oeffentlich=oeffentlich)
@@ -146,6 +148,7 @@ def erzeuge(
         index["spenden"] = spende
     index["abo"] = bool(abo_dateien)  # N5: Formulare nur, wenn der Webspace sie annimmt
     index["push"] = push or None  # N10: ntfy-Themen je Loipe und Gebiet
+    index["zaehler"] = bool(zaehler_dateien)  # B13: die App meldet Aufrufe nur, wenn der Webspace sie zaehlt
     if version:  # B4: Stand des Images in der Fusszeile, damit ein Update am NAS pruefbar ist
         index["image"] = version[:7] if len(version) == 40 else version
 
@@ -181,7 +184,7 @@ def erzeuge(
              "log_tage": r.get("log_tage") or 7, "statistik_logs": bool(r.get("statistik_logs")),
              "kacheln_fremd": kacheln.get("fremd", True), "quellen": quellen,
              "fehlt": rechtliches_fehlt(r), "abo": bool(abo_dateien), "spenden": spende,
-             "push": push or None,
+             "push": push or None, "zaehler": bool(zaehler_dateien),
              "eigener_text": Markup(r["datenschutz_html"]) if r.get("datenschutz_html") else None}
     for name, titel, base in (("impressum", "Impressum", None), ("datenschutz", "Datenschutz", None),
                               ("hinweise", "Hinweise und Betreiber", None), ("404", "Nicht gefunden", "/")):
@@ -195,6 +198,11 @@ def erzeuge(
             schreibe(rel, inhalt)
     elif (site / "abo").is_dir():
         shutil.rmtree(site / "abo")  # Abo abgeschaltet: keine verwaisten Skripte in der Vorschau
+    if zaehler_dateien:
+        for rel, inhalt in zaehler_dateien.items():
+            schreibe(rel, inhalt)
+    elif (site / "zaehler").is_dir():
+        shutil.rmtree(site / "zaehler")
     schreibe("robots.txt", "User-agent: *\n" + ("Allow: /\n" if oeffentlich else "Disallow: /\n"))
 
     schreibe("daten.json", _json(index))  # zuletzt: erst jetzt sieht die Vorschau den neuen Stand

@@ -12,6 +12,8 @@ ErrorDocument 404 /404.html
   RewriteRule (^|/)\.(?!well-known/) - [F]
   # E-18: Daten des E-Mail-Abos nie ausliefern
   RewriteRule ^abo/daten/ - [F]
+  # B13: Daten des Besucherzaehlers nie ausliefern
+  RewriteRule ^zaehler/daten/ - [F]
 </IfModule>
 
 <IfModule mod_headers.c>
