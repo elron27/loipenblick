@@ -15,6 +15,8 @@ body{font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;backgrou
 a{color:var(--cy)}
 :focus-visible{outline:3px solid var(--cy);outline-offset:2px}
 ::placeholder{color:var(--mute);opacity:1}
+/* Eingabefelder brauchen einen Rand mit mindestens 3:1 (WCAG 1.4.11), --line ist dafuer zu blass */
+.suche input,.filter select,.filter input,.ortsuche input,.feld input,.feld textarea{border-color:color-mix(in srgb,var(--ink) 52%,transparent)!important}
 p,li{text-wrap:pretty}
 .fine{font-size:13px;color:var(--mute)}
 .glass{background:var(--glass);border:1px solid var(--line);border-radius:22px;backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px)}
@@ -87,7 +89,7 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .filter{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;align-items:center}
 .filter .tog,.filter select,.filter input{min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;font-size:15px;padding:0 14px}
 .filter .tog{cursor:pointer}.filter .tog[aria-pressed="true"]{background:var(--cy);color:var(--cy-ink);border-color:var(--cy);font-weight:700}
-.filter input[type=number]{width:96px}
+.filter input[type=number]{width:116px}
 .filter select{max-width:100%;min-width:0;text-overflow:ellipsis}
 .reg,.lp .n,h2.sec{overflow-wrap:anywhere}
 .lg{display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
