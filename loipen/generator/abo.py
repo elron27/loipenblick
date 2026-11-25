@@ -30,7 +30,8 @@ def php_array(d: dict[str, str]) -> str:
 
 def ziele(session: Session, config_dir: Path = CONFIG_DIR) -> dict[str, str]:
     """Was man abonnieren und melden kann. Ausgeblendete Gebiete und Loipen sowie abgelehnte Quellen
-    fehlen (B30), damit keine Mail ueber sie verschickt wird."""
+    fehlen (B30), damit keine Mail ueber sie verschickt wird. Abo-Mails gehen nach aussen, deshalb fehlen auch die
+    nur_test-Gebiete, in der Testversion ebenso (B30 AK 5)."""
     gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(config_dir / "gebiete.yaml"))
     z: dict[str, str] = {}
     for g in session.scalars(select(Gebiet).order_by(Gebiet.slug)):

@@ -131,6 +131,8 @@ ul.plain li{padding:12px 14px;display:flex;justify-content:space-between;gap:10p
 h2.sec.land{margin-top:34px}
 .reg{font-size:16px;margin:18px 0 8px;color:var(--ink)}.reg .fine{font-weight:400}
 .hinweis{padding:12px 14px;margin:12px 0}
+.testband{margin:0;padding:8px var(--g);background:var(--mid-bg);color:var(--mid);font-size:14px;text-align:center;border-bottom:1px solid var(--line)}
+.testband b{font-weight:800}
 .tabw{overflow-x:auto}.tab{width:100%;border-collapse:collapse;font-size:14px}
 .tab th,.tab td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line, rgba(127,147,168,.3))}
 .tab th:first-child,.tab td:first-child{text-align:left}

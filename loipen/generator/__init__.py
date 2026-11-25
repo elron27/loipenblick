@@ -36,6 +36,9 @@ HASH_LAENGE = 12
 log = logging.getLogger(__name__)
 HINWEIS = "Alle Angaben ohne Gewähr. Quelle und Stand stehen bei jedem Wert."
 
+# B30 AK 5: Kopfzeile der Testversion (LOIPEN_OEFFENTLICH=false)
+TESTBAND = ('<p class="testband" id="testband" role="note"><b>Testversion, nur Test, nicht öffentlich.</b> Hier stehen auch Gebiete, die die öffentliche Seite nicht zeigt.</p>')
+
 
 def _schreibe(ziel: Path, inhalt: str | bytes) -> None:
     """Schreibt atomar, damit nginx nie eine halbe Datei ausliefert."""
@@ -164,6 +167,8 @@ def erzeuge(
                 inhalt = inhalt.replace(b"__STAND__", stand.encode())  # neue App-Version -> Cache erneuern
                 if rel == "index.html" and not oeffentlich:
                     inhalt = inhalt.replace(b"<title>", b'<meta name="robots" content="noindex, nofollow">\n<title>', 1)
+                    # B30 AK 5: sichtbarer Hinweis, dass dies die Testversion ist
+                    inhalt = inhalt.replace(b'<header class="top">', TESTBAND.encode() + b'\n<header class="top">', 1)
             schreibe(rel, inhalt)
     schreibe("icon-192.png", png_icon(192))
     schreibe("icon-512.png", png_icon(512))
@@ -187,7 +192,8 @@ def erzeuge(
                               ("hinweise", "Hinweise und Betreiber", None), ("404", "Nicht gefunden", "/")):
         inhalt = Markup(env.get_template(f"{name}.html.j2").render(**werte))
         schreibe(f"{name}.html", env.get_template("seite.html.j2").render(
-            titel=titel, inhalt=inhalt, stand=stand, oeffentlich=oeffentlich, base=base, spenden=spende))
+            titel=titel, inhalt=inhalt, stand=stand, oeffentlich=oeffentlich, base=base, spenden=spende,
+            testband=Markup(TESTBAND)))
     bild_hosts = [f"https://{_host(kacheln['url'])}"] if kacheln.get("fremd", True) else []
     schreibe(".htaccess", env.get_template("htaccess.j2").render(oeffentlich=oeffentlich, bild_hosts=bild_hosts))
     if abo_dateien:

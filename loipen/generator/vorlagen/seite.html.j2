@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="app.css?v={{ stand }}">
 </head>
 <body class="textseite">
-<header class="top">
+{% if not oeffentlich %}{{ testband }}
+{% endif %}<header class="top">
   <div class="wrap in">
     <a class="logo" href="./#/" aria-label="Loipenblick, Startseite"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c4-9 6-9 9-3s6 3 9-8"/></svg></i><span>Loipenblick</span></a>
     <nav class="tabs" aria-label="Seiten">

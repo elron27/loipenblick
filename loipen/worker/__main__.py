@@ -166,7 +166,8 @@ def hochladen(settings, **kw) -> tuple[str, str] | None:
 
 
 def ohne_ausgeblendete(ereignisse: list, config_dir: Path) -> list:
-    """B30 AK 3: Was die Seite nicht zeigt, meldet auch kein Push und kein Abo-Mail."""
+    """B30 AK 3: Was die Seite nicht zeigt, meldet auch kein Push und kein Abo-Mail. B30 AK 5: Meldungen gehen
+    nach aussen, deshalb gilt hier immer die oeffentliche Seite; nur_test-Gebiete melden auch in der Testversion nichts."""
     gebiete_aus, loipen_aus = ausgeblendet(lade_yaml(config_dir / "gebiete.yaml"))
     return [e for e in ereignisse if e.gebiet not in gebiete_aus and (e.gebiet, e.loipe) not in loipen_aus]
 
