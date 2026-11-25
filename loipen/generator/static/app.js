@@ -324,7 +324,7 @@ function seiteHeute(q) {
   var reco = offene[0], kz = S.idx.kennzahlen;
   var fehler = S.idx.quellen.filter(function (x) { return x.status === "fehler"; }).length;
   var h = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") +
-    '<section class="sky"><div class="herotxt"><div class="eyebrow">' + esc(new Date().toLocaleDateString("de-DE", {weekday: "long", day: "numeric", month: "long"})) + " · " + esc(o ? o.name : "") + "</div><h1>" +
+    '<section class="sky"><div class="herotxt"><div class="eyebrow">' + esc(new Date().toLocaleDateString("de-DE", {weekday: "long", day: "numeric", month: "long"})) + " · <span class=\"nw\">" + esc(o ? o.name : "") + "</span></div><h1>" +
     (reco ? 'Heute lohnt sich <span class="akz">' + esc(reco.name) + "</span>" : 'Heute keine <span class="akz">offene Loipe</span>') + "</h1><p>" +
     (reco ? esc(km(reco.laenge_km) + (reco.entf != null ? ", " + zahl(reco.entf, 0) + " km von " + o.name : "") + ", Stand " + alter(reco.abgerufen)) : "Alle Quellen melden die Loipen als geschlossen oder ohne Angabe. Wir prüfen in der Saison dreimal täglich.") +
     "</p></div>" + talprofil(zeig) + "</section>" + meineKurz() +
