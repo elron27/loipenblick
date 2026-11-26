@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 {% if base %}<base href="{{ base }}">
 {% endif %}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{{ titel }} · Loipenblick</title>
-{% if not oeffentlich %}<meta name="robots" content="noindex, nofollow">
-{% endif %}<meta name="theme-color" content="#06111a" media="(prefers-color-scheme: dark)">
+<title>{{ kopf_titel or (titel ~ " · Loipenblick") }}</title>
+{% if beschreibung %}<meta name="description" content="{{ beschreibung }}">
+{% endif %}{% if not oeffentlich %}<meta name="robots" content="noindex, nofollow">
+{% elif robots %}<meta name="robots" content="{{ robots }}">
+{% endif %}{% if canonical %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}{% for j in jsonld or [] %}<script type="application/ld+json">{{ j }}</script>
+{% endfor %}<meta name="theme-color" content="#06111a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#eaf3f9" media="(prefers-color-scheme: light)">
 <link rel="icon" href="icon-192.png" type="image/png">
 <link rel="stylesheet" href="app.css?v={{ stand }}">
 </head>
-<body class="textseite">
+<body class="textseite{% if seitenart %} {{ seitenart }}{% endif %}">
 {% if not oeffentlich %}{{ testband }}
 {% endif %}<header class="top">
   <div class="wrap in">
@@ -25,13 +29,14 @@
 {% endif %}  </div>
 </header>
 <main id="view" class="wrap text">
-<h1>{{ titel }}</h1>
+{% if krumen %}<nav class="krumen fine" aria-label="Brotkrumen">{% for name, pfad in krumen %}{% if not loop.last %}<a href="{{ pfad }}">{{ name }}</a> › {% else %}<span aria-current="page">{{ name }}</span>{% endif %}{% endfor %}</nav>
+{% endif %}<h1>{{ titel }}</h1>
 {{ inhalt }}
 </main>
 <footer class="foot">
   <div class="wrap">
     <p><strong>Alle Angaben ohne Gewähr.</strong> Maßgeblich ist immer die Quelle vor Ort.</p>
-    <p class="fine rechtlich"><a href="hinweise.html">Hinweise und Betreiber</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p class="fine rechtlich"><a href="gebiete/">Alle Gebiete</a> · <a href="hinweise.html">Hinweise und Betreiber</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
 {% if spenden %}    <p class="fine spenden">Loipenblick ist kostenlos und ohne Werbung. Wer mag, kann es <a href="{{ spenden.url }}" rel="noopener noreferrer">über {{ spenden.anbieter }} unterstützen</a>.</p>
 {% endif %}  </div>
 </footer>

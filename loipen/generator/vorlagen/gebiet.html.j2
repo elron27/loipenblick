@@ -1,0 +1,26 @@
+<p class="lead">{{ satz }}</p>
+<p><span class="fine">{% if stand %}Neuester Stand der Quellen: {{ stand }}.{% else %}Die Quellen melden noch keinen Stand.{% endif %} {{ offen }} von {{ loipen|length }} Loipen sind als befahrbar gemeldet.</span></p>
+<p class="knoepfe"><a class="btn prim" href="./{{ app }}">Live-Ansicht mit Karte, Schnee und Wetter</a></p>
+
+<h2>Loipen und Zustand</h2>
+<ul class="sliste">
+{% for e in loipen %}
+  <li><a href="{{ e.pfad }}"><span class="n">{{ e.l.name }}</span><span class="d">{% if e.km %}{{ e.km }} km{% endif %}{% if e.km and e.technik %} · {% endif %}{% if e.technik %}{{ e.technik }}{% endif %}</span></a><span class="st {{ e.l.status }}">{{ e.wort }}</span></li>
+{% endfor %}
+</ul>
+
+{% if g.parkplaetze or gebuehr.text or gebuehr.eur %}
+<h2>Parken und Loipengebühr</h2>
+{% if gebuehr.eur or gebuehr.text %}<p>Loipengebühr: {% if gebuehr.eur %}{{ "%.2f"|format(gebuehr.eur)|replace(".", ",") }} €{% endif %}{% if gebuehr.text %} {{ gebuehr.text }}{% endif %}{% if gebuehr.url %} (<a href="{{ gebuehr.url }}" rel="noopener">Quelle</a>){% endif %}</p>{% endif %}
+{% if g.parkplaetze %}<ul>
+{% for p in g.parkplaetze %}  <li>{{ p.name }}{% if p.gebuehr_text %}: {{ p.gebuehr_text }}{% elif p.gebuehr_eur_tag is not none %}: {{ "%.2f"|format(p.gebuehr_eur_tag)|replace(".", ",") }} € am Tag{% endif %}</li>
+{% endfor %}</ul>{% endif %}
+{% endif %}
+
+{% if nachbarn %}
+<h2>Langlaufen in der Nähe</h2>
+<p>{% for n in nachbarn %}<a href="{{ n.pfad }}">{{ n.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% endif %}
+
+<h2>Quellen</h2>
+<p>Die Angaben stammen von {% for q in quellen %}{% if q.url %}<a href="{{ q.url }}" rel="noopener">{{ q.name }}</a>{% else %}{{ q.name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}{% if g.tourist_url %}. Weitere Infos beim <a href="{{ g.tourist_url }}" rel="noopener">Tourismusbüro</a>{% endif %}. Maßgeblich ist immer die Quelle vor Ort.</p>

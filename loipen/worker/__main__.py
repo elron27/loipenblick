@@ -99,7 +99,8 @@ def lauf(nur_faellige: datetime | None = None, abrufer=None, sender=None) -> Non
                           rechtliches=rechtliches(settings), oeffentlich=settings.oeffentlich,
                           abo_dateien=abo_dateien(session, settings), version=settings.version,
                           unplausibel=unplausibel, push=PushKonfig.aus_settings(settings).fuer_seite(),
-                          zaehler_dateien=zaehler_dateien(session, settings))
+                          zaehler_dateien=zaehler_dateien(session, settings),
+                          basis_url=settings.oeffentliche_url)
         ereignisse = ohne_unplausible(ereignisse, unplausibel)
         ereignisse = ohne_ausgeblendete(ereignisse, Path(settings.config_dir))
         # N11: Wiederholungen zurueckhalten, fuer alle Kanaele. Eingetragen wird vor dem Versand: Ein

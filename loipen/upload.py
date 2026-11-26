@@ -33,10 +33,14 @@ log = logging.getLogger("loipen.upload")
 
 STAND_DATEI = ".loipen-upload.json"
 # B24 AK 1: nur diese Dateiarten gehen auf den Server
-FREIGABE = {".html", ".css", ".js", ".json", ".png", ".svg", ".webmanifest", ".pmtiles", ".txt", ".ico"}
+FREIGABE = {".html", ".css", ".js", ".json", ".png", ".svg", ".webmanifest", ".pmtiles", ".txt", ".ico", ".xml"}
 FREIGABE_NAMEN = {".htaccess"}
 HASH_DATEI = re.compile(r"^(daten|strecken|statistik)/[^/]+\.[0-9a-f]{12}\.json$")
 ZULETZT = ("daten.json", "sw.js", "index.html")  # Einstieg, in dieser Reihenfolge
+# B17: eigene Seiten je Gebiet und Loipe (<gebiet>/index.html, <gebiet>/<loipe>/index.html)
+SEITE = re.compile(r"^(?!abo/|zaehler/)[a-z0-9-]+/(?:[a-z0-9-]+/)?index\.html$")
+INDEXNOW = "https://api.indexnow.org/indexnow"
+LANGSAM_S = 300  # B17 AK 9: ein Upload ueber 5 Minuten gibt eine Warnung
 
 
 class UploadFehler(Exception):
@@ -133,6 +137,12 @@ def lade_hoch(site_dir: str | Path, ziel: Ziel) -> Ergebnis:
         ziel.schreibe(tmp, inhalt)
         ziel.benenne(tmp, rel)
         erg.hochgeladen.append(rel)
+
+    # B17 AK 7: Seiten entfallener Gebiete und Loipen entfernen; die .htaccess leitet ihre Adresse weiter
+    for rel in sorted(vorher["dateien"]):
+        if SEITE.match(rel) and rel not in lokal and rel in auf_server:
+            ziel.loesche(rel)
+            erg.geloescht.append(rel)
 
     # Stand merken, dann aufraeumen: alte Hash-Dateien des vorletzten Stands und fruehere Reste
     behalten = _verweise(index) | set(vorher.get("verweise", []))
@@ -333,9 +343,51 @@ def oeffne_ziel(url: str, passwort: str | None = None, schluessel: str | None = 
     raise UploadFehler(f"Unbekanntes Upload-Ziel {u.scheme!r}: erlaubt sind sftp://, ftps:// und file://")
 
 
+def geaenderte_seiten(site_dir: str | Path, erg: Ergebnis, basis: str) -> list[str]:
+    """B17 AK 10: Adressen der neu hochgeladenen Seiten, die in der Sitemap stehen (noindex-Seiten nicht)."""
+    karte = Path(site_dir) / "sitemap.xml"
+    if not karte.is_file():
+        return []
+    gelistet = set(re.findall(r"<loc>([^<]+)</loc>", karte.read_text(encoding="utf-8")))
+    basis = basis.rstrip("/")
+    urls = []
+    for rel in erg.hochgeladen:
+        if rel == "index.html":
+            url = basis + "/"
+        elif SEITE.match(rel):
+            url = basis + "/" + rel[: -len("index.html")]
+        else:
+            continue
+        if url in gelistet:
+            urls.append(url)
+    return urls
+
+
+def melde_indexnow(basis: str, urls: list[str], senden: Callable[[str, dict], None] | None = None) -> None:
+    """B17 AK 10: geaenderte Seiten an IndexNow melden (Bing, Yandex, Seznam, Naver). Google nutzt IndexNow
+    nicht und liest die Sitemap. Ein Fehler hier stoert den Upload nie."""
+    from loipen.generator.seiten import indexnow_schluessel
+    if not urls:
+        return
+    basis = basis.rstrip("/")
+    schluessel = indexnow_schluessel(basis)
+    if senden is None:
+        import httpx
+
+        def senden(url: str, daten: dict) -> None:
+            httpx.post(url, json=daten, timeout=30).raise_for_status()
+    for i in range(0, len(urls), 10000):  # hoechstens 10.000 Adressen je Meldung
+        senden(INDEXNOW, {"host": urlparse(basis).hostname, "key": schluessel,
+                          "keyLocation": f"{basis}/{schluessel}.txt", "urlList": urls[i:i + 10000]})
+    log.info("IndexNow: %d geänderte Seiten gemeldet", len(urls))
+
+
 def veroeffentliche(settings, site_dir, oeffne=oeffne_ziel, pruefe=pruefe_oeffentlich,
-                    schlafe=time.sleep, ping: Callable[[str], None] | None = None) -> Ergebnis:
-    """Bis zu drei Versuche (B21 AK 3), danach UploadFehler. Nach Erfolg der Heartbeat (B22)."""
+                    schlafe=time.sleep, ping: Callable[[str], None] | None = None,
+                    indexnow: Callable[[str, dict], None] | None = None,
+                    uhr: Callable[[], float] = time.monotonic) -> Ergebnis:
+    """Bis zu drei Versuche (B21 AK 3), danach UploadFehler. Nach Erfolg der Heartbeat (B22) und auf der
+    oeffentlichen Seite die Meldung an IndexNow (B17 AK 10)."""
     wartezeiten = [int(w) for w in str(settings.upload_wartezeiten_s).split(",") if w.strip()]
     letzter: Exception | None = None
     for versuch in range(len(wartezeiten) + 1):
@@ -343,7 +395,12 @@ def veroeffentliche(settings, site_dir, oeffne=oeffne_ziel, pruefe=pruefe_oeffen
         try:
             ziel = oeffne(settings.upload_url, settings.upload_passwort, settings.upload_schluessel,
                           settings.upload_known_hosts)
+            beginn = uhr()
             erg = lade_hoch(site_dir, ziel)
+            dauer = uhr() - beginn
+            if dauer > LANGSAM_S:
+                log.warning("Upload dauerte %d s für %d Dateien, länger als %d s", dauer, len(erg.hochgeladen),
+                            LANGSAM_S)
             if settings.oeffentliche_url:
                 pruefe(settings.oeffentliche_url, erg.erzeugt)
             log.info("Upload fertig: %d Dateien neu, %d unverändert, %d gelöscht",
@@ -353,6 +410,12 @@ def veroeffentliche(settings, site_dir, oeffne=oeffne_ziel, pruefe=pruefe_oeffen
                     (ping or _ping)(settings.heartbeat_url)
                 except Exception:
                     log.exception("Heartbeat nicht erreichbar")
+            if getattr(settings, "oeffentlich", False) and settings.oeffentliche_url:
+                try:
+                    melde_indexnow(settings.oeffentliche_url,
+                                   geaenderte_seiten(site_dir, erg, settings.oeffentliche_url), indexnow)
+                except Exception:
+                    log.exception("IndexNow nicht erreichbar")
             return erg
         except Exception as e:  # Netz, Anmeldung, Pruefung: alles zaehlt als Fehlversuch
             letzter = e
