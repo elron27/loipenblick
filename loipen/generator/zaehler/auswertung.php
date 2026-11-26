@@ -50,12 +50,12 @@ $monatsnamen = ['01' => 'Januar', '02' => 'Februar', '03' => 'März', '04' => 'A
 $monatsname = fn(string $m) => ($monatsnamen[substr($m, 5, 2)] ?? '') . ' ' . substr($m, 0, 4);
 $zahl = fn(int $n) => number_format($n, 0, ',', '.');
 
-function z_rangliste(array $werte, callable $name, int $max = 10): string
+function z_rangliste(array $werte, callable $name, int $max = 10, string $spalte = 'Aufrufe'): string
 {
     if (!$werte) {
         return '<p class="fine">Noch keine Aufrufe.</p>';
     }
-    $h = '<div class="tabw"><table class="tab"><thead><tr><th>Name</th><th>Aufrufe</th></tr></thead><tbody>';
+    $h = '<div class="tabw"><table class="tab"><thead><tr><th>Name</th><th>' . z_h($spalte) . '</th></tr></thead><tbody>';
     foreach (array_slice($werte, 0, $max, true) as $k => $n) {
         $h .= '<tr><td>' . z_h($name((string) $k)) . '</td><td>' . number_format($n, 0, ',', '.') . '</td></tr>';
     }
@@ -114,6 +114,13 @@ function z_rangliste(array $werte, callable $name, int $max = 10): string
   <div class="stat glass"><b><?= $s['tage'] ? $zahl((int) round($s['besucher'] / $s['tage'])) : '0' ?></b><span>Besucher pro Tag im Schnitt</span></div>
 </div>
 <p class="fine">Gezählt wird ohne Cookies. Wer an zwei Tagen kommt, zählt zweimal, darum ist „Besucher“ die Summe der Tagesbesucher. Bots, automatische Browser und Browser, in denen du angemeldet warst, zählen nicht.</p>
+
+<h2>Woher die Besucher kommen</h2>
+<p class="fine">Gezählt wird beim ersten Aufruf, nur der Name der Seite, von der jemand kam. „direkt“ heißt: Adresse eingetippt, Lesezeichen, App vom Startbildschirm oder eine Seite, die die Herkunft nicht verrät.</p>
+<?= z_rangliste($s['herkunft'], fn($k) => $k, 15, 'Einstiege') ?>
+
+<h2>Geräte</h2>
+<?= z_rangliste($s['geraete'], fn($k) => ['handy' => 'Handy', 'tablet' => 'Tablet', 'pc' => 'PC oder Laptop', 'app' => 'Als App installiert'][$k] ?? $k, 10, 'Einstiege') ?>
 
 <h2>Meistgesehene Gebiete</h2>
 <?= z_rangliste($s['gebiete'], fn($k) => (string) ($ziele['gebiete'][$k] ?? $k)) ?>

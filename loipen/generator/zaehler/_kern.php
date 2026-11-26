@@ -21,6 +21,18 @@ const Z_MAX_BESUCHER_TAG = 100000;   // Obergrenze der Pruefwerte pro Tag (Schut
 const Z_BOTS = '/bot|crawl|spider|slurp|curl|wget|python|httpx|aiohttp|java\/|go-http|okhttp|libwww|headless|'
     . 'phantom|selenium|playwright|puppeteer|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|statuscake|'
     . 'preview|facebookexternalhit|whatsapp|telegram|discord|slack|embedly|scan|check|feed|fetch/i';
+const Z_GERAETE = ['handy', 'tablet', 'pc', 'app'];
+const Z_MAX_HERKUNFT_TAG = 200;      // verschiedene Herkunftsseiten pro Tag, der Rest zaehlt als "andere"
+// Bekannte Herkunft zusammenfassen: Muster auf den Namen der Seite -> Anzeige
+const Z_HERKUNFT_GRUPPEN = [
+    '/(^|\.)google\.[a-z.]+$/' => 'Google', '/(^|\.)bing\.com$/' => 'Bing', '/(^|\.)duckduckgo\.com$/' => 'DuckDuckGo',
+    '/(^|\.)ecosia\.org$/' => 'Ecosia', '/(^|\.)(yahoo|search\.yahoo)\.[a-z.]+$/' => 'Yahoo', '/(^|\.)qwant\.com$/' => 'Qwant',
+    '/(^|\.)startpage\.com$/' => 'Startpage', '/(^|\.)(facebook\.com|fb\.com|fb\.me)$/' => 'Facebook',
+    '/(^|\.)instagram\.com$/' => 'Instagram', '/(^|\.)(t\.co|twitter\.com|x\.com)$/' => 'X (Twitter)',
+    '/(^|\.)reddit\.com$/' => 'Reddit', '/(^|\.)(whatsapp\.com|wa\.me)$/' => 'WhatsApp',
+    '/(^|\.)(chatgpt\.com|openai\.com)$/' => 'ChatGPT', '/(^|\.)perplexity\.ai$/' => 'Perplexity',
+    '/(^|\.)bergfex\.[a-z]+$/' => 'bergfex',
+];
 const Z_LOGIN_VERSUCHE = 5;          // falsche Passwoerter je Anschluss und Stunde
 const Z_LOGIN_VERSUCHE_ALLE = 30;    // falsche Passwoerter insgesamt je Stunde
 const Z_SITZUNG_S = 3600;            // so lange gilt die Anmeldung auf der Auswertungsseite
@@ -104,6 +116,28 @@ function z_gesperrt(callable $f): mixed
     }
 }
 
+/** Herkunft eines Einstiegs: nur der Name der Seite, bekannte Dienste zusammengefasst. Leer = direkt. */
+function z_herkunft(string $host): string
+{
+    $host = strtolower(trim($host));
+    if ($host === '') {
+        return 'direkt';
+    }
+    if ($host === 'app') {
+        return 'App oder Mailprogramm';
+    }
+    if (!preg_match('/^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/', $host) || strlen($host) > 80) {
+        return 'andere';
+    }
+    $host = preg_replace('/^(www|m|l|lm)\./', '', $host);
+    foreach (Z_HERKUNFT_GRUPPEN as $muster => $name) {
+        if (preg_match($muster, $host)) {
+            return $name;
+        }
+    }
+    return $host;
+}
+
 function z_ist_bot(string $ua): bool
 {
     return $ua === '' || strlen($ua) > 512 || preg_match(Z_BOTS, $ua) === 1;
@@ -125,7 +159,8 @@ function z_tagesdaten(string $heute): array
  * Unbekannte Werte werden verworfen, damit niemand beliebige Eintraege erzeugen kann.
  * Gibt true zurueck, wenn gezaehlt wurde.
  */
-function z_zaehle(string $seite, string $gebiet, string $loipe, string $ip, string $ua, ?int $zeit = null): bool
+function z_zaehle(string $seite, string $gebiet, string $loipe, string $ip, string $ua, ?int $zeit = null,
+                  ?array $einstieg = null): bool
 {
     if (z_ist_bot($ua) || !in_array($seite, Z_SEITEN, true)) {
         return false;
@@ -137,7 +172,10 @@ function z_zaehle(string $seite, string $gebiet, string $loipe, string $ip, stri
         $gebiet = (string) ($ziele['loipen'][$loipe][1] ?? '');  // Loipenseite zaehlt auch fuer ihr Gebiet
     }
     $heute = z_heute($zeit);
-    return z_gesperrt(function () use ($seite, $gebiet, $loipe, $ip, $ua, $heute) {
+    // Einstieg (erster Aufruf je Seitenladen): Herkunft und Geraet, siehe app.js
+    $herkunft = $einstieg !== null ? z_herkunft((string) ($einstieg['herkunft'] ?? '')) : '';
+    $geraet = $einstieg !== null && in_array($einstieg['geraet'] ?? '', Z_GERAETE, true) ? $einstieg['geraet'] : '';
+    return z_gesperrt(function () use ($seite, $gebiet, $loipe, $ip, $ua, $heute, $einstieg, $herkunft, $geraet) {
         $ordner = z_datenordner();
         $tag = z_tagesdaten($heute);
         $pruefwert = substr(hash_hmac('sha256', $ip . '|' . $ua, hex2bin($tag['salz'])), 0, 16);
@@ -160,6 +198,17 @@ function z_zaehle(string $seite, string $gebiet, string $loipe, string $ip, stri
         }
         if ($loipe !== '') {
             $t['loipen'][$loipe] = ($t['loipen'][$loipe] ?? 0) + 1;
+        }
+        if ($einstieg !== null) {
+            $t['einstiege'] = ($t['einstiege'] ?? 0) + 1;
+            $t['herkunft'] ??= [];
+            if (!isset($t['herkunft'][$herkunft]) && count($t['herkunft']) >= Z_MAX_HERKUNFT_TAG) {
+                $herkunft = 'andere';
+            }
+            $t['herkunft'][$herkunft] = ($t['herkunft'][$herkunft] ?? 0) + 1;
+            if ($geraet !== '') {
+                $t['geraete'][$geraet] = ($t['geraete'][$geraet] ?? 0) + 1;
+            }
         }
         $m[$heute] = $t;
         ksort($m);
@@ -192,17 +241,19 @@ function z_monat(string $monat): array
 /** Summen eines Monats: Aufrufe, Besucher (Summe der Tagesbesucher) und Ranglisten. */
 function z_auswerten(array $tage): array
 {
-    $s = ['aufrufe' => 0, 'besucher' => 0, 'tage' => count($tage), 'seiten' => [], 'gebiete' => [], 'loipen' => []];
+    $felder = ['seiten', 'gebiete', 'loipen', 'herkunft', 'geraete'];
+    $s = ['aufrufe' => 0, 'besucher' => 0, 'einstiege' => 0, 'tage' => count($tage)] + array_fill_keys($felder, []);
     foreach ($tage as $t) {
         $s['aufrufe'] += $t['aufrufe'] ?? 0;
         $s['besucher'] += $t['besucher'] ?? 0;
-        foreach (['seiten', 'gebiete', 'loipen'] as $feld) {
+        $s['einstiege'] += $t['einstiege'] ?? 0;
+        foreach ($felder as $feld) {
             foreach ($t[$feld] ?? [] as $k => $n) {
                 $s[$feld][$k] = ($s[$feld][$k] ?? 0) + $n;
             }
         }
     }
-    foreach (['seiten', 'gebiete', 'loipen'] as $feld) {
+    foreach ($felder as $feld) {
         arsort($s[$feld]);
     }
     return $s;
