@@ -14,6 +14,10 @@ ErrorDocument 404 /404.html
   RewriteRule ^abo/daten/ - [F]
   # B13: Daten des Besucherzaehlers nie ausliefern
   RewriteRule ^zaehler/daten/ - [F]
+  # B17 AK 7: entfallene Loipenseite -> Seite ihres Gebiets (dauerhaft), damit Links und Ranking nicht ins Leere gehen
+  RewriteCond %{DOCUMENT_ROOT}/$1/$2/index.html !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^([a-z0-9-]+)/([a-z0-9-]+)/?$ /$1/ [R=301,L]
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -25,7 +29,7 @@ ErrorDocument 404 /404.html
 {% if not oeffentlich %}  Header always set X-Robots-Tag "noindex, nofollow"
 {% endif %}
   # B21: Einstieg kurz cachen, Dateien mit Inhalts-Hash lange
-  <FilesMatch "\.(html|json|webmanifest)$">
+  <FilesMatch "\.(html|json|webmanifest|xml|txt)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
   <FilesMatch "^sw\.js$">

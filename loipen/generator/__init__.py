@@ -22,6 +22,7 @@ from markupsafe import Markup
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from loipen.generator import seiten as seiten_mod
 from loipen.generator.daten import baue, sichtbar
 from loipen.generator.icons import png_icon
 from loipen.konfig import CONFIG_DIR
@@ -115,19 +116,22 @@ def erzeuge(
     unplausibel: set[int] | None = None,
     push: dict | None = None,
     zaehler_dateien: dict[str, bytes] | None = None,
+    basis_url: str | None = None,
 ) -> list[Path]:
     """Schreibt die Seite. rechtliches: name, anschrift (Zeilen mit "|" getrennt), email, hoster,
     log_tage, datenschutz_html, spenden_url. kacheln: url, attribution, fremd (B23).
     abo_dateien: Ordner abo/ fuer E-Mail-Abo und Meldungen (E-18), siehe generator/abo.py.
     unplausibel: wird mit den Loipen gefuellt, deren Offen-Meldung unplausibel ist (D19 AK 5).
     push: server und praefix der oeffentlichen ntfy-Themen (N10), sonst kein Push-Hinweis auf der Seite.
-    zaehler_dateien: Ordner zaehler/ fuer den Besucherzaehler (B13, E-42), siehe generator/zaehler.py."""
+    zaehler_dateien: Ordner zaehler/ fuer den Besucherzaehler (B13, E-42), siehe generator/zaehler.py.
+    basis_url: oeffentliche Adresse (LOIPEN_OEFFENTLICHE_URL) fuer Canonical, Sitemap und IndexNow (B17)."""
     site = Path(site_dir)
     jetzt = jetzt or datetime.now(ZoneInfo("Europe/Berlin"))
     daten = baue(session, jetzt, Path(config_dir) if config_dir else CONFIG_DIR, stale_days, oeffentlich=oeffentlich)
     if unplausibel is not None:
         unplausibel.update(daten["unplausibel"])
     stand = app_version()
+    basis = basis_url.rstrip("/") if basis_url else None
     r = dict(rechtliches or {})
     kacheln = kacheln or {"url": OSM_KACHELN, "attribution": OSM_ATTRIBUTION, "fremd": True}
 
@@ -172,6 +176,12 @@ def erzeuge(
                     inhalt = inhalt.replace(b"<title>", b'<meta name="robots" content="noindex, nofollow">\n<title>', 1)
                     # B30 AK 5: sichtbarer Hinweis, dass dies die Testversion ist
                     inhalt = inhalt.replace(b'<header class="top">', TESTBAND.encode() + b'\n<header class="top">', 1)
+                if rel == "index.html" and basis:  # B17 AK 6: Startseite mit Canonical und WebSite-Angabe
+                    kopf = (f'<link rel="canonical" href="{basis}/">\n<script type="application/ld+json">'
+                            + seiten_mod._jsonld({"@context": "https://schema.org", "@type": "WebSite",
+                                                  "name": "Loipenblick", "url": basis + "/", "inLanguage": "de"})
+                            + "</script>\n</head>")
+                    inhalt = inhalt.replace(b"</head>", kopf.encode(), 1)
             schreibe(rel, inhalt)
     schreibe("icon-192.png", png_icon(192))
     schreibe("icon-512.png", png_icon(512))
@@ -209,7 +219,55 @@ def erzeuge(
             schreibe(rel, inhalt)
     elif (site / "zaehler").is_dir():
         shutil.rmtree(site / "zaehler")
-    schreibe("robots.txt", "User-agent: *\n" + ("Allow: /\n" if oeffentlich else "Disallow: /\n"))
+    # B17: eigene Seiten je Gebiet und Loipe, Sitemap, robots.txt, IndexNow-Schluessel
+    alter_stand = {}
+    if (site / seiten_mod.STAND_DATEI).exists():
+        try:
+            alter_stand = json.loads((site / seiten_mod.STAND_DATEI).read_text(encoding="utf-8"))
+        except ValueError:
+            alter_stand = {}
+    inhalte: dict[str, str] = {}
+    indexiert: list[str] = []
+    for s in seiten_mod.baue_seiten(daten, basis):
+        inhalt = Markup(env.get_template(s["vorlage"]).render(**s["werte"]))
+        krumen = [("Loipenblick", "./#/"), ("Alle Gebiete", "gebiete/")]
+        if s["vorlage"] == "gebiet.html.j2":
+            krumen.append((s["werte"]["g"]["name"], s["pfad"]))
+        elif s["vorlage"] == "loipe.html.j2":
+            krumen += [(s["werte"]["g"]["name"], s["werte"]["gpfad"]), (s["h1"], s["pfad"])]
+        else:
+            krumen = krumen[:1] + [("Alle Gebiete", s["pfad"])]
+        html = env.get_template("seite.html.j2").render(
+            titel=s["h1"], kopf_titel=s["titel"], beschreibung=s["beschreibung"], inhalt=inhalt, stand=stand,
+            oeffentlich=oeffentlich, base="/", spenden=spende, testband=Markup(TESTBAND), krumen=krumen,
+            robots=None if s["index"] else "noindex, follow", seitenart="einzelseite",
+            canonical=f"{basis}/{s['pfad']}" if basis and s["index"] else None,
+            jsonld=[Markup(j) for j in s["jsonld"]])
+        schreibe(s["pfad"] + "index.html", html)
+        inhalte[s["pfad"]] = html
+        if s["index"]:
+            indexiert.append(s["pfad"])
+    neuer_stand = seiten_mod.lastmod(alter_stand, inhalte, jetzt.astimezone(ZoneInfo("Europe/Berlin")).date().isoformat())
+    for pfad in set(alter_stand) - set(neuer_stand):  # entfallene Seiten auch in der Vorschau entfernen
+        alt = site / pfad / "index.html"
+        if alt.is_file():
+            alt.unlink()
+            try:
+                alt.parent.rmdir()
+                alt.parent.parent.rmdir() if pfad.count("/") > 1 else None
+            except OSError:
+                pass
+    _schreibe(site / seiten_mod.STAND_DATEI, _json(neuer_stand))
+    if basis:
+        heute = jetzt.astimezone(ZoneInfo("Europe/Berlin")).date().isoformat()
+        start = [("", heute)]  # Startseite aendert sich mit jedem Stand
+        schreibe("sitemap.xml", seiten_mod.sitemap(basis, start + [(p, neuer_stand[p][1]) for p in indexiert]))
+        if oeffentlich:
+            schluessel = seiten_mod.indexnow_schluessel(basis)
+            schreibe(f"{schluessel}.txt", schluessel)
+    elif (site / "sitemap.xml").exists():
+        (site / "sitemap.xml").unlink()
+    schreibe("robots.txt", seiten_mod.robots(oeffentlich, basis))
 
     schreibe("daten.json", _json(index))  # zuletzt: erst jetzt sieht die Vorschau den neuen Stand
 

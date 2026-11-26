@@ -234,3 +234,14 @@ details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:point
 .merkmale{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
 .tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:13px;border:1px solid var(--unk);color:var(--ink)}
 .tag-nein{border-style:dashed;color:var(--unk)}
+/* B17: eigene Seiten je Gebiet und Loipe (statisch, ohne JavaScript) */
+.krumen{margin:18px 0 4px}.krumen a{color:var(--mute)}
+.text .lead{font-size:17px}
+.knoepfe{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.sliste{list-style:none;padding:0;margin:12px 0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.sliste li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 2px;border-bottom:1px solid var(--line);max-width:none}
+.sliste a{display:flex;flex-direction:column;min-width:0;color:inherit;text-decoration:none}.sliste a:hover .n{text-decoration:underline}
+.sliste .n{font-weight:700;overflow-wrap:anywhere}.sliste .d{color:var(--mute);font-size:14px}
+.fakten{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 18px;margin:12px 0}
+.fakten div{border-left:2px solid var(--line);padding-left:10px}.fakten dt{color:var(--mute);font-size:12px;letter-spacing:.06em;text-transform:uppercase}.fakten dd{margin:0;font-weight:700}
+.text h3{margin:18px 0 4px;font-size:16px}

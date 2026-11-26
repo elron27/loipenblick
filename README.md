@@ -151,6 +151,10 @@ Spendenlink (U46, E-28): `LOIPEN_SPENDEN_URL=https://paypal.me/DeinName` (oder e
 in die `.env`, Container neu starten. Dann zeigen die Fußzeile und die Seite „Hinweise und Betreiber“ einen
 dezenten Link, die Datenschutzerklärung bekommt einen Abschnitt dazu. Leer = kein Link.
 
+### Auffindbar bei Google und Bing (B17, E-44)
+
+Neben der App (alles hinter `#/`) schreibt der Generator einfache HTML-Seiten ohne JavaScript: `/gebiete/`, `/<gebiet>/` und `/<gebiet>/<loipe>/` mit Zustand, Angaben, Parken und Quelle. Die Adressen kommen aus den Namen und bleiben gleich. Loipen mit weniger als vier eigenen Angaben bekommen `noindex`. Mit `LOIPEN_OEFFENTLICHE_URL` entstehen Canonical, schema.org-Angaben und `sitemap.xml`; auf der öffentlichen Seite (`LOIPEN_OEFFENTLICH=true`) zusätzlich die IndexNow-Schlüsseldatei. Nach jedem Upload meldet das NAS die geänderten Seiten an IndexNow. Die `robots.txt` sperrt KI-Trainings-Crawler (Liste in `loipen/generator/seiten.py`), Suchmaschinen und KI-Suchen dürfen. Entfallene Loipen leitet die `.htaccess` auf ihr Gebiet weiter.
+
 ### Besucherzähler ohne Cookies (B13, E-42)
 
 `LOIPEN_ZAEHLER_PASSWORT=<mindestens 12 Zeichen>` in die `.env`, Container neu erstellen. Dann lädt das NAS

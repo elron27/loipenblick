@@ -1,0 +1,31 @@
+<p class="lead"><span class="st {{ l.status }}">{{ wort }}</span> <span class="fine">{{ stand }}, Quelle: {% if l.quelle.url %}<a href="{{ l.quelle.url }}" rel="noopener">{{ l.quelle.name }}</a>{% else %}{{ l.quelle.name }}{% endif %}</span></p>
+{% if l.sperrgrund %}<p>Grund laut Betreiber: {{ l.sperrgrund }}</p>{% endif %}
+{% if l.hinweis %}<p>Hinweis des Betreibers: {{ l.hinweis }}</p>{% endif %}
+<p class="knoepfe"><a class="btn prim" href="./{{ app }}">Live-Stand, Karte und Benachrichtigung</a> <a class="btn" href="{{ gpfad }}">Alle Loipen in {{ g.name }}</a></p>
+
+{% if fakten %}
+<h2>Die Loipe</h2>
+<dl class="fakten">
+{% for k, w in fakten %}  <div><dt>{{ k }}</dt><dd>{{ w }}</dd></div>
+{% endfor %}</dl>
+{% if merkmale %}<p>{% for m in merkmale %}<span class="tag">{{ m }}</span> {% endfor %}</p>{% endif %}
+{% if l.details and l.details.hund_erlaubt is false %}<p>Hunde sind auf dieser Loipe nicht erlaubt.</p>{% endif %}
+{% endif %}
+
+{% if l.parken or gebuehr.eur or gebuehr.text %}
+<h2>Parken</h2>
+{% if l.parken %}<ul>
+{% for p in l.parken[:4] %}  <li>{{ p.name or "Parkplatz" }}{% if p.entfernung_m %} ({{ p.entfernung_m }} m vom Einstieg){% endif %}{% if p.gebuehr_text %}: {{ p.gebuehr_text }}{% elif p.gebuehr_eur_tag is not none %}: {{ "%.2f"|format(p.gebuehr_eur_tag)|replace(".", ",") }} € am Tag{% endif %}</li>
+{% endfor %}</ul>{% endif %}
+{% if gebuehr.eur or gebuehr.text %}<p>Loipengebühr in {{ g.name }}: {% if gebuehr.eur %}{{ "%.2f"|format(gebuehr.eur)|replace(".", ",") }} €{% endif %}{% if gebuehr.text %} {{ gebuehr.text }}{% endif %}</p>{% endif %}
+{% endif %}
+
+{% if geschwister %}
+<h2>Weitere Loipen in {{ g.name }}</h2>
+<ul class="sliste">
+{% for x in geschwister %}  <li><a href="{{ x.pfad }}"><span class="n">{{ x.name }}</span></a><span class="st {{ x.status }}">{{ x.wort }}</span></li>
+{% endfor %}</ul>
+{% endif %}
+
+<h2>Quelle</h2>
+<p>Zustand und Angaben zu dieser Loipe stammen von {% if l.quelle.url %}<a href="{{ l.quelle.url }}" rel="noopener">{{ l.quelle.name }}</a>{% else %}{{ l.quelle.name }}{% endif %}{% if l.strecke_osm %}, der Streckenverlauf von <a href="{{ l.strecke_osm.url }}" rel="noopener">OpenStreetMap</a> (ODbL){% endif %}. Maßgeblich ist immer die Quelle vor Ort.</p>

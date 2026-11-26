@@ -1,0 +1,9 @@
+<p class="lead">Alle Gebiete, für die Loipenblick den Loipenzustand sammelt. Jedes Gebiet hat eine eigene Seite mit seinen Loipen, Parkplätzen und Quellen.</p>
+<p class="knoepfe"><a class="btn prim" href="./#/">Welche Loipen sind heute offen?</a></p>
+{% for land, regionen in laender.items() %}
+<h2>{{ land }}</h2>
+{% for r in regionen %}
+<h3>{{ r.name }}{% if r.bundesland %} <span class="fine">{{ r.bundesland }}</span>{% endif %}</h3>
+<p>{% for g in r.gebiete %}<a href="{{ g.pfad }}">{{ g.name }}</a> <span class="fine">({{ g.loipen }} Loipe{% if g.loipen != 1 %}n{% endif %}{% if g.km and g.km != "0" %}, {{ g.km }} km{% endif %})</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{% endfor %}
+{% endfor %}
