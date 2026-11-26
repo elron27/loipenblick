@@ -201,7 +201,7 @@ def test_b17_indexnow_meldet_nur_geaenderte_indexierte_seiten(live, tmp_path):
 
 
 @pytest.mark.req("B17", ak=[9])
-def test_b17_langsamer_upload_warnt(live, tmp_path, caplog):
+def test_b17_langsamer_upload_warnt(live, tmp_path, monkeypatch):
     _, site = live
     zeiten = iter([0.0, 400.0])
 
@@ -212,6 +212,9 @@ def test_b17_langsamer_upload_warnt(live, tmp_path, caplog):
         oeffentliche_url = None
         oeffentlich = False
 
+    # direkt am Logger mitschreiben: andere Tests stellen die Log-Weitergabe um, caplog sieht dann nichts
+    warnungen = []
+    monkeypatch.setattr("loipen.upload.log.warning", lambda msg, *a: warnungen.append(msg % a))
     veroeffentliche(E, site, pruefe=lambda *a: None, uhr=lambda: next(zeiten))
-    assert any("länger als 300 s" in r.getMessage() for r in caplog.records)
+    assert any("länger als 300 s" in w for w in warnungen)
     assert geaenderte_seiten(site, type("Erg", (), {"hochgeladen": []})(), BASIS) == []
