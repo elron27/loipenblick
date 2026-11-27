@@ -109,7 +109,32 @@ Gefunden, aber nicht eingepflegt:
 - Alpbachtal: keine Gebühr, kein Verleih, keine Hunde- oder Lichtangabe; Gesamtlänge widersprüchlich (70 bzw. 100 km).
 - Wildschönau: Skisport Thaler nennt nur "Leihausrüstung" ohne Langlauf; Webcams ohne Detail-Link.
 
+## Etappe 4 (27.11.2026 nachmittags): Lücken, St. Johann, Seefeld, Zillertal
+
+| Gebiet | Eingepflegt |
+|---|---|
+| Ruhpolding | Verleih Sport Plenk (Langlaufausrüstung) |
+| Berchtesgaden | Verleih Sport M+R Brandner (Langlaufski) |
+| St. Johann in Tirol | keine Loipengebühr; Hunde nicht erlaubt; Trainings-Nachtloipe täglich 17–21 Uhr, Lärchenhofloipe Erpfendorf Mo und Do 17–20 Uhr |
+| Pillerseetal | Webcams Reckmoos Fieberbrunn, Steinplatte Waidring (panomax) |
+| Seefeld | Hunde nur auf der Hundeloipe A3 (Wildmoos, Leinenpflicht); A1 Nachtloipe Mo–Fr 17:00–20:30; Verleih Cross Country Academy |
+| Leutasch | Verleih Skischule Leutasch |
+| Tux | Hunde nicht erlaubt; Webcams Wanglspitz (foto-webcam.eu), Eggalm (panomax) |
+| Zell-Gerlos | Schönachtal-Loipe beleuchtet täglich 17–22 Uhr |
+
+Gefunden, aber nicht eingepflegt:
+
+- Inzell, Ramsau, Schönau, Bischofswiesen: weiter kein Langlaufverleih genannt (Sport Renoth an der Jennerbahn verleiht
+  nur Schneeschuhe und Schlitten). Ruhpolding: Skischule Ruhpolding und Rent-a-Ski ohne ausdrückliches Langlauf.
+- Bischofswiesen: beleuchtete Stadionrunde am Aschauerweiher ohne Zeiten.
+- St. Johann: Verleih-Seite nennt keine Betriebe; Webcams nur als Bilder ohne Detailseite.
+- Seefeld: Loipengebühr für Erwachsene nicht im gelesenen Text (Kinder bis 15 frei); Leutasch Sport Norz und Sport
+  Wedl nur als Verleih von Kinderanhängern genannt.
+- Zillertal: keine Gebühr und kein Langlaufverleih mit Namen auf den gelesenen Seiten; Mayrhofen und Fügen ohne
+  Hunde- oder Lichtangabe.
+- Achensee bewusst nicht recherchiert (Achensee Tourismus hat abgelehnt, E-43).
+
 ## Nächste Etappe
 
-Webcams Pillerseetal/St. Johann, Verleih-Lücken im Tegernseer Tal, Ruhpolding, Inzell und Berchtesgaden,
-danach Seefeld, Leutasch, Achensee und Zillertal.
+Mieming, Silberregion Karwendel, Hinterriß; Südostbayern und Salzburger Land nach der Regionen-Reihenfolge;
+Verleih-Lücken Inzell und Berchtesgadener Land über die Sportgeschäfte vor Ort.

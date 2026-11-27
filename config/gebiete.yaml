@@ -618,6 +618,12 @@ gebiete:
   lat: 47.7613
   lon: 12.6436
   tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
+  # Handrecherche 27.11.2026, Etappe 4
+  verleih:
+  - name: 'Sport Plenk (Langlaufausrüstung)'
+    url: https://www.sportplenk.com/skiverleih-im-sport-plenk/
+    quelle: https://www.ruhpolding.de/ski-snowboardschulen
+    geprueft_am: 2026-11-27
   nachbarn:
   - inzell
   - reit-im-winkl
@@ -1317,6 +1323,14 @@ gebiete:
   lat: 47.505
   lon: 12.6
   tourist_url: https://www.kitzbueheler-alpen.com/de/pital/
+  # Handrecherche 27.11.2026, Etappe 4
+  webcams:
+  - name: 'Fieberbrunn, Reckmoos (panomax)'
+    url: https://fieberbrunn.panomax.com/reckmoos
+    geprueft_am: 2026-11-27
+  - name: 'Steinplatte Waidring (panomax)'
+    url: https://steinplatte-waidring.panomax.com
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
   loipengebuehr:
     eur: 10.0
@@ -1353,10 +1367,26 @@ gebiete:
   lat: 47.525
   lon: 12.425
   tourist_url: https://www.kitzbueheler-alpen.com/de/stjo/
+  # Handrecherche 27.11.2026, Etappe 4
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen der Region St. Johann in Tirol kostenlos'
+    url: https://www.kitzbueheler-alpen.com/de/stjo/wi/langlaufen/urlaub.html
+    geprueft_am: 2026-11-27
+  hunde:
+    erlaubt: false
+    text: 'nicht erlaubt'
+    url: https://www.kitzbueheler-alpen.com/de/stjo/wi/langlaufen/urlaub.html
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
   beleuchtet:
-  - name: 'Trainings-Nachtloipe (2,5 km)'
-    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+  - name: 'Trainings-Nachtloipe (2,5 km, Koasastadion)'
+    zeiten: täglich 17 bis 21 Uhr
+    url: https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/trainings-nachtloipe
+    geprueft_am: 2026-11-27
+  - name: 'Lärchenhofloipe Erpfendorf'
+    zeiten: 'Mo und Do 17 bis 20 Uhr'
+    url: https://www.kitzbueheler-alpen.com/de/stjo/wi/langlaufen/urlaub.html
     geprueft_am: 2026-11-27
   nachbarn:
   - going
@@ -1485,6 +1515,12 @@ gebiete:
   lat: 47.626
   lon: 13.044
   tourist_url: https://www.berchtesgaden.de/winter/langlaufen
+  # Handrecherche 27.11.2026, Etappe 4
+  verleih:
+  - name: 'Sport M+R Brandner (Langlaufski)'
+    url: https://www.berchtesgaden.de/pois/sport-mr-brandner
+    quelle: https://www.berchtesgaden.de/pois/sport-mr-brandner
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
   webcams:
   - name: 'Lockstein Berchtesgaden (feratel)'
@@ -1562,6 +1598,12 @@ gebiete:
   lat: 47.231
   lon: 11.946
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 4
+  beleuchtet:
+  - name: 'Schönachtal-Loipe Gerlos (1,5 km beleuchtet, beschneit)'
+    zeiten: 'täglich 17 bis 22 Uhr'
+    url: https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/schoenachtal-loipe-beleuchtet-und-beschneit
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '61'
@@ -1586,6 +1628,19 @@ gebiete:
   lat: 47.136
   lon: 11.698
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 4
+  hunde:
+    erlaubt: false
+    text: 'nicht erlaubt'
+    url: https://www.tux.at/en/cross-country-skiing
+    geprueft_am: 2026-11-27
+  webcams:
+  - name: 'Tuxertal, Wanglspitz (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/tuxertal/
+    geprueft_am: 2026-11-27
+  - name: 'Hintertux, Eggalm (panomax)'
+    url: https://hintertux.panomax.com/eggalm
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '14912'
@@ -1730,6 +1785,22 @@ gebiete:
   lat: 47.332
   lon: 11.173
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 4
+  hunde:
+    erlaubt: true
+    text: 'nur auf der Hundeloipe A3 im Wildmoos, Leinenpflicht'
+    url: https://www.seefeld.com/en/special-cross-country-skiing-trails.html
+    geprueft_am: 2026-11-27
+  beleuchtet:
+  - name: 'A1 Nachtloipe (3,1 km, ab Seekirchl)'
+    zeiten: 'Mo bis Fr 17:00 bis 20:30 Uhr'
+    url: https://www.seefeld.com/en/special-cross-country-skiing-trails.html
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'Cross Country Academy (Langlaufverleih am Langlaufstartpunkt)'
+    url: https://www.tirol.at/infrastruktur/cross-country-academy-langlaufverleih
+    quelle: https://www.tirol.at/infrastruktur/cross-country-academy-langlaufverleih
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '87'
@@ -1742,6 +1813,12 @@ gebiete:
   lat: 47.367
   lon: 11.15
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 4
+  verleih:
+  - name: 'Skischule Leutasch (Langlaufverleih)'
+    url: https://www.tirol.at/infrastruktur/skischule-leutasch
+    quelle: https://www.tirol.at/infrastruktur/skischule-leutasch
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '87'
