@@ -214,7 +214,7 @@ def test_u36_index_nennt_regionen_mit_strecken(site):
     mit = {r["slug"]: r["strecken_anzahl"] for r in index["regionen"] if r["strecken_anzahl"]}
     # Chiemgau, Tannheimer Tal und die tourinfra-Regionen von E-20
     assert set(mit) == {"chiemgau", "ausserfern", "seefeld-mieming", "engadin", "davos-klosters", "goms",
-                        "gasteinertal", "schladming-dachstein"}
+                        "gasteinertal", "schladming-dachstein", "bayerischer-wald", "fichtelgebirge"}  # P44
     assert mit["ausserfern"] >= 20
 
 
