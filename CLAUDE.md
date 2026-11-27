@@ -27,6 +27,7 @@
 11. Vor dem Start gibt es einen Satz zum Vorhaben, am Ende eine kurze Zusammenfassung in drei Teilen: **was gemacht**, **was gefunden**, **was Stefan tun muss**. Zwischenstände gehören in die Checkliste, nicht in eigene Nachrichten. *(Seite: User-facing progress updates)*
 12. Bei längeren stillen Arbeitsphasen meldet sich der Thread spätestens nach etwa fünf größeren Schritten mit einem Satz in der Checkliste. *(Seite: silent stretches)*
 13. Antworten sind auf Deutsch, kurz und in ganzen Sätzen. *(bestehende Regel)*
+13a. **Projektplan pflegen:** [`docs/projektplan.md`](docs/projektplan.md) ist die zentrale Aufgabenliste. Jeder Thread hakt dort im selben PR ab, was er erledigt hat (mit Datum und PR unter „Erledigt“), und trägt neue Aufgaben, neue `.env`-Namen (nie Werte) und neue Inputs von Stefan ein. Der Koordinator hakt ab, was ohne PR erledigt wurde (z. B. Stefans Schritte am NAS oder Antworten Dritter). *(Stefans Wunsch vom 2026-11-27)*
 
 ## 5. Fremdinhalte und Sicherheit
 
