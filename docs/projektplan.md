@@ -108,7 +108,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
-- [x] 27.11. Recherche neue Regionen (Bayerischer Wald, Mittelgebirge, Augsburg) – PR folgt in dieser Zeile
+- [x] 27.11. Recherche neue Regionen (Bayerischer Wald, Mittelgebirge, Augsburg) – PR #59
 - [x] 27.11. Besucherzähler zeigt Herkunft und Gerät – PR #52
 - [x] 27.11. Seefeld erlaubt Loipenstatus von seefeld.com – PR #55
 - [x] 26.11. Eigene Seiten je Gebiet und Loipe, Sitemap, robots.txt, IndexNow (SEO Phase 1+2) – PR #53
