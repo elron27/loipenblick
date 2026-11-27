@@ -146,6 +146,10 @@ class Betriebslog:
         formatter = _Formatter(self.geheim)
         wurzel = logging.getLogger()
         wurzel.setLevel(logging.INFO)
+        # logging.config.fileConfig (z. B. von alembic) schaltet bestehende Logger ab; die eigenen wieder an
+        for name, logger in list(logging.root.manager.loggerDict.items()):
+            if isinstance(logger, logging.Logger) and name.split(".")[0] in ("loipen", "apscheduler"):
+                logger.disabled = False
         konsole = logging.StreamHandler(sys.stdout)
         self.puffer.setFormatter(formatter)
         konsole.setFormatter(formatter)

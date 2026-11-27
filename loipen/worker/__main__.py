@@ -278,11 +278,24 @@ def starte(betrieb: Betriebslog | None = None, scheduler_klasse=BlockingSchedule
     # Beim Start einmal, damit die Vorschau sofort etwas zeigt. B34: Ein Fehler hier (z. B. Datenbank noch
     # nicht bereit) beendete frueher den ganzen Container; jetzt laeuft der Zeitplan trotzdem an.
     job(lauf, betrieb)()
-    scheduler = scheduler_klasse(timezone=settings.timezone)
-    scheduler.add_job(job(tick, betrieb), "cron", minute=0)
-    scheduler.add_job(job(schnee_tick, betrieb), "cron", minute=20, max_instances=1, coalesce=True)  # S1
-    scheduler.add_job(job(sicherung, betrieb), "cron", hour=3, minute=30)  # taeglich, B14
+    scheduler = _Zeitplan(scheduler_klasse(timezone=settings.timezone), betrieb)
+    scheduler.add_job(tick, "cron", minute=0)
+    scheduler.add_job(schnee_tick, "cron", minute=20, max_instances=1, coalesce=True)  # Schneekarte (S1)
+    scheduler.add_job(sicherung, "cron", hour=3, minute=30)  # taeglich, B14
     scheduler.start()
+
+
+class _Zeitplan:
+    """BlockingScheduler, dessen Jobs ueber job() laufen (B34): kein Job beendet den Worker."""
+
+    def __init__(self, scheduler, betrieb: Betriebslog | None):
+        self.scheduler, self.betrieb = scheduler, betrieb
+
+    def add_job(self, fn, *args, **kwargs):
+        return self.scheduler.add_job(job(fn, self.betrieb), *args, **kwargs)
+
+    def start(self):
+        self.scheduler.start()
 
 
 def befehl(argv: list[str], betrieb: Betriebslog | None = None) -> None:
