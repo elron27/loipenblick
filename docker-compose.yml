@@ -37,6 +37,8 @@ services:
     environment:
       LOIPEN_SITE_DIR: /app/site
       LOIPEN_BACKUP_DIR: /app/backup
+      # B34: worker.log im Ordner logs neben dieser Datei (rotierend, hoechstens ca. 6 MB)
+      LOIPEN_LOG_DIR: /app/logs
       TZ: Europe/Berlin
     volumes:
       # Die Konfiguration steckt im Image. Eigene Aenderungen: die Zeile unten einkommentieren
@@ -44,6 +46,7 @@ services:
       # - ./config:/app/config:ro
       - ./site:/app/site
       - ${BACKUP_DIR:-./backup}:/app/backup
+      - ./logs:/app/logs
       # Livegang: known_hosts, SSH-Schluessel und eigener Datenschutztext (nie ins Repo)
       - ./geheim:/app/geheim:ro
     depends_on:

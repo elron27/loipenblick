@@ -83,11 +83,12 @@ def test_b4_fusszeile_zeigt_die_version(session, tmp_path):
 
 
 @pytest.mark.req("B4", ak=3)
-def test_b4_worker_meldet_die_version_beim_start(monkeypatch, caplog):
+def test_b4_worker_meldet_die_version_beim_start(monkeypatch, caplog, tmp_path):
     from loipen.config import get_settings
     from loipen.worker import __main__ as worker
 
     monkeypatch.setenv("LOIPEN_VERSION", "abc1234")
+    monkeypatch.setenv("LOIPEN_LOG_DIR", str(tmp_path))
     get_settings.cache_clear()
     monkeypatch.setattr(worker, "lauf", lambda *a, **k: None)
     monkeypatch.setattr(worker.BlockingScheduler, "start", lambda self: None)
