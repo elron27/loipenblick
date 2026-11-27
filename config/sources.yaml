@@ -222,7 +222,11 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Der Loipenbericht Seefeld nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    # Freigabe des Tourismusverbands Seefeld vom 27.11.2026 (B31, E-45): Loipenstatus wie angefragt mit Quellangabe
+    # und Link auf seefeld.com. Gilt fuer diesen Loipenbericht, nicht fuer seefeld-tourinfra.
+    # Beleg: docs/erlaubnisse/seefeld-2026-11-27.md
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-27, erlaubnis: liegt_vor,
+              beleg: docs/erlaubnisse/seefeld-2026-11-27.md, bedingung: "Quellangabe und Link auf seefeld.com"}
     config:
       pfad: /de/loipenbericht.html
       default_gebiet: seefeld
@@ -676,14 +680,16 @@ quellen:
 
   # Olympiaregion Seefeld auch im tourinfra-Loipenmanager (E-20): mit Streckenverlauf und Startpunkt je
   # Loipe, deshalb Rang 1 vor dem Loipenbericht (2) und tirol.at (3); dieselbe Loipe zaehlt nur einmal (D15).
-
+  # Die Freigabe vom 27.11.2026 (E-45) nennt nur den Loipenbericht auf seefeld.com; Abruf bei tourinfra und
+  # Streckenverlauf waren nicht angefragt. Deshalb bleibt diese Quelle ausstehend (Beleg seefeld-2026-11-27.md).
   - key: seefeld-tourinfra
     adapter: tourinfra
     name: Olympiaregion Seefeld (tourinfra Loipenmanager)
     base_url: https://module.tourinfra.com/seefeld
     art: portal
     rang: 1
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+              hinweis: "Zusage des TVB Seefeld 27.11.2026 nennt nur seefeld.com; tourinfra-Abruf nicht ausdruecklich freigegeben"}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
       default_gebiet: seefeld
