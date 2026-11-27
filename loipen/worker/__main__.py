@@ -8,6 +8,7 @@
 """
 
 import logging
+import signal
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -19,6 +20,7 @@ from sqlalchemy import select
 from loipen import generator, osm
 from loipen.ablauf import rufe_quelle_ab
 from loipen.benachrichtigung import PushKonfig, entprelle
+from loipen.betriebslog import Betriebslog, smtp_mailer
 from loipen.benachrichtigung import veroeffentliche as push_veroeffentliche
 from loipen.config import get_settings
 from loipen.db import session_scope
@@ -251,8 +253,52 @@ def schnee_tick() -> None:
         log.exception("Schneekarte: Sammel-Lauf fehlgeschlagen")
 
 
-def main(argv: list[str]) -> None:
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
+def _beenden(signum, frame):
+    """docker stop schickt SIGTERM: sauber beenden, damit die Marke weg ist und keine Absturz-Mail kommt."""
+    raise SystemExit(0)
+
+
+def job(fn, betrieb: Betriebslog | None):
+    """B34: Ein Job darf den Worker nie beenden; danach gesammelte Fehler melden."""
+    def ausfuehren(*args, **kwargs):
+        try:
+            fn(*args, **kwargs)
+        except Exception:
+            log.exception("Job %s fehlgeschlagen", getattr(fn, "__name__", fn))
+        finally:
+            if betrieb:
+                betrieb.pruefe()
+    ausfuehren.__name__ = getattr(fn, "__name__", "job")
+    return ausfuehren
+
+
+def starte(betrieb: Betriebslog | None = None, scheduler_klasse=BlockingScheduler) -> None:
+    settings = get_settings()
+    log.info("Loipenblick Version %s startet", settings.version)
+    # Beim Start einmal, damit die Vorschau sofort etwas zeigt. B34: Ein Fehler hier (z. B. Datenbank noch
+    # nicht bereit) beendete frueher den ganzen Container; jetzt laeuft der Zeitplan trotzdem an.
+    job(lauf, betrieb)()
+    scheduler = _Zeitplan(scheduler_klasse(timezone=settings.timezone), betrieb)
+    scheduler.add_job(tick, "cron", minute=0)
+    scheduler.add_job(schnee_tick, "cron", minute=20, max_instances=1, coalesce=True)  # Schneekarte (S1)
+    scheduler.add_job(sicherung, "cron", hour=3, minute=30)  # taeglich, B14
+    scheduler.start()
+
+
+class _Zeitplan:
+    """BlockingScheduler, dessen Jobs ueber job() laufen (B34): kein Job beendet den Worker."""
+
+    def __init__(self, scheduler, betrieb: Betriebslog | None):
+        self.scheduler, self.betrieb = scheduler, betrieb
+
+    def add_job(self, fn, *args, **kwargs):
+        return self.scheduler.add_job(job(fn, self.betrieb), *args, **kwargs)
+
+    def start(self):
+        self.scheduler.start()
+
+
+def befehl(argv: list[str], betrieb: Betriebslog | None = None) -> None:
     if argv[:1] == ["lauf"]:
         lauf()
         return
@@ -260,20 +306,41 @@ def main(argv: list[str]) -> None:
         sicherung()
         return
     if argv[:1] == ["schnee"]:
-        from loipen.schnee import job
-        job.lauf()
+        from loipen.schnee import job as schnee_job
+        schnee_job.lauf()
         return
     if argv[:1] == ["schnee-archiv"] and len(argv) >= 2:
-        from loipen.schnee import job
-        log.info("Archiv: %s", job.nachladen(*argv[1:4]))
+        from loipen.schnee import job as schnee_job
+        log.info("Archiv: %s", schnee_job.nachladen(*argv[1:4]))
         return
-    log.info("Loipenblick Version %s startet", get_settings().version)
-    lauf()  # beim Start einmal, damit die Vorschau sofort etwas zeigt
-    scheduler = BlockingScheduler(timezone=get_settings().timezone)
-    scheduler.add_job(tick, "cron", minute=0)
-    scheduler.add_job(schnee_tick, "cron", minute=20, max_instances=1, coalesce=True)  # Schneekarte (S1)
-    scheduler.add_job(sicherung, "cron", hour=3, minute=30)  # taeglich, B14
-    scheduler.start()
+    starte(betrieb)
+
+
+def main(argv: list[str], mailer=None, sender=None) -> None:
+    """B34: Log in Datei und Container-Protokoll; Absturz und Fehler per Mail (und Push, falls eingerichtet)."""
+    settings = get_settings()
+    dauerbetrieb = not argv
+    betrieb = Betriebslog(settings, mailer=mailer if mailer is not None else smtp_mailer(settings),
+                          sender=sender if sender is not None else ntfy_sender(settings.ntfy_url))
+    betrieb.richte_ein(marke=dauerbetrieb)
+    vorher = None
+    if dauerbetrieb:
+        try:
+            vorher = signal.signal(signal.SIGTERM, _beenden)
+        except ValueError:  # pragma: no cover - nur im Hauptthread moeglich
+            pass
+    try:
+        befehl(argv, betrieb)
+    except (SystemExit, KeyboardInterrupt):
+        log.info("Worker wird beendet")
+        raise
+    except BaseException as ex:
+        betrieb.absturz(ex)
+        raise
+    finally:
+        betrieb.schliesse()
+        if vorher is not None:
+            signal.signal(signal.SIGTERM, vorher)
 
 
 if __name__ == "__main__":

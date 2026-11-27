@@ -15,7 +15,7 @@
 {% if l.parken or gebuehr.eur or gebuehr.text %}
 <h2>Parken</h2>
 {% if l.parken %}<ul>
-{% for p in l.parken[:4] %}  <li>{{ p.name or "Parkplatz" }}{% if p.entfernung_m %} ({{ p.entfernung_m }} m vom Einstieg){% endif %}{% if p.gebuehr_text %}: {{ p.gebuehr_text }}{% elif p.gebuehr_eur_tag is not none %}: {{ "%.2f"|format(p.gebuehr_eur_tag)|replace(".", ",") }} € am Tag{% endif %}</li>
+{% for p in l.parken[:4] %}  <li>{{ p.name or "Parkplatz" }}{% if p.entfernung_m %} ({{ p.entfernung_m }} m vom Einstieg){% endif %}{% if p.gebuehr_text %}: {{ p.gebuehr_text }}{% elif p.gebuehr_eur_tag is number %}: {{ "%.2f"|format(p.gebuehr_eur_tag)|replace(".", ",") }} € am Tag{% endif %}</li>
 {% endfor %}</ul>{% endif %}
 {% if gebuehr.eur or gebuehr.text %}<p>Loipengebühr in {{ g.name }}: {% if gebuehr.eur %}{{ "%.2f"|format(gebuehr.eur)|replace(".", ",") }} €{% endif %}{% if gebuehr.text %} {{ gebuehr.text }}{% endif %}</p>{% endif %}
 {% endif %}

@@ -228,8 +228,20 @@ def erzeuge(
             alter_stand = {}
     inhalte: dict[str, str] = {}
     indexiert: list[str] = []
+    fehlerhafte = 0
     for s in seiten_mod.baue_seiten(daten, basis):
-        inhalt = Markup(env.get_template(s["vorlage"]).render(**s["werte"]))
+        try:
+            inhalt = Markup(env.get_template(s["vorlage"]).render(**s["werte"]))
+        except Exception:  # B34: eine kaputte Einzelseite darf weder den Lauf noch die Startseite verhindern
+            fehlerhafte += 1
+            if fehlerhafte <= 3:
+                log.exception("Seite %s nicht erzeugt, die alte bleibt stehen", s["pfad"])
+            alt = site / s["pfad"] / "index.html"
+            if alt.is_file():
+                inhalte[s["pfad"]] = alt.read_text(encoding="utf-8")
+                if s["index"]:
+                    indexiert.append(s["pfad"])
+            continue
         krumen = [("Loipenblick", "./#/"), ("Alle Gebiete", "gebiete/")]
         if s["vorlage"] == "gebiet.html.j2":
             krumen.append((s["werte"]["g"]["name"], s["pfad"]))
@@ -247,6 +259,8 @@ def erzeuge(
         inhalte[s["pfad"]] = html
         if s["index"]:
             indexiert.append(s["pfad"])
+    if fehlerhafte:
+        log.error("%d Einzelseiten nicht erzeugt (Fehler in der Vorlage)", fehlerhafte)
     neuer_stand = seiten_mod.lastmod(alter_stand, inhalte, jetzt.astimezone(ZoneInfo("Europe/Berlin")).date().isoformat())
     for pfad in set(alter_stand) - set(neuer_stand):  # entfallene Seiten auch in der Vorschau entfernen
         alt = site / pfad / "index.html"
