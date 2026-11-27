@@ -150,6 +150,9 @@ def abgleichen(session: Session, sources: dict, gebiete: dict, config_dir: Path 
         gebiet.webcams = _json(g.get("webcams")) or None
         gebiet.verleih = _json(osmauszug.zusammen(g.get("verleih"), aus_osm.get("verleih"))) or None
         gebiet.hand_geprueft_am = g.get("geprueft_am")
+        # D25: Hunderegel und beleuchtete Loipen, fehlt die Angabe, ist sie unbekannt
+        gebiet.hunde = _json(g.get("hunde")) or None
+        gebiet.beleuchtet = _json(g.get("beleuchtet")) or None
         alle[g["slug"]] = gebiet
     session.flush()
 

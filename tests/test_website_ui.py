@@ -491,3 +491,16 @@ def test_u47_anreise_mit_parkplatz_entfernung_und_navigation(seite, basis):
     anreise = seite.locator("#anreise").inner_text()
     assert "noch keiner bekannt" in anreise and "Start der Loipe" in anreise
     assert seite.locator("#anreise a.btn", has_text="Navigation").count() == 1
+
+
+@pytest.mark.req("D25", ak=[1, 2])
+def test_d25_hunderegel_und_beleuchtete_loipen_auf_der_gebietsseite(seite):
+    seite.open("#/gebiet/sachrang")
+    text = seite.locator("#view").inner_text()
+    assert "Beleuchtete Loipe Sachrang" in text and "Di bis Fr 17:30 bis 21:00 Uhr" in text
+    assert seite.locator("#hunde").count() == 0  # keine Angabe: nichts erscheint
+    seite.open("#/gebiet/bayrischzell")
+    assert "nicht erlaubt" in seite.locator("#hunde").inner_text()
+    assert seite.locator(".beleuchtet").count() == 0
+    # Recherche 27.11.2026: Verleih und Webcams als Link (D10, U49)
+    assert "Sportalm Bayrischzell" in seite.locator("#view").inner_text()

@@ -384,3 +384,14 @@ def test_d21_gepflegte_stammdaten_auch_fuer_neue_loipen(tmp_path):
     assert not wende_gepflegte_an(Loipe(source_key="1"), "chiemgau", tmp_path)
     src = Path(ablauf.__file__).read_text(encoding="utf-8")
     assert "wende_gepflegte_an(loipe, quelle.key, STAMMDATEN_DIR)" in src
+
+
+@pytest.mark.req("D25", ak=3)
+def test_d25_saisonpruefung_legt_hunde_und_beleuchtung_vor():
+    from loipen import saison
+    angaben = saison.lade(CONFIG_DIR)
+    hunde = [a for a in angaben if a.art == "Hunde"]
+    licht = [a for a in angaben if a.art == "Beleuchtung"]
+    assert {a.gebiet for a in hunde} >= {"Bayrischzell", "Faistenau"}
+    assert any(a.gebiet == "Sachrang" and a.url == "https://www.aschau.de/langlauf" for a in licht)
+    assert all(a.geprueft_am == "2026-11-27" for a in hunde + licht)

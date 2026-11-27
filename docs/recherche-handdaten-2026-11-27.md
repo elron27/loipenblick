@@ -33,19 +33,22 @@ Merkmale je Loipe: Die Langlaufen-Listen von Tegernsee, Bayrischzell und Fischba
 "Einkehrmöglichkeit" und "Familienfreundlich" ab. Der ATS-Adapter liest diese Haken jetzt als Merkmale
 `einkehr` und `familientauglich` (D21 AK 2), Test `test_d21_merkmale_aus_den_haken_der_liste`.
 
-## Gefunden, aber ohne passendes Feld (nicht eingepflegt)
+## Hunde und Beleuchtung (D25, seit Etappe 2 mit eigenem Feld)
+
+Seit D25 tragen Gebiete `hunde` {erlaubt, text, url, geprueft_am} und `beleuchtet` [{name, zeiten, url, geprueft_am}]; die Gebietsseite zeigt beides unter Anreise. Eingetragen sind die folgenden Befunde.
+
 
 - Hunde verboten: Bayrischzell ("Die Nutzung der Loipen mit Hunden ist nicht gestattet",
   https://www.bayrischzell.de/langlaufen), Faistenau/Hintersee ("Hunde auf der Loipe sind nicht gestattet",
-  https://www.langlaufdorf.at/loipen.html). Das Merkmal `hundeloipe` kennt nur "erlaubt"; ein Verbot je Gebiet
-  hat kein Feld.
+  https://www.langlaufdorf.at/loipen.html).
 - Beleuchtete Loipen: Sachrang ca. 3 km, Di–Fr 17:30–21:00 (https://www.aschau.de/langlauf); Reit im Winkl
   Flutlicht im Langlaufstadion Di und Do 18–20 Uhr (https://www.reitimwinkl.de/langlaufen); Inzell Nachtloipe am
   Campingplatz Di, Do, Fr ab 17 Uhr (https://www.inzell.de/schneebericht); Schwoich SC3a Ganzer-Runde, beleuchtet
   und beschneit, 1,1 km (https://www.kufstein.com/de/aktivitaeten/winter/langlaufloipen-in-schwoich.html);
   Faistenau Kugelberg-Loipe bis 21 Uhr (https://www.langlaufdorf.at/loipen.html). Kaiserwinkl: Loipen zwischen
-  17:30 und 07:00 Uhr gesperrt. Ob unsere Loipen diese als Nachtloipe führen, hängt von der Quelle ab;
-  eine Handzuordnung je Loipe (config/stammdaten/hand.yaml) braucht die source_keys und ist offen.
+  17:30 und 07:00 Uhr gesperrt (nicht eingetragen, weil kein Gebiet mit Licht).
+Weiter ohne Feld:
+
 - Klassisch/Skating: steht bei Aschau je Loipe (Schützenstraße und Sachrang-Rundkurs beides, Prientalloipe nur
   klassisch); die Technik kommt aber aus der Quelle, ein Handfeld fehlt.
 - Ticket-Automaten Bayrischzell: Sportalm, Stocker, Geitau, Bäckeralm, auch per App Parkster.
@@ -66,7 +69,32 @@ feratel (AGB III): Inhalte nur zur Information der Nutzer, jede andere Verwertun
 öffentlichen Seiten sind nicht geregelt. Wir verlinken nur, wie bei den Bayrischzell-Webcams seit 24.11.2026.
 Vor der öffentlichen Seite gehört das zur Backlog-Prüfung der Nutzungsbedingungen.
 
+## Etappe 2 (27.11.2026): Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Alpbachtal
+
+| Gebiet | Eingepflegt |
+|---|---|
+| Berchtesgaden | Webcams Lockstein (feratel), Jenner Süd (foto-webcam.eu) |
+| Schönau am Königssee | Webcam Jennerbahn (feratel) |
+| Ramsau | Webcam Hochschwarzeck (feratel) |
+| Hohe Salve | Webcam Gipfel Hohe Salve; keine Loipengebühr, Parken kostenlos; beleuchtet: Trainingsloipen Wörgl und Angerberg bis 21 Uhr |
+| Pillerseetal | beleuchtet: Nachtloipe Waidring, Nachtloipe Fieberbrunn, Dorfloipe Hochfilzen (ohne Zeiten) |
+| St. Johann in Tirol | beleuchtet: Trainings-Nachtloipe (ohne Zeiten) |
+| Ellmau | Webcams Hartkaiserbahn, Panoramakamera |
+| Söll | Webcam Bergstation Gondelbahn |
+
+Gefunden, aber nicht eingepflegt:
+
+- Berchtesgadener Land: keine Langlaufverleihe genannt; Detailseiten Schönau und Aschauerweiher gaben
+  Serverfehler. Taubensee (Ramsau) und Scheffau-Schellenberg: klassisch und Skating. Längenangaben
+  widersprechen sich auf den Seiten (Taubensee 4 bzw. 5,6 km, Scheffau 5 bzw. 7,7 km).
+- Hohe Salve: Sport Fuchs (Itter), Skiverleih Kurz und Intersport Oberhauser (Hopfgarten) sind gelistet, aber
+  ohne ausdrückliches Langlauf; deshalb nicht übernommen.
+- Wilder Kaiser: Langlaufverleih ausdrücklich nur Bike Sport Knaubert in Scheffau (kein eigenes Gebiet bei uns);
+  beleuchtete Dorfloipe Scheffau ohne Zeiten. Alle Loipen klassisch und Skating. Keine Gebühr genannt.
+- Alpbachtal, Wildschönau, Kitzbühel, Jochberg, Pillerseetal und St. Johann: eigene Seiten nicht erreicht.
+- Hunde: auf keiner Seite dieser Etappe erwähnt.
+
 ## Nächste Etappe
 
-Berchtesgadener Land, Kitzbüheler Alpen, Wilder Kaiser, Alpbachtal; dazu die Verleih-Lücken im Tegernseer Tal
-und in Ruhpolding/Inzell (z. B. über Sportgeschäfte vor Ort).
+Alpbachtal und Wildschönau über die eigenen Seiten, Pillerseetal/St. Johann (Webcams, Verleih), dazu die
+Verleih-Lücken im Tegernseer Tal, Ruhpolding, Inzell und Berchtesgaden.

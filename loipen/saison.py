@@ -46,6 +46,14 @@ def handangaben(gebiete: list[dict], stammdaten: dict | None = None) -> list[Ang
         for v in g.get("verleih") or []:
             liste.append(Angabe(name, "Verleih", v.get("name") or "Verleih", v.get("url"),
                                 str(v.get("geprueft_am") or geprueft or "") or None))
+        # D25 AK 3: Hunderegel und beleuchtete Loipen
+        hunde = g.get("hunde") or {}
+        if hunde:
+            liste.append(Angabe(name, "Hunde", hunde.get("text") or ("erlaubt" if hunde.get("erlaubt") else "nicht erlaubt"),
+                                hunde.get("url"), str(hunde.get("geprueft_am") or geprueft or "") or None))
+        for b in g.get("beleuchtet") or []:
+            liste.append(Angabe(name, "Beleuchtung", b.get("name") or "beleuchtete Loipe", b.get("url"),
+                                str(b.get("geprueft_am") or geprueft or "") or None))
     for quelle, loipen in ((stammdaten or {}).get("quellen") or {}).items():
         for sk, w in (loipen or {}).items():
             liste.append(Angabe(f"{quelle}/{sk}", "Stammdaten", ", ".join(sorted(k for k in w if k not in (

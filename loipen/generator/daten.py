@@ -372,6 +372,9 @@ def baue(session: Session, jetzt: datetime, config_dir: Path, stale_days: int = 
                 # D9, D10, U49: Webcams (von Hand, sonst aus den Loipen des Gebiets) und Skiverleih, nur als Link
                 "webcams": _webcams(g, loipen),
                 "verleih": g.verleih or [],
+                # D25: Hunderegel (None = unbekannt) und beleuchtete Loipen
+                "hunde": g.hunde,
+                "beleuchtet": g.beleuchtet or [],
                 # B32 AK 3: Pruefdatum der Handangaben; aelter als eine Saison zeigt die Seite "Stand Winter ..."
                 "hand_geprueft_am": g.hand_geprueft_am.isoformat() if g.hand_geprueft_am else None,
                 "schnee": {**schnee, "messtag": schnee["messtag"].isoformat() if schnee["messtag"] else None},

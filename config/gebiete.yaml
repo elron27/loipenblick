@@ -428,6 +428,12 @@ gebiete:
   lat: 47.672
   lon: 12.013
   tourist_url: https://www.bayrischzell.de
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  hunde:
+    erlaubt: false
+    text: 'nicht erlaubt'
+    url: https://www.bayrischzell.de/langlaufen
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   verleih:
   - name: 'Sportalm Bayrischzell (Ski- und Langlaufverleih)'
@@ -552,6 +558,12 @@ gebiete:
   lat: 47.695
   lon: 12.266
   tourist_url: https://www.aschau.de
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'Beleuchtete Loipe Sachrang (ca. 3 km, klassisch und Skating)'
+    zeiten: 'Di bis Fr 17:30 bis 21:00 Uhr'
+    url: https://www.aschau.de/langlauf
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   webcams:
   - name: 'Aschau, Kampenwandbahn (feratel, Nachbarort)'
@@ -642,6 +654,12 @@ gebiete:
   lat: 47.677
   lon: 12.471
   tourist_url: https://www.reitimwinkl.de/schneebericht
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'Langlaufstadion (Flutlicht)'
+    zeiten: 'Di und Do 18 bis 20 Uhr'
+    url: https://www.reitimwinkl.de/langlaufen
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   webcams:
   - name: 'Reit im Winkl Ort (panomax)'
@@ -700,6 +718,12 @@ gebiete:
   lat: 47.763
   lon: 12.752
   tourist_url: https://www.inzell.de/schneebericht
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'Nachtloipe am Campingplatz'
+    zeiten: 'Di, Do und Fr ab 17 Uhr'
+    url: https://www.inzell.de/schneebericht
+    geprueft_am: 2026-11-27
   nachbarn:
   - ruhpolding
   - siegsdorf
@@ -1034,6 +1058,11 @@ gebiete:
   lat: 47.541
   lon: 12.141
   tourist_url: https://www.kufstein.com
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'SC3a Ganzer-Runde (1,1 km, teilweise beschneit)'
+    url: https://www.kufstein.com/de/aktivitaeten/winter/langlaufloipen-in-schwoich.html
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   webcams:
   - name: 'Biathlonzentrum Schwoich (Langlauf-Webcam)'
@@ -1182,6 +1211,14 @@ gebiete:
   lat: 47.514
   lon: 12.293
   tourist_url: https://www.wilderkaiser.info
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Ellmau, Bergstation Hartkaiserbahn'
+    url: https://www.wilderkaiser.info/de/webcam-livecam-ellmau-hartkaiser.html
+    geprueft_am: 2026-11-27
+  - name: 'Panoramakamera Ellmau'
+    url: https://www.wilderkaiser.info/de/webcam-livecam-panoramakamera-ellmau.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - going
   - soell
@@ -1212,6 +1249,11 @@ gebiete:
   lat: 47.503
   lon: 12.194
   tourist_url: https://www.wilderkaiser.info
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Söll, Bergstation Gondelbahn (Hexenwasser)'
+    url: https://www.wilderkaiser.info/de/webcam-livecam-hexenwasser-soell-hohe-salve.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - ellmau
   - bad-haering
@@ -1241,6 +1283,25 @@ gebiete:
   lat: 47.49
   lon: 12.08
   tourist_url: https://www.kitzbueheler-alpen.com/de/hosa/
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Gipfel Hohe Salve (feratel)'
+    url: https://webtv.feratel.com/webtv/?design=v5&cam=5687
+    geprueft_am: 2026-11-27
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: alle Loipen der Region Hohe Salve inklusive Parkplätze kostenlos'
+    url: https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/loipen.html
+    geprueft_am: 2026-11-27
+  beleuchtet:
+  - name: 'Trainingsloipe Wörgl (1,1 km)'
+    zeiten: 'täglich bis 21 Uhr'
+    url: https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/loipen.html
+    geprueft_am: 2026-11-27
+  - name: 'Trainingsloipe Angerberg'
+    zeiten: 'bis ca. 21 Uhr'
+    url: https://www.kitzbueheler-alpen.com/de/hosa/wi/langlaufen/loipen.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - brixental
   - soell
@@ -1256,6 +1317,17 @@ gebiete:
   lat: 47.505
   lon: 12.6
   tourist_url: https://www.kitzbueheler-alpen.com/de/pital/
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'L15 a Nachtloipe Waidring (1,5 km)'
+    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+    geprueft_am: 2026-11-27
+  - name: 'L 6.2 Nachtloipe Fieberbrunn (1,8 km)'
+    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+    geprueft_am: 2026-11-27
+  - name: 'L13.1 beleuchtete Dorfloipe Hochfilzen (1,7 km)'
+    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - st-johann-in-tirol
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
@@ -1270,6 +1342,11 @@ gebiete:
   lat: 47.525
   lon: 12.425
   tourist_url: https://www.kitzbueheler-alpen.com/de/stjo/
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  beleuchtet:
+  - name: 'Trainings-Nachtloipe (2,5 km)'
+    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - going
   - pillerseetal
@@ -1285,6 +1362,17 @@ gebiete:
   lat: 47.774
   lon: 13.24
   tourist_url: https://www.langlaufdorf.at/
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  hunde:
+    erlaubt: false
+    text: 'nicht erlaubt (Futterwiesen)'
+    url: https://www.langlaufdorf.at/loipen.html
+    geprueft_am: 2026-11-27
+  beleuchtet:
+  - name: 'Kugelberg-Loipe (5 km, klassisch und Skating)'
+    zeiten: 'täglich ab Dämmerung bis 21 Uhr'
+    url: https://www.langlaufdorf.at/loipen.html
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   webcams:
   - name: 'Faistenau (panomax)'
@@ -1313,6 +1401,12 @@ gebiete:
   lat: 47.718
   lon: 13.278
   tourist_url: https://www.langlaufdorf.at/
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  hunde:
+    erlaubt: false
+    text: 'nicht erlaubt (Futterwiesen)'
+    url: https://www.langlaufdorf.at/loipen.html
+    geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
   webcams:
   - name: 'Loipe Hintersee (panomax)'
@@ -1341,6 +1435,11 @@ gebiete:
   lat: 47.61
   lon: 12.978
   tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-schoenau-am-koenigssee
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Jennerbahn (feratel)'
+    url: https://webtv.feratel.com/webtv/?cam=3004&design=v5
+    geprueft_am: 2026-11-27
   nachbarn:
   - berchtesgaden
   - ramsau
@@ -1351,6 +1450,11 @@ gebiete:
   lat: 47.63
   lon: 12.871
   tourist_url: https://www.berchtesgaden.de/touren/langlaufloipen-taubensee-ramsau
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Hochschwarzeck Ramsau (feratel)'
+    url: https://webtv.feratel.com/webtv/?cam=3006&design=v5
+    geprueft_am: 2026-11-27
   nachbarn:
   - schoenau-am-koenigssee
 - slug: bischofswiesen
@@ -1370,6 +1474,14 @@ gebiete:
   lat: 47.626
   lon: 13.044
   tourist_url: https://www.berchtesgaden.de/winter/langlaufen
+  # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  webcams:
+  - name: 'Lockstein Berchtesgaden (feratel)'
+    url: https://webtv.feratel.com/webtv/?cam=3007&design=v5
+    geprueft_am: 2026-11-27
+  - name: 'Jenner Süd (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/jenner-sued/
+    geprueft_am: 2026-11-27
   nachbarn:
   - bischofswiesen
   - marktschellenberg
