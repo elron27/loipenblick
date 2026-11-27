@@ -224,3 +224,42 @@ def test_u36_tiroler_loipe_nennt_den_grund_ohne_strecke(site):
     assert "robots.txt" in l["strecke_hinweis"]
     vils = next(l for l in gebiet(site, "tannheimer-tal")["loipen"] if "Vilsalpsee" in l["name"])
     assert vils["strecke_hinweis"] is None
+
+
+# ---------- Bayerischer Wald und Fichtelgebirge (tourinfra, P44) ----------
+# Schnappschuss vom 27.11.2026 (Runde 28): vor Saisonbeginn, alles geschlossen oder unbekannt.
+
+@pytest.mark.req("P44", ak=1)
+def test_p44_bayerischer_wald_alle_orte_zugeordnet():
+    r = lauf("bayerischer-wald", TourinfraAdapter())
+    assert len(r.loipen) == 253
+    assert not [w for w in r.warnungen if "gebiet_map" in w]
+    assert len({d.gebiet_slug for d in r.loipen}) == 11
+    assert {d.status for d in r.loipen} <= {Status.GESCHLOSSEN, Status.UNBEKANNT}
+    assert sum(1 for d in r.loipen if d.verlauf) >= 250
+    assert sum(d.laenge_km or 0 for d in r.loipen) == pytest.approx(1461, abs=15)
+    keys = {q["key"] for q in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"]}
+    assert "arberland" not in keys  # Teilmenge von bayerischer-wald
+
+
+@pytest.mark.req("P44", ak=2)
+def test_p44_fichtelgebirge_alle_orte_zugeordnet():
+    r = lauf("fichtelgebirge", TourinfraAdapter())
+    assert len(r.loipen) == 75
+    assert not [w for w in r.warnungen if "gebiet_map" in w]
+    assert {d.gebiet_slug for d in r.loipen} == {"ochsenkopf", "waldstein", "koesseine-luisenburg", "steinwald", "kornberg"}
+
+
+@pytest.mark.req("P44", ak=3)
+def test_p44_neue_quellen_nur_test_und_gebiete_vollstaendig():
+    quellen = {q["key"]: q for q in lade_yaml(CONFIG_DIR / "sources.yaml")["quellen"]}
+    for key in ("bayerischer-wald", "fichtelgebirge"):
+        assert quellen[key]["nutzung"]["erlaubnis"] == "nur_test"
+        assert quellen[key]["rang"] == 2
+    g = lade_yaml(CONFIG_DIR / "gebiete.yaml")
+    regionen = {r["slug"]: r for r in g["regionen"]}
+    neu = [x for x in g["gebiete"] if x["region"] in ("bayerischer-wald", "fichtelgebirge")]
+    assert len(neu) == 16
+    for x in neu:
+        assert 48.5 < x["lat"] < 50.3 and 11.5 < x["lon"] < 13.9
+        assert regionen[x["region"]]["land"] == "DE"
