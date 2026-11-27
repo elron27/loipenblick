@@ -422,7 +422,7 @@ function seiteGebiet(slug) {
     (g.parkplaetze.length ? g.parkplaetze.map(function (p) { return '<li class="glass"><span><b>' + esc(p.name) + "</b><br><span class=\"fine\">Gebühr: " + esc(p.gebuehr_text || (p.gebuehr_eur_tag != null ? zahl(p.gebuehr_eur_tag, 2) + " € pro Tag" : "unbekannt")) + (p.geschaetzt ? " · Lage ungefähr (Loipenstart)" : "") + '</span></span><a class="btn" href="' + esc(navLink(p.lat, p.lon)) + '" rel="noopener">Navigation</a></li>'; }).join("") : (g.loipen.some(function (l) { return l.parken && l.parken.length; }) ? '<li class="glass"><span>Parkplätze</span><b>bei den einzelnen Loipen</b></li>' : '<li class="glass"><span>Parkplätze</span><b>noch nicht erfasst</b></li>')) +
     (g.haltestellen.length ? g.haltestellen.map(haltestelleHtml).join("") : '<li class="glass"><span>Haltestelle</span><b>keine bekannt</b></li>') +
     ((g.verleih || []).length ? g.verleih.map(verleihHtml).join("") : '<li class="glass"><span>Skiverleih</span><b>keiner bekannt</b></li>') +
-    "</ul>" + standHand(g) + webcamsHtml(g) + '<h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
+    hundeBeleuchtungHtml(g) + "</ul>" + standHand(g) + webcamsHtml(g) + '<h2 class="sec">Loipen</h2><div class="lg">' + g.loipen.map(function (l) { l.entf = dist(S.ort, l.lat != null ? l : g); return loipeKarte(l, false); }).join("") + "</div>" +
     (S.idx.abo || S.idx.push ? '<h2 class="sec">Auf dem Laufenden bleiben</h2>' + aboFormular("g:" + g.slug, "eine Loipe im Gebiet " + g.name) + pushBlock([], g) : "");
   view.innerHTML = h;
 }
@@ -538,6 +538,16 @@ function verleihHtml(v) {
   if (v.herkunft === "osm") teile.push("laut OpenStreetMap");
   return '<li class="glass"><span><b>' + esc(v.name) + '</b><br><span class="fine">Skiverleih' + (teile.length ? " · " + esc(teile.join(" · ")) : "") + "</span></span>" +
     (v.url ? '<a class="btn" href="' + esc(safeUrl(v.url)) + '" rel="noopener">Website</a>' : v.lat != null ? '<a class="btn" href="' + esc(navLink(v.lat, v.lon)) + '" rel="noopener">Navigation</a>' : "") + "</li>";
+}
+/* D25: Hunderegel und beleuchtete Loipen je Gebiet, nur wenn bekannt */
+function hundeBeleuchtungHtml(g) {
+  var h = "";
+  if (g.hunde) h += '<li class="glass" id="hunde"><span>Hunde auf den Loipen</span><b>' + esc(g.hunde.text || (g.hunde.erlaubt ? "erlaubt" : "nicht erlaubt")) + "</b></li>";
+  (g.beleuchtet || []).forEach(function (b) {
+    h += '<li class="glass beleuchtet"><span><b>' + esc(b.name) + '</b><br><span class="fine">beleuchtet' + (b.zeiten ? " · " + esc(b.zeiten) : "") + "</span></span>" +
+      (b.url ? '<a class="btn" href="' + esc(safeUrl(b.url)) + '" rel="noopener">Quelle</a>' : "") + "</li>";
+  });
+  return h;
 }
 function webcamsHtml(g) {
   if (!(g.webcams || []).length) return "";

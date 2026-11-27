@@ -169,6 +169,9 @@ class Gebiet(Base):
     verleih: Mapped[list | None] = mapped_column(JSON)
     # B32: Pruefdatum der Handangaben des Gebiets (Gebuehr, Parkplaetze, Webcams, Verleih)
     hand_geprueft_am: Mapped[date | None] = mapped_column(Date)
+    # D25: Hunderegel {erlaubt, text, url, geprueft_am} und beleuchtete Loipen [{name, zeiten, url, geprueft_am}]
+    hunde: Mapped[dict | None] = mapped_column(JSON)
+    beleuchtet: Mapped[list | None] = mapped_column(JSON)
 
     region: Mapped[Region] = relationship(back_populates="gebiete")
     loipen: Mapped[list["Loipe"]] = relationship(back_populates="gebiet")
