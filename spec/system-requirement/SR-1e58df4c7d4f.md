@@ -17,6 +17,7 @@ packages:
 based-on:
   - { id: a2715ad5-85dd-40c4-a964-8148c8fe3659, version: n2:cd357b270c742bf5, title: "Quellen ohne Zustimmung erst testen, dann mit Vorführung fragen" }
   - { id: 3cb681d8-75d4-404f-9ca6-fd66c8537995, version: n2:edb6bc4736c1e9b9, title: "Kaiserwinkl freigegeben, Widget-Klärung abwarten" }
+  - { id: 9f18f7d9-ccd7-488d-8010-8e941ad9904b, version: n2:f6b241029e71db79, title: "Seefeld-Loipenbericht freigegeben, tourinfra bleibt ausstehend" }
 derives-from:
   - { id: 914f2148-aa61-463c-839d-0cd4039bc354, version: n2:946e559473e10418, title: Daten fair und rechtlich sauber übernehmen }
 ---

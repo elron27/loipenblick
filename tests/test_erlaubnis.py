@@ -149,3 +149,45 @@ def test_b31_kaiserwinkl_loipen_oeffentlich_mit_quellangabe_und_link(session, tm
     assert all(l["quelle"]["url"].startswith("https://www.kaiserwinkl.com/") for l in kw)
     hinweise = (tmp_path / "hinweise.html").read_text(encoding="utf-8")
     assert "Tourismusverband Kaiserwinkl (Loipenbericht)" in hinweise and 'href="https://www.kaiserwinkl.com"' in hinweise
+
+
+@pytest.mark.req("B31", ak=2)
+def test_b31_seefeld_freigegeben_mit_beleg():
+    """Tourismusverband Seefeld 27.11.2026: Loipenstatus wie beschrieben mit Quellenangabe und Link (E-45)."""
+    sources = lade_yaml(CONFIG_DIR / "sources.yaml")
+    sf = next(q for q in sources["quellen"] if q["key"] == "seefeld")
+    assert sf["nutzung"]["erlaubnis"] == "liegt_vor"
+    assert "seefeld.com" in sf["nutzung"]["bedingung"]
+    beleg = (CONFIG_DIR.parent / sf["nutzung"]["beleg"]).read_text(encoding="utf-8")
+    assert "27.11.2026" in beleg and "Loipenstatus wie beschrieben auf loipen-blick.de anzeigen" in beleg
+    assert not re.search(r"\+\d{2}[\d ]{6,}", beleg), "keine Telefonnummern im Beleg"
+    assert "Lackner" not in beleg and "Bahnhofplatz" not in beleg, "kein Personenname, keine Anschrift im Beleg"
+    assert "seefeld" not in nur_test_quellen(sources)
+    kontakte = (CONFIG_DIR.parent / "docs" / "kontaktliste.md").read_text(encoding="utf-8")
+    zeile = next(z for z in kontakte.splitlines() if z.startswith("| TVB Olympiaregion Seefeld"))
+    assert "Erlaubnis am 27.11.2026" in zeile
+
+
+@pytest.mark.req("B31", ak=6)
+def test_b31_seefeld_tourinfra_nicht_mit_freigegeben():
+    """Die Zusage nennt nur den Loipenbericht auf seefeld.com; der tourinfra-Loipenmanager bleibt ausstehend."""
+    sources = lade_yaml(CONFIG_DIR / "sources.yaml")
+    st = next(q for q in sources["quellen"] if q["key"] == "seefeld-tourinfra")
+    assert st["nutzung"].get("erlaubnis", "ausstehend") == "ausstehend"
+
+
+@pytest.mark.req("B31", ak=6)
+def test_b31_seefeld_loipen_oeffentlich_mit_quellangabe_und_link(session, tmp_path):
+    lade_alle_fixtures(session, JETZT_FIXTURES)
+    generator.erzeuge(session, tmp_path, JETZT_FIXTURES, oeffentlich=True, rechtliches=RECHT)
+    index = json.loads((tmp_path / "daten.json").read_text(encoding="utf-8"))
+    name = "Olympiaregion Seefeld (Loipenbericht)"
+    loipen = [l for r in index["regionen"]
+              for g in json.loads((tmp_path / r["datei"]).read_text(encoding="utf-8"))["gebiete"]
+              for l in g["loipen"]]
+    fuehrend = [l["quelle"] for l in loipen if l["quelle"]["name"] == name]
+    auch = [a for l in loipen for a in l["auch_bei"] if a["quelle"] == name]
+    assert fuehrend and auch, "Seefeld-Loipenbericht fehlt auf der oeffentlichen Seite"
+    assert all(q["url"].startswith("https://www.seefeld.com/") for q in fuehrend + auch)
+    hinweise = (tmp_path / "hinweise.html").read_text(encoding="utf-8")
+    assert name in hinweise and 'href="https://www.seefeld.com"' in hinweise
