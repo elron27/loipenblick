@@ -94,7 +94,22 @@ Gefunden, aber nicht eingepflegt:
 - Alpbachtal, Wildschönau, Kitzbühel, Jochberg, Pillerseetal und St. Johann: eigene Seiten nicht erreicht.
 - Hunde: auf keiner Seite dieser Etappe erwähnt.
 
+## Etappe 3 (27.11.2026): Pillerseetal, Alpbachtal, Wildschönau
+
+| Gebiet | Eingepflegt |
+|---|---|
+| Pillerseetal | Loipengebühr Tageskarte 10 € (beim Loipenbetreuer 14 €), Saisonkarte 80 €; Hunde nicht erlaubt; Nachtloipe Fieberbrunn täglich bis 21 Uhr |
+| Alpbachtal | Webcam Wiedersberger Horn (panomax) |
+| Wildschönau | Verleih Ski & Board Margreiter (Niederau, Auffach, Oberau) |
+
+Gefunden, aber nicht eingepflegt:
+
+- Pillerseetal: die Verleih-Seite listet Langlaufschulen (Waidring, St. Ulrich, Fieberbrunn, Hochfilzen), sagt aber
+  nicht, wer Ski verleiht. Loipen täglich 8 bis 18 Uhr, Nachtloipen ausgenommen.
+- Alpbachtal: keine Gebühr, kein Verleih, keine Hunde- oder Lichtangabe; Gesamtlänge widersprüchlich (70 bzw. 100 km).
+- Wildschönau: Skisport Thaler nennt nur "Leihausrüstung" ohne Langlauf; Webcams ohne Detail-Link.
+
 ## Nächste Etappe
 
-Alpbachtal und Wildschönau über die eigenen Seiten, Pillerseetal/St. Johann (Webcams, Verleih), dazu die
-Verleih-Lücken im Tegernseer Tal, Ruhpolding, Inzell und Berchtesgaden.
+Webcams Pillerseetal/St. Johann, Verleih-Lücken im Tegernseer Tal, Ruhpolding, Inzell und Berchtesgaden,
+danach Seefeld, Leutasch, Achensee und Zillertal.

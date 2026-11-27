@@ -1318,12 +1318,23 @@ gebiete:
   lon: 12.6
   tourist_url: https://www.kitzbueheler-alpen.com/de/pital/
   # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
+  loipengebuehr:
+    eur: 10.0
+    text: 'Tageskarte 10 € (beim Loipenbetreuer 14 €), Saisonkarte 80 €, bis 14 Jahre frei'
+    url: https://www.kitzbueheler-alpen.com/de/pital/wi/langlaufen/tarife.html
+    geprueft_am: 2026-11-27
+  hunde:
+    erlaubt: false
+    text: nicht erlaubt
+    url: https://www.kitzbueheler-alpen.com/de/pital/wi/langlaufen/regeln.html
+    geprueft_am: 2026-11-27
   beleuchtet:
   - name: 'L15 a Nachtloipe Waidring (1,5 km)'
     url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
     geprueft_am: 2026-11-27
   - name: 'L 6.2 Nachtloipe Fieberbrunn (1,8 km)'
-    url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+    zeiten: täglich bis 21 Uhr
+    url: https://www.tirol.at/aktivitaeten/sport/langlaufen/loipen/l-62-nachtloipe-fieberbrunn
     geprueft_am: 2026-11-27
   - name: 'L13.1 beleuchtete Dorfloipe Hochfilzen (1,7 km)'
     url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
@@ -1504,6 +1515,11 @@ gebiete:
   lat: 47.442
   lon: 11.886
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 3
+  webcams:
+  - name: 'Wiedersberger Horn, Alpbach (panomax)'
+    url: https://alpbachtal.panomax.com/alpbachdorf
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '12015'
@@ -1516,6 +1532,12 @@ gebiete:
   lat: 47.42
   lon: 12.091
   tourist_url: https://www.tirol.at
+  # Handrecherche 27.11.2026, Etappe 3 (Langlaufverleih nicht in der Wildschönau Card)
+  verleih:
+  - name: 'Ski & Board Margreiter, Niederau (auch Auffach und Oberau)'
+    url: https://www.wildschoenau.com/en/activities/winter/cross-country/Ski-Board-Margreiter-in-Niederau_isd_89461
+    quelle: https://www.wildschoenau.com/en/activities/winter/cross-country
+    geprueft_am: 2026-11-27
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '12015'
