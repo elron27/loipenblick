@@ -22,7 +22,11 @@ try {
         substr((string) ($_POST['g'] ?? ''), 0, 80),
         substr((string) ($_POST['l'] ?? ''), 0, 12),
         (string) ($_SERVER['REMOTE_ADDR'] ?? ''),
-        (string) ($_SERVER['HTTP_USER_AGENT'] ?? '')
+        (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''),
+        null,
+        ($_POST['e'] ?? '') === '1'
+            ? ['herkunft' => substr((string) ($_POST['r'] ?? ''), 0, 100), 'geraet' => substr((string) ($_POST['d'] ?? ''), 0, 10)]
+            : null
     );
 } catch (Throwable $e) {
     error_log('Loipenblick-Zaehler: ' . $e->getMessage());

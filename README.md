@@ -159,7 +159,7 @@ Neben der App (alles hinter `#/`) schreibt der Generator einfache HTML-Seiten oh
 
 `LOIPEN_ZAEHLER_PASSWORT=<mindestens 12 Zeichen>` in die `.env`, Container neu erstellen. Dann lädt das NAS
 den Ordner `zaehler/` mit hoch, die App meldet jeden Ansichtswechsel, und unter `<Seite>/zaehler/auswertung.php`
-siehst du mit dem Passwort Besucher, Aufrufe, Gebiete und Loipen je Monat. Gespeichert werden nur Summen je Tag
+siehst du mit dem Passwort Besucher, Aufrufe, Herkunft (z. B. Google, bergfex, direkt), Geräte, Gebiete und Loipen je Monat. Gespeichert werden nur Summen je Tag
 in `zaehler/daten/` (gesperrt); die IP-Adresse wird nie gespeichert, keine Cookies, kein Banner. Wer sich auf der
 Auswertung anmeldet, zählt in diesem Browser nicht mehr mit; Bots und automatische Browser zählen nie.
 Test- und Release-Seite zählen getrennt. Die Datenschutzerklärung bekommt automatisch einen Abschnitt.

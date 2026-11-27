@@ -1049,7 +1049,7 @@ function spendenZeigen() {
 /* B13: Seitenaufruf an den Besucherzaehler melden, ohne Cookie und ohne etwas zu speichern. Nur wenn der
    Webspace zaehlt (daten.json "zaehler"), nicht in der Beispielansicht, nicht fuer automatische Browser und
    nicht in Browsern, die die Auswertung ausgenommen hat. Filter und Sortierung zaehlen nicht als neuer Aufruf. */
-var gezaehlt = null;
+var gezaehlt = null, eingestiegen = false;
 function zaehlen(p) {
   if (!S.idx || !S.idx.zaehler || S.demo || p === gezaehlt || navigator.webdriver || !navigator.sendBeacon) return;
   gezaehlt = p;
@@ -1060,6 +1060,12 @@ function zaehlen(p) {
   d.append("s", seite);
   if (seite === "gebiet") d.append("g", decodeURIComponent(p.slice(8)));
   if (seite === "loipe") d.append("l", decodeURIComponent(p.slice(7)));
+  if (!eingestiegen) {  /* nur beim ersten Aufruf je Seitenladen: woher (nur der Name der Seite) und welches Geraet */
+    eingestiegen = true;
+    var r = "", intern = false;
+    try { var u = new URL(document.referrer); if (u.host === location.host) intern = true; else r = u.protocol.indexOf("http") === 0 ? u.hostname : "app"; } catch (e) {}
+    if (!intern) d.append("e", "1"), d.append("r", r), d.append("d", alsApp() ? "app" : /ipad|tablet/i.test(navigator.userAgent) || (/android/i.test(navigator.userAgent) && !/mobile/i.test(navigator.userAgent)) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ? "tablet" : /mobi|iphone|android/i.test(navigator.userAgent) ? "handy" : "pc");
+  }
   try { navigator.sendBeacon("zaehler/z.php", d); } catch (e) {}
 }
 function route() {

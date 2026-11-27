@@ -218,7 +218,8 @@ def test_b13_mit_passwort_zaehler_ordner_und_datenschutz(session, tmp_path):
     ziele = (tmp_path / "zaehler" / "ziele.php").read_text(encoding="utf-8")
     assert '\\"kreuth\\"' in ziele or '"kreuth"' in ziele
     text = (tmp_path / "datenschutz.html").read_text(encoding="utf-8")
-    for teil in ("Besucherzähler", "keine Cookies", "jeden Tag neu", "nicht gespeichert", "Art. 6 Abs. 1 lit. f DSGVO"):
+    for teil in ("Besucherzähler", "keine Cookies", "jeden Tag neu", "nicht gespeichert", "Art. 6 Abs. 1 lit. f DSGVO",
+                 "von der du kommst", "ohne Suchbegriffe", "Art des Geräts"):
         assert teil in text, teil
     assert "RewriteRule ^zaehler/daten/ - [F]" in (tmp_path / ".htaccess").read_text()
     # wird der Zaehler abgeschaltet, verschwindet der Ordner
@@ -242,3 +243,36 @@ def test_b13_upload_nimmt_skripte_aber_nie_daten():
     for rel in ("zaehler/daten/heute.php", "zaehler/daten/monat-2026-12.php", "zaehler/daten/.sperre",
                 "zaehler/.tmp-x", "andere/x.php"):
         assert not freigegeben(rel), rel
+
+
+@ohne_php
+@pytest.mark.req("B13", ak=8)
+def test_b13_herkunft_und_geraet_beim_einstieg(tmp_path):
+    o = zaehler_ordner(tmp_path)
+
+    def einstieg(herkunft, geraet, ip):
+        return php(o, f"echo z_zaehle('heute', '', '', '{ip}', '{CHROME}', {TAG1}, "
+                      f"['herkunft' => '{herkunft}', 'geraet' => '{geraet}']) ? 'ja' : 'nein';") == "ja"
+
+    assert einstieg("www.google.de", "handy", "10.0.0.1") and einstieg("google.at", "pc", "10.0.0.2")
+    assert einstieg("www.bergfex.at", "tablet", "10.0.0.3") and einstieg("", "app", "10.0.0.4")
+    assert einstieg("forum.example.org", "toaster", "10.0.0.5") and einstieg("app", "handy", "10.0.0.6")
+    assert einstieg("<script>", "pc", "10.0.0.7")
+    assert zaehle(o, "karte")  # kein Einstieg: weder Herkunft noch Geraet
+    t = monat(o)["2026-12-10"]
+    assert t["einstiege"] == 7 and t["aufrufe"] == 8
+    assert t["herkunft"] == {"Google": 2, "bergfex": 1, "direkt": 1, "forum.example.org": 1,
+                             "App oder Mailprogramm": 1, "andere": 1}
+    assert t["geraete"] == {"handy": 2, "pc": 2, "tablet": 1, "app": 1}  # "toaster" verworfen
+
+
+@ohne_php
+@pytest.mark.req("B13", ak=8)
+def test_b13_herkunft_per_http_und_in_der_auswertung(tmp_path):
+    with webspace(tmp_path) as (o, http):
+        kopf = {"Sec-Fetch-Site": "same-origin"}
+        http.post("/zaehler/z.php", data={"s": "heute", "e": "1", "r": "www.google.com", "d": "handy"}, headers=kopf)
+        http.post("/zaehler/z.php", data={"s": "karte", "r": "spam.example"}, headers=kopf)  # ohne e: keine Herkunft
+        r = http.post("/zaehler/auswertung.php", data={"passwort": PASSWORT})
+        assert "Woher die Besucher kommen" in r.text and "Google" in r.text and "Handy" in r.text
+        assert "spam.example" not in r.text

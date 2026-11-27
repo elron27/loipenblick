@@ -79,8 +79,12 @@ def browser():
         b.close()
 
 
+HANDY = "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Mobile Safari/537.36"
+
+
 def kontext(browser, wie_mensch=True, breite=1280, hoehe=900, handy=False):
-    ctx = browser.new_context(viewport={"width": breite, "height": hoehe}, locale="de-DE", user_agent=CHROME,
+    ctx = browser.new_context(viewport={"width": breite, "height": hoehe}, locale="de-DE",
+                              user_agent=HANDY if handy else CHROME,
                               device_scale_factor=2 if SCREENSHOTS else 1, is_mobile=handy, has_touch=handy)
     if wie_mensch:
         ctx.add_init_script(KEIN_WEBDRIVER)
@@ -89,13 +93,13 @@ def kontext(browser, wie_mensch=True, breite=1280, hoehe=900, handy=False):
 
 def summe(webspace) -> dict:
     """Aufrufe und Besucher aller Tage, direkt aus den Monatsdateien."""
-    s = {"aufrufe": 0, "besucher": 0, "seiten": {}, "gebiete": {}, "loipen": {}}
+    s = {"aufrufe": 0, "besucher": 0, "seiten": {}, "gebiete": {}, "loipen": {}, "herkunft": {}, "geraete": {}}
     for datei in (webspace["ordner"] / "daten").glob("monat-*.php"):
         for t in json.loads(datei.read_text().split("\n", 1)[1]).values():
             s["aufrufe"] += t["aufrufe"]
             s["besucher"] += t["besucher"]
-            for f in ("seiten", "gebiete", "loipen"):
-                for k, n in t[f].items():
+            for f in ("seiten", "gebiete", "loipen", "herkunft", "geraete"):
+                for k, n in t.get(f, {}).items():
                     s[f][k] = s[f].get(k, 0) + n
     return s
 
@@ -139,6 +143,7 @@ def test_b13_app_meldet_ansichten_einmal_je_wechsel(browser, webspace):
     assert s["aufrufe"] == 4 and s["besucher"] == 1
     assert s["seiten"] == {"heute": 1, "loipe": 1, "loipen": 1, "gebiet": 1}
     assert s["gebiete"] == {"kreuth": 2} and s["loipen"] == {str(webspace["loipe"]): 1}
+    assert s["herkunft"] == {"direkt": 1} and s["geraete"] == {"pc": 1}  # nur der Einstieg (B13 AK 8)
     assert ctx.cookies() == []  # B13 AK 2: kein Cookie
     ctx.close()
 
@@ -193,7 +198,10 @@ def test_b13_auswertung_bildschirmfotos(browser, webspace):
             seite, gebiet = zufall.choice([("heute", ""), ("karte", ""), ("gebiet", "kreuth"), ("gebiet", "tegernsee"),
                                            ("loipe", ""), ("loipen", "")])
             loipe = str(webspace["loipe"]) if seite == "loipe" else ""
-            befehle.append(f"z_zaehle('{seite}', '{gebiet}', '{loipe}', '10.0.{tag}.{i}', '{CHROME}', {tag0 + tag * 86400});")
+            her = zufall.choice(["www.google.de", "www.google.de", "", "", "www.bergfex.at", "m.facebook.com", "skiclub.example"])
+            ger = zufall.choice(["handy", "handy", "handy", "pc", "tablet", "app"])
+            befehle.append(f"z_zaehle('{seite}', '{gebiet}', '{loipe}', '10.0.{tag}.{i}', '{CHROME}', {tag0 + tag * 86400}, "
+                           f"['herkunft' => '{her}', 'geraet' => '{ger}']);")
     subprocess.run(["php", "-r", f"require '{webspace['ordner']}/_kern.php'; " + " ".join(befehle)], check=True)
     for name, groesse, handy in (("desktop", (1280, 900), False), ("handy", (390, 844), True)):
         ctx = kontext(browser, breite=groesse[0], hoehe=groesse[1], handy=handy)
@@ -213,3 +221,18 @@ def test_b13_auswertung_bildschirmfotos(browser, webspace):
             page.wait_for_timeout(700)  # Einblenden der Kacheln (app.css, rise) abwarten
             page.screenshot(path=os.path.join(SCREENSHOTS, f"{name}-zaehler-auswertung.png"), full_page=True)
         ctx.close()
+
+
+@pytest.mark.req("B13", ak=8)
+def test_b13_herkunft_und_geraet_vom_handy(browser, webspace):
+    leeren(webspace)
+    ctx = kontext(browser, breite=390, hoehe=844, handy=True)
+    page = ctx.new_page()
+    page.goto(webspace["url"] + "/#/karte", referer="https://www.google.de/")
+    page.wait_for_function("document.getElementById('view').dataset.r > 0")
+    page.evaluate("location.hash = '#/loipen'")
+    s = warte_auf(webspace, 2)
+    time.sleep(0.3)
+    s = summe(webspace)
+    assert s["aufrufe"] == 2 and s["herkunft"] == {"Google": 1} and s["geraete"] == {"handy": 1}
+    ctx.close()
