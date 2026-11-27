@@ -16,7 +16,7 @@ Stand: 27.11.2026.
 
 ### Priorität 1: bis zum Livegang am 11.12.
 
-- [ ] **Loipen näher recherchieren** (Handrecherche je Gebiet: Loipengebühr, Parkplätze mit Gebühr, Webcams, Skiverleih, Saisonbeginn/-ende mit Prüfdatum). Bisher nur Bayrischzell-Webcams. Läuft in Etappen, Region für Region, Reihenfolge Bayern, Tirol, Salzburg, Rest. Wer: `Claude`. Start: sobald du „los“ sagst, gut geeignet für freie Kapazität. Siehe Memory „Mehr Daten je Loipe“, PR #47.
+- [ ] **Loipen näher recherchieren, weitere Etappen**: Webcams Pillerseetal/St. Johann, Langlaufverleih-Lücken (Tegernseer Tal, Ruhpolding, Inzell, Berchtesgaden), danach Seefeld, Leutasch, Achensee, Zillertal. Etappen 1–3 erledigt (PR #57), Stand und Lücken in [recherche-handdaten-2026-11-27.md](recherche-handdaten-2026-11-27.md). Wer: `Claude`, gut für freie Kapazität.
 - [ ] **NAS aktualisieren**, damit die Testseite den aktuellen Stand zeigt (zuletzt war sie mehrere Versionen hinterher). Ablauf in [nas-update.md](nas-update.md). Wer: `Stefan`.
 - [ ] **Impressum-Adresse klären** (eigene Adresse oder Familienadresse mit Zustellungsvollmacht). Checkliste Schritt 3. Wer: `Stefan`.
 - [ ] **Datenschutzerklärung** mit Generator erstellen oder eingebaute Vorlage bestätigen. Checkliste Schritt 11. Wer: `Stefan`, Claude hilft beim Text.
@@ -104,6 +104,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
+- [x] 27.11. Loipen näher recherchiert, Etappen 1–3 (Tegernsee bis Fuschlsee, Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Pillerseetal, Alpbachtal, Wildschönau): 36 Webcams, 10 Verleihe, Gebühren, Merkmale Einkehr/Familie; neue Felder Hunderegel und beleuchtete Loipen (D25) – PR #57
 - [x] 27.11. Besucherzähler zeigt Herkunft und Gerät – PR #52
 - [x] 27.11. Seefeld erlaubt Loipenstatus von seefeld.com – PR #55
 - [x] 26.11. Eigene Seiten je Gebiet und Loipe, Sitemap, robots.txt, IndexNow (SEO Phase 1+2) – PR #53
