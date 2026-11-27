@@ -93,6 +93,8 @@ SEITEN_QUELLEN = {
     "sachrang": {"schneebericht-sachrang": "schneebericht.html"},
     "chiemgau": {"inc/ajax.php?ajaxtype=getLoipenmanager": "loipenmanager.json"},
     "tannheimer": {"inc/ajax.php?ajaxtype=getLoipenmanager": "2026-11-13/loipenmanager.json"},
+    **{k: {"inc/ajax.php?ajaxtype=getLoipenmanager": "2026-11-27/loipenmanager.json"}
+       for k in ("bayerischer-wald", "fichtelgebirge")},  # P44
     "seefeld": {"de/loipenbericht.html": "2026-11-13/loipenbericht.html"},
     "achensee": {"de/live/schneebericht": "2026-11-13/schneebericht.html"},
     "kufsteinerland": {"de/schneebericht.html": "2026-11-13/schneebericht.html"},

@@ -267,6 +267,14 @@ regionen:
   name: Kleinwalsertal
   land: AT
   bundesland: Vorarlberg
+- slug: bayerischer-wald
+  name: Bayerischer Wald
+  land: DE
+  bundesland: Bayern
+- slug: fichtelgebirge
+  name: Fichtelgebirge
+  land: DE
+  bundesland: Bayern
 gebiete:
 - slug: bad-wiessee
   name: Bad Wiessee
@@ -3726,3 +3734,131 @@ gebiete:
     id: '11311'
     name: Mittelberg
     dienst: geosphere
+- slug: lamer-winkel
+  name: Lamer Winkel (Arrach, Lohberg, Arnbruck)
+  hoehe_m: 700
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.16
+  lon: 12.991
+  tourist_url: https://www.bayerischer-wald.de
+- slug: bodenmais
+  name: Bodenmais und Bretterschachten
+  hoehe_m: 1000
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.074
+  lon: 13.157
+  tourist_url: https://www.bayerischer-wald.de
+- slug: zwiesel-eisenstein
+  name: Zwiesel, Bayerisch Eisenstein und Frauenau
+  hoehe_m: 750
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.071
+  lon: 13.22
+  tourist_url: https://www.bayerischer-wald.de
+- slug: sankt-englmar
+  name: Sankt Englmar und Grandsberg
+  hoehe_m: 900
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.005
+  lon: 12.838
+  tourist_url: https://www.bayerischer-wald.de
+- slug: rusel-deggendorf
+  name: Rusel und Oberbreitenau (Deggendorf)
+  hoehe_m: 850
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 48.878
+  lon: 13.038
+  tourist_url: https://www.bayerischer-wald.de
+- slug: vorderer-bayerischer-wald
+  name: Vorderer Bayerischer Wald (Falkenstein, Brennberg)
+  hoehe_m: 600
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.068
+  lon: 12.489
+  tourist_url: https://www.bayerischer-wald.de
+- slug: nationalpark-grafenau
+  name: Nationalpark (Spiegelau, Neuschönau, Grafenau)
+  hoehe_m: 750
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 48.888
+  lon: 13.427
+  tourist_url: https://www.bayerischer-wald.de
+- slug: schoefweg-dreiburgenland
+  name: Schöfweg und Dreiburgenland
+  hoehe_m: 800
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 48.807
+  lon: 13.261
+  tourist_url: https://www.bayerischer-wald.de
+- slug: mauth-finsterau
+  name: Mauth, Finsterau und Freyung
+  hoehe_m: 950
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 48.85
+  lon: 13.615
+  tourist_url: https://www.bayerischer-wald.de
+- slug: dreisessel-neureichenau
+  name: Dreisessel, Neureichenau und Wegscheid
+  hoehe_m: 800
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 48.735
+  lon: 13.75
+  tourist_url: https://www.bayerischer-wald.de
+- slug: hohenbogen-furth
+  name: Hohenbogen, Furth im Wald und Waldmünchen
+  hoehe_m: 700
+  region: bayerischer-wald
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.334
+  lon: 12.79
+  tourist_url: https://www.bayerischer-wald.de
+- slug: ochsenkopf
+  name: Ochsenkopf (Bischofsgrün, Fichtelberg, Warmensteinach)
+  hoehe_m: 850
+  region: fichtelgebirge
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 50.017
+  lon: 11.813
+  tourist_url: https://www.fichtelgebirge.bayern
+- slug: waldstein
+  name: Waldstein und Weißenstadt
+  hoehe_m: 750
+  region: fichtelgebirge
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 50.115
+  lon: 11.837
+  tourist_url: https://www.fichtelgebirge.bayern
+- slug: koesseine-luisenburg
+  name: Kösseine und Luisenburg (Tröstau, Wunsiedel)
+  hoehe_m: 700
+  region: fichtelgebirge
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 50.011
+  lon: 11.98
+  tourist_url: https://www.fichtelgebirge.bayern
+- slug: steinwald
+  name: Steinwald
+  hoehe_m: 650
+  region: fichtelgebirge
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 49.91
+  lon: 12.069
+  tourist_url: https://www.fichtelgebirge.bayern
+- slug: kornberg
+  name: Kornberg (Schönwald, Marktleuthen)
+  hoehe_m: 700
+  region: fichtelgebirge
+  # Mitte der Loipeneinstiege laut tourinfra (Median, gerundet)
+  lat: 50.188
+  lon: 12.041
+  tourist_url: https://www.fichtelgebirge.bayern

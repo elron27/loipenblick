@@ -1,8 +1,8 @@
 # Recherche neue Regionen (27.11.2026)
 
 Auftrag von Stefan: Abdeckung erweitern (Raum Augsburg, Bayerischer Wald, Mittelgebirge). Endziel ist der
-**gesamte deutschsprachige Raum** (Deutschland, Österreich, Schweiz, Liechtenstein, Südtirol). Nur Recherche,
-nichts angebunden. Schnappschüsse: `tests/fixtures/recherche-2026-11-27/regionen/` (Runde 28, Protokoll in
+**gesamte deutschsprachige Raum** (Deutschland, Österreich, Schweiz, Liechtenstein, Südtirol). Stefan gab am 27.11. die
+Anbindung von Bayerischem Wald und Fichtelgebirge frei (P44, nur Testseite bis zur Erlaubnis). Schnappschüsse: `tests/fixtures/recherche-2026-11-27/regionen/` (Runde 28, Protokoll in
 `tests/fixtures/schnappschuss-protokoll.txt`).
 
 ## Kurzfassung
