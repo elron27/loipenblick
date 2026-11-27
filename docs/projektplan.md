@@ -40,6 +40,7 @@ Stand: 27.11.2026.
 - [ ] **Design-Vorschläge** aus der Impeccable-Prüfung (Liste einklappen, Kartenfarben geschlossen/unbekannt, Filter am Handy, Startseite schlanker, alte Daten ehrlich zeigen, …). Liste im Projektordner `impeccable-pruefung/vorschlaege.md`. Wer: `Stefan` wählt, `Claude` baut.
 - [ ] **Lungau/Kärnten-Rest**: nur über bergfex erreichbar, anbinden oder lassen? Wer: `Stefan`.
 - [ ] **Zugspitz Arena**: nur über Intermaps (Bezahldienst), anbinden oder lassen? Wer: `Stefan`.
+- [ ] **Neue Regionen freigeben** (Etappe „Mittelgebirge“, Recherche [recherche-neue-regionen-2026-11-27.md](recherche-neue-regionen-2026-11-27.md)): Bayerischer Wald (253 Loipen) und Fichtelgebirge (75 Loipen) über tourinfra anbinden, vorerst `nur_test` bis zur Erlaubnis-Mail? Wer: `Stefan` gibt frei, `Claude` baut. Augsburg: welche Loipe ist gemeint? Wer: `Stefan`.
 - [ ] **seefeld-tourinfra**: Soll Seefeld auch den Loipenmanager ausdrücklich freigeben? Dann kurze Rückfrage an region@seefeld.com. Wer: `Stefan` entscheidet, `Claude` schreibt den Entwurf.
 
 ---
@@ -96,6 +97,9 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 - [ ] **SEO Phasen 3–5** (Themenseiten, Outreach beim ersten großen Schneefall, Messen). Noch nicht freigegeben. Wer: `Stefan` gibt frei.
 - [ ] **Schneekarte:** 7 Tage Sammeln beobachten, Archive nachladen, danach vier Designs zur Auswahl. Wer: `Claude`, Auswahl `Stefan`.
 - [ ] **Cookies mit Banner** nur, falls der Besucherzähler nicht reicht (E-14, B18). Wer: `Stefan` entscheidet.
+- [ ] **Endziel: ganzer deutschsprachiger Raum** (DE, AT, CH, LI, Südtirol; Stefan 27.11.). Gesamtkarte in [recherche-neue-regionen-2026-11-27.md](recherche-neue-regionen-2026-11-27.md).
+- [ ] **Etappe Mittelgebirge:** 1) Bayerischer Wald, 2) Fichtelgebirge (beide tourinfra, nach Freigabe), 3) Folgerecherche ThüCAT/Thüringer Wald, Vorarlberg, Salzkammergut/Oberösterreich, Erzgebirge, 4) Outdooractive-Partnerzugang klären (Schwarzwald, Thüringer Wald), 5) Harz, Sauerland, Augsburg als Handangabe, Rhön und Alb zuletzt. Wer: `Claude`, Freigabe `Stefan`.
+- [ ] **Erlaubnis-Mails** an Bayerischer Wald und Fichtelgebirge vor dem öffentlichen Zeigen. Wer: `Claude` Entwurf, `Stefan` versendet.
 - [ ] **Ausbau weiterer Regionen** (Südtirol-Rest, Kärnten, Schweiz) nach dem Livegang.
 
 ---
@@ -104,6 +108,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
+- [x] 27.11. Recherche neue Regionen (Bayerischer Wald, Mittelgebirge, Augsburg) – PR folgt in dieser Zeile
 - [x] 27.11. Besucherzähler zeigt Herkunft und Gerät – PR #52
 - [x] 27.11. Seefeld erlaubt Loipenstatus von seefeld.com – PR #55
 - [x] 26.11. Eigene Seiten je Gebiet und Loipe, Sitemap, robots.txt, IndexNow (SEO Phase 1+2) – PR #53
