@@ -218,3 +218,18 @@ def test_p9_seite_ohne_loipenzustand_wird_nicht_als_loipe_gelesen():
     kegel = FixtureFetcher("bayrischzell", "https://www.bayrischzell.de").seite("loipen/a-kegelbahn.html")
     assert lese_statusseite(kegel) is None
     assert lese_liste(kegel, "https://www.bayrischzell.de") == ([], [])
+
+
+@pytest.mark.req("D21", ak=2)
+def test_d21_merkmale_aus_den_haken_der_liste(ergebnisse):
+    """Recherche 27.11.2026: die Langlaufen-Listen haken Einkehr und Familieneignung je Tour ab."""
+    bz = nach_key(ergebnisse["bayrischzell"])
+    assert bz["a-bayrischzell-geitau-bayrischzell"].stammdaten["merkmale"] == ["einkehr"]
+    assert bz["a-hauswies-runde"].stammdaten["merkmale"] == ["familientauglich"]
+    fb = nach_key(ergebnisse["fischbachau"])
+    assert fb["a-lippmuehlenrunde"].stammdaten["merkmale"] == ["einkehr", "familientauglich"]
+    assert nach_key(ergebnisse["tegernsee"])["a-ringseeloipe"].stammdaten["merkmale"] == ["einkehr"]
+    # "Rundtour" und "Barrierefrei" sind keine Merkmale der festen Liste; ohne Haken kein Eintrag
+    alle = [l for e in ergebnisse.values() for l in e.loipen]
+    assert all(set(l.stammdaten.get("merkmale", [])) <= {"einkehr", "familientauglich"} for l in alle)
+    assert any("merkmale" not in l.stammdaten for l in alle)

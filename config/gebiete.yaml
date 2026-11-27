@@ -306,6 +306,11 @@ gebiete:
   lat: 47.6403
   lon: 11.7476
   tourist_url: https://www.tegernsee.com/kreuth
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Kreuth, Blick auf die Loipe (foto-webcam.org)'
+    url: http://www.foto-webcam.org/webcam/kreuth/
+    geprueft_am: 2026-11-27
   nachbarn:
   - rottach-egern
   parkplaetze:
@@ -381,6 +386,14 @@ gebiete:
   lat: 47.6905
   lon: 11.769
   tourist_url: https://www.tegernsee.com/rottach-egern
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Wallbergbahn (feratel)'
+    url: https://www.feratel.com/en/webcams/germany/bavaria/tegernsee-wallbergbahn-3030
+    geprueft_am: 2026-11-27
+  - name: 'Blick vom Wallberg (foto-webcam.org)'
+    url: https://www.foto-webcam.org/webcam/wallberg/
+    geprueft_am: 2026-11-27
   nachbarn:
   - kreuth
   - tegernsee
@@ -415,12 +428,19 @@ gebiete:
   lat: 47.672
   lon: 12.013
   tourist_url: https://www.bayrischzell.de
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  verleih:
+  - name: 'Sportalm Bayrischzell (Ski- und Langlaufverleih)'
+    url: https://www.bayrischzell.de/a-sportalm-bayrischzell-salomon-shop-verleih
+    quelle: https://www.bayrischzell.de/skischulen-verleih
+    geprueft_am: 2026-11-27
   nachbarn:
   - fischbachau
   loipengebuehr:
     eur: 7.0
     text: 7 € pro Tag inklusive Parken, mit Gästekarte frei
     url: https://www.bayrischzell.de/langlaufen
+    geprueft_am: 2026-11-27
   # U49/B32: Webcams nur als Link (feratel, Seite am 24.11.2026 geprueft)
   webcams:
   - name: Sudelfeld Bergstation Kitzlahner
@@ -532,18 +552,33 @@ gebiete:
   lat: 47.695
   lon: 12.266
   tourist_url: https://www.aschau.de
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Aschau, Kampenwandbahn (feratel, Nachbarort)'
+    url: https://www.feratel.com/en/webcams/germany/bavaria/aschau-kampenwandbahn-3010
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'Skischule Sachrang'
+    url: https://www.skischule-sachrang.de/
+    lat: 47.686285
+    lon: 12.259714
+    quelle: https://www.aschau.de/langlauf
+    geprueft_am: 2026-11-27
   parkplaetze: []
   nachbarn: []
   parkplaetze_ohne_koordinate:
   - name: Parkplatz Sachrang/Geigelsteinaufstieg
     gebuehr_text: 'kostenpflichtig: Tageskarte 5,00 € (Automat oder EasyPark), Saisonkarte 01.12.-30.04. 30,00 €, Jahreskarte 50,00 €'
     url: https://www.aschau.de/langlauf
+    geprueft_am: 2026-11-27
   - name: Parkplatz Innerwald
     gebuehr_text: kostenpflichtig, Tageskarte 5,00 €
     url: https://www.aschau.de/langlauf
+    geprueft_am: 2026-11-27
   - name: Parkplatz Hainbach (Start Prientalloipe)
     gebuehr_text: kostenpflichtig, Tageskarte 5,00 €
     url: https://www.aschau.de/langlauf
+    geprueft_am: 2026-11-27
   haltestellen:
   - name: Sachrang, Ort
     art: Bus
@@ -607,6 +642,23 @@ gebiete:
   lat: 47.677
   lon: 12.471
   tourist_url: https://www.reitimwinkl.de/schneebericht
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Reit im Winkl Ort (panomax)'
+    url: https://reitimwinkl.panomax.com/
+    geprueft_am: 2026-11-27
+  - name: 'Winklmoos-Alm (panomax)'
+    url: https://winklmoos.panomax.com/
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'Gasthof SonnenAlm, Winklmoos-Alm (Langlaufverleih)'
+    url: https://www.reitimwinkl.de/langlauf-skiverleih-gasthof-sonnenalm
+    quelle: https://www.reitimwinkl.de/langlaufen
+    geprueft_am: 2026-11-27
+  - name: 'Hausberg Snowsport (verleiht Langlaufski)'
+    url: https://www.reitimwinkl.de/hausberg-snowsport
+    quelle: https://www.reitimwinkl.de/langlaufen
+    geprueft_am: 2026-11-27
   nachbarn:
   - ruhpolding
   - schleching
@@ -675,6 +727,16 @@ gebiete:
   lat: 47.7225
   lon: 12.394
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Gscheuerwand, Blick Richtung Schleching (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/schleching/
+    geprueft_am: 2026-11-27
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: die Loipen im Achental sind für Gäste und Einheimische kostenfrei'
+    url: https://www.achental.com/winter/langlaufen/
+    geprueft_am: 2026-11-27
   nachbarn:
   - reit-im-winkl
   - unterwoessen
@@ -706,6 +768,14 @@ gebiete:
   lat: 47.73
   lon: 12.462
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Unterwössen Ortszentrum (rundumwebcam)'
+    url: http://unterwoessen.rundumwebcam.de/
+    geprueft_am: 2026-11-27
+  - name: 'Oberwössen Ortszentrum (rundumwebcam)'
+    url: http://oberwoessen.rundumwebcam.de/
+    geprueft_am: 2026-11-27
   nachbarn:
   - schleching
   - marquartstein-grassau
@@ -749,6 +819,19 @@ gebiete:
   lat: 47.77
   lon: 12.458
   tourist_url: https://www.achental.com/winter/schnee-loipenbericht/
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Marquartstein, Schnappenberg (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/marquartstein/
+    geprueft_am: 2026-11-27
+  - name: 'Marquartstein, Oed (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/oed/
+    geprueft_am: 2026-11-27
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: die Loipen im Achental sind für Gäste und Einheimische kostenfrei'
+    url: https://www.achental.com/winter/langlaufen/
+    geprueft_am: 2026-11-27
   nachbarn:
   - unterwoessen
   parkplaetze:
@@ -786,6 +869,14 @@ gebiete:
   lat: 47.809
   lon: 12.59
   tourist_url: https://www.bergen-chiemgau.de/skilanglauf
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Hochfelln Nord, Richtung Chiemsee (terra-hd)'
+    url: https://www.terra-hd.de/hochfelln
+    geprueft_am: 2026-11-27
+  - name: 'Hochfelln Mittelstation (terra-hd)'
+    url: https://www.terra-hd.de/hochfelln-mittel/
+    geprueft_am: 2026-11-27
   nachbarn:
   - siegsdorf
   parkplaetze:
@@ -822,6 +913,11 @@ gebiete:
   lat: 47.822
   lon: 12.643
   tourist_url: https://www.siegsdorf.de/langlaufen
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Siegsdorf, Blick von Osterham (terra-hd)'
+    url: https://www.terra-hd.de/siegsdorf/
+    geprueft_am: 2026-11-27
   nachbarn:
   - bergen
   - ruhpolding
@@ -870,6 +966,14 @@ gebiete:
   lat: 47.581
   lon: 12.164
   tourist_url: https://www.kufstein.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Pendling nach Osten (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/pendling-ost/
+    geprueft_am: 2026-11-27
+  - name: 'Pendling nach Westen (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/pendling-west/
+    geprueft_am: 2026-11-27
   nachbarn:
   - thiersee
   - schwoich
@@ -930,6 +1034,11 @@ gebiete:
   lat: 47.541
   lon: 12.141
   tourist_url: https://www.kufstein.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Biathlonzentrum Schwoich (Langlauf-Webcam)'
+    url: https://www.schuler-sports.at/langlauf-webcam/
+    geprueft_am: 2026-11-27
   nachbarn:
   - kufstein
   - bad-haering
@@ -946,6 +1055,11 @@ gebiete:
   lat: 47.62
   lon: 12.217
   tourist_url: https://www.kufstein.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Ebbs, Fohlenhof mit Blick zur St.-Nikolaus-Kapelle (skylinewebcams)'
+    url: https://www.skylinewebcams.com/webcam/austria/tyrol/ebbs/ebbs-st-nikolaus-kapelle.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - niederndorf
   - kufstein
@@ -976,6 +1090,19 @@ gebiete:
   lat: 47.656
   lon: 12.314
   tourist_url: https://www.kaiserwinkl.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Walchsee Seespitz (panomax)'
+    url: https://walchsee.panomax.com/
+    geprueft_am: 2026-11-27
+  - name: 'Moorgebiet Schwemm (feratel)'
+    url: https://www.feratel.com/en/webcams/austria/tyrol/walchsee-moorgebiet-schwemm-5614
+    geprueft_am: 2026-11-27
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine Loipengebühr im Kaiserwinkl; Loipenparkplätze gratis mit Kaiserwinkl Card'
+    url: https://www.kaiserwinkl.com/de/langlaufen-tirol/koessen-walchsee-schwendt-rettenschoess.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - koessen
   - schwendt
@@ -992,6 +1119,32 @@ gebiete:
   lat: 47.665
   lon: 12.405
   tourist_url: https://www.kaiserwinkl.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Kössen, Moserberg (feratel)'
+    url: https://www.feratel.com/en/webcams/austria/tyrol/koessen-moserberg-5613
+    geprueft_am: 2026-11-27
+  - name: 'Hochkössen, Unterberghorn (feratel)'
+    url: https://www.feratel.com/en/webcams/austria/tyrol/koessen-unterberghorn-5610
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'Nordic Center Kössen (Langlauf- und Skatingschule mit Verleih)'
+    url: https://www.kaiserwinkl.com/de/infrastrukturen/koessen/langlauf-u-skatingschule-nordic-center-in-koessen.html
+    quelle: https://www.kaiserwinkl.com/de/langlaufen-tirol/schule-verleih.html
+    geprueft_am: 2026-11-27
+  - name: 'Sport Mühlberger (Langlauf-Sets)'
+    url: https://www.kaiserwinkl.com/de/infrastrukturen/koessen/skiverleih-muehlberger-koessen.html
+    quelle: https://www.kaiserwinkl.com/de/langlaufen-tirol/schule-verleih.html
+    geprueft_am: 2026-11-27
+  - name: 'Intersport Planer (Langlaufset)'
+    url: https://www.kaiserwinkl.com/de/infrastrukturen/koessen/intersport-planer-skiverleih.html
+    quelle: https://www.kaiserwinkl.com/de/langlaufen-tirol/schule-verleih.html
+    geprueft_am: 2026-11-27
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine Loipengebühr im Kaiserwinkl; Loipenparkplätze gratis mit Kaiserwinkl Card'
+    url: https://www.kaiserwinkl.com/de/langlaufen-tirol/koessen-walchsee-schwendt-rettenschoess.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - schwendt
   - walchsee
@@ -1008,6 +1161,12 @@ gebiete:
   lat: 47.636
   lon: 12.393
   tourist_url: https://www.kaiserwinkl.com
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine Loipengebühr im Kaiserwinkl; Loipenparkplätze gratis mit Kaiserwinkl Card'
+    url: https://www.kaiserwinkl.com/de/langlaufen-tirol/koessen-walchsee-schwendt-rettenschoess.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - koessen
   - walchsee
@@ -1126,6 +1285,16 @@ gebiete:
   lat: 47.774
   lon: 13.24
   tourist_url: https://www.langlaufdorf.at/
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Faistenau (panomax)'
+    url: https://fuschlseeregion.panomax.com/faistenau
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'Sport Auer (Langlaufverleih am Ortseingang)'
+    url: https://www.sportauer.com/
+    quelle: https://www.langlaufdorf.at/langlaufverleih.html
+    geprueft_am: 2026-11-27
   nachbarn:
   - hintersee
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'
@@ -1144,6 +1313,16 @@ gebiete:
   lat: 47.718
   lon: 13.278
   tourist_url: https://www.langlaufdorf.at/
+  # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  webcams:
+  - name: 'Loipe Hintersee (panomax)'
+    url: https://fuschlseeregion.panomax.com/hintersee
+    geprueft_am: 2026-11-27
+  verleih:
+  - name: 'KÄSTLE Cross Country, DAS Hintersee (Langlauf-Set)'
+    url: https://fuschlsee.salzkammergut.at/en/cross-country-skiing/oesterreich-poi/detail/430036605/kaestle-cross-country-skiing-rental.html
+    quelle: https://fuschlsee.salzkammergut.at/en/cross-country-skiing/artikel/detail/3962/langlaufverleihe-in-der-fuschlseeregion-salzkammergut.html?type=2026
+    geprueft_am: 2026-11-27
   nachbarn:
   - faistenau
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A1 vom Walserberg bis Salzburg-Nord ist frei.'

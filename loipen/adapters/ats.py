@@ -28,6 +28,7 @@ from loipen.adapters.normalisierung import (
 )
 from loipen.fetcher import HttpFehler
 from loipen.models import Technik
+from loipen.details import merkmale_aus
 
 log = logging.getLogger("loipen.adapters.ats")
 
@@ -94,6 +95,8 @@ def lese_liste(html: str, base_url: str) -> tuple[list[dict], list[str]]:
                 "laenge_km": parse_zahl(infos.get("Distanz")),
                 "startpunkt": infos.get("Startpunkt"),
                 "rundkurs": True if "Rundtour" in zustaende else (False if "von A nach B" in zustaende else None),
+                # D21 AK 2: Haken der Liste (Einkehrmoeglichkeit, Familienfreundlich ...) als Merkmale
+                "merkmale": merkmale_aus(zustaende)[0],
                 "lat": float(lat) if lat else None,
                 "lon": float(lng) if lng else None,
             }
@@ -259,6 +262,8 @@ class AtsAdapter:
             d.laenge_km = tour["laenge_km"]
             d.startpunkt = tour["startpunkt"]
             d.lat, d.lon = tour["lat"], tour["lon"]
+            if tour.get("merkmale"):
+                d.stammdaten["merkmale"] = list(tour["merkmale"])
             d.schwierigkeit, bekannt = normiere_schwierigkeit(tour["schwierigkeit"])
             if not bekannt:
                 d.unbekannte_begriffe.append(("schwierigkeit", tour["schwierigkeit"] or ""))
