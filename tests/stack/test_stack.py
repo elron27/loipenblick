@@ -46,6 +46,7 @@ QUELLEN = {"tegernsee": 26, "bayrischzell": 9, "fischbachau": 7, "sachrang": 4, 
            "tannheimer": 21, "seefeld": 49, "kufsteinerland": 22, "kaiserwinkl": 23,
            "dolomiti-nordicski": 118, "opendatahub": 190,
            "engadin": 108, "davos-klosters": 36, "goms": 39, "gastein": 15, "ramsau": 42, "seefeld-tourinfra": 42,
+           "bayerischer-wald": 253, "fichtelgebirge": 75,  # P44
            "myswitzerland": 340, "st-anton": 15, "nassfeld-nlw": 6, "steiermark": 89,
            "alpbachtal": 7, "wildschoenau": 6, "wilderkaiser": 10,
            # P31: Ortsseiten Oetztal bis Paznaun (Oetztal: 6 von 22 Detailseiten im Schnappschuss)
