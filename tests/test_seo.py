@@ -218,3 +218,40 @@ def test_b17_langsamer_upload_warnt(live, tmp_path, monkeypatch):
     veroeffentliche(E, site, pruefe=lambda *a: None, uhr=lambda: next(zeiten))
     assert any("länger als 300 s" in w for w in warnungen)
     assert geaenderte_seiten(site, type("Erg", (), {"hochgeladen": []})(), BASIS) == []
+
+
+@pytest.mark.req("B34", ak=7)
+def test_b34_loipenseite_mit_osm_parkplatz_ohne_gebuehr(session, tmp_path, monkeypatch):
+    """NAS-Absturz 27.11.2026: OSM-Parkplaetze haben kein Feld gebuehr_eur_tag, loipe.html.j2 brach ab
+    (UndefinedError) und beendete den ganzen Worker bei jedem Start."""
+    from loipen.generator import daten as daten_mod
+    lade_alle_fixtures(session, JETZT)
+    osm_platz = {"name": "Parkplatz Wanderweg", "lat": 47.7, "lon": 11.9, "gebuehr_text": None,
+                 "entfernung_m": 120, "geschaetzt": False, "quelle": "osm", "url": "https://www.openstreetmap.org/node/1"}
+    monkeypatch.setattr(daten_mod, "_parken", lambda *a, **k: [dict(osm_platz)])
+    generator.erzeuge(session, tmp_path, JETZT, rechtliches=RECHT, oeffentlich=True, basis_url=BASIS)
+    regionen = daten(tmp_path)
+    _, l_pfad = seiten.adressen({r["region"]["slug"]: r for r in regionen})
+    seite = html(tmp_path, next(iter(l_pfad.values())))
+    assert "Parkplatz Wanderweg (120 m vom Einstieg)" in seite
+
+
+@pytest.mark.req("B34", ak=7)
+def test_b34_kaputte_einzelseite_stoppt_den_lauf_nicht(live, monkeypatch, caplog):
+    session, site = live
+    regionen = daten(site)
+    _, l_pfad = seiten.adressen({r["region"]["slug"]: r for r in regionen})
+    pfad = next(iter(l_pfad.values()))
+    vorher = html(site, pfad)
+    echt = seiten.baue_seiten
+
+    def mit_fehler(d, basis):
+        liste = echt(d, basis)
+        for s in liste:
+            if s["pfad"] == pfad:
+                s["werte"] = {}  # Vorlage bricht ab
+        return liste
+    monkeypatch.setattr(seiten, "baue_seiten", mit_fehler)
+    generator.erzeuge(session, site, JETZT + timedelta(hours=1), rechtliches=RECHT, oeffentlich=True, basis_url=BASIS)
+    assert html(site, pfad) == vorher  # alte Fassung bleibt stehen
+    assert (site / "daten.json").exists() and "Einzelseiten nicht erzeugt" in caplog.text
