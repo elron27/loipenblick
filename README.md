@@ -6,6 +6,7 @@ Historie in PostgreSQL und erzeugt eine statische Website. Online geht sie spät
 indem der Ordner `site/` auf einen Webspace hochgeladen wird (Entscheidungen E-10, E-11).
 
 Die Anforderungen stehen als ReqSeq-Workspace in [`spec/`](spec/README.md).
+Was ansteht, was erledigt ist und was in die NAS-`.env` muss: [`docs/projektplan.md`](docs/projektplan.md).
 
 ## Aufbau
 
