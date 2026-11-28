@@ -149,13 +149,20 @@ WEBCAMS_JE_GEBIET = 4
 
 
 def _webcams(gebiet: Gebiet, loipen: list[dict]) -> list[dict]:
-    """D9: Webcams von Hand (gebiete.yaml) zuerst, dann die der Loipen (tourinfra, P42), ohne Doppelte."""
+    """D9: Webcams von Hand (gebiete.yaml) zuerst und alle, dann die der Loipen (tourinfra, P42), ohne Doppelte.
+
+    Die Handliste ist ausgesucht (z. B. acht Kameras in Sachrang) und wird nicht gekuerzt; die automatisch
+    gefundenen fuellen nur bis WEBCAMS_JE_GEBIET auf."""
     liste, urls = [], set()
-    for w in (gebiet.webcams or []) + [w for l in loipen for w in ((l.get("details") or {}).get("webcams") or [])]:
+    hand = gebiet.webcams or []
+    auto = [w for l in loipen for w in ((l.get("details") or {}).get("webcams") or [])]
+    for i, w in enumerate(hand + auto):
+        if i >= len(hand) and len(liste) >= WEBCAMS_JE_GEBIET:
+            break
         if w.get("url") and w["url"] not in urls:
             urls.add(w["url"])
             liste.append({"name": w.get("name") or "Webcam", "url": w["url"]})
-    return liste[:WEBCAMS_JE_GEBIET]
+    return liste
 
 
 def _vorhersage(session: Session, gebiet: Gebiet, heute: date) -> list[dict]:

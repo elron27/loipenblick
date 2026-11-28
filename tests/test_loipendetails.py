@@ -395,3 +395,37 @@ def test_d25_saisonpruefung_legt_hunde_und_beleuchtung_vor():
     assert {a.gebiet for a in hunde} >= {"Bayrischzell", "Faistenau"}
     assert any(a.gebiet == "Sachrang" and a.url == "https://www.aschau.de/langlauf" for a in licht)
     assert all(a.geprueft_am == "2026-11-27" for a in hunde + licht)
+
+
+@pytest.mark.req("D9", ak=1)
+def test_d9_handwebcams_alle_tourinfra_nur_bis_zum_limit():
+    from types import SimpleNamespace
+
+    from loipen.generator.daten import WEBCAMS_JE_GEBIET, _webcams
+
+    hand = [{"name": f"H{i}", "url": f"https://hand/{i}"} for i in range(6)]
+    auto = [{"name": f"A{i}", "url": f"https://auto/{i}"} for i in range(5)] + [{"name": "doppelt", "url": "https://hand/0"}]
+    liste = _webcams(SimpleNamespace(webcams=hand), [{"details": {"webcams": auto}}])
+    assert [w["name"] for w in liste] == [f"H{i}" for i in range(6)]  # Handliste ungekuerzt, nichts aufgefuellt
+    nur_auto = _webcams(SimpleNamespace(webcams=None), [{"details": {"webcams": auto}}])
+    assert len(nur_auto) == WEBCAMS_JE_GEBIET
+    eine = _webcams(SimpleNamespace(webcams=hand[:1]), [{"details": {"webcams": auto}}])
+    assert [w["name"] for w in eine] == ["H0", "A0", "A1", "A2"]
+
+
+@pytest.mark.req("D9", ak=1)
+def test_d9_sachrang_webcams_aus_der_handrecherche_vom_28_11():
+    gebiete = {g["slug"]: g for g in lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]}
+    cams = gebiete["sachrang"]["webcams"]
+    assert cams[0]["url"] == "https://terra-hd.com/sachrang2/"  # die Kamera mit Blick ueber die Loipe zuerst
+    terra = [w for w in cams if "terra-hd.com" in w["url"]]
+    assert len(terra) == 8 and all(str(w["geprueft_am"]) == "2026-11-28" for w in terra)
+
+
+@pytest.mark.req("U49")
+def test_u49_handwebcams_sind_seiten_keine_rohen_bilder():
+    for g in lade_yaml(CONFIG_DIR / "gebiete.yaml")["gebiete"]:
+        for w in g.get("webcams") or []:
+            assert w["url"].startswith(("https://", "http://")), (g["slug"], w)
+            assert not w["url"].lower().endswith((".jpg", ".jpeg", ".png", ".webp")), (g["slug"], w)
+            assert w.get("name"), (g["slug"], w)

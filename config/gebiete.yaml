@@ -276,6 +276,11 @@ gebiete:
   lat: 47.7163
   lon: 11.7213
   tourist_url: https://www.tegernsee.com/bad-wiessee
+  # Handrecherche 28.11.2026 (Webcam nur als Link, U49)
+  webcams:
+  - name: 'Skizentrum Sonnenbichl, Blick über den Tegernsee (foto-webcam.eu)'
+    url: https://www.foto-webcam.eu/webcam/sonnenbichl/
+    geprueft_am: 2026-11-28
   nachbarn:
   - gmund
   - tegernsee
@@ -565,7 +570,32 @@ gebiete:
     url: https://www.aschau.de/langlauf
     geprueft_am: 2026-11-27
   # Handrecherche 27.11.2026 (Webcams und Verleih nur als Link, U49/D10; quelle = Seite, die den Verleih nennt)
+  # Handrecherche 28.11.2026: Sachrang-Webcams laut https://www.aschau.de/wetter (Betreiber terra-hd, Partner u. a. Bergsteigerdorf Sachrang)
   webcams:
+  - name: 'Sachrang-Loipe, Bergerhof, Blick nach Südwest über die Loipe (terra-hd)'
+    url: https://terra-hd.com/sachrang2/
+    geprueft_am: 2026-11-28
+  - name: 'Bergsteigerdorf Sachrang, Ortsmitte Mitterleiten, Blick zum Zahmen Kaiser (terra-hd)'
+    url: https://terra-hd.com/sachrang/
+    geprueft_am: 2026-11-28
+  - name: 'Kaiserblick Skilift, Talstation, Video (terra-hd)'
+    url: https://terra-hd.com/sachrang-kaiserblick/
+    geprueft_am: 2026-11-28
+  - name: 'Niederndorferberg (Tirol), Blick ins Priental nach Sachrang (terra-hd)'
+    url: https://terra-hd.com/niederndorferberg/
+    geprueft_am: 2026-11-28
+  - name: 'Sachrang-Reichenau, 900 m, Blick nach Süden (terra-hd)'
+    url: https://terra-hd.com/sachrang-reichenau/
+    geprueft_am: 2026-11-28
+  - name: 'Ölbergkapelle Sachrang (terra-hd)'
+    url: https://terra-hd.com/sachrang-oelberg/
+    geprueft_am: 2026-11-28
+  - name: 'Priener Hütte, Geigelstein Süd, 1410 m (terra-hd)'
+    url: https://terra-hd.com/priener-huette1
+    geprueft_am: 2026-11-28
+  - name: 'Priener Hütte, Geigelstein West, 1410 m (terra-hd)'
+    url: https://terra-hd.com/priener-huette2
+    geprueft_am: 2026-11-28
   - name: 'Aschau, Kampenwandbahn (feratel, Nachbarort)'
     url: https://www.feratel.com/en/webcams/germany/bavaria/aschau-kampenwandbahn-3010
     geprueft_am: 2026-11-27
@@ -618,6 +648,14 @@ gebiete:
   lat: 47.7613
   lon: 12.6436
   tourist_url: https://www.ruhpolding.de/schneebericht-ruhpolding
+  # Handrecherche 28.11.2026 (Webcams nur als Link, U49): Chiemgau Arena = Start Fritz-Fischer-Loipe
+  webcams:
+  - name: 'Chiemgau Arena (feratel)'
+    url: https://www.feratel.com/en/webcams/germany/bavaria/ruhpolding-chiemgau-arena-3350
+    geprueft_am: 2026-11-28
+  - name: 'Ruhpolding, Bojern (feratel)'
+    url: https://www.feratel.com/en/webcams/germany/bavaria/ruhpolding-bojern-3351
+    geprueft_am: 2026-11-28
   # Handrecherche 27.11.2026, Etappe 4
   verleih:
   - name: 'Sport Plenk (Langlaufausrüstung)'

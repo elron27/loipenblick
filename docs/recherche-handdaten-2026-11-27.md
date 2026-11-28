@@ -134,6 +134,39 @@ Gefunden, aber nicht eingepflegt:
   Hunde- oder Lichtangabe.
 - Achensee bewusst nicht recherchiert (Achensee Tourismus hat abgelehnt, E-43).
 
+## Etappe 5 (28.11.2026 abends): Sachrang-Webcams, Webcam- und Verleih-Lücken
+
+| Gebiet | Eingepflegt |
+|---|---|
+| Sachrang | acht Webcams von terra-hd: Sachrang-Loipe am Bergerhof (Blick über die Loipe), Ortsmitte Mitterleiten, Kaiserblick Skilift (Video), Niederndorferberg (Tirol, Blick ins Priental), Reichenau, Ölbergkapelle, Priener Hütte Süd und West (Geigelstein, 1410 m) |
+| Ruhpolding | Webcams Chiemgau Arena (Start Fritz-Fischer-Loipe) und Bojern (feratel) |
+| Bad Wiessee | Webcam Skizentrum Sonnenbichl (foto-webcam.eu) |
+
+Quelle der Sachrang-Liste ist die Webcam-Seite der Gemeinde (https://www.aschau.de/wetter), sie verlinkt 18 Kameras,
+davon sechs in Sachrang und zwei an der Priener Hütte. Die Links auf terra-hd.de leiten auf terra-hd.com weiter,
+eingetragen ist die Zieladresse. Webcam-Partner laut terra-hd: Bergsteigerdorf Sachrang bzw. Gemeinde Aschau (Loipe,
+Ortsmitte), Pfarrverband Priental (Ölbergkapelle), Kaiserblick Skilift, Alpenchalet Sachrang (Reichenau), Priener
+Hütte und DAV Sektion Prien; Niederndorferberg ohne Partner.
+
+Die Gebietsseite zeigte bisher höchstens vier Webcams je Gebiet. Jetzt erscheinen alle von Hand gepflegten, die
+Webcams aus tourinfra füllen weiter nur bis vier auf (Test `test_d9_handwebcams_alle_tourinfra_nur_bis_zum_limit`).
+
+Nutzungsbedingungen terra-hd: Auf den Kameraseiten steht "Gerne darf das Livebild dieser Webcam bis auf Widerruf in
+einer anderen Webseite eingebunden werden", unter Bedingungen (Bild nicht verändern, nur verkleinern, Link über dem
+ganzen Bild auf die Kamera oder terra-hd.com). Bei der Kaiserblick-Videokamera fehlt dieser Satz. Das Impressum
+erlaubt Downloads und Kopien nur für privaten, nicht kommerziellen Gebrauch. Wir verlinken weiter nur (U49);
+Einbetten wäre bei sieben der acht Kameras erlaubt, ist aber eine eigene Entscheidung.
+
+Gesucht, nicht gefunden:
+
+- Langlaufverleih: Tegernseer Tal, Fischbachau, Inzell (Chiemgau-Karte nennt nur Schlitten- und Radverleih), Bergen,
+  Siegsdorf, Kufstein, Ebbs, Schwoich, Langkampfen. Achental: bergfex-Verleihlisten sind per robots.txt gesperrt.
+  Thiersee (Schneeberglifte) und Bad Häring stehen im WKO-Verzeichnis nur als "Skiverleih" ohne Langlauf, deshalb
+  nicht übernommen; die tirol.at-Seite von Sport Thaler Hinterthiersee gab einen Serverfehler.
+- Webcams: Inzell (Kessel-Alm, Wimmerhof) und weitere Ruhpoldinger Kameras (Rauschberg, Bojernhof) nur bei
+  Sammelseiten ohne Betreiber; Gmund nur bei tourispo ohne Betreiber; Fischbachau weiter ohne Treffer.
+  Bayernwebcam.de (Sachrang-Ortsansicht) war nicht lesbar.
+
 ## Nächste Etappe
 
 Mieming, Silberregion Karwendel, Hinterriß; Südostbayern und Salzburger Land nach der Regionen-Reihenfolge;
