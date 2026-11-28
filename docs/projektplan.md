@@ -17,11 +17,11 @@ Stand: 27.11.2026.
 ### Priorität 1: bis zum Livegang am 11.12.
 
 - [ ] **Loipen näher recherchieren, weitere Etappen**: Mieming, Silberregion Karwendel, Hinterriß, dann Südostbayern und Salzburger Land; Verleih-Lücken Inzell und Berchtesgadener Land. Etappen 1–4 erledigt (PR #57, PR #61), Stand und Lücken in [recherche-handdaten-2026-11-27.md](recherche-handdaten-2026-11-27.md). Wer: `Claude`, gut für freie Kapazität.
-- [ ] **NAS aktualisieren**, damit die Testseite den aktuellen Stand zeigt (zuletzt war sie mehrere Versionen hinterher). Ablauf in [nas-update.md](nas-update.md). Wer: `Stefan`.
-- [ ] **Absturz-Log am NAS einschalten** (B34): Image neu holen ([nas-update.md](nas-update.md)). Danach steht das Log in `backup/logs/worker.log`, mit der neuen `docker-compose.yml` in `logs/worker.log` neben der `.env`. Für die Mail die `LOIPEN_SMTP_*`-Werte eintragen (Abschnitt 2). Wer: `Stefan`, Claude führt Schritt für Schritt.
-- [ ] **Impressum-Adresse klären** (eigene Adresse oder Familienadresse mit Zustellungsvollmacht). Checkliste Schritt 3. Wer: `Stefan`.
-- [ ] **Datenschutzerklärung** mit Generator erstellen oder eingebaute Vorlage bestätigen. Checkliste Schritt 11. Wer: `Stefan`, Claude hilft beim Text.
-- [ ] **Testseite auf Handy und PC durchklicken** (Standort, Karte, Impressum, Datenschutz, Push, Zähler). Checkliste Schritt 12. Wer: `Stefan`.
+- [x] **NAS aktualisieren**, damit die Testseite den aktuellen Stand zeigt (zuletzt war sie mehrere Versionen hinterher). Ablauf in [nas-update.md](nas-update.md). Wer: `Stefan`.
+- [x] **Absturz-Log am NAS einschalten** (B34): Image neu holen ([nas-update.md](nas-update.md)). Danach steht das Log in `backup/logs/worker.log`, mit der neuen `docker-compose.yml` in `logs/worker.log` neben der `.env`. Für die Mail die `LOIPEN_SMTP_*`-Werte eintragen (Abschnitt 2). Wer: `Stefan`, Claude führt Schritt für Schritt.
+- [x] **Impressum-Adresse klären** (eigene Adresse oder Familienadresse mit Zustellungsvollmacht). Checkliste Schritt 3. Wer: `Stefan`.
+- [x] **Datenschutzerklärung** mit Generator erstellen oder eingebaute Vorlage bestätigen. Checkliste Schritt 11. Wer: `Stefan`, Claude hilft beim Text.
+- [x] **Testseite auf Handy und PC durchklicken** (Standort, Karte, Impressum, Datenschutz, Push, Zähler). Checkliste Schritt 12. Wer: `Stefan`.
 - [ ] **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen und in einen Thread schreiben. Checkliste Schritt 14. Wer: `Stefan`.
 - [ ] **Antworten der Quellen entscheiden** und alle `nur_test`-Quellen durchgehen (siehe Abschnitt 3). Checkliste Schritt 15 und 15a. Wer: `beide`.
 - [ ] **Livegang freigeben** (Hauptadresse statt test., Suchmaschinen an). Nicht umkehrbar, nur auf dein Wort. Checkliste Schritt 16. Wer: `Stefan`.
