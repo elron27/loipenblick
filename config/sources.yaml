@@ -60,7 +60,7 @@ quellen:
     base_url: https://www.tegernsee.com
     art: portal
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -107,7 +107,7 @@ quellen:
     art: ortsseite
     schliesst: [bayrischzell]
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -130,7 +130,7 @@ quellen:
     art: ortsseite
     schliesst: [fischbachau]
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       # Schneebericht-Seiten mit dem Loipenzustand (aus der alten App uebernommen). Sie sind von der
       # Langlaufen-Liste nicht verlinkt und werden ueber den Namen den Touren zugeordnet.
@@ -150,7 +150,7 @@ quellen:
     art: ortsseite
     schliesst: [sachrang]
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       report_path: /schneebericht-sachrang
       default_gebiet: sachrang
@@ -171,7 +171,7 @@ quellen:
     base_url: https://module.tourinfra.com/chiemgau
     art: portal
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: null, erlaubnis: nur_test,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-09, nutzungsbedingungen_geprueft: 2026-11-28, erlaubnis: nur_test,
               hinweis: "Chiemgau GmbH 20.11.2026: Freigabe ausstehend, Daten vorerst nicht uebernehmen"}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
@@ -197,7 +197,7 @@ quellen:
     base_url: https://module.tourinfra.com/tannheimer
     art: portal
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "Loipenbericht von tannheimertal.com/de/erleben/winter/langlaufen/geoeffnete-loipen"}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
@@ -272,7 +272,7 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Der Schneebericht Kufsteinerland nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       pfad: /de/schneebericht.html
       regionen: [kufsteinerland]
@@ -322,7 +322,7 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Der Loipenzustand St. Anton nennt keinen Streckenverlauf; der Startpunkt kommt von tirol.at."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       pfad: /de/service/aktueller-loipenzustand
       default_gebiet: st-anton
@@ -392,7 +392,7 @@ quellen:
     art: ortsseite
     schliesst: [faistenau, hintersee]
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: 2026-11-28}
     config:
       pfad: /
       default_gebiet: faistenau
@@ -407,7 +407,7 @@ quellen:
     art: portal
     rang: 8
     strecke_hinweis: "Der Speicherdienst der GPX-Dateien von berchtesgaden.de erlaubt den Abruf laut robots.txt nicht, daher nur der Startpunkt."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: null}
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-12, nutzungsbedingungen_geprueft: 2026-11-28}
     zeitplan:
       # Stammdaten aendern sich selten: einmal am Tag reicht (P19)
       saison_uhrzeiten: [7]
@@ -432,7 +432,7 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Dolomiti NordicSki zeigt die Strecken nur in einer Karte, deren Daten per robots.txt gesperrt sind; der Startpunkt kommt vom Open Data Hub."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "Impressum ohne Nutzungsregeln; vor dem Oeffentlichschalten beim Komitee fragen"}
     config:
       # eine Seite zeigt alle Regionen; der Regionsfilter wirkt nur im Browser
@@ -577,7 +577,7 @@ quellen:
     base_url: https://module.tourinfra.com/engadin
     art: portal
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "Loipenbericht von engadin.ch/de/berichte/schneesportberichte"}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
@@ -610,7 +610,7 @@ quellen:
     base_url: https://module.tourinfra.com/destination-davos-klosters
     art: portal
     rang: 2
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "Loipenbericht von davos.ch/aktivitaeten/schneesport/langlauf/loipenbericht-davos-klosters"}
     config:
       json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
@@ -711,7 +711,7 @@ quellen:
     art: portal
     rang: 3
     strecke_hinweis: "Schweiz Tourismus nennt keinen Streckenverlauf und keinen Startpunkt; die Loipe liegt im Ort."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "robots.txt sperrt nur ?noidx=; Nutzungsbedingungen vor dem Oeffentlichschalten pruefen"}
     # rund 100 Seiten je Lauf (5 s Abstand, etwa 9 Minuten); die Orte melden morgens
     zeitplan:
@@ -831,7 +831,7 @@ quellen:
     art: portal
     rang: 2
     strecke_hinweis: "Der Wintersportbericht zählt nur die offenen Loipen je Ort; einzelne Loipen und Strecken nennt er nicht."
-    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: null,
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-13, nutzungsbedingungen_geprueft: 2026-11-28,
               hinweis: "PDF etwa 5 MB je Abruf; Nutzung vor dem Oeffentlichschalten bei der NLW anfragen"}
     zeitplan:
       saison_uhrzeiten: [7, 13]
