@@ -109,7 +109,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
-- [x] 28.11. Parken und Loipengebühren recherchiert: 26 Gebiete neu mit Loipengebühr (jetzt 40), u. a. Seefeld/Leutasch, Ötztal, Pitztal, Osttirol, Zugspitz Arena, Tannheimer Tal, Gastein, Ramsau, Tauplitz, Inzell, Chieming; Parkplatz Aschauerweiher; Saisonprüfung liest „Euro 12,00“ – PR folgt
+- [x] 28.11. Parken und Loipengebühren recherchiert: 26 Gebiete neu mit Loipengebühr (jetzt 40), u. a. Seefeld/Leutasch, Ötztal, Pitztal, Osttirol, Zugspitz Arena, Tannheimer Tal, Gastein, Ramsau, Tauplitz, Inzell, Chieming; Parkplatz Aschauerweiher; Saisonprüfung liest „Euro 12,00“ – PR #64
 
 - [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
 - [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60
