@@ -100,7 +100,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 - [ ] **Schneekarte:** 7 Tage Sammeln beobachten, Archive nachladen, danach vier Designs zur Auswahl. Wer: `Claude`, Auswahl `Stefan`.
 - [ ] **Cookies mit Banner** nur, falls der Besucherzähler nicht reicht (E-14, B18). Wer: `Stefan` entscheidet.
 - [ ] **Endziel: ganzer deutschsprachiger Raum** (DE, AT, CH, LI, Südtirol; Stefan 27.11.). Gesamtkarte in [recherche-neue-regionen-2026-11-27.md](recherche-neue-regionen-2026-11-27.md).
-- [ ] **Etappe Mittelgebirge:** 1) Bayerischer Wald und 2) Fichtelgebirge erledigt (PR #59/#62, nur Testseite; Stammdaten und OSM-Auszug laufen im Workflow „Stammdaten“), 3) Folgerecherche ThüCAT/Thüringer Wald, Vorarlberg, Salzkammergut/Oberösterreich, Erzgebirge, 4) Outdooractive-Partnerzugang klären (Schwarzwald, Thüringer Wald), 5) Harz, Sauerland, Augsburg als Handangabe, Rhön und Alb zuletzt. Wer: `Claude`, Freigabe `Stefan`.
+- [ ] **Etappe Mittelgebirge:** 1) Bayerischer Wald und 2) Fichtelgebirge erledigt (PR #59/#65, nur Testseite; Stammdaten und OSM-Auszug laufen im Workflow „Stammdaten“), 3) Folgerecherche ThüCAT/Thüringer Wald, Vorarlberg, Salzkammergut/Oberösterreich, Erzgebirge, 4) Outdooractive-Partnerzugang klären (Schwarzwald, Thüringer Wald), 5) Harz, Sauerland, Augsburg als Handangabe, Rhön und Alb zuletzt. Wer: `Claude`, Freigabe `Stefan`.
 - [ ] **Augsburg:** Welche Loipe ist gemeint? Dann als Gebiet mit Handangaben. Wer: `Stefan` sagt es.
 - [ ] **Erlaubnis-Mails** an Bayerischer Wald und Fichtelgebirge vor dem öffentlichen Zeigen. Entwurf fertig (Projektdateien `livegang/vorbereitung/erlaubnis-mails-p44.md`, nennt den tourinfra-Weg wegen der Chiemgau-Rückfrage), Adressen aus dem Impressum einsetzen. Wer: `Stefan` versendet.
 - [ ] **Ausbau weiterer Regionen** (Südtirol-Rest, Kärnten, Schweiz) nach dem Livegang.
@@ -111,7 +111,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
-- [x] 27.11. Recherche neue Regionen; Bayerischer Wald (253 Loipen) und Fichtelgebirge (75 Loipen) angebunden, zuerst nur auf der Testseite (P44); Anbindung von Stefan am 28.11. freigegeben – PR #59, #62
+- [x] 27.11. Recherche neue Regionen; Bayerischer Wald (253 Loipen) und Fichtelgebirge (75 Loipen) angebunden, zuerst nur auf der Testseite (P44); Anbindung von Stefan am 28.11. freigegeben – PR #59, #65
 - [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
 - [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60
 - [x] 27.11. Loipen näher recherchiert, Etappen 1–3 (Tegernsee bis Fuschlsee, Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Pillerseetal, Alpbachtal, Wildschönau): 36 Webcams, 10 Verleihe, Gebühren, Merkmale Einkehr/Familie; neue Felder Hunderegel und beleuchtete Loipen (D25) – PR #57
