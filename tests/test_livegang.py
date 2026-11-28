@@ -91,6 +91,21 @@ def test_b6_impressum_und_datenschutz_aus_der_konfiguration(site):
         assert wort in ds, wort
 
 
+@pytest.mark.req("U35", ak=2)
+@pytest.mark.req("B6", ak=3)
+def test_online_ortssuche_erlaubt_und_in_der_datenschutzerklaerung(site):
+    """Die Ortssuche fragt nach Klick auf „Suchen“ bei photon.komoot.io; die CSP darf das nicht sperren,
+    und Datenschutz und Hinweise nennen den Dienst."""
+    h = (site / ".htaccess").read_text(encoding="utf-8")
+    assert "connect-src 'self' https://photon.komoot.io;" in h
+    app = (Path(generator.__file__).parent / "static" / "app.js").read_text(encoding="utf-8")
+    assert 'GEO_URL = "https://photon.komoot.io/api/"' in app
+    ds = (site / "datenschutz.html").read_text(encoding="utf-8")
+    assert "Ortssuche im Internet" in ds and "photon.komoot.io" in ds and "komoot betreibt" in ds
+    assert "Beim ersten Besuch fragt die Seite einmal" in ds
+    assert "photon.komoot.io" in (site / "hinweise.html").read_text(encoding="utf-8")
+
+
 @pytest.mark.req("B6", ak=3)
 def test_b6_ohne_angaben_meldet_das_impressum_was_fehlt(session, tmp_path):
     generator.erzeuge(session, tmp_path, JETZT)

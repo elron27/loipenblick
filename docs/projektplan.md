@@ -1,7 +1,7 @@
 # Projektplan Loipenblick
 
 Eine Datei für den Überblick: was ansteht, wer etwas tun muss, was schon erledigt ist.
-Stand: 27.11.2026.
+Stand: 28.11.2026.
 
 **So wird die Datei gepflegt**
 
@@ -24,6 +24,9 @@ Stand: 27.11.2026.
 - [x] **Testseite auf Handy und PC durchklicken** (Standort, Karte, Impressum, Datenschutz, Push, Zähler). Checkliste Schritt 12. Wer: `Stefan`.
 - [ ] **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen und in einen Thread schreiben. Checkliste Schritt 14. Wer: `Stefan`.
 - [ ] **Antworten der Quellen entscheiden** und alle `nur_test`-Quellen durchgehen (siehe Abschnitt 3). Checkliste Schritt 15 und 15a. Wer: `beide`.
+- [ ] **Elf noch nie angefragte Quellen anfragen** (St. Anton, Kitzbüheler Alpen, Dolomiti NordicSki, Engadin, Davos Klosters, Goms, Gastein, Ramsau, MySwitzerland, Nassfeld, Steiermark) und entscheiden, ob Engadin, Davos, MySwitzerland und Nassfeld bis zur Antwort `nur_test` werden (ihre Bedingungen verbieten öffentliche bzw. Datenbank-Nutzung). Vorschlag in [datenschutz-und-quellen.md](datenschutz-und-quellen.md) Abschnitt 2.3. Wer: `Stefan` entscheidet und verschickt, `Claude` passt Mails und `sources.yaml` an.
+- [ ] **Kufsteinerland**: Impressum untersagt die „Speicherung in Datenbanken“. Entscheiden, ob nach der Frist trotzdem gezeigt wird. Wer: `Stefan`.
+- [ ] **Datenschutz zu klären** ([datenschutz-und-quellen.md](datenschutz-und-quellen.md) Abschnitt 1): echte Log-Frist bei netcup im CCP nachsehen (`LOIPEN_LOG_TAGE`, Standard 7), photon.komoot.io einmal im Browser auf Nutzungsregeln prüfen, Impressum von steiermark.com und kitzbueheler-alpen.com im Browser suchen. Wer: `Stefan`.
 - [ ] **Livegang freigeben** (Hauptadresse statt test., Suchmaschinen an). Nicht umkehrbar, nur auf dein Wort. Checkliste Schritt 16. Wer: `Stefan`.
 - [ ] **Am Livegang-Tag:** Google Search Console und Bing Webmaster anmelden, UptimeRobot auf Hauptadresse umstellen. Checkliste 16a–16c. Wer: `Stefan`.
 
@@ -89,7 +92,6 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 ## 4. Backlog (später)
 
 - [ ] **Dezember: zweiter Satz Schnappschüsse** mit echtem Schnee und echten Saisonwörtern (P18 AK 2). Wer: `Claude`.
-- [ ] **Nutzungsbedingungen aller Quellen prüfen** vor der öffentlichen Seite (inkl. steiermark.com). Wer: `Claude`.
 - [ ] **Nur am NAS prüfbar:** Hyper-Backup-Ordner, echte .env, Push in der Handy-App, Dauerbetrieb. Wer: `Stefan`.
 - [ ] **Workflow „Live-Prüfung“** einmal von Hand starten; optional Repo-Variable `LOIPEN_USER_AGENT`. Wer: `Stefan` (ein Klick auf GitHub unter „Actions“).
 - [ ] **Let's Encrypt für die Hauptadresse** prüfen und „HTTP auf HTTPS“ an. Für test. läuft es schon. Wer: `Stefan`.
@@ -107,6 +109,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
+- [x] 28.11. Nutzungsbedingungen aller öffentlich gezeigten Quellen geprüft (Tabelle mit Risiko und Empfehlung), Datenschutz-Vorlage mit dem Code abgeglichen: Online-Ortssuche (Photon) ergänzt und in der CSP freigegeben, Standort und Browser-Speicher präzisiert – [datenschutz-und-quellen.md](datenschutz-und-quellen.md), PR #62
 - [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
 - [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60
 - [x] 27.11. Loipen näher recherchiert, Etappen 1–3 (Tegernsee bis Fuschlsee, Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Pillerseetal, Alpbachtal, Wildschönau): 36 Webcams, 10 Verleihe, Gebühren, Merkmale Einkehr/Familie; neue Felder Hunderegel und beleuchtete Loipen (D25) – PR #57

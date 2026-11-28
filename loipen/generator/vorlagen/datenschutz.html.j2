@@ -8,7 +8,7 @@
 {% else %}<p>Siehe <a href="impressum.html">Impressum</a>.</p>{% endif %}
 
 <h2>Kurz gesagt</h2>
-<p>Loipenblick braucht kein Konto, setzt keine Cookies, zeigt keine Werbung und verfolgt dich nicht. Beim Aufruf der Seite lädt dein Browser nur Dateien von dieser Domain. Daten von anderen Servern kommen erst, wenn du es selbst auslöst, zum Beispiel mit „Karte laden“ oder einem Klick auf einen Link.</p>
+<p>Loipenblick braucht kein Konto, setzt keine Cookies, zeigt keine Werbung und verfolgt dich nicht. Beim Aufruf der Seite lädt dein Browser nur Dateien von dieser Domain. Daten von anderen Servern kommen erst, wenn du es selbst auslöst, zum Beispiel mit „Karte laden“, mit „Suchen“ in der Ortswahl oder einem Klick auf einen Link.</p>
 
 <h2>Hosting und Server-Protokolle</h2>
 <p>Die Seite liegt bei {{ hoster or "dem Webhoster (siehe Impressum)" }}. Bei jedem Aufruf speichert der Server, wie bei jeder Website, ein Protokoll: IP-Adresse, Datum und Uhrzeit, aufgerufene Datei, übertragene Datenmenge, Browser und Betriebssystem sowie die zuvor besuchte Seite. Das ist nötig, um die Seite sicher auszuliefern und Fehler oder Angriffe zu erkennen (Art. 6 Abs. 1 lit. f DSGVO). Die Protokolle werden nach {{ log_tage }} Tagen gelöscht{% if statistik_logs %} und vorher zu einer anonymen Zugriffsstatistik ohne Cookies zusammengefasst{% endif %}. Mit dem Hoster besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
@@ -25,10 +25,13 @@
 {% else %}<p>Die Karte kommt von dieser Domain. Es werden keine Daten an Dritte übertragen. Kartendaten © OpenStreetMap-Mitwirkende.</p>{% endif %}
 
 <h2>Standort</h2>
-<p>Wenn du auf „Mein Standort“ tippst, fragt dein Browser, ob er den Standort freigeben darf. Der Standort wird nur in deinem Browser verwendet, um Entfernungen zu berechnen, und nie an den Server oder Dritte gesendet. Die Ortssuche läuft ebenfalls nur in deinem Browser.</p>
+<p>Beim ersten Besuch fragt die Seite einmal, ob sie deinen Standort verwenden darf; die Abfrage selbst zeigt dein Browser. Später geschieht das nur, wenn du auf „Mein Standort“ tippst oder schon einmal zugestimmt hast (dann wird der gespeicherte Standort beim Öffnen still aufgefrischt). Der Standort wird nur in deinem Browser verwendet, um Entfernungen zu berechnen, und nie an unseren Server oder Dritte gesendet. Die Suche nach Loipen, Gebieten und bekannten Orten läuft ebenfalls nur in deinem Browser. Du kannst die Freigabe jederzeit in den Einstellungen deines Browsers zurücknehmen.</p>
+
+<h2>Ortssuche im Internet</h2>
+<p>Findest du deinen Ort nicht in der Liste, kannst du in der Ortswahl mit „Suchen“ online suchen. Nur dann schickt dein Browser den eingegebenen Suchbegriff, deine IP-Adresse und die Adresse dieser Seite an den Suchdienst Photon (photon.komoot.io), den komoot betreibt. Die Ortsdaten dort stammen aus OpenStreetMap. Es gilt die <a href="https://www.komoot.com/de-de/privacy" rel="noopener">Datenschutzerklärung von komoot</a>. Rechtsgrundlage ist deine Einwilligung durch den Klick auf „Suchen“ (Art. 6 Abs. 1 lit. a DSGVO). Ohne Klick wird nichts gesendet.</p>
 
 <h2>Speicher im Browser</h2>
-<p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was du selbst wählst: den gewählten Ort, ob die Karte geladen werden darf,{% if zaehler %} ob dieser Browser vom Besucherzähler ausgenommen ist (nur für den Betreiber),{% endif %} und die Loipen, die du dir mit „Merken“ auf deine Liste „Meine Loipen“ gesetzt hast. Die Merkliste verlässt deinen Browser nicht; nur wenn du für sie ein E-Mail-Abo anfragst, gehen die gewählten Loipen mit dem Formular an uns. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
+<p>Die Seite speichert im lokalen Speicher deines Browsers (localStorage) nur, was für deine Einstellungen nötig ist: den gewählten Ort oder deinen zuletzt bestimmten Standort, ob nach dem Standort schon einmal gefragt wurde, ob die Karte geladen werden darf, ob der Hinweis zur Handy-App ausgeblendet ist,{% if zaehler %} ob dieser Browser vom Besucherzähler ausgenommen ist (nur für den Betreiber),{% endif %} und die Loipen, die du dir mit „Merken“ auf deine Liste „Meine Loipen“ gesetzt hast. Die Merkliste verlässt deinen Browser nicht; nur wenn du für sie ein E-Mail-Abo anfragst, gehen die gewählten Loipen mit dem Formular an uns. Ein Service Worker hält die Dateien der Seite und die zuletzt geladenen Daten vor, damit sie auch ohne Netz angezeigt werden. Das ist für diese Funktionen unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst den Speicher jederzeit in den Einstellungen deines Browsers löschen.</p>
 
 {% if abo %}
 <h2>E-Mail-Benachrichtigung</h2>
