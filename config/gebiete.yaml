@@ -724,6 +724,12 @@ gebiete:
   lat: 47.763
   lon: 12.752
   tourist_url: https://www.inzell.de/schneebericht
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: null
+    text: 'freiwillige Nutzungsgebühr für die Loipenpflege, Kassen an den Einstiegen Niederachen, Badepark, Schwarzberg und Falkensteinweg'
+    url: https://www.inzell.de/fileadmin/inzell/Dateien/pflege-loipen.pdf
+    geprueft_am: 2026-11-28
   # Handrecherche 27.11.2026, Etappe 2 bzw. D25 (Hunde, Beleuchtung)
   beleuchtet:
   - name: 'Nachtloipe am Campingplatz'
@@ -988,6 +994,12 @@ gebiete:
   lat: 47.889
   lon: 12.523
   tourist_url: https://www.chiemsee-chiemgau.info/alle-loipen
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'nein (tourinfra-Merkmal ''Kostenfrei'' bei beiden Chieminger Loipen)'
+    url: https://module.tourinfra.com/chiemgau/details.php?id=215263
+    geprueft_am: 2026-11-28
   nachbarn: []
 - slug: kufstein
   name: Kufstein
@@ -1275,6 +1287,12 @@ gebiete:
   lat: 47.452
   lon: 12.255
   tourist_url: https://www.kitzbueheler-alpen.com/de/bri/aktuelles/loipen-status.html
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen in den Kitzbüheler Alpen kostenlos (nur Pillerseetal gebührenpflichtig)'
+    url: https://www.kitzbueheler-alpen.com/de/kam/wi/langlaufen/urlaub.html
+    geprueft_am: 2026-11-28
   nachbarn:
   - hohe-salve
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; die A12 von der Grenze bis Kufstein-Süd ist frei.'
@@ -1505,6 +1523,17 @@ gebiete:
   lat: 47.644
   lon: 12.985
   tourist_url: https://www.berchtesgaden.de/pois/langlaufzentrum-aschauerweiher-bischofswiesen
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  parkplaetze:
+  # Koordinate: gleichnamiger Parkplatz im OSM-Auszug (config/osm/berchtesgadener-land.yaml)
+  - name: Parkplatz Aschauerweiher (Langlaufzentrum)
+    lat: 47.643261
+    lon: 12.98453
+    gebuehr_text: kostenlos
+    url: https://www.berchtesgaden.de/touren/langlaufzentrum-aschauerweiher-bischofswiesen
+    koordinate_geschaetzt: false
+    gebuehr_eur_tag: 0.0
+    geprueft_am: 2026-11-28
   nachbarn:
   - berchtesgaden
   - schoenau-am-koenigssee
@@ -1785,6 +1814,12 @@ gebiete:
   lat: 47.332
   lon: 11.173
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 15.0
+    text: 'Tageskarte 15 €, mit Gästekarte 11 €; Kinder bis 15 frei (Region Seefeld, Winter 2026/27)'
+    url: https://www.seefeld.com/en/tickets-and-prices.html
+    geprueft_am: 2026-11-28
   # Handrecherche 27.11.2026, Etappe 4
   hunde:
     erlaubt: true
@@ -1813,6 +1848,12 @@ gebiete:
   lat: 47.367
   lon: 11.15
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 15.0
+    text: 'Tageskarte 15 €, mit Gästekarte 11 €; Kinder bis 15 frei (Region Seefeld, Winter 2026/27)'
+    url: https://www.seefeld.com/en/tickets-and-prices.html
+    geprueft_am: 2026-11-28
   # Handrecherche 27.11.2026, Etappe 4
   verleih:
   - name: 'Skischule Leutasch (Langlaufverleih)'
@@ -1843,6 +1884,12 @@ gebiete:
   lat: 47.095
   lon: 10.969
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen im Ötztal kostenlos'
+    url: https://oetztal.com/en/activities/winter/cross-country-skiing/trails-cross-country-ski
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '136'
@@ -1855,6 +1902,12 @@ gebiete:
   lat: 46.935
   lon: 11.02
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen im Ötztal kostenlos'
+    url: https://oetztal.com/en/activities/winter/cross-country-skiing/trails-cross-country-ski
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '66'
@@ -1867,6 +1920,12 @@ gebiete:
   lat: 46.888
   lon: 11.039
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen im Ötztal kostenlos'
+    url: https://oetztal.com/en/activities/winter/cross-country-skiing/trails-cross-country-ski
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '66'
@@ -1879,6 +1938,12 @@ gebiete:
   lat: 46.86
   lon: 10.91
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen im Ötztal kostenlos'
+    url: https://oetztal.com/en/activities/winter/cross-country-skiing/trails-cross-country-ski
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '66'
@@ -1891,6 +1956,12 @@ gebiete:
   lat: 47.067
   lon: 10.844
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 €, Saisonkarte 70 €; mit Pitztal Guest Card inklusive; Kinder unter 10 frei'
+    url: https://www.pitztal.com/de/loipentickets.html
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '136'
@@ -1903,6 +1974,12 @@ gebiete:
   lat: 46.958
   lon: 10.871
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € gilt für alle Loipen im Pitztal; Höhenloipe Pitztaler Gletscher und Rifflsee nicht in der Guest Card enthalten'
+    url: https://www.pitztal.com/de/loipentickets.html
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '184'
@@ -1951,6 +2028,12 @@ gebiete:
   lat: 47.047
   lon: 10.61
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: Loipen in Serfaus-Fiss-Ladis kostenlos (Bergbahn zu den Höhenloipen kostet)'
+    url: https://www.serfaus-fiss-ladis.at/en/winter/winter-active/cross-country-skiing
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '50'
@@ -2023,6 +2106,12 @@ gebiete:
   lat: 47.428
   lon: 10.768
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: alle Loipen der Tiroler Zugspitz Arena kostenlos (Winter 2026/27)'
+    url: https://a.storyblok.com/f/303949/x/2cafca25b8/tiroler-zugspitz-arena_pressetext_winter-26-27.pdf
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '76'
@@ -2035,6 +2124,12 @@ gebiete:
   lat: 47.496
   lon: 10.55
   tourist_url: https://www.tannheimertal.com/de/erleben/winter/langlaufen/geoeffnete-loipen
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: kostenfreie Loipennutzung; nur die beschneite Loipe Grän/Haldensee kostet vor dem Saisonstart 5 € (frei mit Gästekarte und bis 15)'
+    url: https://www.tirol.at/aktivitaeten/sport/langlaufen/orte-zum-langlaufen/langlaufen-tannheimer-tal
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '11410'
@@ -2095,6 +2190,12 @@ gebiete:
   lat: 47.34
   lon: 10.659
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: alle Loipen der Tiroler Zugspitz Arena kostenlos (Winter 2026/27)'
+    url: https://a.storyblok.com/f/303949/x/2cafca25b8/tiroler-zugspitz-arena_pressetext_winter-26-27.pdf
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '76'
@@ -2107,6 +2208,12 @@ gebiete:
   lat: 47.398
   lon: 10.906
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'keine: alle Loipen der Tiroler Zugspitz Arena kostenlos (Winter 2026/27)'
+    url: https://a.storyblok.com/f/303949/x/2cafca25b8/tiroler-zugspitz-arena_pressetext_winter-26-27.pdf
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '76'
@@ -2119,6 +2226,12 @@ gebiete:
   lat: 47.458
   lon: 12.352
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: null
+    text: 'Sportloipe Kitzbühel (Golfplatz Schwarzsee-Reith): Loipe und Parken kostenlos; für die übrigen Loipen keine Angabe'
+    url: https://www.kitzbueheler-alpen.com/de/bri/touren/sportloipe-kitzbuehel.html
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '118'
@@ -2143,6 +2256,12 @@ gebiete:
   lat: 46.807
   lon: 12.848
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € an Verkaufsstellen, 17 € beim Loipenkontrolleur; Wochenkarte und Saisonkarte Osttirol; Kinder bis 13 frei (Winter 2026/27)'
+    url: https://www.osttirol.com/en/active-outdoor/cross-country-biathlon/buy-cross-country-ticket-online
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '55'
@@ -2155,6 +2274,12 @@ gebiete:
   lat: 46.751
   lon: 12.445
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € an Verkaufsstellen, 17 € beim Loipenkontrolleur; Wochenkarte und Saisonkarte Osttirol; Kinder bis 13 frei (Winter 2026/27)'
+    url: https://www.osttirol.com/en/active-outdoor/cross-country-biathlon/buy-cross-country-ticket-online
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '130'
@@ -2179,6 +2304,12 @@ gebiete:
   lat: 46.966
   lon: 12.353
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € an Verkaufsstellen, 17 € beim Loipenkontrolleur; Wochenkarte und Saisonkarte Osttirol; Kinder bis 13 frei (Winter 2026/27)'
+    url: https://www.osttirol.com/en/active-outdoor/cross-country-biathlon/buy-cross-country-ticket-online
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '185'
@@ -2191,6 +2322,12 @@ gebiete:
   lat: 47.094
   lon: 12.486
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € an Verkaufsstellen, 17 € beim Loipenkontrolleur; Wochenkarte und Saisonkarte Osttirol; Kinder bis 13 frei (Winter 2026/27)'
+    url: https://www.osttirol.com/en/active-outdoor/cross-country-biathlon/buy-cross-country-ticket-online
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '43'
@@ -2203,6 +2340,12 @@ gebiete:
   lat: 47.001
   lon: 12.622
   tourist_url: https://www.tirol.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 12.0
+    text: 'Tageskarte 12 € an Verkaufsstellen, 17 € beim Loipenkontrolleur; Wochenkarte und Saisonkarte Osttirol; Kinder bis 13 frei (Winter 2026/27)'
+    url: https://www.osttirol.com/en/active-outdoor/cross-country-biathlon/buy-cross-country-ticket-online
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen und Schnellstraßen (A12, A13, S16); Arlberg-, Felbertauern- und Brennerstrecke mit eigener Maut.'
   wetterstation:
     id: '43'
@@ -2573,6 +2716,12 @@ gebiete:
   lat: 47.128
   lon: 13.101
   tourist_url: https://www.gastein.com
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 0.0
+    text: 'Dorfgastein, Bad Hofgastein und Bad Gastein kostenlos; Sportgastein Tageskarte ab 9 €, Woche ab 45 €, Saison ab 80 €'
+    url: https://www.gastein.com/en/experiences/sport-nature/cross-country-skiing/
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) mit Vignette.'
   wetterstation:
     id: '15402'
@@ -2585,6 +2734,12 @@ gebiete:
   lat: 47.419
   lon: 13.657
   tourist_url: https://www.ramsau.com
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 21.5
+    text: 'Tageskarte 21,50 €, mit WinterCard 18,50 € (Hauptsaison ab 04.12.2026, Nebensaison 17 €); Kinder bis 15 frei'
+    url: https://www.schladming-dachstein.at/de/aktivitaeten/langlaufen.md
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) mit Vignette.'
   wetterstation:
     id: '12711'
@@ -3474,6 +3629,12 @@ gebiete:
   lat: 47.556
   lon: 13.934
   tourist_url: https://www.ausseerland.at
+  # Handrecherche 28.11.2026, Parken und Gebuehren (Quelle je Eintrag, eur = Tageskarte Erwachsene ohne Gaestekarte)
+  loipengebuehr:
+    eur: 17.0
+    text: 'Tagesticket 17 € (mit Auffahrt Tauplitzalm 25 €), Nachmittag 13 €; Kinder bis 15 frei; Tickets auch an den Parkautomaten (Winter 2026/27)'
+    url: https://www.steiermark.com/loipengebuehren
+    geprueft_am: 2026-11-28
   grenzinfo: 'Österreich: Vignettenpflicht auf Autobahnen; Anfahrt über die A10 (Tauernautobahn) oder die A9 (Pyhrnautobahn, Bosruck- und Gleinalmtunnel mit Maut).'
   wetterstation:
     id: '9700'
