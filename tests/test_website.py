@@ -49,6 +49,7 @@ def test_b7_daten_liegen_als_json_je_region(site):
     index = lies(site, "daten.json")
     assert {r["slug"] for r in index["regionen"]} == {
         "tegernseer-tal", "leitzachtal", "priental", "chiemgau", "berchtesgadener-land",
+        "bayerischer-wald", "fichtelgebirge",  # P44
         "kufsteinerland", "kaiserwinkl", "wilder-kaiser", "kitzbueheler-alpen", "fuschlseeregion",
         "alpbachtal-wildschoenau", "zillertal", "achensee-karwendel", "innsbruck-umgebung", "seefeld-mieming",
         "oetztal-pitztal", "oberland-arlberg", "ausserfern", "osttirol",
@@ -140,6 +141,7 @@ def test_u10_kennzahlen_stimmen_mit_der_datenbank(session, site):
     assert kz["gebiete"] == sum(r["gebiete"] for r in lies(site, "daten.json")["regionen"])
     assert {q["key"] for q in lies(site, "daten.json")["quellen"]} == {
         "tegernsee", "bayrischzell", "fischbachau", "sachrang", "chiemgau",
+        "bayerischer-wald", "fichtelgebirge",  # P44
         "tirol", "kitzbueheler-alpen", "langlaufdorf", "berchtesgaden", "tannheimer", "seefeld", "kufsteinerland", "kaiserwinkl",  # achensee abgelehnt (B30)
         "dolomiti-nordicski", "opendatahub",
         "engadin", "davos-klosters", "goms", "gastein", "ramsau", "seefeld-tourinfra", "myswitzerland",

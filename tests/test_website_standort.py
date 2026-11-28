@@ -194,7 +194,7 @@ def test_u36_karte_zeigt_strecken_auch_fern_vom_standort(seite):
     geladen = {re.search(r"strecken/([^/?.]+)(?:\.[0-9a-f]{12})?\.json", u).group(1) for u in seite.abrufe if "/strecken/" in u}
     # alle Regionen mit Strecken (U36), auch die tourinfra-Regionen von E-20
     assert geladen == {"chiemgau", "ausserfern", "seefeld-mieming", "engadin", "davos-klosters", "goms",
-                       "gasteinertal", "schladming-dachstein"}
+                       "gasteinertal", "schladming-dachstein", "bayerischer-wald", "fichtelgebirge"}  # P44
     assert seite.locator("#map path.leaflet-interactive").count() >= 80
 
 

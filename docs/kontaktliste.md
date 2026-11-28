@@ -47,6 +47,8 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 | Schweiz Tourismus / infosnow.ch (APGSGA) | snow.myswitzerland.com | Schneeberichte Schweiz, Liechtenstein | noch suchen | nicht angefragt | Nutzungsbedingungen noch prüfen |
 | Nassfeld-Pressegger See (NLW) | tools.nlw.at | Wintersportbericht (PDF) | noch suchen | nicht angefragt | |
 | Steiermark Tourismus | steiermark.com | Loipenstatus Tourenportal | noch suchen | nicht angefragt | |
+| Tourismusverband Ostbayern e.V. (Bayerischer Wald) | tourinfra Loipenmanager `bayerischer-wald` (253 Loipen, 11 Gebiete) | Loipenstatus, Strecken | Adresse aus dem Impressum von bayerischer-wald.de ergänzen (Sitz Regensburg) | **nicht angefragt**, Entwurf liegt bereit | Seit 28.11.2026 angebunden, `nur_test` (P44, E-24). Entwurf: Projektdateien `livegang/vorbereitung/erlaubnis-mails-p44.md`. |
+| Tourismuszentrale Fichtelgebirge e.V. | tourinfra Loipenmanager `fichtelgebirge` (75 Loipen, 5 Gebiete) | Loipenstatus, Strecken | Adresse aus dem Impressum von fichtelgebirge.bayern ergänzen (Sitz Fichtelberg, Tel. +49 9272 969030) | **nicht angefragt**, Entwurf liegt bereit | Seit 28.11.2026 angebunden, `nur_test` (P44, E-24). |
 
 ## 2. Daten ohne Anfrage, aber mit Pflichten
 
@@ -62,7 +64,7 @@ Erlaubnis-Status in `sources.yaml` (`nutzung.erlaubnis`):
 
 ## 3. tourinfra-Loipenmanager (green-solutions)
 
-Acht Quellen lesen dieselbe Abfrage `module.tourinfra.com/<kunde>/inc/ajax.php?ajaxtype=getLoipenmanager`, also das
+Zehn Quellen lesen dieselbe Abfrage `module.tourinfra.com/<kunde>/inc/ajax.php?ajaxtype=getLoipenmanager`, also das
 JSON, das auch das Loipenbericht-Widget auf der Webseite des Betreibers lädt. Das ist keine für Dritte freigegebene oder
 dokumentierte Schnittstelle. Systemanbieter: green-solutions GmbH & Co. KG, Viehmarktplatz 6, 82418 Murnau,
 office@green-solutions.info, +49 8841 4874011 (Impressum green-solutions.info, gelesen 20.11.2026). Auf ihren Seiten steht
@@ -70,7 +72,7 @@ nichts zu einer offenen Schnittstelle oder zur Weitergabe an externe Plattformen
 
 Die Daten gehören dem jeweiligen Tourismusverband, nicht green-solutions. Die Rückfrage der Chiemgau GmbH (20.11.2026)
 betrifft deshalb zunächst nur den Chiemgau. Sagt green-solutions aber allgemein, dass der Abruf des Widget-JSON durch Dritte
-nicht gewünscht ist, gilt das für alle acht:
+nicht gewünscht ist, gilt das für alle zehn:
 
 | Quelle (`key`) | Betreiber | Erlaubnis-Stand |
 |---|---|---|
@@ -82,6 +84,8 @@ nicht gewünscht ist, gilt das für alle acht:
 | `goms` | Goms Tourismus | nicht angefragt |
 | `gastein` | Gastein Tourismus | nicht angefragt |
 | `ramsau` | TVB Ramsau am Dachstein | nicht angefragt |
+| `bayerischer-wald` | Tourismusverband Ostbayern e.V. | `nur_test` seit 28.11.2026, nicht angefragt (P44) |
+| `fichtelgebirge` | Tourismuszentrale Fichtelgebirge e.V. | `nur_test` seit 28.11.2026, nicht angefragt (P44) |
 
 ## 4. Ortsseiten für die Querprüfung von tirol.at (in Arbeit)
 

@@ -5,5 +5,7 @@
 # Lauf 3 brach beim Seitenaufbau ab (Datum in gebiete.yaml nicht JSON-tauglich, behoben).
 # Lauf 4 (24.11.2026): tourinfra gespeichert (config/stammdaten/tourinfra.yaml); osm scheiterte am Spiegel (404).
 # Lauf 5 (24.11.2026): osm (Geofabrik ueber IPv4, Spiegel ueber Verzeichnis), dann Hoehe.
-osm
-hoehe
+# Lauf 6 (28.11.2026, P44): nur die neuen Regionen Bayerischer Wald und Fichtelgebirge; vorhandene
+# tourinfra-Eintraege werden ohne --alle nicht neu gelesen, osm schreibt nur die genannten Regionen.
+tourinfra --quelle bayerischer-wald --quelle fichtelgebirge
+osm --region bayerischer-wald --region fichtelgebirge

@@ -1056,3 +1056,45 @@ FEHLER The read operation timed out https://overpass.kumi.systems/api/interprete
 200    60205 tests/fixtures/recherche-2026-11-24/tourinfra/engadin-details-210056.html https://module.tourinfra.com/engadin/details.php?id=210056
 200    61582 tests/fixtures/recherche-2026-11-24/tourinfra/ramsau-details-31499.html https://module.tourinfra.com/ramsau/details.php?id=31499
 200   365839 tests/fixtures/recherche-2026-11-24/tourinfra/chiemgau-loipenmanager.json https://module.tourinfra.com/chiemgau/inc/ajax.php?ajaxtype=getLoipenmanager
+# Lauf 2026-11-27 10:39 UTC, User-Agent LoipenBot/0.1 (+https://github.com/elron27/loipenblick)
+200 https://module.tourinfra.com/robots.txt
+200   832351 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-arberland.json https://module.tourinfra.com/arberland/inc/ajax.php?ajaxtype=getLoipenmanager
+200  1602457 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-bayerischer-wald.json https://module.tourinfra.com/bayerischer-wald/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-bayerwald.json https://module.tourinfra.com/bayerwald/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-ferienregion-nationalpark.json https://module.tourinfra.com/ferienregion-nationalpark/inc/ajax.php?ajaxtype=getLoipenmanager
+200   304717 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-fichtelgebirge.json https://module.tourinfra.com/fichtelgebirge/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-rhoen.json https://module.tourinfra.com/rhoen/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-thueringer-wald.json https://module.tourinfra.com/thueringer-wald/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-harz.json https://module.tourinfra.com/harz/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-schwarzwald.json https://module.tourinfra.com/schwarzwald/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-hochschwarzwald.json https://module.tourinfra.com/hochschwarzwald/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-schwaebische-alb.json https://module.tourinfra.com/schwaebische-alb/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-sauerland.json https://module.tourinfra.com/sauerland/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-erzgebirge.json https://module.tourinfra.com/erzgebirge/inc/ajax.php?ajaxtype=getLoipenmanager
+404      153 tests/fixtures/recherche-2026-11-27/regionen/tourinfra-oberhof.json https://module.tourinfra.com/oberhof/inc/ajax.php?ajaxtype=getLoipenmanager
+200 https://www.thueringer-wald.com/robots.txt
+200   205831 tests/fixtures/recherche-2026-11-27/regionen/thueringer-wald-langlauf-aktuell.html https://www.thueringer-wald.com/langlauf-aktuell
+200 https://thueringer-wald.com/robots.txt
+200   195604 tests/fixtures/recherche-2026-11-27/regionen/thueringer-wald-ski-nordisch.html https://thueringer-wald.com/ski-nordisch
+200 https://arberland-bayerischer-wald.de/robots.txt
+410   168573 tests/fixtures/recherche-2026-11-27/regionen/arberland-langlauf.html https://arberland-bayerischer-wald.de/cross-country-skiing-in-the-arberland/150/5579/21570
+200 https://ferienregion-nationalpark.de/robots.txt
+200   253943 tests/fixtures/recherche-2026-11-27/regionen/ferienregion-nationalpark-langlauf.html https://ferienregion-nationalpark.de/en/discover/time-out-in-the-holiday-region-bavarian-forest-national-park-hiking-discovering-and-experiencing-for-the-whole-family/cross-country-skiing-on-beautiful-trails-in-the-bavarian-forest.html
+200 https://bodenmais.de/robots.txt
+200   329007 tests/fixtures/recherche-2026-11-27/regionen/bodenmais-langlaufen.html https://bodenmais.de/en/sport-gesundheit/wintersport/langlaufen
+200 https://www.hochschwarzwald.de/robots.txt
+200   271319 tests/fixtures/recherche-2026-11-27/regionen/hochschwarzwald-langlauf.html https://www.hochschwarzwald.de/en/things-to-do/winter-activities/cross-country-skiing
+200 https://www.schwarzwald-tourismus.info/robots.txt
+200  1238276 tests/fixtures/recherche-2026-11-27/regionen/schwarzwald-tourismus-langlauf.html https://www.schwarzwald-tourismus.info/erleben/winterurlaub/langlauf
+200 https://www.harzinfo.de/robots.txt
+200   392257 tests/fixtures/recherche-2026-11-27/regionen/harzinfo-sonnenloipe.html https://www.harzinfo.de/en/tour/sonnenloipe-braunlage
+200 https://www.schmallenberger-sauerland.de/robots.txt
+200   161651 tests/fixtures/recherche-2026-11-27/regionen/schmallenberg-wintersport.html https://www.schmallenberger-sauerland.de/en/experience/active-offers/winter-sports
+200 https://www.bergfex.com/robots.txt
+403     5660 tests/fixtures/recherche-2026-11-27/regionen/bergfex-bayern-langlauf.html https://www.bergfex.com/bayern/langlaufen/mauth-finsterau/loipen/7807/
+403     5630 tests/fixtures/recherche-2026-11-27/regionen/bergfex-rhoen.html https://www.bergfex.com/hessen/langlaufen/rhoen/loipen/3460/
+403     5703 tests/fixtures/recherche-2026-11-27/regionen/bergfex-albdonau.html https://www.bergfex.com/baden-wuerttemberg/langlaufen/alb-donau-kreis/loipen/
+200 https://www.snow-online.com/robots.txt
+200    81316 tests/fixtures/recherche-2026-11-27/regionen/snow-online-harz.html https://www.snow-online.com/trail-reports/harz
+200 https://www.muenchen.de/robots.txt
+200   149786 tests/fixtures/recherche-2026-11-27/regionen/muenchen-langlauf.html https://www.muenchen.de/freizeit/langlauf

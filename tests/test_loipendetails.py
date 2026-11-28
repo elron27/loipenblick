@@ -48,7 +48,7 @@ def roh(key: str) -> list[dict]:
 
 def test_alle_tourinfra_quellen_haben_einen_schnappschuss():
     assert set(QUELLEN) == {"chiemgau", "tannheimer", "seefeld-tourinfra", "engadin", "davos-klosters",
-                            "goms", "gastein", "ramsau"}
+                            "goms", "gastein", "ramsau", "bayerischer-wald", "fichtelgebirge"}  # P44
     for key in QUELLEN:
         assert lauf(key).loipen, key
 

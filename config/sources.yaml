@@ -1299,3 +1299,104 @@ quellen:
       default_gebiet: hoernerdoerfer
       gebiet_map:
         Balderschwang: balderschwang
+
+  # Bayerischer Wald (P44, 27.11.2026): derselbe tourinfra-Loipenmanager wie Chiemgau, Recherche
+  # docs/recherche-neue-regionen-2026-11-27.md. Erlaubnis noch nicht angefragt, darum nur_test (E-24).
+  - key: bayerischer-wald
+    adapter: tourinfra
+    name: Bayerischer Wald (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/bayerischer-wald
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-27, nutzungsbedingungen_geprueft: null, erlaubnis: nur_test,
+              hinweis: "Erlaubnis-Mail noch nicht verschickt"}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: lamer-winkel
+      gebiet_map:
+        Arrach: lamer-winkel
+        Lohberg: lamer-winkel
+        Arnbruck: lamer-winkel
+        Bodenmais: bodenmais
+        Drachselsried: bodenmais
+        Langdorf: bodenmais
+        Bayerisch Eisenstein: zwiesel-eisenstein
+        Zwiesel: zwiesel-eisenstein
+        Lindberg: zwiesel-eisenstein
+        Frauenau: zwiesel-eisenstein
+        Rinchnach: zwiesel-eisenstein
+        Sankt Englmar: sankt-englmar
+        Schwarzach: sankt-englmar
+        Patersdorf: sankt-englmar
+        Bischofsmais: rusel-deggendorf
+        Deggendorf: rusel-deggendorf
+        Grafling: rusel-deggendorf
+        Greising: rusel-deggendorf
+        Schaufling: rusel-deggendorf
+        Brennberg: vorderer-bayerischer-wald
+        Falkenstein: vorderer-bayerischer-wald
+        Wiesenfelden: vorderer-bayerischer-wald
+        Spiegelau: nationalpark-grafenau
+        Neuschönau: nationalpark-grafenau
+        Sankt Oswald-Riedlhütte: nationalpark-grafenau
+        Grafenau: nationalpark-grafenau
+        Eppenschlag: nationalpark-grafenau
+        Hohenau: nationalpark-grafenau
+        Schöfweg: schoefweg-dreiburgenland
+        Grattersdorf: schoefweg-dreiburgenland
+        Hengersberg: schoefweg-dreiburgenland
+        Thurmansbang: schoefweg-dreiburgenland
+        Mauth: mauth-finsterau
+        Freyung: mauth-finsterau
+        Philippsreut: mauth-finsterau
+        Haidmühle: mauth-finsterau
+        Hinterschmiding: mauth-finsterau
+        Grainet: mauth-finsterau
+        Neureichenau: dreisessel-neureichenau
+        Jandelsbrunn: dreisessel-neureichenau
+        Waldkirchen: dreisessel-neureichenau
+        Breitenberg: dreisessel-neureichenau
+        Sonnen: dreisessel-neureichenau
+        Wegscheid: dreisessel-neureichenau
+        Neukirchen beim Heiligen Blut: hohenbogen-furth
+        Hamry: hohenbogen-furth
+        Rimbach: hohenbogen-furth
+        Furth im Wald: hohenbogen-furth
+        Waldmünchen: hohenbogen-furth
+
+  # Fichtelgebirge (P44, 27.11.2026): derselbe tourinfra-Loipenmanager wie Chiemgau, Recherche
+  # docs/recherche-neue-regionen-2026-11-27.md. Erlaubnis noch nicht angefragt, darum nur_test (E-24).
+  - key: fichtelgebirge
+    adapter: tourinfra
+    name: Fichtelgebirge (tourinfra Loipenmanager)
+    base_url: https://module.tourinfra.com/fichtelgebirge
+    art: portal
+    rang: 2
+    nutzung: {robots: erlaubt, robots_geprueft: 2026-11-27, nutzungsbedingungen_geprueft: null, erlaubnis: nur_test,
+              hinweis: "Erlaubnis-Mail noch nicht verschickt"}
+    config:
+      json_path: /inc/ajax.php?ajaxtype=getLoipenmanager
+      default_gebiet: ochsenkopf
+      gebiet_map:
+        Bischofsgrün: ochsenkopf
+        Fichtelberg: ochsenkopf
+        Warmensteinach: ochsenkopf
+        Mehlmeisel: ochsenkopf
+        Goldkronach: ochsenkopf
+        Kirchenpingarten: ochsenkopf
+        Gefrees: waldstein
+        Weißenstadt: waldstein
+        Zell im Fichtelgebirge: waldstein
+        Kirchenlamitz: waldstein
+        Tröstau: koesseine-luisenburg
+        Wunsiedel: koesseine-luisenburg
+        Bad Alexandersbad: koesseine-luisenburg
+        Marktredwitz: koesseine-luisenburg
+        Waldershof: koesseine-luisenburg
+        Erbendorf: steinwald
+        Friedenfels: steinwald
+        Fuchsmühl: steinwald
+        Pechbrunn: steinwald
+        Pullenreuth: steinwald
+        Schönwald: kornberg
+        Marktleuthen: kornberg
