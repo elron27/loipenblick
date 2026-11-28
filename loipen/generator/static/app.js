@@ -8,7 +8,22 @@ var SYM = {
   geschlossen: '<path d="M18 6 6 18M6 6l12 12"/>',
   unbekannt: '<path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>'
 };
-var FARBE = {offen: "#4ade80", eingeschraenkt: "#fbbf24", geschlossen: "#9fb3c2", unbekannt: "#c7d2da"};
+/* U50: geschlossen und unbekannt muessen auf Karte und Talprofil unterscheidbar sein, nicht zweimal grau.
+   Geschlossen = gedaempftes Rot mit Kreuz, unbekannt = hell mit gestricheltem Rand und Fragezeichen. */
+var FARBE = {offen: "#4ade80", eingeschraenkt: "#fbbf24", geschlossen: "#d9837c", unbekannt: "#eef3f6"};
+/* Linienfarben der Strecken: auf hellen und abgedunkelten Kacheln mindestens 3:1 */
+var LINIE = {offen: "#22a356", eingeschraenkt: "#d99a06", geschlossen: "#b4534c", unbekannt: "#6b7f8e"};
+var STRICH = {unbekannt: "3 9"};
+/* Zeichen im Marker und im Nadelkopf (ohne <circle>, damit nur der Kopf selbst ein Kreis ist) */
+var ZEICHEN = {offen: '<path d="M19 7 10 16l-4-4"/>', eingeschraenkt: '<path d="M12 6v7M12 18h.01"/>',
+  geschlossen: '<path d="M17 7 7 17M7 7l10 10"/>', unbekannt: '<path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>'};
+var ZEICHEN_FARBE = {offen: "#04141f", eingeschraenkt: "#04141f", geschlossen: "#2a0a08", unbekannt: "#3d4b57"};
+function zeichenSvg(s, px) { return '<svg viewBox="0 0 24 24" width="' + px + '" height="' + px + '" fill="none" stroke="' + ZEICHEN_FARBE[s] + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ZEICHEN[s] + "</svg>"; }
+/* U50 AK 2: kleine Legende zu Karte und Talprofil */
+function legende(extra) {
+  return '<ul class="legende" aria-label="Legende">' + ["offen", "eingeschraenkt", "geschlossen", "unbekannt"].map(function (s) {
+    return '<li><span class="mk" data-s="' + s + '" style="background:' + FARBE[s] + '">' + zeichenSvg(s, 14) + "</span>" + (s === "unbekannt" ? "Keine Angabe" : WORT[s]) + "</li>"; }).join("") + (extra || "") + "</ul>";
+}
 var RANG = {offen: 0, eingeschraenkt: 1, unbekannt: 2, geschlossen: 3};
 var LAND = {DE: "Deutschland", AT: "Österreich", IT: "Italien", CH: "Schweiz", LI: "Liechtenstein"};
 var TAGE = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
@@ -298,9 +313,10 @@ function talprofil(gebiete, schnee) {
     var hoehe = g.hoehe_m == null ? "" : " (" + g.hoehe_m + " m)";
     s += '<a href="#/gebiet/' + esc(g.slug) + '"><line class="s-l" x1="' + X + '" y1="' + y + '" x2="' + X + '" y2="' + (y - 40) + '" stroke-width="1.5"/>' +
       (b.hoch ? '<line class="s-l s-f" x1="' + X + '" y1="' + (y - 55) + '" x2="' + b.x + '" y2="' + (b.y + 4) + '" stroke-width="1"/>' : "") +
-      '<circle cx="' + X + '" cy="' + (y - 44) + '" r="10" fill="' + FARBE[best] + '" stroke="var(--ink)" stroke-width="2"/><text class="s-t" x="' + b.x + '" y="' + b.y + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
+      '<circle class="kopf" data-s="' + best + '" cx="' + X + '" cy="' + (y - 44) + '" r="11" fill="' + FARBE[best] + '" stroke="' + (best === "unbekannt" ? "#3d4b57" : "var(--ink)") + '" stroke-width="2"' + (best === "unbekannt" ? ' stroke-dasharray="3.5 2.5"' : "") + "/>" +
+      '<g transform="translate(' + (X - 7) + " " + (y - 51) + ') scale(.5833)" fill="none" stroke="' + ZEICHEN_FARBE[best] + '" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ZEICHEN[best] + '</g><text class="s-t" x="' + b.x + '" y="' + b.y + '" text-anchor="middle">' + esc(g.name) + "</text><title>" + esc(g.name) + hoehe + ": " + WORT[best] + "</title></a>";
   });
-  return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>";
+  return '<div class="scr"><svg viewBox="0 0 900 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Talprofil: die Loipengebiete von West nach Ost, die Höhe der Nadeln folgt der Höhe der Orte">' + s + "</svg></div>" + legende();
 }
 
 /* U48: Schneehoehe mit dem Namen der Messstation des Gebiets. Fehlt die Messung, sagt der Chip das fuer genau
@@ -463,8 +479,9 @@ function widerrufZeigen() {
 }
 function punktIcon(status, text, titel) {
   var gross = text != null;
-  return L.divIcon({className: "", iconSize: gross ? [34, 34] : [22, 22], iconAnchor: gross ? [17, 17] : [11, 11],
-    html: '<span class="' + (gross ? "mkc" : "mk") + '" data-s="' + status + '" role="button" tabindex="0" aria-label="' + esc(titel) + '" style="background:' + FARBE[status] + '">' + (gross ? esc(text) : "") + "</span>"});
+  /* U50 AK 3: Tippflaeche 44 px (mit Handschuhen), sichtbar 28 px bzw. 38 px beim Buendel */
+  return L.divIcon({className: "mkw", iconSize: [44, 44], iconAnchor: [22, 22],
+    html: '<span class="' + (gross ? "mkc" : "mk") + '" data-s="' + status + '" role="button" tabindex="0" aria-label="' + esc(titel) + '" style="background:' + FARBE[status] + '">' + (gross ? esc(text) : zeichenSvg(status, 16)) + "</span>"});
 }
 function miniKarte(l) {
   var reg = l.gebiet.region, pts = ((S.strecken[reg] || {})[String(l.id)] || []);
@@ -477,7 +494,7 @@ function miniKarteZeichnen(l) {
   var el = document.getElementById("minimap"); if (!el) return;
   var reg = l.gebiet.region, pts = ((S.strecken[reg] || {})[String(l.id)] || []);
   var m = grundkarte(el, {scrollWheelZoom: false}), gruppe = [];
-  if (pts.length > 1) gruppe.push(L.polyline(pts, {color: FARBE[l.status], weight: 6, opacity: .95}).addTo(m));
+  if (pts.length > 1) gruppe.push(L.polyline(pts, {color: LINIE[l.status], weight: 6, opacity: .95, dashArray: STRICH[l.status]}).addTo(m));
   var start = pts.length ? (Array.isArray(pts[0][0]) ? pts[0][0] : pts[0]) : [l.lat, l.lon];
   gruppe.push(L.marker(start, {icon: punktIcon(l.status, null, l.name + ", Start")}).addTo(m));
   (l.parken || []).forEach(function (p) {
@@ -631,7 +648,7 @@ function unterTabs(el) {
 function seiteKarte(q) {
   (function () {
     var alle = filtere(q), liste = alle.filter(function (l) { return l.lat != null; }), ohne = alle.length - liste.length;
-    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><div id="map" role="region" aria-label="Karte der Loipen"></div><div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort" + (ohne ? ', <a href="#/loipen' + esc(queryStr(q)) + '">' + ohne + " ohne Standort nur in der Liste</a>" : "") + ".</span></div></div>";
+    view.innerHTML = (S.demo ? '<p class="demo">Vorschau mit Beispielwerten, keine echten Daten.</p>' : "") + filterLeiste(q, "/karte") + '<div class="mapw" id="mapw"><div id="map" role="region" aria-label="Karte der Loipen"></div>' + legende() + '<div class="sel glass" id="sel"><span class="fine">Tippe auf einen Marker oder eine Strecke. ' + liste.length + " Loipen mit Standort" + (ohne ? ', <a href="#/loipen' + esc(queryStr(q)) + '">' + ohne + " ohne Standort nur in der Liste</a>" : "") + ".</span></div></div>";
     filterBinden(q, "/karte");
     var m = grundkarte(document.getElementById("map"));
     var ids = {}; liste.forEach(function (l) { ids[l.id] = l; });
@@ -650,7 +667,7 @@ function seiteKarte(q) {
       var st = S.strecken[slug] || {};
       Object.keys(st).forEach(function (id) {
         var l = ids[id]; if (!l || st[id].length < 2) return;
-        L.polyline(st[id], {color: FARBE[l.status], weight: l.status === "geschlossen" ? 4 : 6, opacity: l.status === "geschlossen" ? .75 : 1}).addTo(m).on("click", function () { waehle(l); });
+        L.polyline(st[id], {color: LINIE[l.status], weight: l.status === "geschlossen" || l.status === "unbekannt" ? 4 : 6, opacity: l.status === "geschlossen" ? .85 : 1, dashArray: STRICH[l.status]}).addTo(m).on("click", function () { waehle(l); });
       });
     }
     function streckenFuer(slugs) { ladeStrecken(slugs).then(function () { slugs.forEach(zeichne); }).catch(function () {}); }

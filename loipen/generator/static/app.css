@@ -98,7 +98,7 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .lp:hover{border-color:var(--cy)}.lp .n{font-weight:700}.lp .d{color:var(--mute);font-size:14px;grid-column:1/-1}
 .leer{padding:22px;color:var(--mute)}
 /* Karte */
-.mapw{position:relative;height:calc(100vh - 64px - 100px);min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+.mapw{position:relative;isolation:isolate;height:calc(100vh - 64px - 100px);min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
 @media(min-width:980px){.mapw{height:calc(100vh - 64px - 90px)}}
 .mapw #map{position:absolute;inset:0;z-index:0}
 .mapw .sel{position:absolute;left:12px;right:12px;bottom:12px;max-width:440px;padding:14px 16px;background:var(--solid);z-index:1000}
@@ -106,8 +106,18 @@ h2.sec{font-size:22px;letter-spacing:-.02em;margin:30px 0 12px}
 .minimap{height:340px;max-width:760px;border-radius:18px;border:1px solid var(--line);overflow:hidden;margin:6px 0;z-index:0}
 .leaflet-container{font:inherit;background:var(--bg2)}
 .leaflet-container a{color:var(--link,#0a6ea8)}
+/* U50: Marker sichtbar 28 px (Buendel 38 px) in einer 44-px-Tippflaeche; geschlossen rot mit Kreuz, unbekannt hell gestrichelt */
+.mkw{display:grid;place-items:center;cursor:pointer}
 .mk,.mkc{display:grid;place-items:center;border-radius:50%;border:2px solid #0b2231;box-sizing:border-box;cursor:pointer;color:#04141f;font-weight:800;font-size:13px}
-.mk{width:22px;height:22px}.mkc{width:34px;height:34px}
+.mk{width:28px;height:28px}.mkc{width:38px;height:38px}
+.mk[data-s="unbekannt"],.mkc[data-s="unbekannt"]{border:2px dashed #3d4b57;color:#3d4b57}
+.mk svg{display:block}
+.legende{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0;padding:8px 14px;list-style:none;font-size:13px;color:var(--ink)}
+.legende li{display:inline-flex;align-items:center;gap:6px}
+.legende .mk{width:20px;height:20px;cursor:default}
+.sky .legende svg{min-width:0;width:14px;height:14px}
+.sky .legende{padding:6px 18px 12px}
+.mapw .legende{position:absolute;top:10px;left:58px;right:58px;width:max-content;max-width:calc(100% - 116px);z-index:1000;background:var(--solid);border:1px solid var(--line);border-radius:14px;padding:6px 12px}
 .mk:focus-visible,.mkc:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
 .pk{display:grid;place-items:center;width:24px;height:24px;border-radius:6px;background:#1d4ed8;color:#fff;font-weight:800;font-size:14px;border:2px solid #fff;box-sizing:border-box}
 .leaflet-control.alles{width:34px;height:34px;font-size:20px;background:#fff;color:#0b2231;cursor:pointer;border:0;border-radius:4px}
@@ -245,3 +255,4 @@ details.werte{margin:6px 0 4px;font-size:14px}details.werte summary{cursor:point
 .fakten{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 18px;margin:12px 0}
 .fakten div{border-left:2px solid var(--line);padding-left:10px}.fakten dt{color:var(--mute);font-size:12px;letter-spacing:.06em;text-transform:uppercase}.fakten dd{margin:0;font-weight:700}
 .text h3{margin:18px 0 4px;font-size:16px}
+@media(max-width:600px){.legende{font-size:12px;gap:2px 10px}.mapw .legende{padding:5px 10px}.legende .mk{width:18px;height:18px}}

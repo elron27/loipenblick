@@ -38,7 +38,7 @@ Stand: 27.11.2026.
 
 ### Priorität 3: offene Entscheidungen für dich
 
-- [ ] **Design-Vorschläge** aus der Impeccable-Prüfung (Liste einklappen, Kartenfarben geschlossen/unbekannt, Filter am Handy, Startseite schlanker, alte Daten ehrlich zeigen, …). Liste im Projektordner `impeccable-pruefung/vorschlaege.md`. Wer: `Stefan` wählt, `Claude` baut.
+- [ ] **Design-Vorschläge** aus der Impeccable-Prüfung (Filter am Handy, Startseite schlanker, alte Daten ehrlich zeigen, …). Stefan gab am 28.11. Punkt 1 (Liste einklappen) und 2 (Kartenfarben) frei; Punkt 2 samt größeren Markern ist erledigt (U50). Liste im Projektordner `impeccable-pruefung/vorschlaege.md`. Wer: `Stefan` wählt, `Claude` baut.
 - [ ] **Lungau/Kärnten-Rest**: nur über bergfex erreichbar, anbinden oder lassen? Wer: `Stefan`.
 - [ ] **Zugspitz Arena**: nur über Intermaps (Bezahldienst), anbinden oder lassen? Wer: `Stefan`.
 - [ ] **seefeld-tourinfra**: Soll Seefeld auch den Loipenmanager ausdrücklich freigeben? Dann kurze Rückfrage an region@seefeld.com. Wer: `Stefan` entscheidet, `Claude` schreibt den Entwurf.
@@ -107,6 +107,7 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
+- [x] 28.11. Karte und Talprofil: geschlossen rot mit Kreuz, ohne Angabe hell gestrichelt, Legende, Marker mit 44-px-Tippfläche (U50) – PR #63
 - [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
 - [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60
 - [x] 27.11. Loipen näher recherchiert, Etappen 1–3 (Tegernsee bis Fuschlsee, Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Pillerseetal, Alpbachtal, Wildschönau): 36 Webcams, 10 Verleihe, Gebühren, Merkmale Einkehr/Familie; neue Felder Hunderegel und beleuchtete Loipen (D25) – PR #57
