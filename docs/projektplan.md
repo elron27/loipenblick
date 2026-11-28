@@ -100,9 +100,9 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 - [ ] **Schneekarte:** 7 Tage Sammeln beobachten, Archive nachladen, danach vier Designs zur Auswahl. Wer: `Claude`, Auswahl `Stefan`.
 - [ ] **Cookies mit Banner** nur, falls der Besucherzähler nicht reicht (E-14, B18). Wer: `Stefan` entscheidet.
 - [ ] **Endziel: ganzer deutschsprachiger Raum** (DE, AT, CH, LI, Südtirol; Stefan 27.11.). Gesamtkarte in [recherche-neue-regionen-2026-11-27.md](recherche-neue-regionen-2026-11-27.md).
-- [ ] **Etappe Mittelgebirge:** 1) Bayerischer Wald und 2) Fichtelgebirge erledigt (PR #59, nur Testseite), 3) Folgerecherche ThüCAT/Thüringer Wald, Vorarlberg, Salzkammergut/Oberösterreich, Erzgebirge, 4) Outdooractive-Partnerzugang klären (Schwarzwald, Thüringer Wald), 5) Harz, Sauerland, Augsburg als Handangabe, Rhön und Alb zuletzt. Wer: `Claude`, Freigabe `Stefan`.
+- [ ] **Etappe Mittelgebirge:** 1) Bayerischer Wald und 2) Fichtelgebirge erledigt (PR #59/#62, nur Testseite; Stammdaten und OSM-Auszug laufen im Workflow „Stammdaten“), 3) Folgerecherche ThüCAT/Thüringer Wald, Vorarlberg, Salzkammergut/Oberösterreich, Erzgebirge, 4) Outdooractive-Partnerzugang klären (Schwarzwald, Thüringer Wald), 5) Harz, Sauerland, Augsburg als Handangabe, Rhön und Alb zuletzt. Wer: `Claude`, Freigabe `Stefan`.
 - [ ] **Augsburg:** Welche Loipe ist gemeint? Dann als Gebiet mit Handangaben. Wer: `Stefan` sagt es.
-- [ ] **Erlaubnis-Mails** an Bayerischer Wald und Fichtelgebirge vor dem öffentlichen Zeigen. Wer: `Claude` Entwurf, `Stefan` versendet.
+- [ ] **Erlaubnis-Mails** an Bayerischer Wald und Fichtelgebirge vor dem öffentlichen Zeigen. Entwurf fertig (Projektdateien `livegang/vorbereitung/erlaubnis-mails-p44.md`, nennt den tourinfra-Weg wegen der Chiemgau-Rückfrage), Adressen aus dem Impressum einsetzen. Wer: `Stefan` versendet.
 - [ ] **Ausbau weiterer Regionen** (Südtirol-Rest, Kärnten, Schweiz) nach dem Livegang.
 
 ---
