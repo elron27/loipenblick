@@ -63,6 +63,10 @@ class Settings(BaseSettings):
     # Quellen-Waechter (B26): Mail an diese Adresse, wenn eine Quelle kaputt wirkt. Leer = impressum_email.
     # Absender ist abo_absender (oder diese Adresse selbst), Versand ueber den SMTP-Zugang oben.
     waechter_mail: str | None = None
+    # B34: Worker-Log als Datei (rotierend) und Mail bei Absturz oder Fehlern. Leer = logs im Sicherungsordner.
+    log_dir: str | None = None
+    fehler_mail: str | None = None  # Empfaenger; leer = waechter_mail, sonst impressum_email
+    fehler_mail_stunden: float = 6  # Fehler-Mails hoechstens so oft; 0 = nur bei Absturz
     # Stand des Images (Dockerfile, Workflow Image): Commit oder Tag. Zeigt nach einem Update, ob es angekommen ist.
     version: str = "selbst-gebaut"
     # Nur Testbetrieb (tests/stack): alle Abrufe an diesen Server statt ins Netz, siehe fetcher.py

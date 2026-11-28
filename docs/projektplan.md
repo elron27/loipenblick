@@ -16,11 +16,12 @@ Stand: 27.11.2026.
 
 ### Priorität 1: bis zum Livegang am 11.12.
 
-- [ ] **Loipen näher recherchieren** (Handrecherche je Gebiet: Loipengebühr, Parkplätze mit Gebühr, Webcams, Skiverleih, Saisonbeginn/-ende mit Prüfdatum). Bisher nur Bayrischzell-Webcams. Läuft in Etappen, Region für Region, Reihenfolge Bayern, Tirol, Salzburg, Rest. Wer: `Claude`. Start: sobald du „los“ sagst, gut geeignet für freie Kapazität. Siehe Memory „Mehr Daten je Loipe“, PR #47.
-- [ ] **NAS aktualisieren**, damit die Testseite den aktuellen Stand zeigt (zuletzt war sie mehrere Versionen hinterher). Ablauf in [nas-update.md](nas-update.md). Wer: `Stefan`.
-- [ ] **Impressum-Adresse klären** (eigene Adresse oder Familienadresse mit Zustellungsvollmacht). Checkliste Schritt 3. Wer: `Stefan`.
-- [ ] **Datenschutzerklärung** mit Generator erstellen oder eingebaute Vorlage bestätigen. Checkliste Schritt 11. Wer: `Stefan`, Claude hilft beim Text.
-- [ ] **Testseite auf Handy und PC durchklicken** (Standort, Karte, Impressum, Datenschutz, Push, Zähler). Checkliste Schritt 12. Wer: `Stefan`.
+- [ ] **Loipen näher recherchieren, weitere Etappen**: Mieming, Silberregion Karwendel, Hinterriß, dann Südostbayern und Salzburger Land; Verleih-Lücken Inzell und Berchtesgadener Land. Etappen 1–4 erledigt (PR #57, PR #61), Stand und Lücken in [recherche-handdaten-2026-11-27.md](recherche-handdaten-2026-11-27.md). Wer: `Claude`, gut für freie Kapazität.
+- [x] **NAS aktualisieren**, damit die Testseite den aktuellen Stand zeigt (zuletzt war sie mehrere Versionen hinterher). Ablauf in [nas-update.md](nas-update.md). Wer: `Stefan`.
+- [x] **Absturz-Log am NAS einschalten** (B34): Image neu holen ([nas-update.md](nas-update.md)). Danach steht das Log in `backup/logs/worker.log`, mit der neuen `docker-compose.yml` in `logs/worker.log` neben der `.env`. Für die Mail die `LOIPEN_SMTP_*`-Werte eintragen (Abschnitt 2). Wer: `Stefan`, Claude führt Schritt für Schritt.
+- [x] **Impressum-Adresse klären** (eigene Adresse oder Familienadresse mit Zustellungsvollmacht). Checkliste Schritt 3. Wer: `Stefan`.
+- [x] **Datenschutzerklärung** mit Generator erstellen oder eingebaute Vorlage bestätigen. Checkliste Schritt 11. Wer: `Stefan`, Claude hilft beim Text.
+- [x] **Testseite auf Handy und PC durchklicken** (Standort, Karte, Impressum, Datenschutz, Push, Zähler). Checkliste Schritt 12. Wer: `Stefan`.
 - [ ] **Wortlaut DWD-Quellenhinweis** auf dwd.de nachsehen und in einen Thread schreiben. Checkliste Schritt 14. Wer: `Stefan`.
 - [ ] **Antworten der Quellen entscheiden** und alle `nur_test`-Quellen durchgehen (siehe Abschnitt 3). Checkliste Schritt 15 und 15a. Wer: `beide`.
 - [ ] **Livegang freigeben** (Hauptadresse statt test., Suchmaschinen an). Nicht umkehrbar, nur auf dein Wort. Checkliste Schritt 16. Wer: `Stefan`.
@@ -52,6 +53,9 @@ Jetzt:
 
 - [ ] `LOIPEN_OEFFENTLICHE_URL` – die spätere Hauptadresse (`https://loipen-blick.de`). Ohne sie keine Sitemap und keine Meldung an Bing.
 - [ ] `LOIPEN_ZAEHLER_PASSWORT` – eigenes Passwort, mindestens 12 Zeichen (Besucherzähler).
+- [ ] `LOIPEN_SMTP_HOST`, `LOIPEN_SMTP_PORT`, `LOIPEN_SMTP_BENUTZER`, `LOIPEN_SMTP_PASSWORT` – jetzt schon nötig für die Absturz-Mails des Workers (B34), später auch fürs Mail-Abo.
+- [ ] `LOIPEN_FEHLER_MAIL` (optional) – Empfänger der Absturz- und Fehler-Mails; leer = `LOIPEN_WAECHTER_MAIL`, sonst Impressum-Adresse.
+- [ ] `LOIPEN_FEHLER_MAIL_STUNDEN` (optional, Standard 6) – Fehler-Mails höchstens so oft, 0 = nur bei Absturz.
 - [ ] `LOIPEN_USER_AGENT` – Kontaktadresse statt Platzhalter (z. B. `service@loipen-blick.de`), damit Quellbetreiber uns erreichen.
 - [ ] `CDSAPI_KEY` und `CDSAPI_URL` – Copernicus-Schlüssel für die Schneekarte (laut Stand 24.11. schon eingetragen, beim Neustart nur prüfen).
 
@@ -63,7 +67,6 @@ Wenn gewünscht:
 Später (Mail-Abo, Livegang):
 
 - [ ] `LOIPEN_ABO_SCHLUESSEL`, `LOIPEN_ABO_ABSENDER`, `LOIPEN_ABO_MELDUNGEN_AN` – Mail-Abo und Meldungen.
-- [ ] `LOIPEN_SMTP_HOST`, `LOIPEN_SMTP_PORT`, `LOIPEN_SMTP_BENUTZER`, `LOIPEN_SMTP_PASSWORT` – Postfach für den Versand.
 - [ ] `LOIPEN_DATENSCHUTZ_DATEI` – nur wenn du einen eigenen Datenschutztext nimmst.
 - [ ] `LOIPEN_OEFFENTLICH=true` und Upload-Pfad der Hauptadresse – **erst am Livegang-Tag**.
 
@@ -108,7 +111,10 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
 
-- [x] 27.11. Recherche neue Regionen; Bayerischer Wald (253 Loipen) und Fichtelgebirge (75 Loipen) auf der Testseite (P44) – PR #59
+- [x] 27.11. Recherche neue Regionen; Bayerischer Wald (253 Loipen) und Fichtelgebirge (75 Loipen) angebunden, zuerst nur auf der Testseite (P44); Anbindung von Stefan am 28.11. freigegeben – PR #59, #62
+- [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
+- [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60
+- [x] 27.11. Loipen näher recherchiert, Etappen 1–3 (Tegernsee bis Fuschlsee, Berchtesgaden, Kitzbüheler Alpen, Wilder Kaiser, Pillerseetal, Alpbachtal, Wildschönau): 36 Webcams, 10 Verleihe, Gebühren, Merkmale Einkehr/Familie; neue Felder Hunderegel und beleuchtete Loipen (D25) – PR #57
 - [x] 27.11. Besucherzähler zeigt Herkunft und Gerät – PR #52
 - [x] 27.11. Seefeld erlaubt Loipenstatus von seefeld.com – PR #55
 - [x] 26.11. Eigene Seiten je Gebiet und Loipe, Sitemap, robots.txt, IndexNow (SEO Phase 1+2) – PR #53

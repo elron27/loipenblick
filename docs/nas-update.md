@@ -48,5 +48,14 @@ Für den Test im Heimnetz ist **keine neue Variable nötig.** Alle neuen Werte g
 | `LOIPEN_IMPRESSUM_NAME`, `…_ANSCHRIFT`, `…_EMAIL` | Impressum, Pflicht vor dem Upload | Impressum bleibt unvollständig, kein Upload |
 | `LOIPEN_ABO_*`, `LOIPEN_SMTP_*` | E-Mail-Abo und „Angabe falsch? Melden“ | keine Formulare auf der Seite |
 | `LOIPEN_WAECHTER_MAIL` | Mail, wenn eine Quelle kaputt wirkt | Wächter meldet nur per Push (`LOIPEN_NTFY_URL`) |
+| `LOIPEN_FEHLER_MAIL`, `LOIPEN_FEHLER_MAIL_STUNDEN` | Mail bei Absturz oder Fehlern des Workers (B34), braucht `LOIPEN_SMTP_*` | Log nur in der Datei `worker.log` |
+
+## Log des Workers als Datei (B34)
+
+Der Worker schreibt sein Protokoll zusätzlich in `worker.log` (je 1 MB, dazu bis zu 5 alte Dateien
+`worker.log.1` … `.5`). Mit der aktuellen `docker-compose.yml` liegt sie im Ordner `logs/` neben der `.env`,
+mit einer älteren im Ordner `backup/logs/`. In der **File Station** öffnen oder herunterladen und an Claude
+weitergeben. Bei einem Absturz kommt außerdem eine Mail mit den letzten 200 Zeilen und dem Log im Anhang,
+sobald die `LOIPEN_SMTP_*`-Werte in der `.env` stehen.
 
 Vorlage mit Erklärungen: [`.env.example`](../.env.example).
