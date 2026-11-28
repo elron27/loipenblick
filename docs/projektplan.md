@@ -1,7 +1,7 @@
 # Projektplan Loipenblick
 
 Eine Datei für den Überblick: was ansteht, wer etwas tun muss, was schon erledigt ist.
-Stand: 27.11.2026.
+Stand: 28.11.2026.
 
 **So wird die Datei gepflegt**
 
@@ -29,6 +29,8 @@ Stand: 27.11.2026.
 
 ### Priorität 2: bald, aber kein Livegang-Hindernis
 
+- [ ] **Parken und Gebühren weiter recherchieren**: Schweiz (Loipenpass), Südtirol (Tageskarten je Dolomiti-NordicSki-Region), Tirol-Lücken über tirol.at, Südostbayern-Lücken (Tegernsee, Berchtesgaden, Fischbachau, Siegsdorf). Stand und Lücken in [recherche-parken-gebuehren-2026-11-28.md](recherche-parken-gebuehren-2026-11-28.md). Wer: `Claude`.
+- [ ] **Parkinfo je Gebiet ohne Koordinate anzeigen?** (z. B. „Tannheimer Tal Ticket 5 € für 24 h per App“). Heute zeigt die Seite nur Parkplätze mit Koordinate. Wer: `Stefan` entscheidet.
 - [ ] **„Infos nachtragen“ für Besucher** (fehlende Angaben zu Parken, Gebühr, Webcam, Verleih melden). Gibt es noch nicht als Anforderung. Wer: `Claude` macht einen kleinen Plan, `Stefan` gibt frei.
 - [ ] **Mail-Abo und „Angabe falsch? Melden“ einschalten** (gebaut, aber aus): Postfach `abo@`, SMTP-Werte in die .env. Checkliste 10a. Wer: `Stefan`.
 - [ ] **Push für Besucher einschalten**: `LOIPEN_PUSH_PRAEFIX` setzen, mit ntfy-App testen. Checkliste 10b. Wer: `Stefan`.
@@ -106,6 +108,8 @@ Erlaubnis-Mails verschickt am 19.11.2026. **Frist: 11.12.2026.** Bei Schweigen z
 ## 5. Erledigt
 
 Neueste oben. Vor dem 19.11. nur die großen Schritte.
+
+- [x] 28.11. Parken und Loipengebühren recherchiert: 26 Gebiete neu mit Loipengebühr (jetzt 40), u. a. Seefeld/Leutasch, Ötztal, Pitztal, Osttirol, Zugspitz Arena, Tannheimer Tal, Gastein, Ramsau, Tauplitz, Inzell, Chieming; Parkplatz Aschauerweiher; Saisonprüfung liest „Euro 12,00“ – PR #64
 
 - [x] 27.11. Loipen-Recherche Etappe 4: St. Johann, Seefeld, Leutasch, Tux, Gerlos, Verleih Ruhpolding/Berchtesgaden, Webcams Pillerseetal – PR #61
 - [x] 27.11. Worker-Absturz behoben (Loipenseite scheiterte an OSM-Parkplätzen ohne Gebühr, Absturz bei jedem Start; kaputte Einzelseiten stoppen den Lauf nicht mehr). Log zusätzlich in `logs/worker.log` (rotierend), Mail mit Traceback und Log bei Absturz, hartem Abbruch und gesammelten Fehlern, Geheimnisse geschwärzt; ein Fehler im ersten Lauf beendet den Container nicht mehr (B34) – PR #60

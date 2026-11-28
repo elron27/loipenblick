@@ -64,7 +64,7 @@ def handangaben(gebiete: list[dict], stammdaten: dict | None = None) -> list[Ang
 def betraege(text: str) -> set[float]:
     """Euro-Betraege in einem Seitentext: "7 €", "7,50 EUR", "€ 8.-" -> {7.0, 7.5, 8.0}."""
     werte = set()
-    for m in re.finditer(r"(?:€|EUR)\s*(\d{1,3}(?:[.,]\d{1,2})?)|(\d{1,3}(?:[.,]\d{1,2})?)\s*(?:,-|\.-)?\s*(?:€|EUR|Euro)",
+    for m in re.finditer(r"(?:€|EUR|Euro)\s*(\d{1,3}(?:[.,]\d{1,2})?)|(\d{1,3}(?:[.,]\d{1,2})?)\s*(?:,-|\.-)?\s*(?:€|EUR|Euro)",
                          text, flags=re.I):
         werte.add(float((m.group(1) or m.group(2)).replace(",", ".")))
     return werte

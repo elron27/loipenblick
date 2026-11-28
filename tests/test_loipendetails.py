@@ -346,6 +346,8 @@ def test_b32_saisonpruefung_listet_handangaben_und_markiert_befunde():
     heute = date(2026, 11, 24)
     assert saison.winter(heute) == "2026/27" and saison.winter(date(2027, 3, 28)) == "2026/27"
     assert saison.betraege("Tageskarte 7 € · Woche € 25,- · 7,50 EUR") == {7.0, 25.0, 7.5}
+    # Pitztal schreibt "Tageskarte: Euro 12,00" (Handrecherche 28.11.2026)
+    assert saison.betraege("Tageskarte: Euro 12,00") == {12.0}
     angaben = saison.lade(CONFIG_DIR)
     bay = [a for a in angaben if a.art == "Loipengebühr" and a.url == "https://www.bayrischzell.de/langlaufen"]
     assert bay and bay[0].eur == 7.0
